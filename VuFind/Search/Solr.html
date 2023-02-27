@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Search\Solr | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFind_Search_Solr" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Search.html">Search</a></li><li class="backslash">\</li><li><a href="../../VuFind/Search/Solr.html">Solr</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFind\Search\Solr</h1>
+    </div>
+
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="../../VuFind/Search/Solr/V3.html">VuFind\Search\Solr\V3</a><a href="../../VuFind/Search/Solr/V4.html">VuFind\Search\Solr\V4</a>        </div>
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/AbstractErrorListener.html"><abbr title="VuFind\Search\Solr\AbstractErrorListener">AbstractErrorListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract base class of SOLR error listeners.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/CustomFilterListener.html"><abbr title="VuFind\Search\Solr\CustomFilterListener">CustomFilterListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr custom filter listener.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/DeduplicationListener.html"><abbr title="VuFind\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr merged record handling listener.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/DefaultParametersListener.html"><abbr title="VuFind\Search\Solr\DefaultParametersListener">DefaultParametersListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr default parameters listener.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/FacetCache.html"><abbr title="VuFind\Search\Solr\FacetCache">FacetCache</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr FacetCache.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/FacetCacheFactory.html"><abbr title="VuFind\Search\Solr\FacetCacheFactory">FacetCacheFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr FacetCache Factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/FilterFieldConversionListener.html"><abbr title="VuFind\Search\Solr\FilterFieldConversionListener">FilterFieldConversionListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Listener to convert one field to another in filters (for legacy purposes).</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/HierarchicalFacetHelper.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetHelper">HierarchicalFacetHelper</abbr></a>    </div>
+                <div class="col-md-6"><p>Functions for manipulating facets</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/HierarchicalFacetHelperFactory.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetHelperFactory">HierarchicalFacetHelperFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Class HierarchicalFacetHelperFactory</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/HierarchicalFacetListener.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetListener">HierarchicalFacetListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr hierarchical facet handling listener.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/InjectConditionalFilterListener.html"><abbr title="VuFind\Search\Solr\InjectConditionalFilterListener">InjectConditionalFilterListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Conditional Filter listener.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/InjectHighlightingListener.html"><abbr title="VuFind\Search\Solr\InjectHighlightingListener">InjectHighlightingListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr highlighting listener.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/InjectSpellingListener.html"><abbr title="VuFind\Search\Solr\InjectSpellingListener">InjectSpellingListener</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr spelling listener.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/MultiIndexListener.html"><abbr title="VuFind\Search\Solr\MultiIndexListener">MultiIndexListener</abbr></a>    </div>
+                <div class="col-md-6"><p>MultiIndex listener class file.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/Options.html"><abbr title="VuFind\Search\Solr\Options">Options</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr Search Options</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/Params.html"><abbr title="VuFind\Search\Solr\Params">Params</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr Search Parameters</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/ParamsFactory.html"><abbr title="VuFind\Search\Solr\ParamsFactory">ParamsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Solr search params objects.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr Search Parameters</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/ResultsFactory.html"><abbr title="VuFind\Search\Solr\ResultsFactory">ResultsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Solr search results objects.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Search/Solr/SpellingProcessor.html"><abbr title="VuFind\Search\Solr\SpellingProcessor">SpellingProcessor</abbr></a>    </div>
+                <div class="col-md-6"><p>Solr spelling processor.</p></div>
+            </div>
+            </div>
+    
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

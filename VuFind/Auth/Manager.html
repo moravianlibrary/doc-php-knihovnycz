@@ -1,0 +1,2523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Auth\Manager | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Auth_Manager" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Auth.html">Auth</a></li><li class="backslash">\</li><li>Manager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Manager    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Manager</strong>        implements        <abbr title="LmcRbacMvc\Identity\IdentityProviderInterface">IdentityProviderInterface</abbr>, <abbr title="Laminas\Log\LoggerAwareInterface">LoggerAwareInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Wrapper class for handling logged-in user in session.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_auth">
+                                        protected                                        <a href="../../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a>[]
+                                                                                
+                                    </td>
+                <td>$auth</td>
+                <td class="last"><p>Authentication modules</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_activeAuth">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$activeAuth</td>
+                <td class="last"><p>Currently selected authentication module</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_legalAuthOptions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$legalAuthOptions</td>
+                <td class="last"><p>List of values allowed to be set into $activeAuth</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>VuFind configuration</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_session">
+                                        protected                                        <abbr title="Laminas\Session\Container">Container</abbr>
+                                                                                
+                                    </td>
+                <td>$session</td>
+                <td class="last"><p>Session container</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_userTable">
+                                        protected                                        <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a>
+                                                                                
+                                    </td>
+                <td>$userTable</td>
+                <td class="last"><p>Gateway to user table in database</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sessionManager">
+                                        protected                                        <abbr title="Laminas\Session\SessionManager">SessionManager</abbr>
+                                                                                
+                                    </td>
+                <td>$sessionManager</td>
+                <td class="last"><p>Session manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pluginManager">
+                                        protected                                        <a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$pluginManager</td>
+                <td class="last"><p>Authentication plugin manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cookieManager">
+                                        protected                                        <a href="../../VuFind/Cookie/CookieManager.html"><abbr title="VuFind\Cookie\CookieManager">CookieManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$cookieManager</td>
+                <td class="last"><p>Cookie Manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentUser">
+                                        protected                                        <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                                                                                
+                                    </td>
+                <td>$currentUser</td>
+                <td class="last"><p>Cache for current logged in user object</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_csrf">
+                                        protected                                        <a href="../../VuFind/Validator/CsrfInterface.html"><abbr title="VuFind\Validator\CsrfInterface">CsrfInterface</abbr></a>
+                                                                                
+                                    </td>
+                <td>$csrf</td>
+                <td class="last"><p>CSRF validator</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a> $userTable, <abbr title="Laminas\Session\SessionManager">SessionManager</abbr> $sessionManager, <a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a> $pm, <a href="../../VuFind/Cookie/CookieManager.html"><abbr title="VuFind\Cookie\CookieManager">CookieManager</abbr></a> $cookieManager, <a href="../../VuFind/Validator/CsrfInterface.html"><abbr title="VuFind\Validator\CsrfInterface">CsrfInterface</abbr></a> $csrf)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAuth">getAuth</a>(string $name = null)
+        
+                                            <p><p>Get the authentication handler.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_makeAuth">makeAuth</a>(string $method)
+        
+                                            <p>Helper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsCreation">supportsCreation</a>(string $authMethod = null)
+        
+                                            <p><p>Does the current configuration support account creation?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsRecovery">supportsRecovery</a>(string $authMethod = null)
+        
+                                            <p><p>Does the current configuration support password recovery?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsEmailChange">supportsEmailChange</a>(string $authMethod = null)
+        
+                                            <p><p>Is email changing currently allowed?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsPasswordChange">supportsPasswordChange</a>(string $authMethod = null)
+        
+                                            <p><p>Is new passwords currently allowed?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsConnectingLibraryCard">supportsConnectingLibraryCard</a>(string $authMethod = null)
+        
+                                            <p><p>Is connecting library card allowed and supported?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUsernamePolicy">getUsernamePolicy</a>(string $authMethod = null)
+        
+                                            <p><p>Username policy for a new account (e.g. minLength, maxLength)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPasswordPolicy">getPasswordPolicy</a>(string $authMethod = null)
+        
+                                            <p><p>Password policy for a new password (e.g. minLength, maxLength)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSessionInitiator">getSessionInitiator</a>(string $target)
+        
+                                            <p><p>Get the URL to establish a session (needed when the internal VuFind login
+form is inadequate).  Returns false when no session initiator is needed.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAuthClassForTemplateRendering">getAuthClassForTemplateRendering</a>()
+        
+                                            <p><p>In VuFind, views are tied to the name of the active authentication class.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSelectableAuthOptions">getSelectableAuthOptions</a>()
+        
+                                            <p><p>Return an array of all of the authentication options supported by the
+current auth class. In most cases (except for ChoiceAuth), this will
+just contain a single value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLoginTargets">getLoginTargets</a>()
+        
+                                            <p><p>Does the current auth class allow for authentication from more than
+one target? (e.g. MultiILS)
+If so return an array that lists the targets.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultLoginTarget">getDefaultLoginTarget</a>()
+        
+                                            <p><p>Does the current auth class allow for authentication from more than
+one target? (e.g. MultiILS)
+If so return the default target.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAuthMethod">getAuthMethod</a>()
+        
+                                            <p><p>Get the name of the current authentication method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loginEnabled">loginEnabled</a>()
+        
+                                            <p><p>Is login currently allowed?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ajaxEnabled">ajaxEnabled</a>()
+        
+                                            <p><p>Is login currently allowed?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_dropdownEnabled">dropdownEnabled</a>()
+        
+                                            <p><p>Is login currently allowed?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logout">logout</a>(string $url, bool $destroy = true)
+        
+                                            <p><p>Log out the current user.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_userHasLoggedOut">userHasLoggedOut</a>()
+        
+                                            <p><p>Checks whether the user has recently logged out.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|false
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isLoggedIn">isLoggedIn</a>()
+        
+                                            <p><p>Checks whether the user is logged in.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCsrfHash">getCsrfHash</a>(bool $regenerate = false, int $maxTokens = 5)
+        
+                                            <p><p>Retrieve CSRF token</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="LmcRbacMvc\Identity\IdentityInterface">IdentityInterface</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIdentity">getIdentity</a>()
+        
+                                            <p><p>Get the identity</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkForExpiredCredentials">checkForExpiredCredentials</a>()
+        
+                                            <p><p>Resets the session if the logged in user's credentials have expired.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_inPrivacyMode">inPrivacyMode</a>()
+        
+                                            <p><p>Are we in privacy mode?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updateSession">updateSession</a>(<a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user)
+        
+                                            <p><p>Updates the user information in the session.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_create">create</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Create a new user account from the request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updatePassword">updatePassword</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Update a user's password from the request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updateEmail">updateEmail</a>(<a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $email)
+        
+                                            <p><p>Update a user's email from the request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_login">login</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Try to log in the user using current query parameters; return User object
+on success, throws exception on failure.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setAuthMethod">setAuthMethod</a>(string $method, bool $forceLegal = false)
+        
+                                            <p>Setter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateCredentials">validateCredentials</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Validate the credentials in the provided request, but do not change the state
+of the current logged-in user. Return true for valid credentials, false
+otherwise.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|false
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getILSLoginMethod">getILSLoginMethod</a>(string $target = &#039;&#039;)
+        
+                                            <p><p>What login method does the ILS use (password, email, vufind)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_connectLibraryCard">connectLibraryCard</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request, <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user)
+        
+                                            <p><p>Connect authenticated user as library card to his account.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updateUser">updateUser</a>(<a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user)
+        
+                                            <p><p>Update common user attributes on login</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_allowsUserIlsLogin">allowsUserIlsLogin</a>()
+        
+                                            <p><p>Is the user allowed to log directly into the ILS?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processPolicyConfig">processPolicyConfig</a>(array $policy)
+        
+                                            <p><p>Process a raw policy configuration</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 139</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a> $userTable, <abbr title="Laminas\Session\SessionManager">SessionManager</abbr> $sessionManager, <a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a> $pm, <a href="../../VuFind/Cookie/CookieManager.html"><abbr title="VuFind\Cookie\CookieManager">CookieManager</abbr></a> $cookieManager, <a href="../../VuFind/Validator/CsrfInterface.html"><abbr title="VuFind\Validator\CsrfInterface">CsrfInterface</abbr></a> $csrf)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>VuFind configuration</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a></td>
+                <td>$userTable</td>
+                <td><p>User table gateway</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Session\SessionManager">SessionManager</abbr></td>
+                <td>$sessionManager</td>
+                <td><p>Session manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a></td>
+                <td>$pm</td>
+                <td><p>Authentication plugin manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Cookie/CookieManager.html"><abbr title="VuFind\Cookie\CookieManager">CookieManager</abbr></a></td>
+                <td>$cookieManager</td>
+                <td><p>Cookie manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Validator/CsrfInterface.html"><abbr title="VuFind\Validator\CsrfInterface">CsrfInterface</abbr></a></td>
+                <td>$csrf</td>
+                <td><p>CSRF validator</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuth">
+        <div class="location">at line 172</div>
+        <code>            protected        <a href="../../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a>
+    <strong>getAuth</strong>(string $name = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the authentication handler.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Auth module to load (null for currently active one)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeAuth">
+        <div class="location">at line 188</div>
+        <code>            protected        <a href="../../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a>
+    <strong>makeAuth</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Helper</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>auth method to instantiate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsCreation">
+        <div class="location">at line 207</div>
+        <code>                    bool
+    <strong>supportsCreation</strong>(string $authMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the current configuration support account creation?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authMethod</td>
+                <td><p>optional; check this auth method rather than
+the one in config file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsRecovery">
+        <div class="location">at line 220</div>
+        <code>                    bool
+    <strong>supportsRecovery</strong>(string $authMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the current configuration support password recovery?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authMethod</td>
+                <td><p>optional; check this auth method rather than
+the one in config file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsEmailChange">
+        <div class="location">at line 234</div>
+        <code>                    bool
+    <strong>supportsEmailChange</strong>(string $authMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is email changing currently allowed?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authMethod</td>
+                <td><p>optional; check this auth method rather than
+the one in config file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsPasswordChange">
+        <div class="location">at line 247</div>
+        <code>                    bool
+    <strong>supportsPasswordChange</strong>(string $authMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is new passwords currently allowed?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authMethod</td>
+                <td><p>optional; check this auth method rather than
+the one in config file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsConnectingLibraryCard">
+        <div class="location">at line 261</div>
+        <code>                    bool
+    <strong>supportsConnectingLibraryCard</strong>(string $authMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is connecting library card allowed and supported?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authMethod</td>
+                <td><p>optional; check this auth method rather than
+the one in config file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUsernamePolicy">
+        <div class="location">at line 275</div>
+        <code>                    array
+    <strong>getUsernamePolicy</strong>(string $authMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Username policy for a new account (e.g. minLength, maxLength)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authMethod</td>
+                <td><p>optional; check this auth method rather than
+the one in config file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPasswordPolicy">
+        <div class="location">at line 290</div>
+        <code>                    array
+    <strong>getPasswordPolicy</strong>(string $authMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Password policy for a new password (e.g. minLength, maxLength)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authMethod</td>
+                <td><p>optional; check this auth method rather than
+the one in config file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionInitiator">
+        <div class="location">at line 306</div>
+        <code>                    bool|string
+    <strong>getSessionInitiator</strong>(string $target)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the URL to establish a session (needed when the internal VuFind login
+form is inadequate).  Returns false when no session initiator is needed.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td><p>Full URL where external authentication method should
+send user after login (some drivers may override this).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuthClassForTemplateRendering">
+        <div class="location">at line 334</div>
+        <code>                    string
+    <strong>getAuthClassForTemplateRendering</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>In VuFind, views are tied to the name of the active authentication class.</p></p>                <p><p>This method returns that name so that an appropriate template can be
+selected. It supports authentication methods that proxy other authentication
+methods (see ChoiceAuth for an example).</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSelectableAuthOptions">
+        <div class="location">at line 353</div>
+        <code>                    array
+    <strong>getSelectableAuthOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return an array of all of the authentication options supported by the
+current auth class. In most cases (except for ChoiceAuth), this will
+just contain a single value.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoginTargets">
+        <div class="location">at line 371</div>
+        <code>                    array
+    <strong>getLoginTargets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the current auth class allow for authentication from more than
+one target? (e.g. MultiILS)
+If so return an array that lists the targets.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultLoginTarget">
+        <div class="location">at line 385</div>
+        <code>                    string
+    <strong>getDefaultLoginTarget</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the current auth class allow for authentication from more than
+one target? (e.g. MultiILS)
+If so return the default target.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuthMethod">
+        <div class="location">at line 397</div>
+        <code>                    string
+    <strong>getAuthMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the current authentication method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loginEnabled">
+        <div class="location">at line 407</div>
+        <code>                    bool
+    <strong>loginEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is login currently allowed?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ajaxEnabled">
+        <div class="location">at line 418</div>
+        <code>                    bool
+    <strong>ajaxEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is login currently allowed?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropdownEnabled">
+        <div class="location">at line 429</div>
+        <code>                    bool
+    <strong>dropdownEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is login currently allowed?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logout">
+        <div class="location">at line 445</div>
+        <code>                    string
+    <strong>logout</strong>(string $url, bool $destroy = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log out the current user.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL to redirect user to after logging out.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$destroy</td>
+                <td><p>Should we destroy the session (true) or just reset it
+(false); destroy is for log out, reset is for expiration.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Redirect URL (usually same as $url, but modified in
+some authentication modules).</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userHasLoggedOut">
+        <div class="location">at line 478</div>
+        <code>                    bool
+    <strong>userHasLoggedOut</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Checks whether the user has recently logged out.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isLoggedIn">
+        <div class="location">at line 488</div>
+        <code>                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|false
+    <strong>isLoggedIn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Checks whether the user is logged in.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|false</td>
+            <td><p>Object if user is logged in, false otherwise.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCsrfHash">
+        <div class="location">at line 527</div>
+        <code>                    string
+    <strong>getCsrfHash</strong>(bool $regenerate = false, int $maxTokens = 5)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve CSRF token</p></p>                <p><p>If no CSRF token currently exists, or should be regenerated, generates one.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$regenerate</td>
+                <td><p>Should we regenerate token? (default false)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maxTokens</td>
+                <td><p>The maximum number of tokens to store in the
+session.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdentity">
+        <div class="location">at line 539</div>
+        <code>                    <abbr title="LmcRbacMvc\Identity\IdentityInterface">IdentityInterface</abbr>|null
+    <strong>getIdentity</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the identity</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="LmcRbacMvc\Identity\IdentityInterface">IdentityInterface</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkForExpiredCredentials">
+        <div class="location">at line 549</div>
+        <code>                    bool
+    <strong>checkForExpiredCredentials</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resets the session if the logged in user's credentials have expired.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if session has expired.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inPrivacyMode">
+        <div class="location">at line 563</div>
+        <code>                    bool
+    <strong>inPrivacyMode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Are we in privacy mode?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateSession">
+        <div class="location">at line 575</div>
+        <code>                    void
+    <strong>updateSession</strong>(<a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Updates the user information in the session.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>User object to store in the session</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">at line 595</div>
+        <code>                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>create</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new user account from the request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing
+new account details.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td><p>New user row.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updatePassword">
+        <div class="location">at line 612</div>
+        <code>                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>updatePassword</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Update a user's password from the request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing
+password change details.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td><p>New user row.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateEmail">
+        <div class="location">at line 630</div>
+        <code>                    void
+    <strong>updateEmail</strong>(<a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $email)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Update a user's email from the request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>Object representing user being updated.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td><p>New email address to set (must be pre-validated!).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_login">
+        <div class="location">at line 658</div>
+        <code>                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>login</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Try to log in the user using current query parameters; return User object
+on success, throws exception on failure.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing
+account credentials.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td><p>Object representing logged-in user.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Exception/PasswordSecurity.html"><abbr title="VuFind\Exception\PasswordSecurity">PasswordSecurity</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Exception/AuthInProgress.html"><abbr title="VuFind\Exception\AuthInProgress">AuthInProgress</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAuthMethod">
+        <div class="location">at line 716</div>
+        <code>                    void
+    <strong>setAuthMethod</strong>(string $method, bool $forceLegal = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Setter</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>The auth class to proxy</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forceLegal</td>
+                <td><p>Whether to force the new method legal</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateCredentials">
+        <div class="location">at line 756</div>
+        <code>                    bool
+    <strong>validateCredentials</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate the credentials in the provided request, but do not change the state
+of the current logged-in user. Return true for valid credentials, false
+otherwise.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing
+account credentials.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getILSLoginMethod">
+        <div class="location">at line 768</div>
+        <code>                    array|false
+    <strong>getILSLoginMethod</strong>(string $target = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>What login method does the ILS use (password, email, vufind)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td><p>Login target (MultiILS only)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_connectLibraryCard">
+        <div class="location">at line 788</div>
+        <code>                    void
+    <strong>connectLibraryCard</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request, <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Connect authenticated user as library card to his account.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object
+containing account credentials.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>Connect newly created
+library card to this user.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateUser">
+        <div class="location">at line 804</div>
+        <code>            protected        void
+    <strong>updateUser</strong>(<a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Update common user attributes on login</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>User object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allowsUserIlsLogin">
+        <div class="location">at line 821</div>
+        <code>                    bool
+    <strong>allowsUserIlsLogin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is the user allowed to log directly into the ILS?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processPolicyConfig">
+        <div class="location">at line 833</div>
+        <code>            protected        array
+    <strong>processPolicyConfig</strong>(array $policy)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process a raw policy configuration</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$policy</td>
+                <td><p>Policy configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

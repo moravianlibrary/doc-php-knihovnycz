@@ -1,0 +1,2236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\View\Helper\Root\Record | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_View_Helper_Root_Record" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View.html">View</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View/Helper.html">Helper</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View/Helper/Root.html">Root</a></li><li class="backslash">\</li><li>Record</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Record    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Record</strong>        extends <abbr title="Laminas\View\Helper\AbstractHelper">AbstractHelper</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Record driver view helper</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html"><abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for view helpers that render a template based on a class name.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_templateCache">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$templateCache</td>
+                <td class="last"><p>Cache for found templates</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#property_templateCache">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contextHelper">
+                                        protected                                        <a href="../../../../VuFind/View/Helper/Root/Context.html"><abbr title="VuFind\View\Helper\Root\Context">Context</abbr></a>
+                                                                                
+                                    </td>
+                <td>$contextHelper</td>
+                <td class="last"><p>Context view helper</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_coverRouter">
+                                        protected                                        <a href="../../../../VuFind/Cover/Router.html"><abbr title="VuFind\Cover\Router">Router</abbr></a>
+                                                                                
+                                    </td>
+                <td>$coverRouter</td>
+                <td class="last"><p>Cover router</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driver">
+                                        protected                                        <a href="../../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+                                                                                
+                                    </td>
+                <td>$driver</td>
+                <td class="last"><p>Record driver</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>VuFind configuration</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resolveClassTemplate">resolveClassTemplate</a>(string $template, string $className, <abbr title="Laminas\View\Resolver\ResolverInterface">ResolverInterface</abbr> $resolver, string $topClassName = null)
+        
+                                            <p><p>Recursively locate a template that matches the provided class name
+(or one of its parent classes); throw an exception if no match is found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_resolveClassTemplate">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderClassTemplate">renderClassTemplate</a>(string $template, string $className, array $context = [], bool $throw = true)
+        
+                                            <p><p>Render a template associated with the provided class name, applying to
+specified context variables.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_renderClassTemplate">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedClassTemplate">getCachedClassTemplate</a>(string $template, string $className)
+        
+                                            <p><p>Resolve the class template file unless already cached and return the file
+name.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_getCachedClassTemplate">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBriefClass">getBriefClass</a>(string $className)
+        
+                                            <p><p>Helper to grab the end of the class name</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_getBriefClass">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTemplateWithClass">getTemplateWithClass</a>(string $template, string $className)
+        
+                                            <p><p>Helper to put the template path and class name together</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_getTemplateWithClass">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCoverRouter">setCoverRouter</a>(<a href="../../../../VuFind/Cover/Router.html"><abbr title="VuFind\Cover\Router">Router</abbr></a> $router)
+        
+                                            <p><p>Inject the cover router</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderTemplate">renderTemplate</a>(string $name, array $context = null, bool $throw = true)
+        
+                                            <p><p>Render a template within a record driver folder.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../VuFind/View/Helper/Root/Record.html"><abbr title="VuFind\View\Helper\Root\Record">Record</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___invoke">__invoke</a>(<a href="../../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        
+                                            <p><p>Store a record driver object and return this object so that the appropriate
+template can be rendered.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCoreMetadata">getCoreMetadata</a>()
+        
+                                            <p><p>Render the core metadata area of the record view.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCollectionBriefRecord">getCollectionBriefRecord</a>()
+        
+                                            <p><p>Render the a brief record for use in collection mode.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCollectionMetadata">getCollectionMetadata</a>()
+        
+                                            <p><p>Render the core metadata area of the collection view.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getExport">getExport</a>(string $format)
+        
+                                            <p><p>Export the record in the requested format.  For legal values, see
+the export helper's getFormatsForRecord() method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFormatClass">getFormatClass</a>(string $format)
+        
+                                            <p><p>Get the CSS class used to properly render a format.  (Note that this may
+not be used by every theme).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFormatList">getFormatList</a>()
+        
+                                            <p><p>Render a list of record formats.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLabelList">getLabelList</a>()
+        
+                                            <p><p>Render a list of record labels.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getListEntry">getListEntry</a>(<a href="../../../../VuFind/Db/Row/UserList.html"><abbr title="VuFind\Db\Row\UserList">UserList</abbr></a> $list = null, <a href="../../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user = false)
+        
+                                            <p><p>Render an entry in a favorite list.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPreviews">getPreviews</a>()
+        
+                                            <p><p>Render previews (data and link) of the item if configured.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPreviewData">getPreviewData</a>()
+        
+                                            <p><p>Render data needed to get previews.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPreviewLink">getPreviewLink</a>()
+        
+                                            <p><p>Render links to previews of the item if configured.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPreviewIds">getPreviewIds</a>()
+        
+                                            <p><p>Collects ISBN, LCCN, and OCLC numbers to use in calling preview APIs</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitleHtml">getTitleHtml</a>(int $maxLength = 180)
+        
+                                            <p><p>Get HTML to render a title.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLink">getLink</a>(string $type, string $lookfor)
+        
+                                            <p><p>Render the link of the specified type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTab">getTab</a>(<a href="../../../../VuFind/RecordTab/TabInterface.html"><abbr title="VuFind\RecordTab\TabInterface">TabInterface</abbr></a> $tab)
+        
+                                            <p><p>Render the contents of the specified record tab.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getToolbar">getToolbar</a>()
+        
+                                            <p><p>Render a toolbar for use on the record view.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchResult">getSearchResult</a>(string $view)
+        
+                                            <p><p>Render a search result for the specified view mode.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCheckbox">getCheckbox</a>(string $idPrefix = &#039;&#039;, string $formAttr = false, int $number = null)
+        
+                                            <p><p>Render an HTML checkbox control for the current record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCover">getCover</a>(string $context, string $default, string $link = false)
+        
+                                            <p><p>Render a cover for the current record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPreviewCoverLinkSetting">getPreviewCoverLinkSetting</a>(string $context)
+        
+                                            <p><p>Should cover images be linked to previews (when applicable) in the provided
+template context?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCoverDetails">getCoverDetails</a>(string $context, string $default, string $link = false)
+        
+                                            <p><p>Get the rendered cover plus some useful parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCoverSize">getCoverSize</a>(string $context, string $default = &#039;medium&#039;)
+        
+                                            <p><p>Get the configured thumbnail size for record lists</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getThumbnailAlignment">getThumbnailAlignment</a>(string $context = &#039;result&#039;)
+        
+                                            <p><p>Get the configured thumbnail alignment</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getQrCode">getQrCode</a>(string $context, array $extra = [], string $level = &quot;L&quot;, int $size = 3, int $margin = 4)
+        
+                                            <p><p>Generate a qrcode URL (return false if unsupported).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getThumbnail">getThumbnail</a>(string $size = &#039;small&#039;)
+        
+                                            <p><p>Generate a thumbnail URL (return false if unsupported).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUrlList">getUrlList</a>()
+        
+                                            <p><p>Get all URLs associated with the record.  Returns an array of strings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLinkDetails">getLinkDetails</a>(bool $openUrlActive = false)
+        
+                                            <p><p>Get all the links associated with this record.  Returns an array of
+associative arrays each containing 'desc' and 'url' keys.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasOpenUrlReplaceSetting">hasOpenUrlReplaceSetting</a>()
+        
+                                            <p><p>Get all the links associated with this record depending on the OpenURL setting
+replace_other_urls.  Returns an array of associative arrays each containing
+'desc' and 'url' keys.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deduplicateLinks">deduplicateLinks</a>(array $links)
+        
+                                            <p><p>Remove duplicates from the array. All keys and values are being used
+recursively to compare, so if there are 2 links with the same url
+but different desc, they will both be preserved.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_resolveClassTemplate">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_resolveClassTemplate">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a> at line 70</div>
+        <code>            protected        string
+    <strong>resolveClassTemplate</strong>(string $template, string $className, <abbr title="Laminas\View\Resolver\ResolverInterface">ResolverInterface</abbr> $resolver, string $topClassName = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Recursively locate a template that matches the provided class name
+(or one of its parent classes); throw an exception if no match is found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td><p>Template path (with %s as class name
+placeholder)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Name of class to apply to template.</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\View\Resolver\ResolverInterface">ResolverInterface</abbr></td>
+                <td>$resolver</td>
+                <td><p>Resolver to use</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$topClassName</td>
+                <td><p>Top-level parent class of $className
+(or null if $className is already the top level; used for recursion only).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderClassTemplate">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_renderClassTemplate">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a> at line 111</div>
+        <code>            protected        string
+    <strong>renderClassTemplate</strong>(string $template, string $className, array $context = [], bool $throw = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render a template associated with the provided class name, applying to
+specified context variables.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td><p>Template path (with %s as class name placeholder)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Name of class to apply to template.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Context for rendering template</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$throw</td>
+                <td><p>If true (default), an exception is thrown if the
+template is not found. Otherwise an empty string is returned.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\View\Exception\RuntimeException">RuntimeException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedClassTemplate">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_getCachedClassTemplate">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a> at line 148</div>
+        <code>            protected        string
+    <strong>getCachedClassTemplate</strong>(string $template, string $className)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the class template file unless already cached and return the file
+name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td><p>Template path (with %s as class name placeholder)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Name of class to apply to template.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBriefClass">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_getBriefClass">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a> at line 168</div>
+        <code>            protected        string
+    <strong>getBriefClass</strong>(string $className)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper to grab the end of the class name</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Class name to abbreviate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateWithClass">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/ClassBasedTemplateRendererTrait.html#method_getTemplateWithClass">
+<abbr title="VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait">ClassBasedTemplateRendererTrait</abbr></a> at line 182</div>
+        <code>            protected        string
+    <strong>getTemplateWithClass</strong>(string $template, string $className)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper to put the template path and class name together</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td><p>Template path (with %s as class name placeholder)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Class name to abbreviate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 78</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>VuFind configuration</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCoverRouter">
+        <div class="location">at line 90</div>
+        <code>                    void
+    <strong>setCoverRouter</strong>(<a href="../../../../VuFind/Cover/Router.html"><abbr title="VuFind\Cover\Router">Router</abbr></a> $router)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Inject the cover router</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFind/Cover/Router.html"><abbr title="VuFind\Cover\Router">Router</abbr></a></td>
+                <td>$router</td>
+                <td><p>Cover router</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderTemplate">
+        <div class="location">at line 107</div>
+        <code>                    string
+    <strong>renderTemplate</strong>(string $name, array $context = null, bool $throw = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render a template within a record driver folder.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Template name to render</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Variables needed for rendering template; these will
+be temporarily added to the global view context, then reverted after the
+template is rendered (default = record driver only).</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$throw</td>
+                <td><p>If true (default), an exception is thrown if the
+template is not found. Otherwise an empty string is returned.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___invoke">
+        <div class="location">at line 127</div>
+        <code>                    <a href="../../../../VuFind/View/Helper/Root/Record.html"><abbr title="VuFind\View\Helper\Root\Record">Record</abbr></a>
+    <strong>__invoke</strong>(<a href="../../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Store a record driver object and return this object so that the appropriate
+template can be rendered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$driver</td>
+                <td><p>Record driver object.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../VuFind/View/Helper/Root/Record.html"><abbr title="VuFind\View\Helper\Root\Record">Record</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCoreMetadata">
+        <div class="location">at line 143</div>
+        <code>                    string
+    <strong>getCoreMetadata</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render the core metadata area of the record view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollectionBriefRecord">
+        <div class="location">at line 153</div>
+        <code>                    string
+    <strong>getCollectionBriefRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render the a brief record for use in collection mode.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollectionMetadata">
+        <div class="location">at line 163</div>
+        <code>                    string
+    <strong>getCollectionMetadata</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render the core metadata area of the collection view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExport">
+        <div class="location">at line 176</div>
+        <code>                    string
+    <strong>getExport</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Export the record in the requested format.  For legal values, see
+the export helper's getFormatsForRecord() method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Export format to display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Exported data</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatClass">
+        <div class="location">at line 190</div>
+        <code>                    string
+    <strong>getFormatClass</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the CSS class used to properly render a format.  (Note that this may
+not be used by every theme).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Format text to convert into CSS class</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatList">
+        <div class="location">at line 203</div>
+        <code>                    string
+    <strong>getFormatList</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render a list of record formats.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLabelList">
+        <div class="location">at line 213</div>
+        <code>                    string
+    <strong>getLabelList</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render a list of record labels.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getListEntry">
+        <div class="location">at line 227</div>
+        <code>                    string
+    <strong>getListEntry</strong>(<a href="../../../../VuFind/Db/Row/UserList.html"><abbr title="VuFind\Db\Row\UserList">UserList</abbr></a> $list = null, <a href="../../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render an entry in a favorite list.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFind/Db/Row/UserList.html"><abbr title="VuFind\Db\Row\UserList">UserList</abbr></a></td>
+                <td>$list</td>
+                <td><p>Currently selected list (null for
+combined favorites)</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>Current logged in user (false if none)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPreviews">
+        <div class="location">at line 250</div>
+        <code>                    string
+    <strong>getPreviews</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render previews (data and link) of the item if configured.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPreviewData">
+        <div class="location">at line 260</div>
+        <code>                    string
+    <strong>getPreviewData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render data needed to get previews.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPreviewLink">
+        <div class="location">at line 273</div>
+        <code>                    string
+    <strong>getPreviewLink</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render links to previews of the item if configured.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPreviewIds">
+        <div class="location">at line 286</div>
+        <code>                    array
+    <strong>getPreviewIds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Collects ISBN, LCCN, and OCLC numbers to use in calling preview APIs</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitleHtml">
+        <div class="location">at line 321</div>
+        <code>                    string
+    <strong>getTitleHtml</strong>(int $maxLength = 180)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get HTML to render a title.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$maxLength</td>
+                <td><p>Maximum length of non-highlighted title.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLink">
+        <div class="location">at line 347</div>
+        <code>                    string
+    <strong>getLink</strong>(string $type, string $lookfor)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render the link of the specified type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td><p>Link type</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$lookfor</td>
+                <td><p>String to search for at link</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTab">
+        <div class="location">at line 367</div>
+        <code>                    string
+    <strong>getTab</strong>(<a href="../../../../VuFind/RecordTab/TabInterface.html"><abbr title="VuFind\RecordTab\TabInterface">TabInterface</abbr></a> $tab)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render the contents of the specified record tab.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFind/RecordTab/TabInterface.html"><abbr title="VuFind\RecordTab\TabInterface">TabInterface</abbr></a></td>
+                <td>$tab</td>
+                <td><p>Tab to display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getToolbar">
+        <div class="location">at line 383</div>
+        <code>                    string
+    <strong>getToolbar</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render a toolbar for use on the record view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchResult">
+        <div class="location">at line 395</div>
+        <code>                    string
+    <strong>getSearchResult</strong>(string $view)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render a search result for the specified view mode.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td><p>View mode to use.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCheckbox">
+        <div class="location">at line 409</div>
+        <code>                    string
+    <strong>getCheckbox</strong>(string $idPrefix = &#039;&#039;, string $formAttr = false, int $number = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render an HTML checkbox control for the current record.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$idPrefix</td>
+                <td><p>Prefix for checkbox HTML ids</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$formAttr</td>
+                <td><p>ID of form for [form] attribute</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$number</td>
+                <td><p>Result number (for label of checkbox)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCover">
+        <div class="location">at line 433</div>
+        <code>                    string
+    <strong>getCover</strong>(string $context, string $default, string $link = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render a cover for the current record.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>Context of code being generated</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>The default size of the cover</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$link</td>
+                <td><p>The link for the anchor</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPreviewCoverLinkSetting">
+        <div class="location">at line 447</div>
+        <code>            protected        bool
+    <strong>getPreviewCoverLinkSetting</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Should cover images be linked to previews (when applicable) in the provided
+template context?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>Context of code being generated</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCoverDetails">
+        <div class="location">at line 470</div>
+        <code>                    array
+    <strong>getCoverDetails</strong>(string $context, string $default, string $link = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the rendered cover plus some useful parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>Context of code being generated</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>The default size of the cover</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$link</td>
+                <td><p>The link for the anchor</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCoverSize">
+        <div class="location">at line 503</div>
+        <code>            protected        string
+    <strong>getCoverSize</strong>(string $context, string $default = &#039;medium&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the configured thumbnail size for record lists</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>Context of code being generated</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>The default size of the cover</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getThumbnailAlignment">
+        <div class="location">at line 522</div>
+        <code>                    string
+    <strong>getThumbnailAlignment</strong>(string $context = &#039;result&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the configured thumbnail alignment</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>telling the context asking, prepends the config key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQrCode">
+        <div class="location">at line 547</div>
+        <code>                    string|bool
+    <strong>getQrCode</strong>(string $context, array $extra = [], string $level = &quot;L&quot;, int $size = 3, int $margin = 4)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a qrcode URL (return false if unsupported).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>Context of code being generated (core or results)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extra</td>
+                <td><p>Extra details to pass to the QR code template</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>QR code level</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td><p>QR code size</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$margin</td>
+                <td><p>QR code margin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getThumbnail">
+        <div class="location">at line 596</div>
+        <code>                    string|bool
+    <strong>getThumbnail</strong>(string $size = &#039;small&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a thumbnail URL (return false if unsupported).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$size</td>
+                <td><p>Size of thumbnail (small, medium or large -- small is
+default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlList">
+        <div class="location">at line 612</div>
+        <code>                    array
+    <strong>getUrlList</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all URLs associated with the record.  Returns an array of strings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLinkDetails">
+        <div class="location">at line 629</div>
+        <code>                    array
+    <strong>getLinkDetails</strong>(bool $openUrlActive = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all the links associated with this record.  Returns an array of
+associative arrays each containing 'desc' and 'url' keys.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$openUrlActive</td>
+                <td><p>Is there an active OpenURL on the page?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasOpenUrlReplaceSetting">
+        <div class="location">at line 681</div>
+        <code>            protected        bool
+    <strong>hasOpenUrlReplaceSetting</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all the links associated with this record depending on the OpenURL setting
+replace_other_urls.  Returns an array of associative arrays each containing
+'desc' and 'url' keys.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deduplicateLinks">
+        <div class="location">at line 697</div>
+        <code>            protected        array
+    <strong>deduplicateLinks</strong>(array $links)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove duplicates from the array. All keys and values are being used
+recursively to compare, so if there are 2 links with the same url
+but different desc, they will both be preserved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$links</td>
+                <td><p>array of associative arrays,
+each containing 'desc' and 'url' keys</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

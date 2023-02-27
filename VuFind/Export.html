@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Export | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../doctum.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script async defer src="../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Export" data-root-path="../" data-search-index-url="../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../VuFind.html">VuFind</a></li><li class="backslash">\</li><li>Export</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Export    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Export</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Export support class</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_mainConfig">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$mainConfig</td>
+                <td class="last"><p>Main VuFind configuration</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_exportConfig">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$exportConfig</td>
+                <td class="last"><p>Export-specific configuration</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_activeFormats">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$activeFormats</td>
+                <td class="last"><p>Property to cache active formats
+(initialized to empty array , populated later)</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $mainConfig, <abbr title="Laminas\Config\Config">Config</abbr> $exportConfig)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBulkUrl">getBulkUrl</a>(<abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $view, string $format, array $ids)
+        
+                                            <p><p>Get the URL for bulk export.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRedirectUrl">getRedirectUrl</a>(string $format, string $callback)
+        
+                                            <p><p>Build callback URL for export.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_needsRedirect">needsRedirect</a>(string $format)
+        
+                                            <p><p>Does the requested format require a redirect?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processGroup">processGroup</a>(string $format, array $parts)
+        
+                                            <p><p>Convert an array of individual records into a single string for display.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_recordSupportsFormat">recordSupportsFormat</a>(<a href="../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver, string $format)
+        
+                                            <p><p>Does the specified record support the specified export format?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFormatsForRecord">getFormatsForRecord</a>(<a href="../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        
+                                            <p><p>Get an array of strings representing formats in which a specified record's
+data may be exported (empty if none).  Legal values: &quot;BibTeX&quot;, &quot;EndNote&quot;,
+&quot;MARC&quot;, &quot;MARCXML&quot;, &quot;RDF&quot;, &quot;RefWorks&quot;.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFormatsForRecords">getFormatsForRecords</a>(array $drivers)
+        
+                                            <p><p>Same return value as getFormatsForRecord(), but filtered to reflect bulk
+export configuration and to list only values supported by a set of records.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHeaders">getHeaders</a>(string $format)
+        
+                                            <p><p>Get headers for the requested format.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLabelForFormat">getLabelForFormat</a>(string $format)
+        
+                                            <p><p>Get the display label for the specified export format.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBulkExportType">getBulkExportType</a>(string $format)
+        
+                                            <p><p>Get the bulk export type for the specified export format.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getActiveFormats">getActiveFormats</a>(string $context = &#039;record&#039;)
+        
+                                            <p><p>Get active export formats for the given context.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPostField">getPostField</a>(string $format)
+        
+                                            <p><p>Get the export POST field name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTargetWindow">getTargetWindow</a>(string $format)
+        
+                                            <p><p>Get the export target window.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 72</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $mainConfig, <abbr title="Laminas\Config\Config">Config</abbr> $exportConfig)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$mainConfig</td>
+                <td><p>Main VuFind configuration</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$exportConfig</td>
+                <td><p>Export-specific configuration</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBulkUrl">
+        <div class="location">at line 87</div>
+        <code>                    string
+    <strong>getBulkUrl</strong>(<abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $view, string $format, array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the URL for bulk export.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr></td>
+                <td>$view</td>
+                <td><p>View object (needed for URL generation)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Export format being used</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>Array of IDs to export (in source|id format)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRedirectUrl">
+        <div class="location">at line 110</div>
+        <code>                    string
+    <strong>getRedirectUrl</strong>(string $format, string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Build callback URL for export.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Export format being used</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$callback</td>
+                <td><p>Callback URL for retrieving record(s)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_needsRedirect">
+        <div class="location">at line 149</div>
+        <code>                    bool
+    <strong>needsRedirect</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the requested format require a redirect?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Format to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processGroup">
+        <div class="location">at line 163</div>
+        <code>                    string
+    <strong>processGroup</strong>(string $format, array $parts)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert an array of individual records into a single string for display.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Format of records to process</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parts</td>
+                <td><p>Multiple records to process</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recordSupportsFormat">
+        <div class="location">at line 215</div>
+        <code>                    bool
+    <strong>recordSupportsFormat</strong>(<a href="../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver, string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the specified record support the specified export format?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$driver</td>
+                <td><p>Record driver</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Format to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatsForRecord">
+        <div class="location">at line 250</div>
+        <code>                    array
+    <strong>getFormatsForRecord</strong>(<a href="../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of strings representing formats in which a specified record's
+data may be exported (empty if none).  Legal values: &quot;BibTeX&quot;, &quot;EndNote&quot;,
+&quot;MARC&quot;, &quot;MARCXML&quot;, &quot;RDF&quot;, &quot;RefWorks&quot;.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$driver</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Strings representing export formats.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatsForRecords">
+        <div class="location">at line 278</div>
+        <code>                    array
+    <strong>getFormatsForRecords</strong>(array $drivers)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Same return value as getFormatsForRecord(), but filtered to reflect bulk
+export configuration and to list only values supported by a set of records.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$drivers</td>
+                <td><p>Array of record drivers</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaders">
+        <div class="location">at line 301</div>
+        <code>                    array
+    <strong>getHeaders</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get headers for the requested format.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Selected export format</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLabelForFormat">
+        <div class="location">at line 313</div>
+        <code>                    string
+    <strong>getLabelForFormat</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the display label for the specified export format.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Format identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBulkExportType">
+        <div class="location">at line 325</div>
+        <code>                    string
+    <strong>getBulkExportType</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the bulk export type for the specified export format.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Format identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActiveFormats">
+        <div class="location">at line 340</div>
+        <code>                    array
+    <strong>getActiveFormats</strong>(string $context = &#039;record&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get active export formats for the given context.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>Export context (i.e. record, bulk)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPostField">
+        <div class="location">at line 383</div>
+        <code>                    string
+    <strong>getPostField</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the export POST field name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Format identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTargetWindow">
+        <div class="location">at line 396</div>
+        <code>                    string
+    <strong>getTargetWindow</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the export target window.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Format identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

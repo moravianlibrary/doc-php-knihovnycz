@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\AjaxHandler\DoiLookup | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_AjaxHandler_DoiLookup" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/AjaxHandler.html">AjaxHandler</a></li><li class="backslash">\</li><li>DoiLookup</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>DoiLookup    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>DoiLookup</strong>        extends <a href="../../VuFind/AjaxHandler/AbstractBase.html"><abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>AJAX handler to look up DOI data.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_sessionSettings">
+                                        protected                                        <a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a>
+                                                                                
+                                    </td>
+                <td>$sessionSettings</td>
+                <td class="last"><p>Session settings</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#property_sessionSettings">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pluginManager">
+                                        protected                                        <a href="../../VuFind/DoiLinker/PluginManager.html"><abbr title="VuFind\DoiLinker\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$pluginManager</td>
+                <td class="last"><p>DOI Linker Plugin Manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resolvers">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$resolvers</td>
+                <td class="last"><p>DOI resolver configuration value, exploded into an array of options</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_multiMode">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$multiMode</td>
+                <td class="last"><p>Behavior to use when multiple resolvers find results for the same DOI (may
+be 'first' -- use first match, or 'merge' -- use all results)</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_proxyIcons">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$proxyIcons</td>
+                <td class="last"><p>Whether to load icons via the cover proxy</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_openInNewWindow">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$openInNewWindow</td>
+                <td class="last"><p>Whether to open links in a new window</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewRenderer">
+                                        protected                                        <abbr title="Laminas\View\Renderer\RendererInterface">RendererInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$viewRenderer</td>
+                <td class="last"><p>View renderer</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_disableSessionWrites">disableSessionWrites</a>()
+        
+                                            <p><p>Prevent session writes -- this is designed to be called prior to time-
+consuming AJAX operations to help reduce the odds of a timing-related bug
+that causes the wrong version of session data to be written to disk (see
+VUFIND-716 for more details).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#method_disableSessionWrites">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatResponse">formatResponse</a>(mixed $response, int $httpCode = null)
+        
+                                            <p><p>Format a response array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#method_formatResponse">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFind/DoiLinker/PluginManager.html"><abbr title="VuFind\DoiLinker\PluginManager">PluginManager</abbr></a> $pluginManager, <abbr title="Laminas\View\Renderer\RendererInterface">RendererInterface</abbr> $viewRenderer, array $config)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handleRequest">handleRequest</a>(<abbr title="Laminas\Mvc\Controller\Plugin\Params">Params</abbr> $params)
+        
+                                            <p><p>Handle a request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processIconLinks">processIconLinks</a>(array $dois)
+        
+                                            <p><p>Proxify external DOI icon links and render local icons</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_disableSessionWrites">
+        <div class="location">in <a href="../../VuFind/AjaxHandler/AbstractBase.html#method_disableSessionWrites">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a> at line 58</div>
+        <code>            protected        void
+    <strong>disableSessionWrites</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Prevent session writes -- this is designed to be called prior to time-
+consuming AJAX operations to help reduce the odds of a timing-related bug
+that causes the wrong version of session data to be written to disk (see
+VUFIND-716 for more details).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatResponse">
+        <div class="location">in <a href="../../VuFind/AjaxHandler/AbstractBase.html#method_formatResponse">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a> at line 74</div>
+        <code>            protected        array
+    <strong>formatResponse</strong>(mixed $response, int $httpCode = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format a response array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$response</td>
+                <td><p>Response data</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$httpCode</td>
+                <td><p>HTTP status code (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 95</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../VuFind/DoiLinker/PluginManager.html"><abbr title="VuFind\DoiLinker\PluginManager">PluginManager</abbr></a> $pluginManager, <abbr title="Laminas\View\Renderer\RendererInterface">RendererInterface</abbr> $viewRenderer, array $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/DoiLinker/PluginManager.html"><abbr title="VuFind\DoiLinker\PluginManager">PluginManager</abbr></a></td>
+                <td>$pluginManager</td>
+                <td><p>DOI Linker Plugin Manager</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\View\Renderer\RendererInterface">RendererInterface</abbr></td>
+                <td>$viewRenderer</td>
+                <td><p>View renderer</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Main configuration</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleRequest">
+        <div class="location">at line 120</div>
+        <code>                    array
+    <strong>handleRequest</strong>(<abbr title="Laminas\Mvc\Controller\Plugin\Params">Params</abbr> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Handle a request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Mvc\Controller\Plugin\Params">Params</abbr></td>
+                <td>$params</td>
+                <td><p>Parameter helper from controller</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>[response data, HTTP status code]</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processIconLinks">
+        <div class="location">at line 158</div>
+        <code>            protected        array
+    <strong>processIconLinks</strong>(array $dois)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Proxify external DOI icon links and render local icons</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$dois</td>
+                <td>DOIs</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>Index</strong>        extends <abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr>
+    <strong>Index</strong>        extends <a href="../../../VuFind/Sitemap/Plugin/Index.html"><abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a>
 </p>
 
                 <p>
@@ -106,6 +106,66 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_verboseMessageCallback">
+                                        protected                                        callable
+                                                                                
+                                    </td>
+                <td>$verboseMessageCallback</td>
+                <td class="last"><p>Verbose message callback</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/AbstractGeneratorPlugin.html#property_verboseMessageCallback">
+<abbr title="VuFind\Sitemap\Plugin\AbstractGeneratorPlugin">AbstractGeneratorPlugin</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_baseUrl">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$baseUrl</td>
+                <td class="last"><p>Base URL for site</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/Index.html#property_baseUrl">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_backendSettings">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$backendSettings</td>
+                <td class="last"><p>Settings specifying which backends to index.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/Index.html#property_backendSettings">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_idFetcher">
+                                        protected                                        <a href="../../../VuFind/Sitemap/Plugin/Index/AbstractIdFetcher.html"><abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr></a>
+                                                                                
+                                    </td>
+                <td>$idFetcher</td>
+                <td class="last"><p>Helper for fetching IDs from the search service.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/Index.html#property_idFetcher">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_countPerPage">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$countPerPage</td>
+                <td class="last"><p>Page size for data retrieval</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/Index.html#property_countPerPage">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filters">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$filters</td>
+                <td class="last"><p>Search filters</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/Index.html#property_filters">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_tab">
                                         protected                                        string
                                                                                 
@@ -122,13 +182,50 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(array $backendSettings, <abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr> $idFetcher, int $countPerPage, array $filters = [], string $tab = &#039;&#039;)
+                    <a href="#method_setOptions">setOptions</a>(array $options)
         
-                                            <p>Constructor</p>                </div>
-                <div class="col-md-2"></div>
+                                            <p><p>Set plugin options.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/Index.html#method_setOptions">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsVuFindLanguages">supportsVuFindLanguages</a>()
+        
+                                            <p><p>Whether the URLs generated by the plugin support VuFind's lng parameter</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/AbstractGeneratorPlugin.html#method_supportsVuFindLanguages">
+<abbr title="VuFind\Sitemap\Plugin\AbstractGeneratorPlugin">AbstractGeneratorPlugin</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFrequency">getFrequency</a>()
+        
+                                            <p><p>Get update frequency. Empty string implies that the default from sitemap
+configuration should be used.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/AbstractGeneratorPlugin.html#method_getFrequency">
+<abbr title="VuFind\Sitemap\Plugin\AbstractGeneratorPlugin">AbstractGeneratorPlugin</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSitemapName">getSitemapName</a>()
+        
+                                            <p><p>Get the name of the sitemap used to create the sitemap file. This will be
+appended to the configured base name, and may be blank to use the base
+name without a suffix.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/Index.html#method_getSitemapName">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -140,6 +237,27 @@
                                             <p><p>Generate urls for the sitemap.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_verboseMsg">verboseMsg</a>(string $msg)
+        
+                                            <p><p>Write a verbose message (if callback is available and configured to do so)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/AbstractGeneratorPlugin.html#method_verboseMsg">
+<abbr title="VuFind\Sitemap\Plugin\AbstractGeneratorPlugin">AbstractGeneratorPlugin</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $backendSettings, <a href="../../../VuFind/Sitemap/Plugin/Index/AbstractIdFetcher.html"><abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr></a> $idFetcher, int $countPerPage, array $filters = [], string $tab = &#039;&#039;)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -147,10 +265,11 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method___construct">
-        <div class="location">at line 62</div>
-        <code>                    
-    <strong>__construct</strong>(array $backendSettings, <abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr> $idFetcher, int $countPerPage, array $filters = [], string $tab = &#039;&#039;)
+                    <h3 id="method_setOptions">
+        <div class="location">in <a href="../../../VuFind/Sitemap/Plugin/Index.html#method_setOptions">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a> at line 161</div>
+        <code>                    void
+    <strong>setOptions</strong>(array $options)
         </code>
     </h3>
     <div class="details">    
@@ -159,7 +278,7 @@
             
 
         <div class="method-description">
-                            <p>Constructor</p>                        
+                            <p><p>Set plugin options.</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -167,34 +286,126 @@
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
-                <td>$backendSettings</td>
-                <td><p>Settings specifying which
-backends to index</p></td>
-            </tr>
-                    <tr>
-                <td><abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr></td>
-                <td>$idFetcher</td>
-                <td><p>The helper object for
-retrieving IDs</p></td>
-            </tr>
-                    <tr>
-                <td>int</td>
-                <td>$countPerPage</td>
-                <td><p>Page size for data retrieval</p></td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$filters</td>
-                <td><p>Search filters</p></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$tab</td>
-                <td><p>Record tab</p></td>
+                <td>$options</td>
+                <td>Options</td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsVuFindLanguages">
+        <div class="location">in <a href="../../../VuFind/Sitemap/Plugin/AbstractGeneratorPlugin.html#method_supportsVuFindLanguages">
+<abbr title="VuFind\Sitemap\Plugin\AbstractGeneratorPlugin">AbstractGeneratorPlugin</abbr></a> at line 65</div>
+        <code>                    bool
+    <strong>supportsVuFindLanguages</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Whether the URLs generated by the plugin support VuFind's lng parameter</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFrequency">
+        <div class="location">in <a href="../../../VuFind/Sitemap/Plugin/AbstractGeneratorPlugin.html#method_getFrequency">
+<abbr title="VuFind\Sitemap\Plugin\AbstractGeneratorPlugin">AbstractGeneratorPlugin</abbr></a> at line 76</div>
+        <code>                    string
+    <strong>getFrequency</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get update frequency. Empty string implies that the default from sitemap
+configuration should be used.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSitemapName">
+        <div class="location">in <a href="../../../VuFind/Sitemap/Plugin/Index.html#method_getSitemapName">
+<abbr title="VuFind\Sitemap\Plugin\Index">Index</abbr></a> at line 105</div>
+        <code>                    string
+    <strong>getSitemapName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the sitemap used to create the sitemap file. This will be
+appended to the configured base name, and may be blank to use the base
+name without a suffix.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             
@@ -228,6 +439,106 @@ retrieving IDs</p></td>
         </tr>
     </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verboseMsg">
+        <div class="location">in <a href="../../../VuFind/Sitemap/Plugin/AbstractGeneratorPlugin.html#method_verboseMsg">
+<abbr title="VuFind\Sitemap\Plugin\AbstractGeneratorPlugin">AbstractGeneratorPlugin</abbr></a> at line 107</div>
+        <code>            protected        void
+    <strong>verboseMsg</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Write a verbose message (if callback is available and configured to do so)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Message to display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 62</div>
+        <code>                    
+    <strong>__construct</strong>(array $backendSettings, <a href="../../../VuFind/Sitemap/Plugin/Index/AbstractIdFetcher.html"><abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr></a> $idFetcher, int $countPerPage, array $filters = [], string $tab = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$backendSettings</td>
+                <td><p>Settings specifying which
+backends to index</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Sitemap/Plugin/Index/AbstractIdFetcher.html"><abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr></a></td>
+                <td>$idFetcher</td>
+                <td><p>The helper object for
+retrieving IDs</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$countPerPage</td>
+                <td><p>Page size for data retrieval</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$filters</td>
+                <td><p>Search filters</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tab</td>
+                <td><p>Record tab</p></td>
+            </tr>
+            </table>
+
+            
             
             
             

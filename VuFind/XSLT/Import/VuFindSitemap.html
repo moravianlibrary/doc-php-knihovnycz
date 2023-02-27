@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\XSLT\Import\VuFindSitemap | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_XSLT_Import_VuFindSitemap" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/XSLT.html">XSLT</a></li><li class="backslash">\</li><li><a href="../../../VuFind/XSLT/Import.html">Import</a></li><li class="backslash">\</li><li>VuFindSitemap</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>VuFindSitemap    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>VuFindSitemap</strong>        extends <a href="../../../VuFind/XSLT/Import/VuFind.html"><abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>XSLT support class -- all methods of this class must be public and static;
+they will be automatically made available to your XSL stylesheet for use
+with the php:function() function.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_serviceLocator">
+                    static                    protected                                        <abbr title="VuFind\XSLT\Import\ServiceLocatorInterface">ServiceLocatorInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$serviceLocator</td>
+                <td class="last"><p>Service locator</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#property_serviceLocator">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setServiceLocator">setServiceLocator</a>(<abbr title="VuFind\XSLT\Import\ServiceLocatorInterface">ServiceLocatorInterface</abbr> $serviceLocator)
+        
+                                            <p><p>Set the service locator.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_setServiceLocator">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../VuFind/Db/Table/ChangeTracker.html"><abbr title="VuFind\Db\Table\ChangeTracker">ChangeTracker</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getChangeTracker">getChangeTracker</a>()
+        
+                                            <p><p>Get the change tracker table object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_getChangeTracker">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Laminas\Config\Config">Config</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfig">getConfig</a>(string $config = &#039;config&#039;)
+        
+                                            <p><p>Get a configuration file.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_getConfig">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFirstIndexed">getFirstIndexed</a>(string $core, string $id, string $date)
+        
+                                            <p><p>Get the date/time of the first time this record was indexed.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_getFirstIndexed">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLastIndexed">getLastIndexed</a>(string $core, string $id, string $date)
+        
+                                            <p><p>Get the date/time of the most recent time this record was indexed.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_getLastIndexed">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_harvestTextFile">harvestTextFile</a>(string $url)
+        
+                                            <p><p>Harvest the contents of a text file for inclusion in the output.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_harvestTextFile">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getParser">getParser</a>()
+        
+                                            <p><p>Read parser method from fulltext.ini</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_getParser">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_harvestWithParser">harvestWithParser</a>(string $url)
+        
+                                            <p><p>Call parsing method based on parser setting in fulltext.ini</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_harvestWithParser">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getApertureCommand">getApertureCommand</a>(string $input, string $output, string $method = &quot;webcrawler&quot;)
+        
+                                            <p><p>Generic method for building Aperture Command</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_getApertureCommand">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_stripBadChars">stripBadChars</a>(string $in)
+        
+                                            <p><p>Strip illegal XML characters from a string.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_stripBadChars">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_harvestWithAperture">harvestWithAperture</a>(string $url, string $method = &quot;webcrawler&quot;)
+        
+                                            <p><p>Harvest the contents of a document file (PDF, Word, etc.) using Aperture.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_harvestWithAperture">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTikaCommand">getTikaCommand</a>(string $input, string $output, string $arg)
+        
+                                            <p><p>Generic method for building Tika command</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_getTikaCommand">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_harvestWithTika">harvestWithTika</a>(string $url, string $arg = &quot;--text&quot;)
+        
+                                            <p><p>Harvest the contents of a document file (PDF, Word, etc.) using Tika.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_harvestWithTika">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mapString">mapString</a>(string $in, string $filename)
+        
+                                            <p><p>Map string using a config file from the translation_maps folder.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_mapString">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_stripArticles">stripArticles</a>(string $in)
+        
+                                            <p><p>Strip articles from the front of the text (for creating sortable titles).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_stripArticles">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_xmlAsText">xmlAsText</a>(array $in)
+        
+                                            <p><p>Convert provided nodes into XML and return as text.  This is useful for
+populating the fullrecord field with the raw input XML.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_xmlAsText">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeTagAndReturnXMLasText">removeTagAndReturnXMLasText</a>(array $in, string $tag)
+        
+                                            <p><p>Remove a given tag from the provided nodes, then convert
+into XML and return as text.  This is useful for
+populating the fullrecord field with the raw input XML but
+allow for removal of certain elements (eg: full text field).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_removeTagAndReturnXMLasText">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_explode">explode</a>(string $delimiter, string $string)
+        
+                                            <p><p>Proxy the explode PHP function for use in XSL transformation.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_explode">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_implode">implode</a>(string $glue, array $pieces)
+        
+                                            <p><p>Proxy the implode PHP function for use in XSL transformation.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_implode">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractBestDateOrRange">extractBestDateOrRange</a>(array $input)
+        
+                                            <p><p>Try to find the best single year or date range in a set of DOM elements.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_extractBestDateOrRange">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractEarliestYear">extractEarliestYear</a>(array $input)
+        
+                                            <p><p>Try to find a four-digit year in a set of DOM elements.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_extractEarliestYear">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isInvertedName">isInvertedName</a>(string $name)
+        
+                                            <p><p>Is the provided name inverted (&quot;Last, First&quot;) or not (&quot;First Last&quot;)?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_isInvertedName">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_invertName">invertName</a>(string $rawName)
+        
+                                            <p><p>Invert &quot;Firstname Lastname&quot; authors into &quot;Lastname, Firstname.&quot;</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_invertName">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_invertNames">invertNames</a>(array $input)
+        
+                                            <p><p>Call invertName on all matching elements; return a DOMDocument with a
+name tag for each inverted name.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/XSLT/Import/VuFind.html#method_invertNames">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getApertureFields">getApertureFields</a>(string $htmlFile)
+        
+                                            <p><p>Load metadata about an HTML document using Aperture.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTikaFields">getTikaFields</a>(string $htmlFile)
+        
+                                            <p><p>Load metadata about an HTML document using Tika.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHtmlFields">getHtmlFields</a>(string $html)
+        
+                                            <p><p>Extract key metadata from HTML.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_arrayToSolrXml">arrayToSolrXml</a>(array $fields)
+        
+                                            <p><p>Convert an associative array of fields into a Solr document.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDocument">getDocument</a>(string $url)
+        
+                                            <p><p>Harvest the contents of a document file (PDF, Word, etc.) using Aperture.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDocumentFieldArray">getDocumentFieldArray</a>(string $url)
+        
+                                            <p><p>Support method for getDocument() -- retrieve associative array of field data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setServiceLocator">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_setServiceLocator">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 59</div>
+        <code>        static            void
+    <strong>setServiceLocator</strong>(<abbr title="VuFind\XSLT\Import\ServiceLocatorInterface">ServiceLocatorInterface</abbr> $serviceLocator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the service locator.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\XSLT\Import\ServiceLocatorInterface">ServiceLocatorInterface</abbr></td>
+                <td>$serviceLocator</td>
+                <td><p>Locator to register</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChangeTracker">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_getChangeTracker">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 69</div>
+        <code>        static            <a href="../../../VuFind/Db/Table/ChangeTracker.html"><abbr title="VuFind\Db\Table\ChangeTracker">ChangeTracker</abbr></a>
+    <strong>getChangeTracker</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the change tracker table object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Table/ChangeTracker.html"><abbr title="VuFind\Db\Table\ChangeTracker">ChangeTracker</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_getConfig">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 82</div>
+        <code>        static            <abbr title="Laminas\Config\Config">Config</abbr>
+    <strong>getConfig</strong>(string $config = &#039;config&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a configuration file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$config</td>
+                <td><p>Configuration name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFirstIndexed">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_getFirstIndexed">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 97</div>
+        <code>        static            string
+    <strong>getFirstIndexed</strong>(string $core, string $id, string $date)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the date/time of the first time this record was indexed.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$core</td>
+                <td><p>Solr core holding this record.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record ID within specified core.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td><p>Date record was last modified.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>First index date/time.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastIndexed">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_getLastIndexed">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 114</div>
+        <code>        static            string
+    <strong>getLastIndexed</strong>(string $core, string $id, string $date)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the date/time of the most recent time this record was indexed.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$core</td>
+                <td><p>Solr core holding this record.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record ID within specified core.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td><p>Date record was last modified.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Latest index date/time.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_harvestTextFile">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_harvestTextFile">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 129</div>
+        <code>        static            string
+    <strong>harvestTextFile</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Harvest the contents of a text file for inclusion in the output.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL of file to retrieve.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>file contents.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParser">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_getParser">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 148</div>
+        <code>        static            string
+    <strong>getParser</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Read parser method from fulltext.ini</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Name of parser to use (i.e. Aperture or Tika)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_harvestWithParser">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_harvestWithParser">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 178</div>
+        <code>        static            string
+    <strong>harvestWithParser</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call parsing method based on parser setting in fulltext.ini</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL to harvest</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Text contents of URL</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getApertureCommand">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_getApertureCommand">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 201</div>
+        <code>        static            string
+    <strong>getApertureCommand</strong>(string $input, string $output, string $method = &quot;webcrawler&quot;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generic method for building Aperture Command</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td><p>name of input file | url</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$output</td>
+                <td><p>name of output file</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>webcrawler | filecrawler</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>command to be executed</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stripBadChars">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_stripBadChars">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 228</div>
+        <code>        static            string
+    <strong>stripBadChars</strong>(string $in)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Strip illegal XML characters from a string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$in</td>
+                <td><p>String to process</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_harvestWithAperture">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_harvestWithAperture">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 245</div>
+        <code>        static            string
+    <strong>harvestWithAperture</strong>(string $url, string $method = &quot;webcrawler&quot;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Harvest the contents of a document file (PDF, Word, etc.) using Aperture.</p></p>                <p><p>This method will only work if Aperture is properly configured in the
+fulltext.ini file.  Without proper configuration, this will simply return an
+empty string.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL of file to retrieve.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>webcrawler | filecrawler</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>text contents of file.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTikaCommand">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_getTikaCommand">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 285</div>
+        <code>        static            array
+    <strong>getTikaCommand</strong>(string $input, string $output, string $arg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generic method for building Tika command</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td><p>url | fileresource</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$output</td>
+                <td><p>name of output file</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$arg</td>
+                <td><p>optional Tika arguments</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Parameters for proc_open command</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_harvestWithTika">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_harvestWithTika">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 315</div>
+        <code>        static            string
+    <strong>harvestWithTika</strong>(string $url, string $arg = &quot;--text&quot;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Harvest the contents of a document file (PDF, Word, etc.) using Tika.</p></p>                <p><p>This method will only work if Tika is properly configured in the
+fulltext.ini file.  Without proper configuration, this will simply return an
+empty string.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL of file to retrieve.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$arg</td>
+                <td><p>optional argument(s) for Tika</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>text contents of file.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapString">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_mapString">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 344</div>
+        <code>        static            string
+    <strong>mapString</strong>(string $in, string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Map string using a config file from the translation_maps folder.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$in</td>
+                <td><p>string to map.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>filename of map file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>mapped text.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stripArticles">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_stripArticles">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 369</div>
+        <code>        static            string
+    <strong>stripArticles</strong>(string $in)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Strip articles from the front of the text (for creating sortable titles).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$in</td>
+                <td><p>title to process.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>article-stripped text.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_xmlAsText">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_xmlAsText">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 395</div>
+        <code>        static            string
+    <strong>xmlAsText</strong>(array $in)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert provided nodes into XML and return as text.  This is useful for
+populating the fullrecord field with the raw input XML.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$in</td>
+                <td><p>array of DOMElement objects.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>XML as string</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeTagAndReturnXMLasText">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_removeTagAndReturnXMLasText">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 424</div>
+        <code>        static            string
+    <strong>removeTagAndReturnXMLasText</strong>(array $in, string $tag)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove a given tag from the provided nodes, then convert
+into XML and return as text.  This is useful for
+populating the fullrecord field with the raw input XML but
+allow for removal of certain elements (eg: full text field).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$in</td>
+                <td><p>array of DOMElement objects.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td><p>name of tag to remove</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>XML as string</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_explode">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_explode">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 444</div>
+        <code>        static            <a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
+    <strong>explode</strong>(string $delimiter, string $string)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Proxy the explode PHP function for use in XSL transformation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$delimiter</td>
+                <td><p>Delimiter for splitting $string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td><p>String to split</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_implode">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_implode">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 463</div>
+        <code>        static            string
+    <strong>implode</strong>(string $glue, array $pieces)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Proxy the implode PHP function for use in XSL transformation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$glue</td>
+                <td><p>Glue string</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$pieces</td>
+                <td><p>DOM elements to join together.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractBestDateOrRange">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_extractBestDateOrRange">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 480</div>
+        <code>        static            string
+    <strong>extractBestDateOrRange</strong>(array $input)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Try to find the best single year or date range in a set of DOM elements.</p></p>                <p><p>Best is defined as the first value to consist of only YYYY or YYYY-ZZZZ,
+with no other text. If no &quot;best&quot; match is found, the first value is used.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$input</td>
+                <td><p>DOM elements to search.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractEarliestYear">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_extractEarliestYear">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 497</div>
+        <code>        static            string
+    <strong>extractEarliestYear</strong>(array $input)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Try to find a four-digit year in a set of DOM elements.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$input</td>
+                <td><p>DOM elements to search.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isInvertedName">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_isInvertedName">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 532</div>
+        <code>        static            bool
+    <strong>isInvertedName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is the provided name inverted (&quot;Last, First&quot;) or not (&quot;First Last&quot;)?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Name to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_invertName">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_invertName">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 556</div>
+        <code>        static            string
+    <strong>invertName</strong>(string $rawName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Invert &quot;Firstname Lastname&quot; authors into &quot;Lastname, Firstname.&quot;</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$rawName</td>
+                <td><p>Raw name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_invertNames">
+        <div class="location">in <a href="../../../VuFind/XSLT/Import/VuFind.html#method_invertNames">
+<abbr title="VuFind\XSLT\Import\VuFind">VuFind</abbr></a> at line 575</div>
+        <code>        static            <a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a>
+    <strong>invertNames</strong>(array $input)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call invertName on all matching elements; return a DOMDocument with a
+name tag for each inverted name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$input</td>
+                <td><p>DOM elements to adjust</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/DOMDocument">DOMDocument</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getApertureFields">
+        <div class="location">at line 50</div>
+        <code>        static    protected        array
+    <strong>getApertureFields</strong>(string $htmlFile)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load metadata about an HTML document using Aperture.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$htmlFile</td>
+                <td><p>File on disk containing HTML.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTikaFields">
+        <div class="location">at line 104</div>
+        <code>        static    protected        array
+    <strong>getTikaFields</strong>(string $htmlFile)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load metadata about an HTML document using Tika.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$htmlFile</td>
+                <td><p>File on disk containing HTML.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHtmlFields">
+        <div class="location">at line 151</div>
+        <code>        static    protected        array
+    <strong>getHtmlFields</strong>(string $html)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract key metadata from HTML.</p></p>                <p><p>NOTE: This method uses some non-standard meta tags; it is intended as an
+example that can be overridden/extended to support local practices.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html</td>
+                <td><p>HTML content.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_arrayToSolrXml">
+        <div class="location">at line 201</div>
+        <code>        static            string
+    <strong>arrayToSolrXml</strong>(array $fields)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert an associative array of fields into a Solr document.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td><p>Field data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDocument">
+        <div class="location">at line 226</div>
+        <code>        static            string
+    <strong>getDocument</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Harvest the contents of a document file (PDF, Word, etc.) using Aperture.</p></p>                <p><p>This method will only work if Aperture is properly configured in the
+web/conf/fulltext.ini file.  Without proper configuration, this will
+simply return an empty string.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL of file to retrieve.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>text contents of file.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDocumentFieldArray">
+        <div class="location">at line 239</div>
+        <code>        static    protected        array
+    <strong>getDocumentFieldArray</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for getDocument() -- retrieve associative array of field data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL of file to retrieve.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

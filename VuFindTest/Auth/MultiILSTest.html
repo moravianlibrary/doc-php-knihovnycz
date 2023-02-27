@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Auth\MultiILSTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Auth_MultiILSTest" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../VuFindTest/Auth.html">Auth</a></li><li class="backslash">\</li><li>MultiILSTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>MultiILSTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>MultiILSTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>MultiILS authentication test class.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/ConfigPluginManagerTrait.html"><abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for configuration handling in tests.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_container">
+                                        protected                                        <a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a>
+                                                                                
+                                    </td>
+                <td>$container</td>
+                <td class="last"><p>Container for building mocks.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockConfigPluginManager">getMockConfigPluginManager</a>(array $configs, array $default = [], <abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr> $getExpect = null, <abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr> $hasExpect = null)
+        
+                                            <p><p>Get a mock configuration plugin manager with the given configuration &quot;files&quot;
+available.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/ConfigPluginManagerTrait.html#method_getMockConfigPluginManager">
+<abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockFailingConfigPluginManager">getMockFailingConfigPluginManager</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception)
+        
+                                            <p><p>Get a mock configuration plugin manager that will throw an exception.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/ConfigPluginManagerTrait.html#method_getMockFailingConfigPluginManager">
+<abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p><p>Standard setup method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCreateIsDisallowed">testCreateIsDisallowed</a>()
+        
+                                            <p><p>Test account creation is disallowed.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginWithEmptyTarget">testLoginWithEmptyTarget</a>()
+        
+                                            <p><p>Test login with empty invalid target.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginWithInvalidTarget">testLoginWithInvalidTarget</a>()
+        
+                                            <p><p>Test login with invalid target.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginWithBlankUsername">testLoginWithBlankUsername</a>()
+        
+                                            <p><p>Test login with blank username.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginWithBlankPassword">testLoginWithBlankPassword</a>()
+        
+                                            <p><p>Test login with blank password.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testBadLoginResponse">testBadLoginResponse</a>()
+        
+                                            <p><p>Test login with technical error.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLogin">testLogin</a>()
+        
+                                            <p><p>Test successful login.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginWithMissingCatId">testLoginWithMissingCatId</a>()
+        
+                                            <p><p>Test failure caused by missing cat_id.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\Request">Request</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLoginRequest">getLoginRequest</a>(array $overrides = [])
+        
+                                            <p><p>Support method -- get parameters to log into an account (but allow override of
+individual parameters so we can test different scenarios).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockILSAuthenticator">getMockILSAuthenticator</a>(array $patron = null)
+        
+                                            <p><p>Get mock ILS authenticator</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockMultiBackend">getMockMultiBackend</a>(array $onlyMethods = [], array $addMethods = [&#039;patronLogin&#039;])
+        
+                                            <p><p>Get a mock MultiBackend driver to test.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Auth/MultiILS.html"><abbr title="VuFind\Auth\MultiILS">MultiILS</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMultiILS">getMultiILS</a>(<a href="../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> $driver = null, array $patron = null)
+        
+                                            <p><p>Get the object to test.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getMockConfigPluginManager">
+        <div class="location">in <a href="../../VuFindTest/Feature/ConfigPluginManagerTrait.html#method_getMockConfigPluginManager">
+<abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a> at line 63</div>
+        <code>            protected        <a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+    <strong>getMockConfigPluginManager</strong>(array $configs, array $default = [], <abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr> $getExpect = null, <abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr> $hasExpect = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock configuration plugin manager with the given configuration &quot;files&quot;
+available.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$configs</td>
+                <td><p>An associative array of configurations
+where key is the file (e.g. 'config') and value an array of configuration
+sections and directives</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$default</td>
+                <td><p>Default configuration to return when no
+entry is found in $configs</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr></td>
+                <td>$getExpect</td>
+                <td><p>The expected invocation order for the get()
+method (null for any)</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr></td>
+                <td>$hasExpect</td>
+                <td><p>The expected invocation order for the has()
+method (null for any)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockFailingConfigPluginManager">
+        <div class="location">in <a href="../../VuFindTest/Feature/ConfigPluginManagerTrait.html#method_getMockFailingConfigPluginManager">
+<abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a> at line 102</div>
+        <code>            protected        <a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+    <strong>getMockFailingConfigPluginManager</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock configuration plugin manager that will throw an exception.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$exception</td>
+                <td><p>Exception to throw</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">at line 60</div>
+        <code>                    void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard setup method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCreateIsDisallowed">
+        <div class="location">at line 70</div>
+        <code>                    void
+    <strong>testCreateIsDisallowed</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test account creation is disallowed.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginWithEmptyTarget">
+        <div class="location">at line 80</div>
+        <code>                    void
+    <strong>testLoginWithEmptyTarget</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test login with empty invalid target.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginWithInvalidTarget">
+        <div class="location">at line 93</div>
+        <code>                    void
+    <strong>testLoginWithInvalidTarget</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test login with invalid target.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginWithBlankUsername">
+        <div class="location">at line 106</div>
+        <code>                    void
+    <strong>testLoginWithBlankUsername</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test login with blank username.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginWithBlankPassword">
+        <div class="location">at line 119</div>
+        <code>                    void
+    <strong>testLoginWithBlankPassword</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test login with blank password.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testBadLoginResponse">
+        <div class="location">at line 132</div>
+        <code>                    void
+    <strong>testBadLoginResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test login with technical error.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLogin">
+        <div class="location">at line 151</div>
+        <code>                    void
+    <strong>testLogin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test successful login.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginWithMissingCatId">
+        <div class="location">at line 171</div>
+        <code>                    void
+    <strong>testLoginWithMissingCatId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test failure caused by missing cat_id.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoginRequest">
+        <div class="location">at line 200</div>
+        <code>            protected        <abbr title="Laminas\Http\Request">Request</abbr>
+    <strong>getLoginRequest</strong>(array $overrides = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method -- get parameters to log into an account (but allow override of
+individual parameters so we can test different scenarios).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$overrides</td>
+                <td><p>Associative array of parameters to override.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\Request">Request</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockILSAuthenticator">
+        <div class="location">at line 217</div>
+        <code>            protected        <a href="../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a>
+    <strong>getMockILSAuthenticator</strong>(array $patron = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get mock ILS authenticator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Logged in patron to simulate (null for none).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockMultiBackend">
+        <div class="location">at line 238</div>
+        <code>            protected        <a href="../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a>
+    <strong>getMockMultiBackend</strong>(array $onlyMethods = [], array $addMethods = [&#039;patronLogin&#039;])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock MultiBackend driver to test.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$onlyMethods</td>
+                <td><p>Existing methods to mock (in addition to
+supportsMethod)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$addMethods</td>
+                <td><p>New methods to mock (in addition to
+getLoginDrivers)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMultiILS">
+        <div class="location">at line 282</div>
+        <code>            protected        <a href="../../VuFind/Auth/MultiILS.html"><abbr title="VuFind\Auth\MultiILS">MultiILS</abbr></a>
+    <strong>getMultiILS</strong>(<a href="../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> $driver = null, array $patron = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the object to test.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></td>
+                <td>$driver</td>
+                <td><p>Mock MultiBackend driver to test with.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Logged in patron for mock
+authenticator (null for none)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Auth/MultiILS.html"><abbr title="VuFind\Auth\MultiILS">MultiILS</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

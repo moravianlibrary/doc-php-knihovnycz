@@ -1,0 +1,3189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\ILS\Driver\Aleph | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_ILS_Driver_Aleph" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/ILS.html">ILS</a></li><li class="backslash">\</li><li><a href="../../../VuFind/ILS/Driver.html">Driver</a></li><li class="backslash">\</li><li>Aleph</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Aleph    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Aleph</strong>        extends <a href="../../../VuFind/ILS/Driver/AbstractBase.html"><abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a>        implements        <abbr title="Laminas\Log\LoggerAwareInterface">LoggerAwareInterface</abbr>, <abbr title="VuFindHttp\HttpServiceAwareInterface">HttpServiceAwareInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Aleph ILS driver</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="VuFindHttp\HttpServiceAwareTrait">HttpServiceAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        RECORD_ID_BASE_SEPARATOR
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>Driver configuration</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/AbstractBase.html#property_config">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_alephTranslator">
+                                        protected                                        <a href="../../../VuFind/ILS/Driver/AlephTranslator.html"><abbr title="VuFind\ILS\Driver\AlephTranslator">AlephTranslator</abbr></a>
+                                                                                
+                                    </td>
+                <td>$alephTranslator</td>
+                <td class="last"><p>Translator object</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cacheManager">
+                                        protected                                        <a href="../../../VuFind/Cache/Manager.html"><abbr title="VuFind\Cache\Manager">Manager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$cacheManager</td>
+                <td class="last"><p>Cache manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_translator">
+                                        protected                                        <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$translator</td>
+                <td class="last">Translator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dateConverter">
+                                        protected                                        <abbr title="VuFind\Date\Converter">Converter</abbr>
+                                                                                
+                                    </td>
+                <td>$dateConverter</td>
+                <td class="last"><p>Date converter object</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dlfbaseurl">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$dlfbaseurl</td>
+                <td class="last"><p>The base URL, where the REST DLF API is running</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_host">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$host</td>
+                <td class="last"><p>Aleph server</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bib">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$bib</td>
+                <td class="last"><p>Bibliographic bases</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_useradm">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$useradm</td>
+                <td class="last"><p>User library</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_admlib">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$admlib</td>
+                <td class="last"><p>Item library</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wwwuser">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$wwwuser</td>
+                <td class="last"><p>X server user name</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wwwpasswd">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$wwwpasswd</td>
+                <td class="last"><p>X server user password</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_xserver_enabled">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$xserver_enabled</td>
+                <td class="last"><p>Is X server enabled?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_xport">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$xport</td>
+                <td class="last"><p>X server port (defaults to 80)</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dlfport">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$dlfport</td>
+                <td class="last"><p>DLF REST API port</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_available_statuses">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$available_statuses</td>
+                <td class="last"><p>Statuse considered as available</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sublibadm">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$sublibadm</td>
+                <td class="last"><p>List of patron hoe libraries</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_quick_availability">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$quick_availability</td>
+                <td class="last"><p>If enabled and Xserver is disabled, slower RESTful API is used for
+availability check.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_debug_enabled">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$debug_enabled</td>
+                <td class="last"><p>Is debug mode enabled?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_preferredPickUpLocations">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$preferredPickUpLocations</td>
+                <td class="last"><p>Preferred pickup locations</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultPatronId">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultPatronId</td>
+                <td class="last"><p>Patron id used when no specific patron defined</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_addressMappings">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$addressMappings</td>
+                <td class="last"><p>Mapping of z304 address elements in Aleph to getMyProfile attributes</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_languages">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$languages</td>
+                <td class="last"><p>ISO 3166-1 alpha-2 to ISO 3166-1 alpha-3 mapping for
+translation in REST DLF API.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queuePositionRegex">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$queuePositionRegex</td>
+                <td class="last"><p>Regex for extracting position in queue from status in holdings.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setConfig">setConfig</a>(array $config)
+        
+                                            <p><p>Set configuration.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_setConfig">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_throwAsIlsException">throwAsIlsException</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception, string $msg = null)
+        
+                                            <p><p>Rethrow the provided exception as an ILS exception.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_throwAsIlsException">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Date\Converter">Converter</abbr> $dateConverter, <a href="../../../VuFind/Cache/Manager.html"><abbr title="VuFind\Cache\Manager">Manager</abbr></a> $cacheManager = null, <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_init">init</a>()
+        
+                                            <p><p>Initialize the driver.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultAddressMappings">getDefaultAddressMappings</a>()
+        
+                                            <p><p>Return default mapping of z304 address elements in Aleph
+to getMyProfile attributes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_doXRequest">doXRequest</a>(string $op, array $params, bool $auth = false)
+        
+                                            <p><p>Perform an XServer request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_doRestDLFRequest">doRestDLFRequest</a>(array $path_elements, array $params = null, string $method = &#039;GET&#039;, string $body = null)
+        
+                                            <p><p>Perform a RESTful DLF request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_appendQueryString">appendQueryString</a>(string $url, array $params)
+        
+                                            <p><p>Add values to an HTTP query string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_doHTTPRequest">doHTTPRequest</a>(string $url, string $method = &#039;GET&#039;, string $body = null)
+        
+                                            <p><p>Perform an HTTP request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseId">parseId</a>(string $id)
+        
+                                            <p><p>Convert an ID string into an array of bibliographic base and ID within
+the base.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatus">getStatus</a>(string $id)
+        
+                                            <p><p>Get Status</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatusesX">getStatusesX</a>(string $bib, array $ids)
+        
+                                            <p><p>Support method for getStatuses -- load ID information from a particular
+bibliographic library.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatuses">getStatuses</a>(array $idList)
+        
+                                            <p><p>Get Statuses</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHolding">getHolding</a>(string $id, array $patron = null, array $options = [])
+        
+                                            <p><p>Get Holding</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyTransactionHistory">getMyTransactionHistory</a>(array $user, array $params = null)
+        
+                                            <p><p>Get Patron Loan History</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyTransactions">getMyTransactions</a>(array $user, array $params = [], bool $history = false)
+        
+                                            <p><p>Get Patron Transactions</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRenewDetails">getRenewDetails</a>(array $details)
+        
+                                            <p><p>Get Renew Details</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renewMyItems">renewMyItems</a>(array $details)
+        
+                                            <p><p>Renew My Items</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyHolds">getMyHolds</a>(array $user)
+        
+                                            <p><p>Get Patron Holds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCancelHoldDetails">getCancelHoldDetails</a>(array $holdDetails, array $patron = [])
+        
+                                            <p><p>Get Cancel Hold Details</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_cancelHolds">cancelHolds</a>(array $details)
+        
+                                            <p><p>Cancel Holds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyFines">getMyFines</a>(array $user)
+        
+                                            <p><p>Get Patron Fines</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyProfile">getMyProfile</a>(array $user)
+        
+                                            <p><p>Get Patron Profile</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyProfileX">getMyProfileX</a>(array $user)
+        
+                                            <p><p>Get profile information using X-server.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyProfileDLF">getMyProfileDLF</a>(array $user)
+        
+                                            <p><p>Get profile information using DLF service.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_patronLogin">patronLogin</a>(string $user, string $password)
+        
+                                            <p><p>Patron Login</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldingInfoForItem">getHoldingInfoForItem</a>(string $patronId, string $id, string $group)
+        
+                                            <p><p>Support method for placeHold -- get holding info for an item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldDefaultRequiredDate">getHoldDefaultRequiredDate</a>(array $patron, array $holdInfo)
+        
+                                            <p><p>Get Default &quot;Hold Required By&quot; Date (as Unix timestamp) or null if unsupported</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_placeHold">placeHold</a>(array $details)
+        
+                                            <p><p>Place Hold</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_barcodeToID">barcodeToID</a>(string $bar)
+        
+                                            <p><p>Convert a barcode to an item ID.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseDate">parseDate</a>(string $date)
+        
+                                            <p><p>Parse a date.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsMethod">supportsMethod</a>(string $method, array $params)
+        
+                                            <p><p>Helper method to determine whether or not a certain method can be
+called on this driver.  Required method for any smart drivers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfig">getConfig</a>(string $func, array $params = [])
+        
+                                            <p><p>Public Function which retrieves historic loan, renew, hold and cancel
+settings from the driver ini file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPickUpLocations">getPickUpLocations</a>(array $patron, array $holdInfo = null)
+        
+                                            <p><p>Get Pick Up Locations</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultPickUpLocation">getDefaultPickUpLocation</a>(array $patron, array $holdInfo = null)
+        
+                                            <p><p>Get Default Pick Up Location</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPurchaseHistory">getPurchaseHistory</a>(string $id)
+        
+                                            <p><p>Get Purchase History</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNewItems">getNewItems</a>(int $page, int $limit, int $daysOld, int $fundId = null)
+        
+                                            <p><p>Get New Items</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDepartments">getDepartments</a>()
+        
+                                            <p><p>Get Departments</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInstructors">getInstructors</a>()
+        
+                                            <p><p>Get Instructors</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCourses">getCourses</a>()
+        
+                                            <p><p>Get Courses</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_findReserves">findReserves</a>(string $course, string $inst, string $dept)
+        
+                                            <p><p>Find Reserves</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_setConfig">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a> at line 62</div>
+        <code>                    void
+    <strong>setConfig</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set configuration.</p></p>                <p><p>Set the configuration for the driver.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Configuration array (usually loaded from a VuFind .ini
+file whose name corresponds with the driver class name).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throwAsIlsException">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_throwAsIlsException">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a> at line 76</div>
+        <code>            protected        void
+    <strong>throwAsIlsException</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception, string $msg = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rethrow the provided exception as an ILS exception.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$exception</td>
+                <td><p>Exception to rethrow</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Override exception message (optional)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 515</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="VuFind\Date\Converter">Converter</abbr> $dateConverter, <a href="../../../VuFind/Cache/Manager.html"><abbr title="VuFind\Cache\Manager">Manager</abbr></a> $cacheManager = null, <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\Converter">Converter</abbr></td>
+                <td>$dateConverter</td>
+                <td><p>Date converter</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Cache/Manager.html"><abbr title="VuFind\Cache\Manager">Manager</abbr></a></td>
+                <td>$cacheManager</td>
+                <td><p>Cache manager (optional)</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td><p>Translator (optional)</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at line 534</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the driver.</p></p>                <p><p>Validate configuration and perform all resource-intensive tasks needed to
+make the driver active.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultAddressMappings">
+        <div class="location">at line 629</div>
+        <code>            protected        array
+    <strong>getDefaultAddressMappings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return default mapping of z304 address elements in Aleph
+to getMyProfile attributes.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doXRequest">
+        <div class="location">at line 651</div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>doXRequest</strong>(string $op, array $params, bool $auth = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform an XServer request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$op</td>
+                <td>Operation</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$auth</td>
+                <td><p>Include authentication?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doRestDLFRequest">
+        <div class="location">at line 691</div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>doRestDLFRequest</strong>(array $path_elements, array $params = null, string $method = &#039;GET&#039;, string $body = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform a RESTful DLF request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$path_elements</td>
+                <td><p>URL path elements</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>GET parameters (null for none)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>HTTP method</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td><p>HTTP body</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendQueryString">
+        <div class="location">at line 739</div>
+        <code>            protected        string
+    <strong>appendQueryString</strong>(string $url, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add values to an HTTP query string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL so far</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Parameters to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doHTTPRequest">
+        <div class="location">at line 760</div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>doHTTPRequest</strong>(string $url, string $method = &#039;GET&#039;, string $body = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform an HTTP request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL of request</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>HTTP method</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td><p>HTTP body (null for none)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseId">
+        <div class="location">at line 805</div>
+        <code>            protected        array
+    <strong>parseId</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert an ID string into an array of bibliographic base and ID within
+the base.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>ID to parse.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">at line 837</div>
+        <code>                    mixed
+    <strong>getStatus</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Status</p></p>                <p><p>This is responsible for retrieving the status information of a certain
+record.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the holdings for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with the following keys:
+id, availability (boolean), status, location, reserve, callnumber.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatusesX">
+        <div class="location">at line 873</div>
+        <code>                    array
+    <strong>getStatusesX</strong>(string $bib, array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for getStatuses -- load ID information from a particular
+bibliographic library.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bib</td>
+                <td><p>Library to search</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>IDs to search within library</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Description of AVA tag:
+<a href="http://igelu.org/wp-content/uploads/2011/09/Staff-vs-Public-Data-views.pdf">http://igelu.org/wp-content/uploads/2011/09/Staff-vs-Public-Data-views.pdf</a>
+(page 28)</p>
+<p>a  ADM code - Institution Code
+b  Sublibrary code - Library Code
+c  Collection (first found) - Collection Code
+d  Call number (first found)
+e  Availability status  - If it is on loan (it has a Z36), if it is on hold
+shelf (it has  Z37=S) or if it has a processing status.
+f  Number of items (for entire sublibrary)
+g  Number of unavailable loans
+h  Multi-volume flag (Y/N) If first Z30-ENUMERATION-A is not blank or 0, then
+the flag=Y, otherwise the flag=N.
+i  Number of loans (for ranking/sorting)
+j  Collection code</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatuses">
+        <div class="location">at line 925</div>
+        <code>                    array
+    <strong>getStatuses</strong>(array $idList)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Statuses</p></p>                <p><p>This is responsible for retrieving the status information for a
+collection of records.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$idList</td>
+                <td><p>The array of record ids to retrieve the status for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of getStatus() return values on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHolding">
+        <div class="location">at line 971</div>
+        <code>                    array
+    <strong>getHolding</strong>(string $id, array $patron = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Holding</p></p>                <p><p>This is responsible for retrieving the holding information of a certain
+record.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the holdings for</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Extra options</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>On success, an associative array with the following
+keys: id, availability (boolean), status, location, reserve, callnumber,
+duedate, number, barcode.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\DateException">DateException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyTransactionHistory">
+        <div class="location">at line 1089</div>
+        <code>                    array
+    <strong>getMyTransactionHistory</strong>(array $user, array $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Loan History</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's historic loans on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\DateException">DateException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyTransactions">
+        <div class="location">at line 1108</div>
+        <code>                    array
+    <strong>getMyTransactions</strong>(array $user, array $params = [], bool $history = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Transactions</p></p>                <p><p>This is responsible for retrieving all transactions (i.e. checked out items)
+by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$history</td>
+                <td>History</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's transactions on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\DateException">DateException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRenewDetails">
+        <div class="location">at line 1206</div>
+        <code>                    string
+    <strong>getRenewDetails</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Renew Details</p></p>                <p><p>In order to renew an item, Voyager requires the patron details and an item
+id. This function returns the item id as a string which is then used
+as submitted form data in checkedOut.php. This value is then extracted by
+the RenewMyItems function.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>An array of item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Data for use in a form field</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renewMyItems">
+        <div class="location">at line 1222</div>
+        <code>                    array
+    <strong>renewMyItems</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Renew My Items</p></p>                <p><p>Function for attempting to renew a patron's items.  The data in
+$details['details'] is determined by getRenewDetails().</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>An array of data required for renewing items
+including the Patron ID and an array of renewal IDS</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of renewal information keyed by item ID</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyHolds">
+        <div class="location">at line 1260</div>
+        <code>                    array
+    <strong>getMyHolds</strong>(array $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Holds</p></p>                <p><p>This is responsible for retrieving all holds by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's holds on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\DateException">DateException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCancelHoldDetails">
+        <div class="location">at line 1336</div>
+        <code>                    string
+    <strong>getCancelHoldDetails</strong>(array $holdDetails, array $patron = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Cancel Hold Details</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$holdDetails</td>
+                <td><p>A single hold array from getMyHolds</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information from patronLogin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Data for use in a form field</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelHolds">
+        <div class="location">at line 1356</div>
+        <code>                    array
+    <strong>cancelHolds</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Cancel Holds</p></p>                <p><p>Attempts to Cancel a hold or recall on a particular item. The
+data in $cancelDetails['details'] is determined by getCancelHoldDetails().</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>An array of item and patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of data on each request including
+whether or not it was successful and a system message (if available)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyFines">
+        <div class="location">at line 1399</div>
+        <code>                    mixed
+    <strong>getMyFines</strong>(array $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Fines</p></p>                <p><p>This is responsible for retrieving all fines by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Array of the patron's fines on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\DateException">DateException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyProfile">
+        <div class="location">at line 1454</div>
+        <code>                    array
+    <strong>getMyProfile</strong>(array $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Profile</p></p>                <p><p>This is responsible for retrieving the profile for a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's profile data on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyProfileX">
+        <div class="location">at line 1473</div>
+        <code>                    array
+    <strong>getMyProfileX</strong>(array $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get profile information using X-server.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's profile data on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyProfileDLF">
+        <div class="location">at line 1532</div>
+        <code>                    array
+    <strong>getMyProfileDLF</strong>(array $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get profile information using DLF service.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's profile data on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_patronLogin">
+        <div class="location">at line 1577</div>
+        <code>                    mixed
+    <strong>patronLogin</strong>(string $user, string $password)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Patron Login</p></p>                <p><p>This is responsible for authenticating a patron against the catalog.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td><p>The patron username</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td><p>The patron's password</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Associative array of patron info on successful login,
+null on unsuccessful login.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldingInfoForItem">
+        <div class="location">at line 1638</div>
+        <code>                    array
+    <strong>getHoldingInfoForItem</strong>(string $patronId, string $id, string $group)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for placeHold -- get holding info for an item.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$patronId</td>
+                <td><p>Patron ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Bib ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td><p>Item ID</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldDefaultRequiredDate">
+        <div class="location">at line 1681</div>
+        <code>                    int
+    <strong>getHoldDefaultRequiredDate</strong>(array $patron, array $holdInfo)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Default &quot;Hold Required By&quot; Date (as Unix timestamp) or null if unsupported</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information returned by the patronLogin method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdInfo</td>
+                <td><p>Contains most of the same values passed to
+placeHold, minus the patron data.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeHold">
+        <div class="location">at line 1718</div>
+        <code>                    mixed
+    <strong>placeHold</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Place Hold</p></p>                <p><p>Attempts to place a hold or recall on a particular item and returns
+an array with result details or throws an exception on failure of support
+classes</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>An array of item and patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>An array of data on the request including
+whether or not it was successful and a system message (if available)</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcodeToID">
+        <div class="location">at line 1787</div>
+        <code>                    string
+    <strong>barcodeToID</strong>(string $bar)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert a barcode to an item ID.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bar</td>
+                <td>Barcode</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseDate">
+        <div class="location">at line 1827</div>
+        <code>                    string
+    <strong>parseDate</strong>(string $date)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse a date.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td><p>Date to parse</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsMethod">
+        <div class="location">at line 1856</div>
+        <code>                    bool
+    <strong>supportsMethod</strong>(string $method, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper method to determine whether or not a certain method can be
+called on this driver.  Required method for any smart drivers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>The name of the called method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Array of passed parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if the method can be called with the given parameters,
+false otherwise.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">at line 1876</div>
+        <code>                    array
+    <strong>getConfig</strong>(string $func, array $params = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Public Function which retrieves historic loan, renew, hold and cancel
+settings from the driver ini file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$func</td>
+                <td><p>The name of the feature to be checked</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Optional feature-specific parameters (array)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array with key-value pairs.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPickUpLocations">
+        <div class="location">at line 1917</div>
+        <code>                    array
+    <strong>getPickUpLocations</strong>(array $patron, array $holdInfo = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Pick Up Locations</p></p>                <p><p>This is responsible for gettting a list of valid library locations for
+holds / recall retrieval</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information returned by the patronLogin method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdInfo</td>
+                <td><p>Optional array, only passed in when getting a list
+in the context of placing or editing a hold.  When placing a hold, it contains
+most of the same values passed to placeHold, minus the patron data.  When
+editing a hold it contains all the hold information returned by getMyHolds.
+May be used to limit the pickup options or may be ignored.  The driver must
+not add new options to the return array based on this data or other areas of
+VuFind may behave incorrectly.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of associative arrays with locationID and
+locationDisplay keys</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultPickUpLocation">
+        <div class="location">at line 1957</div>
+        <code>                    string
+    <strong>getDefaultPickUpLocation</strong>(array $patron, array $holdInfo = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Default Pick Up Location</p></p>                <p><p>Returns the default pick up location set in VoyagerRestful.ini</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information returned by the patronLogin method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdInfo</td>
+                <td><p>Optional array, only passed in when getting a list
+in the context of placing a hold; contains most of the same values passed to
+placeHold, minus the patron data.  May be used to limit the pickup options
+or may be ignored.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The default pickup location for the patron.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPurchaseHistory">
+        <div class="location">at line 1998</div>
+        <code>                    array
+    <strong>getPurchaseHistory</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Purchase History</p></p>                <p><p>This is responsible for retrieving the acquisitions history data for the
+specific record (usually recently received issues of a serial).</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the info for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array with the acquisitions data on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNewItems">
+        <div class="location">at line 2024</div>
+        <code>                    array
+    <strong>getNewItems</strong>(int $page, int $limit, int $daysOld, int $fundId = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get New Items</p></p>                <p><p>Retrieve the IDs of items recently added to the catalog.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td><p>Page number of results to retrieve (counting starts at 1)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>The size of each page of results to retrieve</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$daysOld</td>
+                <td><p>The maximum age of records to retrieve in days (max. 30)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$fundId</td>
+                <td><p>optional fund ID to use for limiting results (use a value
+returned by getFunds, or exclude for no limit); note that &quot;fund&quot; may be a
+misnomer - if funds are not an appropriate way to limit your new item
+results, you can return a different set of values from getFunds. The
+important thing is that this parameter supports an ID returned by getFunds,
+whatever that may mean.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Associative array with 'count' and 'results' keys</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDepartments">
+        <div class="location">at line 2039</div>
+        <code>                    array
+    <strong>getDepartments</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Departments</p></p>                <p><p>Obtain a list of departments for use in limiting the reserves list.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An associative array with key = dept. ID, value = dept. name.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstructors">
+        <div class="location">at line 2053</div>
+        <code>                    array
+    <strong>getInstructors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Instructors</p></p>                <p><p>Obtain a list of instructors for use in limiting the reserves list.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An associative array with key = ID, value = name.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCourses">
+        <div class="location">at line 2067</div>
+        <code>                    array
+    <strong>getCourses</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Courses</p></p>                <p><p>Obtain a list of courses for use in limiting the reserves list.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An associative array with key = ID, value = name.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findReserves">
+        <div class="location">at line 2087</div>
+        <code>                    array
+    <strong>findReserves</strong>(string $course, string $inst, string $dept)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Find Reserves</p></p>                <p><p>Obtain information on course reserves.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$course</td>
+                <td><p>ID from getCourses (empty string to match all)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$inst</td>
+                <td><p>ID from getInstructors (empty string to match all)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dept</td>
+                <td><p>ID from getDepartments (empty string to match all)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of associative arrays representing reserve items.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>Resource</strong>        extends <abbr title="VuFind\Db\Row\Resource">Resource</abbr>
+    <strong>Resource</strong>        extends <a href="../../../VuFind/Db/Row/Resource.html"><abbr title="VuFind\Db\Row\Resource">Resource</abbr></a>
 </p>
 
                 <p>
@@ -100,11 +100,101 @@
             <div class="description">
             <p><p>Class Resource</p></p>                    </div>
             
+                <h2>Traits</h2>
+
         
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Db/Table/DbTableAwareTrait.html"><abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Default implementation of DbTableAwareInterface.</p></div>
+            </div>
+            </div>
+    
     
             <h2>Properties</h2>
 
             <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tableManager">
+                                        protected                                        <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$tableManager</td>
+                <td class="last"><p>Database table plugin manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Table/DbTableAwareTrait.html#property_tableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_id">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$id</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#property_id">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_record_id">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$record_id</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#property_record_id">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_title">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$title</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#property_title">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_author">
+                                                                                ?string
+                                                                                
+                                    </td>
+                <td>$author</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#property_author">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_year">
+                                                                                ?int
+                                                                                
+                                    </td>
+                <td>$year</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#property_year">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$source</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#property_source">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_extra_metadata">
+                                                                                ?string
+                                                                                
+                                    </td>
+                <td>$extra_metadata</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#property_extra_metadata">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></td>
+            </tr>
                     <tr>
                 <td class="type" id="property_author_sort">
                                                                                 ?string
@@ -122,10 +212,120 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="VuFind\Db\Row\Resource">Resource</abbr>
+                    array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_assignMetadata">assignMetadata</a>(<abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr> $driver, <abbr title="VuFind\Date\Converter">Converter</abbr> $converter)
+                    <a href="#method_getPrimaryKeyColumn">getPrimaryKeyColumn</a>()
+        
+                                            <p><p>Retrieve primary key information.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Row/RowGateway.html#method_getPrimaryKeyColumn">
+<abbr title="VuFind\Db\Row\RowGateway">RowGateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTableManager">getDbTableManager</a>()
+        
+                                            <p><p>Get the table plugin manager. Throw an exception if it is missing.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDbTableManager">setDbTableManager</a>(<a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $manager)
+        
+                                            <p><p>Set the table plugin manager.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/DbTableAwareTrait.html#method_setDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTable">getDbTable</a>(string $table)
+        
+                                            <p><p>Get a database table object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr> $adapter)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#method___construct">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deleteTags">deleteTags</a>(<a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $list_id = null)
+        
+                                            <p><p>Remove tags from the current resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#method_deleteTags">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addTag">addTag</a>(string $tagText, <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $list_id = null)
+        
+                                            <p><p>Add a tag to the current resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#method_addTag">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deleteTag">deleteTag</a>(string $tagText, <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $list_id = null)
+        
+                                            <p><p>Remove a tag from the current resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#method_deleteTag">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addComment">addComment</a>(string $comment, <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user)
+        
+                                            <p><p>Add a comment to the current resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#method_addComment">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addOrUpdateRating">addOrUpdateRating</a>(int $userId, int|null $rating)
+        
+                                            <p><p>Add or update user's rating for the current resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Row/Resource.html#method_addOrUpdateRating">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Row/Resource.html"><abbr title="VuFind\Db\Row\Resource">Resource</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assignMetadata">assignMetadata</a>(<a href="../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver, <abbr title="VuFind\Date\Converter">Converter</abbr> $converter)
         
                                             <p><p>Use a record driver to assign metadata to the current row.  Return the
 current object to allow fluent interface.</p></p>                </div>
@@ -138,10 +338,490 @@ current object to allow fluent interface.</p></p>                </div>
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_getPrimaryKeyColumn">
+        <div class="location">in <a href="../../../VuFind/Db/Row/RowGateway.html#method_getPrimaryKeyColumn">
+<abbr title="VuFind\Db\Row\RowGateway">RowGateway</abbr></a> at line 46</div>
+        <code>                    array
+    <strong>getPrimaryKeyColumn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve primary key information.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbTableManager">
+        <div class="location">in <a href="../../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 54</div>
+        <code>                    <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+    <strong>getDbTableManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the table plugin manager. Throw an exception if it is missing.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDbTableManager">
+        <div class="location">in <a href="../../../VuFind/Db/Table/DbTableAwareTrait.html#method_setDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 69</div>
+        <code>                    void
+    <strong>setDbTableManager</strong>(<a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the table plugin manager.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+                <td>$manager</td>
+                <td><p>Plugin manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbTable">
+        <div class="location">in <a href="../../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 81</div>
+        <code>                    <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+    <strong>getDbTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a database table object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Table to load.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../VuFind/Db/Row/Resource.html#method___construct">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a> at line 59</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr> $adapter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr></td>
+                <td>$adapter</td>
+                <td><p>Database adapter</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteTags">
+        <div class="location">in <a href="../../../VuFind/Db/Row/Resource.html#method_deleteTags">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a> at line 73</div>
+        <code>                    void
+    <strong>deleteTags</strong>(<a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $list_id = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove tags from the current resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>The user deleting the tags.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$list_id</td>
+                <td><p>The list associated with the tags
+(optional -- omitting this will delete ALL of the user's tags).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTag">
+        <div class="location">in <a href="../../../VuFind/Db/Row/Resource.html#method_addTag">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a> at line 89</div>
+        <code>                    void
+    <strong>addTag</strong>(string $tagText, <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $list_id = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a tag to the current resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tagText</td>
+                <td><p>The tag to save.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>The user posting the tag.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$list_id</td>
+                <td><p>The list associated with the tag
+(optional).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteTag">
+        <div class="location">in <a href="../../../VuFind/Db/Row/Resource.html#method_deleteTag">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a> at line 116</div>
+        <code>                    void
+    <strong>deleteTag</strong>(string $tagText, <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $list_id = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove a tag from the current resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tagText</td>
+                <td><p>The tag to delete.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>The user deleting the tag.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$list_id</td>
+                <td><p>The list associated with the tag
+(optional).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addComment">
+        <div class="location">in <a href="../../../VuFind/Db/Row/Resource.html#method_addComment">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a> at line 146</div>
+        <code>                    int
+    <strong>addComment</strong>(string $comment, <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a comment to the current resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$comment</td>
+                <td><p>The comment to save.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>The user posting the comment.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>ID of newly-created comment.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/LoginRequired.html"><abbr title="VuFind\Exception\LoginRequired">LoginRequired</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addOrUpdateRating">
+        <div class="location">in <a href="../../../VuFind/Db/Row/Resource.html#method_addOrUpdateRating">
+<abbr title="VuFind\Db\Row\Resource">Resource</abbr></a> at line 174</div>
+        <code>                    int
+    <strong>addOrUpdateRating</strong>(int $userId, int|null $rating)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add or update user's rating for the current resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$userId</td>
+                <td><p>User ID</p></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$rating</td>
+                <td><p>Rating (null to delete)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>ID of rating added, deleted or updated</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/LoginRequired.html"><abbr title="VuFind\Exception\LoginRequired">LoginRequired</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_assignMetadata">
         <div class="location">at line 57</div>
-        <code>                    <abbr title="VuFind\Db\Row\Resource">Resource</abbr>
-    <strong>assignMetadata</strong>(<abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr> $driver, <abbr title="VuFind\Date\Converter">Converter</abbr> $converter)
+        <code>                    <a href="../../../VuFind/Db/Row/Resource.html"><abbr title="VuFind\Db\Row\Resource">Resource</abbr></a>
+    <strong>assignMetadata</strong>(<a href="../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver, <abbr title="VuFind\Date\Converter">Converter</abbr> $converter)
         </code>
     </h3>
     <div class="details">    
@@ -158,7 +838,7 @@ current object to allow fluent interface.</p></p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></td>
+                <td><a href="../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
                 <td>$driver</td>
                 <td><p>The record driver</p></td>
             </tr>
@@ -174,7 +854,7 @@ current object to allow fluent interface.</p></p>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="VuFind\Db\Row\Resource">Resource</abbr></td>
+            <td><a href="../../../VuFind/Db/Row/Resource.html"><abbr title="VuFind\Db\Row\Resource">Resource</abbr></a></td>
             <td></td>
         </tr>
     </table>

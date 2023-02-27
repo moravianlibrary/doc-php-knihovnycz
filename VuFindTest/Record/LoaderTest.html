@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Record\LoaderTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Record_LoaderTest" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../VuFindTest/Record.html">Record</a></li><li class="backslash">\</li><li>LoaderTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>LoaderTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>LoaderTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Record loader tests.</p></p>                    </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMissingRecord">testMissingRecord</a>()
+        
+                                            <p><p>Test exception for missing record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMissingRecordWithFallback">testMissingRecordWithFallback</a>()
+        
+                                            <p><p>Test that the fallback loader gets called successfully for a missing record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testToleratedMissingRecord">testToleratedMissingRecord</a>()
+        
+                                            <p><p>Test &quot;tolerate missing records&quot; feature.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSingleRecord">testSingleRecord</a>()
+        
+                                            <p><p>Test single record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSingleRecordWithBackendParameters">testSingleRecordWithBackendParameters</a>()
+        
+                                            <p><p>Test single record with backend parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testBatchLoad">testBatchLoad</a>()
+        
+                                            <p><p>Test batch load.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testBatchLoadWithFallback">testBatchLoadWithFallback</a>()
+        
+                                            <p><p>Test batch load with fallback loader.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCommandChecker">getCommandChecker</a>(array $args = [], string $class = \VuFindSearch\Command\RetrieveCommand::class, string $target = &#039;Solr&#039;)
+        
+                                            <p><p>Support method to test callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDriver">getDriver</a>(string $id = &#039;test&#039;, string $source = &#039;Solr&#039;)
+        
+                                            <p><p>Get test record driver object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLoader">getLoader</a>(<a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a> $service, <a href="../../VuFind/RecordDriver/PluginManager.html"><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></a> $factory = null, <a href="../../VuFind/Record/Cache.html"><abbr title="VuFind\Record\Cache">Cache</abbr></a> $recordCache = null, <a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a> $fallbackLoader = null)
+        
+                                            <p><p>Build a loader to test.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFallbackLoader">getFallbackLoader</a>(array $records)
+        
+                                            <p><p>Get a fallback loader (currently assumes Summon plugin will be used).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCollection">getCollection</a>(array $records)
+        
+                                            <p><p>Get a fake record collection.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_testMissingRecord">
+        <div class="location">at line 56</div>
+        <code>                    void
+    <strong>testMissingRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test exception for missing record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMissingRecordWithFallback">
+        <div class="location">at line 82</div>
+        <code>                    void
+    <strong>testMissingRecordWithFallback</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that the fallback loader gets called successfully for a missing record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testToleratedMissingRecord">
+        <div class="location">at line 111</div>
+        <code>                    void
+    <strong>testToleratedMissingRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test &quot;tolerate missing records&quot; feature.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSingleRecord">
+        <div class="location">at line 142</div>
+        <code>                    void
+    <strong>testSingleRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test single record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSingleRecordWithBackendParameters">
+        <div class="location">at line 166</div>
+        <code>                    void
+    <strong>testSingleRecordWithBackendParameters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test single record with backend parameters.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testBatchLoad">
+        <div class="location">at line 194</div>
+        <code>                    void
+    <strong>testBatchLoad</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test batch load.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testBatchLoadWithFallback">
+        <div class="location">at line 260</div>
+        <code>                    void
+    <strong>testBatchLoadWithFallback</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test batch load with fallback loader.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCommandChecker">
+        <div class="location">at line 316</div>
+        <code>            protected        callable
+    <strong>getCommandChecker</strong>(array $args = [], string $class = \VuFindSearch\Command\RetrieveCommand::class, string $target = &#039;Solr&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method to test callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td><p>Command arguments</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>Command class</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td><p>Target identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDriver">
+        <div class="location">at line 336</div>
+        <code>            protected        <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+    <strong>getDriver</strong>(string $id = &#039;test&#039;, string $source = &#039;Solr&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get test record driver object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Record source</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoader">
+        <div class="location">at line 357</div>
+        <code>            protected        <a href="../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a>
+    <strong>getLoader</strong>(<a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a> $service, <a href="../../VuFind/RecordDriver/PluginManager.html"><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></a> $factory = null, <a href="../../VuFind/Record/Cache.html"><abbr title="VuFind\Record\Cache">Cache</abbr></a> $recordCache = null, <a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a> $fallbackLoader = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Build a loader to test.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a></td>
+                <td>$service</td>
+                <td><p>Search service</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/PluginManager.html"><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></a></td>
+                <td>$factory</td>
+                <td><p>Record factory (optional)</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Record/Cache.html"><abbr title="VuFind\Record\Cache">Cache</abbr></a></td>
+                <td>$recordCache</td>
+                <td><p>Record Cache</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a></td>
+                <td>$fallbackLoader</td>
+                <td><p>Fallback record loader</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFallbackLoader">
+        <div class="location">at line 377</div>
+        <code>            protected        <a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a>
+    <strong>getFallbackLoader</strong>(array $records)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a fallback loader (currently assumes Summon plugin will be used).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$records</td>
+                <td><p>Records to return from the fallback plugin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollection">
+        <div class="location">at line 411</div>
+        <code>            protected        <a href="../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+    <strong>getCollection</strong>(array $records)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a fake record collection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$records</td>
+                <td><p>Record(s) to retrieve</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

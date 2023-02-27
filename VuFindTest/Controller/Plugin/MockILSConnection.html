@@ -1,0 +1,3182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Controller\Plugin\MockILSConnection | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Controller_Plugin_MockILSConnection" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/Controller.html">Controller</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/Controller/Plugin.html">Plugin</a></li><li class="backslash">\</li><li>MockILSConnection</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>MockILSConnection    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>MockILSConnection</strong>        extends <a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a>
+</p>
+
+        
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Lightweight translator aware marker interface (used as an alternative to
+\Laminas\I18n\Translator\TranslatorAwareInterface, which requires an excessive
+number of methods to be implemented).  If we switch to PHP 5.4 traits in the
+future, we can eliminate this interface in favor of the default Laminas version.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_translator">
+                                        protected                                        <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$translator</td>
+                <td class="last">Translator</td>
+                <td><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#property_translator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driverInitialized">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$driverInitialized</td>
+                <td class="last"><p>Has the driver been initialized yet?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_driverInitialized">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driver">
+                                        protected                                        object
+                                                                                
+                                    </td>
+                <td>$driver</td>
+                <td class="last"><p>The object of the appropriate driver.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_driver">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>ILS configuration</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_config">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_holdsMode">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$holdsMode</td>
+                <td class="last"><p>Holds mode</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_holdsMode">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_titleHoldsMode">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$titleHoldsMode</td>
+                <td class="last"><p>Title-level holds mode</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_titleHoldsMode">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driverManager">
+                                        protected                                        <a href="../../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$driverManager</td>
+                <td class="last"><p>Driver plugin manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_driverManager">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_configReader">
+                                        protected                                        <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$configReader</td>
+                <td class="last"><p>Configuration loader</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_configReader">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_failing">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$failing</td>
+                <td class="last"><p>Is the current ILS driver failing?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_failing">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_request">
+                                        protected                                        <abbr title="Laminas\Http\Request">Request</abbr>
+                                                                                
+                                    </td>
+                <td>$request</td>
+                <td class="last"><p>Request object</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#property_request">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTranslator">setTranslator</a>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        
+                                            <p><p>Set a translator</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslator">getTranslator</a>()
+        
+                                            <p><p>Get translator object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslatorLocale">getTranslatorLocale</a>(string $default = &#039;en&#039;)
+        
+                                            <p><p>Get the locale from the translator.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translate">translate</a>(string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateWithPrefix">translateWithPrefix</a>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateString">translateString</a>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        
+                                            <p><p>Get translation for a string</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractTextDomain">extractTextDomain</a>(string|object|array $target)
+        
+                                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <a href="../../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a> $driverManager, <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configReader, <abbr title="Laminas\Http\Request">Request</abbr> $request = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method___construct">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setHoldConfig">setHoldConfig</a>(<a href="../../../VuFind/ILS/HoldSettings.html"><abbr title="VuFind\ILS\HoldSettings">HoldSettings</abbr></a> $settings)
+        
+                                            <p><p>Set the hold configuration for the connection.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_setHoldConfig">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDriverClass">getDriverClass</a>()
+        
+                                            <p><p>Get class name of the driver object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getDriverClass">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initializeDriver">initializeDriver</a>()
+        
+                                            <p><p>Initialize the ILS driver.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_initializeDriver">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasNoILSFailover">hasNoILSFailover</a>()
+        
+                                            <p><p>Are we configured to fail over to the NoILS driver on error?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_hasNoILSFailover">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_failOverToNoILS">failOverToNoILS</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a> $e = null)
+        
+                                            <p><p>If configured, fail over to the NoILS driver and return true; otherwise,
+return false.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_failOverToNoILS">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDriver">getDriver</a>(bool $init = true)
+        
+                                            <p><p>Get access to the driver object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getDriver">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDriver">setDriver</a>(<a href="../../../VuFind/ILS/Driver/DriverInterface.html"><abbr title="VuFind\ILS\Driver\DriverInterface">DriverInterface</abbr></a> $driver, bool $initialized = false)
+        
+                                            <p><p>Set a driver object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_setDriver">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDriverConfig">getDriverConfig</a>()
+        
+                                            <p><p>Get configuration for the ILS driver.  We will load an .ini file named
+after the driver class if it exists; otherwise we will return an empty
+array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getDriverConfig">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkFunction">checkFunction</a>(string $function, array $params = null)
+        
+                                            <p><p>Check Function</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkFunction">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodHolds">checkMethodHolds</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Holds</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodHolds">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodcancelHolds">checkMethodcancelHolds</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Cancel Holds</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodcancelHolds">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodRenewals">checkMethodRenewals</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Renewals</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodRenewals">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodStorageRetrievalRequests">checkMethodStorageRetrievalRequests</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Storage Retrieval Request</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodStorageRetrievalRequests">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodcancelStorageRetrievalRequests">checkMethodcancelStorageRetrievalRequests</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Cancel Storage Retrieval Requests</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodcancelStorageRetrievalRequests">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodILLRequests">checkMethodILLRequests</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check ILL Request</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodILLRequests">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodcancelILLRequests">checkMethodcancelILLRequests</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Cancel ILL Requests</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodcancelILLRequests">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodchangePassword">checkMethodchangePassword</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Password Change</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodchangePassword">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodgetMyTransactions">checkMethodgetMyTransactions</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Current Loans</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodgetMyTransactions">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodgetMyTransactionHistory">checkMethodgetMyTransactionHistory</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Historic Loans</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodgetMyTransactionHistory">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkMethodpatronLogin">checkMethodpatronLogin</a>(array $functionConfig, array $params)
+        
+                                            <p><p>Check Patron login</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkMethodpatronLogin">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHelpText">getHelpText</a>(string|array $helpText)
+        
+                                            <p><p>Get proper help text from the function config</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getHelpText">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkRequestIsValid">checkRequestIsValid</a>(string $id, array $data, array $patron)
+        
+                                            <p><p>Check Request is Valid</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkRequestIsValid">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkStorageRetrievalRequestIsValid">checkStorageRetrievalRequestIsValid</a>(string $id, array $data, array $patron)
+        
+                                            <p><p>Check Storage Retrieval Request is Valid</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkStorageRetrievalRequestIsValid">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkILLRequestIsValid">checkILLRequestIsValid</a>(string $id, array $data, array $patron)
+        
+                                            <p><p>Check ILL Request is Valid</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkILLRequestIsValid">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldsMode">getHoldsMode</a>()
+        
+                                            <p><p>Get Holds Mode</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getHoldsMode">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOfflineMode">getOfflineMode</a>(bool $healthCheck = false)
+        
+                                            <p><p>Get Offline Mode</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getOfflineMode">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitleHoldsMode">getTitleHoldsMode</a>()
+        
+                                            <p><p>Get Title Holds Mode</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getTitleHoldsMode">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasHoldings">hasHoldings</a>(string $id)
+        
+                                            <p><p>Has Holdings</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_hasHoldings">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loginIsHidden">loginIsHidden</a>()
+        
+                                            <p><p>Get Hidden Login Mode</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_loginIsHidden">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkCapability">checkCapability</a>(string $method, array $params = [], bool $throw = false)
+        
+                                            <p><p>Check driver capability -- return true if the driver supports the specified
+method; false otherwise.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_checkCapability">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldingsTextFieldNames">getHoldingsTextFieldNames</a>()
+        
+                                            <p><p>Get Names of Textual Holdings Fields</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getHoldingsTextFieldNames">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPasswordPolicy">getPasswordPolicy</a>(array $patron)
+        
+                                            <p><p>Get the password policy from the driver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getPasswordPolicy">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyTransactions">getMyTransactions</a>(array $patron, array $params = [])
+        
+                                            <p><p>Get Patron Transactions</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getMyTransactions">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHolding">getHolding</a>(string $id, array $patron = null, array $options = [])
+        
+                                            <p><p>Get holdings</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getHolding">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___call">__call</a>(string $methodName, array $params)
+        
+                                            <p><p>Default method -- pass along calls to the driver if available; return
+false otherwise.  This allows custom functions to be implemented in
+the driver without constant modification to the connection class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method___call">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatus">getStatus</a>(string $id)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Connection.html#method_getStatus">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFunds">getFunds</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNewItems">getNewItems</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setTranslator">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 60</div>
+        <code>                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+    <strong>setTranslator</strong>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a translator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td>Translator</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslator">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 71</div>
+        <code>                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translator object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslatorLocale">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 83</div>
+        <code>                    string
+    <strong>getTranslatorLocale</strong>(string $default = &#039;en&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the locale from the translator.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default to use if translator absent.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translate">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 103</div>
+        <code>                    string
+    <strong>translate</strong>(string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateWithPrefix">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 152</div>
+        <code>                    string
+    <strong>translateWithPrefix</strong>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td><p>Translation key prefix</p></td>
+            </tr>
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateString">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 178</div>
+        <code>            protected        string
+    <strong>translateString</strong>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translation for a string</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>String to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is found
+(null for no default).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Text domain (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractTextDomain">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 215</div>
+        <code>            protected        array
+    <strong>extractTextDomain</strong>(string|object|array $target)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method___construct">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 132</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <a href="../../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a> $driverManager, <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configReader, <abbr title="Laminas\Http\Request">Request</abbr> $request = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Configuration
+representing the [Catalog] section of config.ini</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a></td>
+                <td>$driverManager</td>
+                <td><p>Driver plugin manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
+                <td>$configReader</td>
+                <td><p>Configuration loader</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Http\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHoldConfig">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_setHoldConfig">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 157</div>
+        <code>                    <a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a>
+    <strong>setHoldConfig</strong>(<a href="../../../VuFind/ILS/HoldSettings.html"><abbr title="VuFind\ILS\HoldSettings">HoldSettings</abbr></a> $settings)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the hold configuration for the connection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/ILS/HoldSettings.html"><abbr title="VuFind\ILS\HoldSettings">HoldSettings</abbr></a></td>
+                <td>$settings</td>
+                <td><p>Hold settings</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDriverClass">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getDriverClass">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 169</div>
+        <code>                    string
+    <strong>getDriverClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get class name of the driver object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeDriver">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_initializeDriver">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 179</div>
+        <code>            protected        void
+    <strong>initializeDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the ILS driver.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasNoILSFailover">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_hasNoILSFailover">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 199</div>
+        <code>            protected        bool
+    <strong>hasNoILSFailover</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Are we configured to fail over to the NoILS driver on error?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_failOverToNoILS">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_failOverToNoILS">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 214</div>
+        <code>            protected        bool
+    <strong>failOverToNoILS</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a> $e = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>If configured, fail over to the NoILS driver and return true; otherwise,
+return false.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td>$e</td>
+                <td><p>The exception that triggered the failover.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDriver">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getDriver">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 248</div>
+        <code>                    object
+    <strong>getDriver</strong>(bool $init = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get access to the driver object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$init</td>
+                <td><p>Should we initialize the driver (if necessary), or load it
+&quot;as-is&quot;?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDriver">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_setDriver">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 273</div>
+        <code>                    void
+    <strong>setDriver</strong>(<a href="../../../VuFind/ILS/Driver/DriverInterface.html"><abbr title="VuFind\ILS\Driver\DriverInterface">DriverInterface</abbr></a> $driver, bool $initialized = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a driver object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/ILS/Driver/DriverInterface.html"><abbr title="VuFind\ILS\Driver\DriverInterface">DriverInterface</abbr></a></td>
+                <td>$driver</td>
+                <td><p>Driver to set.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$initialized</td>
+                <td><p>Is this driver already initialized?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDriverConfig">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getDriverConfig">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 286</div>
+        <code>                    array
+    <strong>getDriverConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get configuration for the ILS driver.  We will load an .ini file named
+after the driver class if it exists; otherwise we will return an empty
+array.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkFunction">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkFunction">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 306</div>
+        <code>                    mixed
+    <strong>checkFunction</strong>(string $function, array $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Function</p></p>                <p><p>This is responsible for checking the driver configuration to determine
+if the system supports a particular function.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td><p>The name of the function to check.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>(optional) An array of function-specific parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values; on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodHolds">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodHolds">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 345</div>
+        <code>            protected        mixed
+    <strong>checkMethodHolds</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Holds</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports Holds.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The Hold configuration values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of function-specific params (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values either for placing holds via a form or a URL; on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodcancelHolds">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodcancelHolds">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 405</div>
+        <code>            protected        mixed
+    <strong>checkMethodcancelHolds</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Cancel Holds</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports Cancelling Holds.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The Cancel Hold configuration values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of function-specific params (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values either for cancelling holds via a form or a URL;
+on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodRenewals">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodRenewals">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 440</div>
+        <code>            protected        mixed
+    <strong>checkMethodRenewals</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Renewals</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports Renewing Items.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The Renewal configuration values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of function-specific params (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values either for renewing items via a form or a URL; on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodStorageRetrievalRequests">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodStorageRetrievalRequests">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 475</div>
+        <code>            protected        mixed
+    <strong>checkMethodStorageRetrievalRequests</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Storage Retrieval Request</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports storage
+retrieval requests.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The storage retrieval request configuration
+values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of function-specific params (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values either for placing requests via a form; on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodcancelStorageRetrievalRequests">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodcancelStorageRetrievalRequests">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 513</div>
+        <code>            protected        mixed
+    <strong>checkMethodcancelStorageRetrievalRequests</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Cancel Storage Retrieval Requests</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports Cancelling
+Storage Retrieval Requests.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The Cancel function configuration values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of function-specific params (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values either for cancelling requests via a form or a URL;
+on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodILLRequests">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodILLRequests">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 560</div>
+        <code>            protected        mixed
+    <strong>checkMethodILLRequests</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check ILL Request</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports storage
+retrieval requests.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The ILL request configuration values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of function-specific params (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values either for placing requests via a form; on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodcancelILLRequests">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodcancelILLRequests">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 600</div>
+        <code>            protected        mixed
+    <strong>checkMethodcancelILLRequests</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Cancel ILL Requests</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports Cancelling
+ILL Requests.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The Cancel function configuration values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of function-specific params (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values either for cancelling requests via a form or a URL;
+on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodchangePassword">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodchangePassword">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 648</div>
+        <code>            protected        mixed
+    <strong>checkMethodchangePassword</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Password Change</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports changing
+password.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The password change configuration values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values either for cancelling requests via a form or a URL;
+on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodgetMyTransactions">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodgetMyTransactions">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 671</div>
+        <code>            protected        mixed
+    <strong>checkMethodgetMyTransactions</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Current Loans</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports current
+loans.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>Function configuration</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values; on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodgetMyTransactionHistory">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodgetMyTransactionHistory">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 694</div>
+        <code>            protected        mixed
+    <strong>checkMethodgetMyTransactionHistory</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Historic Loans</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports historic
+loans.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>Function configuration</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values; on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMethodpatronLogin">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkMethodpatronLogin">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 715</div>
+        <code>            protected        mixed
+    <strong>checkMethodpatronLogin</strong>(array $functionConfig, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Patron login</p></p>                <p><p>A support method for checkFunction(). This is responsible for checking
+the driver configuration to determine if the system supports patron login.
+It is currently assumed that all drivers do.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$functionConfig</td>
+                <td><p>The patronLogin configuration values</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of function-specific params (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with specific function keys
+and values for login; on failure, false.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelpText">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getHelpText">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 727</div>
+        <code>            protected        string
+    <strong>getHelpText</strong>(string|array $helpText)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get proper help text from the function config</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$helpText</td>
+                <td><p>Help text(s)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Language-specific help text</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkRequestIsValid">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkRequestIsValid">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 748</div>
+        <code>                    mixed
+    <strong>checkRequestIsValid</strong>(string $id, array $data, array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Request is Valid</p></p>                <p><p>This is responsible for checking if a request is valid from hold.php</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>A Bibliographic ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Collected Holds Data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron related data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>The result of the checkRequestIsValid function if it
+exists, true if it does not</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkStorageRetrievalRequestIsValid">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkStorageRetrievalRequestIsValid">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 779</div>
+        <code>                    mixed
+    <strong>checkStorageRetrievalRequestIsValid</strong>(string $id, array $data, array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check Storage Retrieval Request is Valid</p></p>                <p><p>This is responsible for checking if a storage retrieval request is valid</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>A Bibliographic ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Collected Holds Data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron related data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>The result of the checkStorageRetrievalRequestIsValid
+function if it exists, false if it does not</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkILLRequestIsValid">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkILLRequestIsValid">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 816</div>
+        <code>                    mixed
+    <strong>checkILLRequestIsValid</strong>(string $id, array $data, array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check ILL Request is Valid</p></p>                <p><p>This is responsible for checking if an ILL request is valid</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>A Bibliographic ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Collected Holds Data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron related data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>The result of the checkILLRequestIsValid
+function if it exists, false if it does not</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldsMode">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getHoldsMode">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 845</div>
+        <code>                    string
+    <strong>getHoldsMode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Holds Mode</p></p>                <p><p>This is responsible for returning the holds mode</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The Holds mode</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOfflineMode">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getOfflineMode">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 861</div>
+        <code>                    string|bool
+    <strong>getOfflineMode</strong>(bool $healthCheck = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Offline Mode</p></p>                <p><p>This is responsible for returning the offline mode</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$healthCheck</td>
+                <td><p>Perform a health check in addition to consulting
+the ILS status?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td><p>&quot;ils-offline&quot; for systems where the main ILS is offline,
+&quot;ils-none&quot; for systems which do not use an ILS, false for online systems.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitleHoldsMode">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getTitleHoldsMode">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 891</div>
+        <code>                    string
+    <strong>getTitleHoldsMode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Title Holds Mode</p></p>                <p><p>This is responsible for returning the Title holds mode</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The Title Holds mode</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasHoldings">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_hasHoldings">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 905</div>
+        <code>                    bool
+    <strong>hasHoldings</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Has Holdings</p></p>                <p><p>Obtain information on whether or not the item has holdings</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>A bibliographic id</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true on success, false on failure</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loginIsHidden">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_loginIsHidden">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 926</div>
+        <code>                    bool
+    <strong>loginIsHidden</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Hidden Login Mode</p></p>                <p><p>This is responsible for indicating whether login should be hidden.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true if the login should be hidden, false if not</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkCapability">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_checkCapability">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 951</div>
+        <code>                    bool
+    <strong>checkCapability</strong>(string $method, array $params = [], bool $throw = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check driver capability -- return true if the driver supports the specified
+method; false otherwise.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>Method to check</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Array of passed parameters (optional)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$throw</td>
+                <td><p>Whether to throw exceptions instead of returning false</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldingsTextFieldNames">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getHoldingsTextFieldNames">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 991</div>
+        <code>                    string[]
+    <strong>getHoldingsTextFieldNames</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Names of Textual Holdings Fields</p></p>                <p><p>Obtain information on which textual holdings fields should be displayed</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPasswordPolicy">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getPasswordPolicy">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 1005</div>
+        <code>                    bool|array
+    <strong>getPasswordPolicy</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the password policy from the driver</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td><p>Password policy array or false if unsupported</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyTransactions">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getMyTransactions">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 1025</div>
+        <code>                    mixed
+    <strong>getMyTransactions</strong>(array $patron, array $params = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Transactions</p></p>                <p><p>This is responsible for retrieving all transactions (i.e. checked out items)
+by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Array of the patron's transactions</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHolding">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getHolding">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 1051</div>
+        <code>                    array
+    <strong>getHolding</strong>(string $id, array $patron = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get holdings</p></p>                <p><p>Retrieve holdings from ILS driver class and normalize result array if needed.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the holdings for</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Additional options</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array with holding data</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method___call">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 1106</div>
+        <code>                    mixed
+    <strong>__call</strong>(string $methodName, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Default method -- pass along calls to the driver if available; return
+false otherwise.  This allows custom functions to be implemented in
+the driver without constant modification to the connection class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td><p>The name of the called method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Array of passed parameters.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Varies by method (false if undefined method)</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">in <a href="../../../VuFind/ILS/Connection.html#method_getStatus">
+<abbr title="VuFind\ILS\Connection">Connection</abbr></a> at line 55</div>
+        <code>                    array
+    <strong>getStatus</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFunds">
+        <div class="location">at line 259</div>
+        <code>                    
+    <strong>getFunds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNewItems">
+        <div class="location">at line 263</div>
+        <code>                    
+    <strong>getNewItems</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

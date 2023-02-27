@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Controller | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../doctum.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script async defer src="../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFind_Controller" data-root-path="../" data-search-index-url="../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../VuFind/Controller.html">Controller</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFind\Controller</h1>
+    </div>
+
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="../VuFind/Controller/Feature.html">VuFind\Controller\Feature</a><a href="../VuFind/Controller/Plugin.html">VuFind\Controller\Plugin</a>        </div>
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AbstractBase.html"><abbr title="VuFind\Controller\AbstractBase">AbstractBase</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind controller base class (defines some methods that can be shared by other
+controllers).</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AbstractBaseFactory.html"><abbr title="VuFind\Controller\AbstractBaseFactory">AbstractBaseFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Generic controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AbstractBaseWithConfigFactory.html"><abbr title="VuFind\Controller\AbstractBaseWithConfigFactory">AbstractBaseWithConfigFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Generic controller factory (with config injection).</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AbstractRecord.html"><abbr title="VuFind\Controller\AbstractRecord">AbstractRecord</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AbstractSearch.html"><abbr title="VuFind\Controller\AbstractSearch">AbstractSearch</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Search Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AbstractSolrSearch.html"><abbr title="VuFind\Controller\AbstractSolrSearch">AbstractSolrSearch</abbr></a>    </div>
+                <div class="col-md-6"><p>AbstractSearch with Solr-specific features added.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AjaxController.html"><abbr title="VuFind\Controller\AjaxController">AjaxController</abbr></a>    </div>
+                <div class="col-md-6"><p>This controller handles global AJAX functionality</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AjaxControllerFactory.html"><abbr title="VuFind\Controller\AjaxControllerFactory">AjaxControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Ajax controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AjaxResponseTrait.html"><abbr title="VuFind\Controller\AjaxResponseTrait">AjaxResponseTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait to allow AJAX response generation.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AlmaController.html"><abbr title="VuFind\Controller\AlmaController">AlmaController</abbr></a>    </div>
+                <div class="col-md-6"><p>Alma controller, mainly for webhooks.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AlphabrowseController.html"><abbr title="VuFind\Controller\AlphabrowseController">AlphabrowseController</abbr></a>    </div>
+                <div class="col-md-6"><p>AlphabrowseController Class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AuthorController.html"><abbr title="VuFind\Controller\AuthorController">AuthorController</abbr></a>    </div>
+                <div class="col-md-6"><p>Author Search Options</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AuthorityController.html"><abbr title="VuFind\Controller\AuthorityController">AuthorityController</abbr></a>    </div>
+                <div class="col-md-6"><p>Authority Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/AuthorityRecordController.html"><abbr title="VuFind\Controller\AuthorityRecordController">AuthorityRecordController</abbr></a>    </div>
+                <div class="col-md-6"><p>Authority Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/BrowZineController.html"><abbr title="VuFind\Controller\BrowZineController">BrowZineController</abbr></a>    </div>
+                <div class="col-md-6"><p>BrowZine Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/BrowseController.html"><abbr title="VuFind\Controller\BrowseController">BrowseController</abbr></a>    </div>
+                <div class="col-md-6"><p>BrowseController Class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/CartController.html"><abbr title="VuFind\Controller\CartController">CartController</abbr></a>    </div>
+                <div class="col-md-6"><p>Book Bag / Bulk Action Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/CartControllerFactory.html"><abbr title="VuFind\Controller\CartControllerFactory">CartControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Cart controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ChannelsController.html"><abbr title="VuFind\Controller\ChannelsController">ChannelsController</abbr></a>    </div>
+                <div class="col-md-6"><p>Channels Class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ChannelsControllerFactory.html"><abbr title="VuFind\Controller\ChannelsControllerFactory">ChannelsControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Channels controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/CollectionController.html"><abbr title="VuFind\Controller\CollectionController">CollectionController</abbr></a>    </div>
+                <div class="col-md-6"><p>Collection Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/CollectionsController.html"><abbr title="VuFind\Controller\CollectionsController">CollectionsController</abbr></a>    </div>
+                <div class="col-md-6"><p>Collections Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/CombinedController.html"><abbr title="VuFind\Controller\CombinedController">CombinedController</abbr></a>    </div>
+                <div class="col-md-6"><p>Redirects the user to the appropriate default VuFind action.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ConfirmController.html"><abbr title="VuFind\Controller\ConfirmController">ConfirmController</abbr></a>    </div>
+                <div class="col-md-6"><p>Redirects the user to the appropriate VuFind action.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ContentController.html"><abbr title="VuFind\Controller\ContentController">ContentController</abbr></a>    </div>
+                <div class="col-md-6"><p>Controller for mostly static pages that doesn't fall under any particular
+function.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/CoverController.html"><abbr title="VuFind\Controller\CoverController">CoverController</abbr></a>    </div>
+                <div class="col-md-6"><p>Generates covers for book entries</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/CoverControllerFactory.html"><abbr title="VuFind\Controller\CoverControllerFactory">CoverControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Cover controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/EITController.html"><abbr title="VuFind\Controller\EITController">EITController</abbr></a>    </div>
+                <div class="col-md-6"><p>EIT Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/EITrecordController.html"><abbr title="VuFind\Controller\EITrecordController">EITrecordController</abbr></a>    </div>
+                <div class="col-md-6"><p>EIT Record Controller
+Largely copied from Summon Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/EdsController.html"><abbr title="VuFind\Controller\EdsController">EdsController</abbr></a>    </div>
+                <div class="col-md-6"><p>EDS Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/EdsrecordController.html"><abbr title="VuFind\Controller\EdsrecordController">EdsrecordController</abbr></a>    </div>
+                <div class="col-md-6"><p>EDS Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ErrorController.html"><abbr title="VuFind\Controller\ErrorController">ErrorController</abbr></a>    </div>
+                <div class="col-md-6"><p>Error Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ExternalAuthController.html"><abbr title="VuFind\Controller\ExternalAuthController">ExternalAuthController</abbr></a>    </div>
+                <div class="col-md-6"><p>External Authentication/Authorization Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/FeedbackController.html"><abbr title="VuFind\Controller\FeedbackController">FeedbackController</abbr></a>    </div>
+                <div class="col-md-6"><p>Controller for configurable forms (feedback etc).</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/HelpController.html"><abbr title="VuFind\Controller\HelpController">HelpController</abbr></a>    </div>
+                <div class="col-md-6"><p>Home action for Help module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/HierarchyController.html"><abbr title="VuFind\Controller\HierarchyController">HierarchyController</abbr></a>    </div>
+                <div class="col-md-6"><p>Hierarchy Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/HoldsController.html"><abbr title="VuFind\Controller\HoldsController">HoldsController</abbr></a>    </div>
+                <div class="col-md-6"><p>Controller for the user holds area.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/HoldsControllerFactory.html"><abbr title="VuFind\Controller\HoldsControllerFactory">HoldsControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Holds controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/HoldsTrait.html"><abbr title="VuFind\Controller\HoldsTrait">HoldsTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Holds trait (for subclasses of AbstractRecord)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ILLRequestsTrait.html"><abbr title="VuFind\Controller\ILLRequestsTrait">ILLRequestsTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>ILL trait (for subclasses of AbstractRecord)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/IndexController.html"><abbr title="VuFind\Controller\IndexController">IndexController</abbr></a>    </div>
+                <div class="col-md-6"><p>Redirects the user to the appropriate default VuFind action.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/IndexControllerFactory.html"><abbr title="VuFind\Controller\IndexControllerFactory">IndexControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Index controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/InstallController.html"><abbr title="VuFind\Controller\InstallController">InstallController</abbr></a>    </div>
+                <div class="col-md-6"><p>Class controls VuFind auto-configuration.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/LibGuidesController.html"><abbr title="VuFind\Controller\LibGuidesController">LibGuidesController</abbr></a>    </div>
+                <div class="col-md-6"><p>LibGuides Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/LibraryCardsController.html"><abbr title="VuFind\Controller\LibraryCardsController">LibraryCardsController</abbr></a>    </div>
+                <div class="col-md-6"><p>Controller for the library card functionality.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/MissingrecordController.html"><abbr title="VuFind\Controller\MissingrecordController">MissingrecordController</abbr></a>    </div>
+                <div class="col-md-6"><p>Missing Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/MyResearchController.html"><abbr title="VuFind\Controller\MyResearchController">MyResearchController</abbr></a>    </div>
+                <div class="col-md-6"><p>Controller for the user account area.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/OAuth2Controller.html"><abbr title="VuFind\Controller\OAuth2Controller">OAuth2Controller</abbr></a>    </div>
+                <div class="col-md-6"><p>OAuth2 Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/OAuth2ControllerFactory.html"><abbr title="VuFind\Controller\OAuth2ControllerFactory">OAuth2ControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>OAuth2 controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/OaiController.html"><abbr title="VuFind\Controller\OaiController">OaiController</abbr></a>    </div>
+                <div class="col-md-6"><p>OAIController Class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/OverdriveController.html"><abbr title="VuFind\Controller\OverdriveController">OverdriveController</abbr></a>    </div>
+                <div class="col-md-6"><p>Overdrive Controller supports actions for Overdrive Integration</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/Pazpar2Controller.html"><abbr title="VuFind\Controller\Pazpar2Controller">Pazpar2Controller</abbr></a>    </div>
+                <div class="col-md-6"><p>Pazpar2 Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/Pazpar2recordController.html"><abbr title="VuFind\Controller\Pazpar2recordController">Pazpar2recordController</abbr></a>    </div>
+                <div class="col-md-6"><p>Pazpar2 Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/PrimoController.html"><abbr title="VuFind\Controller\PrimoController">PrimoController</abbr></a>    </div>
+                <div class="col-md-6"><p>Primo Central Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/PrimorecordController.html"><abbr title="VuFind\Controller\PrimorecordController">PrimorecordController</abbr></a>    </div>
+                <div class="col-md-6"><p>Primo Central Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/QRCodeController.html"><abbr title="VuFind\Controller\QRCodeController">QRCodeController</abbr></a>    </div>
+                <div class="col-md-6"><p>Generates qrcodes</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/QRCodeControllerFactory.html"><abbr title="VuFind\Controller\QRCodeControllerFactory">QRCodeControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>QRCode controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/RecordController.html"><abbr title="VuFind\Controller\RecordController">RecordController</abbr></a>    </div>
+                <div class="col-md-6"><p>Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/RecordsController.html"><abbr title="VuFind\Controller\RecordsController">RecordsController</abbr></a>    </div>
+                <div class="col-md-6"><p>Records Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/RelaisController.html"><abbr title="VuFind\Controller\RelaisController">RelaisController</abbr></a>    </div>
+                <div class="col-md-6"><p>Relais Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/Search2Controller.html"><abbr title="VuFind\Controller\Search2Controller">Search2Controller</abbr></a>    </div>
+                <div class="col-md-6"><p>Search2 Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/Search2collectionController.html"><abbr title="VuFind\Controller\Search2collectionController">Search2collectionController</abbr></a>    </div>
+                <div class="col-md-6"><p>Collection Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/Search2recordController.html"><abbr title="VuFind\Controller\Search2recordController">Search2recordController</abbr></a>    </div>
+                <div class="col-md-6"><p>Search2 Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/SearchController.html"><abbr title="VuFind\Controller\SearchController">SearchController</abbr></a>    </div>
+                <div class="col-md-6"><p>Redirects the user to the appropriate default VuFind action.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ShibbolethLogoutNotificationController.html"><abbr title="VuFind\Controller\ShibbolethLogoutNotificationController">ShibbolethLogoutNotificationController</abbr></a>    </div>
+                <div class="col-md-6"><p>Handles Shibboleth back-channel logout notifications.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/ShortlinkController.html"><abbr title="VuFind\Controller\ShortlinkController">ShortlinkController</abbr></a>    </div>
+                <div class="col-md-6"><p>Short link controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/StorageRetrievalRequestsTrait.html"><abbr title="VuFind\Controller\StorageRetrievalRequestsTrait">StorageRetrievalRequestsTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Storage retrieval requests trait (for subclasses of AbstractRecord)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/SummonController.html"><abbr title="VuFind\Controller\SummonController">SummonController</abbr></a>    </div>
+                <div class="col-md-6"><p>Summon Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/SummonrecordController.html"><abbr title="VuFind\Controller\SummonrecordController">SummonrecordController</abbr></a>    </div>
+                <div class="col-md-6"><p>Summon Record Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/TagController.html"><abbr title="VuFind\Controller\TagController">TagController</abbr></a>    </div>
+                <div class="col-md-6"><p>Tag Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/UpgradeController.html"><abbr title="VuFind\Controller\UpgradeController">UpgradeController</abbr></a>    </div>
+                <div class="col-md-6"><p>Class controls VuFind upgrading.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/UpgradeControllerFactory.html"><abbr title="VuFind\Controller\UpgradeControllerFactory">UpgradeControllerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Upgrade controller factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/WebController.html"><abbr title="VuFind\Controller\WebController">WebController</abbr></a>    </div>
+                <div class="col-md-6"><p>Web Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/WorldcatController.html"><abbr title="VuFind\Controller\WorldcatController">WorldcatController</abbr></a>    </div>
+                <div class="col-md-6"><p>WorldCat Controller</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Controller/WorldcatrecordController.html"><abbr title="VuFind\Controller\WorldcatrecordController">WorldcatrecordController</abbr></a>    </div>
+                <div class="col-md-6"><p>WorldCat Record Controller</p></div>
+            </div>
+            </div>
+    
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

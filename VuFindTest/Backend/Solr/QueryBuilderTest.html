@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Backend\Solr\QueryBuilderTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Backend_Solr_QueryBuilderTest" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/Backend.html">Backend</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/Backend/Solr.html">Solr</a></li><li class="backslash">\</li><li>QueryBuilderTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>QueryBuilderTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>QueryBuilderTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Unit tests for SOLR query builder</p></p>                    </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testNormalization">testNormalization</a>()
+        
+                                            <p><p>Test normalization of unusual queries.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getQuestionTests">getQuestionTests</a>()
+        
+                                            <p><p>Return array of [test query, expected result] arrays.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_runBasicQuestionTest">runBasicQuestionTest</a>(<a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a> $qb, string $handler, array $test)
+        
+                                            <p><p>Run a test case through a basic query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_runAdvancedQuestionTest">runAdvancedQuestionTest</a>(<a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a> $qb, string $handler, array $test)
+        
+                                            <p><p>Run a test case through an advanced query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_runQuestionTests">runQuestionTests</a>(array $builderParams, string $handler)
+        
+                                            <p><p>Run the standard suite of question mark tests, accounting for differences
+between stanard Lucene, basic Dismax and eDismax handlers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testQueryHandler">testQueryHandler</a>()
+        
+                                            <p><p>Test generation with a query handler</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testQueryHandlerWithDismax">testQueryHandlerWithDismax</a>()
+        
+                                            <p><p>Test generation with a query handler with regular dismax</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testQueryHandlerWithEdismax">testQueryHandlerWithEdismax</a>()
+        
+                                            <p><p>Test generation with a query handler with edismax</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testExactQueryHandler">testExactQueryHandler</a>()
+        
+                                            <p><p>Test that the appropriate handler gets called for a quoted search when exact
+settings are enabled.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testQueryHandlerWithFilterQueryAndDisMax">testQueryHandlerWithFilterQueryAndDisMax</a>()
+        
+                                            <p><p>Test generation with a query handler with a filter set and DisMax settings</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testQueryHandlerWithFilterQueryAndNoDisMax">testQueryHandlerWithFilterQueryAndNoDisMax</a>()
+        
+                                            <p><p>Test generation with a query handler with a filter set and no DisMax settings</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMatchAllQueryWithFilterQueryAndNoDisMax">testMatchAllQueryWithFilterQueryAndNoDisMax</a>()
+        
+                                            <p><p>Test generation with a query handler with a filter set and no DisMax settings
+when the query is &quot;all records&quot;</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHlQ">testHlQ</a>()
+        
+                                            <p><p>Test hl.q edge case: when we are in dismax (not edismax) mode, and a boost
+is set, and a query contains advanced syntax, VuFind manipulates the query
+to trigger the boost and sets hl.q to prevent the highlighter from matching
+the wrong words.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSetFieldsToHighlight">testSetFieldsToHighlight</a>()
+        
+                                            <p><p>Test generation with highlighting, using the setFieldsToHighlight() method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSetCreateSpellingQuery">testSetCreateSpellingQuery</a>()
+        
+                                            <p><p>Test generation with spelling, using the setCreateSpellingQuery() method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testQueryGroup">testQueryGroup</a>()
+        
+                                            <p><p>Test generation from a QueryGroup</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testQueryGroupWithAdvancedSyntax">testQueryGroupWithAdvancedSyntax</a>()
+        
+                                            <p><p>Test generation from a QueryGroup with advanced syntax</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMultipleQuotedPhrases">testMultipleQuotedPhrases</a>()
+        
+                                            <p><p>Test generation with multiple quoted phrases.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMixedQuotedPhrases">testMixedQuotedPhrases</a>()
+        
+                                            <p><p>Test generation with mix of quoted and unquoted phrases</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMixedQuotedPhrasesWithEscapedQuote">testMixedQuotedPhrasesWithEscapedQuote</a>()
+        
+                                            <p><p>Test generation with mix of quoted and unquoted phrases</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_globalExtraParamsIndividualQueryDataProvider">globalExtraParamsIndividualQueryDataProvider</a>()
+        
+                                            <p><p>Data provider for testIndividualQueryHandlerWithGlobalExtraParams().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testIndividualQueryHandlerWithGlobalExtraParams">testIndividualQueryHandlerWithGlobalExtraParams</a>($globalExtraParams, $expected1, $expected2)
+        
+                                            <p><p>Test generation with GlobalExtraParams using individual queries.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_globalExtraParamsGroupedQueryDataProvider">globalExtraParamsGroupedQueryDataProvider</a>()
+        
+                                            <p><p>Data provider for testGroupedQueryHandlerWithGlobalExtraParams().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGroupedQueryHandlerWithGlobalExtraParams">testGroupedQueryHandlerWithGlobalExtraParams</a>($globalExtraParams, $expectedFields)
+        
+                                            <p><p>Test generation with GlobalExtraParams using a grouped query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testNegatedQuery">testNegatedQuery</a>()
+        
+                                            <p><p>Test a fully negated query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testNegatedAndQuery">testNegatedAndQuery</a>()
+        
+                                            <p><p>Test a negated clause of an AND query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testNegatedOrQuery">testNegatedOrQuery</a>()
+        
+                                            <p><p>Test a negated clause of an OR query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_testNormalization">
+        <div class="location">at line 51</div>
+        <code>                    void
+    <strong>testNormalization</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test normalization of unusual queries.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuestionTests">
+        <div class="location">at line 111</div>
+        <code>            protected        array
+    <strong>getQuestionTests</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return array of [test query, expected result] arrays.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runBasicQuestionTest">
+        <div class="location">at line 152</div>
+        <code>            protected        void
+    <strong>runBasicQuestionTest</strong>(<a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a> $qb, string $handler, array $test)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run a test case through a basic query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a></td>
+                <td>$qb</td>
+                <td><p>Query builder</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Search handler: dismax|edismax|standard</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$test</td>
+                <td><p>Test to run</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runAdvancedQuestionTest">
+        <div class="location">at line 183</div>
+        <code>            protected        void
+    <strong>runAdvancedQuestionTest</strong>(<a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a> $qb, string $handler, array $test)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run a test case through an advanced query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a></td>
+                <td>$qb</td>
+                <td><p>Query builder</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Search handler: dismax|edismax|standard</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$test</td>
+                <td><p>Test to run</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runQuestionTests">
+        <div class="location">at line 210</div>
+        <code>            protected        void
+    <strong>runQuestionTests</strong>(array $builderParams, string $handler)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run the standard suite of question mark tests, accounting for differences
+between stanard Lucene, basic Dismax and eDismax handlers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$builderParams</td>
+                <td><p>Parameters for QueryBuilder constructor</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Search handler: dismax|edismax|standard</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testQueryHandler">
+        <div class="location">at line 226</div>
+        <code>                    void
+    <strong>testQueryHandler</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with a query handler</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testQueryHandlerWithDismax">
+        <div class="location">at line 241</div>
+        <code>                    void
+    <strong>testQueryHandlerWithDismax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with a query handler with regular dismax</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testQueryHandlerWithEdismax">
+        <div class="location">at line 256</div>
+        <code>                    void
+    <strong>testQueryHandlerWithEdismax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with a query handler with edismax</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testExactQueryHandler">
+        <div class="location">at line 272</div>
+        <code>                    void
+    <strong>testExactQueryHandler</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that the appropriate handler gets called for a quoted search when exact
+settings are enabled.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testQueryHandlerWithFilterQueryAndDisMax">
+        <div class="location">at line 303</div>
+        <code>                    void
+    <strong>testQueryHandlerWithFilterQueryAndDisMax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with a query handler with a filter set and DisMax settings</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testQueryHandlerWithFilterQueryAndNoDisMax">
+        <div class="location">at line 321</div>
+        <code>                    void
+    <strong>testQueryHandlerWithFilterQueryAndNoDisMax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with a query handler with a filter set and no DisMax settings</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMatchAllQueryWithFilterQueryAndNoDisMax">
+        <div class="location">at line 340</div>
+        <code>                    void
+    <strong>testMatchAllQueryWithFilterQueryAndNoDisMax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with a query handler with a filter set and no DisMax settings
+when the query is &quot;all records&quot;</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHlQ">
+        <div class="location">at line 361</div>
+        <code>                    void
+    <strong>testHlQ</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test hl.q edge case: when we are in dismax (not edismax) mode, and a boost
+is set, and a query contains advanced syntax, VuFind manipulates the query
+to trigger the boost and sets hl.q to prevent the highlighter from matching
+the wrong words.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSetFieldsToHighlight">
+        <div class="location">at line 388</div>
+        <code>                    void
+    <strong>testSetFieldsToHighlight</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with highlighting, using the setFieldsToHighlight() method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSetCreateSpellingQuery">
+        <div class="location">at line 429</div>
+        <code>                    void
+    <strong>testSetCreateSpellingQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with spelling, using the setCreateSpellingQuery() method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testQueryGroup">
+        <div class="location">at line 460</div>
+        <code>                    void
+    <strong>testQueryGroup</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation from a QueryGroup</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testQueryGroupWithAdvancedSyntax">
+        <div class="location">at line 487</div>
+        <code>                    void
+    <strong>testQueryGroupWithAdvancedSyntax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation from a QueryGroup with advanced syntax</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMultipleQuotedPhrases">
+        <div class="location">at line 518</div>
+        <code>                    void
+    <strong>testMultipleQuotedPhrases</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with multiple quoted phrases.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMixedQuotedPhrases">
+        <div class="location">at line 542</div>
+        <code>                    void
+    <strong>testMixedQuotedPhrases</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with mix of quoted and unquoted phrases</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMixedQuotedPhrasesWithEscapedQuote">
+        <div class="location">at line 566</div>
+        <code>                    void
+    <strong>testMixedQuotedPhrasesWithEscapedQuote</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with mix of quoted and unquoted phrases</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_globalExtraParamsIndividualQueryDataProvider">
+        <div class="location">at line 590</div>
+        <code>                    array
+    <strong>globalExtraParamsIndividualQueryDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Data provider for testIndividualQueryHandlerWithGlobalExtraParams().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testIndividualQueryHandlerWithGlobalExtraParams">
+        <div class="location">at line 721</div>
+        <code>                    void
+    <strong>testIndividualQueryHandlerWithGlobalExtraParams</strong>($globalExtraParams, $expected1, $expected2)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with GlobalExtraParams using individual queries.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$globalExtraParams</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expected1</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expected2</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_globalExtraParamsGroupedQueryDataProvider">
+        <div class="location">at line 767</div>
+        <code>                    array
+    <strong>globalExtraParamsGroupedQueryDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Data provider for testGroupedQueryHandlerWithGlobalExtraParams().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGroupedQueryHandlerWithGlobalExtraParams">
+        <div class="location">at line 843</div>
+        <code>                    void
+    <strong>testGroupedQueryHandlerWithGlobalExtraParams</strong>($globalExtraParams, $expectedFields)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test generation with GlobalExtraParams using a grouped query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$globalExtraParams</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedFields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testNegatedQuery">
+        <div class="location">at line 878</div>
+        <code>                    void
+    <strong>testNegatedQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test a fully negated query.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testNegatedAndQuery">
+        <div class="location">at line 891</div>
+        <code>                    void
+    <strong>testNegatedAndQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test a negated clause of an AND query.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testNegatedOrQuery">
+        <div class="location">at line 909</div>
+        <code>                    void
+    <strong>testNegatedOrQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test a negated clause of an OR query.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

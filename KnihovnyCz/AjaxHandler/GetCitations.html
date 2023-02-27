@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>GetCitations</strong>        extends <abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr>
+    <strong>GetCitations</strong>        extends <a href="../../VuFind/AjaxHandler/AbstractBase.html"><abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a>
 </p>
 
                 <p>
@@ -106,6 +106,16 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_sessionSettings">
+                                        protected                                        <a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a>
+                                                                                
+                                    </td>
+                <td>$sessionSettings</td>
+                <td class="last"><p>Session settings</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#property_sessionSettings">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_citacePro">
                                         protected                                        
                                                                                 
@@ -122,10 +132,35 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_disableSessionWrites">disableSessionWrites</a>()
+        
+                                            <p><p>Prevent session writes -- this is designed to be called prior to time-
+consuming AJAX operations to help reduce the odds of a timing-related bug
+that causes the wrong version of session data to be written to disk (see
+VUFIND-716 for more details).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#method_disableSessionWrites">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatResponse">formatResponse</a>(mixed $response, int $httpCode = null)
+        
+                                            <p><p>Format a response array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#method_formatResponse">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Session\Settings">Settings</abbr> $ss, <a href="../../KnihovnyCz/Service/CitaceProService.html"><abbr title="KnihovnyCz\Service\CitaceProService">CitaceProService</abbr></a> $citacePro)
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a> $ss, <a href="../../KnihovnyCz/Service/CitaceProService.html"><abbr title="KnihovnyCz\Service\CitaceProService">CitaceProService</abbr></a> $citacePro)
         
                                             <p><p>Get citation ajax handler constructor.</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -147,10 +182,96 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_disableSessionWrites">
+        <div class="location">in <a href="../../VuFind/AjaxHandler/AbstractBase.html#method_disableSessionWrites">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a> at line 58</div>
+        <code>            protected        void
+    <strong>disableSessionWrites</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Prevent session writes -- this is designed to be called prior to time-
+consuming AJAX operations to help reduce the odds of a timing-related bug
+that causes the wrong version of session data to be written to disk (see
+VUFIND-716 for more details).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatResponse">
+        <div class="location">in <a href="../../VuFind/AjaxHandler/AbstractBase.html#method_formatResponse">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a> at line 74</div>
+        <code>            protected        array
+    <strong>formatResponse</strong>(mixed $response, int $httpCode = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format a response array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$response</td>
+                <td><p>Response data</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$httpCode</td>
+                <td><p>HTTP status code (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">at line 58</div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="VuFind\Session\Settings">Settings</abbr> $ss, <a href="../../KnihovnyCz/Service/CitaceProService.html"><abbr title="KnihovnyCz\Service\CitaceProService">CitaceProService</abbr></a> $citacePro)
+    <strong>__construct</strong>(<a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a> $ss, <a href="../../KnihovnyCz/Service/CitaceProService.html"><abbr title="KnihovnyCz\Service\CitaceProService">CitaceProService</abbr></a> $citacePro)
         </code>
     </h3>
     <div class="details">    
@@ -166,7 +287,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Session\Settings">Settings</abbr></td>
+                <td><a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a></td>
                 <td>$ss</td>
                 <td><p>Session settings</p></td>
             </tr>

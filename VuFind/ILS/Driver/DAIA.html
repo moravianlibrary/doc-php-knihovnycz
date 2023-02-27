@@ -1,0 +1,3104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\ILS\Driver\DAIA | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_ILS_Driver_DAIA" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/ILS.html">ILS</a></li><li class="backslash">\</li><li><a href="../../../VuFind/ILS/Driver.html">Driver</a></li><li class="backslash">\</li><li>DAIA</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>DAIA    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>DAIA</strong>        extends <a href="../../../VuFind/ILS/Driver/AbstractBase.html"><abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a>        implements        <abbr title="VuFindHttp\HttpServiceAwareInterface">HttpServiceAwareInterface</abbr>, <abbr title="Laminas\Log\LoggerAwareInterface">LoggerAwareInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>ILS Driver for VuFind to query availability information via DAIA.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Cache/CacheTrait.html"><abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for caching data.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="VuFindHttp\HttpServiceAwareTrait">HttpServiceAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Cache/KeyGeneratorTrait.html"><abbr title="VuFind\Cache\KeyGeneratorTrait">KeyGeneratorTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Cache Key Generator Trait</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>Driver configuration</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/AbstractBase.html#property_config">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cache">
+                                        protected                                        <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$cache</td>
+                <td class="last"><p>Cache for storing data temporarily (e.g. patron blocks with the ILS driver)</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Cache/CacheTrait.html#property_cache">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cacheLifetime">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$cacheLifetime</td>
+                <td class="last"><p>Lifetime of cache (in seconds).</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Cache/CacheTrait.html#property_cacheLifetime">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_baseUrl">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$baseUrl</td>
+                <td class="last"><p>Base URL for DAIA Service</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_daiaTimeout">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$daiaTimeout</td>
+                <td class="last"><p>Timeout in seconds to be used for DAIA http requests</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_daiaCacheEnabled">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$daiaCacheEnabled</td>
+                <td class="last"><p>Flag to switch on/off caching for DAIA items</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_daiaIdPrefix">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$daiaIdPrefix</td>
+                <td class="last"><p>DAIA query identifier prefix</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_daiaResponseFormat">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$daiaResponseFormat</td>
+                <td class="last"><p>DAIA response format</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_multiQuery">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$multiQuery</td>
+                <td class="last"><p>Flag to enable multiple DAIA-queries</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contentTypesResponse">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$contentTypesResponse</td>
+                <td class="last"><p>Acceptable ContentTypes delivered by DAIA server in HTTP header</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contentTypesRequest">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$contentTypesRequest</td>
+                <td class="last"><p>ContentTypes to use in DAIA HTTP requests in HTTP header</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dateConverter">
+                                        protected                                        <abbr title="VuFind\Date\Converter">Converter</abbr>
+                                                                                
+                                    </td>
+                <td>$dateConverter</td>
+                <td class="last"><p>Date converter object</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setConfig">setConfig</a>(array $config)
+        
+                                            <p><p>Set configuration.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_setConfig">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_throwAsIlsException">throwAsIlsException</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception, string $msg = null)
+        
+                                            <p><p>Rethrow the provided exception as an ILS exception.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_throwAsIlsException">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCacheKey">getCacheKey</a>(string|null $suffix = null)
+        
+                                            <p><p>DAIA specific override of method to ensure uniform cache keys for cached
+VuFind objects.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCacheStorage">setCacheStorage</a>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache = null)
+        
+                                            <p><p>Set a cache storage object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Cache/CacheTrait.html#method_setCacheStorage">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedData">getCachedData</a>(string $key)
+        
+                                            <p><p>Helper function for fetching cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Cache/CacheTrait.html#method_getCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_putCachedData">putCachedData</a>(string $key, mixed $entry, int $lifetime = null)
+        
+                                            <p><p>Helper function for storing cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Cache/CacheTrait.html#method_putCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeCachedData">removeCachedData</a>(string $key)
+        
+                                            <p><p>Helper function for removing cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Cache/CacheTrait.html#method_removeCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Date\Converter">Converter</abbr> $converter)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_init">init</a>()
+        
+                                            <p><p>Initialize the driver.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfig">getConfig</a>(string $function, array $params = [])
+        
+                                            <p><p>Public Function which retrieves renew, hold and cancel settings from the
+driver ini file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldLink">getHoldLink</a>(string $id, array $details)
+        
+                                            <p><p>Get Hold Link</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatus">getStatus</a>(string $id)
+        
+                                            <p><p>Get Status</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatuses">getStatuses</a>(array $ids)
+        
+                                            <p><p>Get Statuses</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHolding">getHolding</a>(string $id, array $patron = null, array $options = [])
+        
+                                            <p><p>Get Holding</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPurchaseHistory">getPurchaseHistory</a>(string $id)
+        
+                                            <p><p>Get Purchase History</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_convertDate">convertDate</a>(string $date)
+        
+                                            <p><p>Support method to handle date uniformly</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_convertDatetime">convertDatetime</a>(string $datetime)
+        
+                                            <p><p>Support method to handle datetime uniformly</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\ILS\Driver\xml">xml</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_doHTTPRequest">doHTTPRequest</a>(string $id)
+        
+                                            <p><p>Perform an HTTP request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_generateURI">generateURI</a>(string $id)
+        
+                                            <p><p>Generate a DAIA URI necessary for the query</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_generateMultiURIs">generateMultiURIs</a>(array $ids)
+        
+                                            <p><p>Combine several ids to DAIA Query API conform URIs</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseDaiaDoc">parseDaiaDoc</a>(string $id, mixed $daiaDoc)
+        
+                                            <p><p>Parse a DAIA document depending on its type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|<abbr title="VuFind\ILS\Driver\DOMNode">DOMNode</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractDaiaDoc">extractDaiaDoc</a>(string $id, string $daiaResponse)
+        
+                                            <p><p>Extract a DAIA document identified by an id</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_convertDaiaXmlToJson">convertDaiaXmlToJson</a>(string $daiaResponse)
+        
+                                            <p><p>Converts a DAIA XML response to an array identical with a DAIA JSON response
+for the sent query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseDaiaArray">parseDaiaArray</a>(string $id, array $daiaArray)
+        
+                                            <p><p>Parse an array with DAIA status information.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemStatus">getItemStatus</a>(array $item)
+        
+                                            <p><p>Returns an array with status information for provided item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCustomData">getCustomData</a>(array $item)
+        
+                                            <p><p>Helper function to allow custom data in status array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatusString">getStatusString</a>(array $item)
+        
+                                            <p><p>Helper function to return an appropriate status string for current item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkIsRecallable">checkIsRecallable</a>(array $item)
+        
+                                            <p><p>Helper function to determine if item is recallable.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkIsStorageRetrievalRequest">checkIsStorageRetrievalRequest</a>(array $item)
+        
+                                            <p><p>Helper function to determine if the item is available as storage retrieval.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldType">getHoldType</a>(array $item)
+        
+                                            <p><p>Helper function to determine the holdtype available for current item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemLimitation">getItemLimitation</a>(array $limitations)
+        
+                                            <p><p>Returns the evaluated value of the provided limitation element</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemDepartment">getItemDepartment</a>(array $item)
+        
+                                            <p><p>Returns the value of item.department.content (e.g. to be used in VuFind
+getStatus/getHolding array as location)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemDepartmentId">getItemDepartmentId</a>(array $item)
+        
+                                            <p><p>Returns the value of item.department.id (e.g. to be used in VuFind
+getStatus/getHolding array as location)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemDepartmentLink">getItemDepartmentLink</a>(array $item)
+        
+                                            <p><p>Returns the value of item.department.href (e.g. to be used in VuFind
+getStatus/getHolding array for linking the location)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemStorage">getItemStorage</a>(array $item)
+        
+                                            <p><p>Returns the value of item.storage.content (e.g. to be used in VuFind
+getStatus/getHolding array as location)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemStorageId">getItemStorageId</a>(array $item)
+        
+                                            <p><p>Returns the value of item.storage.id (e.g. to be used in VuFind
+getStatus/getHolding array as location)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemStorageLink">getItemStorageLink</a>(array $item)
+        
+                                            <p><p>Returns the value of item.storage.href (e.g. to be used in VuFind
+getStatus/getHolding array for linking the location)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemLimitationContent">getItemLimitationContent</a>(array $limitations)
+        
+                                            <p><p>Returns the evaluated values of the provided limitations element</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemLimitationTypes">getItemLimitationTypes</a>(array $limitations)
+        
+                                            <p><p>Returns the evaluated values of the provided limitations element</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemNumber">getItemNumber</a>(array $item, int $counter)
+        
+                                            <p><p>Returns the value for &quot;number&quot; in VuFind getStatus/getHolding array</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemBarcode">getItemBarcode</a>(array $item)
+        
+                                            <p><p>Returns the value for &quot;location&quot; in VuFind getStatus/getHolding array</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemReserveStatus">getItemReserveStatus</a>(array $item)
+        
+                                            <p><p>Returns the value for &quot;reserve&quot; in VuFind getStatus/getHolding array</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItemCallnumber">getItemCallnumber</a>(array $item)
+        
+                                            <p><p>Returns the value for &quot;callnumber&quot; in VuFind getStatus/getHolding array</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAvailableItemServices">getAvailableItemServices</a>(array $services)
+        
+                                            <p><p>Returns the available services of the given set of available and unavailable
+services</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logMessages">logMessages</a>(array $messages, string $context)
+        
+                                            <p><p>Logs content of message elements in DAIA response for debugging</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_setConfig">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a> at line 62</div>
+        <code>                    void
+    <strong>setConfig</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set configuration.</p></p>                <p><p>Set the configuration for the driver.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Configuration array (usually loaded from a VuFind .ini
+file whose name corresponds with the driver class name).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throwAsIlsException">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_throwAsIlsException">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a> at line 76</div>
+        <code>            protected        void
+    <strong>throwAsIlsException</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception, string $msg = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rethrow the provided exception as an ILS exception.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$exception</td>
+                <td><p>Exception to rethrow</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Override exception message (optional)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheKey">
+        <div class="location">at line 211</div>
+        <code>            protected        string
+    <strong>getCacheKey</strong>(string|null $suffix = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>DAIA specific override of method to ensure uniform cache keys for cached
+VuFind objects.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$suffix</td>
+                <td><p>Optional suffix that will get appended to the
+object class name calling getCacheKey()</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheStorage">
+        <div class="location">in <a href="../../../VuFind/Cache/CacheTrait.html#method_setCacheStorage">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 66</div>
+        <code>                    void
+    <strong>setCacheStorage</strong>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a cache storage object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr></td>
+                <td>$cache</td>
+                <td><p>Cache storage interface</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedData">
+        <div class="location">in <a href="../../../VuFind/Cache/CacheTrait.html#method_getCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 80</div>
+        <code>            protected        mixed|null
+    <strong>getCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for fetching cached data.</p></p>                <p><p>Data is cached for up to $this-&gt;cacheLifetime.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td><p>Cached entry or null if not cached or expired</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putCachedData">
+        <div class="location">in <a href="../../../VuFind/Cache/CacheTrait.html#method_putCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 112</div>
+        <code>            protected        void
+    <strong>putCachedData</strong>(string $key, mixed $entry, int $lifetime = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for storing cached data.</p></p>                <p><p>Data is cached for up to $this-&gt;cacheLifetime seconds.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$entry</td>
+                <td><p>Entry to be cached</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$lifetime</td>
+                <td><p>Optional lifetime for the entry in seconds</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCachedData">
+        <div class="location">in <a href="../../../VuFind/Cache/CacheTrait.html#method_removeCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 133</div>
+        <code>            protected        void
+    <strong>removeCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for removing cached data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 131</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="VuFind\Date\Converter">Converter</abbr> $converter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\Converter">Converter</abbr></td>
+                <td>$converter</td>
+                <td><p>Date converter</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at line 145</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the driver.</p></p>                <p><p>Validate configuration and perform all resource-intensive tasks needed to
+make the driver active.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">at line 227</div>
+        <code>                    array
+    <strong>getConfig</strong>(string $function, array $params = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Public Function which retrieves renew, hold and cancel settings from the
+driver ini file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td><p>The name of the feature to be checked</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Optional feature-specific parameters (array)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array with key-value pairs.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldLink">
+        <div class="location">at line 246</div>
+        <code>                    string
+    <strong>getHoldLink</strong>(string $id, array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Hold Link</p></p>                <p><p>The goal for this method is to return a URL to a &quot;place hold&quot; web page on
+the ILS OPAC. This is used for ILSs that do not support an API or method
+to place Holds.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The id of the bib record</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>Item details from getHoldings return array</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>URL to ILS's OPAC's place hold screen.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">at line 264</div>
+        <code>                    mixed
+    <strong>getStatus</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Status</p></p>                <p><p>This is responsible for retrieving the status information of a certain
+record.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the holdings for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with the following keys:
+id, availability (boolean), status, location, reserve, callnumber.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatuses">
+        <div class="location">at line 315</div>
+        <code>                    array
+    <strong>getStatuses</strong>(array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Statuses</p></p>                <p><p>This is responsible for retrieving the status information for a
+collection of records.
+As the DAIA Query API supports querying multiple ids simultaneously
+(all ids divided by &quot;|&quot;) getStatuses(ids) would call getStatus(id) only
+once, id containing the list of ids to be retrieved. This would cause some
+trouble as the list of ids does not necessarily correspond to the VuFind
+Record-id. Therefore getStatuses(ids) has its own logic for multiQuery-support
+and performs the HTTPRequest itself, retrieving one DAIA response for all ids
+and uses helper functions to split this one response into documents
+corresponding to the queried ids.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>The array of record ids to retrieve the status for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of getStatus() return values on success.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHolding">
+        <div class="location">at line 399</div>
+        <code>                    array
+    <strong>getHolding</strong>(string $id, array $patron = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Holding</p></p>                <p><p>This is responsible for retrieving the holding information of a certain
+record.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the holdings for</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Extra options</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>On success, an associative array with the following
+keys: id, availability (boolean), status, location, reserve, callnumber,
+duedate, number, barcode.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPurchaseHistory">
+        <div class="location">at line 415</div>
+        <code>                    array
+    <strong>getPurchaseHistory</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Purchase History</p></p>                <p><p>This is responsible for retrieving the acquisitions history data for the
+specific record (usually recently received issues of a serial).</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the info for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array with the acquisitions data on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertDate">
+        <div class="location">at line 427</div>
+        <code>            protected        string
+    <strong>convertDate</strong>(string $date)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method to handle date uniformly</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td><p>String representing a date</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Formatted date</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertDatetime">
+        <div class="location">at line 445</div>
+        <code>            protected        string
+    <strong>convertDatetime</strong>(string $datetime)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method to handle datetime uniformly</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$datetime</td>
+                <td><p>String representing a datetime</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Formatted datetime</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doHTTPRequest">
+        <div class="location">at line 458</div>
+        <code>            protected        <abbr title="VuFind\ILS\Driver\xml">xml</abbr>
+    <strong>doHTTPRequest</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform an HTTP request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>id for query in daia</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\ILS\Driver\xml">xml</abbr></td>
+            <td><p>or json object</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateURI">
+        <div class="location">at line 532</div>
+        <code>            protected        string
+    <strong>generateURI</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a DAIA URI necessary for the query</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Id of the record whose DAIA document should be queried</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>URI of the DAIA document</p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="http://gbv.github.io/daia/daia.html#query-parameters">http://gbv.github.io/daia/daia.html#query-parameters</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateMultiURIs">
+        <div class="location">at line 547</div>
+        <code>            protected        string
+    <strong>generateMultiURIs</strong>(array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Combine several ids to DAIA Query API conform URIs</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>Array of ids which shall be converted into URIs and
+combined for querying multiple DAIA documents.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Combined URIs (delimited by &quot;|&quot;)</p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="http://gbv.github.io/daia/daia.html#query-parameters">http://gbv.github.io/daia/daia.html#query-parameters</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseDaiaDoc">
+        <div class="location">at line 570</div>
+        <code>            protected        array
+    <strong>parseDaiaDoc</strong>(string $id, mixed $daiaDoc)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse a DAIA document depending on its type.</p></p>                <p><p>Parse a DAIA document depending on its type and return a VuFind
+compatible array of status information.
+Supported types are:</p>
+<ul>
+<li>array (for JSON results)</li>
+</ul></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record Id corresponding to the DAIA document</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$daiaDoc</td>
+                <td><p>The DAIA document, only array is supported</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array with status information for the record</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractDaiaDoc">
+        <div class="location">at line 595</div>
+        <code>            protected        array|<abbr title="VuFind\ILS\Driver\DOMNode">DOMNode</abbr>|null
+    <strong>extractDaiaDoc</strong>(string $id, string $daiaResponse)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract a DAIA document identified by an id</p></p>                <p><p>This method loops through all the existing DAIA document-elements in
+the given DAIA response and returns the first document whose id matches
+the given id.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record Id of the DAIA document in question.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$daiaResponse</td>
+                <td><p>Raw response from DAIA request.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|<abbr title="VuFind\ILS\Driver\DOMNode">DOMNode</abbr>|null</td>
+            <td><p>The DAIA document identified by id and
+type depending on daiaResponseFormat.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertDaiaXmlToJson">
+        <div class="location">at line 652</div>
+        <code>            protected        mixed
+    <strong>convertDaiaXmlToJson</strong>(string $daiaResponse)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Converts a DAIA XML response to an array identical with a DAIA JSON response
+for the sent query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$daiaResponse</td>
+                <td><p>Response in XML format from DAIA service</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseDaiaArray">
+        <div class="location">at line 737</div>
+        <code>            protected        array
+    <strong>parseDaiaArray</strong>(string $id, array $daiaArray)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse an array with DAIA status information.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record id for the DAIA array.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$daiaArray</td>
+                <td><p>Array with raw DAIA status information.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array with VuFind compatible status information.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemStatus">
+        <div class="location">at line 803</div>
+        <code>            protected        array
+    <strong>getItemStatus</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an array with status information for provided item.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomData">
+        <div class="location">at line 962</div>
+        <code>            protected        array
+    <strong>getCustomData</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function to allow custom data in status array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatusString">
+        <div class="location">at line 974</div>
+        <code>            protected        string
+    <strong>getStatusString</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function to return an appropriate status string for current item.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsRecallable">
+        <div class="location">at line 992</div>
+        <code>            protected        bool
+    <strong>checkIsRecallable</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function to determine if item is recallable.</p></p>                <p><p>DAIA does not genuinly allow distinguishing between holdable and recallable
+items. This could be achieved by usage of limitations but this would not be
+shared functionality between different DAIA implementations (thus should be
+implemented in custom drivers). Therefore this returns whether an item
+is recallable based on unavailable services and the existence of an href.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsStorageRetrievalRequest">
+        <div class="location">at line 1036</div>
+        <code>            protected        bool
+    <strong>checkIsStorageRetrievalRequest</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function to determine if the item is available as storage retrieval.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldType">
+        <div class="location">at line 1084</div>
+        <code>            protected        string
+    <strong>getHoldType</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function to determine the holdtype available for current item.</p></p>                <p><p>DAIA does not genuinly allow distinguishing between holdable and recallable
+items. This could be achieved by usage of limitations but this would not be
+shared functionality between different DAIA implementations (thus should be
+implemented in custom drivers). Therefore getHoldType always returns recall.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>'recall'|null</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemLimitation">
+        <div class="location">at line 1097</div>
+        <code>            protected        array
+    <strong>getItemLimitation</strong>(array $limitations)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the evaluated value of the provided limitation element</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$limitations</td>
+                <td><p>Array with DAIA limitation data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemDepartment">
+        <div class="location">at line 1117</div>
+        <code>            protected        string
+    <strong>getItemDepartment</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value of item.department.content (e.g. to be used in VuFind
+getStatus/getHolding array as location)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemDepartmentId">
+        <div class="location">at line 1133</div>
+        <code>            protected        string
+    <strong>getItemDepartmentId</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value of item.department.id (e.g. to be used in VuFind
+getStatus/getHolding array as location)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemDepartmentLink">
+        <div class="location">at line 1147</div>
+        <code>            protected        string
+    <strong>getItemDepartmentLink</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value of item.department.href (e.g. to be used in VuFind
+getStatus/getHolding array for linking the location)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemStorage">
+        <div class="location">at line 1160</div>
+        <code>            protected        string
+    <strong>getItemStorage</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value of item.storage.content (e.g. to be used in VuFind
+getStatus/getHolding array as location)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemStorageId">
+        <div class="location">at line 1176</div>
+        <code>            protected        string
+    <strong>getItemStorageId</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value of item.storage.id (e.g. to be used in VuFind
+getStatus/getHolding array as location)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemStorageLink">
+        <div class="location">at line 1190</div>
+        <code>            protected        string
+    <strong>getItemStorageLink</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value of item.storage.href (e.g. to be used in VuFind
+getStatus/getHolding array for linking the location)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemLimitationContent">
+        <div class="location">at line 1203</div>
+        <code>            protected        array
+    <strong>getItemLimitationContent</strong>(array $limitations)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the evaluated values of the provided limitations element</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$limitations</td>
+                <td><p>Array with DAIA limitation data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemLimitationTypes">
+        <div class="location">at line 1222</div>
+        <code>            protected        array
+    <strong>getItemLimitationTypes</strong>(array $limitations)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the evaluated values of the provided limitations element</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$limitations</td>
+                <td><p>Array with DAIA limitation data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemNumber">
+        <div class="location">at line 1242</div>
+        <code>            protected        mixed
+    <strong>getItemNumber</strong>(array $item, int $counter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value for &quot;number&quot; in VuFind getStatus/getHolding array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$counter</td>
+                <td><p>Integer counting items as alternative return value</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemBarcode">
+        <div class="location">at line 1254</div>
+        <code>            protected        string
+    <strong>getItemBarcode</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value for &quot;location&quot; in VuFind getStatus/getHolding array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemReserveStatus">
+        <div class="location">at line 1266</div>
+        <code>            protected        string
+    <strong>getItemReserveStatus</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value for &quot;reserve&quot; in VuFind getStatus/getHolding array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemCallnumber">
+        <div class="location">at line 1278</div>
+        <code>            protected        string
+    <strong>getItemCallnumber</strong>(array $item)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the value for &quot;callnumber&quot; in VuFind getStatus/getHolding array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$item</td>
+                <td><p>Array with DAIA item data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAvailableItemServices">
+        <div class="location">at line 1293</div>
+        <code>            protected        array
+    <strong>getAvailableItemServices</strong>(array $services)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the available services of the given set of available and unavailable
+services</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$services</td>
+                <td><p>Array with DAIA services available/unavailable</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logMessages">
+        <div class="location">at line 1316</div>
+        <code>            protected        void
+    <strong>logMessages</strong>(array $messages, string $context)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Logs content of message elements in DAIA response for debugging</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$messages</td>
+                <td><p>Array with message elements to be logged</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>Description of current message context</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

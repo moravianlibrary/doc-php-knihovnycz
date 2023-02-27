@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Search\UrlQueryHelper | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Search_UrlQueryHelper" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Search.html">Search</a></li><li class="backslash">\</li><li>UrlQueryHelper</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>UrlQueryHelper    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>UrlQueryHelper</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Class to help build URLs and forms in the view based on search settings.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>Configuration for this helper.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_urlParams">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$urlParams</td>
+                <td class="last"><p>URL query parameters</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryObject">
+                                        protected                                        <a href="../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a>
+                                                                                
+                                    </td>
+                <td>$queryObject</td>
+                <td class="last"><p>Current query object</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $urlParams, <a href="../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, array $options = [], bool $regenerateQueryParams = true)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBasicSearchParam">getBasicSearchParam</a>()
+        
+                                            <p><p>Get the name of the basic search param.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_clearSearchQueryParams">clearSearchQueryParams</a>()
+        
+                                            <p><p>Reset search-related parameters in the internal array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_regenerateSearchQueryParams">regenerateSearchQueryParams</a>()
+        
+                                            <p><p>Adjust the internal query array based on the query object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefault">getDefault</a>(string $key)
+        
+                                            <p><p>Look up a default value in the internal configuration array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDefaultParameter">setDefaultParameter</a>(string $name, string $value, bool $forceOverride = false)
+        
+                                            <p><p>Set the default value of a parameter, and add that parameter to the object
+if it is not already defined.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getParamsWithConfiguredDefaults">getParamsWithConfiguredDefaults</a>()
+        
+                                            <p><p>Get an array of field names with configured defaults; this is a useful way
+to identify custom query parameters added through setDefaultParameter().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSuppressQuery">setSuppressQuery</a>(bool $suppress)
+        
+                                            <p><p>Control query suppression</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isQuerySuppressed">isQuerySuppressed</a>()
+        
+                                            <p><p>Is query suppressed?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getParamArray">getParamArray</a>()
+        
+                                            <p><p>Get an array of URL parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p><p>Magic method: behavior when this object is treated as a string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_replaceTerm">replaceTerm</a>(string $from, string $to, callable $normalizer = null)
+        
+                                            <p><p>Replace a term in the search query (used for spelling replacement)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addFacet">addFacet</a>(string $field, string $value, string $operator = &#039;AND&#039;)
+        
+                                            <p><p>Add a facet to the parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addFilter">addFilter</a>(string $filter)
+        
+                                            <p><p>Add a filter to the parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeAllFilters">removeAllFilters</a>()
+        
+                                            <p><p>Remove all filters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resetDefaultFilters">resetDefaultFilters</a>()
+        
+                                            <p><p>Reset default filter state.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getParams">getParams</a>(bool $escape = true)
+        
+                                            <p><p>Get the current search parameters as a GET query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseFilter">parseFilter</a>(string $filter)
+        
+                                            <p><p>Parse apart the field and value from a URL filter string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAliasesForFacetField">getAliasesForFacetField</a>(string $field)
+        
+                                            <p><p>Given a facet field, return an array containing all aliases of that
+field.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeFacet">removeFacet</a>(string $field, string $value, string $operator = &#039;AND&#039;)
+        
+                                            <p><p>Remove a facet from the parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeFilter">removeFilter</a>(string $filter)
+        
+                                            <p><p>Remove a filter from the parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setPage">setPage</a>(string $p)
+        
+                                            <p><p>Return HTTP parameters to render a different page of results.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSort">setSort</a>(string $s)
+        
+                                            <p><p>Return HTTP parameters to render the current page with a different sort
+parameter.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setHandler">setHandler</a>(string $handler)
+        
+                                            <p><p>Return HTTP parameters to render the current page with a different search
+handler.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setViewParam">setViewParam</a>(string $v)
+        
+                                            <p><p>Return HTTP parameters to render the current page with a different view
+parameter.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setLimit">setLimit</a>(string $l)
+        
+                                            <p><p>Return HTTP parameters to render the current page with a different limit
+parameter.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSearchTerms">setSearchTerms</a>(string $lookfor)
+        
+                                            <p><p>Return HTTP parameters to render the current page with a different set
+of search terms.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_asHiddenFields">asHiddenFields</a>(array $filter = [])
+        
+                                            <p><p>Turn the current GET parameters into a set of hidden form fields.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_buildQueryString">buildQueryString</a>(array $a, bool $escape = true)
+        
+                                            <p><p>Turn an array into a properly URL-encoded query string.  This is
+equivalent to the built-in PHP http_build_query function, but it handles
+arrays in a more compact way and ensures that ampersands don't get
+messed up based on server-specific settings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_filtered">filtered</a>(string $field, string $value, array $filter)
+        
+                                            <p><p>Support method for asHiddenFields -- are the provided field and value
+excluded by the provided filter?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updateQueryString">updateQueryString</a>(string $field, string $value, string $default = null, bool $clearPage = false)
+        
+                                            <p><p>Generic case of parameter rebuilding.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 82</div>
+        <code>final                    
+    <strong>__construct</strong>(array $urlParams, <a href="../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, array $options = [], bool $regenerateQueryParams = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                <p><p>Note that the constructor is final here, because this class relies on
+&quot;new static()&quot; to build instances, and we must ensure that child classes
+have consistent constructor signatures.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$urlParams</td>
+                <td><p>Array of URL query parameters.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Query object to use to update
+URL query.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Configuration options for the
+object.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$regenerateQueryParams</td>
+                <td><p>Should we add parameters based
+on the contents of $query to $urlParams (true) or are they already there
+(false)?</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBasicSearchParam">
+        <div class="location">at line 101</div>
+        <code>            protected        string
+    <strong>getBasicSearchParam</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the basic search param.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearSearchQueryParams">
+        <div class="location">at line 111</div>
+        <code>            protected        void
+    <strong>clearSearchQueryParams</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reset search-related parameters in the internal array.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_regenerateSearchQueryParams">
+        <div class="location">at line 129</div>
+        <code>            protected        void
+    <strong>regenerateSearchQueryParams</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adjust the internal query array based on the query object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefault">
+        <div class="location">at line 187</div>
+        <code>            protected        mixed
+    <strong>getDefault</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Look up a default value in the internal configuration array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Name of default to load</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultParameter">
+        <div class="location">at line 203</div>
+        <code>                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+    <strong>setDefaultParameter</strong>(string $name, string $value, bool $forceOverride = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the default value of a parameter, and add that parameter to the object
+if it is not already defined.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Name of parameter</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Value of parameter</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forceOverride</td>
+                <td><p>Force an override of the existing value, even if
+it was set in the incoming $urlParams in the constructor (defaults to false)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParamsWithConfiguredDefaults">
+        <div class="location">at line 221</div>
+        <code>                    array
+    <strong>getParamsWithConfiguredDefaults</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of field names with configured defaults; this is a useful way
+to identify custom query parameters added through setDefaultParameter().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSuppressQuery">
+        <div class="location">at line 233</div>
+        <code>                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+    <strong>setSuppressQuery</strong>(bool $suppress)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Control query suppression</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$suppress</td>
+                <td><p>Should we suppress queries?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isQuerySuppressed">
+        <div class="location">at line 245</div>
+        <code>                    bool
+    <strong>isQuerySuppressed</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is query suppressed?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParamArray">
+        <div class="location">at line 256</div>
+        <code>                    array
+    <strong>getParamArray</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of URL parameters.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line 266</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Magic method: behavior when this object is treated as a string.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceTerm">
+        <div class="location">at line 282</div>
+        <code>                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+    <strong>replaceTerm</strong>(string $from, string $to, callable $normalizer = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace a term in the search query (used for spelling replacement)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td><p>Search term to find</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td><p>Search term to insert</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$normalizer</td>
+                <td><p>Function to normalize text strings (null for
+no normalization)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFacet">
+        <div class="location">at line 298</div>
+        <code>                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+    <strong>addFacet</strong>(string $field, string $value, string $operator = &#039;AND&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a facet to the parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Facet field</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Facet value</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td><p>Facet type to add (AND, OR, NOT)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFilter">
+        <div class="location">at line 312</div>
+        <code>                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+    <strong>addFilter</strong>(string $filter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a filter to the parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filter</td>
+                <td><p>Filter to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeAllFilters">
+        <div class="location">at line 333</div>
+        <code>                    string
+    <strong>removeAllFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove all filters.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetDefaultFilters">
+        <div class="location">at line 347</div>
+        <code>                    string
+    <strong>resetDefaultFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reset default filter state.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParams">
+        <div class="location">at line 363</div>
+        <code>                    string
+    <strong>getParams</strong>(bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the current search parameters as a GET query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td><p>Should we escape the string for use in the view?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseFilter">
+        <div class="location">at line 375</div>
+        <code>            protected        array
+    <strong>parseFilter</strong>(string $filter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse apart the field and value from a URL filter string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filter</td>
+                <td><p>A filter string from url : &quot;field:value&quot;</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array with elements 0 = field, 1 = value.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAliasesForFacetField">
+        <div class="location">at line 396</div>
+        <code>            protected        array
+    <strong>getAliasesForFacetField</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a facet field, return an array containing all aliases of that
+field.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field to look up</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeFacet">
+        <div class="location">at line 419</div>
+        <code>                    <a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+    <strong>removeFacet</strong>(string $field, string $value, string $operator = &#039;AND&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove a facet from the parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Facet field</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Facet value</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td><p>Facet type to add (AND, OR, NOT)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeFilter">
+        <div class="location">at line 464</div>
+        <code>                    string
+    <strong>removeFilter</strong>(string $filter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove a filter from the parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filter</td>
+                <td><p>Filter to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPage">
+        <div class="location">at line 478</div>
+        <code>                    string
+    <strong>setPage</strong>(string $p)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return HTTP parameters to render a different page of results.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$p</td>
+                <td><p>New page parameter (null for NO page parameter)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSort">
+        <div class="location">at line 491</div>
+        <code>                    string
+    <strong>setSort</strong>(string $s)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return HTTP parameters to render the current page with a different sort
+parameter.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$s</td>
+                <td><p>New sort parameter (null for NO sort parameter)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHandler">
+        <div class="location">at line 509</div>
+        <code>                    string
+    <strong>setHandler</strong>(string $handler)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return HTTP parameters to render the current page with a different search
+handler.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>new Handler.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setViewParam">
+        <div class="location">at line 530</div>
+        <code>                    string
+    <strong>setViewParam</strong>(string $v)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return HTTP parameters to render the current page with a different view
+parameter.</p></p>                <p><p>Note: This is called setViewParam rather than setView to avoid confusion
+with the \Laminas\View\Helper\AbstractHelper interface.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$v</td>
+                <td><p>New sort parameter (null for NO view parameter)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLimit">
+        <div class="location">at line 546</div>
+        <code>                    string
+    <strong>setLimit</strong>(string $l)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return HTTP parameters to render the current page with a different limit
+parameter.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$l</td>
+                <td><p>New limit parameter (null for NO limit parameter)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSearchTerms">
+        <div class="location">at line 564</div>
+        <code>                    string
+    <strong>setSearchTerms</strong>(string $lookfor)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return HTTP parameters to render the current page with a different set
+of search terms.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$lookfor</td>
+                <td><p>New search terms</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_asHiddenFields">
+        <div class="location">at line 578</div>
+        <code>                    string
+    <strong>asHiddenFields</strong>(array $filter = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Turn the current GET parameters into a set of hidden form fields.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$filter</td>
+                <td><p>Array of parameters to exclude -- key = field name,
+value = regular expression to exclude.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildQueryString">
+        <div class="location">at line 612</div>
+        <code>        static            string
+    <strong>buildQueryString</strong>(array $a, bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Turn an array into a properly URL-encoded query string.  This is
+equivalent to the built-in PHP http_build_query function, but it handles
+arrays in a more compact way and ensures that ampersands don't get
+messed up based on server-specific settings.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$a</td>
+                <td><p>Array of parameters to turn into a GET string</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td><p>Should we escape the string for use in the view?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filtered">
+        <div class="location">at line 638</div>
+        <code>            protected        bool
+    <strong>filtered</strong>(string $field, string $value, array $filter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for asHiddenFields -- are the provided field and value
+excluded by the provided filter?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field to check</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Regular expression to check</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$filter</td>
+                <td><p>Filter provided to asHiddenFields() above</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateQueryString">
+        <div class="location">at line 654</div>
+        <code>            protected        string
+    <strong>updateQueryString</strong>(string $field, string $value, string $default = null, bool $clearPage = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generic case of parameter rebuilding.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field to update</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Value to use (null to skip field entirely)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value (skip field if $value matches; null
+for no default).</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$clearPage</td>
+                <td><p>Should we clear the page number, if any?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

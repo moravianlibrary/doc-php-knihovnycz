@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindSearch\Backend\Solr\Backend | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindSearch_Backend_Solr_Backend" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindSearch.html">VuFindSearch</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend.html">Backend</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend/Solr.html">Solr</a></li><li class="backslash">\</li><li>Backend</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Backend    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Backend</strong>        extends <a href="../../../VuFindSearch/Backend/AbstractBackend.html"><abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a>        implements        <a href="../../../VuFindSearch/Feature/SimilarInterface.html"><abbr title="VuFindSearch\Feature\SimilarInterface">SimilarInterface</abbr></a>, <a href="../../../VuFindSearch/Feature/RetrieveBatchInterface.html"><abbr title="VuFindSearch\Feature\RetrieveBatchInterface">RetrieveBatchInterface</abbr></a>, <a href="../../../VuFindSearch/Feature/RandomInterface.html"><abbr title="VuFindSearch\Feature\RandomInterface">RandomInterface</abbr></a>, <a href="../../../VuFindSearch/Feature/GetIdsInterface.html"><abbr title="VuFindSearch\Feature\GetIdsInterface">GetIdsInterface</abbr></a>, <a href="../../../VuFindSearch/Feature/WorkExpressionsInterface.html"><abbr title="VuFindSearch\Feature\WorkExpressionsInterface">WorkExpressionsInterface</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>SOLR backend.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_collectionFactory">
+                                        protected                                        <a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a>
+                                                                                
+                                    </td>
+                <td>$collectionFactory</td>
+                <td class="last"><p>Record collection factory.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFindSearch/Backend/AbstractBackend.html#property_collectionFactory">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_identifier">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$identifier</td>
+                <td class="last"><p>Backend identifier.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFindSearch/Backend/AbstractBackend.html#property_identifier">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pageSize">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$pageSize</td>
+                <td class="last"><p>Limit for records per query in a batch retrieval.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_connector">
+                                        protected                                        <a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a>
+                                                                                
+                                    </td>
+                <td>$connector</td>
+                <td class="last">Connector.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryBuilder">
+                                        protected                                        <a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a>
+                                                                                
+                                    </td>
+                <td>$queryBuilder</td>
+                <td class="last"><p>Query builder.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_similarBuilder">
+                                        protected                                        <a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a>
+                                                                                
+                                    </td>
+                <td>$similarBuilder</td>
+                <td class="last"><p>Similar records query builder.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setIdentifier">setIdentifier</a>(string $identifier)
+        
+                                            <p><p>Set the backend identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/AbstractBackend.html#method_setIdentifier">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIdentifier">getIdentifier</a>()
+        
+                                            <p><p>Return backend identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/AbstractBackend.html#method_getIdentifier">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRecordCollectionFactory">setRecordCollectionFactory</a>(<a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a> $factory)
+        
+                                            <p><p>Set the record collection factory.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/AbstractBackend.html#method_setRecordCollectionFactory">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordCollectionFactory">getRecordCollectionFactory</a>()
+        
+                                            <p><p>Return the record collection factory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFindSearch\Backend\ResponseInterface">ResponseInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_injectSourceIdentifier">injectSourceIdentifier</a>(<a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a> $response)
+        
+                                            <p><p>Inject source identifier in record collection and all contained records.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/AbstractBackend.html#method_injectSourceIdentifier">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> $connector)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setPageSize">setPageSize</a>(int $pageSize)
+        
+                                            <p><p>Set the limit for batch queries</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_search">search</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, int $offset, int $limit, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Perform a search and return record collection.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_rawJsonSearch">rawJsonSearch</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, int $offset, int $limit, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Perform a search and return a raw response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIds">getIds</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, int $offset, int $limit, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Perform a search and return record collection of only record identifiers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_random">random</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, int $limit, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Get Random records</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_retrieve">retrieve</a>(string $id, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Retrieve a single document.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_retrieveBatch">retrieveBatch</a>(array $ids, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Retrieve a batch of documents.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_similar">similar</a>(string $id, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Return similar records.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/Response/Json/Terms.html"><abbr title="VuFindSearch\Backend\Solr\Response\Json\Terms">Terms</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_terms">terms</a>(string $field = null, string $start = null, int $limit = null, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Return terms from SOLR index.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_alphabeticBrowse">alphabeticBrowse</a>(string $source, string $from, int $page, int $limit = 20, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null, int $offsetDelta = 0)
+        
+                                            <p><p>Obtain information from an alphabetic browse index.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFindSearch\Feature\RecordCollectionInterface">RecordCollectionInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_workExpressions">workExpressions</a>(string $id, array $workKeys, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $defaultParams = null)
+        
+                                            <p><p>Return work expressions.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_writeDocument">writeDocument</a>(<a href="../../../VuFindSearch/Backend/Solr/Document/DocumentInterface.html"><abbr title="VuFindSearch\Backend\Solr\Document\DocumentInterface">DocumentInterface</abbr></a> $doc, int $timeout = null, string $handler = &#039;update&#039;, <abbr title="VuFindSearch\Backend\Solr\VuFindSearch\ParamBag">ParamBag</abbr>|null $params = null)
+        
+                                            <p><p>Write a document to Solr. Return an array of details about the updated index.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setQueryBuilder">setQueryBuilder</a>(<a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a> $queryBuilder)
+        
+                                            <p><p>Set the query builder.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getQueryBuilder">getQueryBuilder</a>()
+        
+                                            <p><p>Return query builder.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSimilarBuilder">setSimilarBuilder</a>(<a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a> $similarBuilder)
+        
+                                            <p><p>Set the similar records query builder.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSimilarBuilder">getSimilarBuilder</a>()
+        
+                                            <p><p>Return similar records query builder.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConnector">getConnector</a>()
+        
+                                            <p><p>Return the SOLR connector.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createRecordCollection">createRecordCollection</a>(string $json)
+        
+                                            <p><p>Create record collection.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deserialize">deserialize</a>(string $json)
+        
+                                            <p><p>Deserialize JSON response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_refineBrowseException">refineBrowseException</a>(<a href="../../../VuFindSearch/Backend/Exception/RemoteErrorException.html"><abbr title="VuFindSearch\Backend\Exception\RemoteErrorException">RemoteErrorException</abbr></a> $e)
+        
+                                            <p><p>Improve the exception message for alphaBrowse errors when appropriate.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_injectResponseWriter">injectResponseWriter</a>(<a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        
+                                            <p><p>Inject response writer and named list implementation into parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIdentifier">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/AbstractBackend.html#method_setIdentifier">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a> at line 69</div>
+        <code>                    void
+    <strong>setIdentifier</strong>(string $identifier)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the backend identifier.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td><p>Backend identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdentifier">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/AbstractBackend.html#method_getIdentifier">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a> at line 79</div>
+        <code>                    string
+    <strong>getIdentifier</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return backend identifier.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRecordCollectionFactory">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/AbstractBackend.html#method_setRecordCollectionFactory">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a> at line 91</div>
+        <code>                    void
+    <strong>setRecordCollectionFactory</strong>(<a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a> $factory)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the record collection factory.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a></td>
+                <td>$factory</td>
+                <td>Factory</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordCollectionFactory">
+        <div class="location">at line 517</div>
+        <code>                    <a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a>
+    <strong>getRecordCollectionFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the record collection factory.</p></p>                <p><p>Lazy loads a generic collection factory.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_injectSourceIdentifier">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/AbstractBackend.html#method_injectSourceIdentifier">
+<abbr title="VuFindSearch\Backend\AbstractBackend">AbstractBackend</abbr></a> at line 115</div>
+        <code>            protected        <abbr title="VuFindSearch\Backend\ResponseInterface">ResponseInterface</abbr>
+    <strong>injectSourceIdentifier</strong>(<a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a> $response)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Inject source identifier in record collection and all contained records.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+                <td>$response</td>
+                <td>Response</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFindSearch\Backend\ResponseInterface">ResponseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 99</div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> $connector)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor.</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></td>
+                <td>$connector</td>
+                <td><p>SOLR connector</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPageSize">
+        <div class="location">at line 112</div>
+        <code>                    void
+    <strong>setPageSize</strong>(int $pageSize)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the limit for batch queries</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$pageSize</td>
+                <td><p>Records per Query</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_search">
+        <div class="location">at line 127</div>
+        <code>                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+    <strong>search</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, int $offset, int $limit, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform a search and return record collection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Search query</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td><p>Search offset</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Search limit</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rawJsonSearch">
+        <div class="location">at line 150</div>
+        <code>                    string
+    <strong>rawJsonSearch</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, int $offset, int $limit, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform a search and return a raw response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Search query</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td><p>Search offset</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Search limit</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIds">
+        <div class="location">at line 175</div>
+        <code>                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+    <strong>getIds</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, int $offset, int $limit, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform a search and return record collection of only record identifiers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Search query</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td><p>Search offset</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Search limit</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_random">
+        <div class="location">at line 204</div>
+        <code>                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+    <strong>random</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, int $limit, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Random records</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Search query</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Search limit</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_retrieve">
+        <div class="location">at line 227</div>
+        <code>                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+    <strong>retrieve</strong>(string $id, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a single document.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Document identifier</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_retrieveBatch">
+        <div class="location">at line 246</div>
+        <code>                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+    <strong>retrieveBatch</strong>(array $ids, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a batch of documents.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>Array of document identifiers</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_similar">
+        <div class="location">at line 287</div>
+        <code>                    <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+    <strong>similar</strong>(string $id, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return similar records.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Id of record to compare with</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_terms">
+        <div class="location">at line 309</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/Solr/Response/Json/Terms.html"><abbr title="VuFindSearch\Backend\Solr\Response\Json\Terms">Terms</abbr></a>
+    <strong>terms</strong>(string $field = null, string $start = null, int $limit = null, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return terms from SOLR index.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Index field</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$start</td>
+                <td><p>Starting term (blank for beginning of list)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Maximum number of terms</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Additional parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/Response/Json/Terms.html"><abbr title="VuFindSearch\Backend\Solr\Response\Json\Terms">Terms</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alphabeticBrowse">
+        <div class="location">at line 365</div>
+        <code>                    array
+    <strong>alphabeticBrowse</strong>(string $source, string $from, int $page, int $limit = 20, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null, int $offsetDelta = 0)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtain information from an alphabetic browse index.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Name of index to search</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td><p>Starting point for browse results</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td><p>Result page to return (starts at 0)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Number of results to return on each page</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Additional parameters</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offsetDelta</td>
+                <td><p>Delta to use when calculating page
+offset (useful for showing a few results above the highlighted row)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_workExpressions">
+        <div class="location">at line 399</div>
+        <code>                    <abbr title="VuFindSearch\Feature\RecordCollectionInterface">RecordCollectionInterface</abbr>
+    <strong>workExpressions</strong>(string $id, array $workKeys, <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $defaultParams = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return work expressions.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Id of record to compare with</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$workKeys</td>
+                <td><p>Work identification keys</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$defaultParams</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFindSearch\Feature\RecordCollectionInterface">RecordCollectionInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_writeDocument">
+        <div class="location">at line 435</div>
+        <code>                    array
+    <strong>writeDocument</strong>(<a href="../../../VuFindSearch/Backend/Solr/Document/DocumentInterface.html"><abbr title="VuFindSearch\Backend\Solr\Document\DocumentInterface">DocumentInterface</abbr></a> $doc, int $timeout = null, string $handler = &#039;update&#039;, <abbr title="VuFindSearch\Backend\Solr\VuFindSearch\ParamBag">ParamBag</abbr>|null $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Write a document to Solr. Return an array of details about the updated index.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/Document/DocumentInterface.html"><abbr title="VuFindSearch\Backend\Solr\Document\DocumentInterface">DocumentInterface</abbr></a></td>
+                <td>$doc</td>
+                <td><p>Document to write</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td><p>Timeout value (null for default)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Handler to use</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFindSearch\Backend\Solr\VuFindSearch\ParamBag">ParamBag</abbr>|null</td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQueryBuilder">
+        <div class="location">at line 463</div>
+        <code>                    void
+    <strong>setQueryBuilder</strong>(<a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a> $queryBuilder)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the query builder.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a></td>
+                <td>$queryBuilder</td>
+                <td><p>Query builder</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryBuilder">
+        <div class="location">at line 475</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a>
+    <strong>getQueryBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return query builder.</p></p>                <p><p>Lazy loads an empty default QueryBuilder if none was set.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSimilarBuilder">
+        <div class="location">at line 490</div>
+        <code>                    void
+    <strong>setSimilarBuilder</strong>(<a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a> $similarBuilder)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the similar records query builder.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a></td>
+                <td>$similarBuilder</td>
+                <td><p>Similar builder</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSimilarBuilder">
+        <div class="location">at line 502</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a>
+    <strong>getSimilarBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return similar records query builder.</p></p>                <p><p>Lazy loads an empty default SimilarBuilder if none was set.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConnector">
+        <div class="location">at line 530</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a>
+    <strong>getConnector</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the SOLR connector.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRecordCollection">
+        <div class="location">at line 544</div>
+        <code>            protected        <a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a>
+    <strong>createRecordCollection</strong>(string $json)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create record collection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$json</td>
+                <td><p>Serialized JSON response</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionInterface">RecordCollectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deserialize">
+        <div class="location">at line 559</div>
+        <code>            protected        array
+    <strong>deserialize</strong>(string $json)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deserialize JSON response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$json</td>
+                <td><p>Serialized JSON response</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Exception/BackendException.html"><abbr title="VuFindSearch\Backend\Exception\BackendException">BackendException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_refineBrowseException">
+        <div class="location">at line 581</div>
+        <code>            protected        void
+    <strong>refineBrowseException</strong>(<a href="../../../VuFindSearch/Backend/Exception/RemoteErrorException.html"><abbr title="VuFindSearch\Backend\Exception\RemoteErrorException">RemoteErrorException</abbr></a> $e)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Improve the exception message for alphaBrowse errors when appropriate.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Exception/RemoteErrorException.html"><abbr title="VuFindSearch\Backend\Exception\RemoteErrorException">RemoteErrorException</abbr></a></td>
+                <td>$e</td>
+                <td><p>Exception to clean up</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Exception/RemoteErrorException.html"><abbr title="VuFindSearch\Backend\Exception\RemoteErrorException">RemoteErrorException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_injectResponseWriter">
+        <div class="location">at line 609</div>
+        <code>            protected        void
+    <strong>injectResponseWriter</strong>(<a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Inject response writer and named list implementation into parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Exception/InvalidArgumentException.html"><abbr title="VuFindSearch\Exception\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

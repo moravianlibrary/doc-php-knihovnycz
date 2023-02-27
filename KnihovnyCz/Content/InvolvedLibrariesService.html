@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>InvolvedLibrariesService</strong>        implements        <abbr title="VuFind\I18n\HasSorterInterface">HasSorterInterface</abbr>
+    <strong>InvolvedLibrariesService</strong>        implements        <a href="../../VuFind/I18n/HasSorterInterface.html"><abbr title="VuFind\I18n\HasSorterInterface">HasSorterInterface</abbr></a>
 </p>
 
                 <p>
@@ -106,8 +106,8 @@
     <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-6">
-                    <abbr title="VuFind\I18n\HasSorterTrait">HasSorterTrait</abbr>    </div>
-                <div class="col-md-6"></div>
+                    <a href="../../VuFind/I18n/HasSorterTrait.html"><abbr title="VuFind\I18n\HasSorterTrait">HasSorterTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait SortingTrait</p></div>
             </div>
             </div>
     
@@ -116,8 +116,18 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_sorter">
+                                        protected                                        <abbr title="VuFind\I18n\?\VuFind\I18n\SorterInterface">SorterInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$sorter</td>
+                <td class="last">Sorter</td>
+                <td><small>from&nbsp;<a href="../../VuFind/I18n/HasSorterTrait.html#property_sorter">
+<abbr title="VuFind\I18n\HasSorterTrait">HasSorterTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_resultsManager">
-                                        protected                                        <abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr>
+                                        protected                                        <a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
                                                                                 
                                     </td>
                 <td>$resultsManager</td>
@@ -132,10 +142,32 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSorter">setSorter</a>(<a href="../../VuFind/I18n/SorterInterface.html"><abbr title="VuFind\I18n\SorterInterface">SorterInterface</abbr></a> $sorter)
+        
+                                            <p><p>Set the sorter</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/HasSorterTrait.html#method_setSorter">
+<abbr title="VuFind\I18n\HasSorterTrait">HasSorterTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/I18n/SorterInterface.html"><abbr title="VuFind\I18n\SorterInterface">SorterInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSorter">getSorter</a>()
+        
+                                            <p><p>Get the sorter</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/HasSorterTrait.html#method_getSorter">
+<abbr title="VuFind\I18n\HasSorterTrait">HasSorterTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $resultsManager)
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $resultsManager)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
@@ -157,10 +189,88 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_setSorter">
+        <div class="location">in <a href="../../VuFind/I18n/HasSorterTrait.html#method_setSorter">
+<abbr title="VuFind\I18n\HasSorterTrait">HasSorterTrait</abbr></a> at line 59</div>
+        <code>                    void
+    <strong>setSorter</strong>(<a href="../../VuFind/I18n/SorterInterface.html"><abbr title="VuFind\I18n\SorterInterface">SorterInterface</abbr></a> $sorter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the sorter</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/I18n/SorterInterface.html"><abbr title="VuFind\I18n\SorterInterface">SorterInterface</abbr></a></td>
+                <td>$sorter</td>
+                <td><p>Sorter service</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSorter">
+        <div class="location">in <a href="../../VuFind/I18n/HasSorterTrait.html#method_getSorter">
+<abbr title="VuFind\I18n\HasSorterTrait">HasSorterTrait</abbr></a> at line 69</div>
+        <code>                    <a href="../../VuFind/I18n/SorterInterface.html"><abbr title="VuFind\I18n\SorterInterface">SorterInterface</abbr></a>
+    <strong>getSorter</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the sorter</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/I18n/SorterInterface.html"><abbr title="VuFind\I18n\SorterInterface">SorterInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">at line 60</div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $resultsManager)
+    <strong>__construct</strong>(<a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $resultsManager)
         </code>
     </h3>
     <div class="details">    
@@ -176,7 +286,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></td>
+                <td><a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a></td>
                 <td>$resultsManager</td>
                 <td><p>Results manager</p></td>
             </tr>

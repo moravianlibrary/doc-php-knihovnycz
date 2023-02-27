@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindSearch\Command\AlphabeticBrowseCommand | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindSearch_Command_AlphabeticBrowseCommand" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindSearch.html">VuFindSearch</a></li><li class="backslash">\</li><li><a href="../../VuFindSearch/Command.html">Command</a></li><li class="backslash">\</li><li>AlphabeticBrowseCommand</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>AlphabeticBrowseCommand    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>AlphabeticBrowseCommand</strong>        extends <a href="../../VuFindSearch/Command/CallMethodCommand.html"><abbr title="VuFindSearch\Command\CallMethodCommand">CallMethodCommand</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Fetch alphabrowse data from the backend (currently only supported by Solr)</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_backendId">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$backendId</td>
+                <td class="last"><p>Search backend identifier</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#property_backendId">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_context">
+                                        protected                                        mixed
+                                                                                
+                                    </td>
+                <td>$context</td>
+                <td class="last"><p>Command context</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#property_context">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_params">
+                                        protected                                        <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>
+                                                                                
+                                    </td>
+                <td>$params</td>
+                <td class="last"><p>Search backend parameters</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#property_params">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_executed">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$executed</td>
+                <td class="last"><p>Was the command executed?</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#property_executed">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_result">
+                                        protected                                        mixed
+                                                                                
+                                    </td>
+                <td>$result</td>
+                <td class="last"><p>Result of executed operation</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#property_result">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_interface">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$interface</td>
+                <td class="last"><p>Search backend interface</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindSearch/Command/CallMethodCommand.html#property_interface">
+<abbr title="VuFindSearch\Command\CallMethodCommand">CallMethodCommand</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_method">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$method</td>
+                <td class="last"><p>Search backend interface method</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindSearch/Command/CallMethodCommand.html#property_method">
+<abbr title="VuFindSearch\Command\CallMethodCommand">CallMethodCommand</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$source</td>
+                <td class="last"><p>Name of index to search.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_from">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$from</td>
+                <td class="last"><p>Starting point for browse results.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_page">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$page</td>
+                <td class="last"><p>Result page to return.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limit">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$limit</td>
+                <td class="last"><p>Number of results to return on each page.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_offsetDelta">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$offsetDelta</td>
+                <td class="last"><p>Delta to use when calculating page offset.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $backendId, string $source, string $from, int $page, int $limit = 20, <abbr title="VuFindSearch\Command\VuFindSearch\ParamBag">ParamBag</abbr>|null $params = null, int $offsetDelta = 0)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTargetIdentifier">getTargetIdentifier</a>()
+        
+                                            <p><p>Return target backend identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_getTargetIdentifier">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTargetIdentifier">setTargetIdentifier</a>(string $identifier)
+        
+                                            <p><p>Set target backend identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_setTargetIdentifier">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFindSearch/Command/CommandInterface.html"><abbr title="VuFindSearch\Command\CommandInterface">CommandInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_finalizeExecution">finalizeExecution</a>(mixed $result)
+        
+                                            <p><p>Save a result, flag the command as executed, and return the command object;
+useful as the final step in execute() implementations.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_finalizeExecution">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateBackend">validateBackend</a>(<a href="../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend)
+        
+                                            <p><p>Validate that the provided backend matches the expected target identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_validateBackend">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isExecuted">isExecuted</a>()
+        
+                                            <p><p>Was the command executed?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_isExecuted">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResult">getResult</a>()
+        
+                                            <p><p>Return result of executed operation.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_getResult">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchParameters">getSearchParameters</a>()
+        
+                                            <p><p>Return search parameters.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_getSearchParameters">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSearchParameters">setSearchParameters</a>(<a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        
+                                            <p><p>Set search parameters.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_setSearchParameters">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContext">getContext</a>()
+        
+                                            <p><p>Return command context.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_getContext">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setContext">setContext</a>(mixed $context)
+        
+                                            <p><p>Set command context.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/AbstractBase.html#method_setContext">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getArguments">getArguments</a>()
+        
+                                            <p><p>Return search backend interface method arguments.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFindSearch/Command/CommandInterface.html"><abbr title="VuFindSearch\Command\CommandInterface">CommandInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_execute">execute</a>(<a href="../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend)
+        
+                                            <p><p>Execute command on backend.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/Command/CallMethodCommand.html#method_execute">
+<abbr title="VuFindSearch\Command\CallMethodCommand">CallMethodCommand</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSource">getSource</a>()
+        
+                                            <p><p>Return name of index to search.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFrom">getFrom</a>()
+        
+                                            <p><p>Return starting point for browse results.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPage">getPage</a>()
+        
+                                            <p><p>Return result page to return.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLimit">getLimit</a>()
+        
+                                            <p><p>Return number of results to return on each page.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOffsetDelta">getOffsetDelta</a>()
+        
+                                            <p><p>Return delta to use when calculating page offset.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 92</div>
+        <code>                    
+    <strong>__construct</strong>(string $backendId, string $source, string $from, int $page, int $limit = 20, <abbr title="VuFindSearch\Command\VuFindSearch\ParamBag">ParamBag</abbr>|null $params = null, int $offsetDelta = 0)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor.</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$backendId</td>
+                <td><p>Search backend identifier</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Name of index to search</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td><p>Starting point for browse results</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td><p>Result page to return (starts at 0)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Number of results to return on each page</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFindSearch\Command\VuFindSearch\ParamBag">ParamBag</abbr>|null</td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offsetDelta</td>
+                <td><p>Delta to use when calculating page
+offset (useful for showing a few results above the highlighted row)</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTargetIdentifier">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_getTargetIdentifier">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 104</div>
+        <code>                    string
+    <strong>getTargetIdentifier</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return target backend identifier.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTargetIdentifier">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_setTargetIdentifier">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 116</div>
+        <code>                    void
+    <strong>setTargetIdentifier</strong>(string $identifier)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set target backend identifier.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td><p>New identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_finalizeExecution">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_finalizeExecution">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 129</div>
+        <code>            protected        <a href="../../VuFindSearch/Command/CommandInterface.html"><abbr title="VuFindSearch\Command\CommandInterface">CommandInterface</abbr></a>
+    <strong>finalizeExecution</strong>(mixed $result)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Save a result, flag the command as executed, and return the command object;
+useful as the final step in execute() implementations.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$result</td>
+                <td><p>Result of execution.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFindSearch/Command/CommandInterface.html"><abbr title="VuFindSearch\Command\CommandInterface">CommandInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateBackend">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_validateBackend">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 144</div>
+        <code>            protected        void
+    <strong>validateBackend</strong>(<a href="../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate that the provided backend matches the expected target identifier.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a></td>
+                <td>$backend</td>
+                <td><p>Backend instance</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindSearch/Exception/RuntimeException.html"><abbr title="VuFindSearch\Exception\RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isExecuted">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_isExecuted">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 158</div>
+        <code>                    bool
+    <strong>isExecuted</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Was the command executed?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResult">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_getResult">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 170</div>
+        <code>                    mixed
+    <strong>getResult</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return result of executed operation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindSearch/Exception/LogicException.html"><abbr title="VuFindSearch\Exception\LogicException">LogicException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchParameters">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_getSearchParameters">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 183</div>
+        <code>                    <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>
+    <strong>getSearchParameters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return search parameters.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSearchParameters">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_setSearchParameters">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 195</div>
+        <code>                    void
+    <strong>setSearchParameters</strong>(<a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set search parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td>Params</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContext">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_getContext">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 205</div>
+        <code>                    mixed
+    <strong>getContext</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return command context.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setContext">
+        <div class="location">in <a href="../../VuFindSearch/Command/AbstractBase.html#method_setContext">
+<abbr title="VuFindSearch\Command\AbstractBase">AbstractBase</abbr></a> at line 217</div>
+        <code>                    void
+    <strong>setContext</strong>(mixed $context)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set command context.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$context</td>
+                <td>Context</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArguments">
+        <div class="location">at line 119</div>
+        <code>                    array
+    <strong>getArguments</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return search backend interface method arguments.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_execute">
+        <div class="location">in <a href="../../VuFindSearch/Command/CallMethodCommand.html#method_execute">
+<abbr title="VuFindSearch\Command\CallMethodCommand">CallMethodCommand</abbr></a> at line 100</div>
+        <code>                    <a href="../../VuFindSearch/Command/CommandInterface.html"><abbr title="VuFindSearch\Command\CommandInterface">CommandInterface</abbr></a>
+    <strong>execute</strong>(<a href="../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute command on backend.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a></td>
+                <td>$backend</td>
+                <td>Backend</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFindSearch/Command/CommandInterface.html"><abbr title="VuFindSearch\Command\CommandInterface">CommandInterface</abbr></a></td>
+            <td><p>Command instance for method chaining</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSource">
+        <div class="location">at line 136</div>
+        <code>                    string
+    <strong>getSource</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return name of index to search.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFrom">
+        <div class="location">at line 146</div>
+        <code>                    string
+    <strong>getFrom</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return starting point for browse results.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPage">
+        <div class="location">at line 156</div>
+        <code>                    int
+    <strong>getPage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return result page to return.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLimit">
+        <div class="location">at line 166</div>
+        <code>                    int
+    <strong>getLimit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return number of results to return on each page.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOffsetDelta">
+        <div class="location">at line 176</div>
+        <code>                    int
+    <strong>getOffsetDelta</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return delta to use when calculating page offset.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

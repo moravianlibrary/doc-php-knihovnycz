@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindSearch\Backend\EDS\Base | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindSearch_Backend_EDS_Base" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindSearch.html">VuFindSearch</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend.html">Backend</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend/EDS.html">EDS</a></li><li class="backslash">\</li><li>Base</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Base    
+            </h1>
+    </div>
+
+    
+    <p>    abstract     class
+    <strong>Base</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">EBSCOIndustries</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>EBSCO Search API abstract base class</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_debug">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$debug</td>
+                <td class="last"><p>A boolean value determining whether to print debug information</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_edsApiHost">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$edsApiHost</td>
+                <td class="last"><p>EDSAPI host</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_authHost">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$authHost</td>
+                <td class="last"><p>Auth host</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_orgId">
+                                        protected                                        <abbr title="VuFindSearch\Backend\EDS\?string">?string</abbr>
+                                                                                
+                                    </td>
+                <td>$orgId</td>
+                <td class="last"><p>The organization id use for authentication</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_accept">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$accept</td>
+                <td class="last"><p>Accept header</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contentType">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$contentType</td>
+                <td class="last"><p>Content type header</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchHttpMethod">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchHttpMethod</td>
+                <td class="last"><p>Search HTTP method</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $settings = [])
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debugPrint">debugPrint</a>(string $msg)
+        
+                                            <p><p>Print a message if debug is enabled.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_info">info</a>(string $authenticationToken = null, string $sessionToken = null)
+        
+                                            <p><p>Obtain edsapi search critera and application related settings</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createSession">createSession</a>(string $profile = null, string $isGuest = null, string $authToken = null)
+        
+                                            <p><p>Creates a new session</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_retrieve">retrieve</a>(string $an, string $dbId, string $authenticationToken, string $sessionToken, string $highlightTerms = null, array $extraQueryParams = [])
+        
+                                            <p><p>Retrieves a record specified by its identifiers</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_search">search</a>(<a href="../../../VuFindSearch/Backend/EDS/SearchRequestModel.html"><abbr title="VuFindSearch\Backend\EDS\SearchRequestModel">SearchRequestModel</abbr></a> $query, string $authenticationToken, string $sessionToken)
+        
+                                            <p><p>Execute an EdsApi search</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseAutocomplete">parseAutocomplete</a>(array $msg)
+        
+                                            <p><p>Parse autocomplete response from API in an array of terms</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_autocomplete">autocomplete</a>(string $query, string $type, array $data, bool $raw = false)
+        
+                                            <p><p>Execute an EdsApi autocomplete</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_authenticate">authenticate</a>(string $username = null, string $password = null, string $orgid = null, array $params = null)
+        
+                                            <p><p>Generate an authentication token with a valid EBSCO EDS Api account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createQSFromArray">createQSFromArray</a>(array $params)
+        
+                                            <p><p>Convert an array of search parameters to EDS API querystring parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_call">call</a>(string $baseUrl, array $headerParams, array $params = [], string $method = &#039;GET&#039;, string $message = null, string $messageFormat = &quot;&quot;, bool $cacheable = true)
+        
+                                            <p><p>Submit REST Request</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_process">process</a>(string $input)
+        
+                                            <p><p>Process EDS API response message</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTokens">setTokens</a>(string $authenticationToken = null, string $sessionToken = null)
+        
+                                            <p><p>Populate an associative array of session and authentication parameters to
+send to the EDS API</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_httpRequest">httpRequest</a>(string $baseUrl, string $method, string $queryString, array $headers, string $messageBody, string $messageFormat, bool $cacheable = true)
+        
+                                            <p><p>Perform an HTTP request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 104</div>
+        <code>                    
+    <strong>__construct</strong>(array $settings = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                <p><p>Sets up the EDS API Client</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td><p>Associative array of setting to use in
+conjunction with the EDS API</p>
+<ul>
+  <li>debug - boolean to control debug mode</li>
+  <li>orgid - Organization making calls to the EDS API </li>
+  <li>search_http_method - HTTP method for search API calls</li>
+</ul></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debugPrint">
+        <div class="location">at line 135</div>
+        <code>            protected        void
+    <strong>debugPrint</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Print a message if debug is enabled.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Message to print</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_info">
+        <div class="location">at line 150</div>
+        <code>                    array
+    <strong>info</strong>(string $authenticationToken = null, string $sessionToken = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtain edsapi search critera and application related settings</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authenticationToken</td>
+                <td><p>Authentication token</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sessionToken</td>
+                <td><p>Session token</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createSession">
+        <div class="location">at line 167</div>
+        <code>                    array
+    <strong>createSession</strong>(string $profile = null, string $isGuest = null, string $authToken = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a new session</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$profile</td>
+                <td><p>Profile to use</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$isGuest</td>
+                <td><p>Whether or not this session will be a guest session</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$authToken</td>
+                <td><p>Authentication token</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_retrieve">
+        <div class="location">at line 197</div>
+        <code>                    array
+    <strong>retrieve</strong>(string $an, string $dbId, string $authenticationToken, string $sessionToken, string $highlightTerms = null, array $extraQueryParams = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieves a record specified by its identifiers</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$an</td>
+                <td><p>An of the record to retrieve from the
+EdsApi</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dbId</td>
+                <td><p>Database identifier of the record to
+retrieve from the EdsApi</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$authenticationToken</td>
+                <td><p>Authentication token</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sessionToken</td>
+                <td><p>Session token</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$highlightTerms</td>
+                <td><p>Comma separated list of terms to highlight
+in the retrieved record responses</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraQueryParams</td>
+                <td><p>Extra query string parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>The requested record</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_search">
+        <div class="location">at line 226</div>
+        <code>                    array
+    <strong>search</strong>(<a href="../../../VuFindSearch/Backend/EDS/SearchRequestModel.html"><abbr title="VuFindSearch\Backend\EDS\SearchRequestModel">SearchRequestModel</abbr></a> $query, string $authenticationToken, string $sessionToken)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute an EdsApi search</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/EDS/SearchRequestModel.html"><abbr title="VuFindSearch\Backend\EDS\SearchRequestModel">SearchRequestModel</abbr></a></td>
+                <td>$query</td>
+                <td><p>Search request object</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$authenticationToken</td>
+                <td><p>Authentication token</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sessionToken</td>
+                <td><p>Session token</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of query results as returned from the api</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseAutocomplete">
+        <div class="location">at line 247</div>
+        <code>            protected        array
+    <strong>parseAutocomplete</strong>(array $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse autocomplete response from API in an array of terms</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$msg</td>
+                <td><p>Response from API</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>of terms</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_autocomplete">
+        <div class="location">at line 270</div>
+        <code>                    array
+    <strong>autocomplete</strong>(string $query, string $type, array $data, bool $raw = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute an EdsApi autocomplete</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td><p>Search term</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td><p>Autocomplete type (e.g. 'rawqueries' or 'holdings')</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Autocomplete API details (from authenticating with
+'autocomplete' option set -- requires token, custid and url keys).</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$raw</td>
+                <td><p>Should we return the results raw (true) or processed
+(false)?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of autocomplete terns as returned from the api</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authenticate">
+        <div class="location">at line 300</div>
+        <code>                    array
+    <strong>authenticate</strong>(string $username = null, string $password = null, string $orgid = null, array $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate an authentication token with a valid EBSCO EDS Api account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td><p>username associated with an EBSCO EdsApi account</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td><p>password associated with an EBSCO EdsApi account</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$orgid</td>
+                <td><p>Organization id the request is initiated from</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>optional params (autocomplete)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createQSFromArray">
+        <div class="location">at line 335</div>
+        <code>            protected        array
+    <strong>createQSFromArray</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert an array of search parameters to EDS API querystring parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Parameters to convert to querystring parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_call">
+        <div class="location">at line 379</div>
+        <code>            protected        object
+    <strong>call</strong>(string $baseUrl, array $headerParams, array $params = [], string $method = &#039;GET&#039;, string $message = null, string $messageFormat = &quot;&quot;, bool $cacheable = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Submit REST Request</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$baseUrl</td>
+                <td><p>URL of service</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headerParams</td>
+                <td><p>An array of headers to add to the request</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>An array of parameters for the request</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>The HTTP Method to use</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Message to POST if $method is POST</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageFormat</td>
+                <td><p>Format of request $messageBody and responses</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$cacheable</td>
+                <td><p>Whether the request is cacheable</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>EDS API response (or an Error object).</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/EDS/ApiException.html"><abbr title="VuFindSearch\Backend\EDS\ApiException">ApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_process">
+        <div class="location">at line 423</div>
+        <code>            protected        array
+    <strong>process</strong>(string $input)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process EDS API response message</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td><p>The raw response from EDS API</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>The processed response from EDS API</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/EDS/ApiException.html"><abbr title="VuFindSearch\Backend\EDS\ApiException">ApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTokens">
+        <div class="location">at line 449</div>
+        <code>            protected        array
+    <strong>setTokens</strong>(string $authenticationToken = null, string $sessionToken = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Populate an associative array of session and authentication parameters to
+send to the EDS API</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$authenticationToken</td>
+                <td><p>Authentication token to add</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sessionToken</td>
+                <td><p>Session token to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Associative array of header parameters to add.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_httpRequest">
+        <div class="location">at line 474</div>
+        <code>    abstract        protected        string
+    <strong>httpRequest</strong>(string $baseUrl, string $method, string $queryString, array $headers, string $messageBody, string $messageFormat, bool $cacheable = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform an HTTP request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$baseUrl</td>
+                <td><p>Base URL for request</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>HTTP method for request (GET, POST, etc.)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$queryString</td>
+                <td><p>Query string to append to URL</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td><p>HTTP headers to send</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageBody</td>
+                <td><p>Message body to for HTTP Request</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageFormat</td>
+                <td><p>Format of request $messageBody and responses</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$cacheable</td>
+                <td><p>Whether the request is cacheable</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>HTTP response body</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

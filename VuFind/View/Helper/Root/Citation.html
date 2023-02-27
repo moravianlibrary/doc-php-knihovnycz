@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\View\Helper\Root\Citation | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_View_Helper_Root_Citation" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View.html">View</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View/Helper.html">Helper</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View/Helper/Root.html">Root</a></li><li class="backslash">\</li><li>Citation</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Citation    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Citation</strong>        extends <abbr title="Laminas\View\Helper\AbstractHelper">AbstractHelper</abbr>        implements        <a href="../../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Citation view helper</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Lightweight translator aware marker interface (used as an alternative to
+\Laminas\I18n\Translator\TranslatorAwareInterface, which requires an excessive
+number of methods to be implemented).  If we switch to PHP 5.4 traits in the
+future, we can eliminate this interface in favor of the default Laminas version.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_translator">
+                                        protected                                        <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$translator</td>
+                <td class="last">Translator</td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#property_translator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_details">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$details</td>
+                <td class="last"><p>Citation details</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driver">
+                                        protected                                        <a href="../../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+                                                                                
+                                    </td>
+                <td>$driver</td>
+                <td class="last"><p>Record driver</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dateConverter">
+                                        protected                                        <abbr title="VuFind\Date\Converter">Converter</abbr>
+                                                                                
+                                    </td>
+                <td>$dateConverter</td>
+                <td class="last"><p>Date converter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uncappedWords">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$uncappedWords</td>
+                <td class="last"><p>List of words to never capitalize when using title case.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uncappedPhrases">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$uncappedPhrases</td>
+                <td class="last"><p>List of multi-word phrases to never capitalize when using title case.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTranslator">setTranslator</a>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        
+                                            <p><p>Set a translator</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslator">getTranslator</a>()
+        
+                                            <p><p>Get translator object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslatorLocale">getTranslatorLocale</a>(string $default = &#039;en&#039;)
+        
+                                            <p><p>Get the locale from the translator.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translate">translate</a>(string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateWithPrefix">translateWithPrefix</a>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateString">translateString</a>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        
+                                            <p><p>Get translation for a string</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractTextDomain">extractTextDomain</a>(string|object|array $target)
+        
+                                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Date\Converter">Converter</abbr> $converter)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../VuFind/View/Helper/Root/Citation.html"><abbr title="VuFind\View\Helper\Root\Citation">Citation</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___invoke">__invoke</a>(<abbr title="VuFind\RecordDriver\Base">Base</abbr> $driver)
+        
+                                            <p><p>Store a record driver object and return this object so that the appropriate
+template can be rendered.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_prepareAuthors">prepareAuthors</a>(array $authors, bool $isCorporate = false)
+        
+                                            <p><p>The code in this module expects authors in &quot;Last Name, First Name&quot; format.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitation">getCitation</a>(string $format)
+        
+                                            <p><p>Retrieve a citation in a particular format</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitationAPA">getCitationAPA</a>()
+        
+                                            <p><p>Get APA citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitationChicago">getCitationChicago</a>()
+        
+                                            <p><p>Get Chicago Style citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitationMLA">getCitationMLA</a>(int $etAlThreshold = 2, string $volNumSeparator = &#039;, no. &#039;, string $numPrefix = &#039;, &#039;, string $volPrefix = &#039;vol. &#039;, string $yearFormat = &#039;, %s&#039;, string $pageNoSeparator = &#039;,&#039;, bool $includePubPlace = false, string $doiPrefix = &#039;https://doi.org/&#039;, bool $labelPageRange = true, bool $doiArticleComma = true)
+        
+                                            <p><p>Get MLA citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPageRange">getPageRange</a>()
+        
+                                            <p><p>Construct page range portion of citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMLANumberAndDate">getMLANumberAndDate</a>(string $volNumSeparator = &#039;.&#039;, string $volPrefix = &#039;&#039;, string $yearFormat = &#039;, %s&#039;)
+        
+                                            <p><p>Construct volume/issue/date portion of MLA or Chicago Style citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAPANumbersAndDate">getAPANumbersAndDate</a>()
+        
+                                            <p><p>Construct volume/issue/date portion of APA citation.  Returns an array with
+three elements: volume, issue and date (since these end up in different areas
+of the final citation, we don't return a single string, but since their
+determination is related, we need to do the work in a single function).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isNameSuffix">isNameSuffix</a>(string $str)
+        
+                                            <p><p>Is the string a valid name suffix?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isDateRange">isDateRange</a>(string $str)
+        
+                                            <p><p>Is the string a date range?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_abbreviateName">abbreviateName</a>(string $name)
+        
+                                            <p><p>Abbreviate a first name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fixAbbreviatedNameLetters">fixAbbreviatedNameLetters</a>(string $str)
+        
+                                            <p><p>Fix bad punctuation on abbreviated name letters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_cleanNameDates">cleanNameDates</a>(string $str)
+        
+                                            <p><p>Strip the dates off the end of a name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isPunctuated">isPunctuated</a>(string $string)
+        
+                                            <p><p>Does the string end in punctuation that we want to retain?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_stripPunctuation">stripPunctuation</a>(string $text)
+        
+                                            <p><p>Strip unwanted punctuation from the right side of a string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_reverseName">reverseName</a>(string $str)
+        
+                                            <p><p>Turn a &quot;Last, First&quot; name into a &quot;First Last&quot; name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_capitalizeTitle">capitalizeTitle</a>(string $str)
+        
+                                            <p><p>Capitalize all words in a title, except for a few common exceptions.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAPATitle">getAPATitle</a>()
+        
+                                            <p><p>Get the full title for an APA citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAPAAuthors">getAPAAuthors</a>()
+        
+                                            <p><p>Get an array of authors for an APA citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEdition">getEdition</a>()
+        
+                                            <p><p>Get edition statement for inclusion in a citation.  Shared by APA and
+MLA functionality.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMLATitle">getMLATitle</a>()
+        
+                                            <p><p>Get the full title for an MLA citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatPrimaryMLAAuthor">formatPrimaryMLAAuthor</a>(string $author)
+        
+                                            <p><p>Format an author name for inclusion as the first name in an MLA citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatSecondaryMLAAuthor">formatSecondaryMLAAuthor</a>(string $author)
+        
+                                            <p><p>Format an author name for inclusion in an MLA citation (after the primary
+name, which gets formatted differently).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMLAAuthors">getMLAAuthors</a>(int $etAlThreshold = 2)
+        
+                                            <p><p>Get an array of authors for an MLA or Chicago Style citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPublisher">getPublisher</a>(bool $includePubPlace = true)
+        
+                                            <p><p>Get publisher information (place: name) for inclusion in a citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getYear">getYear</a>()
+        
+                                            <p><p>Get the year of publication for inclusion in a citation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setTranslator">
+        <div class="location">in <a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 60</div>
+        <code>                    <a href="../../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+    <strong>setTranslator</strong>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a translator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td>Translator</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslator">
+        <div class="location">in <a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 71</div>
+        <code>                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translator object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslatorLocale">
+        <div class="location">in <a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 83</div>
+        <code>                    string
+    <strong>getTranslatorLocale</strong>(string $default = &#039;en&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the locale from the translator.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default to use if translator absent.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translate">
+        <div class="location">in <a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 103</div>
+        <code>                    string
+    <strong>translate</strong>(string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateWithPrefix">
+        <div class="location">in <a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 152</div>
+        <code>                    string
+    <strong>translateWithPrefix</strong>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td><p>Translation key prefix</p></td>
+            </tr>
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateString">
+        <div class="location">in <a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 178</div>
+        <code>            protected        string
+    <strong>translateString</strong>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translation for a string</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>String to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is found
+(null for no default).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Text domain (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractTextDomain">
+        <div class="location">in <a href="../../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 215</div>
+        <code>            protected        array
+    <strong>extractTextDomain</strong>(string|object|array $target)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 104</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="VuFind\Date\Converter">Converter</abbr> $converter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\Converter">Converter</abbr></td>
+                <td>$converter</td>
+                <td><p>Date converter</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___invoke">
+        <div class="location">at line 117</div>
+        <code>                    <a href="../../../../VuFind/View/Helper/Root/Citation.html"><abbr title="VuFind\View\Helper\Root\Citation">Citation</abbr></a>
+    <strong>__invoke</strong>(<abbr title="VuFind\RecordDriver\Base">Base</abbr> $driver)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Store a record driver object and return this object so that the appropriate
+template can be rendered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\RecordDriver\Base">Base</abbr></td>
+                <td>$driver</td>
+                <td><p>Record driver object.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../VuFind/View/Helper/Root/Citation.html"><abbr title="VuFind\View\Helper\Root\Citation">Citation</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareAuthors">
+        <div class="location">at line 196</div>
+        <code>            protected        array
+    <strong>prepareAuthors</strong>(array $authors, bool $isCorporate = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>The code in this module expects authors in &quot;Last Name, First Name&quot; format.</p></p>                <p><p>This support method (used by the main citation() method) attempts to fix
+any non-compliant names.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$authors</td>
+                <td><p>Authors to process.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isCorporate</td>
+                <td><p>Is this a list of corporate authors?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitation">
+        <div class="location">at line 264</div>
+        <code>                    string
+    <strong>getCitation</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a citation in a particular format</p></p>                <p><p>Returns the citation in the format specified</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Citation format ('APA' or 'MLA')</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Formatted citation</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitationAPA">
+        <div class="location">at line 286</div>
+        <code>                    string
+    <strong>getCitationAPA</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get APA citation.</p></p>                <p><p>This function assigns all the necessary variables and then returns an APA
+citation.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitationChicago">
+        <div class="location">at line 326</div>
+        <code>                    string
+    <strong>getCitationChicago</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Chicago Style citation.</p></p>                <p><p>This function returns a Chicago Style citation using a modified version
+of the MLA logic.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitationMLA">
+        <div class="location">at line 366</div>
+        <code>                    string
+    <strong>getCitationMLA</strong>(int $etAlThreshold = 2, string $volNumSeparator = &#039;, no. &#039;, string $numPrefix = &#039;, &#039;, string $volPrefix = &#039;vol. &#039;, string $yearFormat = &#039;, %s&#039;, string $pageNoSeparator = &#039;,&#039;, bool $includePubPlace = false, string $doiPrefix = &#039;https://doi.org/&#039;, bool $labelPageRange = true, bool $doiArticleComma = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get MLA citation.</p></p>                <p><p>This function assigns all the necessary variables and then returns an MLA
+citation. By adjusting the parameters below, it can also render a Chicago
+Style citation.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$etAlThreshold</td>
+                <td><p>The number of authors to abbreviate with 'et
+al.'</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$volNumSeparator</td>
+                <td><p>String to separate volume and issue number
+in citation.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$numPrefix</td>
+                <td><p>String to display in front of numbering</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$volPrefix</td>
+                <td><p>String to display in front of volume</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$yearFormat</td>
+                <td><p>Format string for year display</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pageNoSeparator</td>
+                <td><p>Separator between date / page no.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$includePubPlace</td>
+                <td><p>Should we include the place of publication?</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$doiPrefix</td>
+                <td><p>Prefix to display in front of DOI; set to
+false to omit DOIs.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$labelPageRange</td>
+                <td><p>Should we include p./pp. before page ranges?</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$doiArticleComma</td>
+                <td><p>Should we put a comma instead of period before
+a DOI in an article-style citation?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageRange">
+        <div class="location">at line 415</div>
+        <code>            protected        string
+    <strong>getPageRange</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construct page range portion of citation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMLANumberAndDate">
+        <div class="location">at line 433</div>
+        <code>            protected        string
+    <strong>getMLANumberAndDate</strong>(string $volNumSeparator = &#039;.&#039;, string $volPrefix = &#039;&#039;, string $yearFormat = &#039;, %s&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construct volume/issue/date portion of MLA or Chicago Style citation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$volNumSeparator</td>
+                <td><p>String to separate volume and issue number
+in citation (only difference between MLA/Chicago Style).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$volPrefix</td>
+                <td><p>String to display in front of volume</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$yearFormat</td>
+                <td><p>Format string for year display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAPANumbersAndDate">
+        <div class="location">at line 485</div>
+        <code>            protected        array
+    <strong>getAPANumbersAndDate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construct volume/issue/date portion of APA citation.  Returns an array with
+three elements: volume, issue and date (since these end up in different areas
+of the final citation, we don't return a single string, but since their
+determination is related, we need to do the work in a single function).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isNameSuffix">
+        <div class="location">at line 532</div>
+        <code>            protected        bool
+    <strong>isNameSuffix</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is the string a valid name suffix?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>The string to check.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if it's a name suffix.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDateRange">
+        <div class="location">at line 559</div>
+        <code>            protected        bool
+    <strong>isDateRange</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is the string a date range?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>The string to check.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if it's a date range.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_abbreviateName">
+        <div class="location">at line 572</div>
+        <code>            protected        string
+    <strong>abbreviateName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Abbreviate a first name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>The name to abbreviate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The abbreviated name.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixAbbreviatedNameLetters">
+        <div class="location">at line 603</div>
+        <code>            protected        string
+    <strong>fixAbbreviatedNameLetters</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fix bad punctuation on abbreviated name letters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>String to fix.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cleanNameDates">
+        <div class="location">at line 621</div>
+        <code>            protected        string
+    <strong>cleanNameDates</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Strip the dates off the end of a name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>Name to clean.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Cleaned name.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPunctuated">
+        <div class="location">at line 647</div>
+        <code>            protected        bool
+    <strong>isPunctuated</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the string end in punctuation that we want to retain?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td><p>String to test.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>Does string end in punctuation?</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stripPunctuation">
+        <div class="location">at line 660</div>
+        <code>            protected        string
+    <strong>stripPunctuation</strong>(string $text)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Strip unwanted punctuation from the right side of a string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td><p>Text to clean up.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Cleaned up text.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reverseName">
+        <div class="location">at line 677</div>
+        <code>            protected        string
+    <strong>reverseName</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Turn a &quot;Last, First&quot; name into a &quot;First Last&quot; name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>Name to reverse.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Reversed name.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_capitalizeTitle">
+        <div class="location">at line 700</div>
+        <code>            protected        string
+    <strong>capitalizeTitle</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Capitalize all words in a title, except for a few common exceptions.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>Title to capitalize.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Capitalized title.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAPATitle">
+        <div class="location">at line 748</div>
+        <code>            protected        string
+    <strong>getAPATitle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the full title for an APA citation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAPAAuthors">
+        <div class="location">at line 770</div>
+        <code>            protected        array
+    <strong>getAPAAuthors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of authors for an APA citation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEdition">
+        <div class="location">at line 817</div>
+        <code>            protected        string
+    <strong>getEdition</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get edition statement for inclusion in a citation.  Shared by APA and
+MLA functionality.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMLATitle">
+        <div class="location">at line 849</div>
+        <code>            protected        string
+    <strong>getMLATitle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the full title for an MLA citation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatPrimaryMLAAuthor">
+        <div class="location">at line 862</div>
+        <code>            protected        string
+    <strong>formatPrimaryMLAAuthor</strong>(string $author)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format an author name for inclusion as the first name in an MLA citation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$author</td>
+                <td><p>Name to reformat.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatSecondaryMLAAuthor">
+        <div class="location">at line 877</div>
+        <code>            protected        string
+    <strong>formatSecondaryMLAAuthor</strong>(string $author)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format an author name for inclusion in an MLA citation (after the primary
+name, which gets formatted differently).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$author</td>
+                <td><p>Name to reformat.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMLAAuthors">
+        <div class="location">at line 893</div>
+        <code>            protected        array
+    <strong>getMLAAuthors</strong>(int $etAlThreshold = 2)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of authors for an MLA or Chicago Style citation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$etAlThreshold</td>
+                <td><p>The number of authors to abbreviate with 'et al.'
+This is a major difference between MLA/Chicago Style.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublisher">
+        <div class="location">at line 936</div>
+        <code>            protected        string
+    <strong>getPublisher</strong>(bool $includePubPlace = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get publisher information (place: name) for inclusion in a citation.</p></p>                <p><p>Shared by APA and MLA functionality.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$includePubPlace</td>
+                <td><p>Should we include the place of publication?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getYear">
+        <div class="location">at line 959</div>
+        <code>            protected        string
+    <strong>getYear</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the year of publication for inclusion in a citation.</p></p>                <p><p>Shared by APA and MLA functionality.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

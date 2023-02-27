@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>User</strong>        extends <abbr title="VuFind\Db\Table\User">User</abbr>
+    <strong>User</strong>        extends <a href="../../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a>
 </p>
 
                 <p>
@@ -106,25 +106,172 @@
     <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-6">
-                    <abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr>    </div>
-                <div class="col-md-6"></div>
+                    <a href="../../../VuFind/Db/Table/ExpirationTrait.html"><abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for tables that support expiration</p></div>
             </div>
             </div>
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tableManager">
+                                        protected                                        <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$tableManager</td>
+                <td class="last"><p>Table manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#property_tableManager">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>VuFind configuration</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#property_config">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_session">
+                                        protected                                        <abbr title="Laminas\Session\Container">Container</abbr>
+                                                                                
+                                    </td>
+                <td>$session</td>
+                <td class="last"><p>Session container</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#property_session">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../KnihovnyCz/Db/Row/User.html"><abbr title="KnihovnyCz\Db\Row\User">User</abbr></a>
+                    
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_getByEduPersonUniqueId">getByEduPersonUniqueId</a>(string $eduPersonUniqueId)
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr> $adapter, <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $tm, array $cfg, <abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null $rowObj, <abbr title="Laminas\Config\Config">Config</abbr> $config, <abbr title="Laminas\Session\Container">Container</abbr> $session = null, string $table = &#039;user&#039;)
         
-                                            <p><p>Retrieve a user object from the database based on eduPersonUniqueId.</p></p>                </div>
-                <div class="col-md-2"></div>
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#method___construct">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initializeFeatures">initializeFeatures</a>(array $cfg)
+        
+                                            <p><p>Initialize features</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_initializeFeatures">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createRow">createRow</a>()
+        
+                                            <p><p>Create a new row.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_createRow">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTable">getDbTable</a>(string $table)
+        
+                                            <p><p>Get access to another table.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createRowForUsername">createRowForUsername</a>(string $username)
+        
+                                            <p><p>Create a row for the specified username.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#method_createRowForUsername">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getById">getById</a>(string $id)
+        
+                                            <p><p>Retrieve a user object from the database based on ID.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#method_getById">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\Db\Table\?\VuFind\Db\Row\User">User</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getByCatalogId">getByCatalogId</a>(string $catId)
+        
+                                            <p><p>Retrieve a user object from the database based on catalog ID.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#method_getByCatalogId">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getByUsername">getByUsername</a>(string $username, bool $create = true)
+        
+                                            <p><p>Retrieve a user object from the database based on username; when requested,
+create a new row if no existing match is found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#method_getByUsername">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getByEmail">getByEmail</a>(string $email)
+        
+                                            <p><p>Retrieve a user object from the database based on email.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#method_getByEmail">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInsecureRows">getInsecureRows</a>()
+        
+                                            <p><p>Get user rows with insecure passwords and/or catalog passwords</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#method_getInsecureRows">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getByVerifyHash">getByVerifyHash</a>(string $hash)
+        
+                                            <p><p>Return a row by a verification hash</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/User.html#method_getByVerifyHash">
+<abbr title="VuFind\Db\Table\User">User</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -134,6 +281,39 @@
                     <a href="#method_expirationCallback">expirationCallback</a>(<abbr title="Laminas\Db\Sql\Select">Select</abbr> $select, int $daysOld, int $idFrom = null, int $idTo = null)
         
                                             <p><p>Update the select statement to find records to delete.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deleteExpired">deleteExpired</a>(string $dateLimit, int|null $limit = null)
+        
+                                            <p><p>Delete expired records. Allows setting of 'from' and 'to' ID's so that rows
+can be deleted in small batches.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/ExpirationTrait.html#method_deleteExpired">
+<abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getExpiredBatchLastId">getExpiredBatchLastId</a>(string $dateLimit, int $limit)
+        
+                                            <p><p>Get the highest id to delete in a batch.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/ExpirationTrait.html#method_getExpiredBatchLastId">
+<abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../KnihovnyCz/Db/Row/User.html"><abbr title="KnihovnyCz\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getByEduPersonUniqueId">getByEduPersonUniqueId</a>(string $eduPersonUniqueId)
+        
+                                            <p><p>Retrieve a user object from the database based on eduPersonUniqueId.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -165,10 +345,11 @@ $into-&gt;id in user_id column.</p></p>                </div>
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_getByEduPersonUniqueId">
-        <div class="location">at line 57</div>
-        <code>                    <a href="../../../KnihovnyCz/Db/Row/User.html"><abbr title="KnihovnyCz\Db\Row\User">User</abbr></a>
-    <strong>getByEduPersonUniqueId</strong>(string $eduPersonUniqueId)
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../VuFind/Db/Table/User.html#method___construct">
+<abbr title="VuFind\Db\Table\User">User</abbr></a> at line 73</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr> $adapter, <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $tm, array $cfg, <abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null $rowObj, <abbr title="Laminas\Config\Config">Config</abbr> $config, <abbr title="Laminas\Session\Container">Container</abbr> $session = null, string $table = &#039;user&#039;)
         </code>
     </h3>
     <div class="details">    
@@ -177,16 +358,82 @@ $into-&gt;id in user_id column.</p></p>                </div>
             
 
         <div class="method-description">
-                            <p><p>Retrieve a user object from the database based on eduPersonUniqueId.</p></p>                        
+                            <p>Constructor</p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
+                <td><abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr></td>
+                <td>$adapter</td>
+                <td><p>Database adapter</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+                <td>$tm</td>
+                <td><p>Table manager</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$cfg</td>
+                <td><p>Laminas configuration</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null</td>
+                <td>$rowObj</td>
+                <td><p>Row prototype object (null for default)</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>VuFind configuration</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Session\Container">Container</abbr></td>
+                <td>$session</td>
+                <td><p>Session container to inject into rows
+(optional; used for privacy mode)</p></td>
+            </tr>
+                    <tr>
                 <td>string</td>
-                <td>$eduPersonUniqueId</td>
-                <td>eduPersonUniqueId</td>
+                <td>$table</td>
+                <td><p>Name of database table to interface with</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeFeatures">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_initializeFeatures">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 89</div>
+        <code>                    void
+    <strong>initializeFeatures</strong>(array $cfg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize features</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$cfg</td>
+                <td><p>Laminas configuration</p></td>
             </tr>
             </table>
 
@@ -195,7 +442,389 @@ $into-&gt;id in user_id column.</p></p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../KnihovnyCz/Db/Row/User.html"><abbr title="KnihovnyCz\Db\Row\User">User</abbr></a></td>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRow">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_createRow">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 113</div>
+        <code>                    object
+    <strong>createRow</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new row.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbTable">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 147</div>
+        <code>                    <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+    <strong>getDbTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get access to another table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Table name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRowForUsername">
+        <div class="location">in <a href="../../../VuFind/Db/Table/User.html#method_createRowForUsername">
+<abbr title="VuFind\Db\Table\User">User</abbr></a> at line 94</div>
+        <code>                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>createRowForUsername</strong>(string $username)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a row for the specified username.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>Username</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getById">
+        <div class="location">in <a href="../../../VuFind/Db/Table/User.html#method_getById">
+<abbr title="VuFind\Db\Table\User">User</abbr></a> at line 112</div>
+        <code>                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>getById</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a user object from the database based on ID.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByCatalogId">
+        <div class="location">in <a href="../../../VuFind/Db/Table/User.html#method_getByCatalogId">
+<abbr title="VuFind\Db\Table\User">User</abbr></a> at line 124</div>
+        <code>                    <abbr title="VuFind\Db\Table\?\VuFind\Db\Row\User">User</abbr>
+    <strong>getByCatalogId</strong>(string $catId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a user object from the database based on catalog ID.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$catId</td>
+                <td><p>Catalog ID.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\Db\Table\?\VuFind\Db\Row\User">User</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByUsername">
+        <div class="location">in <a href="../../../VuFind/Db/Table/User.html#method_getByUsername">
+<abbr title="VuFind\Db\Table\User">User</abbr></a> at line 138</div>
+        <code>                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>getByUsername</strong>(string $username, bool $create = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a user object from the database based on username; when requested,
+create a new row if no existing match is found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td><p>Username to use for retrieval.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$create</td>
+                <td><p>Should we create users that don't already exist?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByEmail">
+        <div class="location">in <a href="../../../VuFind/Db/Table/User.html#method_getByEmail">
+<abbr title="VuFind\Db\Table\User">User</abbr></a> at line 152</div>
+        <code>                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>getByEmail</strong>(string $email)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a user object from the database based on email.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td><p>email to use for retrieval.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInsecureRows">
+        <div class="location">in <a href="../../../VuFind/Db/Table/User.html#method_getInsecureRows">
+<abbr title="VuFind\Db\Table\User">User</abbr></a> at line 163</div>
+        <code>                    mixed
+    <strong>getInsecureRows</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get user rows with insecure passwords and/or catalog passwords</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByVerifyHash">
+        <div class="location">in <a href="../../../VuFind/Db/Table/User.html#method_getByVerifyHash">
+<abbr title="VuFind\Db\Table\User">User</abbr></a> at line 180</div>
+        <code>                    mixed
+    <strong>getByVerifyHash</strong>(string $hash)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a row by a verification hash</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td><p>User-unique hash string</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
             <td></td>
         </tr>
     </table>
@@ -254,6 +883,152 @@ $into-&gt;id in user_id column.</p></p>                </div>
                     <table class="table table-condensed">
         <tr>
             <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteExpired">
+        <div class="location">in <a href="../../../VuFind/Db/Table/ExpirationTrait.html#method_deleteExpired">
+<abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a> at line 68</div>
+        <code>                    int
+    <strong>deleteExpired</strong>(string $dateLimit, int|null $limit = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete expired records. Allows setting of 'from' and 'to' ID's so that rows
+can be deleted in small batches.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dateLimit</td>
+                <td><p>Date threshold of an &quot;expired&quot; record in format
+'Y-m-d H:i:s'.</p></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$limit</td>
+                <td><p>Maximum number of rows to delete or null for no
+limit.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>Number of rows deleted</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpiredBatchLastId">
+        <div class="location">in <a href="../../../VuFind/Db/Table/ExpirationTrait.html#method_getExpiredBatchLastId">
+<abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a> at line 91</div>
+        <code>            protected        int|null
+    <strong>getExpiredBatchLastId</strong>(string $dateLimit, int $limit)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the highest id to delete in a batch.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dateLimit</td>
+                <td><p>Date threshold of an &quot;expired&quot; record in format
+'Y-m-d H:i:s'.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Maximum number of rows to delete.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td><p>Highest id value to delete or null if a limiting id is not
+available</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByEduPersonUniqueId">
+        <div class="location">at line 57</div>
+        <code>                    <a href="../../../KnihovnyCz/Db/Row/User.html"><abbr title="KnihovnyCz\Db\Row\User">User</abbr></a>
+    <strong>getByEduPersonUniqueId</strong>(string $eduPersonUniqueId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a user object from the database based on eduPersonUniqueId.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$eduPersonUniqueId</td>
+                <td>eduPersonUniqueId</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../KnihovnyCz/Db/Row/User.html"><abbr title="KnihovnyCz\Db\Row\User">User</abbr></a></td>
             <td></td>
         </tr>
     </table>

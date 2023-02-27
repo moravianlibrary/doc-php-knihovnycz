@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\DigitalContent\OverdriveConnector | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_DigitalContent_OverdriveConnector" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/DigitalContent.html">DigitalContent</a></li><li class="backslash">\</li><li>OverdriveConnector</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>OverdriveConnector    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>OverdriveConnector</strong>        implements        <abbr title="Laminas\Log\LoggerAwareInterface">LoggerAwareInterface</abbr>, <abbr title="LmcRbacMvc\Service\AuthorizationServiceAwareInterface">AuthorizationServiceAwareInterface</abbr>, <abbr title="VuFindHttp\HttpServiceAwareInterface">HttpServiceAwareInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p>OverdriveConnector</p>            <p><p>Class responsible for connecting to the Overdrive API</p></p>        </div>
+            
+                    <p>
+                        
+                                    <tr>
+                        <td>provide</td>
+                        <td>option for autocheckout by default in config
+allow override for cover display using other covers
+provide option for not requiring email for holds
+provide option for giving users option for every hold
+provide option for asking about autocheckout for every hold
+provide config options for how to handle patrons with no access to OD</td>
+                        </tr>
+                            </p>
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="LmcRbacMvc\Service\AuthorizationServiceAwareTrait">AuthorizationServiceAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="VuFindHttp\HttpServiceAwareTrait">HttpServiceAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Cache/KeyGeneratorTrait.html"><abbr title="VuFind\Cache\KeyGeneratorTrait">KeyGeneratorTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Cache Key Generator Trait</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_sessionContainer">
+                                        protected                                        <abbr title="Laminas\Session\Container">Container</abbr>
+                                                                                
+                                    </td>
+                <td>$sessionContainer</td>
+                <td class="last"><p>Session Container</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordConfig">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$recordConfig</td>
+                <td class="last"><p>Record Config</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mainConfig">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$mainConfig</td>
+                <td class="last"><p>Record Config</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ilsAuth">
+                                        protected                                        <a href="../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a>
+                                                                                
+                                    </td>
+                <td>$ilsAuth</td>
+                <td class="last"><p>ILS Authorization</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_client">
+                                        protected                                        <abbr title="Laminas\Http\Client">Client</abbr>
+                                                                                
+                                    </td>
+                <td>$client</td>
+                <td class="last"><p>HTTP Client</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cache">
+                                        protected                                        <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$cache</td>
+                <td class="last"><p>Cache for storing ILS data temporarily (e.g. patron blocks)</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCacheKey">getCacheKey</a>(string|null $suffix = null)
+        
+                                            <p><p>Method to ensure uniform cache keys for cached VuFind objects.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/KeyGeneratorTrait.html#method_getCacheKey">
+<abbr title="VuFind\Cache\KeyGeneratorTrait">KeyGeneratorTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $mainConfig, <abbr title="Laminas\Config\Config">Config</abbr> $recordConfig, <a href="../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a> $ilsAuth, <abbr title="Laminas\Session\Container">Container</abbr> $sessionContainer = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Session\Container">Container</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSessionContainer">getSessionContainer</a>()
+        
+                                            <p><p>Loads the session container</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUser">getUser</a>()
+        
+                                            <p><p>Get (Logged-in) User</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAccess">getAccess</a>(bool $refresh = false)
+        
+                                            <p><p>Get Overdrive Access</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAvailability">getAvailability</a>(string $overDriveId)
+        
+                                            <p><p>Get Availability</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAvailabilityBulk">getAvailabilityBulk</a>(array $overDriveIds = [])
+        
+                                            <p><p>Get Availability (in) Bulk</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCollectionToken">getCollectionToken</a>()
+        
+                                            <p><p>Get Colllection Token</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_doOverdriveCheckout">doOverdriveCheckout</a>(string $overDriveId)
+        
+                                            <p><p>Overdrive Checkout
+Processes a request to checkout a title from Overdrive</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_placeOverDriveHold">placeOverDriveHold</a>(string $overDriveId, string $email)
+        
+                                            <p><p>Places a hold on an item within OverDrive</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_cancelHold">cancelHold</a>(string $overDriveId)
+        
+                                            <p><p>Cancel Hold
+Cancel and existing Overdrive Hold</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_returnResource">returnResource</a>(string $resourceID)
+        
+                                            <p><p>Return Resource
+Return a title early.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDownloadLink">getDownloadLink</a>(string $overDriveId, string $format, string $errorURL)
+        
+                                            <p><p>Get Download Link for an Overdrive Resource</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLinkTemplate">getLinkTemplate</a>(object $checkout, string $format)
+        
+                                            <p><p>Returns the link template for this format</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_lockinResource">lockinResource</a>(string $overDriveId, string $format)
+        
+                                            <p><p>Lock In Overdrive Resource for a particular format</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|<a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfig">getConfig</a>()
+        
+                                            <p><p>Get Configuration
+Sets up a local copy of configurations for convenience</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFormatNames">getFormatNames</a>()
+        
+                                            <p><p>Returns an array of Overdrive Formats and translation tokens</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMetadata">getMetadata</a>(array $overDriveIds = [])
+        
+                                            <p><p>Returns a hash of metadata keyed on overdrive reserveID</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object|false
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCheckout">getCheckout</a>(string $overDriveId, bool $refresh = true)
+        
+                                            <p><p>Get Overdrive Checkout</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object|false
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHold">getHold</a>(string $overDriveId, bool $refresh = true)
+        
+                                            <p><p>Get Overdrive Hold</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCheckouts">getCheckouts</a>(bool $refresh = true)
+        
+                                            <p><p>Get Overdrive Checkouts (or a user)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHolds">getHolds</a>(bool $refresh = true)
+        
+                                            <p><p>Get Overdrive Holds (or a user)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_callUrl">callUrl</a>(string $url, array $headers = null, bool $checkToken = true, string $requestType = &quot;GET&quot;)
+        
+                                            <p><p>Call a URL on the API</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_connectToAPI">connectToAPI</a>(bool $forceNewConnection = false)
+        
+                                            <p><p>Connect to API</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_callPatronUrl">callPatronUrl</a>(string $patronBarcode, string $patronPin, string $url, array $params = null, string $requestType = &quot;GET&quot;)
+        
+                                            <p><p>Call a Patron URL on the API</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_connectToPatronAPI">connectToPatronAPI</a>(string $patronBarcode, string $patronPin = &#039;1234&#039;, bool $forceNewConnection = false)
+        
+                                            <p><p>Connect to Patron API</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\Client">Client</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHttpClient">getHttpClient</a>(string $url = null)
+        
+                                            <p><p>Get an HTTP client</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCacheStorage">setCacheStorage</a>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache = null)
+        
+                                            <p><p>Set a cache storage object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedData">getCachedData</a>(string $key)
+        
+                                            <p><p>Helper function for fetching cached data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_putCachedData">putCachedData</a>(string $key, mixed $entry)
+        
+                                            <p><p>Helper function for storing cached data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeCachedData">removeCachedData</a>(string $key)
+        
+                                            <p><p>Helper function for removing cached data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResultObject">getResultObject</a>(bool $status = false, string $msg = &quot;&quot;, string $code = &quot;&quot;)
+        
+                                            <p><p>Get Result Object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheKey">
+        <div class="location">in <a href="../../VuFind/Cache/KeyGeneratorTrait.html#method_getCacheKey">
+<abbr title="VuFind\Cache\KeyGeneratorTrait">KeyGeneratorTrait</abbr></a> at line 51</div>
+        <code>            protected        string
+    <strong>getCacheKey</strong>(string|null $suffix = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Method to ensure uniform cache keys for cached VuFind objects.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$suffix</td>
+                <td><p>Optional suffix that will get appended to the
+object class name calling getCacheKey()</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 128</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $mainConfig, <abbr title="Laminas\Config\Config">Config</abbr> $recordConfig, <a href="../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a> $ilsAuth, <abbr title="Laminas\Session\Container">Container</abbr> $sessionContainer = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$mainConfig</td>
+                <td><p>VuFind main conf</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$recordConfig</td>
+                <td><p>Record-specific conf file</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a></td>
+                <td>$ilsAuth</td>
+                <td><p>ILS Authenticator</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Session\Container">Container</abbr></td>
+                <td>$sessionContainer</td>
+                <td>container</td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionContainer">
+        <div class="location">at line 145</div>
+        <code>            protected        <abbr title="Laminas\Session\Container">Container</abbr>
+    <strong>getSessionContainer</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads the session container</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Session\Container">Container</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUser">
+        <div class="location">at line 161</div>
+        <code>                    array|bool
+    <strong>getUser</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get (Logged-in) User</p></p>                <p><p>Returns the currently logged in user or false if the user is not</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td><p>an array of user info from the ILSAuthenticator
+or false if user is not logged in.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAccess">
+        <div class="location">at line 182</div>
+        <code>                    object
+    <strong>getAccess</strong>(bool $refresh = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Overdrive Access</p></p>                <p><p>Whether the patron has access to overdrive actions (hold,
+checkout etc.).
+This is stored and retrieved from the session.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$refresh</td>
+                <td><p>Force a check instead of checking cache</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAvailability">
+        <div class="location">at line 238</div>
+        <code>                    object
+    <strong>getAvailability</strong>(string $overDriveId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Availability</p></p>                <p><p>Retrieves the availability for a single resource from Overdrive API
+with information like copiesOwned, copiesAvailable, numberOfHolds et.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$overDriveId</td>
+                <td><p>The Overdrive ID (reserve ID) of the eResource</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>Standard object with availability info</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAvailabilityBulk">
+        <div class="location">at line 294</div>
+        <code>                    array|bool
+    <strong>getAvailabilityBulk</strong>(array $overDriveIds = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Availability (in) Bulk</p></p>                <p><p>Gets availability for up to 25 titles at once.  This is used by the
+the ajax availability system</p></p>        
+                    <p>
+                        
+                                    <tr>
+                        <td>if</td>
+                        <td>more tan 25 passed in, make multiple calls</td>
+                        </tr>
+                            </p>
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$overDriveIds</td>
+                <td><p>The Overdrive ID (reserve IDs) of the
+eResources</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td><p>see getAvailability</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollectionToken">
+        <div class="location">at line 374</div>
+        <code>                    object|bool
+    <strong>getCollectionToken</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Colllection Token</p></p>                <p><p>Gets the colleciton token for the Overdrive collection. The collection
+token doesn't change much but according to
+the OD API docs it could change and should be retrieved each session.
+Also, the collection token depends on the user if the user is in a
+consortium.  If consortium support is turned on then the user collection
+token will override the library collection token.
+The token itself is returned but it's also saved in the session and
+automatically returned.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object|bool</td>
+            <td><p>A collection token for the library's collection.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doOverdriveCheckout">
+        <div class="location">at line 426</div>
+        <code>                    object
+    <strong>doOverdriveCheckout</strong>(string $overDriveId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Overdrive Checkout
+Processes a request to checkout a title from Overdrive</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$overDriveId</td>
+                <td><p>The overdrive id for the title</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>$result Results of the call.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeOverDriveHold">
+        <div class="location">at line 480</div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
+    <strong>placeOverDriveHold</strong>(string $overDriveId, string $email)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Places a hold on an item within OverDrive</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$overDriveId</td>
+                <td><p>The overdrive id for the title</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td><p>The email overdrive should use for notif</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a></td>
+            <td><p>Object with result</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelHold">
+        <div class="location">at line 531</div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
+    <strong>cancelHold</strong>(string $overDriveId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Cancel Hold
+Cancel and existing Overdrive Hold</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$overDriveId</td>
+                <td><p>The overdrive id for the title</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a></td>
+            <td><p>Object with result</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_returnResource">
+        <div class="location">at line 567</div>
+        <code>                    object|bool
+    <strong>returnResource</strong>(string $resourceID)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return Resource
+Return a title early.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$resourceID</td>
+                <td><p>Overdrive ID of the resource</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object|bool</td>
+            <td><p>Object with result</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDownloadLink">
+        <div class="location">at line 604</div>
+        <code>                    object
+    <strong>getDownloadLink</strong>(string $overDriveId, string $format, string $errorURL)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Download Link for an Overdrive Resource</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$overDriveId</td>
+                <td><p>Overdrive ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Overdrive string for this format</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errorURL</td>
+                <td><p>A URL to show err if the download doesn't wk</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>Object with result. If successful, then data will
+have the download URI ($result-&gt;downloadLink)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLinkTemplate">
+        <div class="location">at line 687</div>
+        <code>            protected        bool
+    <strong>getLinkTemplate</strong>(object $checkout, string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the link template for this format</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$checkout</td>
+                <td><p>The checkout object</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>The name of the format to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lockinResource">
+        <div class="location">at line 705</div>
+        <code>                    object|bool
+    <strong>lockinResource</strong>(string $overDriveId, string $format)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Lock In Overdrive Resource for a particular format</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$overDriveId</td>
+                <td><p>Overdrive Resource ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Overdrive string for the format</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object|bool</td>
+            <td><p>Result of the call.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">at line 777</div>
+        <code>                    bool|<a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
+    <strong>getConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Configuration
+Sets up a local copy of configurations for convenience</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|<a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatNames">
+        <div class="location">at line 829</div>
+        <code>                    array
+    <strong>getFormatNames</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an array of Overdrive Formats and translation tokens</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMetadata">
+        <div class="location">at line 854</div>
+        <code>                    array
+    <strong>getMetadata</strong>(array $overDriveIds = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a hash of metadata keyed on overdrive reserveID</p></p>                        
+                    <p>
+                        
+                                    <tr>
+                        <td>if</td>
+                        <td>more tan 25 passed in, make multiple calls</td>
+                        </tr>
+                            </p>
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$overDriveIds</td>
+                <td><p>Set of Overdrive IDs</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>results of metadata fetch</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCheckout">
+        <div class="location">at line 891</div>
+        <code>                    object|false
+    <strong>getCheckout</strong>(string $overDriveId, bool $refresh = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Overdrive Checkout</p></p>                <p><p>Get the overdrive checkout object for an overdrive title
+for the current user</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$overDriveId</td>
+                <td><p>Overdrive resource id</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$refresh</td>
+                <td><p>Whether or not to ignore cache and get latest</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object|false</td>
+            <td><p>PHP object that represents the checkout or false
+the checkout is not in the current list of checkouts for the current
+user.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHold">
+        <div class="location">at line 924</div>
+        <code>                    object|false
+    <strong>getHold</strong>(string $overDriveId, bool $refresh = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Overdrive Hold</p></p>                <p><p>Get the overdrive hold object for an overdrive title
+for the current user</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$overDriveId</td>
+                <td><p>Overdrive resource id</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$refresh</td>
+                <td><p>Whether or not to ignore cache and get latest</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object|false</td>
+            <td><p>PHP object that represents the checkout or false
+the checkout is not in the current list of checkouts for the current
+user.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCheckouts">
+        <div class="location">at line 949</div>
+        <code>                    object
+    <strong>getCheckouts</strong>(bool $refresh = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Overdrive Checkouts (or a user)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$refresh</td>
+                <td><p>Whether or not to ignore cache and get latest</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>Results of the call</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHolds">
+        <div class="location">at line 1009</div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
+    <strong>getHolds</strong>(bool $refresh = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Overdrive Holds (or a user)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$refresh</td>
+                <td><p>Whether or not to ignore cache and get latest</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a></td>
+            <td><p>Results of the call</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callUrl">
+        <div class="location">at line 1082</div>
+        <code>            protected        object|bool
+    <strong>callUrl</strong>(string $url, array $headers = null, bool $checkToken = true, string $requestType = &quot;GET&quot;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call a URL on the API</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>The url to call</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td><p>Headers to set for the request.
+if null, then the auth headers are used.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$checkToken</td>
+                <td><p>Whether to check and get a new token</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$requestType</td>
+                <td><p>The request type (GET, POST etc)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object|bool</td>
+            <td><p>The json response from the API call
+converted to an object.  If the call fails at the
+HTTP level then the error is logged and false is returned.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_connectToAPI">
+        <div class="location">at line 1163</div>
+        <code>            protected        string
+    <strong>connectToAPI</strong>(bool $forceNewConnection = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Connect to API</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$forceNewConnection</td>
+                <td><p>Force a new connection (get a new token)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>token for the session or false
+if the token request failed</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callPatronUrl">
+        <div class="location">at line 1250</div>
+        <code>            protected        object|bool
+    <strong>callPatronUrl</strong>(string $patronBarcode, string $patronPin, string $url, array $params = null, string $requestType = &quot;GET&quot;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call a Patron URL on the API</p></p>                <p><p>The patron URL is used for the circulation API's and requires a patron
+specific token.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$patronBarcode</td>
+                <td><p>Patrons barcode</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$patronPin</td>
+                <td><p>Patrons password</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>The url to call</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>parameters to call</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$requestType</td>
+                <td><p>HTTP request type (default=GET)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object|bool</td>
+            <td><p>The json response from the API call
+converted to an object.  If the call fails at the
+HTTP level then the error is logged and false is returned.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_connectToPatronAPI">
+        <div class="location">at line 1353</div>
+        <code>            protected        string
+    <strong>connectToPatronAPI</strong>(string $patronBarcode, string $patronPin = &#039;1234&#039;, bool $forceNewConnection = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Connect to Patron API</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$patronBarcode</td>
+                <td><p>Patrons barcode</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$patronPin</td>
+                <td><p>Patrons password</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forceNewConnection</td>
+                <td><p>force a new connection (get a new
+token)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>token for the session</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">at line 1444</div>
+        <code>            protected        <abbr title="Laminas\Http\Client">Client</abbr>
+    <strong>getHttpClient</strong>(string $url = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an HTTP client</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL for client to use</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\Client">Client</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheStorage">
+        <div class="location">at line 1465</div>
+        <code>                    void
+    <strong>setCacheStorage</strong>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a cache storage object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr></td>
+                <td>$cache</td>
+                <td><p>Cache storage interface</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedData">
+        <div class="location">at line 1481</div>
+        <code>            protected        mixed|null
+    <strong>getCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for fetching cached data.</p></p>                <p><p>Data is cached for up to $this-&gt;cacheLifetime seconds so that it would
+be
+faster to process e.g. requests where multiple calls to the backend are
+made.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td><p>Cached entry or null if not cached or expired</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putCachedData">
+        <div class="location">at line 1517</div>
+        <code>            protected        void
+    <strong>putCachedData</strong>(string $key, mixed $entry)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for storing cached data.</p></p>                <p><p>Data is cached for up to $this-&gt;cacheLifetime seconds so that it would
+be
+faster to process e.g. requests where multiple calls to the backend are
+made.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$entry</td>
+                <td><p>Entry to be cached</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCachedData">
+        <div class="location">at line 1538</div>
+        <code>            protected        void
+    <strong>removeCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for removing cached data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResultObject">
+        <div class="location">at line 1556</div>
+        <code>                    object
+    <strong>getResultObject</strong>(bool $status = false, string $msg = &quot;&quot;, string $code = &quot;&quot;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Result Object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$status</td>
+                <td><p>Whether it succeeded</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>More information</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td><p>code used for end user display/translation</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,2390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\OAI\Server\Auth | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_OAI_Server_Auth" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/OAI.html">OAI</a></li><li class="backslash">\</li><li><a href="../../../VuFind/OAI/Server.html">Server</a></li><li class="backslash">\</li><li>Auth</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Auth    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Auth</strong>        extends <a href="../../../VuFind/OAI/Server.html"><abbr title="VuFind\OAI\Server">Server</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>OAI Server class for Authority core</p></p>            <p><p>This class provides OAI server functionality.</p></p>        </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_baseURL">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$baseURL</td>
+                <td class="last"><p>Repository base URL</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_baseURL">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_baseHostURL">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$baseHostURL</td>
+                <td class="last"><p>Base URL of host containing VuFind.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_baseHostURL">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_params">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$params</td>
+                <td class="last"><p>Incoming request parameters</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_params">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchClassId">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchClassId</td>
+                <td class="last"><p>Search object class to use</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_searchClassId">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_core">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$core</td>
+                <td class="last"><p>What Solr core are we serving up?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_core">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_iso8601">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$iso8601</td>
+                <td class="last"><p>ISO-8601 date format</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_iso8601">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pageSize">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$pageSize</td>
+                <td class="last"><p>Records per page in lists</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_pageSize">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_setField">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$setField</td>
+                <td class="last"><p>Solr field for set membership</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_setField">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_metadataFormats">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$metadataFormats</td>
+                <td class="last"><p>Supported metadata formats</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_metadataFormats">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_idNamespace">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$idNamespace</td>
+                <td class="last"><p>Namespace used for ID prefixing (if any)</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_idNamespace">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_repositoryName">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$repositoryName</td>
+                <td class="last"><p>Repository name used in &quot;Identify&quot; response</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_repositoryName">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_earliestDatestamp">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$earliestDatestamp</td>
+                <td class="last"><p>Earliest datestamp used in &quot;Identify&quot; response</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_earliestDatestamp">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_adminEmail">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$adminEmail</td>
+                <td class="last"><p>Admin email used in &quot;Identify&quot; response</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_adminEmail">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resultsManager">
+                                        protected                                        <a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$resultsManager</td>
+                <td class="last"><p>Results plugin manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_resultsManager">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordLoader">
+                                        protected                                        <a href="../../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a>
+                                                                                
+                                    </td>
+                <td>$recordLoader</td>
+                <td class="last"><p>Record loader</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_recordLoader">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tableManager">
+                                        protected                                        <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$tableManager</td>
+                <td class="last"><p>Table manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_tableManager">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordLinkerHelper">
+                                        protected                                        <a href="../../../VuFind/View/Helper/Root/RecordLinker.html"><abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr></a>
+                                                                                
+                                    </td>
+                <td>$recordLinkerHelper</td>
+                <td class="last"><p>Record link helper (optional)</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_recordLinkerHelper">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_setQueries">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$setQueries</td>
+                <td class="last"><p>Set queries</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_setQueries">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultQuery">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$defaultQuery</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_defaultQuery">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordFormatter">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$recordFormatter</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_recordFormatter">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_vufindApiFields">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$vufindApiFields</td>
+                <td class="last"><p>Fields to return when the 'vufind' format is requested. Empty array means the
+format is disabled.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_vufindApiFields">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordFormatFilters">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$recordFormatFilters</td>
+                <td class="last"><p>Filter queries specific to the requested record format</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_recordFormatFilters">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_deleteLifetime">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$deleteLifetime</td>
+                <td class="last"><p>Limit on display of deleted records (in days); older deleted records will not
+be returned by the server. Set to null for no limit.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_deleteLifetime">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_useCursorMark">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$useCursorMark</td>
+                <td class="last"><p>Should we use cursorMarks for Solr retrieval? Normally this is the best
+option, but it is incompatible with some other Solr features and may need
+to be disabled in rare circumstances (e.g. when using field collapsing/
+result grouping).</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#property_useCursorMark">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $results, <a href="../../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a> $loader, <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $tables)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_init">init</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config, string $baseURL, array $params)
+        
+                                            <p><p>Initialize settings</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_init">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRecordLinkerHelper">setRecordLinkerHelper</a>(<a href="../../../VuFind/View/Helper/Root/RecordLinker.html"><abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr></a> $helper)
+        
+                                            <p><p>Add a record linker helper (optional -- allows enhancement of some metadata
+with VuFind-specific links).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_setRecordLinkerHelper">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRecordFormatter">setRecordFormatter</a>(<a href="../../../VuFindApi/Formatter/RecordFormatter.html"><abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> $formatter)
+        
+                                            <p><p>Add a record formatter (optional -- allows the vufind record format to be
+returned).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_setRecordFormatter">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUTCDateTime">getUTCDateTime</a>(string $time = &#039;now&#039;)
+        
+                                            <p><p>Get the current UTC date/time in ISO 8601 format.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_getUTCDateTime">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResponse">getResponse</a>()
+        
+                                            <p><p>Respond to the OAI-PMH request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_getResponse">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachDeleted">attachDeleted</a>(<a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a> $xml, array $tracker, bool $headerOnly = false)
+        
+                                            <p><p>Assign necessary interface variables to display a deleted record.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_attachDeleted">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachRecordHeader">attachRecordHeader</a>(<a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a> $xml, string $id, string $date, array $sets = [], string $status = &#039;&#039;)
+        
+                                            <p><p>Attach a record header to an XML document.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_attachRecordHeader">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getVuFindMetadata">getVuFindMetadata</a>(object $record)
+        
+                                            <p><p>Support method for attachNonDeleted() to build the VuFind metadata for
+a record driver.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_getVuFindMetadata">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachNonDeleted">attachNonDeleted</a>(<a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a> $container, object $record, string $format, bool $headerOnly = false, string $set = &#039;&#039;)
+        
+                                            <p><p>Attach a non-deleted record to an XML document.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_attachNonDeleted">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecord">getRecord</a>()
+        
+                                            <p><p>Respond to a GetRecord request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_getRecord">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasParam">hasParam</a>(string $param)
+        
+                                            <p><p>Was the specified parameter provided?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_hasParam">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_identify">identify</a>()
+        
+                                            <p><p>Respond to an Identify request:</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_identify">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsVuFindMetadata">supportsVuFindMetadata</a>()
+        
+                                            <p><p>Does the current configuration support the VuFind metadata format (using
+the API's record formatter.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_supportsVuFindMetadata">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initializeMetadataFormats">initializeMetadataFormats</a>()
+        
+                                            <p><p>Initialize data about metadata formats. (This is called on demand and is
+defined as a separate method to allow easy override by child classes).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_initializeMetadataFormats">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMetadataFormats">getMetadataFormats</a>()
+        
+                                            <p><p>Get metadata formats; initialize the list if necessary.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_getMetadataFormats">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initializeSettings">initializeSettings</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config)
+        
+                                            <p><p>Load data from the OAI section of config.ini.  (This is called by the
+constructor and is only a separate method to allow easy override by child
+classes).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_listMetadataFormats">listMetadataFormats</a>()
+        
+                                            <p><p>Respond to a ListMetadataFormats request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_listMetadataFormats">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_listRecords">listRecords</a>(string $verb = &#039;ListRecords&#039;)
+        
+                                            <p><p>Respond to a ListIdentifiers or ListRecords request (the $verb parameter
+determines the exact format of the response).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_listRecords">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_listSets">listSets</a>()
+        
+                                            <p><p>Respond to a ListSets request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_listSets">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_listRecordsGetDeleted">listRecordsGetDeleted</a>(int $from, int $until, int $currentCursor)
+        
+                                            <p><p>Get an object containing the next page of deleted records from the specified
+date range.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_listRecordsGetDeleted">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_listRecordsGetDeletedCount">listRecordsGetDeletedCount</a>(int $from, int $until)
+        
+                                            <p><p>Get a count of all deleted records in the specified date range.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_listRecordsGetDeletedCount">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_listRecordsGetNonDeleted">listRecordsGetNonDeleted</a>(int $from, int $until, mixed $offset, int $limit, string $format, string $set = &#039;&#039;)
+        
+                                            <p><p>Get an array of information on non-deleted records in the specified range.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_listRecordsGetNonDeleted">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_listRecordsGetParams">listRecordsGetParams</a>()
+        
+                                            <p><p>Get parameters for use in the listRecords method.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_listRecordsGetParams">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isBadDate">isBadDate</a>(int $from, int $until)
+        
+                                            <p><p>Validate the from and until parameters for the listRecords method.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_isBadDate">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_listRecordsValidateDates">listRecordsValidateDates</a>(int $from, int $until)
+        
+                                            <p><p>Validate the from and until parameters for the listRecords method.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_listRecordsValidateDates">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadRecord">loadRecord</a>(string $id)
+        
+                                            <p><p>Load a specific record from the index.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_loadRecord">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadResumptionToken">loadResumptionToken</a>(string $token)
+        
+                                            <p><p>Load parameters associated with a resumption token.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_loadResumptionToken">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_normalizeDate">normalizeDate</a>(string $date, string $time = &#039;00:00:00&#039;)
+        
+                                            <p><p>Normalize a date to a Unix timestamp.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_normalizeDate">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_prefixID">prefixID</a>(string $id)
+        
+                                            <p><p>Prepend the OAI prefix to the provided ID number.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_prefixID">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_saveResumptionToken">saveResumptionToken</a>(<a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a> $xml, array $params, int $currentCursor, int $listSize, string $cursorMark)
+        
+                                            <p><p>Generate a resumption token to continue the current operation.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_saveResumptionToken">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_showError">showError</a>(string $code, string $message)
+        
+                                            <p><p>Display an error response.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_showError">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createResponse">createResponse</a>(bool $echoParams = true)
+        
+                                            <p><p>Create an OAI-PMH response (shared support method used by various
+response-specific methods).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_createResponse">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_stripID">stripID</a>(string $id)
+        
+                                            <p><p>Strip the OAI prefix from the provided ID number.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_stripID">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_unexpectedError">unexpectedError</a>(string $msg)
+        
+                                            <p><p>Die with an unexpected error code (when something outside the scope of
+OAI-PMH fails).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/OAI/Server.html#method_unexpectedError">
+<abbr title="VuFind\OAI\Server">Server</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 53</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $results, <a href="../../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a> $loader, <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $tables)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a></td>
+                <td>$results</td>
+                <td><p>Search manager for
+retrieving records</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a></td>
+                <td>$loader</td>
+                <td><p>Record loader</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+                <td>$tables</td>
+                <td><p>Table manager</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_init">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 252</div>
+        <code>                    void
+    <strong>init</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config, string $baseURL, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize settings</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>VuFind configuration</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$baseURL</td>
+                <td><p>The base URL for the OAI server</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>The incoming OAI-PMH parameters (i.e.
+$_GET)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRecordLinkerHelper">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_setRecordLinkerHelper">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 272</div>
+        <code>                    void
+    <strong>setRecordLinkerHelper</strong>(<a href="../../../VuFind/View/Helper/Root/RecordLinker.html"><abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr></a> $helper)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a record linker helper (optional -- allows enhancement of some metadata
+with VuFind-specific links).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/View/Helper/Root/RecordLinker.html"><abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr></a></td>
+                <td>$helper</td>
+                <td><p>Helper to set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRecordFormatter">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_setRecordFormatter">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 285</div>
+        <code>                    void
+    <strong>setRecordFormatter</strong>(<a href="../../../VuFindApi/Formatter/RecordFormatter.html"><abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> $formatter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a record formatter (optional -- allows the vufind record format to be
+returned).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindApi/Formatter/RecordFormatter.html"><abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></td>
+                <td>$formatter</td>
+                <td><p>Record formatter</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUTCDateTime">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_getUTCDateTime">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 300</div>
+        <code>            protected        string
+    <strong>getUTCDateTime</strong>(string $time = &#039;now&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the current UTC date/time in ISO 8601 format.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$time</td>
+                <td><p>Time string to represent as UTC (default = 'now')</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponse">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_getResponse">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 313</div>
+        <code>                    string
+    <strong>getResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Respond to the OAI-PMH request.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachDeleted">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_attachDeleted">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 345</div>
+        <code>            protected        void
+    <strong>attachDeleted</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a> $xml, array $tracker, bool $headerOnly = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assign necessary interface variables to display a deleted record.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+                <td>$xml</td>
+                <td><p>XML to update</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tracker</td>
+                <td><p>Array representing a change_tracker row</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$headerOnly</td>
+                <td><p>Only attach the header?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachRecordHeader">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_attachRecordHeader">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 371</div>
+        <code>            protected        void
+    <strong>attachRecordHeader</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a> $xml, string $id, string $date, array $sets = [], string $status = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach a record header to an XML document.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+                <td>$xml</td>
+                <td><p>XML to update</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record id</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td><p>Record modification date</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$sets</td>
+                <td><p>Set(s) containing record</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$status</td>
+                <td><p>Record status code</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVuFindMetadata">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_getVuFindMetadata">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 397</div>
+        <code>            protected        string
+    <strong>getVuFindMetadata</strong>(object $record)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for attachNonDeleted() to build the VuFind metadata for
+a record driver.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$record</td>
+                <td><p>A record driver object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachNonDeleted">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_attachNonDeleted">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 454</div>
+        <code>            protected        bool
+    <strong>attachNonDeleted</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a> $container, object $record, string $format, bool $headerOnly = false, string $set = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach a non-deleted record to an XML document.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+                <td>$container</td>
+                <td><p>XML container for new record</p></td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$record</td>
+                <td><p>A record driver object</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Metadata format to obtain (false for none)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$headerOnly</td>
+                <td><p>Only attach the header?</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$set</td>
+                <td><p>Currently active set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecord">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_getRecord">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 522</div>
+        <code>            protected        string
+    <strong>getRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Respond to a GetRecord request.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasParam">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_hasParam">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 572</div>
+        <code>            protected        bool
+    <strong>hasParam</strong>(string $param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Was the specified parameter provided?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$param</td>
+                <td><p>Name of the parameter to check.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if parameter is set and non-empty.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_identify">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_identify">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 582</div>
+        <code>            protected        string
+    <strong>identify</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Respond to an Identify request:</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsVuFindMetadata">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_supportsVuFindMetadata">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 620</div>
+        <code>            protected        bool
+    <strong>supportsVuFindMetadata</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the current configuration support the VuFind metadata format (using
+the API's record formatter.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeMetadataFormats">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_initializeMetadataFormats">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 631</div>
+        <code>            protected        void
+    <strong>initializeMetadataFormats</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize data about metadata formats. (This is called on demand and is
+defined as a separate method to allow easy override by child classes).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMetadataFormats">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_getMetadataFormats">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 655</div>
+        <code>            protected        array
+    <strong>getMetadataFormats</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get metadata formats; initialize the list if necessary.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeSettings">
+        <div class="location">at line 72</div>
+        <code>            protected        void
+    <strong>initializeSettings</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load data from the OAI section of config.ini.  (This is called by the
+constructor and is only a separate method to allow easy override by child
+classes).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>VuFind configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listMetadataFormats">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_listMetadataFormats">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 738</div>
+        <code>            protected        string
+    <strong>listMetadataFormats</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Respond to a ListMetadataFormats request.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listRecords">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_listRecords">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 784</div>
+        <code>            protected        string
+    <strong>listRecords</strong>(string $verb = &#039;ListRecords&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Respond to a ListIdentifiers or ListRecords request (the $verb parameter
+determines the exact format of the response).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$verb</td>
+                <td><p>'ListIdentifiers' or 'ListRecords'</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listSets">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_listSets">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 896</div>
+        <code>            protected        string
+    <strong>listSets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Respond to a ListSets request.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listRecordsGetDeleted">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_listRecordsGetDeleted">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 962</div>
+        <code>            protected        <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+    <strong>listRecordsGetDeleted</strong>(int $from, int $until, int $currentCursor)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an object containing the next page of deleted records from the specified
+date range.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td><p>Start date.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$until</td>
+                <td><p>End date.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$currentCursor</td>
+                <td><p>Offset into result set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listRecordsGetDeletedCount">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_listRecordsGetDeletedCount">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 982</div>
+        <code>            protected        int
+    <strong>listRecordsGetDeletedCount</strong>(int $from, int $until)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a count of all deleted records in the specified date range.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td><p>Start date.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$until</td>
+                <td><p>End date.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listRecordsGetNonDeleted">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_listRecordsGetNonDeleted">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1005</div>
+        <code>            protected        <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+    <strong>listRecordsGetNonDeleted</strong>(int $from, int $until, mixed $offset, int $limit, string $format, string $set = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of information on non-deleted records in the specified range.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td><p>Start date.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$until</td>
+                <td><p>End date.</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td><p>Solr offset, or cursorMark for the position in the full
+result list (depending on settings).</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Max number of full records to return.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Requested record format</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$set</td>
+                <td><p>Set to limit to (empty string for none).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+            <td><p>Search result object.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listRecordsGetParams">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_listRecordsGetParams">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1066</div>
+        <code>            protected        mixed
+    <strong>listRecordsGetParams</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get parameters for use in the listRecords method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Array of parameters or false on error</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isBadDate">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_isBadDate">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1144</div>
+        <code>            protected        bool
+    <strong>isBadDate</strong>(int $from, int $until)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate the from and until parameters for the listRecords method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td><p>String for start date.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$until</td>
+                <td><p>String for end date.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if invalid, false if not.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listRecordsValidateDates">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_listRecordsValidateDates">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1184</div>
+        <code>            protected        bool
+    <strong>listRecordsValidateDates</strong>(int $from, int $until)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate the from and until parameters for the listRecords method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td><p>Timestamp for start date.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$until</td>
+                <td><p>Timestamp for end date.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if valid, false if not.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadRecord">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_loadRecord">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1214</div>
+        <code>            protected        mixed
+    <strong>loadRecord</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load a specific record from the index.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record ID to load</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>The record array (if successful) or false</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadResumptionToken">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_loadResumptionToken">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1235</div>
+        <code>            protected        array
+    <strong>loadResumptionToken</strong>(string $token)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load parameters associated with a resumption token.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td><p>The resumption token to look up</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Parameters associated with token</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeDate">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_normalizeDate">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1260</div>
+        <code>            protected        int
+    <strong>normalizeDate</strong>(string $date, string $time = &#039;00:00:00&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Normalize a date to a Unix timestamp.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td><p>Date (ISO-8601 or YYYY-MM-DD HH:MM:SS)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$time</td>
+                <td><p>Default time to use if $date has no time attached</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>Unix timestamp (or false if $date invalid)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prefixID">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_prefixID">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1281</div>
+        <code>            protected        string
+    <strong>prefixID</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Prepend the OAI prefix to the provided ID number.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The ID to update.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The prefixed ID.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveResumptionToken">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_saveResumptionToken">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1301</div>
+        <code>            protected        void
+    <strong>saveResumptionToken</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a> $xml, array $params, int $currentCursor, int $listSize, string $cursorMark)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a resumption token to continue the current operation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+                <td>$xml</td>
+                <td><p>XML document to update with token.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Current operational parameters.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$currentCursor</td>
+                <td><p>Current cursor position in search
+results.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$listSize</td>
+                <td><p>Total size of search results.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cursorMark</td>
+                <td><p>cursorMark for the position in the full
+results list.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_showError">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_showError">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1334</div>
+        <code>            protected        string
+    <strong>showError</strong>(string $code, string $message)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Display an error response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td><p>The error code to display</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>The error string to display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createResponse">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_createResponse">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1356</div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>createResponse</strong>(bool $echoParams = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create an OAI-PMH response (shared support method used by various
+response-specific methods).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$echoParams</td>
+                <td><p>Include params in <request> tag?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stripID">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_stripID">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1386</div>
+        <code>            protected        string
+    <strong>stripID</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Strip the OAI prefix from the provided ID number.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The ID to strip.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The stripped ID (false if prefix invalid).</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unexpectedError">
+        <div class="location">in <a href="../../../VuFind/OAI/Server.html#method_unexpectedError">
+<abbr title="VuFind\OAI\Server">Server</abbr></a> at line 1413</div>
+        <code>            protected        void
+    <strong>unexpectedError</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Die with an unexpected error code (when something outside the scope of
+OAI-PMH fails).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Error message</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>EdsBackendFactory</strong>        extends <abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr>
+    <strong>EdsBackendFactory</strong>        extends <a href="../../../VuFind/Search/Factory/EdsBackendFactory.html"><abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a>
 </p>
 
                 <p>
@@ -100,21 +100,186 @@
             <div class="description">
             <p><p>Factory for the default EDS backend.</p></p>                    </div>
             
+                <h2>Traits</h2>
+
         
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Search/Factory/SharedListenersTrait.html"><abbr title="VuFind\Search\Factory\SharedListenersTrait">SharedListenersTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait containing methods for building shared listeners.</p></div>
+            </div>
+            </div>
     
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_serviceLocator">
+                                        protected                                        <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$serviceLocator</td>
+                <td class="last"><p>Service container.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#property_serviceLocator">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_logger">
+                                        protected                                        <abbr title="Laminas\Log\LoggerInterface">LoggerInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$logger</td>
+                <td class="last">Logger.</td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#property_logger">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_edsConfig">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$edsConfig</td>
+                <td class="last"><p>EDS configuration</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#property_edsConfig">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_accountData">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$accountData</td>
+                <td class="last"><p>EDS Account data</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#property_accountData">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../KnihovnyCz/Search/EDS/Backend/Connector.html"><abbr title="KnihovnyCz\Search\EDS\Backend\Connector">Connector</abbr></a>
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method___construct">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setup">setup</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $sm)
+        
+                                            <p><p>Initialize the factory</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_setup">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\Client">Client</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createHttpClient">createHttpClient</a>(int|null $timeout = null, array $options = [], string $url = null)
+        
+                                            <p><p>Create HTTP Client</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_createHttpClient">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\Search\Factory\Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createConnectorCache">createConnectorCache</a>(<abbr title="Laminas\Config\Config">Config</abbr> $searchConfig)
+        
+                                            <p><p>Create cache for the connector if enabled in configuration</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_createConnectorCache">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHideFacetValueListener">getHideFacetValueListener</a>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend, <abbr title="Laminas\Config\Config">Config</abbr> $facet)
+        
+                                            <p><p>Get a hide facet value listener for the backend</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/SharedListenersTrait.html#method_getHideFacetValueListener">
+<abbr title="VuFind\Search\Factory\SharedListenersTrait">SharedListenersTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___invoke">__invoke</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $sm, string $name, array $options = null)
+        
+                                            <p><p>Create service</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method___invoke">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createBackend">createBackend</a>(<a href="../../../VuFindSearch/Backend/EDS/Connector.html"><abbr title="VuFindSearch\Backend\EDS\Connector">Connector</abbr></a> $connector)
+        
+                                            <p><p>Create the EDS backend.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method_createBackend">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/EDS/Connector.html"><abbr title="VuFindSearch\Backend\EDS\Connector">Connector</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_createConnector">createConnector</a>()
         
                                             <p><p>Create the EDS connector.</p></p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/EDS/QueryBuilder.html"><abbr title="VuFindSearch\Backend\EDS\QueryBuilder">QueryBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createQueryBuilder">createQueryBuilder</a>()
+        
+                                            <p><p>Create the EDS query builder.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method_createQueryBuilder">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/EDS/Response/RecordCollectionFactory.html"><abbr title="VuFindSearch\Backend\EDS\Response\RecordCollectionFactory">RecordCollectionFactory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createRecordCollectionFactory">createRecordCollectionFactory</a>()
+        
+                                            <p><p>Create the record collection factory</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method_createRecordCollectionFactory">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createListeners">createListeners</a>(<a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a> $backend)
+        
+                                            <p><p>Create listeners.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method_createListeners">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a></small></div>
             </div>
             </div>
 
@@ -123,9 +288,324 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method___construct">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a> at line 56</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setup">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_setup">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a> at line 67</div>
+        <code>                    void
+    <strong>setup</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $sm)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the factory</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$sm</td>
+                <td><p>Service manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createHttpClient">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_createHttpClient">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a> at line 82</div>
+        <code>            protected        <abbr title="Laminas\Http\Client">Client</abbr>
+    <strong>createHttpClient</strong>(int|null $timeout = null, array $options = [], string $url = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create HTTP Client</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$timeout</td>
+                <td><p>Request timeout</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Other options</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>Request URL (needed for proper local address check when
+the client is being proxified)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\Client">Client</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createConnectorCache">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_createConnectorCache">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a> at line 103</div>
+        <code>            protected        <abbr title="VuFind\Search\Factory\Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>|null
+    <strong>createConnectorCache</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $searchConfig)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create cache for the connector if enabled in configuration</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$searchConfig</td>
+                <td><p>Search configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\Search\Factory\Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHideFacetValueListener">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/SharedListenersTrait.html#method_getHideFacetValueListener">
+<abbr title="VuFind\Search\Factory\SharedListenersTrait">SharedListenersTrait</abbr></a> at line 53</div>
+        <code>            protected        mixed
+    <strong>getHideFacetValueListener</strong>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend, <abbr title="Laminas\Config\Config">Config</abbr> $facet)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a hide facet value listener for the backend</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a></td>
+                <td>$backend</td>
+                <td><p>Search backend</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$facet</td>
+                <td><p>Configuration of facets</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>null|HideFacetValueListener</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___invoke">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method___invoke">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a> at line 81</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a>
+    <strong>__invoke</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $sm, string $name, array $options = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create service</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$sm</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Requested service name (unused)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Extra options (unused)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBackend">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method_createBackend">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a> at line 103</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a>
+    <strong>createBackend</strong>(<a href="../../../VuFindSearch/Backend/EDS/Connector.html"><abbr title="VuFindSearch\Backend\EDS\Connector">Connector</abbr></a> $connector)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the EDS backend.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/EDS/Connector.html"><abbr title="VuFindSearch\Backend\EDS\Connector">Connector</abbr></a></td>
+                <td>$connector</td>
+                <td>Connector</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_createConnector">
         <div class="location">at line 52</div>
-        <code>            protected        <a href="../../../KnihovnyCz/Search/EDS/Backend/Connector.html"><abbr title="KnihovnyCz\Search\EDS\Backend\Connector">Connector</abbr></a>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/EDS/Connector.html"><abbr title="VuFindSearch\Backend\EDS\Connector">Connector</abbr></a>
     <strong>createConnector</strong>()
         </code>
     </h3>
@@ -143,7 +623,119 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../KnihovnyCz/Search/EDS/Backend/Connector.html"><abbr title="KnihovnyCz\Search\EDS\Backend\Connector">Connector</abbr></a></td>
+            <td><a href="../../../VuFindSearch/Backend/EDS/Connector.html"><abbr title="VuFindSearch\Backend\EDS\Connector">Connector</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createQueryBuilder">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method_createQueryBuilder">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a> at line 170</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/EDS/QueryBuilder.html"><abbr title="VuFindSearch\Backend\EDS\QueryBuilder">QueryBuilder</abbr></a>
+    <strong>createQueryBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the EDS query builder.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/EDS/QueryBuilder.html"><abbr title="VuFindSearch\Backend\EDS\QueryBuilder">QueryBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRecordCollectionFactory">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method_createRecordCollectionFactory">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a> at line 181</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/EDS/Response/RecordCollectionFactory.html"><abbr title="VuFindSearch\Backend\EDS\Response\RecordCollectionFactory">RecordCollectionFactory</abbr></a>
+    <strong>createRecordCollectionFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the record collection factory</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/EDS/Response/RecordCollectionFactory.html"><abbr title="VuFindSearch\Backend\EDS\Response\RecordCollectionFactory">RecordCollectionFactory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createListeners">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/EdsBackendFactory.html#method_createListeners">
+<abbr title="VuFind\Search\Factory\EdsBackendFactory">EdsBackendFactory</abbr></a> at line 200</div>
+        <code>            protected        void
+    <strong>createListeners</strong>(<a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a> $backend)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create listeners.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/EDS/Backend.html"><abbr title="VuFindSearch\Backend\EDS\Backend">Backend</abbr></a></td>
+                <td>$backend</td>
+                <td>Backend</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
             <td></td>
         </tr>
     </table>

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\AjaxHandler\GetSaveStatuses | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_AjaxHandler_GetSaveStatuses" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/AjaxHandler.html">AjaxHandler</a></li><li class="backslash">\</li><li>GetSaveStatuses</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>GetSaveStatuses    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>GetSaveStatuses</strong>        extends <a href="../../VuFind/AjaxHandler/AbstractBase.html"><abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a>        implements        <a href="../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>&quot;Get Save Statuses&quot; AJAX handler</p></p>            <p><p>Check one or more records to see if they are saved in one of the user's list.</p></p>        </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Lightweight translator aware marker interface (used as an alternative to
+\Laminas\I18n\Translator\TranslatorAwareInterface, which requires an excessive
+number of methods to be implemented).  If we switch to PHP 5.4 traits in the
+future, we can eliminate this interface in favor of the default Laminas version.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_sessionSettings">
+                                        protected                                        <a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a>
+                                                                                
+                                    </td>
+                <td>$sessionSettings</td>
+                <td class="last"><p>Session settings</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#property_sessionSettings">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_translator">
+                                        protected                                        <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$translator</td>
+                <td class="last">Translator</td>
+                <td><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#property_translator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_user">
+                                        protected                                        <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool
+                                                                                
+                                    </td>
+                <td>$user</td>
+                <td class="last"><p>Logged in user (or false)</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_urlHelper">
+                                        protected                                        <abbr title="Laminas\Mvc\Controller\Plugin\Url">Url</abbr>
+                                                                                
+                                    </td>
+                <td>$urlHelper</td>
+                <td class="last"><p>URL helper</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_disableSessionWrites">disableSessionWrites</a>()
+        
+                                            <p><p>Prevent session writes -- this is designed to be called prior to time-
+consuming AJAX operations to help reduce the odds of a timing-related bug
+that causes the wrong version of session data to be written to disk (see
+VUFIND-716 for more details).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#method_disableSessionWrites">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatResponse">formatResponse</a>(mixed $response, int $httpCode = null)
+        
+                                            <p><p>Format a response array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/AjaxHandler/AbstractBase.html#method_formatResponse">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTranslator">setTranslator</a>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        
+                                            <p><p>Set a translator</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslator">getTranslator</a>()
+        
+                                            <p><p>Get translator object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslatorLocale">getTranslatorLocale</a>(string $default = &#039;en&#039;)
+        
+                                            <p><p>Get the locale from the translator.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translate">translate</a>(string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateWithPrefix">translateWithPrefix</a>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateString">translateString</a>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        
+                                            <p><p>Get translation for a string</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractTextDomain">extractTextDomain</a>(string|object|array $target)
+        
+                                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a> $ss, <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool $user, <abbr title="Laminas\Mvc\Controller\Plugin\Url">Url</abbr> $urlHelper)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatListData">formatListData</a>(array $list)
+        
+                                            <p><p>Format list object into array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDataFromUser">getDataFromUser</a>(array $ids, array $sources)
+        
+                                            <p><p>Obtain status data from the current logged-in user.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handleRequest">handleRequest</a>(<abbr title="Laminas\Mvc\Controller\Plugin\Params">Params</abbr> $params)
+        
+                                            <p><p>Handle a request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_disableSessionWrites">
+        <div class="location">in <a href="../../VuFind/AjaxHandler/AbstractBase.html#method_disableSessionWrites">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a> at line 58</div>
+        <code>            protected        void
+    <strong>disableSessionWrites</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Prevent session writes -- this is designed to be called prior to time-
+consuming AJAX operations to help reduce the odds of a timing-related bug
+that causes the wrong version of session data to be written to disk (see
+VUFIND-716 for more details).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatResponse">
+        <div class="location">in <a href="../../VuFind/AjaxHandler/AbstractBase.html#method_formatResponse">
+<abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a> at line 74</div>
+        <code>            protected        array
+    <strong>formatResponse</strong>(mixed $response, int $httpCode = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format a response array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$response</td>
+                <td><p>Response data</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$httpCode</td>
+                <td><p>HTTP status code (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTranslator">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 60</div>
+        <code>                    <a href="../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+    <strong>setTranslator</strong>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a translator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td>Translator</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslator">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 71</div>
+        <code>                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translator object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslatorLocale">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 83</div>
+        <code>                    string
+    <strong>getTranslatorLocale</strong>(string $default = &#039;en&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the locale from the translator.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default to use if translator absent.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translate">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 103</div>
+        <code>                    string
+    <strong>translate</strong>(string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateWithPrefix">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 152</div>
+        <code>                    string
+    <strong>translateWithPrefix</strong>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td><p>Translation key prefix</p></td>
+            </tr>
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateString">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 178</div>
+        <code>            protected        string
+    <strong>translateString</strong>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translation for a string</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>String to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is found
+(null for no default).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Text domain (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractTextDomain">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 215</div>
+        <code>            protected        array
+    <strong>extractTextDomain</strong>(string|object|array $target)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 72</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a> $ss, <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool $user, <abbr title="Laminas\Mvc\Controller\Plugin\Url">Url</abbr> $urlHelper)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Session/Settings.html"><abbr title="VuFind\Session\Settings">Settings</abbr></a></td>
+                <td>$ss</td>
+                <td><p>Session settings</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool</td>
+                <td>$user</td>
+                <td><p>Logged in user (or false)</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Mvc\Controller\Plugin\Url">Url</abbr></td>
+                <td>$urlHelper</td>
+                <td><p>URL helper</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatListData">
+        <div class="location">at line 86</div>
+        <code>            protected        array
+    <strong>formatListData</strong>(array $list)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format list object into array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$list</td>
+                <td><p>List data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDataFromUser">
+        <div class="location">at line 103</div>
+        <code>            protected        array
+    <strong>getDataFromUser</strong>(array $ids, array $sources)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Obtain status data from the current logged-in user.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>IDs to retrieve</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$sources</td>
+                <td><p>Source data for IDs (parallel-indexed)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleRequest">
+        <div class="location">at line 130</div>
+        <code>                    array
+    <strong>handleRequest</strong>(<abbr title="Laminas\Mvc\Controller\Plugin\Params">Params</abbr> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Handle a request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Mvc\Controller\Plugin\Params">Params</abbr></td>
+                <td>$params</td>
+                <td><p>Parameter helper from controller</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>[response data, HTTP status code]</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

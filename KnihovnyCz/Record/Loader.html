@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>Loader</strong>        extends <abbr title="VuFind\Record\Loader">Loader</abbr>
+    <strong>Loader</strong>        extends <a href="../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a>
 </p>
 
                 <p>
@@ -100,7 +100,22 @@
             <div class="description">
             <p><p>Record loader</p></p>                    </div>
             
+                <h2>Traits</h2>
+
         
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
             <h2>Constants</h2>    <table class="table table-condensed">
                     <tr>
                 <td>
@@ -118,6 +133,46 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_recordFactory">
+                                        protected                                        <a href="../../VuFind/RecordDriver/PluginManager.html"><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$recordFactory</td>
+                <td class="last"><p>Record factory</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Record/Loader.html#property_recordFactory">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchService">
+                                        protected                                        <a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a>
+                                                                                
+                                    </td>
+                <td>$searchService</td>
+                <td class="last"><p>Search service</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Record/Loader.html#property_searchService">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordCache">
+                                        protected                                        <a href="../../VuFind/Record/Cache.html"><abbr title="VuFind\Record\Cache">Cache</abbr></a>
+                                                                                
+                                    </td>
+                <td>$recordCache</td>
+                <td class="last"><p>Record cache</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Record/Loader.html#property_recordCache">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fallbackLoader">
+                                        protected                                        <a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$fallbackLoader</td>
+                <td class="last"><p>Fallback record loader</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Record/Loader.html#property_fallbackLoader">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_filterChildRecords">
                                         protected                                        bool
                                                                                 
@@ -134,23 +189,114 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<abbr title="VuFindSearch\Service">Service</abbr> $searchService, <abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr> $recordFactory, <abbr title="VuFind\Record\Cache">Cache</abbr> $recordCache = null, <abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr> $fallbackLoader = null, bool $filterChildRecords = true)
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a> $searchService, <a href="../../VuFind/RecordDriver/PluginManager.html"><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></a> $recordFactory, <a href="../../VuFind/Record/Cache.html"><abbr title="VuFind\Record\Cache">Cache</abbr></a> $recordCache = null, <a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a> $fallbackLoader = null, bool $filterChildRecords = true)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr>
+                    <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_load">load</a>(string $id, string $source = DEFAULT_SEARCH_BACKEND, bool $tolerateMissing = false, <abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params = null)
+                    <a href="#method_load">load</a>(string $id, string $source = DEFAULT_SEARCH_BACKEND, bool $tolerateMissing = false, <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
         
                                             <p><p>Given an ID and record source, load the requested record object.</p></p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadBatchForSource">loadBatchForSource</a>(array $ids, string $source = DEFAULT_SEARCH_BACKEND, bool $tolerateBackendExceptions = false, <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Given an array of IDs and a record source, load a batch of records for
+that source.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Record/Loader.html#method_loadBatchForSource">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/RecordDriver/Missing.html"><abbr title="VuFind\RecordDriver\Missing">Missing</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_buildMissingRecord">buildMissingRecord</a>(array $details)
+        
+                                            <p><p>Build a &quot;missing record&quot; driver.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Record/Loader.html#method_buildMissingRecord">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadBatch">loadBatch</a>(array $ids, bool $tolerateBackendExceptions = false, <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>[] $params = [])
+        
+                                            <p><p>Given an array of associative arrays with id and source keys (or pipe-
+separated source|id strings), load all of the requested records in the
+requested order.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Record/Loader.html#method_loadBatch">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCacheContext">setCacheContext</a>(string $context)
+        
+                                            <p><p>Set the context to control cache behavior</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Record/Loader.html#method_setCacheContext">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a></small></div>
             </div>
             </div>
 
@@ -159,10 +305,231 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">at line 72</div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="VuFindSearch\Service">Service</abbr> $searchService, <abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr> $recordFactory, <abbr title="VuFind\Record\Cache">Cache</abbr> $recordCache = null, <abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr> $fallbackLoader = null, bool $filterChildRecords = true)
+    <strong>__construct</strong>(<a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a> $searchService, <a href="../../VuFind/RecordDriver/PluginManager.html"><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></a> $recordFactory, <a href="../../VuFind/Record/Cache.html"><abbr title="VuFind\Record\Cache">Cache</abbr></a> $recordCache = null, <a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a> $fallbackLoader = null, bool $filterChildRecords = true)
         </code>
     </h3>
     <div class="details">    
@@ -178,22 +545,22 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFindSearch\Service">Service</abbr></td>
+                <td><a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a></td>
                 <td>$searchService</td>
                 <td><p>Search service</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></td>
+                <td><a href="../../VuFind/RecordDriver/PluginManager.html"><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></a></td>
                 <td>$recordFactory</td>
                 <td><p>Record loader</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFind\Record\Cache">Cache</abbr></td>
+                <td><a href="../../VuFind/Record/Cache.html"><abbr title="VuFind\Record\Cache">Cache</abbr></a></td>
                 <td>$recordCache</td>
                 <td><p>Record Cache</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></td>
+                <td><a href="../../VuFind/Record/FallbackLoader/PluginManager.html"><abbr title="VuFind\Record\FallbackLoader\PluginManager">PluginManager</abbr></a></td>
                 <td>$fallbackLoader</td>
                 <td><p>Fallback record loader</p></td>
             </tr>
@@ -215,8 +582,8 @@
                     <div class="method-item">
                     <h3 id="method_load">
         <div class="location">at line 98</div>
-        <code>                    <abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr>
-    <strong>load</strong>(string $id, string $source = DEFAULT_SEARCH_BACKEND, bool $tolerateMissing = false, <abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params = null)
+        <code>                    <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+    <strong>load</strong>(string $id, string $source = DEFAULT_SEARCH_BACKEND, bool $tolerateMissing = false, <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
         </code>
     </h3>
     <div class="details">    
@@ -248,7 +615,7 @@
 instead of throwing an exception if the record cannot be found?</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></td>
+                <td><a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
                 <td>$params</td>
                 <td><p>Search backend parameters</p></td>
             </tr>
@@ -259,7 +626,7 @@ instead of throwing an exception if the record cannot be found?</p></td>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></td>
+            <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
             <td></td>
         </tr>
     </table>
@@ -274,6 +641,238 @@ instead of throwing an exception if the record cannot be found?</p></td>
             </tr>
             </table>
 
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadBatchForSource">
+        <div class="location">in <a href="../../VuFind/Record/Loader.html#method_loadBatchForSource">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a> at line 192</div>
+        <code>                    array
+    <strong>loadBatchForSource</strong>(array $ids, string $source = DEFAULT_SEARCH_BACKEND, bool $tolerateBackendExceptions = false, <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given an array of IDs and a record source, load a batch of records for
+that source.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>Record IDs</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Record source</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$tolerateBackendExceptions</td>
+                <td><p>Whether to tolerate backend
+exceptions that may be caused by e.g. connection issues or changes in
+subcscriptions</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search backend parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildMissingRecord">
+        <div class="location">in <a href="../../VuFind/Record/Loader.html#method_buildMissingRecord">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a> at line 284</div>
+        <code>            protected        <a href="../../VuFind/RecordDriver/Missing.html"><abbr title="VuFind\RecordDriver\Missing">Missing</abbr></a>
+    <strong>buildMissingRecord</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Build a &quot;missing record&quot; driver.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>Associative array of record details (from a
+SourceAndIdList)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/RecordDriver/Missing.html"><abbr title="VuFind\RecordDriver\Missing">Missing</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadBatch">
+        <div class="location">in <a href="../../VuFind/Record/Loader.html#method_loadBatch">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a> at line 313</div>
+        <code>                    array
+    <strong>loadBatch</strong>(array $ids, bool $tolerateBackendExceptions = false, <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>[] $params = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given an array of associative arrays with id and source keys (or pipe-
+separated source|id strings), load all of the requested records in the
+requested order.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>Array of associative arrays with
+id/source keys or strings in source|id format.  In associative array formats,
+there is also an optional &quot;extra_fields&quot; key which can be used to pass in data
+formatted as if it belongs to the Solr schema; this is used to create
+a mock driver object if the real data source is unavailable.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$tolerateBackendExceptions</td>
+                <td><p>Whether to tolerate backend
+exceptions that may be caused by e.g. connection issues or changes in
+subcscriptions</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>[]</td>
+                <td>$params</td>
+                <td><p>Associative array of search
+backend parameters keyed with source key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of record drivers</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheContext">
+        <div class="location">in <a href="../../VuFind/Record/Loader.html#method_setCacheContext">
+<abbr title="VuFind\Record\Loader">Loader</abbr></a> at line 360</div>
+        <code>                    void
+    <strong>setCacheContext</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the context to control cache behavior</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td><p>Cache context</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
             
             
                     </div>

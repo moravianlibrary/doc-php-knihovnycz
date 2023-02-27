@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\ILS\Driver\XCNCIP2Test | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_ILS_Driver_XCNCIP2Test" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/ILS.html">ILS</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/ILS/Driver.html">Driver</a></li><li class="backslash">\</li><li>XCNCIP2Test</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>XCNCIP2Test    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>XCNCIP2Test</strong>        extends <a href="../../../VuFindTest/Unit/ILSDriverTestCase.html"><abbr title="VuFindTest\Unit\ILSDriverTestCase">ILSDriverTestCase</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>ILS driver test</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFindTest/Feature/FixtureTrait.html"><abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait adding functionality for loading fixtures.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_driver">
+                                        protected                                        <a href="../../../VuFind/ILS/Driver/AbstractBase.html"><abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a>
+                                                                                
+                                    </td>
+                <td>$driver</td>
+                <td class="last"><p>ILS driver</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFindTest/Unit/ILSDriverTestCase.html#property_driver">
+<abbr title="VuFindTest\Unit\ILSDriverTestCase">ILSDriverTestCase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_transactionsTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$transactionsTests</td>
+                <td class="last"><p>Test definition for testGetMyTransactions</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_notRenewableTransactionsTests">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$notRenewableTransactionsTests</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_finesTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$finesTests</td>
+                <td class="last"><p>Test definition for testGetMyFines</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_loginTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$loginTests</td>
+                <td class="last"><p>Test definition for testPatronLogin</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_holdsTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$holdsTests</td>
+                <td class="last"><p>Test definition for testGetMyHolds</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_profileTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$profileTests</td>
+                <td class="last"><p>Test definition for testGetMyProfile</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_storageRetrievalTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$storageRetrievalTests</td>
+                <td class="last"><p>Test definition for testGetMyStorageRetrievalRequests</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_statusesTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$statusesTests</td>
+                <td class="last"><p>Test definition for testGetStatuses</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_holdingTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$holdingTests</td>
+                <td class="last"><p>Test definition for testGetHolding</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_placeHoldTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$placeHoldTests</td>
+                <td class="last"><p>Test definition for testPlaceHold</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_placeStorageRetrievalRequestTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$placeStorageRetrievalRequestTests</td>
+                <td class="last"><p>Test definition for testPlaceStorageRetrievalRequest</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cancelHoldsTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$cancelHoldsTests</td>
+                <td class="last"><p>Test definition for testCancelHolds</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cancelStorageRetrievalTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$cancelStorageRetrievalTests</td>
+                <td class="last"><p>Test definition for testCancelStorageRetrievalRequests</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_renewMyItemsTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$renewMyItemsTests</td>
+                <td class="last"><p>Test definition for testRenewMyItems</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_renewMyItemsWithDisabledRenewals">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$renewMyItemsWithDisabledRenewals</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_patronBlocksTests">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$patronBlocksTests</td>
+                <td class="last"><p>Test definitions for getPatronBlocks tests</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_accountBlocksTests">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$accountBlocksTests</td>
+                <td class="last"><p>Test definitions for getAccountBlocks tests</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_requestTests">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$requestTests</td>
+                <td class="last"><p>Test definition for testGetRequestMethods</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMissingConfiguration">testMissingConfiguration</a>()
+        
+                                            <p><p>Test that driver complains about missing configuration.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Unit/ILSDriverTestCase.html#method_testMissingConfiguration">
+<abbr title="VuFindTest\Unit\ILSDriverTestCase">ILSDriverTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixtureDir">getFixtureDir</a>(string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Get the base directory containing fixtures.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/FixtureTrait.html#method_getFixtureDir">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixturePath">getFixturePath</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Resolve fixture path.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/FixtureTrait.html#method_getFixturePath">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixture">getFixture</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Load a fixture file.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/FixtureTrait.html#method_getFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getJsonFixture">getJsonFixture</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Load a JSON fixture from file (using associative array return type).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/FixtureTrait.html#method_getJsonFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p><p>Standard setup method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyTransactions">testGetMyTransactions</a>()
+        
+                                            <p><p>Test getMyTransactions</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testDisableRenewalsConfiguration">testDisableRenewalsConfiguration</a>()
+        
+                                            <p><p>Test disable renewals configutaion</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyFines">testGetMyFines</a>()
+        
+                                            <p><p>Test getMyFines</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testPatronLogin">testPatronLogin</a>()
+        
+                                            <p><p>Test patronLogin</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyHolds">testGetMyHolds</a>()
+        
+                                            <p><p>Test getMyHolds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyProfile">testGetMyProfile</a>()
+        
+                                            <p><p>Test getMyProfile</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyStorageRetrievalRequests">testGetMyStorageRetrievalRequests</a>()
+        
+                                            <p><p>Test getMyStorageRetrievalRequests</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetStatuses">testGetStatuses</a>()
+        
+                                            <p><p>Test getStatuses</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetHolding">testGetHolding</a>()
+        
+                                            <p><p>Test getHolding</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetPickupLocations">testGetPickupLocations</a>()
+        
+                                            <p><p>Test getPickUpLocations</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testPlaceHold">testPlaceHold</a>()
+        
+                                            <p><p>Test placeHold</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testPlaceStorageRetrievalRequest">testPlaceStorageRetrievalRequest</a>()
+        
+                                            <p><p>Test placeStorageRetrievalRequest</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCancelHolds">testCancelHolds</a>()
+        
+                                            <p><p>Test cancelHolds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCancelStorageRetrievalRequests">testCancelStorageRetrievalRequests</a>()
+        
+                                            <p><p>Test cancelHolds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testRenewMyItems">testRenewMyItems</a>()
+        
+                                            <p><p>Test renewMyItems</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetRequestMethods">testGetRequestMethods</a>()
+        
+                                            <p><p>Test methods for creating NCIP requests</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetCancelRequestException">testGetCancelRequestException</a>()
+        
+                                            <p><p>Test that getCancelRequest throws exception without mandatory parameters
+(itemId or requestId)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetPatronBlocks">testGetPatronBlocks</a>()
+        
+                                            <p><p>Test method getPatronBlocks</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetAccountBlocks">testGetAccountBlocks</a>()
+        
+                                            <p><p>Test method getPatronBlocks</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testIsPatronBlocked">testIsPatronBlocked</a>()
+        
+                                            <p><p>Test method for isPatronBlocked</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testParseProblem">testParseProblem</a>()
+        
+                                            <p><p>Test parse problem method</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testAcceptOtherHttpStastusCodes">testAcceptOtherHttpStastusCodes</a>()
+        
+                                            <p><p>Test other accepted HTTP status code configuration</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testInvalidateResponseCache">testInvalidateResponseCache</a>()
+        
+                                            <p><p>Test invalidateResponseCache</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetBib">testGetBib</a>()
+        
+                                            <p><p>Test getBib method</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mockResponse">mockResponse</a>(string|array|null $fixture = null)
+        
+                                            <p><p>Mock fixture as HTTP client response</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\Response">Response</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadResponse">loadResponse</a>(string $filename)
+        
+                                            <p><p>Load response from file</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configureDriver">configureDriver</a>(array|null $config = null)
+        
+                                            <p><p>Configure driver for test case</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_testMissingConfiguration">
+        <div class="location">in <a href="../../../VuFindTest/Unit/ILSDriverTestCase.html#method_testMissingConfiguration">
+<abbr title="VuFindTest\Unit\ILSDriverTestCase">ILSDriverTestCase</abbr></a> at line 54</div>
+        <code>                    void
+    <strong>testMissingConfiguration</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that driver complains about missing configuration.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFixtureDir">
+        <div class="location">in <a href="../../../VuFindTest/Feature/FixtureTrait.html#method_getFixtureDir">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 51</div>
+        <code>            protected        string
+    <strong>getFixtureDir</strong>(string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the base directory containing fixtures.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFixturePath">
+        <div class="location">in <a href="../../../VuFindTest/Feature/FixtureTrait.html#method_getFixturePath">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 65</div>
+        <code>            protected        string
+    <strong>getFixturePath</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve fixture path.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFixture">
+        <div class="location">in <a href="../../../VuFindTest/Feature/FixtureTrait.html#method_getFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 87</div>
+        <code>            protected        string
+    <strong>getFixture</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load a fixture file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getJsonFixture">
+        <div class="location">in <a href="../../../VuFindTest/Feature/FixtureTrait.html#method_getJsonFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 100</div>
+        <code>            protected        array
+    <strong>getJsonFixture</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load a JSON fixture from file (using associative array return type).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">at line 53</div>
+        <code>                    void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard setup method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyTransactions">
+        <div class="location">at line 738</div>
+        <code>                    void
+    <strong>testGetMyTransactions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getMyTransactions</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDisableRenewalsConfiguration">
+        <div class="location">at line 760</div>
+        <code>                    void
+    <strong>testDisableRenewalsConfiguration</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test disable renewals configutaion</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyFines">
+        <div class="location">at line 822</div>
+        <code>                    void
+    <strong>testGetMyFines</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getMyFines</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testPatronLogin">
+        <div class="location">at line 844</div>
+        <code>                    void
+    <strong>testPatronLogin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test patronLogin</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyHolds">
+        <div class="location">at line 863</div>
+        <code>                    void
+    <strong>testGetMyHolds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getMyHolds</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyProfile">
+        <div class="location">at line 885</div>
+        <code>                    void
+    <strong>testGetMyProfile</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getMyProfile</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyStorageRetrievalRequests">
+        <div class="location">at line 907</div>
+        <code>                    void
+    <strong>testGetMyStorageRetrievalRequests</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getMyStorageRetrievalRequests</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetStatuses">
+        <div class="location">at line 929</div>
+        <code>                    void
+    <strong>testGetStatuses</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getStatuses</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetHolding">
+        <div class="location">at line 948</div>
+        <code>                    void
+    <strong>testGetHolding</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getHolding</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetPickupLocations">
+        <div class="location">at line 967</div>
+        <code>                    void
+    <strong>testGetPickupLocations</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getPickUpLocations</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testPlaceHold">
+        <div class="location">at line 1015</div>
+        <code>                    void
+    <strong>testPlaceHold</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test placeHold</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testPlaceStorageRetrievalRequest">
+        <div class="location">at line 1043</div>
+        <code>                    void
+    <strong>testPlaceStorageRetrievalRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test placeStorageRetrievalRequest</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCancelHolds">
+        <div class="location">at line 1071</div>
+        <code>                    void
+    <strong>testCancelHolds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test cancelHolds</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCancelStorageRetrievalRequests">
+        <div class="location">at line 1098</div>
+        <code>                    void
+    <strong>testCancelStorageRetrievalRequests</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test cancelHolds</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testRenewMyItems">
+        <div class="location">at line 1125</div>
+        <code>                    void
+    <strong>testRenewMyItems</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test renewMyItems</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetRequestMethods">
+        <div class="location">at line 1248</div>
+        <code>                    void
+    <strong>testGetRequestMethods</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test methods for creating NCIP requests</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetCancelRequestException">
+        <div class="location">at line 1273</div>
+        <code>                    void
+    <strong>testGetCancelRequestException</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that getCancelRequest throws exception without mandatory parameters
+(itemId or requestId)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetPatronBlocks">
+        <div class="location">at line 1298</div>
+        <code>                    void
+    <strong>testGetPatronBlocks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test method getPatronBlocks</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetAccountBlocks">
+        <div class="location">at line 1321</div>
+        <code>                    void
+    <strong>testGetAccountBlocks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test method getPatronBlocks</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testIsPatronBlocked">
+        <div class="location">at line 1337</div>
+        <code>                    void
+    <strong>testIsPatronBlocked</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test method for isPatronBlocked</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testParseProblem">
+        <div class="location">at line 1365</div>
+        <code>                    void
+    <strong>testParseProblem</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test parse problem method</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAcceptOtherHttpStastusCodes">
+        <div class="location">at line 1385</div>
+        <code>                    void
+    <strong>testAcceptOtherHttpStastusCodes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test other accepted HTTP status code configuration</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testInvalidateResponseCache">
+        <div class="location">at line 1445</div>
+        <code>                    void
+    <strong>testInvalidateResponseCache</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test invalidateResponseCache</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetBib">
+        <div class="location">at line 1474</div>
+        <code>                    
+    <strong>testGetBib</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getBib method</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mockResponse">
+        <div class="location">at line 1498</div>
+        <code>            protected        
+    <strong>mockResponse</strong>(string|array|null $fixture = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Mock fixture as HTTP client response</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$fixture</td>
+                <td><p>Fixture file
+*</p></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadResponse">
+        <div class="location">at line 1524</div>
+        <code>            protected        <abbr title="Laminas\Http\Response">Response</abbr>
+    <strong>loadResponse</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load response from file</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>File name of raw HTTP response</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\Response">Response</abbr></td>
+            <td><p>Response object</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configureDriver">
+        <div class="location">at line 1538</div>
+        <code>            protected        void
+    <strong>configureDriver</strong>(array|null $config = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure driver for test case</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|null</td>
+                <td>$config</td>
+                <td><p>ILS driver configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

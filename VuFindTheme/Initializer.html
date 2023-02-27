@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTheme\Initializer | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../doctum.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script async defer src="../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTheme_Initializer" data-root-path="../" data-search-index-url="../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../VuFindTheme.html">VuFindTheme</a></li><li class="backslash">\</li><li>Initializer</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Initializer    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Initializer</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>VuFind Theme Initializer</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>Theme configuration object</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_event">
+                                        protected                                        <abbr title="Laminas\Mvc\MvcEvent">MvcEvent</abbr>
+                                                                                
+                                    </td>
+                <td>$event</td>
+                <td class="last"><p>Laminas MVC Event</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_serviceManager">
+                                        protected                                        <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$serviceManager</td>
+                <td class="last"><p>Top-level service container</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tools">
+                                        protected                                        <a href="../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a>
+                                                                                
+                                    </td>
+                <td>$tools</td>
+                <td class="last"><p>Theme tools object</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mobile">
+                                        protected                                        <a href="../VuFindTheme/Mobile.html"><abbr title="VuFindTheme\Mobile">Mobile</abbr></a>
+                                                                                
+                                    </td>
+                <td>$mobile</td>
+                <td class="last"><p>Mobile interface detector</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cookieManager">
+                                        protected                                        <a href="../VuFind/Cookie/CookieManager.html"><abbr title="VuFind\Cookie\CookieManager">CookieManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$cookieManager</td>
+                <td class="last"><p>Cookie manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_themeInitialized">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$themeInitialized</td>
+                <td class="last"><p>A static flag used to determine if the theme has been initialized</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <abbr title="Laminas\Mvc\MvcEvent">MvcEvent</abbr>|<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $eventOrContainer)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_init">init</a>()
+        
+                                            <p><p>Initialize the theme.  This needs to be triggered as part of the dispatch
+event.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_pickTheme">pickTheme</a>(<abbr title="VuFindTheme\Laminas\Stdlib\RequestInterface">RequestInterface</abbr>|null $request)
+        
+                                            <p><p>Support method for init() -- figure out which theme option is active.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_sendThemeOptionsToView">sendThemeOptionsToView</a>()
+        
+                                            <p><p>Make the theme options available to the view.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getThemeOptions">getThemeOptions</a>()
+        
+                                            <p><p>Return an array of information about user-selectable themes.  Each entry in
+the array is an associative array with 'name', 'desc' and 'selected' keys.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUpThemeViewHelpers">setUpThemeViewHelpers</a>(array $helpers)
+        
+                                            <p><p>Support method for setUpThemes -- register view helpers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUpThemes">setUpThemes</a>(array $themes)
+        
+                                            <p><p>Support method for init() -- set up theme once current settings are known.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updateTranslator">updateTranslator</a>(array $themes)
+        
+                                            <p><p>Support method for setUpThemes() - add theme specific language files for
+translation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 118</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <abbr title="Laminas\Mvc\MvcEvent">MvcEvent</abbr>|<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $eventOrContainer)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Configuration object
+containing these keys:</p>
+<ul>
+  <li>theme - the name of the default theme for non-mobile devices</li>
+  <li>mobile_theme - the name of the default theme for mobile devices
+(omit to disable mobile support)</li>
+  <li>alternate_themes - a comma-separated list of alternate themes that
+can be accessed via the ui GET parameter; each entry is a colon-separated
+parameter-value:theme-name pair.</li>
+  <li>selectable_themes - a comma-separated list of themes that may be
+selected through the user interface; each entry is a colon-separated
+name:description pair, where name may be 'standard,' 'mobile,' or one of
+the parameter-values from the alternate_themes array.</li>
+  <li>generator - a Generator value to display in the HTML header
+(optional)</li>
+</ul></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Mvc\MvcEvent">MvcEvent</abbr>|<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$eventOrContainer</td>
+                <td><p>Laminas MVC Event object
+OR service container object</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at line 155</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the theme.  This needs to be triggered as part of the dispatch
+event.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pickTheme">
+        <div class="location">at line 200</div>
+        <code>            protected        string
+    <strong>pickTheme</strong>(<abbr title="VuFindTheme\Laminas\Stdlib\RequestInterface">RequestInterface</abbr>|null $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for init() -- figure out which theme option is active.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFindTheme\Laminas\Stdlib\RequestInterface">RequestInterface</abbr>|null</td>
+                <td>$request</td>
+                <td><p>Request object (for obtaining user parameters);
+set to null if no request context is available.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendThemeOptionsToView">
+        <div class="location">at line 261</div>
+        <code>            protected        void
+    <strong>sendThemeOptionsToView</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Make the theme options available to the view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getThemeOptions">
+        <div class="location">at line 278</div>
+        <code>            protected        array
+    <strong>getThemeOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return an array of information about user-selectable themes.  Each entry in
+the array is an associative array with 'name', 'desc' and 'selected' keys.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpThemeViewHelpers">
+        <div class="location">at line 306</div>
+        <code>            protected        void
+    <strong>setUpThemeViewHelpers</strong>(array $helpers)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for setUpThemes -- register view helpers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$helpers</td>
+                <td><p>Helper settings</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpThemes">
+        <div class="location">at line 323</div>
+        <code>            protected        void
+    <strong>setUpThemes</strong>(array $themes)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for init() -- set up theme once current settings are known.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$themes</td>
+                <td><p>Theme configuration information.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateTranslator">
+        <div class="location">at line 399</div>
+        <code>            protected        void
+    <strong>updateTranslator</strong>(array $themes)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for setUpThemes() - add theme specific language files for
+translation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$themes</td>
+                <td><p>Theme configuration information.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

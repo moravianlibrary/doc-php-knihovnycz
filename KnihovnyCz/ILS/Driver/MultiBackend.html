@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>MultiBackend</strong>        extends <abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr>
+    <strong>MultiBackend</strong>        extends <a href="../../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a>
 </p>
 
                 <p>
@@ -100,11 +100,140 @@
             <div class="description">
             <p><p>Class MultiBackend</p></p>                    </div>
             
+                <h2>Traits</h2>
+
         
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        HOLD_ID_FIELDS
+                                    </td>
+                <td class="last">
+                    <p><em><p>ID fields in holds</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
     
             <h2>Properties</h2>
 
             <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>The array of driver configuration options.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_config">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_drivers">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$drivers</td>
+                <td class="last"><p>The array of configured driver names.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_drivers">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultDriver">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultDriver</td>
+                <td class="last"><p>The default driver to use</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_defaultDriver">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driversConfigPath">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$driversConfigPath</td>
+                <td class="last"><p>The path to the driver configurations relative to the config path</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_driversConfigPath">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driverCache">
+                                        protected                                        object[]
+                                                                                
+                                    </td>
+                <td>$driverCache</td>
+                <td class="last"><p>The array of cached drivers</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_driverCache">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_configLoader">
+                                        protected                                        <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$configLoader</td>
+                <td class="last"><p>Configuration loader</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_configLoader">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ilsAuth">
+                                        protected                                        <a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a>
+                                                                                
+                                    </td>
+                <td>$ilsAuth</td>
+                <td class="last"><p>ILS authenticator</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_ilsAuth">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driverManager">
+                                        protected                                        <a href="../../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$driverManager</td>
+                <td class="last"><p>ILS driver manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_driverManager">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sourceCheckFields">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$sourceCheckFields</td>
+                <td class="last"><p>An array of methods that should determine source from a specific parameter
+field</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_sourceCheckFields">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_methodsWithNoSourceSpecificParameters">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$methodsWithNoSourceSpecificParameters</td>
+                <td class="last"><p>Methods that don't have parameters that allow the correct source to be
+determined. These methods are only supported for the default driver.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#property_methodsWithNoSourceSpecificParameters">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></td>
+            </tr>
                     <tr>
                 <td class="type" id="property_instConfigs">
                                         protected                                        <a href="../../../KnihovnyCz/Db/Table/InstConfigs.html"><abbr title="KnihovnyCz\Db\Table\InstConfigs">InstConfigs</abbr></a>
@@ -149,13 +278,519 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setConfig">setConfig</a>(array $config)
+        
+                                            <p><p>Set the driver configuration.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_setConfig">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_throwAsIlsException">throwAsIlsException</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception, string $msg = null)
+        
+                                            <p><p>Rethrow the provided exception as an ILS exception.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_throwAsIlsException">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Config\PluginManager">PluginManager</abbr> $configLoader, <abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr> $ilsAuth, <abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr> $dm, <a href="../../../KnihovnyCz/Db/Table/InstConfigs.html"><abbr title="KnihovnyCz\Db\Table\InstConfigs">InstConfigs</abbr></a> $instConfigs, <a href="../../../KnihovnyCz/Db/Table/InstSources.html"><abbr title="KnihovnyCz\Db\Table\InstSources">InstSources</abbr></a> $instSources, <a href="../../../KnihovnyCz/ILS/Service/SolrIdResolver.html"><abbr title="KnihovnyCz\ILS\Service\SolrIdResolver">SolrIdResolver</abbr></a> $idResolver, <a href="../../../KnihovnyCz/Date/Converter.html"><abbr title="KnihovnyCz\Date\Converter">Converter</abbr></a> $dateConverter)
+                    <a href="#method___construct">__construct</a>(<a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configLoader, <a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a> $ilsAuth, <a href="../../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a> $dm, <a href="../../../KnihovnyCz/Db/Table/InstConfigs.html"><abbr title="KnihovnyCz\Db\Table\InstConfigs">InstConfigs</abbr></a> $instConfigs, <a href="../../../KnihovnyCz/Db/Table/InstSources.html"><abbr title="KnihovnyCz\Db\Table\InstSources">InstSources</abbr></a> $instSources, <a href="../../../KnihovnyCz/ILS/Service/SolrIdResolver.html"><abbr title="KnihovnyCz\ILS\Service\SolrIdResolver">SolrIdResolver</abbr></a> $idResolver, <a href="../../../KnihovnyCz/Date/Converter.html"><abbr title="KnihovnyCz\Date\Converter">Converter</abbr></a> $dateConverter)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_init">init</a>()
+        
+                                            <p><p>Initialize the driver.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_init">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatus">getStatus</a>(string $id)
+        
+                                            <p><p>Get Status</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getStatus">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatuses">getStatuses</a>(array $ids)
+        
+                                            <p><p>Get Statuses</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getStatuses">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHolding">getHolding</a>(string $id, array $patron = null, array $options = [])
+        
+                                            <p><p>Get Holding</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getHolding">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPurchaseHistory">getPurchaseHistory</a>(string $id)
+        
+                                            <p><p>Get Purchase History</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getPurchaseHistory">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLoginDrivers">getLoginDrivers</a>()
+        
+                                            <p><p>Get available login targets (drivers enabled for login)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getLoginDrivers">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultLoginDriver">getDefaultLoginDriver</a>()
+        
+                                            <p><p>Get default login driver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDefaultLoginDriver">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNewItems">getNewItems</a>(int $page, int $limit, int $daysOld, int $fundId = null)
+        
+                                            <p><p>Get New Items</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getNewItems">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDepartments">getDepartments</a>()
+        
+                                            <p><p>Get Departments</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDepartments">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInstructors">getInstructors</a>()
+        
+                                            <p><p>Get Instructors</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getInstructors">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCourses">getCourses</a>()
+        
+                                            <p><p>Get Courses</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getCourses">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_findReserves">findReserves</a>(string $course, string $inst, string $dept)
+        
+                                            <p><p>Find Reserves</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_findReserves">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyProfile">getMyProfile</a>(array $patron)
+        
+                                            <p><p>Get Patron Profile</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyHolds">getMyHolds</a>(array $patron)
+        
+                                            <p><p>Get Patron Holds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyStorageRetrievalRequests">getMyStorageRetrievalRequests</a>(array $patron)
+        
+                                            <p><p>Get Patron Call Slips</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getMyStorageRetrievalRequests">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkRequestIsValid">checkRequestIsValid</a>(string $id, array $data, <abbr title="VuFind\ILS\Driver\patron">patron</abbr> $patron)
+        
+                                            <p><p>Check whether a hold or recall request is valid</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_checkRequestIsValid">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkStorageRetrievalRequestIsValid">checkStorageRetrievalRequestIsValid</a>(string $id, array $data, <abbr title="VuFind\ILS\Driver\patron">patron</abbr> $patron)
+        
+                                            <p><p>Check whether a storage retrieval request is valid</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_checkStorageRetrievalRequestIsValid">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPickUpLocations">getPickUpLocations</a>(array $patron = false, array $holdDetails = null)
+        
+                                            <p><p>Get Pick Up Locations</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getPickUpLocations">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultPickUpLocation">getDefaultPickUpLocation</a>(array $patron = false, array $holdDetails = null)
+        
+                                            <p><p>Get Default Pick Up Location</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDefaultPickUpLocation">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRequestGroups">getRequestGroups</a>(int $id, array $patron, array $holdDetails = null)
+        
+                                            <p><p>Get request groups</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getRequestGroups">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultRequestGroup">getDefaultRequestGroup</a>(array $patron, array $holdDetails = null)
+        
+                                            <p><p>Get Default Request Group</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDefaultRequestGroup">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_placeHold">placeHold</a>(array $holdDetails)
+        
+                                            <p><p>Place Hold</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_placeHold">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCancelHoldDetails">getCancelHoldDetails</a>(array $hold, array $patron = [])
+        
+                                            <p><p>Get Cancel Hold Details</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getCancelHoldDetails">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_placeStorageRetrievalRequest">placeStorageRetrievalRequest</a>(array $details)
+        
+                                            <p><p>Place Storage Retrieval Request</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_placeStorageRetrievalRequest">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkILLRequestIsValid">checkILLRequestIsValid</a>(string $id, array $data, <abbr title="VuFind\ILS\Driver\patron">patron</abbr> $patron)
+        
+                                            <p><p>Check whether an ILL request is valid</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_checkILLRequestIsValid">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getILLPickupLibraries">getILLPickupLibraries</a>(string $id, array $patron)
+        
+                                            <p><p>Get ILL Pickup Libraries</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getILLPickupLibraries">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getILLPickupLocations">getILLPickupLocations</a>(string $id, string $pickupLib, array $patron)
+        
+                                            <p><p>Get ILL Pickup Locations</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getILLPickupLocations">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_placeILLRequest">placeILLRequest</a>(array $details)
+        
+                                            <p><p>Place ILL Request</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_placeILLRequest">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyILLRequests">getMyILLRequests</a>(array $patron)
+        
+                                            <p><p>Get Patron ILL Requests</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getMyILLRequests">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRequestBlocks">getRequestBlocks</a>(array $patron)
+        
+                                            <p><p>Check whether the patron is blocked from placing requests (holds/ILL/SRR).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getRequestBlocks">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAccountBlocks">getAccountBlocks</a>(array $patron)
+        
+                                            <p><p>Check whether the patron has any blocks on their account.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getAccountBlocks">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfig">getConfig</a>(string $function, array $params = [])
+        
+                                            <p><p>Function which specifies renew, hold and cancel settings.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getConfig">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsMethod">supportsMethod</a>(string $method, array $params)
+        
+                                            <p><p>Helper method to determine whether or not a certain method can be
+called on this driver.  Required method for any smart drivers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___call">__call</a>(string $methodName, array $params)
+        
+                                            <p><p>Default method -- pass along calls to the driver if a source can be determined
+and a driver is available. Throws ILSException otherwise.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method___call">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLocalId">getLocalId</a>(string $id)
+        
+                                            <p><p>Extract local ID from the given prefixed ID</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getLocalId">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSource">getSource</a>(string $id)
+        
+                                            <p><p>Extract source from the given ID</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getSource">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourceForMethod">getSourceForMethod</a>(string $method, array $params)
+        
+                                            <p><p>Get source for a method and parameters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getSourceForMethod">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourceFromParams">getSourceFromParams</a>(array $params, array $allowedKeys = [0, &#039;id&#039;, &#039;cat_username&#039;])
+        
+                                            <p><p>Get source from method parameters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getSourceFromParams">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDriver">getDriver</a>(string $source)
+        
+                                            <p><p>Find the correct driver for the correct configuration file for the
+given source and cache an initialized copy of it.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDriver">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createDriver">createDriver</a>(string $source)
+        
+                                            <p><p>Create a driver for the given source.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_createDriver">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -166,6 +801,61 @@
         
                                             <p><p>Get configuration for the ILS driver.  We load the settings from DB.</p></p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addIdPrefixes">addIdPrefixes</a>(mixed $data, string $source, array $modifyFields = [&#039;id&#039;, &#039;cat_username&#039;])
+        
+                                            <p><p>Change local ID's to global ID's in the given array</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_addIdPrefixes">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_stripIdPrefixes">stripIdPrefixes</a>(mixed $data, string $source, array $modifyFields = [&#039;id&#039;, &#039;cat_username&#039;], array $ignoreFields = [])
+        
+                                            <p><p>Change global ID's to local ID's in the given array</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_stripIdPrefixes">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_driverSupportsMethod">driverSupportsMethod</a>(object $driver, string $method, array $params = null)
+        
+                                            <p><p>Check whether the given driver supports the given method</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_driverSupportsMethod">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_driverSupportsSource">driverSupportsSource</a>(string $driverSource, string $id)
+        
+                                            <p><p>Check if the given ILS driver supports the source of a record</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_driverSupportsSource">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_callMethodIfSupported">callMethodIfSupported</a>(string|null $source, string $method, array $params, bool $stripPrefixes = true, bool $addPrefixes = true)
+        
+                                            <p><p>Check that the requested method is supported and call it.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_callMethodIfSupported">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -195,37 +885,6 @@
                     <a href="#method_getMyTransactionHistory">getMyTransactionHistory</a>(array $patron, array $params)
         
                                             <p><p>Get Patron Transaction History</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    mixed
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_getMyHolds">getMyHolds</a>(array $patron)
-        
-                                            <p><p>Get Patron Holds</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    mixed
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_getMyProfile">getMyProfile</a>(array $patron)
-        
-                                            <p><p>Get Patron Profile</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    bool
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_supportsMethod">supportsMethod</a>(string $method, array $params)
-        
-                                            <p><p>Helper method to determine whether or not a certain method can be
-called on this driver.  Required method for any smart drivers.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -326,10 +985,334 @@ out items or registrations.</p></p>                </div>
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_setConfig">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 174</div>
+        <code>                    void
+    <strong>setConfig</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the driver configuration.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Configuration array (usually loaded from a VuFind .ini
+file whose name corresponds with the driver class name).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throwAsIlsException">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/AbstractBase.html#method_throwAsIlsException">
+<abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a> at line 76</div>
+        <code>            protected        void
+    <strong>throwAsIlsException</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception, string $msg = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rethrow the provided exception as an ILS exception.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$exception</td>
+                <td><p>Exception to rethrow</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Override exception message (optional)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">at line 90</div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="VuFind\Config\PluginManager">PluginManager</abbr> $configLoader, <abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr> $ilsAuth, <abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr> $dm, <a href="../../../KnihovnyCz/Db/Table/InstConfigs.html"><abbr title="KnihovnyCz\Db\Table\InstConfigs">InstConfigs</abbr></a> $instConfigs, <a href="../../../KnihovnyCz/Db/Table/InstSources.html"><abbr title="KnihovnyCz\Db\Table\InstSources">InstSources</abbr></a> $instSources, <a href="../../../KnihovnyCz/ILS/Service/SolrIdResolver.html"><abbr title="KnihovnyCz\ILS\Service\SolrIdResolver">SolrIdResolver</abbr></a> $idResolver, <a href="../../../KnihovnyCz/Date/Converter.html"><abbr title="KnihovnyCz\Date\Converter">Converter</abbr></a> $dateConverter)
+    <strong>__construct</strong>(<a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configLoader, <a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a> $ilsAuth, <a href="../../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a> $dm, <a href="../../../KnihovnyCz/Db/Table/InstConfigs.html"><abbr title="KnihovnyCz\Db\Table\InstConfigs">InstConfigs</abbr></a> $instConfigs, <a href="../../../KnihovnyCz/Db/Table/InstSources.html"><abbr title="KnihovnyCz\Db\Table\InstSources">InstSources</abbr></a> $instSources, <a href="../../../KnihovnyCz/ILS/Service/SolrIdResolver.html"><abbr title="KnihovnyCz\ILS\Service\SolrIdResolver">SolrIdResolver</abbr></a> $idResolver, <a href="../../../KnihovnyCz/Date/Converter.html"><abbr title="KnihovnyCz\Date\Converter">Converter</abbr></a> $dateConverter)
         </code>
     </h3>
     <div class="details">    
@@ -345,17 +1328,17 @@ out items or registrations.</p></p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></td>
+                <td><a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
                 <td>$configLoader</td>
                 <td><p>Configuration loader</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></td>
+                <td><a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a></td>
                 <td>$ilsAuth</td>
                 <td><p>ILS authenticator</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></td>
+                <td><a href="../../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a></td>
                 <td>$dm</td>
                 <td><p>ILS driver manager</p></td>
             </tr>
@@ -390,6 +1373,1943 @@ out items or registrations.</p></p>                </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_init">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 188</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the driver.</p></p>                <p><p>Validate configuration and perform all resource-intensive tasks needed to
+make the driver active.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getStatus">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 211</div>
+        <code>                    mixed
+    <strong>getStatus</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Status</p></p>                <p><p>This is responsible for retrieving the status information of a certain
+record.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the holdings for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success, an associative array with the following keys:
+id, availability (boolean), status, location, reserve, callnumber.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatuses">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getStatuses">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 234</div>
+        <code>                    array
+    <strong>getStatuses</strong>(array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Statuses</p></p>                <p><p>This is responsible for retrieving the status information for a
+collection of records.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>The array of record ids to retrieve the status for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of getStatus() return values on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHolding">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getHolding">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 301</div>
+        <code>                    array
+    <strong>getHolding</strong>(string $id, array $patron = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Holding</p></p>                <p><p>This is responsible for retrieving the holding information of a certain
+record.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the holdings for</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Extra options</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>On success, an associative array with the following
+keys: id, availability (boolean), status, location, reserve, callnumber,
+duedate, number, barcode.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPurchaseHistory">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getPurchaseHistory">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 336</div>
+        <code>                    array
+    <strong>getPurchaseHistory</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Purchase History</p></p>                <p><p>This is responsible for retrieving the acquisitions history data for the
+specific record (usually recently received issues of a serial).</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the info for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array with the acquisitions data on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoginDrivers">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getLoginDrivers">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 352</div>
+        <code>                    string[]
+    <strong>getLoginDrivers</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get available login targets (drivers enabled for login)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td><p>Source ID's</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultLoginDriver">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDefaultLoginDriver">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 362</div>
+        <code>                    string
+    <strong>getDefaultLoginDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get default login driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Default login driver or empty string</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNewItems">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getNewItems">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 391</div>
+        <code>                    array
+    <strong>getNewItems</strong>(int $page, int $limit, int $daysOld, int $fundId = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get New Items</p></p>                <p><p>Retrieve the IDs of items recently added to the catalog.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td><p>Page number of results to retrieve (counting starts at 1)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>The size of each page of results to retrieve</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$daysOld</td>
+                <td><p>The maximum age of records to retrieve in days (max. 30)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$fundId</td>
+                <td><p>optional fund ID to use for limiting results (use a value
+returned by getFunds, or exclude for no limit); note that &quot;fund&quot; may be a
+misnomer - if funds are not an appropriate way to limit your new item
+results, you can return a different set of values from getFunds. The
+important thing is that this parameter supports an ID returned by getFunds,
+whatever that may mean.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Associative array with 'count' and 'results' keys</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDepartments">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDepartments">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 411</div>
+        <code>                    array
+    <strong>getDepartments</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Departments</p></p>                <p><p>Obtain a list of departments for use in limiting the reserves list.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An associative array with key = dept. ID, value = dept. name.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstructors">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getInstructors">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 426</div>
+        <code>                    array
+    <strong>getInstructors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Instructors</p></p>                <p><p>Obtain a list of instructors for use in limiting the reserves list.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An associative array with key = ID, value = name.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCourses">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getCourses">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 441</div>
+        <code>                    array
+    <strong>getCourses</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Courses</p></p>                <p><p>Obtain a list of courses for use in limiting the reserves list.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An associative array with key = ID, value = name.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findReserves">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_findReserves">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 460</div>
+        <code>                    mixed
+    <strong>findReserves</strong>(string $course, string $inst, string $dept)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Find Reserves</p></p>                <p><p>Obtain information on course reserves.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$course</td>
+                <td><p>ID from getCourses (empty string to match all)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$inst</td>
+                <td><p>ID from getInstructors (empty string to match all)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dept</td>
+                <td><p>ID from getDepartments (empty string to match all)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>An array of associative arrays representing reserve items</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyProfile">
+        <div class="location">at line 232</div>
+        <code>                    mixed
+    <strong>getMyProfile</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Profile</p></p>                <p><p>This is responsible for retrieving the profile for a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>The patron array</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Array of the patron's profile data</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyHolds">
+        <div class="location">at line 215</div>
+        <code>                    mixed
+    <strong>getMyHolds</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Holds</p></p>                <p><p>This is responsible for retrieving all holds by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Array of the patron's holds</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyStorageRetrievalRequests">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getMyStorageRetrievalRequests">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 526</div>
+        <code>                    mixed
+    <strong>getMyStorageRetrievalRequests</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Call Slips</p></p>                <p><p>This is responsible for retrieving all call slips by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Array of the patron's holds</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkRequestIsValid">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_checkRequestIsValid">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 556</div>
+        <code>                    mixed
+    <strong>checkRequestIsValid</strong>(string $id, array $data, <abbr title="VuFind\ILS\Driver\patron">patron</abbr> $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether a hold or recall request is valid</p></p>                <p><p>This is responsible for determining if an item is requestable</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The Bib ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>An Array of item data</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\ILS\Driver\patron">patron</abbr></td>
+                <td>$patron</td>
+                <td><p>An array of patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>An array of data on the request including
+whether or not it is valid and a status message. Alternatively a boolean
+true if request is valid, false if not.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkStorageRetrievalRequestIsValid">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_checkStorageRetrievalRequestIsValid">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 588</div>
+        <code>                    mixed
+    <strong>checkStorageRetrievalRequestIsValid</strong>(string $id, array $data, <abbr title="VuFind\ILS\Driver\patron">patron</abbr> $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether a storage retrieval request is valid</p></p>                <p><p>This is responsible for determining if an item is requestable</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The Bib ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>An Array of item data</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\ILS\Driver\patron">patron</abbr></td>
+                <td>$patron</td>
+                <td><p>An array of patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>An array of data on the request including
+whether or not it is valid and a status message. Alternatively a boolean
+true if request is valid, false if not.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPickUpLocations">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getPickUpLocations">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 625</div>
+        <code>                    array
+    <strong>getPickUpLocations</strong>(array $patron = false, array $holdDetails = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Pick Up Locations</p></p>                <p><p>This is responsible get a list of valid library locations for holds / recall
+retrieval</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information returned by the patronLogin
+method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdDetails</td>
+                <td><p>Optional array, only passed in when getting a list
+in the context of placing or editing a hold.  When placing a hold, it contains
+most of the same values passed to placeHold, minus the patron data.  When
+editing a hold it contains all the hold information returned by getMyHolds.
+May be used to limit the pickup options or may be ignored.  The driver must
+not add new options to the return array based on this data or other areas of
+VuFind may behave incorrectly.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of associative arrays with locationID and
+locationDisplay keys</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultPickUpLocation">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDefaultPickUpLocation">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 665</div>
+        <code>                    string
+    <strong>getDefaultPickUpLocation</strong>(array $patron = false, array $holdDetails = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Default Pick Up Location</p></p>                <p><p>Returns the default pick up location</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information returned by the patronLogin
+method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdDetails</td>
+                <td><p>Optional array, only passed in when getting a list
+in the context of placing a hold; contains most of the same values passed to
+placeHold, minus the patron data.  May be used to limit the pickup options
+or may be ignored.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>A location ID</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequestGroups">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getRequestGroups">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 698</div>
+        <code>                    array
+    <strong>getRequestGroups</strong>(int $id, array $patron, array $holdDetails = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get request groups</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td><p>BIB ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information returned by the patronLogin
+method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdDetails</td>
+                <td><p>Optional array, only passed in when getting a list
+in the context of placing a hold; contains most of the same values passed to
+placeHold, minus the patron data.  May be used to limit the request group
+options or may be ignored.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of associative arrays with requestGroupId and
+name keys</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultRequestGroup">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDefaultRequestGroup">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 735</div>
+        <code>                    string
+    <strong>getDefaultRequestGroup</strong>(array $patron, array $holdDetails = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Default Request Group</p></p>                <p><p>Returns the default request group</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information returned by the patronLogin
+method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdDetails</td>
+                <td><p>Optional array, only passed in when getting a list
+in the context of placing a hold; contains most of the same values passed to
+placeHold, minus the patron data.  May be used to limit the request group
+options or may be ignored.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>A location ID</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeHold">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_placeHold">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 769</div>
+        <code>                    mixed
+    <strong>placeHold</strong>(array $holdDetails)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Place Hold</p></p>                <p><p>Attempts to place a hold or recall on a particular item and returns
+an array with result details</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$holdDetails</td>
+                <td><p>An array of item and patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>An array of data on the request including
+whether or not it was successful and a system message (if available)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCancelHoldDetails">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getCancelHoldDetails">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 798</div>
+        <code>                    string
+    <strong>getCancelHoldDetails</strong>(array $hold, array $patron = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Cancel Hold Details</p></p>                <p><p>In order to cancel a hold, the ILS requires some information on the hold.
+This function returns the required information, which is then submitted
+as form data in Hold.php. This value is then extracted by the CancelHolds
+function.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$hold</td>
+                <td><p>A single hold array from getMyHolds</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information from patronLogin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Data for use in a form field</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeStorageRetrievalRequest">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_placeStorageRetrievalRequest">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 825</div>
+        <code>                    mixed
+    <strong>placeStorageRetrievalRequest</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Place Storage Retrieval Request</p></p>                <p><p>Attempts to place a storage retrieval request on a particular item and returns
+an array with result details</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>An array of item and patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>An array of data on the request including
+whether or not it was successful and a system message (if available)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkILLRequestIsValid">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_checkILLRequestIsValid">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 858</div>
+        <code>                    mixed
+    <strong>checkILLRequestIsValid</strong>(string $id, array $data, <abbr title="VuFind\ILS\Driver\patron">patron</abbr> $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether an ILL request is valid</p></p>                <p><p>This is responsible for determining if an item is requestable</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The Bib ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>An Array of item data</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\ILS\Driver\patron">patron</abbr></td>
+                <td>$patron</td>
+                <td><p>An array of patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>An array of data on the request including
+whether or not it is valid and a status message. Alternatively a boolean
+true if request is valid, false if not.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getILLPickupLibraries">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getILLPickupLibraries">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 887</div>
+        <code>                    bool|array
+    <strong>getILLPickupLibraries</strong>(string $id, array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get ILL Pickup Libraries</p></p>                <p><p>This is responsible for getting information on the possible pickup libraries</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td>Patron</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td><p>False if request not allowed, or an array of associative
+arrays with libraries.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getILLPickupLocations">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getILLPickupLocations">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 917</div>
+        <code>                    bool|array
+    <strong>getILLPickupLocations</strong>(string $id, string $pickupLib, array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get ILL Pickup Locations</p></p>                <p><p>This is responsible for getting a list of possible pickup locations for a
+library</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pickupLib</td>
+                <td><p>Pickup library ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td>Patron</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td><p>False if request not allowed, or an array of
+locations.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeILLRequest">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_placeILLRequest">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 947</div>
+        <code>                    mixed
+    <strong>placeILLRequest</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Place ILL Request</p></p>                <p><p>Attempts to place an ILL request on a particular item and returns
+an array with result details (or throws an exception on failure of support
+classes)</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>An array of item and patron data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>An array of data on the request including
+whether or not it was successful and a system message (if available)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyILLRequests">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getMyILLRequests">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 970</div>
+        <code>                    mixed
+    <strong>getMyILLRequests</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron ILL Requests</p></p>                <p><p>This is responsible for retrieving all ILL Requests by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Array of the patron's ILL requests</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequestBlocks">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getRequestBlocks">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 999</div>
+        <code>                    mixed
+    <strong>getRequestBlocks</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether the patron is blocked from placing requests (holds/ILL/SRR).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron data from patronLogin().</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>A boolean false if no blocks are in place and an array
+of block reasons if blocks are in place</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAccountBlocks">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getAccountBlocks">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1022</div>
+        <code>                    mixed
+    <strong>getAccountBlocks</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether the patron has any blocks on their account.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron data from patronLogin().</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>A boolean false if no blocks are in place and an array
+of block reasons if blocks are in place</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getConfig">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1045</div>
+        <code>                    array
+    <strong>getConfig</strong>(string $function, array $params = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Function which specifies renew, hold and cancel settings.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td><p>The name of the feature to be checked</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Optional feature-specific parameters (array)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array with key-value pairs.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsMethod">
+        <div class="location">at line 253</div>
+        <code>                    bool
+    <strong>supportsMethod</strong>(string $method, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper method to determine whether or not a certain method can be
+called on this driver.  Required method for any smart drivers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>The name of the called method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Array of passed parameters.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if the method can be called with the given parameters,
+false otherwise.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method___call">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1117</div>
+        <code>                    mixed
+    <strong>__call</strong>(string $methodName, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Default method -- pass along calls to the driver if a source can be determined
+and a driver is available. Throws ILSException otherwise.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td><p>The name of the called method</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Array of passed parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Varies by method</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLocalId">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getLocalId">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1129</div>
+        <code>            protected        string
+    <strong>getLocalId</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract local ID from the given prefixed ID</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The id to be split</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Local ID</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSource">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getSource">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1146</div>
+        <code>            protected        string
+    <strong>getSource</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract source from the given ID</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The id to be split</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Source</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourceForMethod">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getSourceForMethod">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1164</div>
+        <code>            protected        string
+    <strong>getSourceForMethod</strong>(string $method, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get source for a method and parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Method</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourceFromParams">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getSourceFromParams">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1184</div>
+        <code>            protected        string
+    <strong>getSourceFromParams</strong>(array $params, array $allowedKeys = [0, &#039;id&#039;, &#039;cat_username&#039;])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get source from method parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Parameters of a driver method call</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$allowedKeys</td>
+                <td><p>Keys to use for source identification</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Source id or empty string if not found</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDriver">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_getDriver">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1219</div>
+        <code>            protected        mixed
+    <strong>getDriver</strong>(string $source)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Find the correct driver for the correct configuration file for the
+given source and cache an initialized copy of it.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>The source name of the driver to get.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success a driver object, otherwise null.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createDriver">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_createDriver">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1248</div>
+        <code>            protected        mixed
+    <strong>createDriver</strong>(string $source)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a driver for the given source.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Source id for the driver.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>On success a driver object, otherwise null.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getDriverConfig">
         <div class="location">at line 115</div>
         <code>            protected        array
@@ -412,7 +3332,7 @@ out items or registrations.</p></p>                </div>
                 <td>string</td>
                 <td>$source</td>
                 <td><p>The source id to use for determining the
-configuration</p></td>
+configuration file</p></td>
             </tr>
             </table>
 
@@ -427,6 +3347,300 @@ configuration</p></td>
     </table>
 
             
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addIdPrefixes">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_addIdPrefixes">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1304</div>
+        <code>            protected        mixed
+    <strong>addIdPrefixes</strong>(mixed $data, string $source, array $modifyFields = [&#039;id&#039;, &#039;cat_username&#039;])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Change local ID's to global ID's in the given array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td><p>The data to be modified, normally
+array or array of arrays</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Source code</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$modifyFields</td>
+                <td><p>Fields to be modified in the array</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Modified array or empty/null if that input was
+empty/null</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stripIdPrefixes">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_stripIdPrefixes">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1347</div>
+        <code>            protected        mixed
+    <strong>stripIdPrefixes</strong>(mixed $data, string $source, array $modifyFields = [&#039;id&#039;, &#039;cat_username&#039;], array $ignoreFields = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Change global ID's to local ID's in the given array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td><p>The data to be modified, normally
+array or array of arrays</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Source code</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$modifyFields</td>
+                <td><p>Fields to be modified in the array</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ignoreFields</td>
+                <td><p>Fields to be ignored during recursive processing</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>Modified array or empty/null if that input was
+empty/null</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_driverSupportsMethod">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_driverSupportsMethod">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1393</div>
+        <code>            protected        bool
+    <strong>driverSupportsMethod</strong>(object $driver, string $method, array $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether the given driver supports the given method</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$driver</td>
+                <td><p>ILS Driver</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>Method name</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Array of passed parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_driverSupportsSource">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_driverSupportsSource">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1412</div>
+        <code>            protected        bool
+    <strong>driverSupportsSource</strong>(string $driverSource, string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the given ILS driver supports the source of a record</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$driverSource</td>
+                <td><p>Driver's source identifier</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Prefixed identifier to compare with</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callMethodIfSupported">
+        <div class="location">in <a href="../../../VuFind/ILS/Driver/MultiBackend.html#method_callMethodIfSupported">
+<abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a> at line 1436</div>
+        <code>            protected        mixed
+    <strong>callMethodIfSupported</strong>(string|null $source, string $method, array $params, bool $stripPrefixes = true, bool $addPrefixes = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check that the requested method is supported and call it.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$source</td>
+                <td><p>Source ID or null to determine from parameters</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>Method name</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Method parameters</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$stripPrefixes</td>
+                <td><p>Whether to strip ID prefixes from all input
+parameters</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addPrefixes</td>
+                <td><p>Whether to add ID prefixes to the call result</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
             
             
                     </div>
@@ -564,142 +3778,6 @@ by a specific patron.</p></p>
         <tr>
             <td>array</td>
             <td><p>Array of the patron's transactions</p></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getMyHolds">
-        <div class="location">at line 215</div>
-        <code>                    mixed
-    <strong>getMyHolds</strong>(array $patron)
-        </code>
-    </h3>
-    <div class="details">    
-            
-    
-            
-
-        <div class="method-description">
-                            <p><p>Get Patron Holds</p></p>                <p><p>This is responsible for retrieving all holds by a specific patron.</p></p>        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>array</td>
-                <td>$patron</td>
-                <td><p>The patron array from patronLogin</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>mixed</td>
-            <td><p>Array of the patron's holds</p></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getMyProfile">
-        <div class="location">at line 232</div>
-        <code>                    mixed
-    <strong>getMyProfile</strong>(array $patron)
-        </code>
-    </h3>
-    <div class="details">    
-            
-    
-            
-
-        <div class="method-description">
-                            <p><p>Get Patron Profile</p></p>                <p><p>This is responsible for retrieving the profile for a specific patron.</p></p>        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>array</td>
-                <td>$patron</td>
-                <td><p>The patron array</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>mixed</td>
-            <td><p>Array of the patron's profile data</p></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_supportsMethod">
-        <div class="location">at line 253</div>
-        <code>                    bool
-    <strong>supportsMethod</strong>(string $method, array $params)
-        </code>
-    </h3>
-    <div class="details">    
-            
-    
-            
-
-        <div class="method-description">
-                            <p><p>Helper method to determine whether or not a certain method can be
-called on this driver.  Required method for any smart drivers.</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$method</td>
-                <td><p>The name of the called method.</p></td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$params</td>
-                <td><p>Array of passed parameters.</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td><p>True if the method can be called with the given parameters,
-false otherwise.</p></td>
         </tr>
     </table>
 
@@ -892,7 +3970,7 @@ id, availability (boolean), status, location, reserve, callnumber.</p></td>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Exception\ILS">ILS</abbr></td>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
                 <td></td>
             </tr>
             </table>
@@ -946,7 +4024,7 @@ id, availability (boolean), status, location, reserve, callnumber.</p></td>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Exception\ILS">ILS</abbr></td>
+                <td><a href="../../../VuFind/Exception/ILS.html"><abbr title="VuFind\Exception\ILS">ILS</abbr></a></td>
                 <td></td>
             </tr>
             </table>

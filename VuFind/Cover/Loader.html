@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Cover\Loader | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Cover_Loader" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Cover.html">Cover</a></li><li class="backslash">\</li><li>Loader</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Loader    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Loader</strong>        extends <a href="../../VuFind/ImageLoader.html"><abbr title="VuFind\ImageLoader">ImageLoader</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Book Cover Generator</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_image">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$image</td>
+                <td class="last"><p>Property for storing raw image data; may be null if image is unavailable</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#property_image">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contentType">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$contentType</td>
+                <td class="last"><p>Content type of data in $image property</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#property_contentType">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_themeTools">
+                                        protected                                        <a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a>
+                                                                                
+                                    </td>
+                <td>$themeTools</td>
+                <td class="last"><p>Theme tools</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#property_themeTools">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_configuredFailImage">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$configuredFailImage</td>
+                <td class="last"><p>User-configured image to load from theme on error.</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#property_configuredFailImage">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultFailImage">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultFailImage</td>
+                <td class="last"><p>Default image to load from theme if user-configured option fails.</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#property_defaultFailImage">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_allowedFileExtensions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$allowedFileExtensions</td>
+                <td class="last"><p>Array containing map of allowed file extensions to mimetypes
+(to be extended)</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#property_allowedFileExtensions">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_generator">
+                                        protected                                        <a href="../../VuFind/Cover/Generator.html"><abbr title="VuFind\Cover\Generator">Generator</abbr></a>
+                                                                                
+                                    </td>
+                <td>$generator</td>
+                <td class="last"><p>Class for rendering cover images dynamically if no API match found. Omit
+to disable functionality.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_localFile">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$localFile</td>
+                <td class="last"><p>Filename constructed from ISBN</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_validSizes">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$validSizes</td>
+                <td class="last"><p>Valid image sizes to request</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>VuFind configuration settings</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_apiManager">
+                                        protected                                        <a href="../../VuFind/Content/Covers/PluginManager.html"><abbr title="VuFind\Content\Covers\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$apiManager</td>
+                <td class="last"><p>Plugin manager for API handlers</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_httpService">
+                                        protected                                        <abbr title="VuFindHttp\HttpService">HttpService</abbr>
+                                                                                
+                                    </td>
+                <td>$httpService</td>
+                <td class="last"><p>HTTP client factory</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_baseDir">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$baseDir</td>
+                <td class="last"><p>Directory to store downloaded images</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isbn">
+                                        protected                                        <abbr title="VuFindCode\ISBN">ISBN</abbr>
+                                                                                
+                                    </td>
+                <td>$isbn</td>
+                <td class="last"><p>User ISBN parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_issn">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$issn</td>
+                <td class="last"><p>User ISSN parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_oclc">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$oclc</td>
+                <td class="last"><p>User OCLC number parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_upc">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$upc</td>
+                <td class="last"><p>User UPC number parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_nbn">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$nbn</td>
+                <td class="last"><p>User National bibliography number parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ismn">
+                                        protected                                        <abbr title="VuFindCode\ISMN">ISMN</abbr>
+                                                                                
+                                    </td>
+                <td>$ismn</td>
+                <td class="last"><p>User ISMN parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uuid">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$uuid</td>
+                <td class="last"><p>User UUID parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordid">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$recordid</td>
+                <td class="last"><p>User record id number parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$source</td>
+                <td class="last"><p>User record source parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_size">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$size</td>
+                <td class="last"><p>User size parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_type">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$type</td>
+                <td class="last"><p>User type parameter</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasLoadedUnavailable">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$hasLoadedUnavailable</td>
+                <td class="last"><p>Flag denoting the last loaded image was a FailImage</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setThemeInfo">setThemeInfo</a>(<a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a> $theme)
+        
+                                            <p><p>Setter for dependency</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#method_setThemeInfo">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getImage">getImage</a>()
+        
+                                            <p><p>Get the image data (not meant to be called until after image is populated)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#method_getImage">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContentType">getContentType</a>()
+        
+                                            <p><p>Get the content type of the current image (not meant to be called until after
+contentType is populated)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#method_getContentType">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_searchTheme">searchTheme</a>(string $path, array $formats = [&#039;&#039;])
+        
+                                            <p><p>Find a file in the themes (return false if no file exists).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#method_searchTheme">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadUnavailable">loadUnavailable</a>()
+        
+                                            <p><p>{@inheritdoc}
+Adds self::$hasLoadedUnavailable flag</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadDefaultFailImage">loadDefaultFailImage</a>()
+        
+                                            <p><p>Display the default &quot;cover unavailable&quot; graphic.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#method_loadDefaultFailImage">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContentTypeFromExtension">getContentTypeFromExtension</a>(string $filename)
+        
+                                            <p><p>Get the content-type for a file based on extension. Throw an exception if
+an illegal extension is provided.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ImageLoader.html#method_getContentTypeFromExtension">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <a href="../../VuFind/Content/Covers/PluginManager.html"><abbr title="VuFind\Content\Covers\PluginManager">PluginManager</abbr></a> $manager, <a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a> $theme, <abbr title="VuFindHttp\HttpService">HttpService</abbr> $httpService, string $baseDir = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCoverGeneratorSettings">getCoverGeneratorSettings</a>()
+        
+                                            <p><p>Get settings for the cover generator.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCoverGenerator">setCoverGenerator</a>(<a href="../../VuFind/Cover/Generator.html"><abbr title="VuFind\Cover\Generator">Generator</abbr></a> $generator)
+        
+                                            <p><p>Set Cover Generator Object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultSettings">getDefaultSettings</a>()
+        
+                                            <p><p>Get default settings for loadImage().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getImageSettingsFromLegacyArgs">getImageSettingsFromLegacyArgs</a>(array $args)
+        
+                                            <p><p>Translate legacy function arguments into new-style array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_storeSanitizedSettings">storeSanitizedSettings</a>(array $settings)
+        
+                                            <p><p>Support method for loadImage() -- sanitize and store some key values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadImage">loadImage</a>(array $settings = [])
+        
+                                            <p><p>Load an image given an ISBN and/or content type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasLoadedUnavailable">hasLoadedUnavailable</a>()
+        
+                                            <p><p>Returns true if the last loaded image was the FailImage</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_determineLocalFile">determineLocalFile</a>(array $ids)
+        
+                                            <p><p>Support method for fetchFromAPI() -- set the localFile property.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIdentifiers">getIdentifiers</a>()
+        
+                                            <p><p>Get all valid identifiers as an associative array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fetchFromAPI">fetchFromAPI</a>()
+        
+                                            <p><p>Load bookcover from cache or remote provider and display if possible.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachePath">getCachePath</a>(string $size, string $id, string $extension = &#039;jpg&#039;)
+        
+                                            <p><p>Return a path to the image cache for the given size and ID; ensure that
+directories are created as needed.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fetchFromContentType">fetchFromContentType</a>()
+        
+                                            <p><p>Load content type icon image from URL from theme images and display if
+possible.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_convertNonJpeg">convertNonJpeg</a>(string $imageData, string $jpeg)
+        
+                                            <p><p>Support method for validateAndMoveTempFile -- convert non-JPEG image data to a
+JPEG file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateAndMoveTempFile">validateAndMoveTempFile</a>(string $image, string $tempFile, string $finalFile)
+        
+                                            <p><p>This method either moves the temporary file to its final location (true)
+or detects an error and deletes it (false).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processImageURLForSource">processImageURLForSource</a>(string $url, bool $allowCache, string $source)
+        
+                                            <p><p>Wrapper around processImageURL to determine cache setting based on
+image source.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processImageURL">processImageURL</a>(string $url, string $cache = true)
+        
+                                            <p><p>Load image from URL, store in cache if requested, display if possible.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCoverUrls">getCoverUrls</a>()
+        
+                                            <p><p>Get urls for defined provider, works as generator</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Generator">Generator</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHandlers">getHandlers</a>()
+        
+                                            <p><p>Return API handlers</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIdentifiersForSettings">getIdentifiersForSettings</a>(array $settings)
+        
+                                            <p><p>Get identifiers for given settings</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setThemeInfo">
+        <div class="location">in <a href="../../VuFind/ImageLoader.html#method_setThemeInfo">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a> at line 100</div>
+        <code>                    void
+    <strong>setThemeInfo</strong>(<a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a> $theme)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Setter for dependency</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a></td>
+                <td>$theme</td>
+                <td><p>VuFind theme tools</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImage">
+        <div class="location">in <a href="../../VuFind/ImageLoader.html#method_getImage">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a> at line 110</div>
+        <code>                    string
+    <strong>getImage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the image data (not meant to be called until after image is populated)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContentType">
+        <div class="location">in <a href="../../VuFind/ImageLoader.html#method_getContentType">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a> at line 125</div>
+        <code>                    string
+    <strong>getContentType</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the content type of the current image (not meant to be called until after
+contentType is populated)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_searchTheme">
+        <div class="location">in <a href="../../VuFind/ImageLoader.html#method_searchTheme">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a> at line 143</div>
+        <code>            protected        string|bool
+    <strong>searchTheme</strong>(string $path, array $formats = [&#039;&#039;])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Find a file in the themes (return false if no file exists).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td><p>Relative path of file to find.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$formats</td>
+                <td><p>Optional array of suffixes to add to $path while
+searching theme (used to check multiple extensions in each theme).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadUnavailable">
+        <div class="location">at line 375</div>
+        <code>                    void
+    <strong>loadUnavailable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>{@inheritdoc}
+Adds self::$hasLoadedUnavailable flag</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadDefaultFailImage">
+        <div class="location">in <a href="../../VuFind/ImageLoader.html#method_loadDefaultFailImage">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a> at line 203</div>
+        <code>            protected        void
+    <strong>loadDefaultFailImage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Display the default &quot;cover unavailable&quot; graphic.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContentTypeFromExtension">
+        <div class="location">in <a href="../../VuFind/ImageLoader.html#method_getContentTypeFromExtension">
+<abbr title="VuFind\ImageLoader">ImageLoader</abbr></a> at line 222</div>
+        <code>            protected        string
+    <strong>getContentTypeFromExtension</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the content-type for a file based on extension. Throw an exception if
+an illegal extension is provided.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename to analyze.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 191</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <a href="../../VuFind/Content/Covers/PluginManager.html"><abbr title="VuFind\Content\Covers\PluginManager">PluginManager</abbr></a> $manager, <a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a> $theme, <abbr title="VuFindHttp\HttpService">HttpService</abbr> $httpService, string $baseDir = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>VuFind configuration</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Content/Covers/PluginManager.html"><abbr title="VuFind\Content\Covers\PluginManager">PluginManager</abbr></a></td>
+                <td>$manager</td>
+                <td><p>Plugin manager for API handlers</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a></td>
+                <td>$theme</td>
+                <td><p>VuFind theme tools</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFindHttp\HttpService">HttpService</abbr></td>
+                <td>$httpService</td>
+                <td><p>HTTP client factory</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$baseDir</td>
+                <td><p>Directory to store downloaded
+images (set to system temp dir if not otherwise specified)</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCoverGeneratorSettings">
+        <div class="location">at line 213</div>
+        <code>            protected        array
+    <strong>getCoverGeneratorSettings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get settings for the cover generator.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCoverGenerator">
+        <div class="location">at line 242</div>
+        <code>                    void
+    <strong>setCoverGenerator</strong>(<a href="../../VuFind/Cover/Generator.html"><abbr title="VuFind\Cover\Generator">Generator</abbr></a> $generator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set Cover Generator Object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Cover/Generator.html"><abbr title="VuFind\Cover\Generator">Generator</abbr></a></td>
+                <td>$generator</td>
+                <td><p>Cover generator</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultSettings">
+        <div class="location">at line 252</div>
+        <code>            protected        array
+    <strong>getDefaultSettings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get default settings for loadImage().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImageSettingsFromLegacyArgs">
+        <div class="location">at line 279</div>
+        <code>            protected        array
+    <strong>getImageSettingsFromLegacyArgs</strong>(array $args)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate legacy function arguments into new-style array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td><p>Function arguments</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_storeSanitizedSettings">
+        <div class="location">at line 301</div>
+        <code>            protected        void
+    <strong>storeSanitizedSettings</strong>(array $settings)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for loadImage() -- sanitize and store some key values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td><p>Settings from loadImage</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadImage">
+        <div class="location">at line 335</div>
+        <code>                    void
+    <strong>loadImage</strong>(array $settings = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load an image given an ISBN and/or content type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td><p>Array of settings used to calculate a cover; may
+contain any or all of these keys: 'isbn' (ISBN), 'size' (requested size),
+'type' (content type), 'title' (title of book, for dynamic covers), 'author'
+(author of book, for dynamic covers), 'callnumber' (unique ID, for dynamic
+covers), 'issn' (ISSN), 'oclc' (OCLC number), 'upc' (UPC number),
+'nbn' (national bibliography number), 'ismn' (ISMN), 'uuid' (Universally
+unique identifier).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasLoadedUnavailable">
+        <div class="location">at line 386</div>
+        <code>                    bool
+    <strong>hasLoadedUnavailable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the last loaded image was the FailImage</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_determineLocalFile">
+        <div class="location">at line 398</div>
+        <code>            protected        string
+    <strong>determineLocalFile</strong>(array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for fetchFromAPI() -- set the localFile property.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>IDs returned by getIdentifiers() method</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdentifiers">
+        <div class="location">at line 435</div>
+        <code>            protected        array
+    <strong>getIdentifiers</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all valid identifiers as an associative array.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchFromAPI">
+        <div class="location">at line 473</div>
+        <code>            protected        bool
+    <strong>fetchFromAPI</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load bookcover from cache or remote provider and display if possible.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if image loaded, false on failure.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachePath">
+        <div class="location">at line 514</div>
+        <code>            protected        string
+    <strong>getCachePath</strong>(string $size, string $id, string $extension = &#039;jpg&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a path to the image cache for the given size and ID; ensure that
+directories are created as needed.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$size</td>
+                <td><p>Size category</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Unique identifier (ISBN / ISSN)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$extension</td>
+                <td><p>File extension to use (default = jpg)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Cache path</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchFromContentType">
+        <div class="location">at line 533</div>
+        <code>            protected        bool
+    <strong>fetchFromContentType</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load content type icon image from URL from theme images and display if
+possible.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if image loaded, false on failure.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertNonJpeg">
+        <div class="location">at line 568</div>
+        <code>            protected        bool
+    <strong>convertNonJpeg</strong>(string $imageData, string $jpeg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for validateAndMoveTempFile -- convert non-JPEG image data to a
+JPEG file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$imageData</td>
+                <td><p>Raw image data</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$jpeg</td>
+                <td><p>JPEG file (output)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>Did we succeed?</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateAndMoveTempFile">
+        <div class="location">at line 596</div>
+        <code>            protected        bool
+    <strong>validateAndMoveTempFile</strong>(string $image, string $tempFile, string $finalFile)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>This method either moves the temporary file to its final location (true)
+or detects an error and deletes it (false).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$image</td>
+                <td><p>Raw image data</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tempFile</td>
+                <td><p>Temporary file</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$finalFile</td>
+                <td><p>Final file location</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processImageURLForSource">
+        <div class="location">at line 627</div>
+        <code>            protected        bool
+    <strong>processImageURLForSource</strong>(string $url, bool $allowCache, string $source)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wrapper around processImageURL to determine cache setting based on
+image source.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL to load image from</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowCache</td>
+                <td><p>Is caching allowed by the service?</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Service being used for image loading</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if image loaded, false on failure.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processImageURL">
+        <div class="location">at line 660</div>
+        <code>            protected        bool
+    <strong>processImageURL</strong>(string $url, string $cache = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load image from URL, store in cache if requested, display if possible.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL to load image from</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cache</td>
+                <td><p>Boolean -- should we store in local cache?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if image loaded, false on failure.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCoverUrls">
+        <div class="location">at line 716</div>
+        <code>            protected        array
+    <strong>getCoverUrls</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get urls for defined provider, works as generator</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandlers">
+        <div class="location">at line 749</div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/Generator">Generator</a>
+    <strong>getHandlers</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return API handlers</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Generator">Generator</a></td>
+            <td><p>Array with keys: key - API key, apiName - api name from
+configuration, handler - handler object</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdentifiersForSettings">
+        <div class="location">at line 774</div>
+        <code>                    array
+    <strong>getIdentifiersForSettings</strong>(array $settings)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get identifiers for given settings</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td><p>Settings from loadImage</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

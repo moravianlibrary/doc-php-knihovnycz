@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Cookie\CookieManager | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Cookie_CookieManager" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Cookie.html">Cookie</a></li><li class="backslash">\</li><li>CookieManager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>CookieManager    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>CookieManager</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Cookie Manager</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_cookies">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$cookies</td>
+                <td class="last"><p>Cookie array to work with</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_path">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$path</td>
+                <td class="last"><p>Cookie base path</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_domain">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$domain</td>
+                <td class="last"><p>Cookie domain</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_secure">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$secure</td>
+                <td class="last"><p>Are cookies secure only?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_httpOnly">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$httpOnly</td>
+                <td class="last"><p>Are cookies HTTP only?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sessionName">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$sessionName</td>
+                <td class="last"><p>The name of the session cookie</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sameSite">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$sameSite</td>
+                <td class="last"><p>Default SameSite attribute</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $cookies, string $path = &#039;/&#039;, string $domain = null, bool $secure = false, string $sessionName = null, bool $httpOnly = true, string $sameSite = &#039;Lax&#039;)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCookies">getCookies</a>()
+        
+                                            <p><p>Get all cookie values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDomain">getDomain</a>()
+        
+                                            <p><p>Get the cookie domain.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPath">getPath</a>()
+        
+                                            <p><p>Get the cookie path.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isSecure">isSecure</a>()
+        
+                                            <p><p>Are cookies set to &quot;secure only&quot; mode?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isHttpOnly">isHttpOnly</a>()
+        
+                                            <p><p>Are cookies set to &quot;HTTP only&quot; mode?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSessionName">getSessionName</a>()
+        
+                                            <p><p>Get the name of the cookie</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSameSite">getSameSite</a>()
+        
+                                            <p><p>Get the cookie SameSite attribute.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_proxySetCookie">proxySetCookie</a>(string $key, mixed $value, int $expire, string $path, string $domain, bool $secure, bool $httpOnly, string $sameSite)
+        
+                                            <p><p>Support method for setGlobalCookie -- proxy PHP's setcookie() function
+for compatibility with unit testing.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setGlobalCookie">setGlobalCookie</a>(string $key, mixed $value, int $expire, null|bool $httpOnly = null, string $sameSite = null)
+        
+                                            <p><p>Support method for set() -- set the actual cookie in PHP.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_set">set</a>(string $key, mixed $value, int $expire = 0, null|bool $httpOnly = null, string $sameSite = null)
+        
+                                            <p><p>Set a cookie.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_clear">clear</a>(string $key)
+        
+                                            <p><p>Clear a cookie.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_get">get</a>(string $key)
+        
+                                            <p><p>Retrieve a cookie value (or null if unset).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 105</div>
+        <code>                    
+    <strong>__construct</strong>(array $cookies, string $path = &#039;/&#039;, string $domain = null, bool $secure = false, string $sessionName = null, bool $httpOnly = true, string $sameSite = &#039;Lax&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$cookies</td>
+                <td><p>Cookie array to manipulate (e.g. $_COOKIE)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td><p>Cookie base path (default = /)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Cookie domain</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$secure</td>
+                <td><p>Are cookies secure only? (default = false)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sessionName</td>
+                <td><p>Session cookie name (if null defaults to PHP
+settings)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$httpOnly</td>
+                <td><p>Are cookies HTTP only? (default = true)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sameSite</td>
+                <td><p>Default SameSite attribute (defaut = 'Lax')</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCookies">
+        <div class="location">at line 128</div>
+        <code>                    array
+    <strong>getCookies</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all cookie values.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDomain">
+        <div class="location">at line 138</div>
+        <code>                    string
+    <strong>getDomain</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the cookie domain.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPath">
+        <div class="location">at line 148</div>
+        <code>                    string
+    <strong>getPath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the cookie path.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSecure">
+        <div class="location">at line 158</div>
+        <code>                    bool
+    <strong>isSecure</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Are cookies set to &quot;secure only&quot; mode?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isHttpOnly">
+        <div class="location">at line 168</div>
+        <code>                    bool
+    <strong>isHttpOnly</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Are cookies set to &quot;HTTP only&quot; mode?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionName">
+        <div class="location">at line 178</div>
+        <code>                    mixed
+    <strong>getSessionName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the cookie</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSameSite">
+        <div class="location">at line 188</div>
+        <code>                    string
+    <strong>getSameSite</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the cookie SameSite attribute.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_proxySetCookie">
+        <div class="location">at line 208</div>
+        <code>                    bool
+    <strong>proxySetCookie</strong>(string $key, mixed $value, int $expire, string $path, string $domain, bool $secure, bool $httpOnly, string $sameSite)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for setGlobalCookie -- proxy PHP's setcookie() function
+for compatibility with unit testing.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Name of cookie to set</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><p>Value to set</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$expire</td>
+                <td><p>Cookie expiration time</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Path</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>Domain</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$secure</td>
+                <td><p>Whether the cookie is secure only</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$httpOnly</td>
+                <td><p>Whether the cookie should be &quot;HTTP only&quot;</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sameSite</td>
+                <td><p>SameSite attribute to use (Lax, Strict or None)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setGlobalCookie">
+        <div class="location">at line 247</div>
+        <code>                    bool
+    <strong>setGlobalCookie</strong>(string $key, mixed $value, int $expire, null|bool $httpOnly = null, string $sameSite = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for set() -- set the actual cookie in PHP.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Name of cookie to set</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><p>Value to set</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$expire</td>
+                <td><p>Cookie expiration time</p></td>
+            </tr>
+                    <tr>
+                <td>null|bool</td>
+                <td>$httpOnly</td>
+                <td><p>Whether the cookie should be &quot;HTTP only&quot;</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sameSite</td>
+                <td><p>SameSite attribute to use (Lax, Strict or None)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at line 305</div>
+        <code>                    bool
+    <strong>set</strong>(string $key, mixed $value, int $expire = 0, null|bool $httpOnly = null, string $sameSite = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a cookie.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Name of cookie to set</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><p>Value to set</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$expire</td>
+                <td><p>Cookie expiration time</p></td>
+            </tr>
+                    <tr>
+                <td>null|bool</td>
+                <td>$httpOnly</td>
+                <td><p>Whether the cookie should be &quot;HTTP only&quot;</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sameSite</td>
+                <td><p>SameSite attribute to use (Lax, Strict or None)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clear">
+        <div class="location">at line 327</div>
+        <code>                    bool
+    <strong>clear</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear a cookie.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Name of cookie to unset</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at line 349</div>
+        <code>                    mixed
+    <strong>get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a cookie value (or null if unset).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Name of cookie to retrieve</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

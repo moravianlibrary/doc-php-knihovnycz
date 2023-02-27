@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Controller\OAuth2ControllerFactory | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Controller_OAuth2ControllerFactory" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Controller.html">Controller</a></li><li class="backslash">\</li><li>OAuth2ControllerFactory</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>OAuth2ControllerFactory    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>OAuth2ControllerFactory</strong>        extends <a href="../../VuFind/Controller/AbstractBaseFactory.html"><abbr title="VuFind\Controller\AbstractBaseFactory">AbstractBaseFactory</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>OAuth2 controller factory.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_container">
+                                        protected                                        <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$container</td>
+                <td class="last"><p>Service manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_oauth2Config">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$oauth2Config</td>
+                <td class="last"><p>OAuth2 configuration</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_accessTokenTable">
+                                        protected                                        <a href="../../VuFind/Db/Table/AccessToken.html"><abbr title="VuFind\Db\Table\AccessToken">AccessToken</abbr></a>
+                                                                                
+                                    </td>
+                <td>$accessTokenTable</td>
+                <td class="last"><p>Access token table</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pathResolver">
+                                        protected                                        <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+                                                                                
+                                    </td>
+                <td>$pathResolver</td>
+                <td class="last"><p>Config file path resolver</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_claimExtractor">
+                                        protected                                        <abbr title="OpenIDConnectServer\ClaimExtractor">ClaimExtractor</abbr>
+                                                                                
+                                    </td>
+                <td>$claimExtractor</td>
+                <td class="last"><p>Claim extractor</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Controller/AbstractBase.html"><abbr title="VuFind\Controller\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_applyPermissions">applyPermissions</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <a href="../../VuFind/Controller/AbstractBase.html"><abbr title="VuFind\Controller\AbstractBase">AbstractBase</abbr></a> $controller)
+        
+                                            <p><p>Apply permission settings to the controller.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Controller/AbstractBaseFactory.html#method_applyPermissions">
+<abbr title="VuFind\Controller\AbstractBaseFactory">AbstractBaseFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___invoke">__invoke</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
+        
+                                            <p><p>Create an object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAuthorizationServerFactory">getAuthorizationServerFactory</a>()
+        
+                                            <p><p>Return a factory function for creating the authorization server.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResourceServerFactory">getResourceServerFactory</a>()
+        
+                                            <p><p>Return a ResourceServer.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addGrantTypes">addGrantTypes</a>(<abbr title="League\OAuth2\Server\AuthorizationServer">AuthorizationServer</abbr> $server, array|null $clientConfig)
+        
+                                            <p><p>Add grant types to the server</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="League\OAuth2\Server\Grant\AuthCodeGrant">AuthCodeGrant</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createAuthCodeGrant">createAuthCodeGrant</a>(array|null $clientConfig)
+        
+                                            <p><p>Create an auth code grant</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="League\OAuth2\Server\Grant\RefreshTokenGrant">RefreshTokenGrant</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createRefreshTokenGrant">createRefreshTokenGrant</a>()
+        
+                                            <p><p>Create a refresh token grant</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="League\OAuth2\Server\ResponseTypes\ResponseTypeInterface">ResponseTypeInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResponseType">getResponseType</a>()
+        
+                                            <p><p>Return an OAuth2 response type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OpenIDConnectServer\ClaimExtractor">ClaimExtractor</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getClaimExtractor">getClaimExtractor</a>()
+        
+                                            <p><p>Get the claim extractor.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOAuth2ServerSetting">getOAuth2ServerSetting</a>(string $setting)
+        
+                                            <p><p>Return a server setting from the OAuth2 configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="League\OAuth2\Server\CryptKey">CryptKey</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getKeyFromConfigPath">getKeyFromConfigPath</a>(string $key)
+        
+                                            <p><p>Return a key path from the OAuth2 configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_applyPermissions">
+        <div class="location">in <a href="../../VuFind/Controller/AbstractBaseFactory.html#method_applyPermissions">
+<abbr title="VuFind\Controller\AbstractBaseFactory">AbstractBaseFactory</abbr></a> at line 55</div>
+        <code>            protected        <a href="../../VuFind/Controller/AbstractBase.html"><abbr title="VuFind\Controller\AbstractBase">AbstractBase</abbr></a>
+    <strong>applyPermissions</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <a href="../../VuFind/Controller/AbstractBase.html"><abbr title="VuFind\Controller\AbstractBase">AbstractBase</abbr></a> $controller)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply permission settings to the controller.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Controller/AbstractBase.html"><abbr title="VuFind\Controller\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$controller</td>
+                <td><p>Controller to configure</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Controller/AbstractBase.html"><abbr title="VuFind\Controller\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___invoke">
+        <div class="location">at line 112</div>
+        <code>                    object
+    <strong>__invoke</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create an object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$requestedName</td>
+                <td><p>Service being created</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Extra options (optional)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\ServiceManager\Exception\ServiceNotFoundException">ServiceNotFoundException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\ServiceManager\Exception\ServiceNotCreatedException">ServiceNotCreatedException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerExceptionInterface&amp;\Throwable">Throwable</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuthorizationServerFactory">
+        <div class="location">at line 159</div>
+        <code>            protected        callable
+    <strong>getAuthorizationServerFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a factory function for creating the authorization server.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourceServerFactory">
+        <div class="location">at line 182</div>
+        <code>            protected        callable
+    <strong>getResourceServerFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a ResourceServer.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addGrantTypes">
+        <div class="location">at line 200</div>
+        <code>            protected        void
+    <strong>addGrantTypes</strong>(<abbr title="League\OAuth2\Server\AuthorizationServer">AuthorizationServer</abbr> $server, array|null $clientConfig)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add grant types to the server</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="League\OAuth2\Server\AuthorizationServer">AuthorizationServer</abbr></td>
+                <td>$server</td>
+                <td><p>Authorization server</p></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$clientConfig</td>
+                <td><p>Client configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createAuthCodeGrant">
+        <div class="location">at line 228</div>
+        <code>            protected        <abbr title="League\OAuth2\Server\Grant\AuthCodeGrant">AuthCodeGrant</abbr>
+    <strong>createAuthCodeGrant</strong>(array|null $clientConfig)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create an auth code grant</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|null</td>
+                <td>$clientConfig</td>
+                <td><p>Client configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="League\OAuth2\Server\Grant\AuthCodeGrant">AuthCodeGrant</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRefreshTokenGrant">
+        <div class="location">at line 252</div>
+        <code>            protected        <abbr title="League\OAuth2\Server\Grant\RefreshTokenGrant">RefreshTokenGrant</abbr>
+    <strong>createRefreshTokenGrant</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a refresh token grant</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="League\OAuth2\Server\Grant\RefreshTokenGrant">RefreshTokenGrant</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponseType">
+        <div class="location">at line 269</div>
+        <code>            protected        <abbr title="League\OAuth2\Server\ResponseTypes\ResponseTypeInterface">ResponseTypeInterface</abbr>
+    <strong>getResponseType</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return an OAuth2 response type.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="League\OAuth2\Server\ResponseTypes\ResponseTypeInterface">ResponseTypeInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClaimExtractor">
+        <div class="location">at line 282</div>
+        <code>            protected        <abbr title="OpenIDConnectServer\ClaimExtractor">ClaimExtractor</abbr>
+    <strong>getClaimExtractor</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the claim extractor.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OpenIDConnectServer\ClaimExtractor">ClaimExtractor</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOAuth2ServerSetting">
+        <div class="location">at line 307</div>
+        <code>            protected        string
+    <strong>getOAuth2ServerSetting</strong>(string $setting)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a server setting from the OAuth2 configuration.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$setting</td>
+                <td><p>Setting name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKeyFromConfigPath">
+        <div class="location">at line 328</div>
+        <code>            protected        <abbr title="League\OAuth2\Server\CryptKey">CryptKey</abbr>
+    <strong>getKeyFromConfigPath</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a key path from the OAuth2 configuration.</p></p>                <p><p>Converts the path to absolute as necessary.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Key path to return</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="League\OAuth2\Server\CryptKey">CryptKey</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

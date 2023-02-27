@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindConsole\Command\ScheduledSearch\NotifyCommand | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindConsole_Command_ScheduledSearch_NotifyCommand" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindConsole.html">VuFindConsole</a></li><li class="backslash">\</li><li><a href="../../../VuFindConsole/Command.html">Command</a></li><li class="backslash">\</li><li><a href="../../../VuFindConsole/Command/ScheduledSearch.html">ScheduledSearch</a></li><li class="backslash">\</li><li>NotifyCommand</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>NotifyCommand    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>NotifyCommand</strong>        extends <abbr title="Symfony\Component\Console\Command\Command">Command</abbr>        implements        <a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Console command: notify users of scheduled searches.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Lightweight translator aware marker interface (used as an alternative to
+\Laminas\I18n\Translator\TranslatorAwareInterface, which requires an excessive
+number of methods to be implemented).  If we switch to PHP 5.4 traits in the
+future, we can eliminate this interface in favor of the default Laminas version.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/I18n/Translator/LanguageInitializerTrait.html"><abbr title="VuFind\I18n\Translator\LanguageInitializerTrait">LanguageInitializerTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Logic for initializing a language within a translator used by VuFind.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_translator">
+                                        protected                                        <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$translator</td>
+                <td class="last">Translator</td>
+                <td><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#property_translator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultName">
+                    static                    protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultName</td>
+                <td class="last"><p>The name of the command (the part after &quot;public/index.php&quot;)</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_output">
+                                        protected                                        <abbr title="Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$output</td>
+                <td class="last"><p>Output interface</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_iso8601">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$iso8601</td>
+                <td class="last"><p>Useful date format value</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hmac">
+                                        protected                                        <a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a>
+                                                                                
+                                    </td>
+                <td>$hmac</td>
+                <td class="last"><p>HMAC generator</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_renderer">
+                                        protected                                        <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr>
+                                                                                
+                                    </td>
+                <td>$renderer</td>
+                <td class="last"><p>View renderer</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_urlHelper">
+                                        protected                                        <abbr title="Laminas\View\Helper\Url">Url</abbr>
+                                                                                
+                                    </td>
+                <td>$urlHelper</td>
+                <td class="last"><p>URL helper</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resultsManager">
+                                        protected                                        <a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$resultsManager</td>
+                <td class="last"><p>Search results plugin manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_scheduleOptions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$scheduleOptions</td>
+                <td class="last"><p>Configured schedule options</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mainConfig">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$mainConfig</td>
+                <td class="last"><p>Top-level VuFind configuration</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limit">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$limit</td>
+                <td class="last"><p>Number of results to retrieve when performing searches</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mailer">
+                                        protected                                        <a href="../../../VuFind/Mailer/Mailer.html"><abbr title="VuFind\Mailer\Mailer">Mailer</abbr></a>
+                                                                                
+                                    </td>
+                <td>$mailer</td>
+                <td class="last"><p>Mail service</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchTable">
+                                        protected                                        <a href="../../../VuFind/Db/Table/Search.html"><abbr title="VuFind\Db\Table\Search">Search</abbr></a>
+                                                                                
+                                    </td>
+                <td>$searchTable</td>
+                <td class="last"><p>Search table</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_userTable">
+                                        protected                                        <a href="../../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a>
+                                                                                
+                                    </td>
+                <td>$userTable</td>
+                <td class="last"><p>User table</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_localeSettings">
+                                        protected                                        <a href="../../../VuFind/I18n/Locale/LocaleSettings.html"><abbr title="VuFind\I18n\Locale\LocaleSettings">LocaleSettings</abbr></a>
+                                                                                
+                                    </td>
+                <td>$localeSettings</td>
+                <td class="last"><p>Locale settings object</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTranslator">setTranslator</a>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        
+                                            <p><p>Set a translator</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslator">getTranslator</a>()
+        
+                                            <p><p>Get translator object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslatorLocale">getTranslatorLocale</a>(string $default = &#039;en&#039;)
+        
+                                            <p><p>Get the locale from the translator.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translate">translate</a>(string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateWithPrefix">translateWithPrefix</a>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateString">translateString</a>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        
+                                            <p><p>Get translation for a string</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractTextDomain">extractTextDomain</a>(string|object|array $target)
+        
+                                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTextDomains">getTextDomains</a>()
+        
+                                            <p><p>Look up all text domains.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/LanguageInitializerTrait.html#method_getTextDomains">
+<abbr title="VuFind\I18n\Translator\LanguageInitializerTrait">LanguageInitializerTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addLanguageToTranslator">addLanguageToTranslator</a>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator, <a href="../../../VuFind/I18n/Locale/LocaleSettings.html"><abbr title="VuFind\I18n\Locale\LocaleSettings">LocaleSettings</abbr></a> $settings, string $language)
+        
+                                            <p><p>Configure a translator to support the requested language.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/LanguageInitializerTrait.html#method_addLanguageToTranslator">
+<abbr title="VuFind\I18n\Translator\LanguageInitializerTrait">LanguageInitializerTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a> $hmac, <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $renderer, <a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $resultsManager, array $scheduleOptions, <abbr title="Laminas\Config\Config">Config</abbr> $mainConfig, <a href="../../../VuFind/Mailer/Mailer.html"><abbr title="VuFind\Mailer\Mailer">Mailer</abbr></a> $mailer, <a href="../../../VuFind/Db/Table/Search.html"><abbr title="VuFind\Db\Table\Search">Search</abbr></a> $searchTable, <a href="../../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a> $userTable, <a href="../../../VuFind/I18n/Locale/LocaleSettings.html"><abbr title="VuFind\I18n\Locale\LocaleSettings">LocaleSettings</abbr></a> $localeSettings, string|null $name = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configure">configure</a>()
+        
+                                            <p><p>Configure the command.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_msg">msg</a>(string $msg)
+        
+                                            <p><p>Display a message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_warn">warn</a>(string $msg)
+        
+                                            <p><p>Display a warning.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_err">err</a>(string $msg)
+        
+                                            <p><p>Display an error.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_execute">execute</a>(<abbr title="Symfony\Component\Console\Input\InputInterface">InputInterface</abbr> $input, <abbr title="Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr> $output)
+        
+                                            <p><p>Run the command.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateSchedule">validateSchedule</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a> $todayTime, <a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a> $lastTime, <a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $s)
+        
+                                            <p><p>Validate the schedule (return true if we should send a message).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUserForSearch">getUserForSearch</a>(<a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $s)
+        
+                                            <p><p>Load and validate a user object associated with the search; return false
+if there is a problem.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setLanguage">setLanguage</a>(string $userLang)
+        
+                                            <p><p>Set up the translator language.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getObjectForSearch">getObjectForSearch</a>(<a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $s)
+        
+                                            <p><p>Load and validate the results object associated with the search; return false
+if there is a problem.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNewRecords">getNewRecords</a>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $searchObject, <a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a> $lastTime)
+        
+                                            <p><p>Given a search results object, fetch records that have changed since the last
+search. Return false on error.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_buildEmail">buildEmail</a>(<a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $s, <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $searchObject, array $newRecords)
+        
+                                            <p><p>Build the email message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_sendEmail">sendEmail</a>(<a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $message)
+        
+                                            <p><p>Try to send an email message to a user. Return true on success, false on
+error.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processViewAlerts">processViewAlerts</a>()
+        
+                                            <p><p>Send scheduled alerts for a view.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setTranslator">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 60</div>
+        <code>                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+    <strong>setTranslator</strong>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a translator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td>Translator</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslator">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 71</div>
+        <code>                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translator object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslatorLocale">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 83</div>
+        <code>                    string
+    <strong>getTranslatorLocale</strong>(string $default = &#039;en&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the locale from the translator.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default to use if translator absent.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translate">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 103</div>
+        <code>                    string
+    <strong>translate</strong>(string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateWithPrefix">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 152</div>
+        <code>                    string
+    <strong>translateWithPrefix</strong>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td><p>Translation key prefix</p></td>
+            </tr>
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateString">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 178</div>
+        <code>            protected        string
+    <strong>translateString</strong>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translation for a string</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>String to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is found
+(null for no default).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Text domain (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractTextDomain">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 215</div>
+        <code>            protected        array
+    <strong>extractTextDomain</strong>(string|object|array $target)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTextDomains">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/LanguageInitializerTrait.html#method_getTextDomains">
+<abbr title="VuFind\I18n\Translator\LanguageInitializerTrait">LanguageInitializerTrait</abbr></a> at line 49</div>
+        <code>            protected        array
+    <strong>getTextDomains</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Look up all text domains.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLanguageToTranslator">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/LanguageInitializerTrait.html#method_addLanguageToTranslator">
+<abbr title="VuFind\I18n\Translator\LanguageInitializerTrait">LanguageInitializerTrait</abbr></a> at line 77</div>
+        <code>            protected        void
+    <strong>addLanguageToTranslator</strong>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator, <a href="../../../VuFind/I18n/Locale/LocaleSettings.html"><abbr title="VuFind\I18n\Locale\LocaleSettings">LocaleSettings</abbr></a> $settings, string $language)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure a translator to support the requested language.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td>Translator</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/I18n/Locale/LocaleSettings.html"><abbr title="VuFind\I18n\Locale\LocaleSettings">LocaleSettings</abbr></a></td>
+                <td>$settings</td>
+                <td><p>Locale settings</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$language</td>
+                <td><p>Language to set up</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 170</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a> $hmac, <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $renderer, <a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $resultsManager, array $scheduleOptions, <abbr title="Laminas\Config\Config">Config</abbr> $mainConfig, <a href="../../../VuFind/Mailer/Mailer.html"><abbr title="VuFind\Mailer\Mailer">Mailer</abbr></a> $mailer, <a href="../../../VuFind/Db/Table/Search.html"><abbr title="VuFind\Db\Table\Search">Search</abbr></a> $searchTable, <a href="../../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a> $userTable, <a href="../../../VuFind/I18n/Locale/LocaleSettings.html"><abbr title="VuFind\I18n\Locale\LocaleSettings">LocaleSettings</abbr></a> $localeSettings, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a></td>
+                <td>$hmac</td>
+                <td><p>HMAC generator</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr></td>
+                <td>$renderer</td>
+                <td><p>View renderer</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a></td>
+                <td>$resultsManager</td>
+                <td><p>Search results plugin manager</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$scheduleOptions</td>
+                <td><p>Configured schedule options</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$mainConfig</td>
+                <td><p>Top-level VuFind configuration</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Mailer/Mailer.html"><abbr title="VuFind\Mailer\Mailer">Mailer</abbr></a></td>
+                <td>$mailer</td>
+                <td><p>Mail service</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Table/Search.html"><abbr title="VuFind\Db\Table\Search">Search</abbr></a></td>
+                <td>$searchTable</td>
+                <td><p>Search table</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a></td>
+                <td>$userTable</td>
+                <td><p>User table</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/I18n/Locale/LocaleSettings.html"><abbr title="VuFind\I18n\Locale\LocaleSettings">LocaleSettings</abbr></a></td>
+                <td>$localeSettings</td>
+                <td><p>Locale settings object</p></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td><p>The name of the command; passing
+null means it must be set in configure()</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configure">
+        <div class="location">at line 200</div>
+        <code>            protected        void
+    <strong>configure</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure the command.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_msg">
+        <div class="location">at line 214</div>
+        <code>            protected        void
+    <strong>msg</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Display a message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Message to display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_warn">
+        <div class="location">at line 228</div>
+        <code>            protected        void
+    <strong>warn</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Display a warning.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Message to display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_err">
+        <div class="location">at line 240</div>
+        <code>            protected        void
+    <strong>err</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Display an error.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Message to display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_execute">
+        <div class="location">at line 255</div>
+        <code>            protected        int
+    <strong>execute</strong>(<abbr title="Symfony\Component\Console\Input\InputInterface">InputInterface</abbr> $input, <abbr title="Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr> $output)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run the command.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\Console\Input\InputInterface">InputInterface</abbr></td>
+                <td>$input</td>
+                <td><p>Input object</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr></td>
+                <td>$output</td>
+                <td><p>Output object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>0 for success</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateSchedule">
+        <div class="location">at line 274</div>
+        <code>            protected        bool
+    <strong>validateSchedule</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a> $todayTime, <a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a> $lastTime, <a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $s)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate the schedule (return true if we should send a message).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a></td>
+                <td>$todayTime</td>
+                <td><p>The time the notification job started.</p></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a></td>
+                <td>$lastTime</td>
+                <td><p>Last time notification was sent.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a></td>
+                <td>$s</td>
+                <td><p>Search row to validate.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserForSearch">
+        <div class="location">at line 302</div>
+        <code>            protected        <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool
+    <strong>getUserForSearch</strong>(<a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $s)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load and validate a user object associated with the search; return false
+if there is a problem.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a></td>
+                <td>$s</td>
+                <td><p>Current search row.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLanguage">
+        <div class="location">at line 335</div>
+        <code>            protected        void
+    <strong>setLanguage</strong>(string $userLang)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set up the translator language.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userLang</td>
+                <td><p>User language preference from database (may be empty).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getObjectForSearch">
+        <div class="location">at line 361</div>
+        <code>            protected        <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool
+    <strong>getObjectForSearch</strong>(<a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $s)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load and validate the results object associated with the search; return false
+if there is a problem.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a></td>
+                <td>$s</td>
+                <td><p>Current search row.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNewRecords">
+        <div class="location">at line 384</div>
+        <code>            protected        array|bool
+    <strong>getNewRecords</strong>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $searchObject, <a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a> $lastTime)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a search results object, fetch records that have changed since the last
+search. Return false on error.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$searchObject</td>
+                <td><p>Search results object</p></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a></td>
+                <td>$lastTime</td>
+                <td><p>Last notification time</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildEmail">
+        <div class="location">at line 440</div>
+        <code>            protected        string
+    <strong>buildEmail</strong>(<a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $s, <a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $searchObject, array $newRecords)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Build the email message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a></td>
+                <td>$s</td>
+                <td><p>Search table row</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>User owning search row</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$searchObject</td>
+                <td><p>Search results object</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$newRecords</td>
+                <td><p>New results in search</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendEmail">
+        <div class="location">at line 486</div>
+        <code>            protected        bool
+    <strong>sendEmail</strong>(<a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $user, string $message)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Try to send an email message to a user. Return true on success, false on
+error.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$user</td>
+                <td><p>User to email</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Email message body</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processViewAlerts">
+        <div class="location">at line 520</div>
+        <code>            protected        void
+    <strong>processViewAlerts</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send scheduled alerts for a view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

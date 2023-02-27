@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>SearchRunner</strong>        extends <abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr>
+    <strong>SearchRunner</strong>        extends <a href="../../VuFind/Search/SearchRunner.html"><abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a>
 </p>
 
                 <p>
@@ -101,20 +101,109 @@
             <p><p>VuFind Search Runner</p></p>                    </div>
             
         
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        EVENT_CONFIGURED
+                                    </td>
+                <td class="last">
+                    <p><em><p>Event identifiers.</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        EVENT_COMPLETE
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_events">
+                                        protected                                        <abbr title="Laminas\EventManager\EventManager">EventManager</abbr>
+                                                                                
+                                    </td>
+                <td>$events</td>
+                <td class="last"><p>Event manager.</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Search/SearchRunner.html#property_events">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resultsManager">
+                                        protected                                        <a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$resultsManager</td>
+                <td class="last"><p>Search results object manager.</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Search/SearchRunner.html#property_resultsManager">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchId">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$searchId</td>
+                <td class="last"><p>Counter of how many searches we have run (for differentiating listeners).</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Search/SearchRunner.html#property_searchId">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="VuFind\Search\Base\Results">Results</abbr>
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $resultsManager, <abbr title="Laminas\EventManager\EventManager">EventManager</abbr> $events = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Search/SearchRunner.html#method___construct">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_run">run</a>(array|<abbr title="Laminas\Stdlib\Parameters">Parameters</abbr> $rawRequest, string $searchClassId = &#039;Solr&#039;, mixed $setupCallback = null, string $lastView = null)
         
                                             <p><p>Run the search.</p></p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setEventManager">setEventManager</a>(<abbr title="Laminas\EventManager\EventManagerInterface">EventManagerInterface</abbr> $events)
+        
+                                            <p><p>Set EventManager instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Search/SearchRunner.html#method_setEventManager">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\EventManager\EventManagerInterface">EventManagerInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEventManager">getEventManager</a>()
+        
+                                            <p><p>Return EventManager instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Search/SearchRunner.html#method_getEventManager">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a></small></div>
             </div>
             </div>
 
@@ -123,9 +212,49 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../VuFind/Search/SearchRunner.html#method___construct">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a> at line 82</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $resultsManager, <abbr title="Laminas\EventManager\EventManager">EventManager</abbr> $events = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a></td>
+                <td>$resultsManager</td>
+                <td><p>Results manager</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\EventManager\EventManager">EventManager</abbr></td>
+                <td>$events</td>
+                <td><p>Event manager (optional)</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_run">
         <div class="location">at line 61</div>
-        <code>                    <abbr title="VuFind\Search\Base\Results">Results</abbr>
+        <code>                    <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
     <strong>run</strong>(array|<abbr title="Laminas\Stdlib\Parameters">Parameters</abbr> $rawRequest, string $searchClassId = &#039;Solr&#039;, mixed $setupCallback = null, string $lastView = null)
         </code>
     </h3>
@@ -172,7 +301,7 @@ from a previous search (optional; used for view persistence).</p></td>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="VuFind\Search\Base\Results">Results</abbr></td>
+            <td><a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
             <td></td>
         </tr>
     </table>
@@ -182,11 +311,96 @@ from a previous search (optional; used for view persistence).</p></td>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFindSearch\Backend\Exception\BackendException">BackendException</abbr></td>
+                <td><a href="../../VuFindSearch/Backend/Exception/BackendException.html"><abbr title="VuFindSearch\Backend\Exception\BackendException">BackendException</abbr></a></td>
                 <td></td>
             </tr>
             </table>
 
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEventManager">
+        <div class="location">in <a href="../../VuFind/Search/SearchRunner.html#method_setEventManager">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a> at line 180</div>
+        <code>                    void
+    <strong>setEventManager</strong>(<abbr title="Laminas\EventManager\EventManagerInterface">EventManagerInterface</abbr> $events)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set EventManager instance.</p></p>                        
+                    <p>
+                        
+                                    <tr>
+                        <td>Deprecate</td>
+                        <td>`VuFind\Search' event namespace (2.2)</td>
+                        </tr>
+                            </p>
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\EventManager\EventManagerInterface">EventManagerInterface</abbr></td>
+                <td>$events</td>
+                <td><p>Event manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEventManager">
+        <div class="location">in <a href="../../VuFind/Search/SearchRunner.html#method_getEventManager">
+<abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a> at line 193</div>
+        <code>                    <abbr title="Laminas\EventManager\EventManagerInterface">EventManagerInterface</abbr>
+    <strong>getEventManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return EventManager instance.</p></p>                <p><p>Lazy loads a new EventManager if none was set.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\EventManager\EventManagerInterface">EventManagerInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
             
             
                     </div>

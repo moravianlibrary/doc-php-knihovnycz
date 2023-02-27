@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Log\LoggerFactory | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Log_LoggerFactory" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Log.html">Log</a></li><li class="backslash">\</li><li>LoggerFactory</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>LoggerFactory    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>LoggerFactory</strong>        implements        <abbr title="Laminas\ServiceManager\Factory\FactoryInterface">FactoryInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Factory for instantiating Logger</p></p>                    </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addDbWriters">addDbWriters</a>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $config)
+        
+                                            <p><p>Configure database writers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addEmailWriters">addEmailWriters</a>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <abbr title="Laminas\Config\Config">Config</abbr> $config)
+        
+                                            <p><p>Configure email writers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addFileWriters">addFileWriters</a>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, string $config)
+        
+                                            <p><p>Configure File writers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addSlackWriters">addSlackWriters</a>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <abbr title="Laminas\Config\Config">Config</abbr> $config)
+        
+                                            <p><p>Configure Slack writers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addOffice365Writers">addOffice365Writers</a>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <abbr title="Laminas\Config\Config">Config</abbr> $config)
+        
+                                            <p><p>Configure Office365 writers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasDynamicDebug">hasDynamicDebug</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container)
+        
+                                            <p><p>Is dynamic debug mode enabled?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configureLogger">configureLogger</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger)
+        
+                                            <p><p>Set configuration</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addDebugWriter">addDebugWriter</a>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, bool|int $debug)
+        
+                                            <p><p>Add the standard debug stream writer.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addWriters">addWriters</a>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Laminas\Log\Writer\WriterInterface">WriterInterface</abbr> $writer, string|array $filters)
+        
+                                            <p><p>Applies an array of filters to a writer</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___invoke">__invoke</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
+        
+                                            <p><p>Create an object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_addDbWriters">
+        <div class="location">at line 60</div>
+        <code>            protected        void
+    <strong>addDbWriters</strong>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure database writers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a></td>
+                <td>$logger</td>
+                <td><p>Logger object</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$config</td>
+                <td>Configuration</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addEmailWriters">
+        <div class="location">at line 95</div>
+        <code>            protected        void
+    <strong>addEmailWriters</strong>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <abbr title="Laminas\Config\Config">Config</abbr> $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure email writers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a></td>
+                <td>$logger</td>
+                <td><p>Logger object</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td>Configuration</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFileWriters">
+        <div class="location">at line 127</div>
+        <code>            protected        void
+    <strong>addFileWriters</strong>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, string $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure File writers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a></td>
+                <td>$logger</td>
+                <td><p>Logger object</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$config</td>
+                <td>Configuration</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addSlackWriters">
+        <div class="location">at line 155</div>
+        <code>            protected        void
+    <strong>addSlackWriters</strong>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <abbr title="Laminas\Config\Config">Config</abbr> $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure Slack writers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a></td>
+                <td>$logger</td>
+                <td><p>Logger object</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td>Configuration</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addOffice365Writers">
+        <div class="location">at line 197</div>
+        <code>            protected        void
+    <strong>addOffice365Writers</strong>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <abbr title="Laminas\Config\Config">Config</abbr> $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure Office365 writers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a></td>
+                <td>$logger</td>
+                <td><p>Logger object</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td>Configuration</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasDynamicDebug">
+        <div class="location">at line 230</div>
+        <code>            protected        bool
+    <strong>hasDynamicDebug</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is dynamic debug mode enabled?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configureLogger">
+        <div class="location">at line 252</div>
+        <code>            protected        void
+    <strong>configureLogger</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, <a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set configuration</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a></td>
+                <td>$logger</td>
+                <td><p>Logger to configure</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDebugWriter">
+        <div class="location">at line 311</div>
+        <code>            protected        void
+    <strong>addDebugWriter</strong>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, bool|int $debug)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the standard debug stream writer.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a></td>
+                <td>$logger</td>
+                <td><p>Logger object</p></td>
+            </tr>
+                    <tr>
+                <td>bool|int</td>
+                <td>$debug</td>
+                <td><p>Debug mode/level</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addWriters">
+        <div class="location">at line 346</div>
+        <code>            protected        void
+    <strong>addWriters</strong>(<a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a> $logger, <abbr title="Laminas\Log\Writer\WriterInterface">WriterInterface</abbr> $writer, string|array $filters)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Applies an array of filters to a writer</p></p>                <p><p>Filter keys: alert, error, notice, debug</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Log/Logger.html"><abbr title="VuFind\Log\Logger">Logger</abbr></a></td>
+                <td>$logger</td>
+                <td><p>Logger object</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Log\Writer\WriterInterface">WriterInterface</abbr></td>
+                <td>$writer</td>
+                <td><p>The writer to apply the
+filters to</p></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$filters</td>
+                <td><p>An array or comma-separated
+string of
+logging levels</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___invoke">
+        <div class="location">at line 425</div>
+        <code>                    object
+    <strong>__invoke</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create an object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$requestedName</td>
+                <td><p>Service being created</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Extra options (optional)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\ServiceManager\Exception\ServiceNotFoundException">ServiceNotFoundException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\ServiceManager\Exception\ServiceNotCreatedException">ServiceNotCreatedException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerExceptionInterface&amp;\Throwable">Throwable</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>SearchTabs</strong>        extends <abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr>
+    <strong>SearchTabs</strong>        extends <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html"><abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a>
 </p>
 
                 <p>
@@ -106,8 +106,58 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_results">
+                                        protected                                        <a href="../../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$results</td>
+                <td class="last"><p>Search manager</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#property_results">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_request">
+                                        protected                                        <abbr title="Laminas\Http\Request">Request</abbr>
+                                                                                
+                                    </td>
+                <td>$request</td>
+                <td class="last">Request</td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#property_request">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_url">
+                                        protected                                        <abbr title="Laminas\View\Helper\Url">Url</abbr>
+                                                                                
+                                    </td>
+                <td>$url</td>
+                <td class="last">Url</td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#property_url">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_helper">
+                                        protected                                        <a href="../../../../VuFind/Search/SearchTabsHelper.html"><abbr title="VuFind\Search\SearchTabsHelper">SearchTabsHelper</abbr></a>
+                                                                                
+                                    </td>
+                <td>$helper</td>
+                <td class="last"><p>Search tab helper</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#property_helper">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cachedHiddenFilterParams">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$cachedHiddenFilterParams</td>
+                <td class="last"><p>Cached hidden filter url params</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#property_cachedHiddenFilterParams">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_memory">
-                                        protected                                        <abbr title="VuFind\Search\Memory">Memory</abbr>
+                                        protected                                        <a href="../../../../VuFind/Search/Memory.html"><abbr title="VuFind\Search\Memory">Memory</abbr></a>
                                                                                 
                                     </td>
                 <td>$memory</td>
@@ -125,9 +175,85 @@
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $results, <abbr title="Laminas\View\Helper\Url">Url</abbr> $url, <abbr title="VuFind\Search\SearchTabsHelper">SearchTabsHelper</abbr> $helper, <abbr title="VuFind\Search\Memory">Memory</abbr> $memory)
+                    <a href="#method___construct">__construct</a>(<a href="../../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $results, <abbr title="Laminas\View\Helper\Url">Url</abbr> $url, <a href="../../../../VuFind/Search/SearchTabsHelper.html"><abbr title="VuFind\Search\SearchTabsHelper">SearchTabsHelper</abbr></a> $helper, <a href="../../../../VuFind/Search/Memory.html"><abbr title="VuFind\Search\Memory">Memory</abbr></a> $memory)
         
                                             <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTabConfig">getTabConfig</a>(string $activeSearchClass, string $query, string $handler, string $type = &#039;basic&#039;, array $hiddenFilters = [])
+        
+                                            <p><p>Determine information about search tabs</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_getTabConfig">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTabConfigForParams">getTabConfigForParams</a>(<a href="../../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params)
+        
+                                            <p><p>Get the tab configuration</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_getTabConfigForParams">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHiddenFilters">getHiddenFilters</a>(string $searchClassId, bool $returnDefaultsIfEmpty = true, bool $ignoreCurrentRequest = false)
+        
+                                            <p><p>Get an array of hidden filters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_getHiddenFilters">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCurrentHiddenFilterParams">getCurrentHiddenFilterParams</a>(string $searchClassId, bool $ignoreHiddenFilterMemory = false, string $prepend = &#039;&amp;amp;&#039;)
+        
+                                            <p><p>Get current hidden filters as a string suitable for search URLs</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_getCurrentHiddenFilterParams">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createSelectedTab">createSelectedTab</a>(string $id, string $class, string $label, string $permissionName)
+        
+                                            <p><p>Create information representing a selected tab.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_createSelectedTab">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_remapBasicSearch">remapBasicSearch</a>(<a href="../../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a> $activeOptions, string $targetClass, string $query, string $handler, array $filters)
+        
+                                            <p><p>Map a search query from one class to another.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_remapBasicSearch">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createBasicTab">createBasicTab</a>(string $id, string $class, string $label, string $newUrl, string $permissionName)
+        
+                                            <p><p>Create information representing a basic search tab.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -145,10 +271,22 @@
                     array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_createBasicTab">createBasicTab</a>(string $id, string $class, string $label, string $newUrl, string $permissionName)
+                    <a href="#method_createAdvancedTab">createAdvancedTab</a>(string $id, string $class, string $label, array $filters, string $permissionName)
         
-                                            <p><p>Create information representing a basic search tab.</p></p>                </div>
-                <div class="col-md-2"></div>
+                                            <p><p>Create information representing an advanced search tab.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_createAdvancedTab">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_buildUrlHiddenFilters">buildUrlHiddenFilters</a>(<a href="../../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $results, array $filters, string $prepend = &#039;?&#039;)
+        
+                                            <p><p>Build a hidden filter query fragment from the given filters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_buildUrlHiddenFilters">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -170,7 +308,7 @@
                     <h3 id="method___construct">
         <div class="location">at line 64</div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $results, <abbr title="Laminas\View\Helper\Url">Url</abbr> $url, <abbr title="VuFind\Search\SearchTabsHelper">SearchTabsHelper</abbr> $helper, <abbr title="VuFind\Search\Memory">Memory</abbr> $memory)
+    <strong>__construct</strong>(<a href="../../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $results, <abbr title="Laminas\View\Helper\Url">Url</abbr> $url, <a href="../../../../VuFind/Search/SearchTabsHelper.html"><abbr title="VuFind\Search\SearchTabsHelper">SearchTabsHelper</abbr></a> $helper, <a href="../../../../VuFind/Search/Memory.html"><abbr title="VuFind\Search\Memory">Memory</abbr></a> $memory)
         </code>
     </h3>
     <div class="details">    
@@ -186,7 +324,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></td>
+                <td><a href="../../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a></td>
                 <td>$results</td>
                 <td><p>Search results plugin manager</p></td>
             </tr>
@@ -196,18 +334,424 @@
                 <td><p>URL helper</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFind\Search\SearchTabsHelper">SearchTabsHelper</abbr></td>
+                <td><a href="../../../../VuFind/Search/SearchTabsHelper.html"><abbr title="VuFind\Search\SearchTabsHelper">SearchTabsHelper</abbr></a></td>
                 <td>$helper</td>
                 <td><p>Search tabs helper</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFind\Search\Memory">Memory</abbr></td>
+                <td><a href="../../../../VuFind/Search/Memory.html"><abbr title="VuFind\Search\Memory">Memory</abbr></a></td>
                 <td>$memory</td>
                 <td><p>Search memory</p></td>
             </tr>
             </table>
 
             
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTabConfig">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_getTabConfig">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a> at line 114</div>
+        <code>                    array
+    <strong>getTabConfig</strong>(string $activeSearchClass, string $query, string $handler, string $type = &#039;basic&#039;, array $hiddenFilters = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine information about search tabs</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$activeSearchClass</td>
+                <td><p>The search class ID of the active search</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td><p>The current search query</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>The current search handler</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td><p>The current search type (basic/advanced)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$hiddenFilters</td>
+                <td><p>The current hidden filters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTabConfigForParams">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_getTabConfigForParams">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a> at line 197</div>
+        <code>                    array
+    <strong>getTabConfigForParams</strong>(<a href="../../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the tab configuration</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHiddenFilters">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_getHiddenFilters">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a> at line 220</div>
+        <code>                    array
+    <strong>getHiddenFilters</strong>(string $searchClassId, bool $returnDefaultsIfEmpty = true, bool $ignoreCurrentRequest = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of hidden filters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$searchClassId</td>
+                <td><p>Active search class</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$returnDefaultsIfEmpty</td>
+                <td><p>Whether to return default tab filters if
+no filters are currently active</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$ignoreCurrentRequest</td>
+                <td><p>Whether to ignore hidden filters in
+the current request</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentHiddenFilterParams">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_getCurrentHiddenFilterParams">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a> at line 243</div>
+        <code>                    string
+    <strong>getCurrentHiddenFilterParams</strong>(string $searchClassId, bool $ignoreHiddenFilterMemory = false, string $prepend = &#039;&amp;amp;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get current hidden filters as a string suitable for search URLs</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$searchClassId</td>
+                <td><p>Active search class</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$ignoreHiddenFilterMemory</td>
+                <td><p>Whether to ignore hidden filters in
+search memory</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepend</td>
+                <td><p>String to prepend to the hidden
+filters if they're not empty</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createSelectedTab">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_createSelectedTab">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a> at line 293</div>
+        <code>            protected        array
+    <strong>createSelectedTab</strong>(string $id, string $class, string $label, string $permissionName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create information representing a selected tab.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Tab ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>Search class ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$label</td>
+                <td><p>Display text for tab</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$permissionName</td>
+                <td><p>Name of a permissionrule</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_remapBasicSearch">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_remapBasicSearch">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a> at line 315</div>
+        <code>            protected        string
+    <strong>remapBasicSearch</strong>(<a href="../../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a> $activeOptions, string $targetClass, string $query, string $handler, array $filters)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Map a search query from one class to another.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a></td>
+                <td>$activeOptions</td>
+                <td><p>Search options for source</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$targetClass</td>
+                <td><p>Search class ID for target</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td><p>Search query to map</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Search handler to map</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$filters</td>
+                <td><p>Tab filters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBasicTab">
+        <div class="location">at line 111</div>
+        <code>            protected        array
+    <strong>createBasicTab</strong>(string $id, string $class, string $label, string $newUrl, string $permissionName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create information representing a basic search tab.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Tab ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>Search class ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$label</td>
+                <td><p>Display text for tab</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newUrl</td>
+                <td><p>Target search URL</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$permissionName</td>
+                <td><p>Name of a permissionrule</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             
@@ -279,10 +823,11 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_createBasicTab">
-        <div class="location">at line 111</div>
+                    <h3 id="method_createAdvancedTab">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_createAdvancedTab">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a> at line 403</div>
         <code>            protected        array
-    <strong>createBasicTab</strong>(string $id, string $class, string $label, string $newUrl, string $permissionName)
+    <strong>createAdvancedTab</strong>(string $id, string $class, string $label, array $filters, string $permissionName)
         </code>
     </h3>
     <div class="details">    
@@ -291,7 +836,7 @@
             
 
         <div class="method-description">
-                            <p><p>Create information representing a basic search tab.</p></p>                        
+                            <p><p>Create information representing an advanced search tab.</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -313,9 +858,9 @@
                 <td><p>Display text for tab</p></td>
             </tr>
                     <tr>
-                <td>string</td>
-                <td>$newUrl</td>
-                <td><p>Target search URL</p></td>
+                <td>array</td>
+                <td>$filters</td>
+                <td><p>Tab filters</p></td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -331,6 +876,61 @@
         <tr>
             <td>array</td>
             <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildUrlHiddenFilters">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/SearchTabs.html#method_buildUrlHiddenFilters">
+<abbr title="VuFind\View\Helper\Root\SearchTabs">SearchTabs</abbr></a> at line 437</div>
+        <code>            protected        string
+    <strong>buildUrlHiddenFilters</strong>(<a href="../../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $results, array $filters, string $prepend = &#039;?&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Build a hidden filter query fragment from the given filters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$results</td>
+                <td><p>Search results</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$filters</td>
+                <td>Filters</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepend</td>
+                <td><p>String to prepend to the hidden filters if they're not
+empty</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Query parameters</p></td>
         </tr>
     </table>
 

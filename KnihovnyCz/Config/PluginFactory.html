@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>PluginFactory</strong>        extends <abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr>
+    <strong>PluginFactory</strong>        extends <a href="../../VuFind/Config/PluginFactory.html"><abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a>
 </p>
 
                 <p>
@@ -106,6 +106,16 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_iniReader">
+                                        protected                                        <abbr title="Laminas\Config\Reader\Ini">Ini</abbr>
+                                                                                
+                                    </td>
+                <td>$iniReader</td>
+                <td class="last"><p>INI file reader</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Config/PluginFactory.html#property_iniReader">
+<abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_configTable">
                                         protected                                        <a href="../../KnihovnyCz/Db/Table/Config.html"><abbr title="KnihovnyCz\Db\Table\Config">Config</abbr></a>
                                                                                 
@@ -122,7 +132,40 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Config/PluginFactory.html#method___construct">
+<abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Laminas\Config\Config">Config</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadConfigFile">loadConfigFile</a>(string $filename)
+        
+                                            <p><p>Load the specified configuration file.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Config/PluginFactory.html#method_loadConfigFile">
+<abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_canCreate">canCreate</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName)
+        
+                                            <p><p>Can we create a service for the specified name?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Config/PluginFactory.html#method_canCreate">
+<abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
                 </div>
                 <div class="col-md-8">
                     <a href="#method___invoke">__invoke</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
@@ -147,9 +190,127 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../VuFind/Config/PluginFactory.html#method___construct">
+<abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a> at line 56</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadConfigFile">
+        <div class="location">in <a href="../../VuFind/Config/PluginFactory.html#method_loadConfigFile">
+<abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a> at line 72</div>
+        <code>            protected        <abbr title="Laminas\Config\Config">Config</abbr>
+    <strong>loadConfigFile</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load the specified configuration file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Config file name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canCreate">
+        <div class="location">in <a href="../../VuFind/Config/PluginFactory.html#method_canCreate">
+<abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a> at line 169</div>
+        <code>                    bool
+    <strong>canCreate</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Can we create a service for the specified name?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service container</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$requestedName</td>
+                <td><p>Name of service</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___invoke">
         <div class="location">at line 64</div>
-        <code>                    <abbr title="Laminas\Config\Config">Config</abbr>
+        <code>                    object
     <strong>__invoke</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
         </code>
     </h3>
@@ -187,7 +348,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+            <td>object</td>
             <td></td>
         </tr>
     </table>

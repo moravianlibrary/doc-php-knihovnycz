@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFind" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="VuFind.html">VuFind</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFind</h1>
+    </div>
+
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="VuFind/AjaxHandler.html">VuFind\AjaxHandler</a><a href="VuFind/Auth.html">VuFind\Auth</a><a href="VuFind/Autocomplete.html">VuFind\Autocomplete</a><a href="VuFind/CSV.html">VuFind\CSV</a><a href="VuFind/Cache.html">VuFind\Cache</a><a href="VuFind/Captcha.html">VuFind\Captcha</a><a href="VuFind/ChannelProvider.html">VuFind\ChannelProvider</a><a href="VuFind/Config.html">VuFind\Config</a><a href="VuFind/Connection.html">VuFind\Connection</a><a href="VuFind/Content.html">VuFind\Content</a><a href="VuFind/ContentBlock.html">VuFind\ContentBlock</a><a href="VuFind/Controller.html">VuFind\Controller</a><a href="VuFind/Cookie.html">VuFind\Cookie</a><a href="VuFind/Cover.html">VuFind\Cover</a><a href="VuFind/Crypt.html">VuFind\Crypt</a><a href="VuFind/Db.html">VuFind\Db</a><a href="VuFind/DigitalContent.html">VuFind\DigitalContent</a><a href="VuFind/DoiLinker.html">VuFind\DoiLinker</a><a href="VuFind/Exception.html">VuFind\Exception</a><a href="VuFind/Favorites.html">VuFind\Favorites</a><a href="VuFind/Feed.html">VuFind\Feed</a><a href="VuFind/Form.html">VuFind\Form</a><a href="VuFind/GeoFeatures.html">VuFind\GeoFeatures</a><a href="VuFind/Hierarchy.html">VuFind\Hierarchy</a><a href="VuFind/Http.html">VuFind\Http</a><a href="VuFind/I18n.html">VuFind\I18n</a><a href="VuFind/ILS.html">VuFind\ILS</a><a href="VuFind/Log.html">VuFind\Log</a><a href="VuFind/Mailer.html">VuFind\Mailer</a><a href="VuFind/MetadataVocabulary.html">VuFind\MetadataVocabulary</a><a href="VuFind/Net.html">VuFind\Net</a><a href="VuFind/Normalizer.html">VuFind\Normalizer</a><a href="VuFind/OAI.html">VuFind\OAI</a><a href="VuFind/OAuth2.html">VuFind\OAuth2</a><a href="VuFind/QRCode.html">VuFind\QRCode</a><a href="VuFind/Recommend.html">VuFind\Recommend</a><a href="VuFind/Record.html">VuFind\Record</a><a href="VuFind/RecordDriver.html">VuFind\RecordDriver</a><a href="VuFind/RecordTab.html">VuFind\RecordTab</a><a href="VuFind/Related.html">VuFind\Related</a><a href="VuFind/Reserves.html">VuFind\Reserves</a><a href="VuFind/Resolver.html">VuFind\Resolver</a><a href="VuFind/Role.html">VuFind\Role</a><a href="VuFind/Route.html">VuFind\Route</a><a href="VuFind/SMS.html">VuFind\SMS</a><a href="VuFind/Search.html">VuFind\Search</a><a href="VuFind/Security.html">VuFind\Security</a><a href="VuFind/Service.html">VuFind\Service</a><a href="VuFind/ServiceManager.html">VuFind\ServiceManager</a><a href="VuFind/Session.html">VuFind\Session</a><a href="VuFind/Sitemap.html">VuFind\Sitemap</a><a href="VuFind/Solr.html">VuFind\Solr</a><a href="VuFind/UrlHighlight.html">VuFind\UrlHighlight</a><a href="VuFind/UrlShortener.html">VuFind\UrlShortener</a><a href="VuFind/Validator.html">VuFind\Validator</a><a href="VuFind/View.html">VuFind\View</a><a href="VuFind/XSLT.html">VuFind\XSLT</a>        </div>
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/Bootstrapper.html"><abbr title="VuFind\Bootstrapper">Bootstrapper</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Bootstrapper</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/Cart.html"><abbr title="VuFind\Cart">Cart</abbr></a>    </div>
+                <div class="col-md-6"><p>Cart Class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/CartFactory.html"><abbr title="VuFind\CartFactory">CartFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Cart factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/Export.html"><abbr title="VuFind\Export">Export</abbr></a>    </div>
+                <div class="col-md-6"><p>Export support class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/ExportFactory.html"><abbr title="VuFind\ExportFactory">ExportFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Export factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/ImageLoader.html"><abbr title="VuFind\ImageLoader">ImageLoader</abbr></a>    </div>
+                <div class="col-md-6"><p>Base class for loading images (shared by Cover\Loader and QRCode\Loader)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/Module.html"><abbr title="VuFind\Module">Module</abbr></a>    </div>
+                <div class="col-md-6"><p>Code module for the core of the VuFind application</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/SimpleXML.html"><abbr title="VuFind\SimpleXML">SimpleXML</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind SimpleXML enhancement functionality</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/Tags.html"><abbr title="VuFind\Tags">Tags</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind tag processing logic</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFind/TagsFactory.html"><abbr title="VuFind\TagsFactory">TagsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Tags factory.</p></div>
+            </div>
+            </div>
+    
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

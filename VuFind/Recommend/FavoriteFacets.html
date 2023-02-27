@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Recommend\FavoriteFacets | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Recommend_FavoriteFacets" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Recommend.html">Recommend</a></li><li class="backslash">\</li><li>FavoriteFacets</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>FavoriteFacets    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>FavoriteFacets</strong>        extends <a href="../../VuFind/Recommend/SideFacets.html"><abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>FavoriteFacets Recommendations Module</p></p>            <p><p>This class provides special facets for the Favorites area (tags/lists)</p></p>        </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_excludableFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$excludableFacets</td>
+                <td class="last"><p>Facets with &quot;exclude&quot; links enabled</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#property_excludableFacets">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_orFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$orFacets</td>
+                <td class="last"><p>Facets that are &quot;ORed&quot; instead of &quot;ANDed.&quot;</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#property_orFacets">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_results">
+                                        protected                                        <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+                                                                                
+                                    </td>
+                <td>$results</td>
+                <td class="last"><p>Search results</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#property_results">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_configLoader">
+                                        protected                                        <a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$configLoader</td>
+                <td class="last"><p>Configuration loader</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#property_configLoader">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dateFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$dateFacets</td>
+                <td class="last"><p>Year-only date facet configuration</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_dateFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fullDateFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$fullDateFacets</td>
+                <td class="last"><p>Day/month/year date facet configuration</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_fullDateFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_genericRangeFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$genericRangeFacets</td>
+                <td class="last"><p>Generic range facet configuration</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_genericRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_numericRangeFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$numericRangeFacets</td>
+                <td class="last"><p>Numeric range facet configuration</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_numericRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mainFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$mainFacets</td>
+                <td class="last"><p>Main facet configuration</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_mainFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_checkboxFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$checkboxFacets</td>
+                <td class="last"><p>Checkbox facet configuration</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_checkboxFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_showDynamicCheckboxFacets">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$showDynamicCheckboxFacets</td>
+                <td class="last"><p>Should we display dynamically-generated checkbox facets that are not
+explicitly configured in $checkboxFacets?</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_showDynamicCheckboxFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_showInLightboxSettings">
+                                        protected                                        bool|string
+                                                                                
+                                    </td>
+                <td>$showInLightboxSettings</td>
+                <td class="last"><p>Settings controlling how lightbox is used for facet display.</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_showInLightboxSettings">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_showMoreSettings">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$showMoreSettings</td>
+                <td class="last"><p>Settings controlling how many values to display before &quot;show more.&quot;</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_showMoreSettings">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_collapsedFacets">
+                                        protected                                        bool|string
+                                                                                
+                                    </td>
+                <td>$collapsedFacets</td>
+                <td class="last"><p>Collapsed facet setting</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_collapsedFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hierarchicalFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$hierarchicalFacets</td>
+                <td class="last"><p>Hierarchical facet setting</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_hierarchicalFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hierarchicalFacetSortOptions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$hierarchicalFacetSortOptions</td>
+                <td class="last"><p>Hierarchical facet sort options</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_hierarchicalFacetSortOptions">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hierarchicalFacetHelper">
+                                        protected                                        <a href="../../VuFind/Search/Solr/HierarchicalFacetHelper.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetHelper">HierarchicalFacetHelper</abbr></a>
+                                                                                
+                                    </td>
+                <td>$hierarchicalFacetHelper</td>
+                <td class="last"><p>Hierarchical facet helper</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#property_hierarchicalFacetHelper">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tagSetting">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$tagSetting</td>
+                <td class="last"><p>Tag capability setting</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configLoader, <a href="../../VuFind/Search/Solr/HierarchicalFacetHelper.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetHelper">HierarchicalFacetHelper</abbr></a> $facetHelper = null, string $tagSetting = &#039;enabled&#039;)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_process">process</a>(<a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $results)
+        
+                                            <p><p>Called after the Search Results object has performed its main search.  This
+may be used to extract necessary information from the Search Results object
+or to perform completely unrelated processing.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#method_process">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_excludeAllowed">excludeAllowed</a>(string $field)
+        
+                                            <p><p>Is the specified field allowed to be excluded?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#method_excludeAllowed">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFacetOperator">getFacetOperator</a>(string $field)
+        
+                                            <p><p>Get the facet boolean operator</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#method_getFacetOperator">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResults">getResults</a>()
+        
+                                            <p><p>Get results stored in the object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#method_getResults">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadBooleanConfigs">loadBooleanConfigs</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config, array $allFacets, string $section = &#039;Results_Settings&#039;)
+        
+                                            <p><p>Read boolean (OR/NOT) settings from the provided configuration</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/AbstractFacets.html#method_loadBooleanConfigs">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setConfig">setConfig</a>(string $settings)
+        
+                                            <p><p>Store the configuration of the recommendation module.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_init">init</a>(<a href="../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, <abbr title="Laminas\Stdlib\Parameters">Parameters</abbr> $request)
+        
+                                            <p><p>Called before the Search Results object performs its main search
+(specifically, in response to \VuFind\Search\SearchRunner::EVENT_CONFIGURED).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_init">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCheckboxFacetSet">getCheckboxFacetSet</a>()
+        
+                                            <p><p>Get checkbox facet information from the search results.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getCheckboxFacetSet">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFacetSet">getFacetSet</a>()
+        
+                                            <p><p>Get facet information from the search results.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getFacetSet">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDateFacets">getDateFacets</a>()
+        
+                                            <p><p>Return year-based date facet information in a format processed for use in the
+view.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getDateFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFullDateFacets">getFullDateFacets</a>()
+        
+                                            <p><p>Return year/month/day-based date facet information in a format processed for
+use in the view.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getFullDateFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGenericRangeFacets">getGenericRangeFacets</a>()
+        
+                                            <p><p>Return generic range facet information in a format processed for use in the
+view.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getGenericRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNumericRangeFacets">getNumericRangeFacets</a>()
+        
+                                            <p><p>Return numeric range facet information in a format processed for use in the
+view.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getNumericRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAllRangeFacets">getAllRangeFacets</a>()
+        
+                                            <p><p>Get combined range details.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getAllRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCollapsedFacets">getCollapsedFacets</a>()
+        
+                                            <p><p>Return the list of facets configured to be collapsed</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getCollapsedFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getShowMoreSetting">getShowMoreSetting</a>(string $facetName, int $default = 6)
+        
+                                            <p><p>Return the list of facets configured to be collapsed
+defaults to 6</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getShowMoreSetting">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getShowInLightboxSetting">getShowInLightboxSetting</a>(string $facetName)
+        
+                                            <p><p>Return settings for showing more results in the lightbox</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getShowInLightboxSetting">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRangeFacets">getRangeFacets</a>(string $property)
+        
+                                            <p><p>Return range facet information in a format processed for use in the view.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHierarchicalFacets">getHierarchicalFacets</a>()
+        
+                                            <p><p>Return the list of facets configured to be hierarchical</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getHierarchicalFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHierarchicalFacetSortOptions">getHierarchicalFacetSortOptions</a>()
+        
+                                            <p><p>Return the list of configured hierarchical facet sort options</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Recommend/SideFacets.html#method_getHierarchicalFacetSortOptions">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 60</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configLoader, <a href="../../VuFind/Search/Solr/HierarchicalFacetHelper.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetHelper">HierarchicalFacetHelper</abbr></a> $facetHelper = null, string $tagSetting = &#039;enabled&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
+                <td>$configLoader</td>
+                <td><p>Configuration loader</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Search/Solr/HierarchicalFacetHelper.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetHelper">HierarchicalFacetHelper</abbr></a></td>
+                <td>$facetHelper</td>
+                <td><p>Helper for handling
+hierarchical facets</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tagSetting</td>
+                <td><p>Tag capability setting</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_process">
+        <div class="location">in <a href="../../VuFind/Recommend/AbstractFacets.html#method_process">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a> at line 92</div>
+        <code>                    void
+    <strong>process</strong>(<a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $results)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Called after the Search Results object has performed its main search.  This
+may be used to extract necessary information from the Search Results object
+or to perform completely unrelated processing.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$results</td>
+                <td><p>Search results object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_excludeAllowed">
+        <div class="location">in <a href="../../VuFind/Recommend/AbstractFacets.html#method_excludeAllowed">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a> at line 104</div>
+        <code>                    bool
+    <strong>excludeAllowed</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is the specified field allowed to be excluded?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacetOperator">
+        <div class="location">in <a href="../../VuFind/Recommend/AbstractFacets.html#method_getFacetOperator">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a> at line 116</div>
+        <code>                    string
+    <strong>getFacetOperator</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the facet boolean operator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>'AND' or 'OR'</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResults">
+        <div class="location">in <a href="../../VuFind/Recommend/AbstractFacets.html#method_getResults">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a> at line 126</div>
+        <code>                    <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+    <strong>getResults</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get results stored in the object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadBooleanConfigs">
+        <div class="location">in <a href="../../VuFind/Recommend/AbstractFacets.html#method_loadBooleanConfigs">
+<abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a> at line 140</div>
+        <code>            protected        void
+    <strong>loadBooleanConfigs</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config, array $allFacets, string $section = &#039;Results_Settings&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Read boolean (OR/NOT) settings from the provided configuration</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Configuration to read</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$allFacets</td>
+                <td><p>All facets (to use when config = *)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td><p>Configuration section containing settings</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">at line 76</div>
+        <code>                    void
+    <strong>setConfig</strong>(string $settings)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Store the configuration of the recommendation module.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$settings</td>
+                <td><p>Settings from searches.ini.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_init">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 255</div>
+        <code>                    void
+    <strong>init</strong>(<a href="../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, <abbr title="Laminas\Stdlib\Parameters">Parameters</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Called before the Search Results object performs its main search
+(specifically, in response to \VuFind\Search\SearchRunner::EVENT_CONFIGURED).</p></p>                <p><p>This method is responsible for setting search parameters needed by the
+recommendation module and for reading any existing search parameters that may
+be needed.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>Search parameter object</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Stdlib\Parameters">Parameters</abbr></td>
+                <td>$request</td>
+                <td><p>Parameter object representing user
+request.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCheckboxFacetSet">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getCheckboxFacetSet">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 271</div>
+        <code>                    array
+    <strong>getCheckboxFacetSet</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get checkbox facet information from the search results.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacetSet">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getFacetSet">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 285</div>
+        <code>                    array
+    <strong>getFacetSet</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get facet information from the search results.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateFacets">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getDateFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 316</div>
+        <code>                    array
+    <strong>getDateFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return year-based date facet information in a format processed for use in the
+view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of from/to value arrays keyed by field.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFullDateFacets">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getFullDateFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 327</div>
+        <code>                    array
+    <strong>getFullDateFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return year/month/day-based date facet information in a format processed for
+use in the view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of from/to value arrays keyed by field.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGenericRangeFacets">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getGenericRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 338</div>
+        <code>                    array
+    <strong>getGenericRangeFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return generic range facet information in a format processed for use in the
+view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of from/to value arrays keyed by field.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNumericRangeFacets">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getNumericRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 349</div>
+        <code>                    array
+    <strong>getNumericRangeFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return numeric range facet information in a format processed for use in the
+view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of from/to value arrays keyed by field.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllRangeFacets">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getAllRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 359</div>
+        <code>                    array
+    <strong>getAllRangeFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get combined range details.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollapsedFacets">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getCollapsedFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 381</div>
+        <code>                    array
+    <strong>getCollapsedFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the list of facets configured to be collapsed</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShowMoreSetting">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getShowMoreSetting">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 400</div>
+        <code>                    int
+    <strong>getShowMoreSetting</strong>(string $facetName, int $default = 6)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the list of facets configured to be collapsed
+defaults to 6</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$facetName</td>
+                <td><p>Name of the facet to get</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$default</td>
+                <td><p>Value to use if configuration is absent/invalid</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShowInLightboxSetting">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getShowInLightboxSetting">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 422</div>
+        <code>                    int
+    <strong>getShowInLightboxSetting</strong>(string $facetName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return settings for showing more results in the lightbox</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$facetName</td>
+                <td><p>Name of the facet to get</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRangeFacets">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getRangeFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 443</div>
+        <code>            protected        array
+    <strong>getRangeFacets</strong>(string $property)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return range facet information in a format processed for use in the view.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td><p>Name of property containing active range facets</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of from/to value arrays keyed by field.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHierarchicalFacets">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getHierarchicalFacets">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 470</div>
+        <code>                    array
+    <strong>getHierarchicalFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the list of facets configured to be hierarchical</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHierarchicalFacetSortOptions">
+        <div class="location">in <a href="../../VuFind/Recommend/SideFacets.html#method_getHierarchicalFacetSortOptions">
+<abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a> at line 480</div>
+        <code>                    array
+    <strong>getHierarchicalFacetSortOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the list of configured hierarchical facet sort options</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

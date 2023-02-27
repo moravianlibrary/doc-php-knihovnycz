@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Controller\Plugin\ResultScrollerMock | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Controller_Plugin_ResultScrollerMock" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/Controller.html">Controller</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/Controller/Plugin.html">Plugin</a></li><li class="backslash">\</li><li>ResultScrollerMock</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ResultScrollerMock    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ResultScrollerMock</strong>        extends <a href="../../../VuFind/Controller/Plugin/ResultScroller.html"><abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a>
+</p>
+
+        
+        
+    
+        
+
+            <div class="description">
+            <p><p>Mock class to stub search results</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_enabled">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$enabled</td>
+                <td class="last"><p>Is scroller enabled?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#property_enabled">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_data">
+                                        protected                                        <abbr title="Laminas\Session\Container">Container</abbr>
+                                                                                
+                                    </td>
+                <td>$data</td>
+                <td class="last"><p>Session data used by scroller</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#property_data">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resultsManager">
+                                        protected                                        <a href="../../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$resultsManager</td>
+                <td class="last"><p>Results manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#property_resultsManager">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_testResults">
+                                        protected                                        <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+                                                                                
+                                    </td>
+                <td>$testResults</td>
+                <td class="last"><p>Search results to return</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>($mockManager, $testResults)
+        
+                                            <p><p>Constructor. Create a new search result scroller.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_init">init</a>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $searchObject)
+        
+                                            <p><p>Initialize this result set scroller. This should only be called
+prior to displaying the results of a new search.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_init">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_scrollOnCurrentPage">scrollOnCurrentPage</a>(array $retVal, int $pos)
+        
+                                            <p><p>Return a modified results array to help scroll the user through the current
+page of results</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollOnCurrentPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fetchPreviousPage">fetchPreviousPage</a>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch, int $pos, int $count)
+        
+                                            <p><p>Return a modified results array for the case where the user is on the cusp of
+the previous page of results</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_fetchPreviousPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fetchNextPage">fetchNextPage</a>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch, int $pos)
+        
+                                            <p><p>Return a modified results array for the case where the user is on the cusp of
+the next page of results</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_fetchNextPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_scrollToPreviousPage">scrollToPreviousPage</a>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch, int $pos)
+        
+                                            <p><p>Return a modified results array for the case where we need to retrieve data
+from the previous page of results</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollToPreviousPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_scrollToNextPage">scrollToNextPage</a>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch, int $pos)
+        
+                                            <p><p>Return a modified results array for the case where we need to retrieve data
+from the next page of results</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollToNextPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_scrollToFirstRecord">scrollToFirstRecord</a>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch)
+        
+                                            <p><p>Return a modified results array for the case where we need to retrieve data
+from the the first page of results</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollToFirstRecord">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_scrollToLastRecord">scrollToLastRecord</a>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch)
+        
+                                            <p><p>Return a modified results array for the case where we need to retrieve data
+from the the last page of results</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollToLastRecord">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFirstRecordId">getFirstRecordId</a>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch)
+        
+                                            <p><p>Get the ID of the first record in the result set.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_getFirstRecordId">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLastPageNumber">getLastPageNumber</a>()
+        
+                                            <p><p>Calculate the last page number in the result set.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_getLastPageNumber">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLastRecordId">getLastRecordId</a>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch)
+        
+                                            <p><p>Get the ID of the last record in the result set.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_getLastRecordId">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getScrollData">getScrollData</a>(<a href="../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        
+                                            <p><p>Get the previous/next record in the last search
+result set relative to the current one, also return
+the position of the current record in the result set.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_getScrollData">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fetchPage">fetchPage</a>(object $searchObject, int $page = null)
+        
+                                            <p><p>Fetch the given page of results from the given search object and
+return the IDs of the records in an array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_fetchPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_restoreLastSearch">restoreLastSearch</a>()
+        
+                                            <p>Stubbed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_rememberSearch">rememberSearch</a>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $search)
+        
+                                            <p>Stubbed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 415</div>
+        <code>                    
+    <strong>__construct</strong>($mockManager, $testResults)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Constructor. Create a new search result scroller.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$mockManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$testResults</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_init">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 95</div>
+        <code>                    bool
+    <strong>init</strong>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $searchObject)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize this result set scroller. This should only be called
+prior to displaying the results of a new search.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$searchObject</td>
+                <td><p>The search object that was
+used to execute the last search.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scrollOnCurrentPage">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollOnCurrentPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 134</div>
+        <code>            protected        array
+    <strong>scrollOnCurrentPage</strong>(array $retVal, int $pos)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a modified results array to help scroll the user through the current
+page of results</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$retVal</td>
+                <td><p>Return values (in progress)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td><p>Current position within current page</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchPreviousPage">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_fetchPreviousPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 154</div>
+        <code>            protected        array
+    <strong>fetchPreviousPage</strong>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch, int $pos, int $count)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a modified results array for the case where the user is on the cusp of
+the previous page of results</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$retVal</td>
+                <td><p>Return values (in progress)</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$lastSearch</td>
+                <td><p>Representation of last search</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td><p>Current position within current
+page</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td><p>Size of current page of results</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchNextPage">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_fetchNextPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 194</div>
+        <code>            protected        array
+    <strong>fetchNextPage</strong>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch, int $pos)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a modified results array for the case where the user is on the cusp of
+the next page of results</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$retVal</td>
+                <td><p>Return values (in progress)</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$lastSearch</td>
+                <td><p>Representation of last search</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td><p>Current position within current
+page</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scrollToPreviousPage">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollToPreviousPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 234</div>
+        <code>            protected        array
+    <strong>scrollToPreviousPage</strong>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch, int $pos)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a modified results array for the case where we need to retrieve data
+from the previous page of results</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$retVal</td>
+                <td><p>Return values (in progress)</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$lastSearch</td>
+                <td><p>Representation of last search</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td><p>Current position within
+previous page</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scrollToNextPage">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollToNextPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 278</div>
+        <code>            protected        array
+    <strong>scrollToNextPage</strong>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch, int $pos)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a modified results array for the case where we need to retrieve data
+from the next page of results</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$retVal</td>
+                <td><p>Return values (in progress)</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$lastSearch</td>
+                <td><p>Representation of last search</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td><p>Current position within next
+page</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scrollToFirstRecord">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollToFirstRecord">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 320</div>
+        <code>            protected        array
+    <strong>scrollToFirstRecord</strong>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a modified results array for the case where we need to retrieve data
+from the the first page of results</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$retVal</td>
+                <td><p>Return values (in progress)</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$lastSearch</td>
+                <td><p>Representation of last search</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scrollToLastRecord">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_scrollToLastRecord">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 357</div>
+        <code>            protected        array
+    <strong>scrollToLastRecord</strong>(array $retVal, <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a modified results array for the case where we need to retrieve data
+from the the last page of results</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$retVal</td>
+                <td><p>Return values (in progress)</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$lastSearch</td>
+                <td><p>Representation of last search</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFirstRecordId">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_getFirstRecordId">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 394</div>
+        <code>            protected        string
+    <strong>getFirstRecordId</strong>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the ID of the first record in the result set.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$lastSearch</td>
+                <td><p>Representation of last search</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastPageNumber">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_getLastPageNumber">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 408</div>
+        <code>            protected        int
+    <strong>getLastPageNumber</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Calculate the last page number in the result set.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastRecordId">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_getLastRecordId">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 420</div>
+        <code>            protected        string
+    <strong>getLastRecordId</strong>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $lastSearch)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the ID of the last record in the result set.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$lastSearch</td>
+                <td><p>Representation of last search</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScrollData">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_getScrollData">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 441</div>
+        <code>                    array
+    <strong>getScrollData</strong>(<a href="../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the previous/next record in the last search
+result set relative to the current one, also return
+the position of the current record in the result set.</p></p>                <p><p>Return array('previousRecord'=&gt;previd, 'nextRecord'=&gt;nextid,
+'currentPosition'=&gt;number, 'resultTotal'=&gt;number).</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$driver</td>
+                <td><p>Driver for the record
+currently being displayed</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchPage">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/ResultScroller.html#method_fetchPage">
+<abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr></a> at line 541</div>
+        <code>            protected        array
+    <strong>fetchPage</strong>(object $searchObject, int $page = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fetch the given page of results from the given search object and
+return the IDs of the records in an array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$searchObject</td>
+                <td><p>The search object to use to execute the search</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td><p>The page number to fetch (null for current)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreLastSearch">
+        <div class="location">at line 426</div>
+        <code>            protected        <a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+    <strong>restoreLastSearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Stubbed</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rememberSearch">
+        <div class="location">at line 438</div>
+        <code>            protected        void
+    <strong>rememberSearch</strong>(<a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $search)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Stubbed</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$search</td>
+                <td><p>Search object to remember.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

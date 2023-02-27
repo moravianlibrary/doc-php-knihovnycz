@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Search\Primo\PrimoPermissionHandlerTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Search_Primo_PrimoPermissionHandlerTest" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/Search.html">Search</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/Search/Primo.html">Primo</a></li><li class="backslash">\</li><li>PrimoPermissionHandlerTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>PrimoPermissionHandlerTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>PrimoPermissionHandlerTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Unit tests for Primo Permission Handler.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_backend">
+                                        protected                                        <abbr title="VuFindTest\Search\Primo\BackendInterface">BackendInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$backend</td>
+                <td class="last">Backend.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primoConfig">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$primoConfig</td>
+                <td class="last"><p>Sample configuration.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primoConfigWithoutDefault">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$primoConfigWithoutDefault</td>
+                <td class="last"><p>Sample configuration without default.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primoConfigDefaultOnly">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$primoConfigDefaultOnly</td>
+                <td class="last"><p>Sample configuration with default with onCampusRule.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primoConfigInstitutionCode">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$primoConfigInstitutionCode</td>
+                <td class="last"><p>Sample configuration with institution code.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primoConfigWithoutDefaultWithInstCode">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$primoConfigWithoutDefaultWithInstCode</td>
+                <td class="last"><p>Sample configuration without default, but with institutionCode setting.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primoConfigDefaultOnlyNoOnCampusRule">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$primoConfigDefaultOnlyNoOnCampusRule</td>
+                <td class="last"><p>Sample configuration with default only.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p>Setup.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testWithoutConfig">testWithoutConfig</a>()
+        
+                                            <p><p>Test the handler without configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testWithoutAuthorizationService">testWithoutAuthorizationService</a>()
+        
+                                            <p><p>Test the handler without setting an authorization service.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testWithoutAuthorizationServiceWithLaminasConfigObject">testWithoutAuthorizationServiceWithLaminasConfigObject</a>()
+        
+                                            <p><p>Test the handler without setting an authorization service.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerCodeSuccessfull">testHandlerCodeSuccessfull</a>()
+        
+                                            <p><p>Test the handler code if permission matches
+This should return the actual institution code (depending on config)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultCode">testHandlerDefaultCode</a>()
+        
+                                            <p><p>Test the handler if permission does not match
+This should return the default institution code
+(if this is configured, for this test it is configured)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSetInstCode">testSetInstCode</a>()
+        
+                                            <p><p>Test the institution code setter</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerMemberAuthSuccessfull">testHandlerMemberAuthSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission via member code matches</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerMemberAuthNotSuccessfull">testHandlerMemberAuthNotSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission (member and deafult) does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultAuthSuccessfull">testHandlerDefaultAuthSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultAuthNotSuccessfull">testHandlerDefaultAuthNotSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testAuthNotExisting">testAuthNotExisting</a>()
+        
+                                            <p><p>Test the handler if permission does not exist</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerWithoutDefaultAuthSuccessfull">testHandlerWithoutDefaultAuthSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission matches</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerWithoutDefaultAuthNotSuccessfull">testHandlerWithoutDefaultAuthNotSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission (member and deafult) does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerWithoutDefaultCodeSuccessfull">testHandlerWithoutDefaultCodeSuccessfull</a>()
+        
+                                            <p><p>Test the handler code if permission matches</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerWithoutDefaultCodeAuthNotSuccessfull">testHandlerWithoutDefaultCodeAuthNotSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerWithoutDefaultDefaultAuthSuccessfull">testHandlerWithoutDefaultDefaultAuthSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerWithoutDefaultDefaultAuthNotSuccessfull">testHandlerWithoutDefaultDefaultAuthNotSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultOnlyAuthNotSuccessfull">testHandlerDefaultOnlyAuthNotSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission (member and deafult) does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultOnlyCodeAuthNotSuccessfull">testHandlerDefaultOnlyCodeAuthNotSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultOnlyDefaultAuthSuccessfull">testHandlerDefaultOnlyDefaultAuthSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultOnlyDefaultAuthNotSuccessfull">testHandlerDefaultOnlyDefaultAuthNotSuccessfull</a>()
+        
+                                            <p><p>Test the handler if permission does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerMemberIsOnCampusWithDefault">testHandlerMemberIsOnCampusWithDefault</a>()
+        
+                                            <p><p>Test the handler if permission (member and default) does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerMemberIsNotOnCampusWithDefault">testHandlerMemberIsNotOnCampusWithDefault</a>()
+        
+                                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerIsNotAMemberAndNotDefaultOnCampus">testHandlerIsNotAMemberAndNotDefaultOnCampus</a>()
+        
+                                            <p><p>Test the handler if permission does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerIsNotAMemberButOnDefaultCampus">testHandlerIsNotAMemberButOnDefaultCampus</a>()
+        
+                                            <p><p>Test the handler if permission does not exist</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerMemberIsOnCampus">testHandlerMemberIsOnCampus</a>()
+        
+                                            <p><p>Test the handler if permission (member and deafult) does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerMemberIsNotOnCampus">testHandlerMemberIsNotOnCampus</a>()
+        
+                                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerIsNotAMember">testHandlerIsNotAMember</a>()
+        
+                                            <p><p>Test the handler if permission does not match</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultOnlyNoOncampus">testHandlerDefaultOnlyNoOncampus</a>()
+        
+                                            <p><p>Permission cannot be granted without an onCampusRule</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHandlerDefaultOnlyCodeNoOncampus">testHandlerDefaultOnlyCodeNoOncampus</a>()
+        
+                                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handlerMemberAuthNotSuccessfullCallback">handlerMemberAuthNotSuccessfullCallback</a>($param)
+        
+                                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handlerMemberAuthSuccessfullCallback">handlerMemberAuthSuccessfullCallback</a>($param)
+        
+                                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handlerDefaultAuthSuccessfullCallback">handlerDefaultAuthSuccessfullCallback</a>($param)
+        
+                                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handlerDefaultAuthNotSuccessfullCallback">handlerDefaultAuthNotSuccessfullCallback</a>($param)
+        
+                                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handlerMemberIsOnCampusCallback">handlerMemberIsOnCampusCallback</a>($param)
+        
+                                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handlerMemberIsNotOnCampusCallback">handlerMemberIsNotOnCampusCallback</a>($param)
+        
+                                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handlerIsNotAMemberCallback">handlerIsNotAMemberCallback</a>($param)
+        
+                                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_handlerIsOnDefaultCampusCallback">handlerIsOnDefaultCampusCallback</a>($param)
+        
+                                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">at line 132</div>
+        <code>            protected        void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Setup.</p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWithoutConfig">
+        <div class="location">at line 142</div>
+        <code>                    void
+    <strong>testWithoutConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler without configuration.</p></p>                <p><p>This should throw an Exception.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWithoutAuthorizationService">
+        <div class="location">at line 156</div>
+        <code>                    void
+    <strong>testWithoutAuthorizationService</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler without setting an authorization service.</p></p>                <p><p>This should always return false.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWithoutAuthorizationServiceWithLaminasConfigObject">
+        <div class="location">at line 168</div>
+        <code>                    void
+    <strong>testWithoutAuthorizationServiceWithLaminasConfigObject</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler without setting an authorization service.</p></p>                <p><p>This should always return false.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerCodeSuccessfull">
+        <div class="location">at line 182</div>
+        <code>                    void
+    <strong>testHandlerCodeSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler code if permission matches
+This should return the actual institution code (depending on config)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultCode">
+        <div class="location">at line 203</div>
+        <code>                    void
+    <strong>testHandlerDefaultCode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match
+This should return the default institution code
+(if this is configured, for this test it is configured)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSetInstCode">
+        <div class="location">at line 232</div>
+        <code>                    void
+    <strong>testSetInstCode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the institution code setter</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerMemberAuthSuccessfull">
+        <div class="location">at line 244</div>
+        <code>                    void
+    <strong>testHandlerMemberAuthSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission via member code matches</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerMemberAuthNotSuccessfull">
+        <div class="location">at line 273</div>
+        <code>                    void
+    <strong>testHandlerMemberAuthNotSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission (member and deafult) does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultAuthSuccessfull">
+        <div class="location">at line 302</div>
+        <code>                    void
+    <strong>testHandlerDefaultAuthSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultAuthNotSuccessfull">
+        <div class="location">at line 331</div>
+        <code>                    void
+    <strong>testHandlerDefaultAuthNotSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAuthNotExisting">
+        <div class="location">at line 360</div>
+        <code>                    void
+    <strong>testAuthNotExisting</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not exist</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerWithoutDefaultAuthSuccessfull">
+        <div class="location">at line 384</div>
+        <code>                    void
+    <strong>testHandlerWithoutDefaultAuthSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission matches</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerWithoutDefaultAuthNotSuccessfull">
+        <div class="location">at line 413</div>
+        <code>                    void
+    <strong>testHandlerWithoutDefaultAuthNotSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission (member and deafult) does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerWithoutDefaultCodeSuccessfull">
+        <div class="location">at line 442</div>
+        <code>                    void
+    <strong>testHandlerWithoutDefaultCodeSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler code if permission matches</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerWithoutDefaultCodeAuthNotSuccessfull">
+        <div class="location">at line 463</div>
+        <code>                    void
+    <strong>testHandlerWithoutDefaultCodeAuthNotSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerWithoutDefaultDefaultAuthSuccessfull">
+        <div class="location">at line 482</div>
+        <code>                    void
+    <strong>testHandlerWithoutDefaultDefaultAuthSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerWithoutDefaultDefaultAuthNotSuccessfull">
+        <div class="location">at line 511</div>
+        <code>                    void
+    <strong>testHandlerWithoutDefaultDefaultAuthNotSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultOnlyAuthNotSuccessfull">
+        <div class="location">at line 544</div>
+        <code>                    void
+    <strong>testHandlerDefaultOnlyAuthNotSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission (member and deafult) does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultOnlyCodeAuthNotSuccessfull">
+        <div class="location">at line 575</div>
+        <code>                    void
+    <strong>testHandlerDefaultOnlyCodeAuthNotSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultOnlyDefaultAuthSuccessfull">
+        <div class="location">at line 604</div>
+        <code>                    void
+    <strong>testHandlerDefaultOnlyDefaultAuthSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultOnlyDefaultAuthNotSuccessfull">
+        <div class="location">at line 633</div>
+        <code>                    void
+    <strong>testHandlerDefaultOnlyDefaultAuthNotSuccessfull</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerMemberIsOnCampusWithDefault">
+        <div class="location">at line 666</div>
+        <code>                    void
+    <strong>testHandlerMemberIsOnCampusWithDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission (member and default) does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerMemberIsNotOnCampusWithDefault">
+        <div class="location">at line 699</div>
+        <code>                    void
+    <strong>testHandlerMemberIsNotOnCampusWithDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerIsNotAMemberAndNotDefaultOnCampus">
+        <div class="location">at line 730</div>
+        <code>                    void
+    <strong>testHandlerIsNotAMemberAndNotDefaultOnCampus</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerIsNotAMemberButOnDefaultCampus">
+        <div class="location">at line 761</div>
+        <code>                    void
+    <strong>testHandlerIsNotAMemberButOnDefaultCampus</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not exist</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerMemberIsOnCampus">
+        <div class="location">at line 796</div>
+        <code>                    void
+    <strong>testHandlerMemberIsOnCampus</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission (member and deafult) does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerMemberIsNotOnCampus">
+        <div class="location">at line 830</div>
+        <code>                    void
+    <strong>testHandlerMemberIsNotOnCampus</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerIsNotAMember">
+        <div class="location">at line 862</div>
+        <code>                    void
+    <strong>testHandlerIsNotAMember</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultOnlyNoOncampus">
+        <div class="location">at line 898</div>
+        <code>                    void
+    <strong>testHandlerDefaultOnlyNoOncampus</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Permission cannot be granted without an onCampusRule</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHandlerDefaultOnlyCodeNoOncampus">
+        <div class="location">at line 918</div>
+        <code>                    void
+    <strong>testHandlerDefaultOnlyCodeNoOncampus</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the handler if permission does not match
+This should return the default PrimoInstance code
+(if this is configured, for this test it is configured)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerMemberAuthNotSuccessfullCallback">
+        <div class="location">at line 941</div>
+        <code>                    bool
+    <strong>handlerMemberAuthNotSuccessfullCallback</strong>($param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerMemberAuthSuccessfullCallback">
+        <div class="location">at line 955</div>
+        <code>                    bool
+    <strong>handlerMemberAuthSuccessfullCallback</strong>($param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerDefaultAuthSuccessfullCallback">
+        <div class="location">at line 969</div>
+        <code>                    bool
+    <strong>handlerDefaultAuthSuccessfullCallback</strong>($param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerDefaultAuthNotSuccessfullCallback">
+        <div class="location">at line 983</div>
+        <code>                    bool
+    <strong>handlerDefaultAuthNotSuccessfullCallback</strong>($param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerMemberIsOnCampusCallback">
+        <div class="location">at line 997</div>
+        <code>                    bool
+    <strong>handlerMemberIsOnCampusCallback</strong>($param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerMemberIsNotOnCampusCallback">
+        <div class="location">at line 1017</div>
+        <code>                    bool
+    <strong>handlerMemberIsNotOnCampusCallback</strong>($param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerIsNotAMemberCallback">
+        <div class="location">at line 1037</div>
+        <code>                    bool
+    <strong>handlerIsNotAMemberCallback</strong>($param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerIsOnDefaultCampusCallback">
+        <div class="location">at line 1054</div>
+        <code>                    bool
+    <strong>handlerIsOnDefaultCampusCallback</strong>($param)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function (Callback) to inject different return values
+for the mock object with different parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

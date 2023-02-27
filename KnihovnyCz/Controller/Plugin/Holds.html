@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>Holds</strong>        extends <abbr title="VuFind\Controller\Plugin\Holds">Holds</abbr>
+    <strong>Holds</strong>        extends <a href="../../../VuFind/Controller/Plugin/Holds.html"><abbr title="VuFind\Controller\Plugin\Holds">Holds</abbr></a>
 </p>
 
                 <p>
@@ -102,19 +102,89 @@
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_session">
+                                        protected                                        <abbr title="Laminas\Session\Container">Container</abbr>
+                                                                                
+                                    </td>
+                <td>$session</td>
+                <td class="last"><p>Session data</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#property_session">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sessionManager">
+                                        protected                                        <abbr title="Laminas\Session\SessionManager">SessionManager</abbr>
+                                                                                
+                                    </td>
+                <td>$sessionManager</td>
+                <td class="last"><p>Session manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#property_sessionManager">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hmac">
+                                        protected                                        <a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a>
+                                                                                
+                                    </td>
+                <td>$hmac</td>
+                <td class="last"><p>HMAC generator</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#property_hmac">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dateConverter">
+                                        protected                                        <abbr title="VuFind\Date\Converter">Converter</abbr>
+                                                                                
+                                    </td>
+                <td>$dateConverter</td>
+                <td class="last"><p>Date converter</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#property_dateConverter">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_cancelHolds">cancelHolds</a>(<abbr title="VuFind\ILS\Connection">Connection</abbr> $catalog, array $patron)
+                    <a href="#method___construct">__construct</a>(<a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a> $hmac, <abbr title="Laminas\Session\SessionManager">SessionManager</abbr> $sessionManager, <abbr title="VuFind\Date\Converter">Converter</abbr> $dateConverter)
         
-                                            <p><p>Process cancellation requests.</p></p>                </div>
-                <div class="col-md-2"></div>
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method___construct">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Session\Container">Container</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSession">getSession</a>()
+        
+                                            <p><p>Grab the Container object for storing helper-specific session
+data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_getSession">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resetValidation">resetValidation</a>()
+        
+                                            <p><p>Reset the array of valid IDs in the session (used for form submission
+validation)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_resetValidation">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -137,6 +207,139 @@
 IDs are remembered, otherwise returns false.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateRequest">validateRequest</a>(array $linkData)
+        
+                                            <p><p>Method for validating contents of a request; returns an array of
+collected details if request is valid, otherwise returns false.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validateRequest">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validatePickUpInput">validatePickUpInput</a>(string $pickup, array $extraHoldFields, array $pickUpLibs)
+        
+                                            <p><p>Check if the user-provided pickup location is valid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validatePickUpInput">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validatePickUpLocation">validatePickUpLocation</a>(string $location, array $pickUpLibs)
+        
+                                            <p><p>Check if the provided pickup location is valid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validatePickUpLocation">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateRequestGroupInput">validateRequestGroupInput</a>(array $gatheredDetails, array $extraHoldFields, array $requestGroups)
+        
+                                            <p><p>Check if the user-provided request group is valid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validateRequestGroupInput">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateRequestGroup">validateRequestGroup</a>(string $requestGroupId, array $requestGroups)
+        
+                                            <p><p>Check if the provided request group is valid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validateRequestGroup">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultRequiredDate">getDefaultRequiredDate</a>(array $checkHolds, <a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a> $catalog = null, array $patron = null, array $holdInfo = null)
+        
+                                            <p><p>Getting a default required date based on hold settings.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_getDefaultRequiredDate">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDateFromArray">getDateFromArray</a>(array $dateArray)
+        
+                                            <p><p>Support method for getDefaultRequiredDate() -- generate a date based
+on a days/months/years offset array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_getDateFromArray">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getValidIds">getValidIds</a>()
+        
+                                            <p><p>Get remembered valid IDs</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_getValidIds">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addCancelDetails">addCancelDetails</a>(<a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a> $catalog, array $ilsDetails, array $cancelStatus, array $patron = [])
+        
+                                            <p><p>Update ILS details with cancellation-specific information, if appropriate.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/Holds.html#method_addCancelDetails">
+<abbr title="VuFind\Controller\Plugin\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_cancelHolds">cancelHolds</a>(<a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a> $catalog, array $patron)
+        
+                                            <p><p>Process cancellation requests.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateDates">validateDates</a>(string|null $startDate, string|null $requiredBy, array $enabledFormFields)
+        
+                                            <p><p>Check if the user-provided dates are valid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/Holds.html#method_validateDates">
+<abbr title="VuFind\Controller\Plugin\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateFrozenThrough">validateFrozenThrough</a>(string|null $frozenThrough, array $extraHoldFields)
+        
+                                            <p><p>Check if the user-provided &quot;frozen through&quot; date is valid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Controller/Plugin/Holds.html#method_validateFrozenThrough">
+<abbr title="VuFind\Controller\Plugin\Holds">Holds</abbr></a></small></div>
+            </div>
             </div>
 
 
@@ -144,10 +347,11 @@ IDs are remembered, otherwise returns false.</p></p>                </div>
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_cancelHolds">
-        <div class="location">at line 52</div>
-        <code>                    array
-    <strong>cancelHolds</strong>(<abbr title="VuFind\ILS\Connection">Connection</abbr> $catalog, array $patron)
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method___construct">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 83</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a> $hmac, <abbr title="Laminas\Session\SessionManager">SessionManager</abbr> $sessionManager, <abbr title="VuFind\Date\Converter">Converter</abbr> $dateConverter)
         </code>
     </h3>
     <div class="details">    
@@ -156,32 +360,97 @@ IDs are remembered, otherwise returns false.</p></p>                </div>
             
 
         <div class="method-description">
-                            <p><p>Process cancellation requests.</p></p>                        
+                            <p>Constructor</p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\ILS\Connection">Connection</abbr></td>
-                <td>$catalog</td>
-                <td><p>ILS connection object</p></td>
+                <td><a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a></td>
+                <td>$hmac</td>
+                <td><p>HMAC generator</p></td>
             </tr>
                     <tr>
-                <td>array</td>
-                <td>$patron</td>
-                <td><p>Current logged in patron</p></td>
+                <td><abbr title="Laminas\Session\SessionManager">SessionManager</abbr></td>
+                <td>$sessionManager</td>
+                <td><p>Session manager</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Date\Converter">Converter</abbr></td>
+                <td>$dateConverter</td>
+                <td><p>Date converter</p></td>
             </tr>
             </table>
 
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSession">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_getSession">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 99</div>
+        <code>            protected        <abbr title="Laminas\Session\Container">Container</abbr>
+    <strong>getSession</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Grab the Container object for storing helper-specific session
+data.</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
-            <td><p>The result of the cancellation, an
-associative array keyed by item ID (empty if no cancellations performed)</p></td>
+            <td><abbr title="Laminas\Session\Container">Container</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetValidation">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_resetValidation">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 116</div>
+        <code>                    void
+    <strong>resetValidation</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reset the array of valid IDs in the session (used for form submission
+validation)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
         </tr>
     </table>
 
@@ -268,6 +537,614 @@ IDs are remembered, otherwise returns false.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateRequest">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validateRequest">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 159</div>
+        <code>                    bool|array
+    <strong>validateRequest</strong>(array $linkData)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Method for validating contents of a request; returns an array of
+collected details if request is valid, otherwise returns false.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$linkData</td>
+                <td><p>An array of keys to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validatePickUpInput">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validatePickUpInput">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 205</div>
+        <code>                    bool
+    <strong>validatePickUpInput</strong>(string $pickup, array $extraHoldFields, array $pickUpLibs)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the user-provided pickup location is valid.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pickup</td>
+                <td><p>User-specified pickup location</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraHoldFields</td>
+                <td><p>Hold form fields enabled by
+configuration/driver</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$pickUpLibs</td>
+                <td><p>Pickup library list from driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validatePickUpLocation">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validatePickUpLocation">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 224</div>
+        <code>                    bool
+    <strong>validatePickUpLocation</strong>(string $location, array $pickUpLibs)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the provided pickup location is valid.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$location</td>
+                <td><p>Location to check</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$pickUpLibs</td>
+                <td><p>Pickup locations list from driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateRequestGroupInput">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validateRequestGroupInput">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 245</div>
+        <code>                    bool
+    <strong>validateRequestGroupInput</strong>(array $gatheredDetails, array $extraHoldFields, array $requestGroups)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the user-provided request group is valid.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$gatheredDetails</td>
+                <td><p>User hold parameters</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraHoldFields</td>
+                <td><p>Form fields enabled by configuration/driver</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requestGroups</td>
+                <td><p>Request group list from driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateRequestGroup">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_validateRequestGroup">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 275</div>
+        <code>                    bool
+    <strong>validateRequestGroup</strong>(string $requestGroupId, array $requestGroups)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the provided request group is valid.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$requestGroupId</td>
+                <td><p>Id of the request group to check</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requestGroups</td>
+                <td><p>Request group list from driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultRequiredDate">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_getDefaultRequiredDate">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 298</div>
+        <code>                    int
+    <strong>getDefaultRequiredDate</strong>(array $checkHolds, <a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a> $catalog = null, array $patron = null, array $holdInfo = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Getting a default required date based on hold settings.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$checkHolds</td>
+                <td><p>Hold settings returned by the ILS driver's
+checkFunction method.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a></td>
+                <td>$catalog</td>
+                <td><p>ILS connection (optional)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron details (optional)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdInfo</td>
+                <td><p>Hold details (optional)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>A timestamp representing the default required date</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateFromArray">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_getDateFromArray">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 348</div>
+        <code>            protected        int
+    <strong>getDateFromArray</strong>(array $dateArray)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for getDefaultRequiredDate() -- generate a date based
+on a days/months/years offset array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$dateArray</td>
+                <td><p>3-element array containing day/month/year offsets</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>A timestamp representing the default required date</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getValidIds">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/AbstractRequestBase.html#method_getValidIds">
+<abbr title="VuFind\Controller\Plugin\AbstractRequestBase">AbstractRequestBase</abbr></a> at line 366</div>
+        <code>            protected        array
+    <strong>getValidIds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get remembered valid IDs</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCancelDetails">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/Holds.html#method_addCancelDetails">
+<abbr title="VuFind\Controller\Plugin\Holds">Holds</abbr></a> at line 58</div>
+        <code>                    array
+    <strong>addCancelDetails</strong>(<a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a> $catalog, array $ilsDetails, array $cancelStatus, array $patron = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Update ILS details with cancellation-specific information, if appropriate.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a></td>
+                <td>$catalog</td>
+                <td><p>ILS connection object</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ilsDetails</td>
+                <td><p>Hold details from ILS driver's
+getMyHolds() method</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$cancelStatus</td>
+                <td><p>Cancel settings from ILS driver's
+checkFunction() method</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>ILS patron</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>$ilsDetails with cancellation info added</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelHolds">
+        <div class="location">at line 52</div>
+        <code>                    array
+    <strong>cancelHolds</strong>(<a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a> $catalog, array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process cancellation requests.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a></td>
+                <td>$catalog</td>
+                <td><p>ILS connection object</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Current logged in patron</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>The result of the cancellation, an
+associative array keyed by item ID (empty if no cancellations performed)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateDates">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/Holds.html#method_validateDates">
+<abbr title="VuFind\Controller\Plugin\Holds">Holds</abbr></a> at line 217</div>
+        <code>                    array
+    <strong>validateDates</strong>(string|null $startDate, string|null $requiredBy, array $enabledFormFields)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the user-provided dates are valid.</p></p>                <p><p>Returns validated dates and/or an array of validation errors if there are
+problems.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$startDate</td>
+                <td><p>User-specified start date</p></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$requiredBy</td>
+                <td><p>User-specified required-by date</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$enabledFormFields</td>
+                <td><p>Hold form fields enabled by
+configuration/driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateFrozenThrough">
+        <div class="location">in <a href="../../../VuFind/Controller/Plugin/Holds.html#method_validateFrozenThrough">
+<abbr title="VuFind\Controller\Plugin\Holds">Holds</abbr></a> at line 293</div>
+        <code>                    array
+    <strong>validateFrozenThrough</strong>(string|null $frozenThrough, array $extraHoldFields)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the user-provided &quot;frozen through&quot; date is valid.</p></p>                <p><p>Returns validated date and/or an array of validation errors if there are
+problems.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$frozenThrough</td>
+                <td><p>User-specified &quot;frozen through&quot; date</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraHoldFields</td>
+                <td><p>Hold form fields enabled by
+configuration/driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
             <td></td>
         </tr>
     </table>

@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>UrlQueryHelperFactory</strong>        extends <abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr>
+    <strong>UrlQueryHelperFactory</strong>        extends <a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html"><abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a>
 </p>
 
                 <p>
@@ -102,10 +102,69 @@
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_helperClass">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$helperClass</td>
+                <td class="last"><p>Name of class built by factory.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#property_helperClass">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaults">getDefaults</a>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params)
+        
+                                            <p><p>Extract default settings from the search parameters.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#method_getDefaults">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addDefaultsToConfig">addDefaultsToConfig</a>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, array $config)
+        
+                                            <p><p>Load default settings into the user-provided configuration.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#method_addDefaultsToConfig">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUrlParams">getUrlParams</a>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, array $config)
+        
+                                            <p><p>Extract URL query parameters from VuFind search parameters.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#method_getUrlParams">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fromParams">fromParams</a>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, array $config = [])
+        
+                                            <p><p>Construct the UrlQueryHelper</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#method_fromParams">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a></small></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
@@ -122,6 +181,197 @@
         <h2>Details</h2>
 
             <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getDefaults">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#method_getDefaults">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a> at line 58</div>
+        <code>            protected        array
+    <strong>getDefaults</strong>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract default settings from the search parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>VuFind search parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDefaultsToConfig">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#method_addDefaultsToConfig">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a> at line 78</div>
+        <code>            protected        array
+    <strong>addDefaultsToConfig</strong>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, array $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load default settings into the user-provided configuration.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>VuFind search parameters</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Config options</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlParams">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#method_getUrlParams">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a> at line 107</div>
+        <code>            protected        array
+    <strong>getUrlParams</strong>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, array $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract URL query parameters from VuFind search parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>VuFind search parameters</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Config options</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromParams">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html#method_fromParams">
+<abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a> at line 154</div>
+        <code>                    <a href="../../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+    <strong>fromParams</strong>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, array $config = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construct the UrlQueryHelper</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>VuFind search parameters</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Config options</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
                     <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">at line 46</div>

@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Auth\ManagerTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Auth_ManagerTest" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../VuFindTest/Auth.html">Auth</a></li><li class="backslash">\</li><li>ManagerTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ManagerTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ManagerTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Authentication manager test class.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/ReflectionTrait.html"><abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Reflection helper methods for unit tests.</p></div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_callMethod">callMethod</a>(object|string $object, string $method, array $arguments = [])
+        
+                                            <p><p>Call protected or private method for side-effect and result.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/ReflectionTrait.html#method_callMethod">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getProperty">getProperty</a>(object|string $object, string $property)
+        
+                                            <p><p>Return protected or private property.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/ReflectionTrait.html#method_getProperty">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setProperty">setProperty</a>(object|string $object, string $property, mixed $value)
+        
+                                            <p><p>Set protected or private property.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/ReflectionTrait.html#method_setProperty">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testDefaultConfig">testDefaultConfig</a>()
+        
+                                            <p><p>Test that database is the default method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetSessionInitiator">testGetSessionInitiator</a>()
+        
+                                            <p><p>Test getSessionInitiator</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetSelectableAuthOptions">testGetSelectableAuthOptions</a>()
+        
+                                            <p><p>Test getSelectableAuthOptions</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetLoginTargets">testGetLoginTargets</a>()
+        
+                                            <p><p>Test getLoginTargets</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetDefaultLoginTarget">testGetDefaultLoginTarget</a>()
+        
+                                            <p><p>Test getDefaultLoginTarget</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLogoutWithDestruction">testLogoutWithDestruction</a>()
+        
+                                            <p><p>Test logout (with destruction)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLogoutWithoutDestruction">testLogoutWithoutDestruction</a>()
+        
+                                            <p><p>Test logout (without destruction)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginEnabled">testLoginEnabled</a>()
+        
+                                            <p><p>Test that login is enabled by default.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginDisabled">testLoginDisabled</a>()
+        
+                                            <p><p>Test that login can be disabled by configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSwitchingSuccess">testSwitchingSuccess</a>()
+        
+                                            <p><p>Test security features of switching between auth options (part 1).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSwitchingFailure">testSwitchingFailure</a>()
+        
+                                            <p><p>Test security features of switching between auth options (part 2).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSupportsCreation">testSupportsCreation</a>()
+        
+                                            <p><p>Test supportsCreation</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSupportsRecovery">testSupportsRecovery</a>()
+        
+                                            <p><p>Test supportsRecovery</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSupportsEmailChange">testSupportsEmailChange</a>()
+        
+                                            <p><p>Test supportsEmailChange</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSupportsPasswordChange">testSupportsPasswordChange</a>()
+        
+                                            <p><p>Test supportsPasswordChange</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetAuthClassForTemplateRendering">testGetAuthClassForTemplateRendering</a>()
+        
+                                            <p><p>Test getAuthClassForTemplateRendering</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testUserHasLoggedOut">testUserHasLoggedOut</a>()
+        
+                                            <p><p>Test userHasLoggedOut</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCreate">testCreate</a>()
+        
+                                            <p><p>Test create</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSuccessfulLogin">testSuccessfulLogin</a>()
+        
+                                            <p><p>Test successful login</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMissingCsrf">testMissingCsrf</a>()
+        
+                                            <p><p>Test CSRF failure (same setup as successful login, but minus token)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testIncorrectCsrf">testIncorrectCsrf</a>()
+        
+                                            <p><p>Test CSRF failure (same setup as successful login, but with bad token)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testPasswordSecurityException">testPasswordSecurityException</a>()
+        
+                                            <p><p>Test unsuccessful login (\VuFind\Exception\PasswordSecurity)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testAuthException">testAuthException</a>()
+        
+                                            <p><p>Test unsuccessful login (\VuFind\Exception\Auth)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testUnanticipatedException">testUnanticipatedException</a>()
+        
+                                            <p><p>Test that unexpected exceptions get mapped to technical errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testUpdatePassword">testUpdatePassword</a>()
+        
+                                            <p><p>Test update password</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCheckForExpiredCredentials">testCheckForExpiredCredentials</a>()
+        
+                                            <p><p>Test checkForExpiredCredentials</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testUserLoginFromSession">testUserLoginFromSession</a>()
+        
+                                            <p><p>Test the persistence of a user account in the session.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testAllowsUserIlsLoginDefault">testAllowsUserIlsLoginDefault</a>()
+        
+                                            <p><p>Confirm default setting of allowsUserIlsLogin().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testAllowsUserIlsLoginConfiguration">testAllowsUserIlsLoginConfiguration</a>()
+        
+                                            <p><p>Confirm configurability of allowsUserIlsLogin().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Auth/Manager.html"><abbr title="VuFind\Auth\Manager">Manager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getManager">getManager</a>(array $config = [], <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a> $userTable = null, <abbr title="Laminas\Session\SessionManager">SessionManager</abbr> $sessionManager = null, <a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a> $pm = null)
+        
+                                            <p><p>Get a manager object to test with.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockUserTable">getMockUserTable</a>()
+        
+                                            <p><p>Get a mock user table.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Session\SessionManager">SessionManager</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockSessionManager">getMockSessionManager</a>()
+        
+                                            <p><p>Get a mock session manager.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockPluginManager">getMockPluginManager</a>()
+        
+                                            <p><p>Get a mock plugin manager.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockUser">getMockUser</a>()
+        
+                                            <p><p>Get a mock user object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockRequest">getMockRequest</a>()
+        
+                                            <p><p>Get a mock request object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_callMethod">
+        <div class="location">in <a href="../../VuFindTest/Feature/ReflectionTrait.html#method_callMethod">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a> at line 55</div>
+        <code>            protected        mixed
+    <strong>callMethod</strong>(object|string $object, string $method, array $arguments = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call protected or private method for side-effect and result.</p></p>                <p><p>Uses PHP's reflection API in order to modify method accessibility.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$object</td>
+                <td><p>Object or class name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>Method name</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td><p>Method arguments</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProperty">
+        <div class="location">in <a href="../../VuFindTest/Feature/ReflectionTrait.html#method_getProperty">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a> at line 74</div>
+        <code>            protected        mixed
+    <strong>getProperty</strong>(object|string $object, string $property)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return protected or private property.</p></p>                <p><p>Uses PHP's reflection API in order to modify property accessibility.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$object</td>
+                <td><p>Object or class name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td><p>Property name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProperty">
+        <div class="location">in <a href="../../VuFindTest/Feature/ReflectionTrait.html#method_setProperty">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a> at line 94</div>
+        <code>            protected        void
+    <strong>setProperty</strong>(object|string $object, string $property, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set protected or private property.</p></p>                <p><p>Uses PHP's reflection API in order to modify property accessibility.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$object</td>
+                <td><p>Object or class name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td><p>Property name</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><p>Property value</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDefaultConfig">
+        <div class="location">at line 55</div>
+        <code>                    void
+    <strong>testDefaultConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that database is the default method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetSessionInitiator">
+        <div class="location">at line 65</div>
+        <code>                    void
+    <strong>testGetSessionInitiator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getSessionInitiator</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetSelectableAuthOptions">
+        <div class="location">at line 79</div>
+        <code>                    void
+    <strong>testGetSelectableAuthOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getSelectableAuthOptions</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetLoginTargets">
+        <div class="location">at line 106</div>
+        <code>                    void
+    <strong>testGetLoginTargets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getLoginTargets</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDefaultLoginTarget">
+        <div class="location">at line 121</div>
+        <code>                    void
+    <strong>testGetDefaultLoginTarget</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getDefaultLoginTarget</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLogoutWithDestruction">
+        <div class="location">at line 136</div>
+        <code>                    void
+    <strong>testLogoutWithDestruction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test logout (with destruction)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLogoutWithoutDestruction">
+        <div class="location">at line 152</div>
+        <code>                    void
+    <strong>testLogoutWithoutDestruction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test logout (without destruction)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginEnabled">
+        <div class="location">at line 168</div>
+        <code>                    void
+    <strong>testLoginEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that login is enabled by default.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginDisabled">
+        <div class="location">at line 178</div>
+        <code>                    void
+    <strong>testLoginDisabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that login can be disabled by configuration.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSwitchingSuccess">
+        <div class="location">at line 189</div>
+        <code>                    void
+    <strong>testSwitchingSuccess</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test security features of switching between auth options (part 1).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSwitchingFailure">
+        <div class="location">at line 205</div>
+        <code>                    void
+    <strong>testSwitchingFailure</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test security features of switching between auth options (part 2).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSupportsCreation">
+        <div class="location">at line 223</div>
+        <code>                    void
+    <strong>testSupportsCreation</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test supportsCreation</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSupportsRecovery">
+        <div class="location">at line 241</div>
+        <code>                    void
+    <strong>testSupportsRecovery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test supportsRecovery</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSupportsEmailChange">
+        <div class="location">at line 259</div>
+        <code>                    void
+    <strong>testSupportsEmailChange</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test supportsEmailChange</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSupportsPasswordChange">
+        <div class="location">at line 277</div>
+        <code>                    void
+    <strong>testSupportsPasswordChange</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test supportsPasswordChange</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetAuthClassForTemplateRendering">
+        <div class="location">at line 297</div>
+        <code>                    void
+    <strong>testGetAuthClassForTemplateRendering</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getAuthClassForTemplateRendering</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testUserHasLoggedOut">
+        <div class="location">at line 316</div>
+        <code>                    void
+    <strong>testUserHasLoggedOut</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test userHasLoggedOut</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCreate">
+        <div class="location">at line 327</div>
+        <code>                    void
+    <strong>testCreate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test create</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSuccessfulLogin">
+        <div class="location">at line 345</div>
+        <code>                    void
+    <strong>testSuccessfulLogin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test successful login</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMissingCsrf">
+        <div class="location">at line 364</div>
+        <code>                    void
+    <strong>testMissingCsrf</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test CSRF failure (same setup as successful login, but minus token)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testIncorrectCsrf">
+        <div class="location">at line 381</div>
+        <code>                    void
+    <strong>testIncorrectCsrf</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test CSRF failure (same setup as successful login, but with bad token)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testPasswordSecurityException">
+        <div class="location">at line 399</div>
+        <code>                    void
+    <strong>testPasswordSecurityException</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test unsuccessful login (\VuFind\Exception\PasswordSecurity)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAuthException">
+        <div class="location">at line 419</div>
+        <code>                    void
+    <strong>testAuthException</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test unsuccessful login (\VuFind\Exception\Auth)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testUnanticipatedException">
+        <div class="location">at line 439</div>
+        <code>                    void
+    <strong>testUnanticipatedException</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that unexpected exceptions get mapped to technical errors.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testUpdatePassword">
+        <div class="location">at line 459</div>
+        <code>                    void
+    <strong>testUpdatePassword</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test update password</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCheckForExpiredCredentials">
+        <div class="location">at line 476</div>
+        <code>                    void
+    <strong>testCheckForExpiredCredentials</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test checkForExpiredCredentials</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testUserLoginFromSession">
+        <div class="location">at line 498</div>
+        <code>                    void
+    <strong>testUserLoginFromSession</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test the persistence of a user account in the session.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAllowsUserIlsLoginDefault">
+        <div class="location">at line 523</div>
+        <code>                    void
+    <strong>testAllowsUserIlsLoginDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Confirm default setting of allowsUserIlsLogin().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAllowsUserIlsLoginConfiguration">
+        <div class="location">at line 533</div>
+        <code>                    void
+    <strong>testAllowsUserIlsLoginConfiguration</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Confirm configurability of allowsUserIlsLogin().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getManager">
+        <div class="location">at line 549</div>
+        <code>            protected        <a href="../../VuFind/Auth/Manager.html"><abbr title="VuFind\Auth\Manager">Manager</abbr></a>
+    <strong>getManager</strong>(array $config = [], <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a> $userTable = null, <abbr title="Laminas\Session\SessionManager">SessionManager</abbr> $sessionManager = null, <a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a> $pm = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a manager object to test with.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>Configuration</td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a></td>
+                <td>$userTable</td>
+                <td><p>User table gateway</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Session\SessionManager">SessionManager</abbr></td>
+                <td>$sessionManager</td>
+                <td><p>Session manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a></td>
+                <td>$pm</td>
+                <td><p>Authentication plugin manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Auth/Manager.html"><abbr title="VuFind\Auth\Manager">Manager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockUserTable">
+        <div class="location">at line 583</div>
+        <code>            protected        <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a>
+    <strong>getMockUserTable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock user table.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockSessionManager">
+        <div class="location">at line 595</div>
+        <code>            protected        <abbr title="Laminas\Session\SessionManager">SessionManager</abbr>
+    <strong>getMockSessionManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock session manager.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Session\SessionManager">SessionManager</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockPluginManager">
+        <div class="location">at line 607</div>
+        <code>            protected        <a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a>
+    <strong>getMockPluginManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock plugin manager.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockUser">
+        <div class="location">at line 637</div>
+        <code>            protected        <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>getMockUser</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock user object</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockRequest">
+        <div class="location">at line 649</div>
+        <code>            protected        <abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr>
+    <strong>getMockRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock request object</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

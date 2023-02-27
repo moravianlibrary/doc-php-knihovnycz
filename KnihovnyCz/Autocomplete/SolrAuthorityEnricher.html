@@ -128,6 +128,76 @@ them with link to authority record.</p></p>        </div>
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_resultsManager">
+                                        protected                                        <a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$resultsManager</td>
+                <td class="last"><p>Results manager</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#property_resultsManager">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchObject">
+                                        protected                                        <a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a>
+                                                                                
+                                    </td>
+                <td>$searchObject</td>
+                <td class="last"><p>Search object</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#property_searchObject">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchClassId">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchClassId</td>
+                <td class="last"><p>Search class id</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#property_searchClassId">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_autocompleteField">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$autocompleteField</td>
+                <td class="last"><p>Autocomplete field</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#property_autocompleteField">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_facetField">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$facetField</td>
+                <td class="last"><p>Facet field</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#property_facetField">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limit">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$limit</td>
+                <td class="last"><p>Facet limit, can be overridden in subclasses</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#property_limit">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filters">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$filters</td>
+                <td class="last"><p>Filters to apply to Solr search</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#property_filters">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_suggestionFilter">
                                         protected                                        <a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a>
                                                                                 
@@ -139,7 +209,7 @@ them with link to authority record.</p></p>        </div>
             </tr>
                     <tr>
                 <td class="type" id="property_searchService">
-                                        protected                                        <abbr title="VuFindSearch\Service">Service</abbr>
+                                        protected                                        <a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a>
                                                                                 
                                     </td>
                 <td>$searchService</td>
@@ -202,7 +272,7 @@ them with link to authority record.</p></p>        </div>
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $results, <a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a> $filter, <abbr title="VuFindSearch\Service">Service</abbr> $searchService, <a href="../../KnihovnyCz/View/Helper/KnihovnyCz/RecordLinker.html"><abbr title="KnihovnyCz\View\Helper\KnihovnyCz\RecordLinker">RecordLinker</abbr></a> $recordLinker, <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $renderer)
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $results, <a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a> $filter, <a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a> $searchService, <a href="../../KnihovnyCz/View/Helper/KnihovnyCz/RecordLinker.html"><abbr title="KnihovnyCz\View\Helper\KnihovnyCz\RecordLinker">RecordLinker</abbr></a> $recordLinker, <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $renderer)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
@@ -219,6 +289,17 @@ them with link to authority record.</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mungeQuery">mungeQuery</a>(string $query)
+        
+                                            <p><p>Process the user query to make it suitable for a Solr query.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#method_mungeQuery">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     void
                 </div>
                 <div class="col-md-8">
@@ -227,6 +308,28 @@ them with link to authority record.</p></p>        </div>
                                             <p><p>Set configuration</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/Autocomplete/SolrPrefix.html#method_setConfig">
 <abbr title="KnihovnyCz\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addFilters">addFilters</a>(array $filters)
+        
+                                            <p><p>Add filters (in addition to the configured ones)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#method_addFilters">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initSearchObject">initSearchObject</a>()
+        
+                                            <p><p>Initialize the search object used for finding recommendations.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Autocomplete/SolrPrefix.html#method_initSearchObject">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -258,7 +361,7 @@ them with link to authority record.</p></p>        </div>
                     <h3 id="method___construct">
         <div class="location">at line 116</div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $results, <a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a> $filter, <abbr title="VuFindSearch\Service">Service</abbr> $searchService, <a href="../../KnihovnyCz/View/Helper/KnihovnyCz/RecordLinker.html"><abbr title="KnihovnyCz\View\Helper\KnihovnyCz\RecordLinker">RecordLinker</abbr></a> $recordLinker, <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $renderer)
+    <strong>__construct</strong>(<a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a> $results, <a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a> $filter, <a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a> $searchService, <a href="../../KnihovnyCz/View/Helper/KnihovnyCz/RecordLinker.html"><abbr title="KnihovnyCz\View\Helper\KnihovnyCz\RecordLinker">RecordLinker</abbr></a> $recordLinker, <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $renderer)
         </code>
     </h3>
     <div class="details">    
@@ -274,7 +377,7 @@ them with link to authority record.</p></p>        </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></td>
+                <td><a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a></td>
                 <td>$results</td>
                 <td><p>Results plugin manager</p></td>
             </tr>
@@ -284,7 +387,7 @@ them with link to authority record.</p></p>        </div>
                 <td><p>Suggestion filter</p></td>
             </tr>
                     <tr>
-                <td><abbr title="VuFindSearch\Service">Service</abbr></td>
+                <td><a href="../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a></td>
                 <td>$searchService</td>
                 <td><p>Search service plugin manager</p></td>
             </tr>
@@ -353,6 +456,50 @@ display in the autocomplete box.</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_mungeQuery">
+        <div class="location">in <a href="../../VuFind/Autocomplete/SolrPrefix.html#method_mungeQuery">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a> at line 154</div>
+        <code>            protected        string
+    <strong>mungeQuery</strong>(string $query)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process the user query to make it suitable for a Solr query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td><p>Incoming user query</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Processed query</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_setConfig">
         <div class="location">in <a href="../../KnihovnyCz/Autocomplete/SolrPrefix.html#method_setConfig">
 <abbr title="KnihovnyCz\Autocomplete\SolrPrefix">SolrPrefix</abbr></a> at line 95</div>
@@ -380,6 +527,84 @@ These values normally come from the search configuration file.</p></p>
             </tr>
             </table>
 
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFilters">
+        <div class="location">in <a href="../../VuFind/Autocomplete/SolrPrefix.html#method_addFilters">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a> at line 183</div>
+        <code>                    void
+    <strong>addFilters</strong>(array $filters)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add filters (in addition to the configured ones)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$filters</td>
+                <td><p>Filters to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initSearchObject">
+        <div class="location">in <a href="../../VuFind/Autocomplete/SolrPrefix.html#method_initSearchObject">
+<abbr title="VuFind\Autocomplete\SolrPrefix">SolrPrefix</abbr></a> at line 193</div>
+        <code>            protected        void
+    <strong>initSearchObject</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the search object used for finding recommendations.</p></p>                        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 

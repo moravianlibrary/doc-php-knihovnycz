@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>ParamBag</strong>        extends <abbr title="VuFindSearch\ParamBag">ParamBag</abbr>
+    <strong>ParamBag</strong>        extends <a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>
 </p>
 
                 <p>
@@ -106,6 +106,16 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_params">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$params</td>
+                <td class="last">Parameters</td>
+                <td><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#property_params">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_applyChildFilter">
                                         protected                                        bool
                                                                                 
@@ -120,6 +130,149 @@
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $initial = [])
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method___construct">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_get">get</a>(string $name)
+        
+                                            <p><p>Return parameter value.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_get">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_count">count</a>()
+        
+                                            <p><p>Count parameters in internal array. Needed for Countable interface.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_count">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasParam">hasParam</a>(string $name)
+        
+                                            <p><p>Return true if the bag contains any value(s) for the specified parameter.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_hasParam">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_contains">contains</a>(string $name, string $value)
+        
+                                            <p><p>Return true if the bag contains a parameter-value-pair.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_contains">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_set">set</a>(string $name, string $value)
+        
+                                            <p><p>Set a parameter.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_set">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_remove">remove</a>(string $name)
+        
+                                            <p><p>Remove a parameter.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_remove">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_add">add</a>(string $name, mixed $value)
+        
+                                            <p><p>Add parameter value.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_add">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mergeWith">mergeWith</a>(<a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $bag)
+        
+                                            <p><p>Merge with another parameter bag.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_mergeWith">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_mergeWithAll">mergeWithAll</a>(array $bags)
+        
+                                            <p><p>Merge with all supplied parameter bags.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_mergeWithAll">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getArrayCopy">getArrayCopy</a>()
+        
+                                            <p><p>Return copy of parameters as array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_getArrayCopy">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_exchangeArray">exchangeArray</a>(array $input)
+        
+                                            <p><p>Exchange the parameter array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_exchangeArray">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_request">request</a>()
+        
+                                            <p><p>Return array of params ready to be used in a HTTP request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindSearch/ParamBag.html#method_request">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></small></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
@@ -146,6 +299,564 @@
         <h2>Details</h2>
 
             <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method___construct">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 60</div>
+        <code>                    void
+    <strong>__construct</strong>(array $initial = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor.</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$initial</td>
+                <td><p>Initial parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_get">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 74</div>
+        <code>                    mixed|null
+    <strong>get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return parameter value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Parameter name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td><p>Parameter value or NULL if not set</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_count">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 84</div>
+        <code>                    int
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Count parameters in internal array. Needed for Countable interface.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasParam">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_hasParam">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 96</div>
+        <code>                    bool
+    <strong>hasParam</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return true if the bag contains any value(s) for the specified parameter.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Parameter name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_contains">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_contains">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 109</div>
+        <code>                    bool
+    <strong>contains</strong>(string $name, string $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return true if the bag contains a parameter-value-pair.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Parameter name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Parameter value</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_set">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 123</div>
+        <code>                    void
+    <strong>set</strong>(string $name, string $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a parameter.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Parameter name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Parameter value</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_remove">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_remove">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 139</div>
+        <code>                    void
+    <strong>remove</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove a parameter.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Parameter name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_add">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_add">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 154</div>
+        <code>                    void
+    <strong>add</strong>(string $name, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add parameter value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Parameter name</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><p>Parameter value</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeWith">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_mergeWith">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 173</div>
+        <code>                    void
+    <strong>mergeWith</strong>(<a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $bag)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Merge with another parameter bag.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$bag</td>
+                <td><p>Parameter bag to merge with</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeWithAll">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_mergeWithAll">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 189</div>
+        <code>                    void
+    <strong>mergeWithAll</strong>(array $bags)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Merge with all supplied parameter bags.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bags</td>
+                <td><p>Parameter bags to merge with</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayCopy">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_getArrayCopy">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 201</div>
+        <code>                    array
+    <strong>getArrayCopy</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return copy of parameters as array.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exchangeArray">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_exchangeArray">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 213</div>
+        <code>                    array
+    <strong>exchangeArray</strong>(array $input)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Exchange the parameter array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$input</td>
+                <td><p>New parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Old parameters</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_request">
+        <div class="location">in <a href="../../VuFindSearch/ParamBag.html#method_request">
+<abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> at line 231</div>
+        <code>                    array
+    <strong>request</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return array of params ready to be used in a HTTP request.</p></p>                <p><p>Returns a numerical array with all request parameters as properly URL
+encoded key-value pairs.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
                     <div class="method-item">
                     <h3 id="method_setApplyChildFilter">
         <div class="location">at line 55</div>

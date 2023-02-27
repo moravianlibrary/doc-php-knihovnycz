@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\RecordTab | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../doctum.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script async defer src="../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFind_RecordTab" data-root-path="../" data-search-index-url="../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../VuFind/RecordTab.html">RecordTab</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFind\RecordTab</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>    </div>
+                <div class="col-md-6"><p>Record tab abstract base class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/AbstractContent.html"><abbr title="VuFind\RecordTab\AbstractContent">AbstractContent</abbr></a>    </div>
+                <div class="col-md-6"><p>Reviews tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/AbstractContentFactory.html"><abbr title="VuFind\RecordTab\AbstractContentFactory">AbstractContentFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract factory for building AbstractContent tabs.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/CollectionHierarchyTree.html"><abbr title="VuFind\RecordTab\CollectionHierarchyTree">CollectionHierarchyTree</abbr></a>    </div>
+                <div class="col-md-6"><p>HierarchyTree tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/CollectionHierarchyTreeFactory.html"><abbr title="VuFind\RecordTab\CollectionHierarchyTreeFactory">CollectionHierarchyTreeFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the CollectionHierarchyTree tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/CollectionList.html"><abbr title="VuFind\RecordTab\CollectionList">CollectionList</abbr></a>    </div>
+                <div class="col-md-6"><p>Collection list tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/CollectionListFactory.html"><abbr title="VuFind\RecordTab\CollectionListFactory">CollectionListFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the CollectionList tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/ComponentParts.html"><abbr title="VuFind\RecordTab\ComponentParts">ComponentParts</abbr></a>    </div>
+                <div class="col-md-6"><p>Component parts display tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/ComponentPartsFactory.html"><abbr title="VuFind\RecordTab\ComponentPartsFactory">ComponentPartsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the ComponentParts tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/Description.html"><abbr title="VuFind\RecordTab\Description">Description</abbr></a>    </div>
+                <div class="col-md-6"><p>Description tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/Excerpt.html"><abbr title="VuFind\RecordTab\Excerpt">Excerpt</abbr></a>    </div>
+                <div class="col-md-6"><p>Excerpt tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/ExcerptFactory.html"><abbr title="VuFind\RecordTab\ExcerptFactory">ExcerptFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building Excerpt tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/Formats.html"><abbr title="VuFind\RecordTab\Formats">Formats</abbr></a>    </div>
+                <div class="col-md-6"><p>Digital Content Formats</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/HierarchyTree.html"><abbr title="VuFind\RecordTab\HierarchyTree">HierarchyTree</abbr></a>    </div>
+                <div class="col-md-6"><p>HierarchyTree tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/HierarchyTreeFactory.html"><abbr title="VuFind\RecordTab\HierarchyTreeFactory">HierarchyTreeFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the HierarchyTree tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/HoldingsILS.html"><abbr title="VuFind\RecordTab\HoldingsILS">HoldingsILS</abbr></a>    </div>
+                <div class="col-md-6"><p>Holdings (ILS) tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/HoldingsILSFactory.html"><abbr title="VuFind\RecordTab\HoldingsILSFactory">HoldingsILSFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the HoldingsILS tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/HoldingsWorldCat.html"><abbr title="VuFind\RecordTab\HoldingsWorldCat">HoldingsWorldCat</abbr></a>    </div>
+                <div class="col-md-6"><p>Holdings (WorldCat) tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/HoldingsWorldCatFactory.html"><abbr title="VuFind\RecordTab\HoldingsWorldCatFactory">HoldingsWorldCatFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the HoldingsWorldCat tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/Map.html"><abbr title="VuFind\RecordTab\Map">Map</abbr></a>    </div>
+                <div class="col-md-6"><p>Map tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/MapFactory.html"><abbr title="VuFind\RecordTab\MapFactory">MapFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the Map tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/PluginFactory.html"><abbr title="VuFind\RecordTab\PluginFactory">PluginFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Record tab plugin factory</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/PluginManager.html"><abbr title="VuFind\RecordTab\PluginManager">PluginManager</abbr></a>    </div>
+                <div class="col-md-6"><p>Record tab plugin manager</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/Preview.html"><abbr title="VuFind\RecordTab\Preview">Preview</abbr></a>    </div>
+                <div class="col-md-6"><p>Embedded Preview tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/PreviewFactory.html"><abbr title="VuFind\RecordTab\PreviewFactory">PreviewFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the Preview tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/Reviews.html"><abbr title="VuFind\RecordTab\Reviews">Reviews</abbr></a>    </div>
+                <div class="col-md-6"><p>Reviews tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/ReviewsFactory.html"><abbr title="VuFind\RecordTab\ReviewsFactory">ReviewsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building Reviews tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/Search2CollectionList.html"><abbr title="VuFind\RecordTab\Search2CollectionList">Search2CollectionList</abbr></a>    </div>
+                <div class="col-md-6"><p>Search 2 Collection list tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/SimilarItemsCarousel.html"><abbr title="VuFind\RecordTab\SimilarItemsCarousel">SimilarItemsCarousel</abbr></a>    </div>
+                <div class="col-md-6"><p>Similar items carousel tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/SimilarItemsCarouselFactory.html"><abbr title="VuFind\RecordTab\SimilarItemsCarouselFactory">SimilarItemsCarouselFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the SimilarItemsCarousel tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/StaffViewArray.html"><abbr title="VuFind\RecordTab\StaffViewArray">StaffViewArray</abbr></a>    </div>
+                <div class="col-md-6"><p>Staff view (array dump) tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/StaffViewMARC.html"><abbr title="VuFind\RecordTab\StaffViewMARC">StaffViewMARC</abbr></a>    </div>
+                <div class="col-md-6"><p>Staff view (MARC dump) tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/StaffViewOverdrive.html"><abbr title="VuFind\RecordTab\StaffViewOverdrive">StaffViewOverdrive</abbr></a>    </div>
+                <div class="col-md-6"><p>Staff view (array dump) tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/TOC.html"><abbr title="VuFind\RecordTab\TOC">TOC</abbr></a>    </div>
+                <div class="col-md-6"><p>Table of Contents tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/TOCFactory.html"><abbr title="VuFind\RecordTab\TOCFactory">TOCFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building TOC tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/TabManager.html"><abbr title="VuFind\RecordTab\TabManager">TabManager</abbr></a>    </div>
+                <div class="col-md-6"><p>Record tab manager</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/TabManagerFactory.html"><abbr title="VuFind\RecordTab\TabManagerFactory">TabManagerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the TabManager.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/UserComments.html"><abbr title="VuFind\RecordTab\UserComments">UserComments</abbr></a>    </div>
+                <div class="col-md-6"><p>User comments tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/UserCommentsFactory.html"><abbr title="VuFind\RecordTab\UserCommentsFactory">UserCommentsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the UserComments tab.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/Versions.html"><abbr title="VuFind\RecordTab\Versions">Versions</abbr></a>    </div>
+                <div class="col-md-6"><p>Versions tab</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/RecordTab/VersionsFactory.html"><abbr title="VuFind\RecordTab\VersionsFactory">VersionsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for building the Versions tab.</p></div>
+            </div>
+            </div>
+            <h2>Interfaces</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="../VuFind/RecordTab/TabInterface.html"><abbr title="VuFind\RecordTab\TabInterface">TabInterface</abbr></a></em>
+                        </div>
+                <div class="col-md-6"><p>Record tab interface</p></div>
+            </div>
+            </div>
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

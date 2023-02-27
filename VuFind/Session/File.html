@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Session\File | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Session_File" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Session.html">Session</a></li><li class="backslash">\</li><li>File</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>File    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>File</strong>        extends <a href="../../VuFind/Session/AbstractBase.html"><abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>File-based session handler</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Db/Table/DbTableAwareTrait.html"><abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Default implementation of DbTableAwareInterface.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tableManager">
+                                        protected                                        <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$tableManager</td>
+                <td class="last"><p>Database table plugin manager</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Db/Table/DbTableAwareTrait.html#property_tableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lifetime">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$lifetime</td>
+                <td class="last"><p>Session lifetime in seconds</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Session/AbstractBase.html#property_lifetime">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_writesDisabled">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$writesDisabled</td>
+                <td class="last"><p>Whether writes are disabled, i.e. any changes to the session are not written
+to the storage</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Session/AbstractBase.html#property_writesDisabled">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_path">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$path</td>
+                <td class="last"><p>Path to session file</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTableManager">getDbTableManager</a>()
+        
+                                            <p><p>Get the table plugin manager. Throw an exception if it is missing.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDbTableManager">setDbTableManager</a>(<a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $manager)
+        
+                                            <p><p>Set the table plugin manager.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_setDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTable">getDbTable</a>(string $table)
+        
+                                            <p><p>Get a database table object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_enableWrites">enableWrites</a>()
+        
+                                            <p><p>Enable session writing (default)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Session/AbstractBase.html#method_enableWrites">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_disableWrites">disableWrites</a>()
+        
+                                            <p><p>Disable session writing, i.e. make it read-only</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Session/AbstractBase.html#method_disableWrites">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_open">open</a>(string $sess_path, string $sess_name)
+        
+                                            <p><p>Open function, this works like a constructor in classes and is executed
+when the session is being opened.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Session/AbstractBase.html#method_open">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_close">close</a>()
+        
+                                            <p><p>Close function, this works like a destructor in classes and is executed
+when the session operation is done.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Session/AbstractBase.html#method_close">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_destroy">destroy</a>(string $sessId)
+        
+                                            <p><p>The destroy handler, this is executed when a session is destroyed with
+session_destroy() and takes the session id as its only parameter.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_gc">gc</a>(int $maxlifetime)
+        
+                                            <p><p>The garbage collector, this is executed when the session garbage collector
+is executed and takes the max session lifetime as its only parameter.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_write">write</a>(string $sessId, string $data)
+        
+                                            <p><p>Write function that is called when session data is to be saved.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Session/AbstractBase.html#method_write">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_saveSession">saveSession</a>(string $sessId, string $data)
+        
+                                            <p><p>A function that is called internally when session data is to be saved.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_read">read</a>(string $sessId)
+        
+                                            <p><p>Read function must return string value always to make save handler work as
+expected. Return empty string if there is no data to read.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getDbTableManager">
+        <div class="location">in <a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 54</div>
+        <code>                    <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+    <strong>getDbTableManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the table plugin manager. Throw an exception if it is missing.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDbTableManager">
+        <div class="location">in <a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_setDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 69</div>
+        <code>                    void
+    <strong>setDbTableManager</strong>(<a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the table plugin manager.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+                <td>$manager</td>
+                <td><p>Plugin manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbTable">
+        <div class="location">in <a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 81</div>
+        <code>                    <a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+    <strong>getDbTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a database table object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Table to load.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 56</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Session configuration ([Session] section of
+config.ini)</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableWrites">
+        <div class="location">in <a href="../../VuFind/Session/AbstractBase.html#method_enableWrites">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a> at line 83</div>
+        <code>                    void
+    <strong>enableWrites</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enable session writing (default)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableWrites">
+        <div class="location">in <a href="../../VuFind/Session/AbstractBase.html#method_disableWrites">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a> at line 93</div>
+        <code>                    void
+    <strong>disableWrites</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Disable session writing, i.e. make it read-only</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_open">
+        <div class="location">in <a href="../../VuFind/Session/AbstractBase.html#method_open">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a> at line 109</div>
+        <code>                    bool
+    <strong>open</strong>(string $sess_path, string $sess_name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Open function, this works like a constructor in classes and is executed
+when the session is being opened.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sess_path</td>
+                <td><p>Session save path</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sess_name</td>
+                <td><p>Session name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_close">
+        <div class="location">in <a href="../../VuFind/Session/AbstractBase.html#method_close">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a> at line 120</div>
+        <code>                    bool
+    <strong>close</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Close function, this works like a destructor in classes and is executed
+when the session operation is done.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroy">
+        <div class="location">at line 109</div>
+        <code>                    bool
+    <strong>destroy</strong>(string $sessId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>The destroy handler, this is executed when a session is destroyed with
+session_destroy() and takes the session id as its only parameter.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sessId</td>
+                <td><p>The session ID to destroy</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_gc">
+        <div class="location">at line 130</div>
+        <code>                    bool
+    <strong>gc</strong>(int $maxlifetime)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>The garbage collector, this is executed when the session garbage collector
+is executed and takes the max session lifetime as its only parameter.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$maxlifetime</td>
+                <td><p>Maximum session lifetime.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_write">
+        <div class="location">in <a href="../../VuFind/Session/AbstractBase.html#method_write">
+<abbr title="VuFind\Session\AbstractBase">AbstractBase</abbr></a> at line 181</div>
+        <code>                    bool
+    <strong>write</strong>(string $sessId, string $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Write function that is called when session data is to be saved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sessId</td>
+                <td><p>The current session ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td><p>The session data to write</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveSession">
+        <div class="location">at line 149</div>
+        <code>            protected        bool
+    <strong>saveSession</strong>(string $sessId, string $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>A function that is called internally when session data is to be saved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sessId</td>
+                <td><p>The current session ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td><p>The session data to write</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_read">
+        <div class="location">at line 85</div>
+        <code>                    string
+    <strong>read</strong>(string $sessId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Read function must return string value always to make save handler work as
+expected. Return empty string if there is no data to read.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sessId</td>
+                <td><p>The session ID to read</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

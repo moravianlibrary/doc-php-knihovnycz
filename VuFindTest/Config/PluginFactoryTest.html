@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Config\PluginFactoryTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Config_PluginFactoryTest" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../VuFindTest/Config.html">Config</a></li><li class="backslash">\</li><li>PluginFactoryTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>PluginFactoryTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>PluginFactoryTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Config Factory Test Class</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/FixtureTrait.html"><abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait adding functionality for loading fixtures.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/PathResolverTrait.html"><abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for tests involving PathResolver.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_factory">
+                                        protected                                        <a href="../../VuFind/Config/PluginFactory.html"><abbr title="VuFind\Config\PluginFactory">PluginFactory</abbr></a>
+                                                                                
+                                    </td>
+                <td>$factory</td>
+                <td class="last"><p>Plugin factory instance.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixtureDir">getFixtureDir</a>(string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Get the base directory containing fixtures.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/FixtureTrait.html#method_getFixtureDir">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixturePath">getFixturePath</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Resolve fixture path.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/FixtureTrait.html#method_getFixturePath">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixture">getFixture</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Load a fixture file.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/FixtureTrait.html#method_getFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getJsonFixture">getJsonFixture</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Load a JSON fixture from file (using associative array return type).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/FixtureTrait.html#method_getJsonFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPathResolver">getPathResolver</a>(string|null $baseDirectory = null)
+        
+                                            <p><p>Get a config file path resolver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/PathResolverTrait.html#method_getPathResolver">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addPathResolverToContainer">addPathResolverToContainer</a>(<a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a> $container)
+        
+                                            <p><p>Add PathResolverFactory to a mock container</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/PathResolverTrait.html#method_addPathResolverToContainer">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p><p>Standard setup method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Config\Config">Config</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfig">getConfig</a>(string $name)
+        
+                                            <p><p>Wrapper around factory</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testBasicRead">testBasicRead</a>()
+        
+                                            <p><p>Test basic config.ini loading.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCustomRead">testCustomRead</a>()
+        
+                                            <p><p>Test loading of a custom .ini file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testInheritance">testInheritance</a>()
+        
+                                            <p><p>Test inheritance features.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testInheritanceWithArrayMerging">testInheritanceWithArrayMerging</a>()
+        
+                                            <p><p>Test inheritance features with array merging turned on.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testParentConfigOmission">testParentConfigOmission</a>()
+        
+                                            <p><p>Test that the plugin factory omits the Parent_Config section from the
+merged configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testReadOnlyConfig">testReadOnlyConfig</a>()
+        
+                                            <p><p>Test configuration is read-only.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getFixtureDir">
+        <div class="location">in <a href="../../VuFindTest/Feature/FixtureTrait.html#method_getFixtureDir">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 51</div>
+        <code>            protected        string
+    <strong>getFixtureDir</strong>(string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the base directory containing fixtures.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFixturePath">
+        <div class="location">in <a href="../../VuFindTest/Feature/FixtureTrait.html#method_getFixturePath">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 65</div>
+        <code>            protected        string
+    <strong>getFixturePath</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve fixture path.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFixture">
+        <div class="location">in <a href="../../VuFindTest/Feature/FixtureTrait.html#method_getFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 87</div>
+        <code>            protected        string
+    <strong>getFixture</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load a fixture file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getJsonFixture">
+        <div class="location">in <a href="../../VuFindTest/Feature/FixtureTrait.html#method_getJsonFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 100</div>
+        <code>            protected        array
+    <strong>getJsonFixture</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load a JSON fixture from file (using associative array return type).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPathResolver">
+        <div class="location">in <a href="../../VuFindTest/Feature/PathResolverTrait.html#method_getPathResolver">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a> at line 51</div>
+        <code>            protected        <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+    <strong>getPathResolver</strong>(string|null $baseDirectory = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a config file path resolver</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$baseDirectory</td>
+                <td><p>Optional directory to override APPLICATION_PATH</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPathResolverToContainer">
+        <div class="location">in <a href="../../VuFindTest/Feature/PathResolverTrait.html#method_addPathResolverToContainer">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a> at line 77</div>
+        <code>            protected        void
+    <strong>addPathResolverToContainer</strong>(<a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add PathResolverFactory to a mock container</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a></td>
+                <td>$container</td>
+                <td><p>Mock Container</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">at line 61</div>
+        <code>                    void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard setup method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">at line 73</div>
+        <code>            protected        <abbr title="Laminas\Config\Config">Config</abbr>
+    <strong>getConfig</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wrapper around factory</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Configuration to load</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testBasicRead">
+        <div class="location">at line 105</div>
+        <code>                    void
+    <strong>testBasicRead</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test basic config.ini loading.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCustomRead">
+        <div class="location">at line 118</div>
+        <code>                    void
+    <strong>testCustomRead</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test loading of a custom .ini file.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testInheritance">
+        <div class="location">at line 130</div>
+        <code>                    void
+    <strong>testInheritance</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test inheritance features.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testInheritanceWithArrayMerging">
+        <div class="location">at line 159</div>
+        <code>                    void
+    <strong>testInheritanceWithArrayMerging</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test inheritance features with array merging turned on.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testParentConfigOmission">
+        <div class="location">at line 192</div>
+        <code>                    void
+    <strong>testParentConfigOmission</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that the plugin factory omits the Parent_Config section from the
+merged configuration.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testReadOnlyConfig">
+        <div class="location">at line 203</div>
+        <code>                    void
+    <strong>testReadOnlyConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test configuration is read-only.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

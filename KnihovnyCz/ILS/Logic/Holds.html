@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>Holds</strong>        extends <abbr title="VuFind\ILS\Logic\Holds">Holds</abbr>
+    <strong>Holds</strong>        extends <a href="../../../VuFind/ILS/Logic/Holds.html"><abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a>
 </p>
 
                 <p>
@@ -102,10 +102,110 @@
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_ilsAuth">
+                                        protected                                        <a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a>
+                                                                                
+                                    </td>
+                <td>$ilsAuth</td>
+                <td class="last"><p>ILS authenticator</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#property_ilsAuth">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_catalog">
+                                        protected                                        <a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$catalog</td>
+                <td class="last"><p>Catalog connection object</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#property_catalog">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hmac">
+                                        protected                                        <a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a>
+                                                                                
+                                    </td>
+                <td>$hmac</td>
+                <td class="last"><p>HMAC generator</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#property_hmac">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>VuFind configuration</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#property_config">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hideHoldings">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$hideHoldings</td>
+                <td class="last"><p>Holding locations to hide from display</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#property_hideHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a> $ilsAuth, <a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a> $ils, <a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a> $hmac, <abbr title="Laminas\Config\Config">Config</abbr> $config)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method___construct">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatHoldings">formatHoldings</a>(array $holdings)
+        
+                                            <p><p>Support method to rearrange the holdings array for displaying convenience.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_formatHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldings">getHoldings</a>(string $id, array $ids = null, array $options = [])
+        
+                                            <p><p>Public method for getting item holdings from the catalog and selecting which
+holding method to call</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_getHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_standardHoldings">standardHoldings</a>(array $result)
+        
+                                            <p><p>Protected method for standard (i.e. No Holds) holdings</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_standardHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
@@ -116,12 +216,276 @@
                                             <p><p>Protected method for driver defined holdings</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_generateHoldings">generateHoldings</a>(array $result, string $type, array $holdConfig)
+        
+                                            <p><p>Protected method for vufind (i.e. User) defined holdings</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_generateHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processStorageRetrievalRequests">processStorageRetrievalRequests</a>(array $holdings, string $id, array $patron, bool $requestsBlocked)
+        
+                                            <p><p>Process storage retrieval request information in holdings and set the links
+accordingly.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_processStorageRetrievalRequests">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processILLRequests">processILLRequests</a>(array $holdings, string $id, array $patron, bool $requestsBlocked)
+        
+                                            <p><p>Process ILL request information in holdings and set the links accordingly.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_processILLRequests">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRequestDetails">getRequestDetails</a>(array $details, array $HMACKeys, string $action)
+        
+                                            <p><p>Get Hold Form</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_getRequestDetails">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldingsGroupKey">getHoldingsGroupKey</a>(array $copy)
+        
+                                            <p><p>Get a grouping key for a holdings item</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_getHoldingsGroupKey">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSuppressedLocations">getSuppressedLocations</a>()
+        
+                                            <p><p>Get an array of suppressed location names.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/ILS/Logic/Holds.html#method_getSuppressedLocations">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a></small></div>
+            </div>
             </div>
 
 
         <h2>Details</h2>
 
             <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method___construct">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 89</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a> $ilsAuth, <a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a> $ils, <a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a> $hmac, <abbr title="Laminas\Config\Config">Config</abbr> $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a></td>
+                <td>$ilsAuth</td>
+                <td><p>ILS authenticator</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/ILS/Connection.html"><abbr title="VuFind\ILS\Connection">Connection</abbr></a></td>
+                <td>$ils</td>
+                <td><p>A catalog connection</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Crypt/HMAC.html"><abbr title="VuFind\Crypt\HMAC">HMAC</abbr></a></td>
+                <td>$hmac</td>
+                <td><p>HMAC generator</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>VuFind configuration</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatHoldings">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_formatHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 118</div>
+        <code>            protected        array
+    <strong>formatHoldings</strong>(array $holdings)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method to rearrange the holdings array for displaying convenience.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$holdings</td>
+                <td><p>An associative array of location =&gt; item array</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An associative array keyed by location with each
+entry being an array with 'notes', 'summary' and 'items' keys.  The 'notes'
+and 'summary' arrays are note/summary information collected from within the
+items.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldings">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_getHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 186</div>
+        <code>                    array
+    <strong>getHoldings</strong>(string $id, array $ids = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Public method for getting item holdings from the catalog and selecting which
+holding method to call</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>A Bib ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>A list of Source Records (if catalog is for a
+consortium)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Optional options to pass on to getHolding()</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>A sorted results set</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_standardHoldings">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_standardHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 259</div>
+        <code>            protected        array
+    <strong>standardHoldings</strong>(array $result)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Protected method for standard (i.e. No Holds) holdings</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$result</td>
+                <td><p>A result set returned from a driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>A sorted results set</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
                     <div class="method-item">
                     <h3 id="method_driverHoldings">
         <div class="location">at line 52</div>
@@ -165,6 +529,312 @@
         <tr>
             <td>array</td>
             <td><p>A sorted results set</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateHoldings">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_generateHoldings">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 327</div>
+        <code>            protected        array
+    <strong>generateHoldings</strong>(array $result, string $type, array $holdConfig)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Protected method for vufind (i.e. User) defined holdings</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$result</td>
+                <td><p>A result set returned from a driver</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td><p>The holds mode to be applied from:
+(all, holds, recalls, availability)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdConfig</td>
+                <td><p>Hold configuration from driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>A sorted results set</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processStorageRetrievalRequests">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_processStorageRetrievalRequests">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 418</div>
+        <code>            protected        array
+    <strong>processStorageRetrievalRequests</strong>(array $holdings, string $id, array $patron, bool $requestsBlocked)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process storage retrieval request information in holdings and set the links
+accordingly.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$holdings</td>
+                <td>Holdings</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td>Patron</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$requestsBlocked</td>
+                <td><p>Are user requests blocked?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Modified holdings</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processILLRequests">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_processILLRequests">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 472</div>
+        <code>            protected        array
+    <strong>processILLRequests</strong>(array $holdings, string $id, array $patron, bool $requestsBlocked)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process ILL request information in holdings and set the links accordingly.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$holdings</td>
+                <td>Holdings</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Record ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td>Patron</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$requestsBlocked</td>
+                <td><p>Are user requests blocked?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Modified holdings</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequestDetails">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_getRequestDetails">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 522</div>
+        <code>            protected        array
+    <strong>getRequestDetails</strong>(array $details, array $HMACKeys, string $action)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Hold Form</p></p>                <p><p>Supplies holdLogic with the form details required to place a request</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>An array of item data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$HMACKeys</td>
+                <td><p>An array of keys to hash</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td><p>The action for which the details are built</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Details for generating URL</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldingsGroupKey">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_getHoldingsGroupKey">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 558</div>
+        <code>            protected        string
+    <strong>getHoldingsGroupKey</strong>(array $copy)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a grouping key for a holdings item</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$copy</td>
+                <td><p>Item information</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Grouping key</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSuppressedLocations">
+        <div class="location">in <a href="../../../VuFind/ILS/Logic/Holds.html#method_getSuppressedLocations">
+<abbr title="VuFind\ILS\Logic\Holds">Holds</abbr></a> at line 601</div>
+        <code>                    array
+    <strong>getSuppressedLocations</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of suppressed location names.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
         </tr>
     </table>
 

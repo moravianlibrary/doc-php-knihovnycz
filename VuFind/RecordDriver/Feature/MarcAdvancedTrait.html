@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\RecordDriver\Feature\MarcAdvancedTrait | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_RecordDriver_Feature_MarcAdvancedTrait" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/RecordDriver.html">RecordDriver</a></li><li class="backslash">\</li><li><a href="../../../VuFind/RecordDriver/Feature.html">Feature</a></li><li class="backslash">\</li><li>MarcAdvancedTrait</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>MarcAdvancedTrait    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>MarcAdvancedTrait</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Functions to add advanced MARC-driven functionality to a record driver already
+powered by the standard index spec. Depends upon MarcReaderTrait.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_subjectFields">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$subjectFields</td>
+                <td class="last"><p>Fields that may contain subject headings, and their descriptions</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_subjectSources">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$subjectSources</td>
+                <td class="last"><p>Mappings from subject source indicators (2nd indicator of subject fields in
+MARC 21) to the their codes.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_xmlType">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$xmlType</td>
+                <td class="last"><p>Type to export in getXML().</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAccessRestrictions">getAccessRestrictions</a>()
+        
+                                            <p><p>Get access restriction notes for the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAllSubjectHeadings">getAllSubjectHeadings</a>(bool $extended = false)
+        
+                                            <p><p>Get all subject headings associated with this record.  Each heading is
+returned as an array of chunks, increasing from least specific to most
+specific.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAwards">getAwards</a>()
+        
+                                            <p><p>Get award notes for the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBibliographicLevel">getBibliographicLevel</a>()
+        
+                                            <p><p>Get the bibliographic level of the current record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBibliographyNotes">getBibliographyNotes</a>()
+        
+                                            <p><p>Get notes on bibliography content.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFilteredXML">getFilteredXML</a>()
+        
+                                            <p><p>Return full record as filtered XML for public APIs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFindingAids">getFindingAids</a>()
+        
+                                            <p><p>Get notes on finding aids related to the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGeneralNotes">getGeneralNotes</a>()
+        
+                                            <p><p>Get general notes on the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHumanReadablePublicationDates">getHumanReadablePublicationDates</a>()
+        
+                                            <p><p>Get human readable publication dates for display purposes (may not be suitable
+for computer processing -- use getPublicationDates() for that).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNewerTitles">getNewerTitles</a>()
+        
+                                            <p><p>Get an array of newer titles for the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPlacesOfPublication">getPlacesOfPublication</a>()
+        
+                                            <p><p>Get the item's places of publication.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPlayingTimes">getPlayingTimes</a>()
+        
+                                            <p><p>Get an array of playing times for the record (if applicable).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPreviousTitles">getPreviousTitles</a>()
+        
+                                            <p><p>Get an array of previous titles for the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getProductionCredits">getProductionCredits</a>()
+        
+                                            <p><p>Get credits of people involved in production of the item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPublicationFrequency">getPublicationFrequency</a>()
+        
+                                            <p><p>Get an array of publication frequency information.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRelationshipNotes">getRelationshipNotes</a>()
+        
+                                            <p><p>Get an array of strings describing relationships to other items.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSeries">getSeries</a>()
+        
+                                            <p><p>Get an array of all series names containing the record.  Array entries may
+be either the name string, or an associative array with 'name' and 'number'
+keys.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSeriesFromMARC">getSeriesFromMARC</a>(array $fieldInfo)
+        
+                                            <p><p>Support method for getSeries() -- given a field specification, look for
+series information in the MARC record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSummary">getSummary</a>()
+        
+                                            <p><p>Get an array of summary strings for the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSystemDetails">getSystemDetails</a>()
+        
+                                            <p><p>Get an array of technical details on the item represented by the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTargetAudienceNotes">getTargetAudienceNotes</a>()
+        
+                                            <p><p>Get an array of note about the record's target audience.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitleSection">getTitleSection</a>()
+        
+                                            <p><p>Get the text of the part/section portion of the title.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitleStatement">getTitleStatement</a>()
+        
+                                            <p><p>Get the statement of responsibility that goes with the title (i.e. &quot;by John
+Smith&quot;).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTOC">getTOC</a>()
+        
+                                            <p><p>Get an array of lines from the table of contents.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHierarchicalPlaceNames">getHierarchicalPlaceNames</a>()
+        
+                                            <p><p>Get hierarchical place names (MARC field 752)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getURLs">getURLs</a>()
+        
+                                            <p><p>Return an array of associative URL arrays with one or more of the following
+keys:</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAllRecordLinks">getAllRecordLinks</a>()
+        
+                                            <p><p>Get all record links related to the current record. Each link is returned as
+array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordLinkNote">getRecordLinkNote</a>(array $field)
+        
+                                            <p><p>Support method for getFieldData() -- factor the relationship indicator
+into the field number where relevant to generate a note to associate
+with a record link.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFieldData">getFieldData</a>(array $field)
+        
+                                            <p><p>Returns the array element for the 'getAllRecordLinks' method</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIdFromLinkingField">getIdFromLinkingField</a>(string $idField, string $prefix = null, bool $raw = false)
+        
+                                            <p><p>Returns an id extracted from the identifier subfield passed in</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractSingleMarcDetail">extractSingleMarcDetail</a>(array $currentField, array $details)
+        
+                                            <p><p>Support method for getFormattedMarcDetails() -- extract a single result</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFormattedMarcDetails">getFormattedMarcDetails</a>(string $defaultField, array $data)
+        
+                                            <p><p>Get Status/Holdings Information from the internally stored MARC Record
+(support method used by the NoILS driver).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getXML">getXML</a>(string $format, string $baseUrl = null, <a href="../../../VuFind/View/Helper/Root/RecordLinker.html"><abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr></a> $linker = null)
+        
+                                            <p><p>Return an XML representation of the record using the specified format.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRDFXML">getRDFXML</a>()
+        
+                                            <p><p>Get an XML RDF representation of the data in this record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConsortialIDs">getConsortialIDs</a>()
+        
+                                            <p><p>Return the list of &quot;source records&quot; for this consortial record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCleanISMN">getCleanISMN</a>()
+        
+                                            <p><p>Return first ISMN found for this record, or false if no one fonund</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCleanNBN">getCleanNBN</a>()
+        
+                                            <p><p>Return first national bibliography number found, or false if not found</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitlesAltScript">getTitlesAltScript</a>()
+        
+                                            <p><p>Get the full titles of the record in alternative scripts.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFullTitlesAltScript">getFullTitlesAltScript</a>()
+        
+                                            <p><p>Get the full titles of the record including section and part information in
+alternative scripts.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getShortTitlesAltScript">getShortTitlesAltScript</a>()
+        
+                                            <p><p>Get the short (pre-subtitle) title of the record in alternative scripts.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSubtitlesAltScript">getSubtitlesAltScript</a>()
+        
+                                            <p><p>Get the subtitle of the record in alternative script.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitleSectionsAltScript">getTitleSectionsAltScript</a>()
+        
+                                            <p><p>Get the text of the part/section portion of the title in alternative scripts.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getAccessRestrictions">
+        <div class="location">at line 97</div>
+        <code>                    array
+    <strong>getAccessRestrictions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get access restriction notes for the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllSubjectHeadings">
+        <div class="location">at line 115</div>
+        <code>                    array
+    <strong>getAllSubjectHeadings</strong>(bool $extended = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all subject headings associated with this record.  Each heading is
+returned as an array of chunks, increasing from least specific to most
+specific.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$extended</td>
+                <td><p>Whether to return a keyed array with the following
+keys:</p>
+<ul>
+<li>heading: the actual subject heading chunks</li>
+<li>type: heading type</li>
+<li>source: source vocabulary</li>
+</ul></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAwards">
+        <div class="location">at line 176</div>
+        <code>                    array
+    <strong>getAwards</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get award notes for the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBibliographicLevel">
+        <div class="location">at line 186</div>
+        <code>                    string
+    <strong>getBibliographicLevel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the bibliographic level of the current record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBibliographyNotes">
+        <div class="location">at line 216</div>
+        <code>                    array
+    <strong>getBibliographyNotes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get notes on bibliography content.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilteredXML">
+        <div class="location">at line 226</div>
+        <code>                    string
+    <strong>getFilteredXML</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return full record as filtered XML for public APIs.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFindingAids">
+        <div class="location">at line 299</div>
+        <code>                    array
+    <strong>getFindingAids</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get notes on finding aids related to the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGeneralNotes">
+        <div class="location">at line 309</div>
+        <code>                    array
+    <strong>getGeneralNotes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get general notes on the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHumanReadablePublicationDates">
+        <div class="location">at line 320</div>
+        <code>                    array
+    <strong>getHumanReadablePublicationDates</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get human readable publication dates for display purposes (may not be suitable
+for computer processing -- use getPublicationDates() for that).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNewerTitles">
+        <div class="location">at line 330</div>
+        <code>                    array
+    <strong>getNewerTitles</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of newer titles for the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlacesOfPublication">
+        <div class="location">at line 344</div>
+        <code>                    array
+    <strong>getPlacesOfPublication</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the item's places of publication.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlayingTimes">
+        <div class="location">at line 354</div>
+        <code>                    array
+    <strong>getPlayingTimes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of playing times for the record (if applicable).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPreviousTitles">
+        <div class="location">at line 374</div>
+        <code>                    array
+    <strong>getPreviousTitles</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of previous titles for the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductionCredits">
+        <div class="location">at line 388</div>
+        <code>                    array
+    <strong>getProductionCredits</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get credits of people involved in production of the item.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublicationFrequency">
+        <div class="location">at line 398</div>
+        <code>                    array
+    <strong>getPublicationFrequency</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of publication frequency information.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationshipNotes">
+        <div class="location">at line 408</div>
+        <code>                    array
+    <strong>getRelationshipNotes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of strings describing relationships to other items.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSeries">
+        <div class="location">at line 420</div>
+        <code>                    array
+    <strong>getSeries</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of all series names containing the record.  Array entries may
+be either the name string, or an associative array with 'name' and 'number'
+keys.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSeriesFromMARC">
+        <div class="location">at line 454</div>
+        <code>            protected        array
+    <strong>getSeriesFromMARC</strong>(array $fieldInfo)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for getSeries() -- given a field specification, look for
+series information in the MARC record.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$fieldInfo</td>
+                <td><p>Associative array of field =&gt; subfield information
+(used to find series name)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSummary">
+        <div class="location">at line 491</div>
+        <code>                    array
+    <strong>getSummary</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of summary strings for the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSystemDetails">
+        <div class="location">at line 501</div>
+        <code>                    array
+    <strong>getSystemDetails</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of technical details on the item represented by the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTargetAudienceNotes">
+        <div class="location">at line 511</div>
+        <code>                    array
+    <strong>getTargetAudienceNotes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of note about the record's target audience.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitleSection">
+        <div class="location">at line 521</div>
+        <code>                    string
+    <strong>getTitleSection</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the text of the part/section portion of the title.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitleStatement">
+        <div class="location">at line 532</div>
+        <code>                    string
+    <strong>getTitleStatement</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the statement of responsibility that goes with the title (i.e. &quot;by John
+Smith&quot;).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTOC">
+        <div class="location">at line 542</div>
+        <code>                    array
+    <strong>getTOC</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of lines from the table of contents.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHierarchicalPlaceNames">
+        <div class="location">at line 576</div>
+        <code>                    array
+    <strong>getHierarchicalPlaceNames</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get hierarchical place names (MARC field 752)</p></p>                <p><p>Returns an array of formatted hierarchical place names, consisting of all
+alpha-subfields, concatenated for display</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getURLs">
+        <div class="location">at line 607</div>
+        <code>                    array
+    <strong>getURLs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return an array of associative URL arrays with one or more of the following
+keys:</p></p>                <p><li>
+  <ul>desc: URL description text to display (optional)</ul>
+  <ul>url: fully-formed URL (required if 'route' is absent)</ul>
+  <ul>route: VuFind route to build URL with (required if 'url' is absent)</ul>
+  <ul>routeParams: Parameters for route (optional)</ul>
+  <ul>queryString: Query params to append after building route (optional)</ul>
+</li></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllRecordLinks">
+        <div class="location">at line 654</div>
+        <code>                    null|array
+    <strong>getAllRecordLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all record links related to the current record. Each link is returned as
+array.</p></p>                <p><p>Format:
+array(
+array(
+'title' =&gt; label_for_title
+'value' =&gt; link_name
+'link'  =&gt; link_URI
+),
+...
+)</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordLinkNote">
+        <div class="location">at line 694</div>
+        <code>            protected        string
+    <strong>getRecordLinkNote</strong>(array $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for getFieldData() -- factor the relationship indicator
+into the field number where relevant to generate a note to associate
+with a record link.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$field</td>
+                <td><p>Field to examine</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFieldData">
+        <div class="location">at line 737</div>
+        <code>            protected        array|bool
+    <strong>getFieldData</strong>(array $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the array element for the 'getAllRecordLinks' method</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$field</td>
+                <td><p>Field to examine</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td><p>Array on success, boolean false if no valid link could be
+found in the data.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdFromLinkingField">
+        <div class="location">at line 818</div>
+        <code>            protected        string|bool
+    <strong>getIdFromLinkingField</strong>(string $idField, string $prefix = null, bool $raw = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an id extracted from the identifier subfield passed in</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$idField</td>
+                <td><p>MARC subfield containing id information</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td><p>Prefix to search for in id field</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$raw</td>
+                <td><p>Return raw match, or normalize?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td><p>ID on success, false on failure</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractSingleMarcDetail">
+        <div class="location">at line 843</div>
+        <code>            protected        string|bool
+    <strong>extractSingleMarcDetail</strong>(array $currentField, array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for getFormattedMarcDetails() -- extract a single result</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$currentField</td>
+                <td><p>Result from MarcReader::getFields</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td><p>Parsed instructions from getFormattedMarcDetails()</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormattedMarcDetails">
+        <div class="location">at line 877</div>
+        <code>                    array
+    <strong>getFormattedMarcDetails</strong>(string $defaultField, array $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Status/Holdings Information from the internally stored MARC Record
+(support method used by the NoILS driver).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$defaultField</td>
+                <td><p>The MARC Field to retrieve if $data commands do
+not request something more specific</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>The type of data to retrieve from the MARC field;
+an array of pipe-delimited commands where the first part determines the data
+retrieval mode, the second part provides further instructions, and the
+optional third part provides a field to override $defaultField; supported
+modes: &quot;msg&quot; (for a hard-coded message) and &quot;marc&quot; (for fetching subfield
+data)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getXML">
+        <div class="location">at line 931</div>
+        <code>                    mixed
+    <strong>getXML</strong>(string $format, string $baseUrl = null, <a href="../../../VuFind/View/Helper/Root/RecordLinker.html"><abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr></a> $linker = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return an XML representation of the record using the specified format.</p></p>                <p><p>Return false if the format is unsupported.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td><p>Name of format to use (corresponds with
+OAI-PMH metadataPrefix parameter).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$baseUrl</td>
+                <td><p>Base URL of host containing VuFind (optional;
+may be used to inject record URLs into XML when appropriate).</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/View/Helper/Root/RecordLinker.html"><abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr></a></td>
+                <td>$linker</td>
+                <td><p>Record linker helper (optional; may be used to
+inject record URLs into XML when appropriate).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>XML, or false if format unsupported.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRDFXML">
+        <div class="location">at line 977</div>
+        <code>                    mixed
+    <strong>getRDFXML</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an XML RDF representation of the data in this record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>XML RDF data (empty if unsupported or error).</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConsortialIDs">
+        <div class="location">at line 990</div>
+        <code>                    array
+    <strong>getConsortialIDs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the list of &quot;source records&quot; for this consortial record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCleanISMN">
+        <div class="location">at line 1000</div>
+        <code>                    mixed
+    <strong>getCleanISMN</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return first ISMN found for this record, or false if no one fonund</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCleanNBN">
+        <div class="location">at line 1018</div>
+        <code>                    mixed
+    <strong>getCleanNBN</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return first national bibliography number found, or false if not found</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitlesAltScript">
+        <div class="location">at line 1036</div>
+        <code>                    array
+    <strong>getTitlesAltScript</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the full titles of the record in alternative scripts.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFullTitlesAltScript">
+        <div class="location">at line 1048</div>
+        <code>                    array
+    <strong>getFullTitlesAltScript</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the full titles of the record including section and part information in
+alternative scripts.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShortTitlesAltScript">
+        <div class="location">at line 1059</div>
+        <code>                    array
+    <strong>getShortTitlesAltScript</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the short (pre-subtitle) title of the record in alternative scripts.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubtitlesAltScript">
+        <div class="location">at line 1069</div>
+        <code>                    array
+    <strong>getSubtitlesAltScript</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the subtitle of the record in alternative script.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitleSectionsAltScript">
+        <div class="location">at line 1079</div>
+        <code>                    array
+    <strong>getTitleSectionsAltScript</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the text of the part/section portion of the title in alternative scripts.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

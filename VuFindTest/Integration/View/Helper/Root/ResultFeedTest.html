@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Integration\View\Helper\Root\ResultFeedTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../fonts/doctum-font.css">
+        <script src="../../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../../doctum.js"></script>
+        <script async defer src="../../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Integration_View_Helper_Root_ResultFeedTest" data-root-path="../../../../../" data-search-index-url="../../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../../../../VuFindTest/Integration.html">Integration</a></li><li class="backslash">\</li><li><a href="../../../../../VuFindTest/Integration/View.html">View</a></li><li class="backslash">\</li><li><a href="../../../../../VuFindTest/Integration/View/Helper.html">Helper</a></li><li class="backslash">\</li><li><a href="../../../../../VuFindTest/Integration/View/Helper/Root.html">Root</a></li><li class="backslash">\</li><li>ResultFeedTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ResultFeedTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ResultFeedTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>ResultFeed Test Class</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../VuFindTest/Feature/LiveDetectionTrait.html"><abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Mix-in for detecting whether a live test environment is currently running.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html"><abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Mix-in for accessing a real Solr instance during testing.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../VuFindTest/Feature/ViewTrait.html"><abbr title="VuFindTest\Feature\ViewTrait">ViewTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for tests involving Laminas Views.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../../VuFindTest/Feature/PathResolverTrait.html"><abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for tests involving PathResolver.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_hasLiveDetectionTrait">
+                                                                                bool
+                                                                                
+                                    </td>
+                <td>$hasLiveDetectionTrait</td>
+                <td class="last"><p>Flag to allow other traits to test for the presence of this one (to enforce
+dependencies).</p></td>
+                <td><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/LiveDetectionTrait.html#property_hasLiveDetectionTrait">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_liveSolrContainer">
+                                        protected                                        <a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a>
+                                                                                
+                                    </td>
+                <td>$liveSolrContainer</td>
+                <td class="last"><p>Container for services related to live Solr connectivity.</p></td>
+                <td><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#property_liveSolrContainer">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_continuousIntegrationRunning">continuousIntegrationRunning</a>()
+        
+                                            <p><p>Is this test running in a continuous integration context?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/LiveDetectionTrait.html#method_continuousIntegrationRunning">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPathResolver">getPathResolver</a>(string|null $baseDirectory = null)
+        
+                                            <p><p>Get a config file path resolver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/PathResolverTrait.html#method_getPathResolver">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addPathResolverToContainer">addPathResolverToContainer</a>(<a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a> $container)
+        
+                                            <p><p>Add PathResolverFactory to a mock container</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/PathResolverTrait.html#method_addPathResolverToContainer">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createLiveSolrContainer">createLiveSolrContainer</a>()
+        
+                                            <p><p>Create and populate container for services related to live Solr connectivity.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#method_createLiveSolrContainer">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLiveSolrContainer">getLiveSolrContainer</a>()
+        
+                                            <p><p>Get container for services related to live Solr connectivity.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#method_getLiveSolrContainer">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBackend">getBackend</a>(string $name = &#039;Solr&#039;)
+        
+                                            <p><p>Get a search backend</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#method_getBackend">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResultsObject">getResultsObject</a>(string $name = &#039;Solr&#039;)
+        
+                                            <p><p>Get a search results object</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#method_getResultsObject">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPhpRenderer">getPhpRenderer</a>(array $plugins = [], string $theme = &#039;bootstrap3&#039;)
+        
+                                            <p><p>Get a working renderer.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/ViewTrait.html#method_getPhpRenderer">
+<abbr title="VuFindTest\Feature\ViewTrait">ViewTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPathForTheme">getPathForTheme</a>(string $theme)
+        
+                                            <p><p>Get the directory for a given theme.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../VuFindTest/Feature/ViewTrait.html#method_getPathForTheme">
+<abbr title="VuFindTest\Feature\ViewTrait">ViewTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p><p>Standard setup method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPlugins">getPlugins</a>()
+        
+                                            <p><p>Get plugins to register to support view helper being tested</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockTranslator">getMockTranslator</a>()
+        
+                                            <p><p>Mock out the translator.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testRSS">testRSS</a>()
+        
+                                            <p><p>Test feed generation</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_continuousIntegrationRunning">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/LiveDetectionTrait.html#method_continuousIntegrationRunning">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a> at line 55</div>
+        <code>                    bool
+    <strong>continuousIntegrationRunning</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is this test running in a continuous integration context?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPathResolver">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/PathResolverTrait.html#method_getPathResolver">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a> at line 51</div>
+        <code>            protected        <a href="../../../../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+    <strong>getPathResolver</strong>(string|null $baseDirectory = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a config file path resolver</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$baseDirectory</td>
+                <td><p>Optional directory to override APPLICATION_PATH</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPathResolverToContainer">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/PathResolverTrait.html#method_addPathResolverToContainer">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a> at line 77</div>
+        <code>            protected        void
+    <strong>addPathResolverToContainer</strong>(<a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add PathResolverFactory to a mock container</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a></td>
+                <td>$container</td>
+                <td><p>Mock Container</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createLiveSolrContainer">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#method_createLiveSolrContainer">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a> at line 62</div>
+        <code>            protected        <a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a>
+    <strong>createLiveSolrContainer</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create and populate container for services related to live Solr connectivity.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLiveSolrContainer">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#method_getLiveSolrContainer">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a> at line 106</div>
+        <code>            protected        <a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a>
+    <strong>getLiveSolrContainer</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get container for services related to live Solr connectivity.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBackend">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#method_getBackend">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a> at line 121</div>
+        <code>            protected        object
+    <strong>getBackend</strong>(string $name = &#039;Solr&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a search backend</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Backend name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResultsObject">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/LiveSolrTrait.html#method_getResultsObject">
+<abbr title="VuFindTest\Feature\LiveSolrTrait">LiveSolrTrait</abbr></a> at line 134</div>
+        <code>            protected        <a href="../../../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+    <strong>getResultsObject</strong>(string $name = &#039;Solr&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a search results object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Backend name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPhpRenderer">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/ViewTrait.html#method_getPhpRenderer">
+<abbr title="VuFindTest\Feature\ViewTrait">ViewTrait</abbr></a> at line 50</div>
+        <code>            protected        <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr>
+    <strong>getPhpRenderer</strong>(array $plugins = [], string $theme = &#039;bootstrap3&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a working renderer.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$plugins</td>
+                <td><p>Custom VuFind plug-ins to register</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$theme</td>
+                <td><p>Theme directory to load from</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPathForTheme">
+        <div class="location">in <a href="../../../../../VuFindTest/Feature/ViewTrait.html#method_getPathForTheme">
+<abbr title="VuFindTest\Feature\ViewTrait">ViewTrait</abbr></a> at line 81</div>
+        <code>            protected        string
+    <strong>getPathForTheme</strong>(string $theme)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the directory for a given theme.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$theme</td>
+                <td><p>Theme directory name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">at line 52</div>
+        <code>                    void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard setup method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlugins">
+        <div class="location">at line 66</div>
+        <code>            protected        array
+    <strong>getPlugins</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get plugins to register to support view helper being tested</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockTranslator">
+        <div class="location">at line 95</div>
+        <code>            protected        <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getMockTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Mock out the translator.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testRSS">
+        <div class="location">at line 120</div>
+        <code>                    void
+    <strong>testRSS</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test feed generation</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

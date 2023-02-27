@@ -100,8 +100,8 @@
     <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-6">
-                    <abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr>    </div>
-                <div class="col-md-6"></div>
+                    <a href="VuFindTest/Feature/FixtureTrait.html"><abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait adding functionality for loading fixtures.</p></div>
             </div>
             </div>
     
@@ -110,6 +110,50 @@
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixtureDir">getFixtureDir</a>(string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Get the base directory containing fixtures.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="VuFindTest/Feature/FixtureTrait.html#method_getFixtureDir">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixturePath">getFixturePath</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Resolve fixture path.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="VuFindTest/Feature/FixtureTrait.html#method_getFixturePath">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFixture">getFixture</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Load a fixture file.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="VuFindTest/Feature/FixtureTrait.html#method_getFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getJsonFixture">getJsonFixture</a>(string $filename, string $module = &#039;VuFind&#039;)
+        
+                                            <p><p>Load a JSON fixture from file (using associative array return type).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="VuFindTest/Feature/FixtureTrait.html#method_getJsonFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a></small></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     void
@@ -146,6 +190,215 @@
         <h2>Details</h2>
 
             <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getFixtureDir">
+        <div class="location">in <a href="VuFindTest/Feature/FixtureTrait.html#method_getFixtureDir">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 51</div>
+        <code>            protected        string
+    <strong>getFixtureDir</strong>(string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the base directory containing fixtures.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFixturePath">
+        <div class="location">in <a href="VuFindTest/Feature/FixtureTrait.html#method_getFixturePath">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 65</div>
+        <code>            protected        string
+    <strong>getFixturePath</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve fixture path.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFixture">
+        <div class="location">in <a href="VuFindTest/Feature/FixtureTrait.html#method_getFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 87</div>
+        <code>            protected        string
+    <strong>getFixture</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load a fixture file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getJsonFixture">
+        <div class="location">in <a href="VuFindTest/Feature/FixtureTrait.html#method_getJsonFixture">
+<abbr title="VuFindTest\Feature\FixtureTrait">FixtureTrait</abbr></a> at line 100</div>
+        <code>            protected        array
+    <strong>getJsonFixture</strong>(string $filename, string $module = &#039;VuFind&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load a JSON fixture from file (using associative array return type).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename relative to fixture directory.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td><p>Module containing fixture.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
                     <div class="method-item">
                     <h3 id="method_testGetStructuredDataFieldArray">
         <div class="location">at line 48</div>

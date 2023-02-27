@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Sitemap\Generator | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Sitemap_Generator" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Sitemap.html">Sitemap</a></li><li class="backslash">\</li><li>Generator</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Generator    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Generator</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Class for generating sitemaps</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_baseUrl">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$baseUrl</td>
+                <td class="last"><p>Base URL for site</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_baseSitemapUrl">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$baseSitemapUrl</td>
+                <td class="last"><p>Base URL for sitemap</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_languages">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$languages</td>
+                <td class="last"><p>Languages enabled for sitemaps</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>Sitemap configuration (sitemap.ini)</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pluginManager">
+                                        protected                                        <a href="../../VuFind/Sitemap/PluginManager.html"><abbr title="VuFind\Sitemap\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$pluginManager</td>
+                <td class="last"><p>Generator plugin manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_frequency">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$frequency</td>
+                <td class="last"><p>Frequency of URL updates (always, daily, weekly, monthly, yearly, never)</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_countPerPage">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$countPerPage</td>
+                <td class="last"><p>URL entries per sitemap</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fileLocation">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$fileLocation</td>
+                <td class="last"><p>Output file path</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fileStart">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$fileStart</td>
+                <td class="last"><p>Base path to sitemap files, including base filename</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_indexFile">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$indexFile</td>
+                <td class="last"><p>Filename of sitemap index</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_warnings">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$warnings</td>
+                <td class="last"><p>Warnings thrown during sitemap generation</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_verbose">
+                                        protected                                        callable
+                                                                                
+                                    </td>
+                <td>$verbose</td>
+                <td class="last"><p>Verbose callback</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $baseUrl, <abbr title="Laminas\Config\Config">Config</abbr> $config, array $locales, <a href="../../VuFind/Sitemap/PluginManager.html"><abbr title="VuFind\Sitemap\PluginManager">PluginManager</abbr></a> $pm)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setVerbose">setVerbose</a>(callable|null $newMode = null)
+        
+                                            <p><p>Get/set verbose callback</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_verboseMsg">verboseMsg</a>(string $msg)
+        
+                                            <p><p>Write a verbose message (if configured to do so)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setBaseUrl">setBaseUrl</a>(string $newUrl = null)
+        
+                                            <p><p>Get/set base url</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setBaseSitemapUrl">setBaseSitemapUrl</a>(string $newUrl = null)
+        
+                                            <p><p>Get/set base sitemap url</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setFileLocation">setFileLocation</a>(string|null $newLocation = null)
+        
+                                            <p><p>Get/set output file path</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTime">getTime</a>()
+        
+                                            <p><p>Get the current microtime, formatted to a number.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_generate">generate</a>()
+        
+                                            <p><p>Generate the sitemaps based on settings established by the constructor.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_generateWithPlugins">generateWithPlugins</a>()
+        
+                                            <p><p>Generate sitemaps from all mandatory and configured plugins</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getWarnings">getWarnings</a>()
+        
+                                            <p><p>Get array of warning messages thrown during build.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_buildIndex">buildIndex</a>(array $sitemaps)
+        
+                                            <p><p>Write a sitemap index if requested.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Sitemap/SitemapIndex.html"><abbr title="VuFind\Sitemap\SitemapIndex">SitemapIndex</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNewSitemapIndex">getNewSitemapIndex</a>()
+        
+                                            <p><p>Get a fresh SitemapIndex object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Sitemap/Sitemap.html"><abbr title="VuFind\Sitemap\Sitemap">Sitemap</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNewSitemap">getNewSitemap</a>()
+        
+                                            <p><p>Get a fresh Sitemap object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFilenameForPage">getFilenameForPage</a>(int|string $page, bool $includePath = true)
+        
+                                            <p><p>Get the filename for the specified page number or name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBaseSitemapIndexUrl">getBaseSitemapIndexUrl</a>()
+        
+                                            <p><p>Get the base URL for sitemap index files</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Sitemap/Plugin/GeneratorPluginInterface.html"><abbr title="VuFind\Sitemap\Plugin\GeneratorPluginInterface">GeneratorPluginInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPlugin">getPlugin</a>(string $pluginName)
+        
+                                            <p><p>Create and setup a plugin</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSitemapLanguages">getSitemapLanguages</a>(array $locales)
+        
+                                            <p><p>Get languages for a sitemap</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 135</div>
+        <code>                    
+    <strong>__construct</strong>(string $baseUrl, <abbr title="Laminas\Config\Config">Config</abbr> $config, array $locales, <a href="../../VuFind/Sitemap/PluginManager.html"><abbr title="VuFind\Sitemap\PluginManager">PluginManager</abbr></a> $pm)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$baseUrl</td>
+                <td><p>VuFind base URL</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Sitemap configuration settings</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td><p>Enabled locales</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Sitemap/PluginManager.html"><abbr title="VuFind\Sitemap\PluginManager">PluginManager</abbr></a></td>
+                <td>$pm</td>
+                <td><p>Generator plugin manager</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setVerbose">
+        <div class="location">at line 168</div>
+        <code>                    callable|null
+    <strong>setVerbose</strong>(callable|null $newMode = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get/set verbose callback</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|null</td>
+                <td>$newMode</td>
+                <td><p>Callback for writing verbose messages (or null
+to disable them)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable|null</td>
+            <td><p>Current verbose callback (null if disabled)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verboseMsg">
+        <div class="location">at line 183</div>
+        <code>            protected        void
+    <strong>verboseMsg</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Write a verbose message (if configured to do so)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Message to display</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseUrl">
+        <div class="location">at line 197</div>
+        <code>                    string
+    <strong>setBaseUrl</strong>(string $newUrl = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get/set base url</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$newUrl</td>
+                <td><p>New base url</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Current or new base url</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseSitemapUrl">
+        <div class="location">at line 212</div>
+        <code>                    string
+    <strong>setBaseSitemapUrl</strong>(string $newUrl = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get/set base sitemap url</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$newUrl</td>
+                <td><p>New base sitemap url</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Current or new base sitemap url</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFileLocation">
+        <div class="location">at line 227</div>
+        <code>                    string
+    <strong>setFileLocation</strong>(string|null $newLocation = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get/set output file path</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$newLocation</td>
+                <td><p>New path</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Current or new path</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTime">
+        <div class="location">at line 240</div>
+        <code>            protected        float
+    <strong>getTime</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the current microtime, formatted to a number.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generate">
+        <div class="location">at line 251</div>
+        <code>                    void
+    <strong>generate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate the sitemaps based on settings established by the constructor.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateWithPlugins">
+        <div class="location">at line 270</div>
+        <code>            protected        array
+    <strong>generateWithPlugins</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate sitemaps from all mandatory and configured plugins</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWarnings">
+        <div class="location">at line 337</div>
+        <code>                    array
+    <strong>getWarnings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get array of warning messages thrown during build.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildIndex">
+        <div class="location">at line 349</div>
+        <code>            protected        void
+    <strong>buildIndex</strong>(array $sitemaps)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Write a sitemap index if requested.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$sitemaps</td>
+                <td><p>Sitemaps to add to the index.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNewSitemapIndex">
+        <div class="location">at line 393</div>
+        <code>            protected        <a href="../../VuFind/Sitemap/SitemapIndex.html"><abbr title="VuFind\Sitemap\SitemapIndex">SitemapIndex</abbr></a>
+    <strong>getNewSitemapIndex</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a fresh SitemapIndex object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Sitemap/SitemapIndex.html"><abbr title="VuFind\Sitemap\SitemapIndex">SitemapIndex</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNewSitemap">
+        <div class="location">at line 403</div>
+        <code>            protected        <a href="../../VuFind/Sitemap/Sitemap.html"><abbr title="VuFind\Sitemap\Sitemap">Sitemap</abbr></a>
+    <strong>getNewSitemap</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a fresh Sitemap object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Sitemap/Sitemap.html"><abbr title="VuFind\Sitemap\Sitemap">Sitemap</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilenameForPage">
+        <div class="location">at line 416</div>
+        <code>            protected        string
+    <strong>getFilenameForPage</strong>(int|string $page, bool $includePath = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the filename for the specified page number or name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string</td>
+                <td>$page</td>
+                <td><p>Page number or name</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$includePath</td>
+                <td><p>Whether to include the path name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseSitemapIndexUrl">
+        <div class="location">at line 427</div>
+        <code>            protected        string
+    <strong>getBaseSitemapIndexUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the base URL for sitemap index files</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlugin">
+        <div class="location">at line 440</div>
+        <code>            protected        <a href="../../VuFind/Sitemap/Plugin/GeneratorPluginInterface.html"><abbr title="VuFind\Sitemap\Plugin\GeneratorPluginInterface">GeneratorPluginInterface</abbr></a>
+    <strong>getPlugin</strong>(string $pluginName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create and setup a plugin</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pluginName</td>
+                <td><p>Plugin name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Sitemap/Plugin/GeneratorPluginInterface.html"><abbr title="VuFind\Sitemap\Plugin\GeneratorPluginInterface">GeneratorPluginInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSitemapLanguages">
+        <div class="location">at line 466</div>
+        <code>            protected        array
+    <strong>getSitemapLanguages</strong>(array $locales)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get languages for a sitemap</p></p>                <p><p>Returns an array with sitemap languages as keys and VuFind languages as
+values.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td><p>Enabled VuFind locales</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

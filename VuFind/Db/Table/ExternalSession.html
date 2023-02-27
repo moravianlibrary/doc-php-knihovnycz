@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Db\Table\ExternalSession | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Db_Table_ExternalSession" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Db.html">Db</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Db/Table.html">Table</a></li><li class="backslash">\</li><li>ExternalSession</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ExternalSession    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ExternalSession</strong>        extends <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Table Definition for external_session</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Db/Table/ExpirationTrait.html"><abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for tables that support expiration</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tableManager">
+                                        protected                                        <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$tableManager</td>
+                <td class="last"><p>Table manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#property_tableManager">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr> $adapter, <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $tm, array $cfg, <abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null $rowObj = null, string $table = &#039;external_session&#039;)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initializeFeatures">initializeFeatures</a>(array $cfg)
+        
+                                            <p><p>Initialize features</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_initializeFeatures">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createRow">createRow</a>()
+        
+                                            <p><p>Create a new row.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_createRow">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTable">getDbTable</a>(string $table)
+        
+                                            <p><p>Get access to another table.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_expirationCallback">expirationCallback</a>(<abbr title="VuFind\Db\Table\Select">Select</abbr> $select, string $dateLimit)
+        
+                                            <p><p>Update the select statement to find records to delete.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deleteExpired">deleteExpired</a>(string $dateLimit, int|null $limit = null)
+        
+                                            <p><p>Delete expired records. Allows setting of 'from' and 'to' ID's so that rows
+can be deleted in small batches.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/ExpirationTrait.html#method_deleteExpired">
+<abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getExpiredBatchLastId">getExpiredBatchLastId</a>(string $dateLimit, int $limit)
+        
+                                            <p><p>Get the highest id to delete in a batch.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/ExpirationTrait.html#method_getExpiredBatchLastId">
+<abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addSessionMapping">addSessionMapping</a>(string $localSessionId, string $externalSessionId)
+        
+                                            <p><p>Add a mapping between local and external session id's</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Row/ExternalSession.html"><abbr title="VuFind\Db\Row\ExternalSession">ExternalSession</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getByExternalSessionId">getByExternalSessionId</a>(string $sid)
+        
+                                            <p><p>Retrieve an object from the database based on an external session ID</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_destroySession">destroySession</a>(string $sid)
+        
+                                            <p><p>Destroy data for the given session ID.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 58</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr> $adapter, <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $tm, array $cfg, <abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null $rowObj = null, string $table = &#039;external_session&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr></td>
+                <td>$adapter</td>
+                <td><p>Database adapter</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+                <td>$tm</td>
+                <td><p>Table manager</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$cfg</td>
+                <td><p>Laminas configuration</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null</td>
+                <td>$rowObj</td>
+                <td><p>Row prototype object (null for default)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Name of database table to interface with</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeFeatures">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_initializeFeatures">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 89</div>
+        <code>                    void
+    <strong>initializeFeatures</strong>(array $cfg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize features</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$cfg</td>
+                <td><p>Laminas configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRow">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_createRow">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 113</div>
+        <code>                    object
+    <strong>createRow</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new row.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbTable">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 147</div>
+        <code>                    <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+    <strong>getDbTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get access to another table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Table name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expirationCallback">
+        <div class="location">at line 119</div>
+        <code>            protected        void
+    <strong>expirationCallback</strong>(<abbr title="VuFind\Db\Table\Select">Select</abbr> $select, string $dateLimit)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Update the select statement to find records to delete.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Db\Table\Select">Select</abbr></td>
+                <td>$select</td>
+                <td><p>Select clause</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dateLimit</td>
+                <td><p>Date threshold of an &quot;expired&quot; record in format
+'Y-m-d H:i:s'.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteExpired">
+        <div class="location">in <a href="../../../VuFind/Db/Table/ExpirationTrait.html#method_deleteExpired">
+<abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a> at line 68</div>
+        <code>                    int
+    <strong>deleteExpired</strong>(string $dateLimit, int|null $limit = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete expired records. Allows setting of 'from' and 'to' ID's so that rows
+can be deleted in small batches.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dateLimit</td>
+                <td><p>Date threshold of an &quot;expired&quot; record in format
+'Y-m-d H:i:s'.</p></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$limit</td>
+                <td><p>Maximum number of rows to delete or null for no
+limit.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>Number of rows deleted</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpiredBatchLastId">
+        <div class="location">in <a href="../../../VuFind/Db/Table/ExpirationTrait.html#method_getExpiredBatchLastId">
+<abbr title="VuFind\Db\Table\ExpirationTrait">ExpirationTrait</abbr></a> at line 91</div>
+        <code>            protected        int|null
+    <strong>getExpiredBatchLastId</strong>(string $dateLimit, int $limit)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the highest id to delete in a batch.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dateLimit</td>
+                <td><p>Date threshold of an &quot;expired&quot; record in format
+'Y-m-d H:i:s'.</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Maximum number of rows to delete.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td><p>Highest id value to delete or null if a limiting id is not
+available</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addSessionMapping">
+        <div class="location">at line 76</div>
+        <code>                    void
+    <strong>addSessionMapping</strong>(string $localSessionId, string $externalSessionId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a mapping between local and external session id's</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$localSessionId</td>
+                <td><p>Local (VuFind) session id</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$externalSessionId</td>
+                <td><p>External session id</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByExternalSessionId">
+        <div class="location">at line 93</div>
+        <code>                    <a href="../../../VuFind/Db/Row/ExternalSession.html"><abbr title="VuFind\Db\Row\ExternalSession">ExternalSession</abbr></a>
+    <strong>getByExternalSessionId</strong>(string $sid)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve an object from the database based on an external session ID</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sid</td>
+                <td><p>External session ID to retrieve</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Row/ExternalSession.html"><abbr title="VuFind\Db\Row\ExternalSession">ExternalSession</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroySession">
+        <div class="location">at line 105</div>
+        <code>                    void
+    <strong>destroySession</strong>(string $sid)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Destroy data for the given session ID.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sid</td>
+                <td><p>Session ID to erase</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Exception\HttpDownloadException | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Exception_HttpDownloadException" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Exception.html">Exception</a></li><li class="backslash">\</li><li>HttpDownloadException</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>HttpDownloadException    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>HttpDownloadException</strong>        extends <a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>        implements        <a href="../../VuFind/Exception/HttpStatusInterface.html"><abbr title="VuFind\Exception\HttpStatusInterface">HttpStatusInterface</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>&quot;Format Unavailable&quot; Exception</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_url">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$url</td>
+                <td class="last"><p>URL we tried to download.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_statusCode">
+                                        protected                                        <abbr title="VuFind\Exception\?int">?int</abbr>
+                                                                                
+                                    </td>
+                <td>$statusCode</td>
+                <td class="last"><p>HTTP status associated with this exception.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_responseHeaders">
+                                        protected                                        <abbr title="VuFind\Exception\?\Laminas\Http\Headers">Headers</abbr>
+                                                                                
+                                    </td>
+                <td>$responseHeaders</td>
+                <td class="last"><p>HTTP response headers associated with this exception.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_responseBody">
+                                        protected                                        <abbr title="VuFind\Exception\?string">?string</abbr>
+                                                                                
+                                    </td>
+                <td>$responseBody</td>
+                <td class="last"><p>HTTP response body associated with this exception.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $message, string $url, int|null $statusCode = null, <abbr title="VuFind\Exception\Laminas\Http\Headers">Headers</abbr>|null $responseHeaders = null, string|null $responseBody = null, <abbr title="VuFind\Exception\Throwable">Throwable</abbr>|null $previous = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHttpStatus">getHttpStatus</a>()
+        
+                                            <p><p>Get HTTP status associated with this exception.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResponseBody">getResponseBody</a>()
+        
+                                            <p><p>Get HTTP response body.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\Exception\Laminas\Http\Headers">Headers</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResponseHeaders">getResponseHeaders</a>()
+        
+                                            <p><p>Get HTTP response headers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUrl">getUrl</a>()
+        
+                                            <p><p>Get URL we tried to download.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 81</div>
+        <code>                    
+    <strong>__construct</strong>(string $message, string $url, int|null $statusCode = null, <abbr title="VuFind\Exception\Laminas\Http\Headers">Headers</abbr>|null $responseHeaders = null, string|null $responseBody = null, <abbr title="VuFind\Exception\Throwable">Throwable</abbr>|null $previous = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Exception message</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL we tried to download</p></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$statusCode</td>
+                <td><p>HTTP status code</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Exception\Laminas\Http\Headers">Headers</abbr>|null</td>
+                <td>$responseHeaders</td>
+                <td><p>HTTP response headers</p></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$responseBody</td>
+                <td><p>HTTP response body</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Exception\Throwable">Throwable</abbr>|null</td>
+                <td>$previous</td>
+                <td><p>Previous exception</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpStatus">
+        <div class="location">at line 101</div>
+        <code>                    int
+    <strong>getHttpStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get HTTP status associated with this exception.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponseBody">
+        <div class="location">at line 111</div>
+        <code>                    string|null
+    <strong>getResponseBody</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get HTTP response body.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponseHeaders">
+        <div class="location">at line 121</div>
+        <code>                    <abbr title="VuFind\Exception\Laminas\Http\Headers">Headers</abbr>|null
+    <strong>getResponseHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get HTTP response headers.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\Exception\Laminas\Http\Headers">Headers</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrl">
+        <div class="location">at line 131</div>
+        <code>                    string
+    <strong>getUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get URL we tried to download.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

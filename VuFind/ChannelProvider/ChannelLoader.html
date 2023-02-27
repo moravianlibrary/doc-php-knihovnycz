@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\ChannelProvider\ChannelLoader | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_ChannelProvider_ChannelLoader" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/ChannelProvider.html">ChannelProvider</a></li><li class="backslash">\</li><li>ChannelLoader</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ChannelLoader    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ChannelLoader</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Channel loader</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_cacheManager">
+                                        protected                                        <a href="../../VuFind/Cache/Manager.html"><abbr title="VuFind\Cache\Manager">Manager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$cacheManager</td>
+                <td class="last"><p>Cache manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_channelManager">
+                                        protected                                        <a href="../../VuFind/ChannelProvider/PluginManager.html"><abbr title="VuFind\ChannelProvider\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$channelManager</td>
+                <td class="last"><p>Channel manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>Channel configuration</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordLoader">
+                                        protected                                        <a href="../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a>
+                                                                                
+                                    </td>
+                <td>$recordLoader</td>
+                <td class="last"><p>Record loader</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchRunner">
+                                        protected                                        <a href="../../VuFind/Search/SearchRunner.html"><abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a>
+                                                                                
+                                    </td>
+                <td>$searchRunner</td>
+                <td class="last"><p>Search runner</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_locale">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$locale</td>
+                <td class="last"><p>Current locale (used for caching)</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <a href="../../VuFind/Cache/Manager.html"><abbr title="VuFind\Cache\Manager">Manager</abbr></a> $cache, <a href="../../VuFind/ChannelProvider/PluginManager.html"><abbr title="VuFind\ChannelProvider\PluginManager">PluginManager</abbr></a> $cm, <a href="../../VuFind/Search/SearchRunner.html"><abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a> $runner, <a href="../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a> $loader, string $locale = &#039;&#039;)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_performChannelSearch">performChannelSearch</a>(array $searchRequest, array $providers, string $source)
+        
+                                            <p><p>Get a search results object configured by channel providers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getChannelsFromResults">getChannelsFromResults</a>(array $providers, <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $results, string $token)
+        
+                                            <p><p>Get channel details using an array of providers and a populated search
+results object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getChannelProviders">getChannelProviders</a>(string $source, array $configSection, string $activeId = null)
+        
+                                            <p><p>Get an array of channel providers matching the provided IDs (or just one,
+if the channelProvider GET parameter is set).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/ChannelProvider/ChannelProviderInterface.html"><abbr title="VuFind\ChannelProvider\ChannelProviderInterface">ChannelProviderInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getChannelProvider">getChannelProvider</a>(string $providerId)
+        
+                                            <p><p>Convenience method to retrieve a channel provider.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHomeContext">getHomeContext</a>(string $token = null, string $activeChannel = null, string $activeSource = null)
+        
+                                            <p><p>Generates static front page of channels.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordContext">getRecordContext</a>(string $recordId, string $token = null, string $activeChannel = null, string $source = DEFAULT_SEARCH_BACKEND)
+        
+                                            <p><p>Generates channels for a record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchContext">getSearchContext</a>(array $searchRequest = [], string $token = null, string $activeChannel = null, string $source = DEFAULT_SEARCH_BACKEND)
+        
+                                            <p><p>Generates channels for a search.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 100</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <a href="../../VuFind/Cache/Manager.html"><abbr title="VuFind\Cache\Manager">Manager</abbr></a> $cache, <a href="../../VuFind/ChannelProvider/PluginManager.html"><abbr title="VuFind\ChannelProvider\PluginManager">PluginManager</abbr></a> $cm, <a href="../../VuFind/Search/SearchRunner.html"><abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a> $runner, <a href="../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a> $loader, string $locale = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Channels configuration</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Cache/Manager.html"><abbr title="VuFind\Cache\Manager">Manager</abbr></a></td>
+                <td>$cache</td>
+                <td><p>Cache manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/ChannelProvider/PluginManager.html"><abbr title="VuFind\ChannelProvider\PluginManager">PluginManager</abbr></a></td>
+                <td>$cm</td>
+                <td><p>Channel manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Search/SearchRunner.html"><abbr title="VuFind\Search\SearchRunner">SearchRunner</abbr></a></td>
+                <td>$runner</td>
+                <td><p>Search runner</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a></td>
+                <td>$loader</td>
+                <td><p>Record loader</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td><p>Current locale (used for caching)</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_performChannelSearch">
+        <div class="location">at line 125</div>
+        <code>            protected        <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a>
+    <strong>performChannelSearch</strong>(array $searchRequest, array $providers, string $source)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a search results object configured by channel providers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$searchRequest</td>
+                <td><p>Search request parameters</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$providers</td>
+                <td><p>Array of channel providers</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Backend to use</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChannelsFromResults">
+        <div class="location">at line 146</div>
+        <code>            protected        array
+    <strong>getChannelsFromResults</strong>(array $providers, <a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a> $results, string $token)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get channel details using an array of providers and a populated search
+results object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$providers</td>
+                <td><p>Array of channel providers</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Search/Base/Results.html"><abbr title="VuFind\Search\Base\Results">Results</abbr></a></td>
+                <td>$results</td>
+                <td><p>Search results object from performChannelSearch</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td><p>Optional channel token</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChannelProviders">
+        <div class="location">at line 170</div>
+        <code>            protected        array
+    <strong>getChannelProviders</strong>(string $source, array $configSection, string $activeId = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of channel providers matching the provided IDs (or just one,
+if the channelProvider GET parameter is set).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Search backend ID</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$configSection</td>
+                <td><p>Configuration section to load ID list from</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$activeId</td>
+                <td><p>Currently selected channel ID (if any; used
+when making an AJAX request for a single additional channel)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChannelProvider">
+        <div class="location">at line 187</div>
+        <code>            protected        <a href="../../VuFind/ChannelProvider/ChannelProviderInterface.html"><abbr title="VuFind\ChannelProvider\ChannelProviderInterface">ChannelProviderInterface</abbr></a>
+    <strong>getChannelProvider</strong>(string $providerId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convenience method to retrieve a channel provider.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$providerId</td>
+                <td><p>Channel provider name and optional config
+(colon-delimited)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/ChannelProvider/ChannelProviderInterface.html"><abbr title="VuFind\ChannelProvider\ChannelProviderInterface">ChannelProviderInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHomeContext">
+        <div class="location">at line 217</div>
+        <code>                    array
+    <strong>getHomeContext</strong>(string $token = null, string $activeChannel = null, string $activeSource = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generates static front page of channels.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td><p>Channel token (optional, used for AJAX fetching)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$activeChannel</td>
+                <td><p>Channel being requested (optional, used w/ token)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$activeSource</td>
+                <td><p>Search backend to use (null to use configured
+default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordContext">
+        <div class="location">at line 268</div>
+        <code>                    array
+    <strong>getRecordContext</strong>(string $recordId, string $token = null, string $activeChannel = null, string $source = DEFAULT_SEARCH_BACKEND)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generates channels for a record.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$recordId</td>
+                <td><p>Record ID to load</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td><p>Channel token (optional, used for AJAX fetching)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$activeChannel</td>
+                <td><p>Channel being requested (optional, used w/ token)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Search backend to use</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchContext">
+        <div class="location">at line 303</div>
+        <code>                    array
+    <strong>getSearchContext</strong>(array $searchRequest = [], string $token = null, string $activeChannel = null, string $source = DEFAULT_SEARCH_BACKEND)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generates channels for a search.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$searchRequest</td>
+                <td><p>Request parameters</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td><p>Channel token (optional, used for AJAX fetching)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$activeChannel</td>
+                <td><p>Channel being requested (optional, used w/ token)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><p>Search backend to use</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

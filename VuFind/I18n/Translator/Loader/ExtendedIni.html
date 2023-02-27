@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\I18n\Translator\Loader\ExtendedIni | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_I18n_Translator_Loader_ExtendedIni" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/I18n.html">I18n</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/I18n/Translator.html">Translator</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/I18n/Translator/Loader.html">Loader</a></li><li class="backslash">\</li><li>ExtendedIni</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ExtendedIni    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ExtendedIni</strong>        implements        <abbr title="Laminas\I18n\Translator\Loader\FileLoaderInterface">FileLoaderInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Handles the language loading and language file parsing</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_pathStack">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$pathStack</td>
+                <td class="last"><p>List of directories to search for language files.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fallbackLocales">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$fallbackLocales</td>
+                <td class="last"><p>Fallback locales to use for language strings missing from selected file.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_loadedFiles">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$loadedFiles</td>
+                <td class="last"><p>List of files loaded during the current run -- avoids infinite loops and
+duplicate loading.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_reader">
+                                        protected                                        <a href="../../../../VuFind/I18n/Translator/Loader/ExtendedIniReader.html"><abbr title="VuFind\I18n\Translator\Loader\ExtendedIniReader">ExtendedIniReader</abbr></a>
+                                                                                
+                                    </td>
+                <td>$reader</td>
+                <td class="last"><p>Helper for reading .ini files from disk.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $pathStack = [], string|string[] $fallbackLocales = null, <a href="../../../../VuFind/I18n/Translator/Loader/ExtendedIniReader.html"><abbr title="VuFind\I18n\Translator\Loader\ExtendedIniReader">ExtendedIniReader</abbr></a> $reader = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addToPathStack">addToPathStack</a>(array|string $pathStack)
+        
+                                            <p><p>Add additional directories to the path stack.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_load">load</a>(string $locale, string $filename)
+        
+                                            <p><p>Load method defined by FileLoaderInterface.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLanguageFilename">getLanguageFilename</a>(string $locale, string $domain)
+        
+                                            <p><p>Get the language file name for a language and domain</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resetLoadedFiles">resetLoadedFiles</a>()
+        
+                                            <p><p>Reset the loaded file list.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkAndMarkLoadedFile">checkAndMarkLoadedFile</a>(string $filename)
+        
+                                            <p><p>Check if a file has already been loaded; mark it loaded if it is not already.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadLanguageLocale">loadLanguageLocale</a>(string $locale, string $domain)
+        
+                                            <p><p>Load the language file for a given locale and domain.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadLanguageFile">loadLanguageFile</a>(string $filename, bool $failOnError = true)
+        
+                                            <p><p>Search the path stack for language files and merge them together.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadParentData">loadParentData</a>(<abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr> $data)
+        
+                                            <p><p>Support method for loadLanguageFile: retrieve parent data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 84</div>
+        <code>                    
+    <strong>__construct</strong>(array $pathStack = [], string|string[] $fallbackLocales = null, <a href="../../../../VuFind/I18n/Translator/Loader/ExtendedIniReader.html"><abbr title="VuFind\I18n\Translator\Loader\ExtendedIniReader">ExtendedIniReader</abbr></a> $reader = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$pathStack</td>
+                <td><p>List of directories to search for
+language files.</p></td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$fallbackLocales</td>
+                <td><p>Fallback locale(s) to use for
+language strings missing from selected file.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFind/I18n/Translator/Loader/ExtendedIniReader.html"><abbr title="VuFind\I18n\Translator\Loader\ExtendedIniReader">ExtendedIniReader</abbr></a></td>
+                <td>$reader</td>
+                <td><p>Helper for reading .ini files from
+disk.</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addToPathStack">
+        <div class="location">at line 101</div>
+        <code>                    void
+    <strong>addToPathStack</strong>(array|string $pathStack)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add additional directories to the path stack.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$pathStack</td>
+                <td><p>Path stack addition(s).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_load">
+        <div class="location">at line 116</div>
+        <code>                    <abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr>
+    <strong>load</strong>(string $locale, string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load method defined by FileLoaderInterface.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td><p>Locale to read from language file</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Relative base path for language file (used for
+loading text domains; optional)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Exception\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLanguageFilename">
+        <div class="location">at line 142</div>
+        <code>                    string
+    <strong>getLanguageFilename</strong>(string $locale, string $domain)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the language file name for a language and domain</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td><p>Locale name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Text domain (if any)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetLoadedFiles">
+        <div class="location">at line 154</div>
+        <code>            protected        void
+    <strong>resetLoadedFiles</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reset the loaded file list.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkAndMarkLoadedFile">
+        <div class="location">at line 166</div>
+        <code>            protected        bool
+    <strong>checkAndMarkLoadedFile</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if a file has already been loaded; mark it loaded if it is not already.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Name of file to check and mark as loaded.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if loaded, false if new.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadLanguageLocale">
+        <div class="location">at line 183</div>
+        <code>            protected        <abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr>
+    <strong>loadLanguageLocale</strong>(string $locale, string $domain)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load the language file for a given locale and domain.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td><p>Locale name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Text domain (if any)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadLanguageFile">
+        <div class="location">at line 201</div>
+        <code>            protected        <abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr>
+    <strong>loadLanguageFile</strong>(string $filename, bool $failOnError = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Search the path stack for language files and merge them together.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Name of file to search path stack for.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$failOnError</td>
+                <td><p>If true, throw an exception when file not found.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadParentData">
+        <div class="location">at line 242</div>
+        <code>            protected        <abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr>
+    <strong>loadParentData</strong>(<abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr> $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for loadLanguageFile: retrieve parent data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr></td>
+                <td>$data</td>
+                <td><p>TextDomain to populate with parent information.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TextDomain">TextDomain</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

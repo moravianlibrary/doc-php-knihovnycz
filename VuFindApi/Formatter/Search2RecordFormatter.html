@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindApi\Formatter\Search2RecordFormatter | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindApi_Formatter_Search2RecordFormatter" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindApi.html">VuFindApi</a></li><li class="backslash">\</li><li><a href="../../VuFindApi/Formatter.html">Formatter</a></li><li class="backslash">\</li><li>Search2RecordFormatter</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Search2RecordFormatter    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Search2RecordFormatter</strong>        extends <a href="../../VuFindApi/Formatter/RecordFormatter.html"><abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Record formatter for API responses</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_recordFields">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$recordFields</td>
+                <td class="last"><p>Record field definitions</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#property_recordFields">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_helperManager">
+                                        protected                                        <abbr title="Laminas\View\HelperPluginManager">HelperPluginManager</abbr>
+                                                                                
+                                    </td>
+                <td>$helperManager</td>
+                <td class="last"><p>View helper plugin manager</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#property_helperManager">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_filterArrayValues">filterArrayValues</a>(array $array)
+        
+                                            <p><p>Recursive function to filter array fields:</p>
+<ul>
+<li>remove empty values</li>
+<li>convert boolean values to 0/1</li>
+<li>force numerically indexed (non-associative) arrays to have numeric keys.</li>
+</ul></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/BaseFormatter.html#method_filterArrayValues">
+<abbr title="VuFindApi\Formatter\BaseFormatter">BaseFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resetArrayIndices">resetArrayIndices</a>(array $array)
+        
+                                            <p><p>Reset numerical array indices.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/BaseFormatter.html#method_resetArrayIndices">
+<abbr title="VuFindApi\Formatter\BaseFormatter">BaseFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $recordFields, <abbr title="Laminas\View\HelperPluginManager">HelperPluginManager</abbr> $helperManager)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method___construct">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDedupIds">getDedupIds</a>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        
+                                            <p><p>Get dedup IDs</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getDedupIds">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getExtendedSubjectHeadings">getExtendedSubjectHeadings</a>(<a href="../../VuFind/RecordDriver/SolrDefault.html"><abbr title="VuFind\RecordDriver\SolrDefault">SolrDefault</abbr></a> $record)
+        
+                                            <p><p>Get extended subject headings</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getExtendedSubjectHeadings">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFullRecord">getFullRecord</a>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        
+                                            <p><p>Get full record for a record as XML</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getFullRecord">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRawData">getRawData</a>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        
+                                            <p><p>Get raw data for a record as an array</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getRawData">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordPage">getRecordPage</a>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        
+                                            <p><p>Get (relative) link to record page</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getRecordPage">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getURLs">getURLs</a>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        
+                                            <p><p>Get URLs</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getURLs">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFields">getFields</a>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record, array $fields)
+        
+                                            <p><p>Get fields from a record as an array</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getFields">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordFields">getRecordFields</a>()
+        
+                                            <p><p>Get record field definitions.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getRecordFields">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordFieldSpec">getRecordFieldSpec</a>()
+        
+                                            <p><p>Return record field specs for the API specification</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getRecordFieldSpec">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_format">format</a>(array $results, array $requestedFields)
+        
+                                            <p><p>Format the results.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindApi/Formatter/RecordFormatter.html#method_format">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_filterArrayValues">
+        <div class="location">in <a href="../../VuFindApi/Formatter/BaseFormatter.html#method_filterArrayValues">
+<abbr title="VuFindApi\Formatter\BaseFormatter">BaseFormatter</abbr></a> at line 51</div>
+        <code>            protected        void
+    <strong>filterArrayValues</strong>(array $array)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Recursive function to filter array fields:</p>
+<ul>
+<li>remove empty values</li>
+<li>convert boolean values to 0/1</li>
+<li>force numerically indexed (non-associative) arrays to have numeric keys.</li>
+</ul></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td><p>Array to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetArrayIndices">
+        <div class="location">in <a href="../../VuFindApi/Formatter/BaseFormatter.html#method_resetArrayIndices">
+<abbr title="VuFindApi\Formatter\BaseFormatter">BaseFormatter</abbr></a> at line 81</div>
+        <code>            protected        void
+    <strong>resetArrayIndices</strong>(array $array)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reset numerical array indices.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td>Array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method___construct">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 64</div>
+        <code>                    
+    <strong>__construct</strong>(array $recordFields, <abbr title="Laminas\View\HelperPluginManager">HelperPluginManager</abbr> $helperManager)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$recordFields</td>
+                <td><p>Record field definitions</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\View\HelperPluginManager">HelperPluginManager</abbr></td>
+                <td>$helperManager</td>
+                <td><p>View helper plugin manager</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDedupIds">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getDedupIds">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 79</div>
+        <code>            protected        array|null
+    <strong>getDedupIds</strong>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get dedup IDs</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtendedSubjectHeadings">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getExtendedSubjectHeadings">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 98</div>
+        <code>            protected        array|null
+    <strong>getExtendedSubjectHeadings</strong>(<a href="../../VuFind/RecordDriver/SolrDefault.html"><abbr title="VuFind\RecordDriver\SolrDefault">SolrDefault</abbr></a> $record)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get extended subject headings</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/SolrDefault.html"><abbr title="VuFind\RecordDriver\SolrDefault">SolrDefault</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFullRecord">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getFullRecord">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 113</div>
+        <code>            protected        string|null
+    <strong>getFullRecord</strong>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get full record for a record as XML</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRawData">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getRawData">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 129</div>
+        <code>            protected        array
+    <strong>getRawData</strong>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get raw data for a record as an array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordPage">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getRecordPage">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 146</div>
+        <code>            protected        string
+    <strong>getRecordPage</strong>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get (relative) link to record page</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getURLs">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getURLs">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 159</div>
+        <code>            protected        array
+    <strong>getURLs</strong>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get URLs</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFields">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getFields">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 173</div>
+        <code>            protected        array
+    <strong>getFields</strong>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $record, array $fields)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get fields from a record as an array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record driver</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td><p>Fields to get</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordFields">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getRecordFields">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 214</div>
+        <code>                    array
+    <strong>getRecordFields</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get record field definitions.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordFieldSpec">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_getRecordFieldSpec">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 224</div>
+        <code>                    array
+    <strong>getRecordFieldSpec</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return record field specs for the API specification</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_format">
+        <div class="location">in <a href="../../VuFindApi/Formatter/RecordFormatter.html#method_format">
+<abbr title="VuFindApi\Formatter\RecordFormatter">RecordFormatter</abbr></a> at line 248</div>
+        <code>                    array
+    <strong>format</strong>(array $results, array $requestedFields)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format the results.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$results</td>
+                <td><p>Results to process (array of record drivers)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requestedFields</td>
+                <td><p>Fields to include in response</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

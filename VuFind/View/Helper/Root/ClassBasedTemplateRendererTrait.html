@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\View\Helper\Root\ClassBasedTemplateRendererTrait | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_View_Helper_Root_ClassBasedTemplateRendererTrait" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View.html">View</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View/Helper.html">Helper</a></li><li class="backslash">\</li><li><a href="../../../../VuFind/View/Helper/Root.html">Root</a></li><li class="backslash">\</li><li>ClassBasedTemplateRendererTrait</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ClassBasedTemplateRendererTrait    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>ClassBasedTemplateRendererTrait</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Trait for view helpers that render a template based on a class name.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_templateCache">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$templateCache</td>
+                <td class="last"><p>Cache for found templates</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resolveClassTemplate">resolveClassTemplate</a>(string $template, string $className, <abbr title="Laminas\View\Resolver\ResolverInterface">ResolverInterface</abbr> $resolver, string $topClassName = null)
+        
+                                            <p><p>Recursively locate a template that matches the provided class name
+(or one of its parent classes); throw an exception if no match is found.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renderClassTemplate">renderClassTemplate</a>(string $template, string $className, array $context = [], bool $throw = true)
+        
+                                            <p><p>Render a template associated with the provided class name, applying to
+specified context variables.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedClassTemplate">getCachedClassTemplate</a>(string $template, string $className)
+        
+                                            <p><p>Resolve the class template file unless already cached and return the file
+name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBriefClass">getBriefClass</a>(string $className)
+        
+                                            <p><p>Helper to grab the end of the class name</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTemplateWithClass">getTemplateWithClass</a>(string $template, string $className)
+        
+                                            <p><p>Helper to put the template path and class name together</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_resolveClassTemplate">
+        <div class="location">at line 70</div>
+        <code>            protected        string
+    <strong>resolveClassTemplate</strong>(string $template, string $className, <abbr title="Laminas\View\Resolver\ResolverInterface">ResolverInterface</abbr> $resolver, string $topClassName = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Recursively locate a template that matches the provided class name
+(or one of its parent classes); throw an exception if no match is found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td><p>Template path (with %s as class name
+placeholder)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Name of class to apply to template.</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\View\Resolver\ResolverInterface">ResolverInterface</abbr></td>
+                <td>$resolver</td>
+                <td><p>Resolver to use</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$topClassName</td>
+                <td><p>Top-level parent class of $className
+(or null if $className is already the top level; used for recursion only).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderClassTemplate">
+        <div class="location">at line 111</div>
+        <code>            protected        string
+    <strong>renderClassTemplate</strong>(string $template, string $className, array $context = [], bool $throw = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render a template associated with the provided class name, applying to
+specified context variables.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td><p>Template path (with %s as class name placeholder)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Name of class to apply to template.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Context for rendering template</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$throw</td>
+                <td><p>If true (default), an exception is thrown if the
+template is not found. Otherwise an empty string is returned.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\View\Exception\RuntimeException">RuntimeException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedClassTemplate">
+        <div class="location">at line 148</div>
+        <code>            protected        string
+    <strong>getCachedClassTemplate</strong>(string $template, string $className)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the class template file unless already cached and return the file
+name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td><p>Template path (with %s as class name placeholder)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Name of class to apply to template.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBriefClass">
+        <div class="location">at line 168</div>
+        <code>            protected        string
+    <strong>getBriefClass</strong>(string $className)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper to grab the end of the class name</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Class name to abbreviate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateWithClass">
+        <div class="location">at line 182</div>
+        <code>            protected        string
+    <strong>getTemplateWithClass</strong>(string $template, string $className)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper to put the template path and class name together</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td><p>Template path (with %s as class name placeholder)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td><p>Class name to abbreviate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

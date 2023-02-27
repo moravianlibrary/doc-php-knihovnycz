@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Cache\Manager | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Cache_Manager" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Cache.html">Cache</a></li><li class="backslash">\</li><li>Manager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Manager    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Manager</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>VuFind Cache Manager</p></p>            <p><p>Creates caches based on configuration</p></p>        </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_defaults">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$defaults</td>
+                <td class="last"><p>Default configuration settings.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_directoryCreationError">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$directoryCreationError</td>
+                <td class="last"><p>Was there a problem building cache directories?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cacheSettings">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$cacheSettings</td>
+                <td class="last"><p>Settings used to generate cache objects.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_caches">
+                                        protected                                        <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>[]
+                                                                                
+                                    </td>
+                <td>$caches</td>
+                <td class="last"><p>Actual cache objects generated from settings.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_factory">
+                                        protected                                        <abbr title="Laminas\Cache\Service\StorageAdapterFactory">StorageAdapterFactory</abbr>
+                                                                                
+                                    </td>
+                <td>$factory</td>
+                <td class="last"><p>Factory for creating storage adapters.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <abbr title="Laminas\Config\Config">Config</abbr> $searchConfig, <abbr title="Laminas\Cache\Service\StorageAdapterFactory">StorageAdapterFactory</abbr> $factory)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCache">getCache</a>(string $name, string|null $namespace = null)
+        
+                                            <p><p>Retrieve the specified cache object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCacheDir">getCacheDir</a>(bool $allowCliOverride = true)
+        
+                                            <p><p>Get the path to the directory containing VuFind's cache data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCacheList">getCacheList</a>()
+        
+                                            <p><p>Get the names of all available caches.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasDirectoryCreationError">hasDirectoryCreationError</a>()
+        
+                                            <p><p>Check if there have been problems creating directories.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addDownloaderCache">addDownloaderCache</a>(string $downloaderName, array $opts = [])
+        
+                                            <p><p>Create a downloader-specific file cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addLanguageCacheForTheme">addLanguageCacheForTheme</a>(string $themeName)
+        
+                                            <p><p>Create a new file cache for the given theme name if necessary. Return
+the name of the cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createNoCache">createNoCache</a>(string $cacheName)
+        
+                                            <p><p>Create a &quot;no-cache&quot; setting.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createFileCache">createFileCache</a>(string $cacheName, string $dirName, array $overrideOpts = [])
+        
+                                            <p><p>Add a file cache to the manager and ensure that necessary directory exists.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 92</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config, <abbr title="Laminas\Config\Config">Config</abbr> $searchConfig, <abbr title="Laminas\Cache\Service\StorageAdapterFactory">StorageAdapterFactory</abbr> $factory)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Main VuFind configuration</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$searchConfig</td>
+                <td><p>Search configuration</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Cache\Service\StorageAdapterFactory">StorageAdapterFactory</abbr></td>
+                <td>$factory</td>
+                <td><p>Cache storage adapter factory</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCache">
+        <div class="location">at line 143</div>
+        <code>                    <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>
+    <strong>getCache</strong>(string $name, string|null $namespace = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve the specified cache object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Name of the requested cache.</p></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$namespace</td>
+                <td><p>Optional namespace to use. Defaults to the
+value of $name.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheDir">
+        <div class="location">at line 169</div>
+        <code>                    string
+    <strong>getCacheDir</strong>(bool $allowCliOverride = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the directory containing VuFind's cache data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$allowCliOverride</td>
+                <td><p>If true, use a different cache subdirectory
+for CLI mode; otherwise, share the web directories.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheList">
+        <div class="location">at line 201</div>
+        <code>                    array
+    <strong>getCacheList</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the names of all available caches.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasDirectoryCreationError">
+        <div class="location">at line 211</div>
+        <code>                    bool
+    <strong>hasDirectoryCreationError</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if there have been problems creating directories.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDownloaderCache">
+        <div class="location">at line 224</div>
+        <code>                    string
+    <strong>addDownloaderCache</strong>(string $downloaderName, array $opts = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a downloader-specific file cache.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$downloaderName</td>
+                <td><p>Name of the downloader.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$opts</td>
+                <td><p>Cache options.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLanguageCacheForTheme">
+        <div class="location">at line 243</div>
+        <code>                    string
+    <strong>addLanguageCacheForTheme</strong>(string $themeName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new file cache for the given theme name if necessary. Return
+the name of the cache.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$themeName</td>
+                <td><p>Name of the theme</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createNoCache">
+        <div class="location">at line 260</div>
+        <code>            protected        void
+    <strong>createNoCache</strong>(string $cacheName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a &quot;no-cache&quot; setting.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cacheName</td>
+                <td><p>Name of &quot;no cache&quot; to create</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFileCache">
+        <div class="location">at line 277</div>
+        <code>            protected        void
+    <strong>createFileCache</strong>(string $cacheName, string $dirName, array $overrideOpts = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a file cache to the manager and ensure that necessary directory exists.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cacheName</td>
+                <td><p>Name of new cache to create</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dirName</td>
+                <td><p>Directory to use for storage</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$overrideOpts</td>
+                <td><p>Options to override default values.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

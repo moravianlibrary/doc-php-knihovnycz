@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTheme | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFindTheme" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="VuFindTheme.html">VuFindTheme</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFindTheme</h1>
+    </div>
+
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="VuFindTheme/Minify.html">VuFindTheme\Minify</a><a href="VuFindTheme/View.html">VuFindTheme\View</a>        </div>
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/AbstractCssPreCompiler.html"><abbr title="VuFindTheme\AbstractCssPreCompiler">AbstractCssPreCompiler</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract base class to precompile CSS within a theme.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/AbstractThemeUtility.html"><abbr title="VuFindTheme\AbstractThemeUtility">AbstractThemeUtility</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract base class to hold shared logic for theme utilities.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/Initializer.html"><abbr title="VuFindTheme\Initializer">Initializer</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Theme Initializer</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/InjectTemplateListener.html"><abbr title="VuFindTheme\InjectTemplateListener">InjectTemplateListener</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind &quot;Inject Template&quot; Listener -- this extends the core MVC class to adjust
+default template configurations to something more appropriate for VuFind.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/InjectTemplateListenerFactory.html"><abbr title="VuFindTheme\InjectTemplateListenerFactory">InjectTemplateListenerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for InjectTemplateListener</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/MixinGenerator.html"><abbr title="VuFindTheme\MixinGenerator">MixinGenerator</abbr></a>    </div>
+                <div class="col-md-6"><p>Class to generate a new mixin from a template.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/Mobile.html"><abbr title="VuFindTheme\Mobile">Mobile</abbr></a>    </div>
+                <div class="col-md-6"><p>Mobile Device Detection Wrapper</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/Module.html"><abbr title="VuFindTheme\Module">Module</abbr></a>    </div>
+                <div class="col-md-6"><p>Module definition for the VuFind theme system.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/ResourceContainer.html"><abbr title="VuFindTheme\ResourceContainer">ResourceContainer</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Theme Public Resource Handler (for CSS, JS, etc.)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/ScssCompiler.html"><abbr title="VuFindTheme\ScssCompiler">ScssCompiler</abbr></a>    </div>
+                <div class="col-md-6"><p>Class to compile SCSS into CSS within a theme.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/ThemeCompiler.html"><abbr title="VuFindTheme\ThemeCompiler">ThemeCompiler</abbr></a>    </div>
+                <div class="col-md-6"><p>Class to compile a theme hierarchy into a single flat theme.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/ThemeGenerator.html"><abbr title="VuFindTheme\ThemeGenerator">ThemeGenerator</abbr></a>    </div>
+                <div class="col-md-6"><p>Class to generate a new theme from a template and reconfigure VuFind to use it.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/ThemeGeneratorFactory.html"><abbr title="VuFindTheme\ThemeGeneratorFactory">ThemeGeneratorFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for ThemeGenerator.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a>    </div>
+                <div class="col-md-6"><p>Class to represent currently-selected theme and related information.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/ThemeInfoFactory.html"><abbr title="VuFindTheme\ThemeInfoFactory">ThemeInfoFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>ThemeInfo factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="VuFindTheme/ThemeInfoInjectorFactory.html"><abbr title="VuFindTheme\ThemeInfoInjectorFactory">ThemeInfoInjectorFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for objects that depend on the ThemeInfo object.</p></div>
+            </div>
+            </div>
+            <h2>Interfaces</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="VuFindTheme/GeneratorInterface.html"><abbr title="VuFindTheme\GeneratorInterface">GeneratorInterface</abbr></a></em>
+                        </div>
+                <div class="col-md-6"><p>Interface shared by theme and mixin generator classes.</p></div>
+            </div>
+            </div>
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

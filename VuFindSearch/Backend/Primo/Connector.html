@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindSearch\Backend\Primo\Connector | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindSearch_Backend_Primo_Connector" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindSearch.html">VuFindSearch</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend.html">Backend</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend/Primo.html">Primo</a></li><li class="backslash">\</li><li>Connector</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Connector    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Connector</strong>        implements        <abbr title="Laminas\Log\LoggerAwareInterface">LoggerAwareInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Primo Central connector.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html"><abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Caching support trait for connectors.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_cache">
+                                        protected                                        <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$cache</td>
+                <td class="last"><p>Request cache</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#property_cache">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_client">
+                                                                                <abbr title="Laminas\Http\Client">Client</abbr>
+                                                                                
+                                    </td>
+                <td>$client</td>
+                <td class="last"><p>HTTP client used for API transactions</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_inst">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$inst</td>
+                <td class="last"><p>Institution code</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_host">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$host</td>
+                <td class="last"><p>Base URL for API</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_emptyQueryResponse">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$emptyQueryResponse</td>
+                <td class="last"><p>Response for an empty search</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_highlightRegEx">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$highlightRegEx</td>
+                <td class="last"><p>Regular expression to match highlighted terms</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCache">setCache</a>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache)
+        
+                                            <p><p>Set the cache storage</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_setCache">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCacheKey">getCacheKey</a>(<abbr title="Laminas\Http\Client">Client</abbr> $client)
+        
+                                            <p><p>Create a cache key from client's request state</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_getCacheKey">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedData">getCachedData</a>(string $key)
+        
+                                            <p><p>Get a request from cache if available</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_getCachedData">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_putCachedData">putCachedData</a>(string $key, mixed $response)
+        
+                                            <p><p>Cache response data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_putCachedData">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logCacheWarning">logCacheWarning</a>(string $msg)
+        
+                                            <p><p>Log a warning message</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_logCacheWarning">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logCacheDebug">logCacheDebug</a>(string $msg)
+        
+                                            <p><p>Log a debug message</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_logCacheDebug">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $url, string $inst, <abbr title="Laminas\Http\Client">Client</abbr> $client)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_query">query</a>(string $institution, array $terms, array $params = null)
+        
+                                            <p><p>Execute a search. Adds all the querystring parameters into
+$this-&gt;client and returns the parsed response</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_performSearch">performSearch</a>(string $institution, array $terms, array $args)
+        
+                                            <p><p>Support method for query() -- perform inner search logic</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_call">call</a>(string $qs, array $params = [], string $method = &#039;GET&#039;, bool $cacheable = true)
+        
+                                            <p><p>Small wrapper for sendRequest, process to simplify error handling.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_process">process</a>(string $data, array $params = [])
+        
+                                            <p><p>Translate Primo's XML into array of arrays.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecord">getRecord</a>(string $recordId, <abbr title="VuFindSearch\Backend\Primo\?string">?string</abbr> $inst_code = null, bool $onCampus = false)
+        
+                                            <p><p>Retrieves a document specified by the ID.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecords">getRecords</a>(array $recordIds, string $inst_code = null, bool $onCampus = false)
+        
+                                            <p><p>Retrieves multiple documents specified by the ID.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInstitutionCode">getInstitutionCode</a>()
+        
+                                            <p><p>Get the institution code based on user IP. If user is coming from
+off campus return</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processHighlighting">processHighlighting</a>(array $record, array $params)
+        
+                                            <p><p>Process highlighting tags of the record fields</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processDescription">processDescription</a>(string $description)
+        
+                                            <p><p>Fix the description field by removing tags etc.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCache">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_setCache">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 64</div>
+        <code>                    void
+    <strong>setCache</strong>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the cache storage</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr></td>
+                <td>$cache</td>
+                <td>Cache</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheKey">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_getCacheKey">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 76</div>
+        <code>                    string
+    <strong>getCacheKey</strong>(<abbr title="Laminas\Http\Client">Client</abbr> $client)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a cache key from client's request state</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\Client">Client</abbr></td>
+                <td>$client</td>
+                <td><p>HTTP Client</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedData">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_getCachedData">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 88</div>
+        <code>                    mixed
+    <strong>getCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a request from cache if available</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putCachedData">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_putCachedData">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 109</div>
+        <code>            protected        void
+    <strong>putCachedData</strong>(string $key, mixed $response)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Cache response data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$response</td>
+                <td><p>Response to be cached</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logCacheWarning">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_logCacheWarning">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 142</div>
+        <code>            protected        void
+    <strong>logCacheWarning</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>Message</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logCacheDebug">
+        <div class="location">in <a href="../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_logCacheDebug">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 158</div>
+        <code>            protected        void
+    <strong>logCacheDebug</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>Message</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 107</div>
+        <code>                    
+    <strong>__construct</strong>(string $url, string $inst, <abbr title="Laminas\Http\Client">Client</abbr> $client)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                <p><p>Sets up the Primo API Client</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>Primo API URL (either a host name and port or a full
+path to the brief search including a trailing question mark)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$inst</td>
+                <td><p>Institution code</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Http\Client">Client</abbr></td>
+                <td>$client</td>
+                <td><p>HTTP client</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">at line 156</div>
+        <code>                    array
+    <strong>query</strong>(string $institution, array $terms, array $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute a search. Adds all the querystring parameters into
+$this-&gt;client and returns the parsed response</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$institution</td>
+                <td>Institution</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$terms</td>
+                <td><p>Associative array:
+index       string: primo index to search (default &quot;any&quot;)
+lookfor     string: actual search terms</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Associative array of optional arguments:
+phrase      bool:   true if it's a quoted phrase (default false)
+onCampus    bool:   (default true)
+didyoumean  bool:   (default false)
+filterList  array:  (field, value) pairs to filter results (def null)
+pageNumber  string: index of first record (default 1)
+limit       string: number of records to return (default 20)
+sort        string: value to be used by for sorting (default null)
+highlight   bool:   whether to highlight search term matches in records
+highlightStart string: Prefix for a highlighted term
+highlightEnd   string: Suffix for a Highlighted term
+Anything in $params not listed here will be ignored.</p>
+<p>Note: some input parameters accepted by Primo are not implemented here:</p>
+<ul>
+<li>dym (did you mean)</li>
+<li>more (get more)</li>
+<li>lang (specify input language so engine can do lang. recognition)</li>
+<li>displayField (has to do with highlighting somehow)</li>
+</ul></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of query results</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_performSearch">
+        <div class="location">at line 193</div>
+        <code>            protected        array
+    <strong>performSearch</strong>(string $institution, array $terms, array $args)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for query() -- perform inner search logic</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$institution</td>
+                <td>Institution</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$terms</td>
+                <td><p>Associative array:
+index       string: primo index to search (default &quot;any&quot;)
+lookfor     string: actual search terms</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td><p>Associative array of optional arguments (see query
+method for more information)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array of query results</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_call">
+        <div class="location">at line 360</div>
+        <code>            protected        object
+    <strong>call</strong>(string $qs, array $params = [], string $method = &#039;GET&#039;, bool $cacheable = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Small wrapper for sendRequest, process to simplify error handling.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$qs</td>
+                <td><p>Query string</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Request parameters</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>HTTP method</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$cacheable</td>
+                <td><p>Whether the request is cacheable</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>The parsed primo data</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_process">
+        <div class="location">at line 402</div>
+        <code>            protected        array
+    <strong>process</strong>(string $data, array $params = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate Primo's XML into array of arrays.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td><p>The raw xml from Primo</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Request parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>The processed response from Primo</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecord">
+        <div class="location">at line 633</div>
+        <code>                    string
+    <strong>getRecord</strong>(string $recordId, <abbr title="VuFindSearch\Backend\Primo\?string">?string</abbr> $inst_code = null, bool $onCampus = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieves a document specified by the ID.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$recordId</td>
+                <td><p>The document to retrieve from the Primo API</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFindSearch\Backend\Primo\?string">?string</abbr></td>
+                <td>$inst_code</td>
+                <td><p>Institution code (optional)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$onCampus</td>
+                <td><p>Whether the user is on campus</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The requested resource</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecords">
+        <div class="location">at line 677</div>
+        <code>                    string
+    <strong>getRecords</strong>(array $recordIds, string $inst_code = null, bool $onCampus = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieves multiple documents specified by the ID.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$recordIds</td>
+                <td><p>The documents to retrieve from the Primo API</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$inst_code</td>
+                <td><p>Institution code (optional)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$onCampus</td>
+                <td><p>Whether the user is on campus</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The requested resource</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstitutionCode">
+        <div class="location">at line 716</div>
+        <code>                    string
+    <strong>getInstitutionCode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the institution code based on user IP. If user is coming from
+off campus return</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processHighlighting">
+        <div class="location">at line 729</div>
+        <code>            protected        void
+    <strong>processHighlighting</strong>(array $record, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process highlighting tags of the record fields</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$record</td>
+                <td><p>Record data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Request params</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processDescription">
+        <div class="location">at line 803</div>
+        <code>            protected        string
+    <strong>processDescription</strong>(string $description)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fix the description field by removing tags etc.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>Description</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

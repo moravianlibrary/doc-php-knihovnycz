@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>GoogleTagManager</strong>        extends <abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr>
+    <strong>GoogleTagManager</strong>        extends <a href="../../../../VuFind/View/Helper/Root/GoogleTagManager.html"><abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr></a>
 </p>
 
                 <p>
@@ -102,10 +102,58 @@
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_gtmContainerId">
+                                        protected                                        string|bool
+                                                                                
+                                    </td>
+                <td>$gtmContainerId</td>
+                <td class="last"><p>GTM Container ID (false if disabled)</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GoogleTagManager.html#property_gtmContainerId">
+<abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string|bool $gtmContainerId)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GoogleTagManager.html#method___construct">
+<abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHeadCode">getHeadCode</a>()
+        
+                                            <p><p>Returns GTM code block meant for the <head> element.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GoogleTagManager.html#method_getHeadCode">
+<abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBodyCode">getBodyCode</a>()
+        
+                                            <p><p>Returns GTM code block meant for the <body> element.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GoogleTagManager.html#method_getBodyCode">
+<abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr></a></small></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     string
@@ -152,6 +200,109 @@
         <h2>Details</h2>
 
             <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/GoogleTagManager.html#method___construct">
+<abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr></a> at line 53</div>
+        <code>                    
+    <strong>__construct</strong>(string|bool $gtmContainerId)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|bool</td>
+                <td>$gtmContainerId</td>
+                <td><p>Container ID (false if disabled)</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeadCode">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/GoogleTagManager.html#method_getHeadCode">
+<abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr></a> at line 63</div>
+        <code>                    string
+    <strong>getHeadCode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns GTM code block meant for the <head> element.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBodyCode">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/GoogleTagManager.html#method_getBodyCode">
+<abbr title="VuFind\View\Helper\Root\GoogleTagManager">GoogleTagManager</abbr></a> at line 89</div>
+        <code>                    string
+    <strong>getBodyCode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns GTM code block meant for the <body> element.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
                     <div class="method-item">
                     <h3 id="method_getRawJavascript">
         <div class="location">at line 48</div>

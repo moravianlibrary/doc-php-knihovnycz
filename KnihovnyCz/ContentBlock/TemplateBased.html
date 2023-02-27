@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>TemplateBased</strong>        extends <abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr>        implements        <abbr title="VuFindHttp\HttpServiceAwareInterface">HttpServiceAwareInterface</abbr>
+    <strong>TemplateBased</strong>        extends <a href="../../VuFind/ContentBlock/TemplateBased.html"><abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a>        implements        <abbr title="VuFindHttp\HttpServiceAwareInterface">HttpServiceAwareInterface</abbr>
 </p>
 
                 <p>
@@ -111,16 +111,99 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr>    </div>
-                <div class="col-md-6"></div>
+                    <a href="../../VuFind/Cache/CacheTrait.html"><abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for caching data.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Cache/KeyGeneratorTrait.html"><abbr title="VuFind\Cache\KeyGeneratorTrait">KeyGeneratorTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Cache Key Generator Trait</p></div>
             </div>
             </div>
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_templateName">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$templateName</td>
+                <td class="last"><p>Name of template for rendering</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/ContentBlock/TemplateBased.html#property_templateName">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pageLocator">
+                                        protected                                        <a href="../../VuFind/Content/PageLocator.html"><abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a>
+                                                                                
+                                    </td>
+                <td>$pageLocator</td>
+                <td class="last"><p>Page content</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/ContentBlock/TemplateBased.html#property_pageLocator">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cache">
+                                        protected                                        <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$cache</td>
+                <td class="last"><p>Cache for storing data temporarily (e.g. patron blocks with the ILS driver)</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#property_cache">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cacheLifetime">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$cacheLifetime</td>
+                <td class="last"><p>Lifetime of cache (in seconds).</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#property_cacheLifetime">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFind/Content/PageLocator.html"><abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a> $pageLocator)
+        
+                                            <p><p>TemplateBased constructor.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ContentBlock/TemplateBased.html#method___construct">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setConfig">setConfig</a>(string $settings)
+        
+                                            <p><p>Store the configuration of the content block.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ContentBlock/TemplateBased.html#method_setConfig">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContext">getContext</a>(string $pathPrefix = &#039;templates/ContentBlock/TemplateBased/&#039;, string $page = null, string $pattern = null)
+        
+                                            <p><p>Return context variables used for rendering the block's template.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ContentBlock/TemplateBased.html#method_getContext">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a></small></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     array
@@ -133,6 +216,17 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContextForPhtml">getContextForPhtml</a>(string $relativePath, string $path)
+        
+                                            <p><p>Return context array of phtml</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/ContentBlock/TemplateBased.html#method_getContextForPhtml">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8">
@@ -141,12 +235,189 @@
                                             <p><p>Method to ensure uniform cache keys for cached VuFind objects.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCacheStorage">setCacheStorage</a>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache = null)
+        
+                                            <p><p>Set a cache storage object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#method_setCacheStorage">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedData">getCachedData</a>(string $key)
+        
+                                            <p><p>Helper function for fetching cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#method_getCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_putCachedData">putCachedData</a>(string $key, mixed $entry, int $lifetime = null)
+        
+                                            <p><p>Helper function for storing cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#method_putCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeCachedData">removeCachedData</a>(string $key)
+        
+                                            <p><p>Helper function for removing cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#method_removeCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
             </div>
 
 
         <h2>Details</h2>
 
             <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../VuFind/ContentBlock/TemplateBased.html#method___construct">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a> at line 61</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../VuFind/Content/PageLocator.html"><abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a> $pageLocator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>TemplateBased constructor.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Content/PageLocator.html"><abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a></td>
+                <td>$pageLocator</td>
+                <td><p>Content page locator service</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">in <a href="../../VuFind/ContentBlock/TemplateBased.html#method_setConfig">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a> at line 73</div>
+        <code>                    void
+    <strong>setConfig</strong>(string $settings)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Store the configuration of the content block.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$settings</td>
+                <td><p>Settings from searches.ini.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContext">
+        <div class="location">in <a href="../../VuFind/ContentBlock/TemplateBased.html#method_getContext">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a> at line 87</div>
+        <code>                    array
+    <strong>getContext</strong>(string $pathPrefix = &#039;templates/ContentBlock/TemplateBased/&#039;, string $page = null, string $pattern = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return context variables used for rendering the block's template.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pathPrefix</td>
+                <td><p>Subdirectory where the template should be located</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$page</td>
+                <td><p>Template name (defaults to config value if unset)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pattern</td>
+                <td><p>Filesystem pattern (see PageLocator)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
                     <div class="method-item">
                     <h3 id="method_getContextForMd">
         <div class="location">at line 61</div>
@@ -161,6 +432,55 @@
 
         <div class="method-description">
                             <p><p>Return context array for markdown</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relativePath</td>
+                <td><p>Relative path to template</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td><p>Full path of template file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContextForPhtml">
+        <div class="location">in <a href="../../VuFind/ContentBlock/TemplateBased.html#method_getContextForPhtml">
+<abbr title="VuFind\ContentBlock\TemplateBased">TemplateBased</abbr></a> at line 136</div>
+        <code>            protected        array
+    <strong>getContextForPhtml</strong>(string $relativePath, string $path)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return context array of phtml</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -228,6 +548,192 @@ object class name calling getCacheKey()</p></td>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheStorage">
+        <div class="location">in <a href="../../VuFind/Cache/CacheTrait.html#method_setCacheStorage">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 66</div>
+        <code>                    void
+    <strong>setCacheStorage</strong>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a cache storage object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr></td>
+                <td>$cache</td>
+                <td><p>Cache storage interface</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedData">
+        <div class="location">in <a href="../../VuFind/Cache/CacheTrait.html#method_getCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 80</div>
+        <code>            protected        mixed|null
+    <strong>getCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for fetching cached data.</p></p>                <p><p>Data is cached for up to $this-&gt;cacheLifetime.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td><p>Cached entry or null if not cached or expired</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putCachedData">
+        <div class="location">in <a href="../../VuFind/Cache/CacheTrait.html#method_putCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 112</div>
+        <code>            protected        void
+    <strong>putCachedData</strong>(string $key, mixed $entry, int $lifetime = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for storing cached data.</p></p>                <p><p>Data is cached for up to $this-&gt;cacheLifetime seconds.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$entry</td>
+                <td><p>Entry to be cached</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$lifetime</td>
+                <td><p>Optional lifetime for the entry in seconds</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCachedData">
+        <div class="location">in <a href="../../VuFind/Cache/CacheTrait.html#method_removeCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 133</div>
+        <code>            protected        void
+    <strong>removeCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for removing cached data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
             <td></td>
         </tr>
     </table>

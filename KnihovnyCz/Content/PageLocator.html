@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>PageLocator</strong>        extends <abbr title="VuFind\Content\PageLocator">PageLocator</abbr>        implements        <abbr title="VuFindHttp\HttpServiceAwareInterface">HttpServiceAwareInterface</abbr>
+    <strong>PageLocator</strong>        extends <a href="../../VuFind/Content/PageLocator.html"><abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a>        implements        <abbr title="VuFindHttp\HttpServiceAwareInterface">HttpServiceAwareInterface</abbr>
 </p>
 
                 <p>
@@ -111,8 +111,13 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr>    </div>
-                <div class="col-md-6"></div>
+                    <a href="../../VuFind/Cache/CacheTrait.html"><abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for caching data.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Cache/KeyGeneratorTrait.html"><abbr title="VuFind\Cache\KeyGeneratorTrait">KeyGeneratorTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Cache Key Generator Trait</p></div>
             </div>
             </div>
     
@@ -128,6 +133,56 @@
                 <td>$types</td>
                 <td class="last"><p>Types/formats of content</p></td>
                 <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_themeInfo">
+                                        protected                                        <a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a>
+                                                                                
+                                    </td>
+                <td>$themeInfo</td>
+                <td class="last"><p>Theme info service</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Content/PageLocator.html#property_themeInfo">
+<abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_language">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$language</td>
+                <td class="last"><p>Current language</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Content/PageLocator.html#property_language">
+<abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultLanguage">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultLanguage</td>
+                <td class="last"><p>Default language</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Content/PageLocator.html#property_defaultLanguage">
+<abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cache">
+                                        protected                                        <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$cache</td>
+                <td class="last"><p>Cache for storing data temporarily (e.g. patron blocks with the ILS driver)</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#property_cache">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cacheLifetime">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$cacheLifetime</td>
+                <td class="last"><p>Lifetime of cache (in seconds).</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#property_cacheLifetime">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_baseUrl">
@@ -149,10 +204,25 @@
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr> $themeInfo, string $language, string $defaultLanguage, string $baseUrl = &#039;&#039;)
+                    <a href="#method___construct">__construct</a>(<a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a> $themeInfo, string $language, string $defaultLanguage, string $baseUrl = &#039;&#039;)
         
                                             <p><p>Page constructor.</p></p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_generateTemplateFromPattern">generateTemplateFromPattern</a>(string $pathPrefix, string $pageName, string $pattern, string $language = &#039;&#039;)
+        
+                                            <p><p>Generate a template from a file search pattern. Examples:</p>
+<ul>
+<li>%pathPrefix%/%pageName%{_%language%} =&gt; content/help_en</li>
+<li>%pathPrefix%/%language%/%pageName% =&gt; HelpTranslations/en/search</li>
+</ul></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Content/PageLocator.html#method_generateTemplateFromPattern">
+<abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -179,22 +249,66 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_checkFileAvailability">checkFileAvailability</a>(string $url)
-        
-                                            <p><p>Check if file is available to download from HTTP based repository</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8">
                     <a href="#method_getCacheKey">getCacheKey</a>(string|null $suffix = null)
         
                                             <p><p>Method to ensure uniform cache keys for cached VuFind objects.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCacheStorage">setCacheStorage</a>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache = null)
+        
+                                            <p><p>Set a cache storage object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#method_setCacheStorage">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedData">getCachedData</a>(string $key)
+        
+                                            <p><p>Helper function for fetching cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#method_getCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_putCachedData">putCachedData</a>(string $key, mixed $entry, int $lifetime = null)
+        
+                                            <p><p>Helper function for storing cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#method_putCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeCachedData">removeCachedData</a>(string $key)
+        
+                                            <p><p>Helper function for removing cached data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Cache/CacheTrait.html#method_removeCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkFileAvailability">checkFileAvailability</a>(string $url)
+        
+                                            <p><p>Check if file is available to download from HTTP based repository</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -207,7 +321,7 @@
                     <h3 id="method___construct">
         <div class="location">at line 76</div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr> $themeInfo, string $language, string $defaultLanguage, string $baseUrl = &#039;&#039;)
+    <strong>__construct</strong>(<a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a> $themeInfo, string $language, string $defaultLanguage, string $baseUrl = &#039;&#039;)
         </code>
     </h3>
     <div class="details">    
@@ -223,7 +337,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></td>
+                <td><a href="../../VuFindTheme/ThemeInfo.html"><abbr title="VuFindTheme\ThemeInfo">ThemeInfo</abbr></a></td>
                 <td>$themeInfo</td>
                 <td><p>Theme information service</p></td>
             </tr>
@@ -245,6 +359,69 @@
             </table>
 
             
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateTemplateFromPattern">
+        <div class="location">in <a href="../../VuFind/Content/PageLocator.html#method_generateTemplateFromPattern">
+<abbr title="VuFind\Content\PageLocator">PageLocator</abbr></a> at line 99</div>
+        <code>            protected        string
+    <strong>generateTemplateFromPattern</strong>(string $pathPrefix, string $pageName, string $pattern, string $language = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a template from a file search pattern. Examples:</p>
+<ul>
+<li>%pathPrefix%/%pageName%{_%language%} =&gt; content/help_en</li>
+<li>%pathPrefix%/%language%/%pageName% =&gt; HelpTranslations/en/search</li>
+</ul></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pathPrefix</td>
+                <td><p>Subdirectory where the template should be located</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pageName</td>
+                <td><p>Page name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pattern</td>
+                <td><p>Filesystem pattern</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$language</td>
+                <td>Language</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             
@@ -366,49 +543,6 @@ matchType (see getTemplateOptionsFromPattern)</p></td>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_checkFileAvailability">
-        <div class="location">at line 209</div>
-        <code>            protected        bool
-    <strong>checkFileAvailability</strong>(string $url)
-        </code>
-    </h3>
-    <div class="details">    
-            
-    
-            
-
-        <div class="method-description">
-                            <p><p>Check if file is available to download from HTTP based repository</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$url</td>
-                <td><p>URL of file to download</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_getCacheKey">
         <div class="location">at line 236</div>
         <code>            protected        string
@@ -441,6 +575,235 @@ object class name calling getCacheKey()</p></td>
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheStorage">
+        <div class="location">in <a href="../../VuFind/Cache/CacheTrait.html#method_setCacheStorage">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 66</div>
+        <code>                    void
+    <strong>setCacheStorage</strong>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a cache storage object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr></td>
+                <td>$cache</td>
+                <td><p>Cache storage interface</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedData">
+        <div class="location">in <a href="../../VuFind/Cache/CacheTrait.html#method_getCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 80</div>
+        <code>            protected        mixed|null
+    <strong>getCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for fetching cached data.</p></p>                <p><p>Data is cached for up to $this-&gt;cacheLifetime.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td><p>Cached entry or null if not cached or expired</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putCachedData">
+        <div class="location">in <a href="../../VuFind/Cache/CacheTrait.html#method_putCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 112</div>
+        <code>            protected        void
+    <strong>putCachedData</strong>(string $key, mixed $entry, int $lifetime = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for storing cached data.</p></p>                <p><p>Data is cached for up to $this-&gt;cacheLifetime seconds.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$entry</td>
+                <td><p>Entry to be cached</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$lifetime</td>
+                <td><p>Optional lifetime for the entry in seconds</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCachedData">
+        <div class="location">in <a href="../../VuFind/Cache/CacheTrait.html#method_removeCachedData">
+<abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr></a> at line 133</div>
+        <code>            protected        void
+    <strong>removeCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for removing cached data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkFileAvailability">
+        <div class="location">at line 209</div>
+        <code>            protected        bool
+    <strong>checkFileAvailability</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if file is available to download from HTTP based repository</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL of file to download</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
             <td></td>
         </tr>
     </table>

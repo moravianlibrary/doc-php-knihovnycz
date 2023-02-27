@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Auth | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../doctum.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script async defer src="../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFind_Auth" data-root-path="../" data-search-index-url="../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../VuFind/Auth.html">Auth</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFind\Auth</h1>
+    </div>
+
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="../VuFind/Auth/Shibboleth.html">VuFind\Auth\Shibboleth</a>        </div>
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract authentication base class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/AlmaDatabase.html"><abbr title="VuFind\Auth\AlmaDatabase">AlmaDatabase</abbr></a>    </div>
+                <div class="col-md-6"><p>Authentication class for Alma. The VuFind database and the Alma API are
+combined for authentication by this classe.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/AuthToken.html"><abbr title="VuFind\Auth\AuthToken">AuthToken</abbr></a>    </div>
+                <div class="col-md-6"><p>Class AuthToken</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/CAS.html"><abbr title="VuFind\Auth\CAS">CAS</abbr></a>    </div>
+                <div class="col-md-6"><p>CAS authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/ChoiceAuth.html"><abbr title="VuFind\Auth\ChoiceAuth">ChoiceAuth</abbr></a>    </div>
+                <div class="col-md-6"><p>ChoiceAuth Authentication plugin</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/ChoiceAuthFactory.html"><abbr title="VuFind\Auth\ChoiceAuthFactory">ChoiceAuthFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for ChoiceAuth authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/Database.html"><abbr title="VuFind\Auth\Database">Database</abbr></a>    </div>
+                <div class="col-md-6"><p>Database authentication class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/Email.html"><abbr title="VuFind\Auth\Email">Email</abbr></a>    </div>
+                <div class="col-md-6"><p>Email authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/EmailAuthenticator.html"><abbr title="VuFind\Auth\EmailAuthenticator">EmailAuthenticator</abbr></a>    </div>
+                <div class="col-md-6"><p>Class for managing email-based authentication.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/EmailAuthenticatorFactory.html"><abbr title="VuFind\Auth\EmailAuthenticatorFactory">EmailAuthenticatorFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for email authenticator module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/EmailFactory.html"><abbr title="VuFind\Auth\EmailFactory">EmailFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Email authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/Facebook.html"><abbr title="VuFind\Auth\Facebook">Facebook</abbr></a>    </div>
+                <div class="col-md-6"><p>Facebook authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/FacebookFactory.html"><abbr title="VuFind\Auth\FacebookFactory">FacebookFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Facebook authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/ILS.html"><abbr title="VuFind\Auth\ILS">ILS</abbr></a>    </div>
+                <div class="col-md-6"><p>ILS authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a>    </div>
+                <div class="col-md-6"><p>Class for managing ILS-specific authentication.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/ILSAuthenticatorFactory.html"><abbr title="VuFind\Auth\ILSAuthenticatorFactory">ILSAuthenticatorFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>ILS Authenticator factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/ILSFactory.html"><abbr title="VuFind\Auth\ILSFactory">ILSFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for ILS authentication module (and others with equivalent constructors).</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/InvalidArgumentException.html"><abbr title="VuFind\Auth\InvalidArgumentException">InvalidArgumentException</abbr></a>    </div>
+                <div class="col-md-6"><p>Invalid Authentication Argument Exception</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/LDAP.html"><abbr title="VuFind\Auth\LDAP">LDAP</abbr></a>    </div>
+                <div class="col-md-6"><p>LDAP authentication class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/Manager.html"><abbr title="VuFind\Auth\Manager">Manager</abbr></a>    </div>
+                <div class="col-md-6"><p>Wrapper class for handling logged-in user in session.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/ManagerFactory.html"><abbr title="VuFind\Auth\ManagerFactory">ManagerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Authentication Manager factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/MultiAuth.html"><abbr title="VuFind\Auth\MultiAuth">MultiAuth</abbr></a>    </div>
+                <div class="col-md-6"><p>MultiAuth Authentication plugin</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/MultiAuthFactory.html"><abbr title="VuFind\Auth\MultiAuthFactory">MultiAuthFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for MultiAuth authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/MultiILS.html"><abbr title="VuFind\Auth\MultiILS">MultiILS</abbr></a>    </div>
+                <div class="col-md-6"><p>Multiple ILS authentication module that works with MultiBackend driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/PasswordAccess.html"><abbr title="VuFind\Auth\PasswordAccess">PasswordAccess</abbr></a>    </div>
+                <div class="col-md-6"><p>Password Access authentication class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/PluginFactory.html"><abbr title="VuFind\Auth\PluginFactory">PluginFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Auth handler plugin factory</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/PluginManager.html"><abbr title="VuFind\Auth\PluginManager">PluginManager</abbr></a>    </div>
+                <div class="col-md-6"><p>Auth handler plugin manager</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/SIP2.html"><abbr title="VuFind\Auth\SIP2">SIP2</abbr></a>    </div>
+                <div class="col-md-6"><p>SIP2 authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/Shibboleth.html"><abbr title="VuFind\Auth\Shibboleth">Shibboleth</abbr></a>    </div>
+                <div class="col-md-6"><p>Shibboleth authentication module.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Auth/ShibbolethFactory.html"><abbr title="VuFind\Auth\ShibbolethFactory">ShibbolethFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Shibboleth authentication module.</p></div>
+            </div>
+            </div>
+    
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

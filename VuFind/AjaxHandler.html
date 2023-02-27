@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\AjaxHandler | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../doctum.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script async defer src="../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFind_AjaxHandler" data-root-path="../" data-search-index-url="../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../VuFind/AjaxHandler.html">AjaxHandler</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFind\AjaxHandler</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/AbstractBase.html"><abbr title="VuFind\AjaxHandler\AbstractBase">AbstractBase</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract base AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/AbstractIlsAndUserAction.html"><abbr title="VuFind\AjaxHandler\AbstractIlsAndUserAction">AbstractIlsAndUserAction</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract base class for handlers depending on the ILS and a logged-in user.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/AbstractIlsAndUserActionFactory.html"><abbr title="VuFind\AjaxHandler\AbstractIlsAndUserActionFactory">AbstractIlsAndUserActionFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for AbstractIlsAndUserAction AJAX handlers.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/AbstractRelaisAction.html"><abbr title="VuFind\AjaxHandler\AbstractRelaisAction">AbstractRelaisAction</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract Relais Ajax Action</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/AbstractRelaisActionFactory.html"><abbr title="VuFind\AjaxHandler\AbstractRelaisActionFactory">AbstractRelaisActionFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for AbstractRelaisAction AJAX handlers.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/AbstractUserRequestAction.html"><abbr title="VuFind\AjaxHandler\AbstractUserRequestAction">AbstractUserRequestAction</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract base class for fetching information about user requests.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/CheckRequestIsValid.html"><abbr title="VuFind\AjaxHandler\CheckRequestIsValid">CheckRequestIsValid</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Check Request is Valid&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/CommentRecord.html"><abbr title="VuFind\AjaxHandler\CommentRecord">CommentRecord</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler to comment on a record.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/CommentRecordFactory.html"><abbr title="VuFind\AjaxHandler\CommentRecordFactory">CommentRecordFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for CommentRecord AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/DeleteRecordComment.html"><abbr title="VuFind\AjaxHandler\DeleteRecordComment">DeleteRecordComment</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler to delete a comment on a record.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/DeleteRecordCommentFactory.html"><abbr title="VuFind\AjaxHandler\DeleteRecordCommentFactory">DeleteRecordCommentFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for DeleteRecordComment AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/DoiLookup.html"><abbr title="VuFind\AjaxHandler\DoiLookup">DoiLookup</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler to look up DOI data.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/DoiLookupFactory.html"><abbr title="VuFind\AjaxHandler\DoiLookupFactory">DoiLookupFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for DoiLookup AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetACSuggestions.html"><abbr title="VuFind\AjaxHandler\GetACSuggestions">GetACSuggestions</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Autocomplete Suggestions&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetACSuggestionsFactory.html"><abbr title="VuFind\AjaxHandler\GetACSuggestionsFactory">GetACSuggestionsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetACSuggestions AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetFacetData.html"><abbr title="VuFind\AjaxHandler\GetFacetData">GetFacetData</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Facet Data&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetFacetDataFactory.html"><abbr title="VuFind\AjaxHandler\GetFacetDataFactory">GetFacetDataFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetFacetData AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetIlsStatus.html"><abbr title="VuFind\AjaxHandler\GetIlsStatus">GetIlsStatus</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get ILS Status&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetIlsStatusFactory.html"><abbr title="VuFind\AjaxHandler\GetIlsStatusFactory">GetIlsStatusFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetIlsStatus AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetItemStatuses.html"><abbr title="VuFind\AjaxHandler\GetItemStatuses">GetItemStatuses</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Item Status&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetItemStatusesFactory.html"><abbr title="VuFind\AjaxHandler\GetItemStatusesFactory">GetItemStatusesFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetItemStatus AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetLibraryPickupLocations.html"><abbr title="VuFind\AjaxHandler\GetLibraryPickupLocations">GetLibraryPickupLocations</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Library Pickup Locations&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordCommentsAsHTML.html"><abbr title="VuFind\AjaxHandler\GetRecordCommentsAsHTML">GetRecordCommentsAsHTML</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler to get list of comments for a record as HTML.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordCommentsAsHTMLFactory.html"><abbr title="VuFind\AjaxHandler\GetRecordCommentsAsHTMLFactory">GetRecordCommentsAsHTMLFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetRecordCommentsAsHTML AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordCover.html"><abbr title="VuFind\AjaxHandler\GetRecordCover">GetRecordCover</abbr></a>    </div>
+                <div class="col-md-6"><p>GetRecordCover AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordCoverFactory.html"><abbr title="VuFind\AjaxHandler\GetRecordCoverFactory">GetRecordCoverFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetRecordCover AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordDetails.html"><abbr title="VuFind\AjaxHandler\GetRecordDetails">GetRecordDetails</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Record Details&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordDetailsFactory.html"><abbr title="VuFind\AjaxHandler\GetRecordDetailsFactory">GetRecordDetailsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetRecordDetails AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordRating.html"><abbr title="VuFind\AjaxHandler\GetRecordRating">GetRecordRating</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler to get the rating for a record.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordRatingFactory.html"><abbr title="VuFind\AjaxHandler\GetRecordRatingFactory">GetRecordRatingFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetRecordRating AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordTags.html"><abbr title="VuFind\AjaxHandler\GetRecordTags">GetRecordTags</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler to get all tags for a record as HTML.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordTagsFactory.html"><abbr title="VuFind\AjaxHandler\GetRecordTagsFactory">GetRecordTagsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetRecordTags AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordVersions.html"><abbr title="VuFind\AjaxHandler\GetRecordVersions">GetRecordVersions</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler for fetching versions link</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRecordVersionsFactory.html"><abbr title="VuFind\AjaxHandler\GetRecordVersionsFactory">GetRecordVersionsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetRecordVersions AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetRequestGroupPickupLocations.html"><abbr title="VuFind\AjaxHandler\GetRequestGroupPickupLocations">GetRequestGroupPickupLocations</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Request Group Pickup Locations&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetResolverLinks.html"><abbr title="VuFind\AjaxHandler\GetResolverLinks">GetResolverLinks</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Resolver Links&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetResolverLinksFactory.html"><abbr title="VuFind\AjaxHandler\GetResolverLinksFactory">GetResolverLinksFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetResolverLinks AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetResultCount.html"><abbr title="VuFind\AjaxHandler\GetResultCount">GetResultCount</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Result Counts&quot; AJAX Handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetResultCountFactory.html"><abbr title="VuFind\AjaxHandler\GetResultCountFactory">GetResultCountFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetRecordDetails AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetSaveStatuses.html"><abbr title="VuFind\AjaxHandler\GetSaveStatuses">GetSaveStatuses</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Save Statuses&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetSaveStatusesFactory.html"><abbr title="VuFind\AjaxHandler\GetSaveStatusesFactory">GetSaveStatusesFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetSaveStatuses AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetSideFacets.html"><abbr title="VuFind\AjaxHandler\GetSideFacets">GetSideFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Side Facets&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetSideFacetsFactory.html"><abbr title="VuFind\AjaxHandler\GetSideFacetsFactory">GetSideFacetsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetSideFacets AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetUserFines.html"><abbr title="VuFind\AjaxHandler\GetUserFines">GetUserFines</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get User Fines&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetUserFinesFactory.html"><abbr title="VuFind\AjaxHandler\GetUserFinesFactory">GetUserFinesFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetUserFines AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetUserHolds.html"><abbr title="VuFind\AjaxHandler\GetUserHolds">GetUserHolds</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get User Holds&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetUserILLRequests.html"><abbr title="VuFind\AjaxHandler\GetUserILLRequests">GetUserILLRequests</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get User ILL Requests&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetUserStorageRetrievalRequests.html"><abbr title="VuFind\AjaxHandler\GetUserStorageRetrievalRequests">GetUserStorageRetrievalRequests</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get User Storage Retrieval Requests&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetUserTransactions.html"><abbr title="VuFind\AjaxHandler\GetUserTransactions">GetUserTransactions</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get User Transactions&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetVisData.html"><abbr title="VuFind\AjaxHandler\GetVisData">GetVisData</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Get Visualization Data&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/GetVisDataFactory.html"><abbr title="VuFind\AjaxHandler\GetVisDataFactory">GetVisDataFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GetVisData AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/KeepAlive.html"><abbr title="VuFind\AjaxHandler\KeepAlive">KeepAlive</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Keep Alive&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/KeepAliveFactory.html"><abbr title="VuFind\AjaxHandler\KeepAliveFactory">KeepAliveFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for KeepAlive AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/PluginManager.html"><abbr title="VuFind\AjaxHandler\PluginManager">PluginManager</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler plugin manager</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/Recommend.html"><abbr title="VuFind\AjaxHandler\Recommend">Recommend</abbr></a>    </div>
+                <div class="col-md-6"><p>Load a recommendation module via AJAX.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/RecommendFactory.html"><abbr title="VuFind\AjaxHandler\RecommendFactory">RecommendFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Recommend AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/RelaisAvailability.html"><abbr title="VuFind\AjaxHandler\RelaisAvailability">RelaisAvailability</abbr></a>    </div>
+                <div class="col-md-6"><p>Relais: Check item availability using a generic patron ID</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/RelaisInfo.html"><abbr title="VuFind\AjaxHandler\RelaisInfo">RelaisInfo</abbr></a>    </div>
+                <div class="col-md-6"><p>Relais: Check if logged-in patron can order an item.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/RelaisOrder.html"><abbr title="VuFind\AjaxHandler\RelaisOrder">RelaisOrder</abbr></a>    </div>
+                <div class="col-md-6"><p>Relais: Order an item.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/SystemStatus.html"><abbr title="VuFind\AjaxHandler\SystemStatus">SystemStatus</abbr></a>    </div>
+                <div class="col-md-6"><p>&quot;Keep Alive&quot; AJAX handler</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/SystemStatusFactory.html"><abbr title="VuFind\AjaxHandler\SystemStatusFactory">SystemStatusFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for SystemStatus AJAX handler.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/TagRecord.html"><abbr title="VuFind\AjaxHandler\TagRecord">TagRecord</abbr></a>    </div>
+                <div class="col-md-6"><p>AJAX handler to tag/untag a record.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/AjaxHandler/TagRecordFactory.html"><abbr title="VuFind\AjaxHandler\TagRecordFactory">TagRecordFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for TagRecord AJAX handler.</p></div>
+            </div>
+            </div>
+            <h2>Interfaces</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="../VuFind/AjaxHandler/AjaxHandlerInterface.html"><abbr title="VuFind\AjaxHandler\AjaxHandlerInterface">AjaxHandlerInterface</abbr></a></em>
+                        </div>
+                <div class="col-md-6"><p>AJAX handler interface</p></div>
+            </div>
+            </div>
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

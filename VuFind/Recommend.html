@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Recommend | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../doctum.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script async defer src="../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFind_Recommend" data-root-path="../" data-search-index-url="../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../VuFind/Recommend.html">Recommend</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFind\Recommend</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AbstractFacets.html"><abbr title="VuFind\Recommend\AbstractFacets">AbstractFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>SideFacets Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AbstractResultsPassthrough.html"><abbr title="VuFind\Recommend\AbstractResultsPassthrough">AbstractResultsPassthrough</abbr></a>    </div>
+                <div class="col-md-6"><p>Simple abstract recommendation module that simply passes the Results object
+through to the template.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AbstractSummonRecommend.html"><abbr title="VuFind\Recommend\AbstractSummonRecommend">AbstractSummonRecommend</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract base class for pulling Summon-specific recommendations.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AbstractSummonRecommendDeferred.html"><abbr title="VuFind\Recommend\AbstractSummonRecommendDeferred">AbstractSummonRecommendDeferred</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract base for deferred-load Summon recommendations modules</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AlphaBrowseLink.html"><abbr title="VuFind\Recommend\AlphaBrowseLink">AlphaBrowseLink</abbr></a>    </div>
+                <div class="col-md-6"><p>AlphaBrowseLink Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AuthorFacets.html"><abbr title="VuFind\Recommend\AuthorFacets">AuthorFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>AuthorFacets Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AuthorInfo.html"><abbr title="VuFind\Recommend\AuthorInfo">AuthorInfo</abbr></a>    </div>
+                <div class="col-md-6"><p>AuthorInfo Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AuthorInfoFactory.html"><abbr title="VuFind\Recommend\AuthorInfoFactory">AuthorInfoFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>AuthorInfo recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/AuthorityRecommend.html"><abbr title="VuFind\Recommend\AuthorityRecommend">AuthorityRecommend</abbr></a>    </div>
+                <div class="col-md-6"><p>AuthorityRecommend Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/CatalogResults.html"><abbr title="VuFind\Recommend\CatalogResults">CatalogResults</abbr></a>    </div>
+                <div class="col-md-6"><p>CatalogResults Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/Channels.html"><abbr title="VuFind\Recommend\Channels">Channels</abbr></a>    </div>
+                <div class="col-md-6"><p>Channels Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/CollectionSideFacets.html"><abbr title="VuFind\Recommend\CollectionSideFacets">CollectionSideFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>CollectionSideFacets Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/CollectionSideFacetsFactory.html"><abbr title="VuFind\Recommend\CollectionSideFacetsFactory">CollectionSideFacetsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>CollectionSideFacets recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/DOI.html"><abbr title="VuFind\Recommend\DOI">DOI</abbr></a>    </div>
+                <div class="col-md-6"><p>DOI Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/DPLATerms.html"><abbr title="VuFind\Recommend\DPLATerms">DPLATerms</abbr></a>    </div>
+                <div class="col-md-6"><p>DPLATerms Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/DPLATermsFactory.html"><abbr title="VuFind\Recommend\DPLATermsFactory">DPLATermsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>DPLATerms recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/Deprecated.html"><abbr title="VuFind\Recommend\Deprecated">Deprecated</abbr></a>    </div>
+                <div class="col-md-6"><p>Deprecated Recommendations Module - used to replace legacy modules that no
+longer function due to, for example, external APIs that have been shut down.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/EDSResults.html"><abbr title="VuFind\Recommend\EDSResults">EDSResults</abbr></a>    </div>
+                <div class="col-md-6"><p>EDSResults Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/EDSResultsDeferred.html"><abbr title="VuFind\Recommend\EDSResultsDeferred">EDSResultsDeferred</abbr></a>    </div>
+                <div class="col-md-6"><p>EDSResultsDeferred Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/EuropeanaResults.html"><abbr title="VuFind\Recommend\EuropeanaResults">EuropeanaResults</abbr></a>    </div>
+                <div class="col-md-6"><p>EuropeanaResults Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/EuropeanaResultsDeferred.html"><abbr title="VuFind\Recommend\EuropeanaResultsDeferred">EuropeanaResultsDeferred</abbr></a>    </div>
+                <div class="col-md-6"><p>EuropeanaResultsDeferred Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/EuropeanaResultsFactory.html"><abbr title="VuFind\Recommend\EuropeanaResultsFactory">EuropeanaResultsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>EuropeanaResults recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/ExpandFacets.html"><abbr title="VuFind\Recommend\ExpandFacets">ExpandFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>Recommendation class to expand recommendation interfaces</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/ExpandFacetsFactory.html"><abbr title="VuFind\Recommend\ExpandFacetsFactory">ExpandFacetsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>ExpandFacets recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/ExternalSearch.html"><abbr title="VuFind\Recommend\ExternalSearch">ExternalSearch</abbr></a>    </div>
+                <div class="col-md-6"><p>ExternalSearch Recommendation Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/FacetCloud.html"><abbr title="VuFind\Recommend\FacetCloud">FacetCloud</abbr></a>    </div>
+                <div class="col-md-6"><p>FacetCloud Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/FavoriteFacets.html"><abbr title="VuFind\Recommend\FavoriteFacets">FavoriteFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>FavoriteFacets Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/FavoriteFacetsFactory.html"><abbr title="VuFind\Recommend\FavoriteFacetsFactory">FavoriteFacetsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>FavoriteFacets recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/InjectConfigManagerFactory.html"><abbr title="VuFind\Recommend\InjectConfigManagerFactory">InjectConfigManagerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for instantiating recommendation modules with config plugin manager.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/InjectResultsManagerFactory.html"><abbr title="VuFind\Recommend\InjectResultsManagerFactory">InjectResultsManagerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for instantiating recommendation modules with Results plugin manager.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/InjectSearchRunnerFactory.html"><abbr title="VuFind\Recommend\InjectSearchRunnerFactory">InjectSearchRunnerFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for instantiating recommendation modules with search runner.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/Libraryh3lp.html"><abbr title="VuFind\Recommend\Libraryh3lp">Libraryh3lp</abbr></a>    </div>
+                <div class="col-md-6"><p>Libraryh3lp Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/MapSelection.html"><abbr title="VuFind\Recommend\MapSelection">MapSelection</abbr></a>    </div>
+                <div class="col-md-6"><p>MapSelection Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/MapSelectionFactory.html"><abbr title="VuFind\Recommend\MapSelectionFactory">MapSelectionFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>MapSelection recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/OpenLibrarySubjects.html"><abbr title="VuFind\Recommend\OpenLibrarySubjects">OpenLibrarySubjects</abbr></a>    </div>
+                <div class="col-md-6"><p>OpenLibrarySubjects Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/OpenLibrarySubjectsDeferred.html"><abbr title="VuFind\Recommend\OpenLibrarySubjectsDeferred">OpenLibrarySubjectsDeferred</abbr></a>    </div>
+                <div class="col-md-6"><p>OpenLibrarySubjects Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/PluginFactory.html"><abbr title="VuFind\Recommend\PluginFactory">PluginFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Recommendation module plugin factory</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/PluginManager.html"><abbr title="VuFind\Recommend\PluginManager">PluginManager</abbr></a>    </div>
+                <div class="col-md-6"><p>Recommendation module plugin manager</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/PubDateVisAjax.html"><abbr title="VuFind\Recommend\PubDateVisAjax">PubDateVisAjax</abbr></a>    </div>
+                <div class="col-md-6"><p>PubDateVisAjax Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/RandomRecommend.html"><abbr title="VuFind\Recommend\RandomRecommend">RandomRecommend</abbr></a>    </div>
+                <div class="col-md-6"><p>RandomRecommend Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/RandomRecommendFactory.html"><abbr title="VuFind\Recommend\RandomRecommendFactory">RandomRecommendFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>RandomRecommend recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/RecommendLinks.html"><abbr title="VuFind\Recommend\RecommendLinks">RecommendLinks</abbr></a>    </div>
+                <div class="col-md-6"><p>RecommendLinks Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/RemoveFilters.html"><abbr title="VuFind\Recommend\RemoveFilters">RemoveFilters</abbr></a>    </div>
+                <div class="col-md-6"><p>RemoveFilters Recommendations Module
+Recommends to remove filters</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SearchObject.html"><abbr title="VuFind\Recommend\SearchObject">SearchObject</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract SearchObject Recommendations Module (needs to be extended to use
+a particular search object).</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SideFacets.html"><abbr title="VuFind\Recommend\SideFacets">SideFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>SideFacets Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SideFacetsDeferred.html"><abbr title="VuFind\Recommend\SideFacetsDeferred">SideFacetsDeferred</abbr></a>    </div>
+                <div class="col-md-6"><p>SideFacetsDeferred Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SideFacetsFactory.html"><abbr title="VuFind\Recommend\SideFacetsFactory">SideFacetsFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>SideFacets recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SpellingSuggestions.html"><abbr title="VuFind\Recommend\SpellingSuggestions">SpellingSuggestions</abbr></a>    </div>
+                <div class="col-md-6"><p>SpellingSuggestions Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SummonBestBets.html"><abbr title="VuFind\Recommend\SummonBestBets">SummonBestBets</abbr></a>    </div>
+                <div class="col-md-6"><p>SummonBestBets Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SummonBestBetsDeferred.html"><abbr title="VuFind\Recommend\SummonBestBetsDeferred">SummonBestBetsDeferred</abbr></a>    </div>
+                <div class="col-md-6"><p>SummonBestBetsDeferred Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SummonDatabases.html"><abbr title="VuFind\Recommend\SummonDatabases">SummonDatabases</abbr></a>    </div>
+                <div class="col-md-6"><p>SummonDatabases Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SummonDatabasesDeferred.html"><abbr title="VuFind\Recommend\SummonDatabasesDeferred">SummonDatabasesDeferred</abbr></a>    </div>
+                <div class="col-md-6"><p>SummonDatabasesDeferred Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SummonResults.html"><abbr title="VuFind\Recommend\SummonResults">SummonResults</abbr></a>    </div>
+                <div class="col-md-6"><p>SummonResults Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SummonResultsDeferred.html"><abbr title="VuFind\Recommend\SummonResultsDeferred">SummonResultsDeferred</abbr></a>    </div>
+                <div class="col-md-6"><p>SummonResultsDeferred Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SummonTopics.html"><abbr title="VuFind\Recommend\SummonTopics">SummonTopics</abbr></a>    </div>
+                <div class="col-md-6"><p>SummonTopics Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SwitchQuery.html"><abbr title="VuFind\Recommend\SwitchQuery">SwitchQuery</abbr></a>    </div>
+                <div class="col-md-6"><p>SwitchQuery Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SwitchQueryFactory.html"><abbr title="VuFind\Recommend\SwitchQueryFactory">SwitchQueryFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>SwitchQuery recommendation module factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SwitchTab.html"><abbr title="VuFind\Recommend\SwitchTab">SwitchTab</abbr></a>    </div>
+                <div class="col-md-6"><p>SwitchType Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/SwitchType.html"><abbr title="VuFind\Recommend\SwitchType">SwitchType</abbr></a>    </div>
+                <div class="col-md-6"><p>SwitchType Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/TopFacets.html"><abbr title="VuFind\Recommend\TopFacets">TopFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>SideFacets Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/VisualFacets.html"><abbr title="VuFind\Recommend\VisualFacets">VisualFacets</abbr></a>    </div>
+                <div class="col-md-6"><p>VisualFacets Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/WebResults.html"><abbr title="VuFind\Recommend\WebResults">WebResults</abbr></a>    </div>
+                <div class="col-md-6"><p>WebResults Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/WorldCatIdentities.html"><abbr title="VuFind\Recommend\WorldCatIdentities">WorldCatIdentities</abbr></a>    </div>
+                <div class="col-md-6"><p>WorldCatIdentities Recommendations Module</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../VuFind/Recommend/WorldCatIdentitiesFactory.html"><abbr title="VuFind\Recommend\WorldCatIdentitiesFactory">WorldCatIdentitiesFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>WorldCatIdentities recommendation module factory.</p></div>
+            </div>
+            </div>
+            <h2>Interfaces</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="../VuFind/Recommend/RecommendInterface.html"><abbr title="VuFind\Recommend\RecommendInterface">RecommendInterface</abbr></a></em>
+                        </div>
+                <div class="col-md-6"><p>Search Recommendations Interface</p></div>
+            </div>
+            </div>
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

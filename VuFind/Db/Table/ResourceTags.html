@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Db\Table\ResourceTags | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Db_Table_ResourceTags" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Db.html">Db</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Db/Table.html">Table</a></li><li class="backslash">\</li><li>ResourceTags</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ResourceTags    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ResourceTags</strong>        extends <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Table Definition for resource_tags</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tableManager">
+                                        protected                                        <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$tableManager</td>
+                <td class="last"><p>Table manager</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#property_tableManager">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_caseSensitive">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$caseSensitive</td>
+                <td class="last"><p>Are tags case sensitive?</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr> $adapter, <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $tm, array $cfg, <abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null $rowObj = null, bool $caseSensitive = false, string $table = &#039;resource_tags&#039;)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initializeFeatures">initializeFeatures</a>(array $cfg)
+        
+                                            <p><p>Initialize features</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_initializeFeatures">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createRow">createRow</a>()
+        
+                                            <p><p>Create a new row.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_createRow">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTable">getDbTable</a>(string $table)
+        
+                                            <p><p>Get access to another table.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Db/Table/Gateway.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createLink">createLink</a>(string $resource, string $tag, string $user = null, string $list = null, string $posted = null)
+        
+                                            <p><p>Look up a row for the specified resource.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkForTags">checkForTags</a>(array $ids)
+        
+                                            <p><p>Check whether or not the specified tags are present in the table.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResourcesForTag">getResourcesForTag</a>(string $tag, string $userId, string $listId = null)
+        
+                                            <p><p>Get resources associated with a particular tag.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getListsForTag">getListsForTag</a>(string|array $tag, null|string|array $listId = null, bool $publicOnly = true, bool $andTags = true)
+        
+                                            <p><p>Get lists associated with a particular tag.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStatistics">getStatistics</a>(bool $extended = false)
+        
+                                            <p><p>Get statistics on use of tags.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_destroyResourceLinks">destroyResourceLinks</a>(string|array $resource, string $user, string $list = null, string|array $tag = null)
+        
+                                            <p><p>Unlink rows for the specified resource.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_destroyListLinks">destroyListLinks</a>(string $list, string $user, string|array $tag = null)
+        
+                                            <p><p>Unlink rows for the specified user list.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_processDestroyLinks">processDestroyLinks</a>(object $callback)
+        
+                                            <p><p>Process link rows marked to be destroyed.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAnonymousCount">getAnonymousCount</a>()
+        
+                                            <p><p>Get count of anonymous tags</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assignAnonymousTags">assignAnonymousTags</a>(int $id)
+        
+                                            <p><p>Assign anonymous tags to the specified user ID.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUniqueResources">getUniqueResources</a>(string $userId = null, string $resourceId = null, string $tagId = null)
+        
+                                            <p><p>Gets unique resources from the table</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUniqueTags">getUniqueTags</a>(string $userId = null, string $resourceId = null, string $tagId = null)
+        
+                                            <p><p>Gets unique tags from the table</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUniqueUsers">getUniqueUsers</a>(string $userId = null, string $resourceId = null, string $tagId = null)
+        
+                                            <p><p>Gets unique users from the table</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatTagOrder">formatTagOrder</a>(array $order)
+        
+                                            <p><p>Given an array for sorting database results, make sure the tag field is
+sorted in a case-insensitive fashion.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Paginator\Paginator">Paginator</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResourceTags">getResourceTags</a>(string $userId = null, string $resourceId = null, string $tagId = null, string $order = null, string $page = null, string $limit = 20)
+        
+                                            <p><p>Get Resource Tags</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deleteByIdArray">deleteByIdArray</a>(array $ids)
+        
+                                            <p><p>Delete a group of tags.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDuplicates">getDuplicates</a>()
+        
+                                            <p><p>Get a list of duplicate rows (this sometimes happens after merging IDs,
+for example after a Summon resource ID changes).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deduplicate">deduplicate</a>()
+        
+                                            <p><p>Deduplicate rows (sometimes necessary after merging foreign key IDs).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 63</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr> $adapter, <a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $tm, array $cfg, <abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null $rowObj = null, bool $caseSensitive = false, string $table = &#039;resource_tags&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Db\Adapter\Adapter">Adapter</abbr></td>
+                <td>$adapter</td>
+                <td><p>Database adapter</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+                <td>$tm</td>
+                <td><p>Table manager</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$cfg</td>
+                <td><p>Laminas configuration</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Db\Table\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null</td>
+                <td>$rowObj</td>
+                <td><p>Row prototype object (null for default)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$caseSensitive</td>
+                <td><p>Are tags case sensitive?</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Name of database table to interface with</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeFeatures">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_initializeFeatures">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 89</div>
+        <code>                    void
+    <strong>initializeFeatures</strong>(array $cfg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize features</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$cfg</td>
+                <td><p>Laminas configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRow">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_createRow">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 113</div>
+        <code>                    object
+    <strong>createRow</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new row.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbTable">
+        <div class="location">in <a href="../../../VuFind/Db/Table/Gateway.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a> at line 147</div>
+        <code>                    <a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+    <strong>getDbTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get access to another table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Table name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createLink">
+        <div class="location">at line 86</div>
+        <code>                    void
+    <strong>createLink</strong>(string $resource, string $tag, string $user = null, string $list = null, string $posted = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Look up a row for the specified resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td><p>ID of resource to link up</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td><p>ID of tag to link up</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td><p>ID of user creating link (optional but recommended)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$list</td>
+                <td><p>ID of list to link up (optional)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$posted</td>
+                <td><p>Posted date (optional -- omit for current)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkForTags">
+        <div class="location">at line 134</div>
+        <code>                    array
+    <strong>checkForTags</strong>(array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether or not the specified tags are present in the table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>IDs to check.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Associative array with two keys: present and missing</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourcesForTag">
+        <div class="location">at line 171</div>
+        <code>                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+    <strong>getResourcesForTag</strong>(string $tag, string $userId, string $listId = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get resources associated with a particular tag.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td><p>Tag to match</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userId</td>
+                <td><p>ID of user owning favorite list</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$listId</td>
+                <td><p>ID of list to retrieve (null for all favorites)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getListsForTag">
+        <div class="location">at line 212</div>
+        <code>                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+    <strong>getListsForTag</strong>(string|array $tag, null|string|array $listId = null, bool $publicOnly = true, bool $andTags = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get lists associated with a particular tag.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$tag</td>
+                <td><p>Tag to match</p></td>
+            </tr>
+                    <tr>
+                <td>null|string|array</td>
+                <td>$listId</td>
+                <td><p>List ID to retrieve (null for all)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$publicOnly</td>
+                <td><p>Whether to return only public lists</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$andTags</td>
+                <td><p>Use AND operator when filtering by tag.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatistics">
+        <div class="location">at line 308</div>
+        <code>                    array
+    <strong>getStatistics</strong>(bool $extended = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get statistics on use of tags.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$extended</td>
+                <td><p>Include extended (unique/anonymous) stats.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroyResourceLinks">
+        <div class="location">at line 349</div>
+        <code>                    void
+    <strong>destroyResourceLinks</strong>(string|array $resource, string $user, string $list = null, string|array $tag = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unlink rows for the specified resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$resource</td>
+                <td><p>ID (or array of IDs) of resource(s) to
+unlink (null for ALL matching resources)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td><p>ID of user removing links</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$list</td>
+                <td><p>ID of list to unlink (null for ALL matching
+tags, 'none' for tags not in a list, true for tags only found in a list)</p></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$tag</td>
+                <td><p>ID or array of IDs of tag(s) to unlink (null
+for ALL matching tags)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroyListLinks">
+        <div class="location">at line 390</div>
+        <code>                    void
+    <strong>destroyListLinks</strong>(string $list, string $user, string|array $tag = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unlink rows for the specified user list.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$list</td>
+                <td><p>ID of list to unlink</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td><p>ID of user removing links</p></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$tag</td>
+                <td><p>ID or array of IDs of tag(s) to unlink (null
+for ALL matching tags)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processDestroyLinks">
+        <div class="location">at line 418</div>
+        <code>            protected        void
+    <strong>processDestroyLinks</strong>(object $callback)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process link rows marked to be destroyed.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$callback</td>
+                <td><p>Callback function for selecting deleted rows.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAnonymousCount">
+        <div class="location">at line 446</div>
+        <code>                    int
+    <strong>getAnonymousCount</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get count of anonymous tags</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>count</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assignAnonymousTags">
+        <div class="location">at line 461</div>
+        <code>                    void
+    <strong>assignAnonymousTags</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assign anonymous tags to the specified user ID.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td><p>User ID to own anonymous tags.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUniqueResources">
+        <div class="location">at line 478</div>
+        <code>                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+    <strong>getUniqueResources</strong>(string $userId = null, string $resourceId = null, string $tagId = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets unique resources from the table</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userId</td>
+                <td><p>ID of user</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resourceId</td>
+                <td><p>ID of the resource</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tagId</td>
+                <td><p>ID of the tag</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUniqueTags">
+        <div class="location">at line 542</div>
+        <code>                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+    <strong>getUniqueTags</strong>(string $userId = null, string $resourceId = null, string $tagId = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets unique tags from the table</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userId</td>
+                <td><p>ID of user</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resourceId</td>
+                <td><p>ID of the resource</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tagId</td>
+                <td><p>ID of the tag</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUniqueUsers">
+        <div class="location">at line 606</div>
+        <code>                    <abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr>
+    <strong>getUniqueUsers</strong>(string $userId = null, string $resourceId = null, string $tagId = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets unique users from the table</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userId</td>
+                <td><p>ID of user</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resourceId</td>
+                <td><p>ID of the resource</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tagId</td>
+                <td><p>ID of the tag</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Db\ResultSet\AbstractResultSet">AbstractResultSet</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatTagOrder">
+        <div class="location">at line 666</div>
+        <code>            protected        array
+    <strong>formatTagOrder</strong>(array $order)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given an array for sorting database results, make sure the tag field is
+sorted in a case-insensitive fashion.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$order</td>
+                <td><p>Order settings</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourceTags">
+        <div class="location">at line 691</div>
+        <code>                    <abbr title="Laminas\Paginator\Paginator">Paginator</abbr>
+    <strong>getResourceTags</strong>(string $userId = null, string $resourceId = null, string $tagId = null, string $order = null, string $page = null, string $limit = 20)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Resource Tags</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userId</td>
+                <td><p>ID of user</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resourceId</td>
+                <td><p>ID of the resource</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tagId</td>
+                <td><p>ID of the tag</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$order</td>
+                <td><p>The order in which to return the data</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$page</td>
+                <td><p>The page number to select</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$limit</td>
+                <td><p>The number of items to fetch</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Paginator\Paginator">Paginator</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteByIdArray">
+        <div class="location">at line 755</div>
+        <code>                    int
+    <strong>deleteByIdArray</strong>(array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete a group of tags.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>IDs of tags to delete.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>Count of $ids</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDuplicates">
+        <div class="location">at line 775</div>
+        <code>                    mixed
+    <strong>getDuplicates</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a list of duplicate rows (this sometimes happens after merging IDs,
+for example after a Summon resource ID changes).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deduplicate">
+        <div class="location">at line 823</div>
+        <code>                    void
+    <strong>deduplicate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deduplicate rows (sometimes necessary after merging foreign key IDs).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

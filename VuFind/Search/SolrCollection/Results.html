@@ -1,0 +1,2868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Search\SolrCollection\Results | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Search_SolrCollection_Results" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Search.html">Search</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Search/SolrCollection.html">SolrCollection</a></li><li class="backslash">\</li><li>Results</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Results    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Results</strong>        extends <a href="../../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Solr Collection Search Options</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_params">
+                                        protected                                        <a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a>
+                                                                                
+                                    </td>
+                <td>$params</td>
+                <td class="last"><p>Search parameters</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_params">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resultTotal">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$resultTotal</td>
+                <td class="last"><p>Total number of results available</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_resultTotal">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_backendId">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$backendId</td>
+                <td class="last"><p>Search backend identifier.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#property_backendId">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_startRecordOverride">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$startRecordOverride</td>
+                <td class="last"><p>Override (only for use in very rare cases)</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_startRecordOverride">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_results">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$results</td>
+                <td class="last"><p>Array of results (represented as Record Driver objects) retrieved on latest
+search</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_results">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_errors">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$errors</td>
+                <td class="last"><p>Any errors reported by the search backend</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_errors">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchId">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$searchId</td>
+                <td class="last"><p>An ID number for saving/retrieving search</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_searchId">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_savedSearch">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$savedSearch</td>
+                <td class="last"><p>Is this a user-saved search?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_savedSearch">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_notificationFrequency">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$notificationFrequency</td>
+                <td class="last"><p>How frequently will a user be notified about this search (0 = never)?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_notificationFrequency">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryStartTime">
+                                        protected                                        float
+                                                                                
+                                    </td>
+                <td>$queryStartTime</td>
+                <td class="last"><p>Query start time</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_queryStartTime">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryEndTime">
+                                        protected                                        float
+                                                                                
+                                    </td>
+                <td>$queryEndTime</td>
+                <td class="last"><p>Query end time</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_queryEndTime">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryTime">
+                                        protected                                        float
+                                                                                
+                                    </td>
+                <td>$queryTime</td>
+                <td class="last"><p>Query time (total)</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_queryTime">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_helpers">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$helpers</td>
+                <td class="last"><p>Helper objects</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_helpers">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_suggestions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$suggestions</td>
+                <td class="last"><p>Spelling suggestions</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_suggestions">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recommend">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$recommend</td>
+                <td class="last">Recommendations</td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_recommend">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchService">
+                                        protected                                        <a href="../../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a>
+                                                                                
+                                    </td>
+                <td>$searchService</td>
+                <td class="last"><p>Search service.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_searchService">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordLoader">
+                                        protected                                        <a href="../../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a>
+                                                                                
+                                    </td>
+                <td>$recordLoader</td>
+                <td class="last"><p>Record loader</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_recordLoader">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_urlQueryHelperFactory">
+                                        protected                                        <a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html"><abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a>
+                                                                                
+                                    </td>
+                <td>$urlQueryHelperFactory</td>
+                <td class="last"><p>URL query helper factory</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_urlQueryHelperFactory">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hierarchicalFacetHelper">
+                                        protected                                        <a href="../../../VuFind/Search/Base/HierarchicalFacetHelperInterface.html"><abbr title="VuFind\Search\Base\HierarchicalFacetHelperInterface">HierarchicalFacetHelperInterface</abbr></a>
+                                                                                
+                                    </td>
+                <td>$hierarchicalFacetHelper</td>
+                <td class="last"><p>Hierarchical facet helper</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#property_hierarchicalFacetHelper">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_responseFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$responseFacets</td>
+                <td class="last"><p>Field facets.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#property_responseFacets">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_responseQueryFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$responseQueryFacets</td>
+                <td class="last"><p>Query facets.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#property_responseQueryFacets">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_responsePivotFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$responsePivotFacets</td>
+                <td class="last"><p>Pivot facets.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#property_responsePivotFacets">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_spellingQuery">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$spellingQuery</td>
+                <td class="last"><p>Currently used spelling query, if any.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#property_spellingQuery">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_spellingProcessor">
+                                        protected                                        <a href="../../../VuFind/Search/Solr/SpellingProcessor.html"><abbr title="VuFind\Search\Solr\SpellingProcessor">SpellingProcessor</abbr></a>
+                                                                                
+                                    </td>
+                <td>$spellingProcessor</td>
+                <td class="last"><p>Class to process spelling.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#property_spellingProcessor">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cursorMark">
+                                        protected                                        null|string
+                                                                                
+                                    </td>
+                <td>$cursorMark</td>
+                <td class="last"><p>CursorMark used for deep paging (e.g. OAI-PMH Server).</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#property_cursorMark">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, <a href="../../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a> $searchService, <a href="../../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a> $recordLoader)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method___construct">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___clone">__clone</a>()
+        
+                                            <p><p>Copy constructor</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method___clone">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getParams">getParams</a>()
+        
+                                            <p><p>Get the search parameters object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getParams">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setParams">setParams</a>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params)
+        
+                                            <p><p>Set the search parameters object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_setParams">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOptions">getOptions</a>()
+        
+                                            <p><p>Get the search options object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getOptions">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUrlQueryHelperOptions">getUrlQueryHelperOptions</a>()
+        
+                                            <p><p>Options for UrlQueryHelper</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getUrlQueryHelperOptions">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUrlQuery">getUrlQuery</a>()
+        
+                                            <p><p>Get the URL helper for this object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getUrlQuery">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setHelper">setHelper</a>(string $key, object $value)
+        
+                                            <p><p>Override a helper object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_setHelper">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_performAndProcessSearch">performAndProcessSearch</a>()
+        
+                                            <p><p>Actually execute the search.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_performAndProcessSearch">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFacetList">getFacetList</a>(array $filter = null)
+        
+                                            <p><p>Returns the stored list of facets for the last search</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_getFacetList">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_performSearch">performSearch</a>()
+        
+                                            <p><p>Support method for performAndProcessSearch -- perform a search based on the
+parameters passed to the object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_performSearch">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSpellingSuggestions">getSpellingSuggestions</a>()
+        
+                                            <p><p>Turn the list of spelling suggestions into an array of urls
+for on-screen use to implement the suggestions.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_getSpellingSuggestions">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResultTotal">getResultTotal</a>()
+        
+                                            <p><p>Get total count of records in the result set (not just current page).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getResultTotal">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_overrideStartRecord">overrideStartRecord</a>(int $rec)
+        
+                                            <p><p>Manually override the start record number.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_overrideStartRecord">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStartRecord">getStartRecord</a>()
+        
+                                            <p><p>Get record number for start of range represented by current result set.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getStartRecord">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEndRecord">getEndRecord</a>()
+        
+                                            <p><p>Get record number for end of range represented by current result set.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getEndRecord">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResults">getResults</a>()
+        
+                                            <p><p>Basic 'getter' for search results.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getResults">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getErrors">getErrors</a>()
+        
+                                            <p><p>Basic 'getter' for errors.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getErrors">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBackendId">getBackendId</a>()
+        
+                                            <p><p>Basic 'getter' of search backend identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getBackendId">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchId">getSearchId</a>()
+        
+                                            <p><p>Basic 'getter' for ID of saved search.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getSearchId">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isSavedSearch">isSavedSearch</a>()
+        
+                                            <p><p>Is the current search saved in the database?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_isSavedSearch">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNotificationFrequency">getNotificationFrequency</a>()
+        
+                                            <p><p>How frequently (in days) will the current user be notified about updates to
+these search results (0 = never)?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getNotificationFrequency">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updateSaveStatus">updateSaveStatus</a>(<a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $row)
+        
+                                            <p><p>Given a database row corresponding to the current search object,
+mark whether this search is saved and what its database ID is.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_updateSaveStatus">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_startQueryTimer">startQueryTimer</a>()
+        
+                                            <p><p>Start the timer to figure out how long a query takes.  Complements
+stopQueryTimer().</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_startQueryTimer">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_stopQueryTimer">stopQueryTimer</a>()
+        
+                                            <p><p>End the timer to figure out how long a query takes.  Complements
+startQueryTimer().</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_stopQueryTimer">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getQuerySpeed">getQuerySpeed</a>()
+        
+                                            <p><p>Basic 'getter' for query speed.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getQuerySpeed">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getStartTime">getStartTime</a>()
+        
+                                            <p><p>Basic 'getter' for query start time.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getStartTime">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Paginator\Paginator">Paginator</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPaginator">getPaginator</a>()
+        
+                                            <p><p>Get a paginator for the result set.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getPaginator">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRawSuggestions">getRawSuggestions</a>()
+        
+                                            <p><p>Basic 'getter' for suggestion list.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getRawSuggestions">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getExtraData">getExtraData</a>()
+        
+                                            <p><p>Get extra data for the search.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getExtraData">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setExtraData">setExtraData</a>(array $data)
+        
+                                            <p><p>Set extra data for the search.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_setExtraData">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deminify">deminify</a>(<a href="../../../VuFind/Search/Minified.html"><abbr title="VuFind\Search\Minified">Minified</abbr></a> $minified)
+        
+                                            <p><p>Restore settings from a minified object found in the database.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_deminify">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecommendations">getRecommendations</a>(string $location = &#039;top&#039;)
+        
+                                            <p><p>Get an array of recommendation objects for augmenting the results display.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getRecommendations">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRecommendations">setRecommendations</a>(array $recommend)
+        
+                                            <p><p>Set the recommendation objects (see \VuFind\Search\RecommendListener).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_setRecommendations">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchService">getSearchService</a>()
+        
+                                            <p><p>Return search service.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getSearchService">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translate">translate</a>()
+        
+                                            <p><p>Translate a string if a translator is available (proxies method in Options).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_translate">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html"><abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUrlQueryHelperFactory">getUrlQueryHelperFactory</a>()
+        
+                                            <p><p>Get URL query helper factory</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getUrlQueryHelperFactory">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUrlQueryHelperFactory">setUrlQueryHelperFactory</a>(<a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html"><abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a> $factory)
+        
+                                            <p><p>Set URL query helper factory</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_setUrlQueryHelperFactory">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setHierarchicalFacetHelper">setHierarchicalFacetHelper</a>(<a href="../../../VuFind/Search/Base/HierarchicalFacetHelperInterface.html"><abbr title="VuFind\Search\Base\HierarchicalFacetHelperInterface">HierarchicalFacetHelperInterface</abbr></a> $helper)
+        
+                                            <p><p>Set hierarchical facet helper</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_setHierarchicalFacetHelper">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFullFieldFacets">getFullFieldFacets</a>(array $facetfields, bool $removeFilter = true, int $limit = -1, string $facetSort = null)
+        
+                                            <p><p>Get complete facet counts for several index fields</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_getFullFieldFacets">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_buildFacetList">buildFacetList</a>(array $facetList, array $filter = null)
+        
+                                            <p><p>A helper method that converts the list of facets for the last search from
+RecordCollection's facet list.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Results.html#method_buildFacetList">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Solr/SpellingProcessor.html"><abbr title="VuFind\Search\Solr\SpellingProcessor">SpellingProcessor</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSpellingProcessor">getSpellingProcessor</a>()
+        
+                                            <p><p>Get spelling processor.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_getSpellingProcessor">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSpellingProcessor">setSpellingProcessor</a>(<a href="../../../VuFind/Search/Solr/SpellingProcessor.html"><abbr title="VuFind\Search\Solr\SpellingProcessor">SpellingProcessor</abbr></a> $processor)
+        
+                                            <p><p>Set spelling processor.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_setSpellingProcessor">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCursorMark">getCursorMark</a>()
+        
+                                            <p><p>Get cursorMark.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_getCursorMark">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCursorMark">setCursorMark</a>(null|string $cursorMark)
+        
+                                            <p><p>Set cursorMark.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_setCursorMark">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fixBadQuery">fixBadQuery</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query)
+        
+                                            <p><p>Try to fix a query that caused a parser error.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_fixBadQuery">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fixBadQueryGroup">fixBadQueryGroup</a>(<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a> $query)
+        
+                                            <p><p>Support method for fixBadQuery().</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_fixBadQueryGroup">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPartialFieldFacets">getPartialFieldFacets</a>(array $facetfields, bool $removeFilter = true, int $limit = -1, string $facetSort = null, int $page = null, bool $ored = false)
+        
+                                            <p><p>Get complete facet counts for several index fields</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_getPartialFieldFacets">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\Search\Solr\ArrayObject">ArrayObject</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPivotFacetList">getPivotFacetList</a>()
+        
+                                            <p><p>Returns data on pivot facets for the last search</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Solr/Results.html#method_getPivotFacetList">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method___construct">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 190</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params, <a href="../../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a> $searchService, <a href="../../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a> $recordLoader)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>Object representing user
+search parameters.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a></td>
+                <td>$searchService</td>
+                <td><p>Search service</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFind/Record/Loader.html"><abbr title="VuFind\Record\Loader">Loader</abbr></a></td>
+                <td>$recordLoader</td>
+                <td><p>Record loader</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___clone">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method___clone">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 205</div>
+        <code>                    void
+    <strong>__clone</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Copy constructor</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParams">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getParams">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 218</div>
+        <code>                    <a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a>
+    <strong>getParams</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the search parameters object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParams">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_setParams">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 230</div>
+        <code>                    void
+    <strong>setParams</strong>(<a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the search parameters object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/Params.html"><abbr title="VuFind\Search\Base\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>Parameters to set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getOptions">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 240</div>
+        <code>                    <a href="../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a>
+    <strong>getOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the search options object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlQueryHelperOptions">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getUrlQueryHelperOptions">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 250</div>
+        <code>            protected        array
+    <strong>getUrlQueryHelperOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Options for UrlQueryHelper</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlQuery">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getUrlQuery">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 260</div>
+        <code>                    <a href="../../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a>
+    <strong>getUrlQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the URL helper for this object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/UrlQueryHelper.html"><abbr title="VuFind\Search\UrlQueryHelper">UrlQueryHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHelper">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_setHelper">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 281</div>
+        <code>                    void
+    <strong>setHelper</strong>(string $key, object $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Override a helper object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Name of helper to set</p></td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$value</td>
+                <td><p>Helper object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_performAndProcessSearch">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_performAndProcessSearch">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 291</div>
+        <code>                    void
+    <strong>performAndProcessSearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Actually execute the search.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacetList">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_getFacetList">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 302</div>
+        <code>                    array
+    <strong>getFacetList</strong>(array $filter = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the stored list of facets for the last search</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$filter</td>
+                <td><p>Array of field =&gt; on-screen description listing
+all of the desired facet fields; set to null to get all configured values.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Facets data arrays</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_performSearch">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_performSearch">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 151</div>
+        <code>            protected        void
+    <strong>performSearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for performAndProcessSearch -- perform a search based on the
+parameters passed to the object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSpellingSuggestions">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_getSpellingSuggestions">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 285</div>
+        <code>                    array
+    <strong>getSpellingSuggestions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Turn the list of spelling suggestions into an array of urls
+for on-screen use to implement the suggestions.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResultTotal">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getResultTotal">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 341</div>
+        <code>                    int
+    <strong>getResultTotal</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get total count of records in the result set (not just current page).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_overrideStartRecord">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_overrideStartRecord">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 356</div>
+        <code>                    void
+    <strong>overrideStartRecord</strong>(int $rec)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Manually override the start record number.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$rec</td>
+                <td><p>Record number to use.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStartRecord">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getStartRecord">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 366</div>
+        <code>                    int
+    <strong>getStartRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get record number for start of range represented by current result set.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEndRecord">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getEndRecord">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 386</div>
+        <code>                    int
+    <strong>getEndRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get record number for end of range represented by current result set.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResults">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getResults">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 409</div>
+        <code>                    array
+    <strong>getResults</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' for search results.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getErrors">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getErrors">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 422</div>
+        <code>                    array
+    <strong>getErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' for errors.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBackendId">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getBackendId">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 435</div>
+        <code>                    string
+    <strong>getBackendId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' of search backend identifier.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchId">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getSearchId">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 445</div>
+        <code>                    int
+    <strong>getSearchId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' for ID of saved search.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSavedSearch">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_isSavedSearch">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 455</div>
+        <code>                    bool
+    <strong>isSavedSearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is the current search saved in the database?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNotificationFrequency">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getNotificationFrequency">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 475</div>
+        <code>                    int
+    <strong>getNotificationFrequency</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>How frequently (in days) will the current user be notified about updates to
+these search results (0 = never)?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateSaveStatus">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_updateSaveStatus">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 497</div>
+        <code>                    void
+    <strong>updateSaveStatus</strong>(<a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a> $row)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a database row corresponding to the current search object,
+mark whether this search is saved and what its database ID is.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Db/Row/Search.html"><abbr title="VuFind\Db\Row\Search">Search</abbr></a></td>
+                <td>$row</td>
+                <td><p>Relevant database row.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_startQueryTimer">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_startQueryTimer">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 511</div>
+        <code>            protected        void
+    <strong>startQueryTimer</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Start the timer to figure out how long a query takes.  Complements
+stopQueryTimer().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stopQueryTimer">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_stopQueryTimer">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 524</div>
+        <code>            protected        void
+    <strong>stopQueryTimer</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>End the timer to figure out how long a query takes.  Complements
+startQueryTimer().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuerySpeed">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getQuerySpeed">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 536</div>
+        <code>                    float
+    <strong>getQuerySpeed</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' for query speed.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStartTime">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getStartTime">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 549</div>
+        <code>                    float
+    <strong>getStartTime</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' for query start time.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaginator">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getPaginator">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 562</div>
+        <code>                    <abbr title="Laminas\Paginator\Paginator">Paginator</abbr>
+    <strong>getPaginator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a paginator for the result set.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Paginator\Paginator">Paginator</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRawSuggestions">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getRawSuggestions">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 586</div>
+        <code>                    array
+    <strong>getRawSuggestions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' for suggestion list.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtraData">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getExtraData">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 603</div>
+        <code>                    array
+    <strong>getExtraData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get extra data for the search.</p></p>                <p><p>Extra data can be used to store local implementation-specific information.
+Contents must be serializable. It is recommended to make the array as small
+as possible.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExtraData">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_setExtraData">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 618</div>
+        <code>                    void
+    <strong>setExtraData</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set extra data for the search.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Extra data</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deminify">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_deminify">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 633</div>
+        <code>                    void
+    <strong>deminify</strong>(<a href="../../../VuFind/Search/Minified.html"><abbr title="VuFind\Search\Minified">Minified</abbr></a> $minified)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Restore settings from a minified object found in the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Minified.html"><abbr title="VuFind\Search\Minified">Minified</abbr></a></td>
+                <td>$minified</td>
+                <td><p>Minified Search Object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecommendations">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getRecommendations">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 650</div>
+        <code>                    array
+    <strong>getRecommendations</strong>(string $location = &#039;top&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of recommendation objects for augmenting the results display.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$location</td>
+                <td><p>Name of location to use as a filter (null to get
+associative array of all locations); legal non-null values: 'top', 'side'</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRecommendations">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_setRecommendations">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 665</div>
+        <code>                    void
+    <strong>setRecommendations</strong>(array $recommend)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the recommendation objects (see \VuFind\Search\RecommendListener).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$recommend</td>
+                <td>Recommendations</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchService">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getSearchService">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 678</div>
+        <code>            protected        <a href="../../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a>
+    <strong>getSearchService</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return search service.</p></p>                        
+                    <p>
+                        
+                                    <tr>
+                        <td>May</td>
+                        <td>better error handling, throw a custom exception if search service
+not present</td>
+                        </tr>
+                            </p>
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Service.html"><abbr title="VuFindSearch\Service">Service</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translate">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_translate">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 688</div>
+        <code>                    string
+    <strong>translate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string if a translator is available (proxies method in Options).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlQueryHelperFactory">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getUrlQueryHelperFactory">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 701</div>
+        <code>            protected        <a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html"><abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a>
+    <strong>getUrlQueryHelperFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get URL query helper factory</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html"><abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUrlQueryHelperFactory">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_setUrlQueryHelperFactory">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 716</div>
+        <code>                    void
+    <strong>setUrlQueryHelperFactory</strong>(<a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html"><abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a> $factory)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set URL query helper factory</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Factory/UrlQueryHelperFactory.html"><abbr title="VuFind\Search\Factory\UrlQueryHelperFactory">UrlQueryHelperFactory</abbr></a></td>
+                <td>$factory</td>
+                <td><p>UrlQueryHelperFactory object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHierarchicalFacetHelper">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_setHierarchicalFacetHelper">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 728</div>
+        <code>                    void
+    <strong>setHierarchicalFacetHelper</strong>(<a href="../../../VuFind/Search/Base/HierarchicalFacetHelperInterface.html"><abbr title="VuFind\Search\Base\HierarchicalFacetHelperInterface">HierarchicalFacetHelperInterface</abbr></a> $helper)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set hierarchical facet helper</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Base/HierarchicalFacetHelperInterface.html"><abbr title="VuFind\Search\Base\HierarchicalFacetHelperInterface">HierarchicalFacetHelperInterface</abbr></a></td>
+                <td>$helper</td>
+                <td><p>Hierarchical facet helper</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFullFieldFacets">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_getFullFieldFacets">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 747</div>
+        <code>                    array
+    <strong>getFullFieldFacets</strong>(array $facetfields, bool $removeFilter = true, int $limit = -1, string $facetSort = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get complete facet counts for several index fields</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$facetfields</td>
+                <td><p>name of the Solr fields to return facets for</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$removeFilter</td>
+                <td><p>Clear existing filters from selected fields (true)
+or retain them (false)?</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>A limit for the number of facets returned, this
+may be useful for very large amounts of facets that can break the JSON parse
+method because of PHP out of memory exceptions (default = -1, no limit).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$facetSort</td>
+                <td><p>A facet sort value to use (null to retain current)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>an array with the facet values for each index field</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildFacetList">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Results.html#method_buildFacetList">
+<abbr title="VuFind\Search\Base\Results">Results</abbr></a> at line 799</div>
+        <code>            protected        array
+    <strong>buildFacetList</strong>(array $facetList, array $filter = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>A helper method that converts the list of facets for the last search from
+RecordCollection's facet list.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$facetList</td>
+                <td><p>Facet list</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$filter</td>
+                <td><p>Array of field =&gt; on-screen description listing
+all of the desired facet fields; set to null to get all configured values.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Facets data arrays</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSpellingProcessor">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_getSpellingProcessor">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 103</div>
+        <code>                    <a href="../../../VuFind/Search/Solr/SpellingProcessor.html"><abbr title="VuFind\Search\Solr\SpellingProcessor">SpellingProcessor</abbr></a>
+    <strong>getSpellingProcessor</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get spelling processor.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Solr/SpellingProcessor.html"><abbr title="VuFind\Search\Solr\SpellingProcessor">SpellingProcessor</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSpellingProcessor">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_setSpellingProcessor">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 118</div>
+        <code>                    void
+    <strong>setSpellingProcessor</strong>(<a href="../../../VuFind/Search/Solr/SpellingProcessor.html"><abbr title="VuFind\Search\Solr\SpellingProcessor">SpellingProcessor</abbr></a> $processor)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set spelling processor.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Search/Solr/SpellingProcessor.html"><abbr title="VuFind\Search\Solr\SpellingProcessor">SpellingProcessor</abbr></a></td>
+                <td>$processor</td>
+                <td><p>Spelling processor</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCursorMark">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_getCursorMark">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 128</div>
+        <code>                    null|string
+    <strong>getCursorMark</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get cursorMark.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCursorMark">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_setCursorMark">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 140</div>
+        <code>                    void
+    <strong>setCursorMark</strong>(null|string $cursorMark)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set cursorMark.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|string</td>
+                <td>$cursorMark</td>
+                <td><p>New cursor mark</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixBadQuery">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_fixBadQuery">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 224</div>
+        <code>            protected        bool|<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a>
+    <strong>fixBadQuery</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Try to fix a query that caused a parser error.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Bad query</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+            <td><p>Fixed query, or false if no solution is found.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixBadQueryGroup">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_fixBadQueryGroup">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 251</div>
+        <code>            protected        bool|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a>
+    <strong>fixBadQueryGroup</strong>(<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for fixBadQuery().</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a></td>
+                <td>$query</td>
+                <td><p>Query to fix</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a></td>
+            <td><p>Fixed query, or false if no solution is found.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPartialFieldFacets">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_getPartialFieldFacets">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 325</div>
+        <code>                    array
+    <strong>getPartialFieldFacets</strong>(array $facetfields, bool $removeFilter = true, int $limit = -1, string $facetSort = null, int $page = null, bool $ored = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get complete facet counts for several index fields</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$facetfields</td>
+                <td><p>name of the Solr fields to return facets for</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$removeFilter</td>
+                <td><p>Clear existing filters from selected fields (true)
+or retain them (false)?</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>A limit for the number of facets returned, this
+may be useful for very large amounts of facets that can break the JSON parse
+method because of PHP out of memory exceptions (default = -1, no limit).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$facetSort</td>
+                <td><p>A facet sort value to use (null to retain current)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td><p>1 based. Offsets results by limit.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$ored</td>
+                <td><p>Whether or not facet is an OR facet or not</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>list facet values for each index field with label and more bool</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPivotFacetList">
+        <div class="location">in <a href="../../../VuFind/Search/Solr/Results.html#method_getPivotFacetList">
+<abbr title="VuFind\Search\Solr\Results">Results</abbr></a> at line 396</div>
+        <code>                    <abbr title="VuFind\Search\Solr\ArrayObject">ArrayObject</abbr>
+    <strong>getPivotFacetList</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns data on pivot facets for the last search</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\Search\Solr\ArrayObject">ArrayObject</abbr></td>
+            <td><p>Flare-formatted object</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

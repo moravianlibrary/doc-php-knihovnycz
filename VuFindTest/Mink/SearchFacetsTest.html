@@ -1,0 +1,3161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Mink\SearchFacetsTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Mink_SearchFacetsTest" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../VuFindTest/Mink.html">Mink</a></li><li class="backslash">\</li><li>SearchFacetsTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>SearchFacetsTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>SearchFacetsTest</strong>        extends <a href="../../VuFindTest/Integration/MinkTestCase.html"><abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Mink search facet/filter functionality test class.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/AutoRetryTrait.html"><abbr title="VuFindTest\Feature\AutoRetryTrait">AutoRetryTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait introducing an annotation that can be used to auto-retry tests that may
+fail intermittently due to timing issues (e.g. Mink integration tests).</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/LiveDetectionTrait.html"><abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Mix-in for detecting whether a live test environment is currently running.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/PathResolverTrait.html"><abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for tests involving PathResolver.</p></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        DEFAULT_TIMEOUT
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_failedAfterRetries">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$failedAfterRetries</td>
+                <td class="last"><p>Flag whether we ran out of retries on a prior test.</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Feature/AutoRetryTrait.html#property_failedAfterRetries">
+<abbr title="VuFindTest\Feature\AutoRetryTrait">AutoRetryTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_retriesLeft">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$retriesLeft</td>
+                <td class="last"><p>Count of remaining retry attempts (updated during the retry loop). This is
+exposed as a class property rather than a local variable so that classes
+using the trait can be aware of the retry state. This is used, for example, in
+the VuFindTest\Integration\MinkTestCase class to control screenshot behavior.</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Feature/AutoRetryTrait.html#property_retriesLeft">
+<abbr title="VuFindTest\Feature\AutoRetryTrait">AutoRetryTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasLiveDetectionTrait">
+                                                                                bool
+                                                                                
+                                    </td>
+                <td>$hasLiveDetectionTrait</td>
+                <td class="last"><p>Flag to allow other traits to test for the presence of this one (to enforce
+dependencies).</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDetectionTrait.html#property_hasLiveDetectionTrait">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modifiedConfigs">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$modifiedConfigs</td>
+                <td class="last"><p>Modified configurations</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#property_modifiedConfigs">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modifiedYamlConfigs">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$modifiedYamlConfigs</td>
+                <td class="last"><p>Modified yaml configurations</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#property_modifiedYamlConfigs">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_session">
+                                        protected                                        <abbr title="Behat\Mink\Session">Session</abbr>
+                                                                                
+                                    </td>
+                <td>$session</td>
+                <td class="last"><p>Mink session</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#property_session">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pathResolver">
+                                        protected                                        <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+                                                                                
+                                    </td>
+                <td>$pathResolver</td>
+                <td class="last"><p>Configuration file path resolver</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#property_pathResolver">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_activeFilterSelector">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$activeFilterSelector</td>
+                <td class="last"><p>CSS selector for finding active filters</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_runBare">runBare</a>()
+        
+                                            <p><p>Override PHPUnit's main run method, introducing annotation-based retry
+behavior.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/AutoRetryTrait.html#method_runBare">
+<abbr title="VuFindTest\Feature\AutoRetryTrait">AutoRetryTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_continuousIntegrationRunning">continuousIntegrationRunning</a>()
+        
+                                            <p><p>Is this test running in a continuous integration context?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDetectionTrait.html#method_continuousIntegrationRunning">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPathResolver">getPathResolver</a>(string|null $baseDirectory = null)
+        
+                                            <p><p>Get a config file path resolver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/PathResolverTrait.html#method_getPathResolver">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addPathResolverToContainer">addPathResolverToContainer</a>(<a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a> $container)
+        
+                                            <p><p>Add PathResolverFactory to a mock container</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/PathResolverTrait.html#method_addPathResolverToContainer">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_changeConfigs">changeConfigs</a>(array $configs, array $replace = [])
+        
+                                            <p><p>Reconfigure VuFind for the current test.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_changeConfigs">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_changeYamlConfigs">changeYamlConfigs</a>(array $configs, array $replace = [])
+        
+                                            <p><p>Reconfigure VuFind for the current test.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_changeYamlConfigs">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_changeConfigFile">changeConfigFile</a>(string $configName, array $settings, bool $replace = false)
+        
+                                            <p><p>Support method for changeConfig; act on a single file.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_changeConfigFile">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_changeYamlConfigFile">changeYamlConfigFile</a>(string $configName, array $settings, bool $replace = false)
+        
+                                            <p><p>Support method for changeYamlConfig; act on a single file.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_changeYamlConfigFile">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_snooze">snooze</a>(int $secs = 1)
+        
+                                            <p><p>Sleep if necessary.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_snooze">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultTimeout">getDefaultTimeout</a>()
+        
+                                            <p><p>Get the default timeout in milliseconds</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_getDefaultTimeout">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkVisibility">checkVisibility</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $element)
+        
+                                            <p><p>Test an element for visibility.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_checkVisibility">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Behat\Mink\Driver\Selenium2Driver">Selenium2Driver</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMinkDriver">getMinkDriver</a>()
+        
+                                            <p><p>Get the Mink driver, initializing it if necessary.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_getMinkDriver">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Behat\Mink\Session">Session</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMinkSession">getMinkSession</a>()
+        
+                                            <p><p>Get a Mink session.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_getMinkSession">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_stopMinkSession">stopMinkSession</a>()
+        
+                                            <p><p>Shut down the Mink session.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_stopMinkSession">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getVuFindUrl">getVuFindUrl</a>(string $path = &#039;&#039;)
+        
+                                            <p><p>Get base URL of running VuFind instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_getVuFindUrl">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCurrentQueryString">getCurrentQueryString</a>()
+        
+                                            <p><p>Get query string for the current page</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_getCurrentQueryString">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_restoreConfigs">restoreConfigs</a>()
+        
+                                            <p><p>Restore configurations to the state they were in prior to a call to
+changeConfig().</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_restoreConfigs">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_findCss">findCss</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, int $timeout = null, int $index = 0)
+        
+                                            <p><p>Wait for an element to exist, then retrieve it.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_findCss">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_waitStatement">waitStatement</a>(string $statement, int $timeout = null)
+        
+                                            <p><p>Wait for a JavaScript statement to result in true.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_waitStatement">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_unFindCss">unFindCss</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, int $timeout = null, int $index = 0)
+        
+                                            <p><p>Wait for an element to NOT exist.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_unFindCss">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_clickCss">clickCss</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, int $timeout = null, int $index = 0)
+        
+                                            <p><p>Click on a CSS element.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_clickCss">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_findCssAndSetValue">findCssAndSetValue</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, string $value, int $timeout = null, int $retries = 6)
+        
+                                            <p><p>Set a value within an element selected via CSS; retry if set fails
+due to browser bugs.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_findCssAndSetValue">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_findAndAssertLink">findAndAssertLink</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $text)
+        
+                                            <p><p>Retrieve a link and assert that it exists before returning it.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_findAndAssertLink">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasElementsMatchingText">hasElementsMatchingText</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, string $text)
+        
+                                            <p><p>Check whether an element containing the specified text exists.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_hasElementsMatchingText">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assertEqualsWithTimeout">assertEqualsWithTimeout</a>(mixed $expected, callable $callback, int $timeout = null)
+        
+                                            <p><p>Wait for a callback to return the expected value</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_assertEqualsWithTimeout">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Behat\Mink\Element\Element">Element</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_performSearch">performSearch</a>(string $query, string $handler = null, string $path = &#039;/Search&#039;)
+        
+                                            <p><p>Search for the specified query.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_performSearch">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_waitForPageLoad">waitForPageLoad</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, int $timeout = null)
+        
+                                            <p><p>Wait for page load (full page or any element) to complete</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_waitForPageLoad">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_closeLightbox">closeLightbox</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, bool $closeButton = false)
+        
+                                            <p><p>Verify that lightbox title contains the expected value</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_closeLightbox">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_waitForLightboxHidden">waitForLightboxHidden</a>()
+        
+                                            <p><p>Wait for Lightbox to become hidden if it isn't already.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_waitForLightboxHidden">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assertLightboxTitle">assertLightboxTitle</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $title)
+        
+                                            <p><p>Verify that lightbox title contains the expected value</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_assertLightboxTitle">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assertLightboxWarning">assertLightboxWarning</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $message)
+        
+                                            <p><p>Mink support function: assert a warning message in the lightbox.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_assertLightboxWarning">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $consoleMsg, string $logMsg = &#039;&#039;)
+        
+                                            <p><p>Log a warning message</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_logWarning">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p><p>Standard setup method.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_setUp">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_tearDown">tearDown</a>()
+        
+                                            <p><p>Standard teardown method.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_tearDown">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_tearDownAfterClass">tearDownAfterClass</a>()
+        
+                                            <p><p>Standard tear-down.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Integration/MinkTestCase.html#method_tearDownAfterClass">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Behat\Mink\Element\Element">Element</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFilteredSearch">getFilteredSearch</a>()
+        
+                                            <p><p>Get filtered search</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_facetApplyProcedure">facetApplyProcedure</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        
+                                            <p><p>Helper function for simple facet application test</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_facetListProcedure">facetListProcedure</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, int $limit, bool $exclusionActive = false)
+        
+                                            <p><p>Helper function for facets lists</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testApplyFacet">testApplyFacet</a>()
+        
+                                            <p><p>Test applying a facet to filter results (standard facet sidebar)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testApplyFacetDeferred">testApplyFacetDeferred</a>()
+        
+                                            <p><p>Test applying a facet to filter results (deferred facet sidebar)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testFacetLightbox">testFacetLightbox</a>()
+        
+                                            <p><p>Test expanding facets into the lightbox</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testFacetLightboxMoreSetting">testFacetLightboxMoreSetting</a>()
+        
+                                            <p><p>Test expanding facets into the lightbox</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testFacetLightboxExclusion">testFacetLightboxExclusion</a>()
+        
+                                            <p><p>Test that exclusion works properly deep in lightbox results.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_clickHierarchyFacet">clickHierarchyFacet</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        
+                                            <p><p>Support method to click a hierarchical facet.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHierarchicalFacets">testHierarchicalFacets</a>()
+        
+                                            <p><p>Test that hierarchy facets work properly.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testHierarchicalFacetExclude">testHierarchicalFacetExclude</a>()
+        
+                                            <p><p>Test that hierarchy facet exclusion works properly.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCollapseStatePersistence">testCollapseStatePersistence</a>()
+        
+                                            <p><p>Test that we can persist uncollapsed state of collapsed facets</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assertFilterIsStillThere">assertFilterIsStillThere</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        
+                                            <p><p>Assert that the filter used by these tests is still applied.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assertNoFilters">assertNoFilters</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        
+                                            <p><p>Assert that no filters are applied.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_assertNoResetFiltersButton">assertNoResetFiltersButton</a>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        
+                                            <p><p>Assert that the &quot;reset filters&quot; button is not present.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testDefaultRetainFiltersBehavior">testDefaultRetainFiltersBehavior</a>()
+        
+                                            <p><p>Test retain current filters default behavior</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testFiltersOnRecord">testFiltersOnRecord</a>()
+        
+                                            <p><p>Test that filters carry over to selected records and are retained
+from there.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testNeverRetainFiltersBehavior">testNeverRetainFiltersBehavior</a>()
+        
+                                            <p><p>Test &quot;never retain filters&quot; configurable behavior</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testDefaultFiltersWithResetButton">testDefaultFiltersWithResetButton</a>()
+        
+                                            <p><p>Test resetting to a default filter state</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testOrFacets">testOrFacets</a>()
+        
+                                            <p><p>Test that OR facets work as expected.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_runBare">
+        <div class="location">in <a href="../../VuFindTest/Feature/AutoRetryTrait.html#method_runBare">
+<abbr title="VuFindTest\Feature\AutoRetryTrait">AutoRetryTrait</abbr></a> at line 72</div>
+        <code>                    void
+    <strong>runBare</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Override PHPUnit's main run method, introducing annotation-based retry
+behavior.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_continuousIntegrationRunning">
+        <div class="location">in <a href="../../VuFindTest/Feature/LiveDetectionTrait.html#method_continuousIntegrationRunning">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a> at line 55</div>
+        <code>                    bool
+    <strong>continuousIntegrationRunning</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is this test running in a continuous integration context?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPathResolver">
+        <div class="location">in <a href="../../VuFindTest/Feature/PathResolverTrait.html#method_getPathResolver">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a> at line 51</div>
+        <code>            protected        <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+    <strong>getPathResolver</strong>(string|null $baseDirectory = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a config file path resolver</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$baseDirectory</td>
+                <td><p>Optional directory to override APPLICATION_PATH</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPathResolverToContainer">
+        <div class="location">in <a href="../../VuFindTest/Feature/PathResolverTrait.html#method_addPathResolverToContainer">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a> at line 77</div>
+        <code>            protected        void
+    <strong>addPathResolverToContainer</strong>(<a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add PathResolverFactory to a mock container</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a></td>
+                <td>$container</td>
+                <td><p>Mock Container</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changeConfigs">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_changeConfigs">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 98</div>
+        <code>            protected        void
+    <strong>changeConfigs</strong>(array $configs, array $replace = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reconfigure VuFind for the current test.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$configs</td>
+                <td><p>Array of settings to change. Top-level keys correspond
+with config filenames (i.e. use 'config' for config.ini, etc.); within each
+file's array, top-level key is config section. Within each section's array
+are key-value configuration pairs.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$replace</td>
+                <td><p>Array of config files to completely override (as
+opposed to modifying); if a config file from $configs is included in this
+array, the $configs setting will be used as the entire configuration, and
+the defaults from the config/vufind directory will be ignored.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changeYamlConfigs">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_changeYamlConfigs">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 118</div>
+        <code>            protected        void
+    <strong>changeYamlConfigs</strong>(array $configs, array $replace = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reconfigure VuFind for the current test.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$configs</td>
+                <td><p>Array of settings to change. Top-level keys correspond
+with yaml config filenames (i.e. use 'searchspecs' for searchspecs.yaml,
+etc.);</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$replace</td>
+                <td><p>Array of config files to completely override (as
+opposed to modifying); if a config file from $configs is included in this
+array, the $configs setting will be used as the entire configuration, and
+the defaults from the config/vufind directory will be ignored.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changeConfigFile">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_changeConfigFile">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 135</div>
+        <code>            protected        void
+    <strong>changeConfigFile</strong>(string $configName, array $settings, bool $replace = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for changeConfig; act on a single file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$configName</td>
+                <td><p>Configuration to modify.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td><p>Settings to change.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td><p>Should we replace the existing config entirely
+(as opposed to extending it with new settings)?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changeYamlConfigFile">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_changeYamlConfigFile">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 174</div>
+        <code>            protected        void
+    <strong>changeYamlConfigFile</strong>(string $configName, array $settings, bool $replace = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for changeYamlConfig; act on a single file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$configName</td>
+                <td><p>Configuration to modify.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td><p>Settings to change.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td><p>Should we replace the existing config entirely
+(as opposed to extending it with new settings)?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_snooze">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_snooze">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 203</div>
+        <code>            protected        void
+    <strong>snooze</strong>(int $secs = 1)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sleep if necessary.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$secs</td>
+                <td><p>Seconds to sleep</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultTimeout">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_getDefaultTimeout">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 217</div>
+        <code>            protected        int
+    <strong>getDefaultTimeout</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the default timeout in milliseconds</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkVisibility">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_checkVisibility">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 231</div>
+        <code>            protected        bool
+    <strong>checkVisibility</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $element)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test an element for visibility.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$element</td>
+                <td><p>Element to test</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMinkDriver">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_getMinkDriver">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 241</div>
+        <code>            protected        <abbr title="Behat\Mink\Driver\Selenium2Driver">Selenium2Driver</abbr>
+    <strong>getMinkDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the Mink driver, initializing it if necessary.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Behat\Mink\Driver\Selenium2Driver">Selenium2Driver</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMinkSession">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_getMinkSession">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 256</div>
+        <code>            protected        <abbr title="Behat\Mink\Session">Session</abbr>
+    <strong>getMinkSession</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a Mink session.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Behat\Mink\Session">Session</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stopMinkSession">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_stopMinkSession">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 270</div>
+        <code>            protected        void
+    <strong>stopMinkSession</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Shut down the Mink session.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVuFindUrl">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_getVuFindUrl">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 285</div>
+        <code>            protected        string
+    <strong>getVuFindUrl</strong>(string $path = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get base URL of running VuFind instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td><p>Relative path to add to base URL.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentQueryString">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_getCurrentQueryString">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 299</div>
+        <code>            protected        string
+    <strong>getCurrentQueryString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get query string for the current page</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreConfigs">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_restoreConfigs">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 314</div>
+        <code>            protected        void
+    <strong>restoreConfigs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Restore configurations to the state they were in prior to a call to
+changeConfig().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findCss">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_findCss">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 348</div>
+        <code>            protected        mixed
+    <strong>findCss</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, int $timeout = null, int $index = 0)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wait for an element to exist, then retrieve it.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td><p>CSS selector</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td><p>Wait timeout (in ms)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td><p>Index of the element (0-based)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_waitStatement">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_waitStatement">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 380</div>
+        <code>            protected        mixed
+    <strong>waitStatement</strong>(string $statement, int $timeout = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wait for a JavaScript statement to result in true.</p></p>                <p><p>Includes a check for $ to be available to make sure jQuery has been loaded.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$statement</td>
+                <td><p>JavaScript statement to evaluate</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td><p>Wait timeout (in ms)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unFindCss">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_unFindCss">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 403</div>
+        <code>            protected        void
+    <strong>unFindCss</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, int $timeout = null, int $index = 0)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wait for an element to NOT exist.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td><p>CSS selector</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td><p>Wait timeout (in ms)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td><p>Index of the element (0-based)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clickCss">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_clickCss">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 443</div>
+        <code>            protected        mixed
+    <strong>clickCss</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, int $timeout = null, int $index = 0)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Click on a CSS element.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td><p>CSS selector</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td><p>Wait timeout (in ms)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td><p>Index of the element (0-based)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findCssAndSetValue">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_findCssAndSetValue">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 479</div>
+        <code>            protected        mixed
+    <strong>findCssAndSetValue</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, string $value, int $timeout = null, int $retries = 6)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a value within an element selected via CSS; retry if set fails
+due to browser bugs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td><p>CSS selector</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Value to set</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td><p>Wait timeout for CSS selection (in ms)</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$retries</td>
+                <td><p>Retry count for set loop</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findAndAssertLink">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_findAndAssertLink">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 526</div>
+        <code>            protected        mixed
+    <strong>findAndAssertLink</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $text)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a link and assert that it exists before returning it.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td><p>Link text to match</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasElementsMatchingText">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_hasElementsMatchingText">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 542</div>
+        <code>            protected        bool
+    <strong>hasElementsMatchingText</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $selector, string $text)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether an element containing the specified text exists.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$selector</td>
+                <td><p>CSS selector</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td><p>Expected text</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertEqualsWithTimeout">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_assertEqualsWithTimeout">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 561</div>
+        <code>            protected        void
+    <strong>assertEqualsWithTimeout</strong>(mixed $expected, callable $callback, int $timeout = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wait for a callback to return the expected value</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$expected</td>
+                <td><p>Expected value</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td>Callback</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td><p>Wait timeout (in ms)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_performSearch">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_performSearch">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 588</div>
+        <code>            protected        <abbr title="Behat\Mink\Element\Element">Element</abbr>
+    <strong>performSearch</strong>(string $query, string $handler = null, string $path = &#039;/Search&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Search for the specified query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td><p>Search term(s)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Search type (optional)</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td><p>Path to use as search starting point (optional)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_waitForPageLoad">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_waitForPageLoad">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 610</div>
+        <code>            protected        void
+    <strong>waitForPageLoad</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, int $timeout = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wait for page load (full page or any element) to complete</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td><p>Wait timeout (in ms)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_closeLightbox">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_closeLightbox">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 661</div>
+        <code>            protected        void
+    <strong>closeLightbox</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, bool $closeButton = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Verify that lightbox title contains the expected value</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$closeButton</td>
+                <td><p>Whether there should be a close button in the
+modal body</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_waitForLightboxHidden">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_waitForLightboxHidden">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 678</div>
+        <code>            protected        void
+    <strong>waitForLightboxHidden</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wait for Lightbox to become hidden if it isn't already.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertLightboxTitle">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_assertLightboxTitle">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 694</div>
+        <code>            protected        void
+    <strong>assertLightboxTitle</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $title)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Verify that lightbox title contains the expected value</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td><p>Expected title</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertLightboxWarning">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_assertLightboxWarning">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 710</div>
+        <code>            protected        void
+    <strong>assertLightboxWarning</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, string $message)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Mink support function: assert a warning message in the lightbox.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Page element</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Expected message</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_logWarning">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 727</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $consoleMsg, string $logMsg = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$consoleMsg</td>
+                <td><p>Message to output to console</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$logMsg</td>
+                <td><p>Message to output to PHP error log</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_setUp">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 740</div>
+        <code>                    void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard setup method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tearDown">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_tearDown">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 761</div>
+        <code>                    void
+    <strong>tearDown</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard teardown method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tearDownAfterClass">
+        <div class="location">in <a href="../../VuFindTest/Integration/MinkTestCase.html#method_tearDownAfterClass">
+<abbr title="VuFindTest\Integration\MinkTestCase">MinkTestCase</abbr></a> at line 802</div>
+        <code>        static            void
+    <strong>tearDownAfterClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard tear-down.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilteredSearch">
+        <div class="location">at line 54</div>
+        <code>            protected        <abbr title="Behat\Mink\Element\Element">Element</abbr>
+    <strong>getFilteredSearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get filtered search</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_facetApplyProcedure">
+        <div class="location">at line 68</div>
+        <code>            protected        void
+    <strong>facetApplyProcedure</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for simple facet application test</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Mink page object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_facetListProcedure">
+        <div class="location">at line 100</div>
+        <code>            protected        void
+    <strong>facetListProcedure</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page, int $limit, bool $exclusionActive = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function for facets lists</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Mink page object</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td><p>Configured lightbox length</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$exclusionActive</td>
+                <td><p>Is facet exclusion on?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testApplyFacet">
+        <div class="location">at line 168</div>
+        <code>                    void
+    <strong>testApplyFacet</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test applying a facet to filter results (standard facet sidebar)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testApplyFacetDeferred">
+        <div class="location">at line 185</div>
+        <code>                    void
+    <strong>testApplyFacetDeferred</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test applying a facet to filter results (deferred facet sidebar)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testFacetLightbox">
+        <div class="location">at line 211</div>
+        <code>                    void
+    <strong>testFacetLightbox</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test expanding facets into the lightbox</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testFacetLightboxMoreSetting">
+        <div class="location">at line 240</div>
+        <code>                    void
+    <strong>testFacetLightboxMoreSetting</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test expanding facets into the lightbox</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testFacetLightboxExclusion">
+        <div class="location">at line 270</div>
+        <code>                    void
+    <strong>testFacetLightboxExclusion</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that exclusion works properly deep in lightbox results.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clickHierarchyFacet">
+        <div class="location">at line 298</div>
+        <code>            protected        void
+    <strong>clickHierarchyFacet</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method to click a hierarchical facet.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Mink page object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHierarchicalFacets">
+        <div class="location">at line 315</div>
+        <code>                    void
+    <strong>testHierarchicalFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that hierarchy facets work properly.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testHierarchicalFacetExclude">
+        <div class="location">at line 338</div>
+        <code>                    void
+    <strong>testHierarchicalFacetExclude</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that hierarchy facet exclusion works properly.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCollapseStatePersistence">
+        <div class="location">at line 384</div>
+        <code>                    void
+    <strong>testCollapseStatePersistence</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that we can persist uncollapsed state of collapsed facets</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertFilterIsStillThere">
+        <div class="location">at line 424</div>
+        <code>            protected        void
+    <strong>assertFilterIsStillThere</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the filter used by these tests is still applied.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Mink page object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertNoFilters">
+        <div class="location">at line 437</div>
+        <code>            protected        void
+    <strong>assertNoFilters</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that no filters are applied.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Mink page object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertNoResetFiltersButton">
+        <div class="location">at line 450</div>
+        <code>            protected        void
+    <strong>assertNoResetFiltersButton</strong>(<abbr title="Behat\Mink\Element\Element">Element</abbr> $page)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the &quot;reset filters&quot; button is not present.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Behat\Mink\Element\Element">Element</abbr></td>
+                <td>$page</td>
+                <td><p>Mink page object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDefaultRetainFiltersBehavior">
+        <div class="location">at line 461</div>
+        <code>                    void
+    <strong>testDefaultRetainFiltersBehavior</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test retain current filters default behavior</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testFiltersOnRecord">
+        <div class="location">at line 481</div>
+        <code>                    void
+    <strong>testFiltersOnRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that filters carry over to selected records and are retained
+from there.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testNeverRetainFiltersBehavior">
+        <div class="location">at line 500</div>
+        <code>                    void
+    <strong>testNeverRetainFiltersBehavior</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test &quot;never retain filters&quot; configurable behavior</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDefaultFiltersWithResetButton">
+        <div class="location">at line 523</div>
+        <code>                    void
+    <strong>testDefaultFiltersWithResetButton</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test resetting to a default filter state</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testOrFacets">
+        <div class="location">at line 562</div>
+        <code>                    void
+    <strong>testOrFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that OR facets work as expected.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

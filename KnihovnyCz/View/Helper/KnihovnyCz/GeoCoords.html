@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>GeoCoords</strong>        extends <abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr>
+    <strong>GeoCoords</strong>        extends <a href="../../../../VuFind/View/Helper/Root/GeoCoords.html"><abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr></a>
 </p>
 
                 <p>
@@ -102,16 +102,76 @@
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_enabled">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$enabled</td>
+                <td class="last"><p>Is Map Search enabled?</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GeoCoords.html#property_enabled">
+<abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_coords">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$coords</td>
+                <td class="last"><p>Default coordinates</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GeoCoords.html#property_coords">
+<abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_geoField">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$geoField</td>
+                <td class="last"><p>Get geoField variable name</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GeoCoords.html#property_geoField">
+<abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $coords)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GeoCoords.html#method___construct">
+<abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_recommendationEnabled">recommendationEnabled</a>(array $settings)
+        
+                                            <p><p>Check if the relevant recommendation module is enabled; if not, there is no
+point in generating a search link. Note that right now we are assuming it is
+set up as a default top recommendation; this may need to be made more
+flexible in future to account for more use cases.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/View/Helper/Root/GeoCoords.html#method_recommendationEnabled">
+<abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string|bool
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_getSearchUrl">getSearchUrl</a>(<abbr title="VuFind\Search\Base\Options">Options</abbr> $options)
+                    <a href="#method_getSearchUrl">getSearchUrl</a>(<a href="../../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a> $options)
         
                                             <p><p>Get search URL if geo search is enabled for the specified search class ID,
 false if disabled.</p></p>                </div>
@@ -124,10 +184,92 @@ false if disabled.</p></p>                </div>
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/GeoCoords.html#method___construct">
+<abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr></a> at line 69</div>
+        <code>                    
+    <strong>__construct</strong>(string $coords)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$coords</td>
+                <td><p>Default coordinates</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recommendationEnabled">
+        <div class="location">in <a href="../../../../VuFind/View/Helper/Root/GeoCoords.html#method_recommendationEnabled">
+<abbr title="VuFind\View\Helper\Root\GeoCoords">GeoCoords</abbr></a> at line 84</div>
+        <code>            protected        bool
+    <strong>recommendationEnabled</strong>(array $settings)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the relevant recommendation module is enabled; if not, there is no
+point in generating a search link. Note that right now we are assuming it is
+set up as a default top recommendation; this may need to be made more
+flexible in future to account for more use cases.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td><p>Recommendation settings</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getSearchUrl">
         <div class="location">at line 54</div>
         <code>                    string|bool
-    <strong>getSearchUrl</strong>(<abbr title="VuFind\Search\Base\Options">Options</abbr> $options)
+    <strong>getSearchUrl</strong>(<a href="../../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a> $options)
         </code>
     </h3>
     <div class="details">    
@@ -144,7 +286,7 @@ false if disabled.</p></p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Search\Base\Options">Options</abbr></td>
+                <td><a href="../../../../VuFind/Search/Base/Options.html"><abbr title="VuFind\Search\Base\Options">Options</abbr></a></td>
                 <td>$options</td>
                 <td><p>Search options</p></td>
             </tr>

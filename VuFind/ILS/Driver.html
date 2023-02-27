@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\ILS\Driver | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:VuFind_ILS_Driver" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/ILS.html">ILS</a></li><li class="backslash">\</li><li><a href="../../VuFind/ILS/Driver.html">Driver</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>VuFind\ILS\Driver</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/AbstractAPI.html"><abbr title="VuFind\ILS\Driver\AbstractAPI">AbstractAPI</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract Driver for API-based ILS drivers</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/AbstractBase.html"><abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a>    </div>
+                <div class="col-md-6"><p>Default ILS driver base class.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Aleph.html"><abbr title="VuFind\ILS\Driver\Aleph">Aleph</abbr></a>    </div>
+                <div class="col-md-6"><p>Aleph ILS driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/AlephFactory.html"><abbr title="VuFind\ILS\Driver\AlephFactory">AlephFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Aleph ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/AlephTranslator.html"><abbr title="VuFind\ILS\Driver\AlephTranslator">AlephTranslator</abbr></a>    </div>
+                <div class="col-md-6"><p>Aleph Translator Class</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Alma.html"><abbr title="VuFind\ILS\Driver\Alma">Alma</abbr></a>    </div>
+                <div class="col-md-6"><p>Alma ILS Driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/AlmaFactory.html"><abbr title="VuFind\ILS\Driver\AlmaFactory">AlmaFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Alma ILS driver factory.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Amicus.html"><abbr title="VuFind\ILS\Driver\Amicus">Amicus</abbr></a>    </div>
+                <div class="col-md-6"><p>Amicus ILS Driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/DAIA.html"><abbr title="VuFind\ILS\Driver\DAIA">DAIA</abbr></a>    </div>
+                <div class="col-md-6"><p>ILS Driver for VuFind to query availability information via DAIA.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Demo.html"><abbr title="VuFind\ILS\Driver\Demo">Demo</abbr></a>    </div>
+                <div class="col-md-6"><p>Advanced Dummy ILS Driver -- Returns sample values based on Solr index.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/DemoFactory.html"><abbr title="VuFind\ILS\Driver\DemoFactory">DemoFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Demo ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/DriverWithDateConverterFactory.html"><abbr title="VuFind\ILS\Driver\DriverWithDateConverterFactory">DriverWithDateConverterFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Generic factory suitable for most ILS drivers.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Evergreen.html"><abbr title="VuFind\ILS\Driver\Evergreen">Evergreen</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Connector for Evergreen</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Folio.html"><abbr title="VuFind\ILS\Driver\Folio">Folio</abbr></a>    </div>
+                <div class="col-md-6"><p>FOLIO REST API driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/FolioFactory.html"><abbr title="VuFind\ILS\Driver\FolioFactory">FolioFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Folio ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/GeniePlus.html"><abbr title="VuFind\ILS\Driver\GeniePlus">GeniePlus</abbr></a>    </div>
+                <div class="col-md-6"><p>GeniePlus API driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/GeniePlusFactory.html"><abbr title="VuFind\ILS\Driver\GeniePlusFactory">GeniePlusFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for GeniePlus ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Horizon.html"><abbr title="VuFind\ILS\Driver\Horizon">Horizon</abbr></a>    </div>
+                <div class="col-md-6"><p>Horizon ILS Driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/HorizonXMLAPI.html"><abbr title="VuFind\ILS\Driver\HorizonXMLAPI">HorizonXMLAPI</abbr></a>    </div>
+                <div class="col-md-6"><p>Horizon ILS Driver (w/ XML API support)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Innovative.html"><abbr title="VuFind\ILS\Driver\Innovative">Innovative</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Connector for Innovative</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Koha.html"><abbr title="VuFind\ILS\Driver\Koha">Koha</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Driver for Koha (version: 3.02)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/KohaILSDI.html"><abbr title="VuFind\ILS\Driver\KohaILSDI">KohaILSDI</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Driver for Koha, using web APIs (ILSDI)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/KohaRest.html"><abbr title="VuFind\ILS\Driver\KohaRest">KohaRest</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Driver for Koha, using REST API</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/KohaRestFactory.html"><abbr title="VuFind\ILS\Driver\KohaRestFactory">KohaRestFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for KohaRest ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a>    </div>
+                <div class="col-md-6"><p>Multiple Backend Driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/MultiBackendFactory.html"><abbr title="VuFind\ILS\Driver\MultiBackendFactory">MultiBackendFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for MultiBackend ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/NewGenLib.html"><abbr title="VuFind\ILS\Driver\NewGenLib">NewGenLib</abbr></a>    </div>
+                <div class="col-md-6"><p>ILS Driver for NewGenLib</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/NoILS.html"><abbr title="VuFind\ILS\Driver\NoILS">NoILS</abbr></a>    </div>
+                <div class="col-md-6"><p>Driver for offline/missing ILS.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/NoILSFactory.html"><abbr title="VuFind\ILS\Driver\NoILSFactory">NoILSFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for NoILS ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/OAuth2TokenTrait.html"><abbr title="VuFind\ILS\Driver\OAuth2TokenTrait">OAuth2TokenTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait OAuth2TokenTraitTest</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/PAIA.html"><abbr title="VuFind\ILS\Driver\PAIA">PAIA</abbr></a>    </div>
+                <div class="col-md-6"><p>PAIA ILS Driver for VuFind to get patron information</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/PAIAFactory.html"><abbr title="VuFind\ILS\Driver\PAIAFactory">PAIAFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for PAIA ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/PluginFactory.html"><abbr title="VuFind\ILS\Driver\PluginFactory">PluginFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>ILS driver plugin factory</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/PluginManager.html"><abbr title="VuFind\ILS\Driver\PluginManager">PluginManager</abbr></a>    </div>
+                <div class="col-md-6"><p>ILS driver plugin manager</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Polaris.html"><abbr title="VuFind\ILS\Driver\Polaris">Polaris</abbr></a>    </div>
+                <div class="col-md-6"><p>VuFind Connector for Polaris</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Sample.html"><abbr title="VuFind\ILS\Driver\Sample">Sample</abbr></a>    </div>
+                <div class="col-md-6"><p>Lightweight Dummy ILS Driver -- Always returns hard-coded sample values.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Sierra.html"><abbr title="VuFind\ILS\Driver\Sierra">Sierra</abbr></a>    </div>
+                <div class="col-md-6"><p>Sierra (III) ILS Driver for VuFind</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/SierraRest.html"><abbr title="VuFind\ILS\Driver\SierraRest">SierraRest</abbr></a>    </div>
+                <div class="col-md-6"><p>III Sierra REST API driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/SierraRestFactory.html"><abbr title="VuFind\ILS\Driver\SierraRestFactory">SierraRestFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for SierraRest ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Symphony.html"><abbr title="VuFind\ILS\Driver\Symphony">Symphony</abbr></a>    </div>
+                <div class="col-md-6"><p>Symphony Web Services (symws) ILS Driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/SymphonyFactory.html"><abbr title="VuFind\ILS\Driver\SymphonyFactory">SymphonyFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for Symphony ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Unicorn.html"><abbr title="VuFind\ILS\Driver\Unicorn">Unicorn</abbr></a>    </div>
+                <div class="col-md-6"><p>SirsiDynix Unicorn ILS Driver (VuFind side)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/UnicornFactory.html"><abbr title="VuFind\ILS\Driver\UnicornFactory">UnicornFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Class UnicornFactory</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Virtua.html"><abbr title="VuFind\ILS\Driver\Virtua">Virtua</abbr></a>    </div>
+                <div class="col-md-6"><p>VTLS Virtua Driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/Voyager.html"><abbr title="VuFind\ILS\Driver\Voyager">Voyager</abbr></a>    </div>
+                <div class="col-md-6"><p>Voyager ILS Driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/VoyagerRestful.html"><abbr title="VuFind\ILS\Driver\VoyagerRestful">VoyagerRestful</abbr></a>    </div>
+                <div class="col-md-6"><p>Voyager Restful ILS Driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/VoyagerRestfulFactory.html"><abbr title="VuFind\ILS\Driver\VoyagerRestfulFactory">VoyagerRestfulFactory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for VoyagerRestful ILS driver.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/XCNCIP2.html"><abbr title="VuFind\ILS\Driver\XCNCIP2">XCNCIP2</abbr></a>    </div>
+                <div class="col-md-6"><p>XC NCIP Toolkit (v2) ILS Driver</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/XCNCIP2Factory.html"><abbr title="VuFind\ILS\Driver\XCNCIP2Factory">XCNCIP2Factory</abbr></a>    </div>
+                <div class="col-md-6"><p>Factory for XCNCIP2 ILS driver.</p></div>
+            </div>
+            </div>
+            <h2>Interfaces</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="../../VuFind/ILS/Driver/DriverInterface.html"><abbr title="VuFind\ILS\Driver\DriverInterface">DriverInterface</abbr></a></em>
+                        </div>
+                <div class="col-md-6"><p>Catalog Specific Driver Class</p></div>
+            </div>
+            </div>
+    
+            <h2>Exceptions</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/ILS/Driver/AlephRestfulException.html"><abbr title="VuFind\ILS\Driver\AlephRestfulException">AlephRestfulException</abbr></a>    </div>
+                <div class="col-md-6"><p>ILS Exception</p></div>
+            </div>
+            </div>
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

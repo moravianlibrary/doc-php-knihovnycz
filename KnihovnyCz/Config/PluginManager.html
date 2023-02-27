@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>PluginManager</strong>        extends <abbr title="VuFind\Config\PluginManager">PluginManager</abbr>
+    <strong>PluginManager</strong>        extends <a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
 </p>
 
                 <p>
@@ -115,6 +115,28 @@
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validate">validate</a>(mixed $plugin)
+        
+                                            <p><p>Validate the plugin</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Config/PluginManager.html#method_validate">
+<abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Config\Config">Config</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_reload">reload</a>(string $id)
+        
+                                            <p><p>Reload a configuration and return the new version</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Config/PluginManager.html#method_reload">
+<abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></small></div>
             </div>
             </div>
 
@@ -155,6 +177,95 @@ container, this value will be passed to the parent constructor.</p></td>
             </table>
 
             
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validate">
+        <div class="location">in <a href="../../VuFind/Config/PluginManager.html#method_validate">
+<abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> at line 72</div>
+        <code>                    void
+    <strong>validate</strong>(mixed $plugin)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate the plugin</p></p>                <p><p>Checks that the filter loaded is either a valid callback or an instance
+of FilterInterface.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$plugin</td>
+                <td><p>Plugin to validate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reload">
+        <div class="location">in <a href="../../VuFind/Config/PluginManager.html#method_reload">
+<abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> at line 84</div>
+        <code>                    <abbr title="Laminas\Config\Config">Config</abbr>
+    <strong>reload</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reload a configuration and return the new version</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Service identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             

@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>Options</strong>        extends <abbr title="VuFind\Search\Favorites\Options">Options</abbr>
+    <strong>Options</strong>        extends <a href="../../../VuFind/Search/Favorites/Options.html"><abbr title="VuFind\Search\Favorites\Options">Options</abbr></a>
 </p>
 
                 <p>
@@ -100,21 +100,1135 @@
             <div class="description">
             <p><p>Search Favorites Options</p></p>                    </div>
             
+                <h2>Traits</h2>
+
         
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Lightweight translator aware marker interface (used as an alternative to
+\Laminas\I18n\Translator\TranslatorAwareInterface, which requires an excessive
+number of methods to be implemented).  If we switch to PHP 5.4 traits in the
+future, we can eliminate this interface in favor of the default Laminas version.</p></div>
+            </div>
+            </div>
     
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_translator">
+                                        protected                                        <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$translator</td>
+                <td class="last">Translator</td>
+                <td><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#property_translator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sortOptions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$sortOptions</td>
+                <td class="last"><p>Available sort options</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_sortOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_facetSortOptions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$facetSortOptions</td>
+                <td class="last"><p>Available sort options for facets</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_facetSortOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultSort">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultSort</td>
+                <td class="last"><p>Overall default sort option</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_defaultSort">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultSortByHandler">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$defaultSortByHandler</td>
+                <td class="last"><p>Handler-specific defaults</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_defaultSortByHandler">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rssSort">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$rssSort</td>
+                <td class="last"><p>RSS-specific sort option</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_rssSort">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultHandler">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultHandler</td>
+                <td class="last"><p>Default search handler</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_defaultHandler">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_advancedHandlers">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$advancedHandlers</td>
+                <td class="last"><p>Advanced search handlers</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_advancedHandlers">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_basicHandlers">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$basicHandlers</td>
+                <td class="last"><p>Basic search handlers</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_basicHandlers">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_specialAdvancedFacets">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$specialAdvancedFacets</td>
+                <td class="last"><p>Special advanced facet settings</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_specialAdvancedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_retainFiltersByDefault">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$retainFiltersByDefault</td>
+                <td class="last"><p>Should we retain filters by default?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_retainFiltersByDefault">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultFilters">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$defaultFilters</td>
+                <td class="last"><p>Default filters to apply to new searches</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_defaultFilters">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultLimit">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$defaultLimit</td>
+                <td class="last"><p>Default limit option</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_defaultLimit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limitOptions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$limitOptions</td>
+                <td class="last"><p>Available limit options</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_limitOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultView">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultView</td>
+                <td class="last"><p>Default view option</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_defaultView">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewOptions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$viewOptions</td>
+                <td class="last"><p>Available view options</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_viewOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultFacetDelimiter">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultFacetDelimiter</td>
+                <td class="last"><p>Default delimiter used for delimited facets</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_defaultFacetDelimiter">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_delimitedFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$delimitedFacets</td>
+                <td class="last"><p>Facet settings</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_delimitedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_processedDelimitedFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$processedDelimitedFacets</td>
+                <td class="last"><p>Convenient field =&gt; delimiter lookup array derived from $delimitedFacets.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_processedDelimitedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_translatedFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$translatedFacets</td>
+                <td class="last"><p>Facet settings</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_translatedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_translatedFacetsTextDomains">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$translatedFacetsTextDomains</td>
+                <td class="last"><p>Text domains for translated facets</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_translatedFacetsTextDomains">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_translatedFacetsFormats">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$translatedFacetsFormats</td>
+                <td class="last"><p>Formats for translated facets</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_translatedFacetsFormats">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hierarchicalFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$hierarchicalFacets</td>
+                <td class="last"><p>Hierarchical facets</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_hierarchicalFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hierarchicalFacetSeparators">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$hierarchicalFacetSeparators</td>
+                <td class="last"><p>Hierarchical facet separators</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_hierarchicalFacetSeparators">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_spellcheck">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$spellcheck</td>
+                <td class="last"><p>Spelling setting</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_spellcheck">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shards">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$shards</td>
+                <td class="last"><p>Available shards</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_shards">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultSelectedShards">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$defaultSelectedShards</td>
+                <td class="last"><p>Default selected shards</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_defaultSelectedShards">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_visibleShardCheckboxes">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$visibleShardCheckboxes</td>
+                <td class="last"><p>Should we present shard checkboxes to the user?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_visibleShardCheckboxes">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_highlight">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$highlight</td>
+                <td class="last"><p>Highlighting setting</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_highlight">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_autocompleteEnabled">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$autocompleteEnabled</td>
+                <td class="last"><p>Autocomplete setting</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_autocompleteEnabled">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_autocompleteAutoSubmit">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$autocompleteAutoSubmit</td>
+                <td class="last"><p>Autocomplete auto submit setting</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_autocompleteAutoSubmit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mainIni">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$mainIni</td>
+                <td class="last"><p>Configuration file to read global settings from</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_mainIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchIni">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchIni</td>
+                <td class="last"><p>Configuration file to read search settings from</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_searchIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_facetsIni">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$facetsIni</td>
+                <td class="last"><p>Configuration file to read facet settings from</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_facetsIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_listviewOption">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$listviewOption</td>
+                <td class="last"><p>Active list view option (see [List] in searches.ini).</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_listviewOption">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_configLoader">
+                                        protected                                        <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$configLoader</td>
+                <td class="last"><p>Configuration loader</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_configLoader">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resultLimit">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$resultLimit</td>
+                <td class="last"><p>Maximum number of results (no limit by default)</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_resultLimit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_firstlastNavigation">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$firstlastNavigation</td>
+                <td class="last"><p>Is the first/last navigation scroller enabled?</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#property_firstlastNavigation">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTranslator">setTranslator</a>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        
+                                            <p><p>Set a translator</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslator">getTranslator</a>()
+        
+                                            <p><p>Get translator object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslatorLocale">getTranslatorLocale</a>(string $default = &#039;en&#039;)
+        
+                                            <p><p>Get the locale from the translator.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translate">translate</a>(string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateWithPrefix">translateWithPrefix</a>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateString">translateString</a>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        
+                                            <p><p>Get translation for a string</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractTextDomain">extractTextDomain</a>(string|object|array $target)
+        
+                                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Config\PluginManager">PluginManager</abbr> $configLoader)
+                    <a href="#method___construct">__construct</a>(<a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configLoader)
         
                                             <p>Constructor</p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setConfigLoader">setConfigLoader</a>(<a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configLoader)
+        
+                                            <p><p>Set the config loader</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_setConfigLoader">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSpecialAdvancedFacets">getSpecialAdvancedFacets</a>()
+        
+                                            <p><p>Get string listing special advanced facet types.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getSpecialAdvancedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAdvancedHandlers">getAdvancedHandlers</a>()
+        
+                                            <p><p>Basic 'getter' for advanced search handlers.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getAdvancedHandlers">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBasicHandlers">getBasicHandlers</a>()
+        
+                                            <p><p>Basic 'getter' for basic search handlers.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getBasicHandlers">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHandlerForLabel">getHandlerForLabel</a>(string $label)
+        
+                                            <p><p>Given a label from the configuration file, return the name of the matching
+handler (basic checked first, then advanced); return the default handler
+if no match is found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getHandlerForLabel">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLabelForBasicHandler">getLabelForBasicHandler</a>(string $handler)
+        
+                                            <p><p>Given a basic handler name, return the corresponding label (or false
+if none found):</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getLabelForBasicHandler">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultHandler">getDefaultHandler</a>()
+        
+                                            <p><p>Get default search handler.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getDefaultHandler">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultLimit">getDefaultLimit</a>()
+        
+                                            <p><p>Get default limit setting.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getDefaultLimit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLimitOptions">getLimitOptions</a>()
+        
+                                            <p><p>Get an array of limit options.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getLimitOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFacetsIni">getFacetsIni</a>()
+        
+                                            <p><p>Get the name of the ini file used for configuring facet parameters in this
+object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getFacetsIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMainIni">getMainIni</a>()
+        
+                                            <p><p>Get the name of the ini file used for loading primary settings in this
+object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getMainIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchIni">getSearchIni</a>()
+        
+                                            <p><p>Get the name of the ini file used for configuring search parameters in this
+object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getSearchIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setLimitOptions">setLimitOptions</a>(array $options)
+        
+                                            <p><p>Override the limit options.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_setLimitOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSortOptions">getSortOptions</a>()
+        
+                                            <p><p>Get an array of sort options.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getSortOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFacetSortOptions">getFacetSortOptions</a>(string $facet = &#039;*&#039;)
+        
+                                            <p><p>Get an array of sort options for a facet.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getFacetSortOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultSortByHandler">getDefaultSortByHandler</a>(string $handler = null)
+        
+                                            <p><p>Get the default sort option for the specified search handler.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getDefaultSortByHandler">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRssSort">getRssSort</a>(string $sort)
+        
+                                            <p><p>Return the sorting value for RSS mode</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getRssSort">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultView">getDefaultView</a>()
+        
+                                            <p><p>Get default view setting.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getDefaultView">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getViewOptions">getViewOptions</a>()
+        
+                                            <p><p>Get an array of view options.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getViewOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultFacetDelimiter">getDefaultFacetDelimiter</a>()
+        
+                                            <p><p>Returns the defaultFacetDelimiter value.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getDefaultFacetDelimiter">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDefaultFacetDelimiter">setDefaultFacetDelimiter</a>(string $defaultFacetDelimiter)
+        
+                                            <p><p>Set the defaultFacetDelimiter value.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_setDefaultFacetDelimiter">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDelimitedFacets">getDelimitedFacets</a>(bool $processed = false)
+        
+                                            <p><p>Get a list of delimited facets</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getDelimitedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDelimitedFacets">setDelimitedFacets</a>(array $delimitedFacets)
+        
+                                            <p><p>Set the delimitedFacets value.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_setDelimitedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslatedFacets">getTranslatedFacets</a>()
+        
+                                            <p><p>Get a list of facets that are subject to translation.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getTranslatedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTranslatedFacets">setTranslatedFacets</a>(array $facets)
+        
+                                            <p><p>Configure facet translation using an array of field names with optional
+colon-separated text domains.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_setTranslatedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTextDomainForTranslatedFacet">getTextDomainForTranslatedFacet</a>(string $field)
+        
+                                            <p><p>Look up the text domain for use when translating a particular facet
+field.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getTextDomainForTranslatedFacet">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFormatForTranslatedFacet">getFormatForTranslatedFacet</a>(string $field)
+        
+                                            <p><p>Look up the format for use when translating a particular facet
+field.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getFormatForTranslatedFacet">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHierarchicalFacets">getHierarchicalFacets</a>()
+        
+                                            <p><p>Get hierarchical facet fields.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getHierarchicalFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHierarchicalFacetSeparators">getHierarchicalFacetSeparators</a>()
+        
+                                            <p><p>Get hierarchical facet separators.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getHierarchicalFacetSeparators">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_spellcheckEnabled">spellcheckEnabled</a>(bool $bool = null)
+        
+                                            <p><p>Get current spellcheck setting and (optionally) change it.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_spellcheckEnabled">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_highlightEnabled">highlightEnabled</a>()
+        
+                                            <p><p>Is highlighting enabled?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_highlightEnabled">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHumanReadableFieldName">getHumanReadableFieldName</a>(string $field)
+        
+                                            <p><p>Translate a field name to a displayable string for rendering a query in
+human-readable format:</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getHumanReadableFieldName">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_disableHighlighting">disableHighlighting</a>()
+        
+                                            <p><p>Turn off highlighting.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_disableHighlighting">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_autocompleteEnabled">autocompleteEnabled</a>()
+        
+                                            <p><p>Is autocomplete enabled?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_autocompleteEnabled">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_autocompleteAutoSubmit">autocompleteAutoSubmit</a>()
+        
+                                            <p><p>Should autocomplete auto submit?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_autocompleteAutoSubmit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getListViewOption">getListViewOption</a>()
+        
+                                            <p><p>Get a string of the listviewOption (full or tab).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getListViewOption">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchAction">getSearchAction</a>()
+        
+                                            <p><p>Return the route name for the search results action.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Favorites/Options.html#method_getSearchAction">
+<abbr title="VuFind\Search\Favorites\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchHomeAction">getSearchHomeAction</a>()
+        
+                                            <p><p>Return the route name for the search home action.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getSearchHomeAction">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAdvancedSearchAction">getAdvancedSearchAction</a>()
+        
+                                            <p><p>Return the route name of the action used for performing advanced searches.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getAdvancedSearchAction">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFacetListAction">getFacetListAction</a>()
+        
+                                            <p><p>Return the route name for the facet list action. Returns false to cover
+unimplemented support.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getFacetListAction">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getVersionsAction">getVersionsAction</a>()
+        
+                                            <p><p>Return the route name for the versions search action. Returns false to cover
+unimplemented support.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getVersionsAction">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsCart">supportsCart</a>()
+        
+                                            <p><p>Does this search option support the cart/book bag?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_supportsCart">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultFilters">getDefaultFilters</a>()
+        
+                                            <p><p>Get default filters to apply to an empty search.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getDefaultFilters">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRetainFilterSetting">getRetainFilterSetting</a>()
+        
+                                            <p><p>Should filter settings be retained across searches by default?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getRetainFilterSetting">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getShards">getShards</a>()
+        
+                                            <p><p>Get an associative array of available shards (key = internal VuFind ID for
+this shard; value = details needed to connect to shard; empty for non-sharded
+data sources).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getShards">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultSelectedShards">getDefaultSelectedShards</a>()
+        
+                                            <p><p>Get an array of default selected shards (values correspond with keys returned
+by getShards().</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getDefaultSelectedShards">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_showShardCheckboxes">showShardCheckboxes</a>()
+        
+                                            <p><p>Should we display shard checkboxes for this object?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_showShardCheckboxes">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getVisibleSearchResultLimit">getVisibleSearchResultLimit</a>()
+        
+                                            <p><p>If there is a limit to how many search results a user can access, this
+method will return that limit.  If there is no limit, this will return
+-1.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getVisibleSearchResultLimit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAPISettings">getAPISettings</a>()
+        
+                                            <p><p>Load all API-related settings from the relevant ini file(s).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getAPISettings">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecommendationSettings">getRecommendationSettings</a>(string $handler = null)
+        
+                                            <p><p>Load all recommendation settings from the relevant ini file.  Returns an
+associative array where the key is the location of the recommendations (top
+or side) and the value is the settings found in the file (which may be either
+a single string or an array of strings).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Favorites/Options.html#method_getRecommendationSettings">
+<abbr title="VuFind\Search\Favorites\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchClassId">getSearchClassId</a>()
+        
+                                            <p><p>Get the identifier used for naming the various search classes in this family.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getSearchClassId">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsFirstLastNavigation">supportsFirstLastNavigation</a>()
+        
+                                            <p><p>Should we include first/last options in result scroller navigation?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_supportsFirstLastNavigation">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsScheduledSearch">supportsScheduledSearch</a>()
+        
+                                            <p><p>Does this search backend support scheduled searching?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_supportsScheduledSearch">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSpellingNormalizer">getSpellingNormalizer</a>()
+        
+                                            <p><p>Return the callback used for normalization within this backend.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_getSpellingNormalizer">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configureAutocomplete">configureAutocomplete</a>(<abbr title="Laminas\Config\Config">Config</abbr> $searchSettings = null)
+        
+                                            <p><p>Configure autocomplete preferences from an .ini file.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_configureAutocomplete">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_limitOrderOverride">limitOrderOverride</a>(string $limit)
+        
+                                            <p><p>Get advanced search limits that override the natural sorting to
+display at the top.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Base/Options.html#method_limitOrderOverride">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a></small></div>
             </div>
             </div>
 
@@ -123,10 +1237,358 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_setTranslator">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 60</div>
+        <code>                    <a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+    <strong>setTranslator</strong>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a translator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td>Translator</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslator">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 71</div>
+        <code>                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translator object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslatorLocale">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 83</div>
+        <code>                    string
+    <strong>getTranslatorLocale</strong>(string $default = &#039;en&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the locale from the translator.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default to use if translator absent.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translate">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 103</div>
+        <code>                    string
+    <strong>translate</strong>(string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateWithPrefix">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 152</div>
+        <code>                    string
+    <strong>translateWithPrefix</strong>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td><p>Translation key prefix</p></td>
+            </tr>
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateString">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 178</div>
+        <code>            protected        string
+    <strong>translateString</strong>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translation for a string</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>String to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is found
+(null for no default).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Text domain (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractTextDomain">
+        <div class="location">in <a href="../../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 215</div>
+        <code>            protected        array
+    <strong>extractTextDomain</strong>(string|object|array $target)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">at line 46</div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="VuFind\Config\PluginManager">PluginManager</abbr> $configLoader)
+    <strong>__construct</strong>(<a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configLoader)
         </code>
     </h3>
     <div class="details">    
@@ -142,13 +1604,2122 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></td>
+                <td><a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
                 <td>$configLoader</td>
                 <td><p>Config loader</p></td>
             </tr>
             </table>
 
             
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfigLoader">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_setConfigLoader">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 339</div>
+        <code>                    void
+    <strong>setConfigLoader</strong>(<a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a> $configLoader)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the config loader</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
+                <td>$configLoader</td>
+                <td><p>Config loader</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSpecialAdvancedFacets">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getSpecialAdvancedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 349</div>
+        <code>                    string
+    <strong>getSpecialAdvancedFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get string listing special advanced facet types.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdvancedHandlers">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getAdvancedHandlers">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 359</div>
+        <code>                    array
+    <strong>getAdvancedHandlers</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' for advanced search handlers.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBasicHandlers">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getBasicHandlers">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 369</div>
+        <code>                    array
+    <strong>getBasicHandlers</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Basic 'getter' for basic search handlers.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandlerForLabel">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getHandlerForLabel">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 383</div>
+        <code>                    string
+    <strong>getHandlerForLabel</strong>(string $label)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a label from the configuration file, return the name of the matching
+handler (basic checked first, then advanced); return the default handler
+if no match is found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$label</td>
+                <td><p>Label to search for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLabelForBasicHandler">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getLabelForBasicHandler">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 408</div>
+        <code>                    string
+    <strong>getLabelForBasicHandler</strong>(string $handler)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a basic handler name, return the corresponding label (or false
+if none found):</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Handler name to look up.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultHandler">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getDefaultHandler">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 419</div>
+        <code>                    string
+    <strong>getDefaultHandler</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get default search handler.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultLimit">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getDefaultLimit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 432</div>
+        <code>                    int
+    <strong>getDefaultLimit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get default limit setting.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLimitOptions">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getLimitOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 442</div>
+        <code>                    array
+    <strong>getLimitOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of limit options.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacetsIni">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getFacetsIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 453</div>
+        <code>                    string
+    <strong>getFacetsIni</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the ini file used for configuring facet parameters in this
+object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMainIni">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getMainIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 464</div>
+        <code>                    string
+    <strong>getMainIni</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the ini file used for loading primary settings in this
+object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchIni">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getSearchIni">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 475</div>
+        <code>                    string
+    <strong>getSearchIni</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the ini file used for configuring search parameters in this
+object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLimitOptions">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_setLimitOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 487</div>
+        <code>                    void
+    <strong>setLimitOptions</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Override the limit options.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>New options to set.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSortOptions">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getSortOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 505</div>
+        <code>                    array
+    <strong>getSortOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of sort options.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacetSortOptions">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getFacetSortOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 517</div>
+        <code>                    array
+    <strong>getFacetSortOptions</strong>(string $facet = &#039;*&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of sort options for a facet.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$facet</td>
+                <td>Facet</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultSortByHandler">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getDefaultSortByHandler">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 529</div>
+        <code>                    string
+    <strong>getDefaultSortByHandler</strong>(string $handler = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the default sort option for the specified search handler.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Search handler being used</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRssSort">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getRssSort">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 550</div>
+        <code>                    string
+    <strong>getRssSort</strong>(string $sort)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the sorting value for RSS mode</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sort</td>
+                <td><p>Sort setting to modify for RSS mode</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultView">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getDefaultView">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 566</div>
+        <code>                    int
+    <strong>getDefaultView</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get default view setting.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewOptions">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getViewOptions">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 576</div>
+        <code>                    array
+    <strong>getViewOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of view options.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultFacetDelimiter">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getDefaultFacetDelimiter">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 586</div>
+        <code>                    string
+    <strong>getDefaultFacetDelimiter</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the defaultFacetDelimiter value.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultFacetDelimiter">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_setDefaultFacetDelimiter">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 599</div>
+        <code>                    void
+    <strong>setDefaultFacetDelimiter</strong>(string $defaultFacetDelimiter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the defaultFacetDelimiter value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$defaultFacetDelimiter</td>
+                <td><p>A default delimiter to be used with
+delimited facets</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDelimitedFacets">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getDelimitedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 613</div>
+        <code>                    array
+    <strong>getDelimitedFacets</strong>(bool $processed = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a list of delimited facets</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$processed</td>
+                <td><p>False = return raw values; true = process values into
+field =&gt; delimiter associative array.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDelimitedFacets">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_setDelimitedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 640</div>
+        <code>                    void
+    <strong>setDelimitedFacets</strong>(array $delimitedFacets)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the delimitedFacets value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$delimitedFacets</td>
+                <td><p>An array of delimited facet names</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslatedFacets">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getTranslatedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 651</div>
+        <code>                    array
+    <strong>getTranslatedFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a list of facets that are subject to translation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTranslatedFacets">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_setTranslatedFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 664</div>
+        <code>                    void
+    <strong>setTranslatedFacets</strong>(array $facets)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure facet translation using an array of field names with optional
+colon-separated text domains.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$facets</td>
+                <td><p>Incoming configuration.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTextDomainForTranslatedFacet">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getTextDomainForTranslatedFacet">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 691</div>
+        <code>                    string
+    <strong>getTextDomainForTranslatedFacet</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Look up the text domain for use when translating a particular facet
+field.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field name being translated</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatForTranslatedFacet">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getFormatForTranslatedFacet">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 704</div>
+        <code>                    string
+    <strong>getFormatForTranslatedFacet</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Look up the format for use when translating a particular facet
+field.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field name being translated</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHierarchicalFacets">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getHierarchicalFacets">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 714</div>
+        <code>                    array
+    <strong>getHierarchicalFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get hierarchical facet fields.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHierarchicalFacetSeparators">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getHierarchicalFacetSeparators">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 724</div>
+        <code>                    array
+    <strong>getHierarchicalFacetSeparators</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get hierarchical facet separators.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_spellcheckEnabled">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_spellcheckEnabled">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 736</div>
+        <code>                    bool
+    <strong>spellcheckEnabled</strong>(bool $bool = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get current spellcheck setting and (optionally) change it.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$bool</td>
+                <td><p>True to enable, false to disable, null to leave alone</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_highlightEnabled">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_highlightEnabled">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 749</div>
+        <code>                    bool
+    <strong>highlightEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is highlighting enabled?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHumanReadableFieldName">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getHumanReadableFieldName">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 762</div>
+        <code>                    string
+    <strong>getHumanReadableFieldName</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a field name to a displayable string for rendering a query in
+human-readable format:</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field name to display.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Human-readable version of field name.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableHighlighting">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_disableHighlighting">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 778</div>
+        <code>                    void
+    <strong>disableHighlighting</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Turn off highlighting.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_autocompleteEnabled">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_autocompleteEnabled">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 788</div>
+        <code>                    bool
+    <strong>autocompleteEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is autocomplete enabled?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_autocompleteAutoSubmit">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_autocompleteAutoSubmit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 798</div>
+        <code>                    bool
+    <strong>autocompleteAutoSubmit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Should autocomplete auto submit?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getListViewOption">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getListViewOption">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 808</div>
+        <code>                    string
+    <strong>getListViewOption</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a string of the listviewOption (full or tab).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchAction">
+        <div class="location">in <a href="../../../VuFind/Search/Favorites/Options.html#method_getSearchAction">
+<abbr title="VuFind\Search\Favorites\Options">Options</abbr></a> at line 72</div>
+        <code>                    string
+    <strong>getSearchAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the route name for the search results action.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchHomeAction">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getSearchHomeAction">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 825</div>
+        <code>                    string
+    <strong>getSearchHomeAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the route name for the search home action.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdvancedSearchAction">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getAdvancedSearchAction">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 839</div>
+        <code>                    string|bool
+    <strong>getAdvancedSearchAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the route name of the action used for performing advanced searches.</p></p>                <p><p>Returns false if the feature is not supported.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacetListAction">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getFacetListAction">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 851</div>
+        <code>                    string|bool
+    <strong>getFacetListAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the route name for the facet list action. Returns false to cover
+unimplemented support.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVersionsAction">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getVersionsAction">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 862</div>
+        <code>                    string|bool
+    <strong>getVersionsAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the route name for the versions search action. Returns false to cover
+unimplemented support.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsCart">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_supportsCart">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 872</div>
+        <code>                    bool
+    <strong>supportsCart</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does this search option support the cart/book bag?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultFilters">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getDefaultFilters">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 883</div>
+        <code>                    array
+    <strong>getDefaultFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get default filters to apply to an empty search.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRetainFilterSetting">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getRetainFilterSetting">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 893</div>
+        <code>                    bool
+    <strong>getRetainFilterSetting</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Should filter settings be retained across searches by default?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShards">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getShards">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 909</div>
+        <code>                    array
+    <strong>getShards</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an associative array of available shards (key = internal VuFind ID for
+this shard; value = details needed to connect to shard; empty for non-sharded
+data sources).</p></p>                <p><p>Although this mechanism was originally designed for Solr's sharding
+capabilities, it could also be useful for multi-database search situations
+(i.e. federated search, EBSCO's API, etc., etc.).</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultSelectedShards">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getDefaultSelectedShards">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 920</div>
+        <code>                    array
+    <strong>getDefaultSelectedShards</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of default selected shards (values correspond with keys returned
+by getShards().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_showShardCheckboxes">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_showShardCheckboxes">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 930</div>
+        <code>                    bool
+    <strong>showShardCheckboxes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Should we display shard checkboxes for this object?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVisibleSearchResultLimit">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getVisibleSearchResultLimit">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 942</div>
+        <code>                    int
+    <strong>getVisibleSearchResultLimit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>If there is a limit to how many search results a user can access, this
+method will return that limit.  If there is no limit, this will return
+-1.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAPISettings">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getAPISettings">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 952</div>
+        <code>                    array
+    <strong>getAPISettings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load all API-related settings from the relevant ini file(s).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecommendationSettings">
+        <div class="location">in <a href="../../../VuFind/Search/Favorites/Options.html#method_getRecommendationSettings">
+<abbr title="VuFind\Search\Favorites\Options">Options</abbr></a> at line 87</div>
+        <code>                    array
+    <strong>getRecommendationSettings</strong>(string $handler = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load all recommendation settings from the relevant ini file.  Returns an
+associative array where the key is the location of the recommendations (top
+or side) and the value is the settings found in the file (which may be either
+a single string or an array of strings).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Name of handler for which to load specific settings.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>associative: location (top/side/etc.) =&gt; search settings</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchClassId">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getSearchClassId">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 1028</div>
+        <code>                    string
+    <strong>getSearchClassId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the identifier used for naming the various search classes in this family.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsFirstLastNavigation">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_supportsFirstLastNavigation">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 1051</div>
+        <code>                    bool
+    <strong>supportsFirstLastNavigation</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Should we include first/last options in result scroller navigation?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsScheduledSearch">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_supportsScheduledSearch">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 1061</div>
+        <code>                    bool
+    <strong>supportsScheduledSearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does this search backend support scheduled searching?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSpellingNormalizer">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_getSpellingNormalizer">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 1072</div>
+        <code>                    callable
+    <strong>getSpellingNormalizer</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the callback used for normalization within this backend.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configureAutocomplete">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_configureAutocomplete">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 1084</div>
+        <code>            protected        void
+    <strong>configureAutocomplete</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $searchSettings = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure autocomplete preferences from an .ini file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$searchSettings</td>
+                <td><p>Object representation of .ini file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_limitOrderOverride">
+        <div class="location">in <a href="../../../VuFind/Search/Base/Options.html#method_limitOrderOverride">
+<abbr title="VuFind\Search\Base\Options">Options</abbr></a> at line 1101</div>
+        <code>                    array
+    <strong>limitOrderOverride</strong>(string $limit)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get advanced search limits that override the natural sorting to
+display at the top.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$limit</td>
+                <td><p>advanced search limit</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             

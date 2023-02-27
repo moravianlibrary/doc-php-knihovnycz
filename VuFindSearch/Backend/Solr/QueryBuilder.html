@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindSearch\Backend\Solr\QueryBuilder | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindSearch_Backend_Solr_QueryBuilder" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindSearch.html">VuFindSearch</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend.html">Backend</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend/Solr.html">Solr</a></li><li class="backslash">\</li><li>QueryBuilder</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>QueryBuilder    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>QueryBuilder</strong>        implements        <a href="../../../VuFindSearch/Backend/Solr/QueryBuilderInterface.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilderInterface">QueryBuilderInterface</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>SOLR QueryBuilder.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_defaultDismaxHandler">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$defaultDismaxHandler</td>
+                <td class="last"><p>Default dismax handler (if no DismaxHandler set in specs).</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_specs">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$specs</td>
+                <td class="last"><p>Search specs.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_exactSpecs">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$exactSpecs</td>
+                <td class="last"><p>Search specs for exact searches.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_globalExtraParams">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$globalExtraParams</td>
+                <td class="last"><p>Global extra Solr query parameters</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fieldsToHighlight">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$fieldsToHighlight</td>
+                <td class="last"><p>Solr fields to highlight. Also serves as a flag for whether to perform
+highlight-specific behavior; if the field list is empty, highlighting is
+skipped.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_createSpellingQuery">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$createSpellingQuery</td>
+                <td class="last"><p>Should we create the spellcheck.q parameter when appropriate?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_luceneHelper">
+                                        protected                                        <a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a>
+                                                                                
+                                    </td>
+                <td>$luceneHelper</td>
+                <td class="last"><p>Lucene syntax helper</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $specs = [], string $defaultDismaxHandler = &#039;dismax&#039;)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_build">build</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query)
+        
+                                            <p><p>Return SOLR search parameters based on a user query and params.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkParamConditions">checkParamConditions</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, array $conditions)
+        
+                                            <p><p>Check if the conditions match for an extra parameter</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasDismaxParamsField">hasDismaxParamsField</a>(array $searchTypes, string $field)
+        
+                                            <p><p>Check if any of the given search types has the field in DismaxParams</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchTypes">getSearchTypes</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query)
+        
+                                            <p><p>Get an array of search types used in the given search</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFieldsToHighlight">getFieldsToHighlight</a>(array $filter = [])
+        
+                                            <p><p>Get list of fields to highlight, filtered by array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setFieldsToHighlight">setFieldsToHighlight</a>(string $list)
+        
+                                            <p><p>Set list of fields to highlight, if any (or '*' for all). Set to an
+empty string (the default) to completely disable highlighting-related
+functionality.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCreateSpellingQuery">setCreateSpellingQuery</a>(bool $enable)
+        
+                                            <p><p>Control whether or not the QueryBuilder should create a spellcheck.q
+parameter. (Turned off by default).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSpecs">setSpecs</a>(array $specs)
+        
+                                            <p><p>Set query builder search specs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLuceneHelper">getLuceneHelper</a>()
+        
+                                            <p><p>Get Lucene syntax helper</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setLuceneHelper">setLuceneHelper</a>(<a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a> $helper)
+        
+                                            <p><p>Set Lucene syntax helper</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSearchHandler">getSearchHandler</a>(string $handler, string $searchString)
+        
+                                            <p><p>Return named search handler.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_reduceQueryGroup">reduceQueryGroup</a>(<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a> $group)
+        
+                                            <p><p>Reduce query group a single query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_reduceQueryGroupComponents">reduceQueryGroupComponents</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $component)
+        
+                                            <p><p>Reduce components of query group to a search string of a simple query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createSearchString">createSearchString</a>(string $string, <a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a> $handler = null)
+        
+                                            <p><p>Return search string based on input and handler.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fixTrailingQuestionMarks">fixTrailingQuestionMarks</a>(string $string)
+        
+                                            <p><p>If the query ends in a non-escaped question mark, the user may not really
+intend to use the question mark as a wildcard -- let's account for that
+possibility.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNormalizedQueryString">getNormalizedQueryString</a>(<a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a> $query)
+        
+                                            <p><p>Given a Query object, return a fully normalized version of the query string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createAdvancedInnerSearchString">createAdvancedInnerSearchString</a>(string $string, <a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a> $handler)
+        
+                                            <p><p>Return advanced inner search string based on input and handler.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 112</div>
+        <code>                    void
+    <strong>__construct</strong>(array $specs = [], string $defaultDismaxHandler = &#039;dismax&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor.</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$specs</td>
+                <td><p>Search handler specifications</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$defaultDismaxHandler</td>
+                <td><p>Default dismax handler (if no
+DismaxHandler set in specs).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_build">
+        <div class="location">at line 129</div>
+        <code>                    <a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>
+    <strong>build</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return SOLR search parameters based on a user query and params.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Query object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkParamConditions">
+        <div class="location">at line 215</div>
+        <code>            protected        bool
+    <strong>checkParamConditions</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, array $conditions)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the conditions match for an extra parameter</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Search query</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$conditions</td>
+                <td><p>Required conditions</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasDismaxParamsField">
+        <div class="location">at line 267</div>
+        <code>            protected        bool
+    <strong>hasDismaxParamsField</strong>(array $searchTypes, string $field)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if any of the given search types has the field in DismaxParams</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$searchTypes</td>
+                <td><p>Search types to check</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field to check for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchTypes">
+        <div class="location">at line 288</div>
+        <code>            protected        array
+    <strong>getSearchTypes</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of search types used in the given search</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td>Query</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFieldsToHighlight">
+        <div class="location">at line 306</div>
+        <code>            protected        string
+    <strong>getFieldsToHighlight</strong>(array $filter = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get list of fields to highlight, filtered by array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$filter</td>
+                <td><p>Field list to use as a filter.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFieldsToHighlight">
+        <div class="location">at line 328</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a>
+    <strong>setFieldsToHighlight</strong>(string $list)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set list of fields to highlight, if any (or '*' for all). Set to an
+empty string (the default) to completely disable highlighting-related
+functionality.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$list</td>
+                <td><p>Highlighting field list</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCreateSpellingQuery">
+        <div class="location">at line 342</div>
+        <code>                    void
+    <strong>setCreateSpellingQuery</strong>(bool $enable)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Control whether or not the QueryBuilder should create a spellcheck.q
+parameter. (Turned off by default).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$enable</td>
+                <td><p>Should spelling query generation be enabled?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSpecs">
+        <div class="location">at line 354</div>
+        <code>                    void
+    <strong>setSpecs</strong>(array $specs)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set query builder search specs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$specs</td>
+                <td><p>Search specs</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLuceneHelper">
+        <div class="location">at line 378</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a>
+    <strong>getLuceneHelper</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Lucene syntax helper</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLuceneHelper">
+        <div class="location">at line 393</div>
+        <code>                    void
+    <strong>setLuceneHelper</strong>(<a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a> $helper)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set Lucene syntax helper</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a></td>
+                <td>$helper</td>
+                <td><p>Lucene syntax helper</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSearchHandler">
+        <div class="location">at line 408</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a>|null
+    <strong>getSearchHandler</strong>(string $handler, string $searchString)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return named search handler.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Search handler name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$searchString</td>
+                <td><p>Search query</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reduceQueryGroup">
+        <div class="location">at line 438</div>
+        <code>            protected        <a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a>
+    <strong>reduceQueryGroup</strong>(<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a> $group)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reduce query group a single query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a></td>
+                <td>$group</td>
+                <td><p>Query group to reduce</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reduceQueryGroupComponents">
+        <div class="location">at line 456</div>
+        <code>            protected        string
+    <strong>reduceQueryGroupComponents</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $component)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reduce components of query group to a search string of a simple query.</p></p>                <p><p>This function implements the recursive reduction of a query group.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$component</td>
+                <td>Component</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html#method_reduceQueryGroup">
+<abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr>::reduceQueryGroup</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createSearchString">
+        <div class="location">at line 497</div>
+        <code>            protected        string
+    <strong>createSearchString</strong>(string $string, <a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a> $handler = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return search string based on input and handler.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td><p>Input search string</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a></td>
+                <td>$handler</td>
+                <td><p>Search handler</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixTrailingQuestionMarks">
+        <div class="location">at line 522</div>
+        <code>            protected        string
+    <strong>fixTrailingQuestionMarks</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>If the query ends in a non-escaped question mark, the user may not really
+intend to use the question mark as a wildcard -- let's account for that
+possibility.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td><p>Search query to adjust</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNormalizedQueryString">
+        <div class="location">at line 556</div>
+        <code>            protected        string
+    <strong>getNormalizedQueryString</strong>(<a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a Query object, return a fully normalized version of the query string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a></td>
+                <td>$query</td>
+                <td><p>Query object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createAdvancedInnerSearchString">
+        <div class="location">at line 573</div>
+        <code>            protected        string
+    <strong>createAdvancedInnerSearchString</strong>(string $string, <a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a> $handler)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return advanced inner search string based on input and handler.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td><p>Input search string</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/SearchHandler.html"><abbr title="VuFindSearch\Backend\Solr\SearchHandler">SearchHandler</abbr></a></td>
+                <td>$handler</td>
+                <td><p>Search handler</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

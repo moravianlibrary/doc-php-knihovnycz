@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\RecordTab\Map | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_RecordTab_Map" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/RecordTab.html">RecordTab</a></li><li class="backslash">\</li><li>Map</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Map    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Map</strong>        extends <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Map tab</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="LmcRbacMvc\Service\AuthorizationServiceAwareTrait">AuthorizationServiceAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_accessPermission">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$accessPermission</td>
+                <td class="last"><p>Permission that must be granted to access this module (null for no
+restriction)</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#property_accessPermission">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driver">
+                                        protected                                        <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+                                                                                
+                                    </td>
+                <td>$driver</td>
+                <td class="last"><p>Record driver associated with the tab</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#property_driver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_request">
+                                        protected                                        <abbr title="Laminas\Http\Request">Request</abbr>|bool
+                                                                                
+                                    </td>
+                <td>$request</td>
+                <td class="last"><p>User request associated with the tab (false for none)</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#property_request">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mapTabDisplay">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$mapTabDisplay</td>
+                <td class="last"><p>Should Map Tab be displayed?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_displayCoords">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$displayCoords</td>
+                <td class="last"><p>Should we display coordinates as part of labels?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mapLabels">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$mapLabels</td>
+                <td class="last"><p>Map labels setting from config.ini.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_graticule">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$graticule</td>
+                <td class="last"><p>Display graticule / map lat long grid?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_basemapOptions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$basemapOptions</td>
+                <td class="last"><p>Basemap settings</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pathResolver">
+                                        protected                                        <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+                                                                                
+                                    </td>
+                <td>$pathResolver</td>
+                <td class="last"><p>Configuration file path resolver</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isActive">isActive</a>()
+        
+                                            <p><p>Is this tab active?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isVisible">isVisible</a>()
+        
+                                            <p><p>Is this tab initially visible?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_isVisible">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsAjax">supportsAjax</a>()
+        
+                                            <p><p>Can this tab be loaded via AJAX?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRecordDriver">setRecordDriver</a>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        
+                                            <p><p>Set the record driver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_setRecordDriver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordDriver">getRecordDriver</a>()
+        
+                                            <p><p>Get the record driver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_getRecordDriver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRequest">setRequest</a>(<abbr title="Laminas\Http\Request">Request</abbr> $request)
+        
+                                            <p><p>Set the user request</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_setRequest">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\Request">Request</abbr>|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p><p>Get the user request (or false if unavailable)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_getRequest">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(bool $mapTabDisplay = false, array $basemapOptions = [], array $mapTabOptions = [], <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a> $pathResolver = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDescription">getDescription</a>()
+        
+                                            <p><p>Get the on-screen description for this tab.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMapGraticule">getMapGraticule</a>()
+        
+                                            <p><p>Get the map graticule setting.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBasemap">getBasemap</a>()
+        
+                                            <p><p>Get the basemap configuration settings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGeoLocationCoords">getGeoLocationCoords</a>()
+        
+                                            <p><p>Get the bbox-geo coordinates.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDisplayCoords">getDisplayCoords</a>()
+        
+                                            <p><p>Get the map display coordinates.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMapLabels">getMapLabels</a>()
+        
+                                            <p><p>Get the map labels.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMapTabData">getMapTabData</a>()
+        
+                                            <p><p>Construct the map coordinates and labels array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_isActive">
+        <div class="location">at line 161</div>
+        <code>                    bool
+    <strong>isActive</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is this tab active?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isVisible">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_isVisible">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 93</div>
+        <code>                    bool
+    <strong>isVisible</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is this tab initially visible?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsAjax">
+        <div class="location">at line 120</div>
+        <code>                    bool
+    <strong>supportsAjax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Can this tab be loaded via AJAX?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRecordDriver">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_setRecordDriver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 117</div>
+        <code>                    <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+    <strong>setRecordDriver</strong>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the record driver</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$driver</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordDriver">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_getRecordDriver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 129</div>
+        <code>            protected        <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+    <strong>getRecordDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the record driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequest">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_setRequest">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 144</div>
+        <code>                    <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+    <strong>setRequest</strong>(<abbr title="Laminas\Http\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the user request</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\Request">Request</abbr></td>
+                <td>$request</td>
+                <td>Request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_getRequest">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 155</div>
+        <code>            protected        <abbr title="Laminas\Http\Request">Request</abbr>|bool
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the user request (or false if unavailable)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\Request">Request</abbr>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 95</div>
+        <code>                    
+    <strong>__construct</strong>(bool $mapTabDisplay = false, array $basemapOptions = [], array $mapTabOptions = [], <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a> $pathResolver = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$mapTabDisplay</td>
+                <td><p>Display Map</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$basemapOptions</td>
+                <td><p>basemap settings</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$mapTabOptions</td>
+                <td><p>MapTab settings</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a></td>
+                <td>$pathResolver</td>
+                <td><p>Config file path resolver</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescription">
+        <div class="location">at line 131</div>
+        <code>                    string
+    <strong>getDescription</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the on-screen description for this tab.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMapGraticule">
+        <div class="location">at line 141</div>
+        <code>                    string
+    <strong>getMapGraticule</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the map graticule setting.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBasemap">
+        <div class="location">at line 151</div>
+        <code>                    array
+    <strong>getBasemap</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the basemap configuration settings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGeoLocationCoords">
+        <div class="location">at line 175</div>
+        <code>                    array
+    <strong>getGeoLocationCoords</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the bbox-geo coordinates.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDisplayCoords">
+        <div class="location">at line 202</div>
+        <code>                    array
+    <strong>getDisplayCoords</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the map display coordinates.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMapLabels">
+        <div class="location">at line 230</div>
+        <code>                    array
+    <strong>getMapLabels</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the map labels.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMapTabData">
+        <div class="location">at line 274</div>
+        <code>                    array
+    <strong>getMapTabData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construct the map coordinates and labels array.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

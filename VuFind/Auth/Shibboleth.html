@@ -1,0 +1,3018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Auth\Shibboleth | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Auth_Shibboleth" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Auth.html">Auth</a></li><li class="backslash">\</li><li>Shibboleth</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Shibboleth    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Shibboleth</strong>        extends <a href="../../VuFind/Auth/AbstractBase.html"><abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Shibboleth authentication module.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Db/Table/DbTableAwareTrait.html"><abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Default implementation of DbTableAwareInterface.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Lightweight translator aware marker interface (used as an alternative to
+\Laminas\I18n\Translator\TranslatorAwareInterface, which requires an excessive
+number of methods to be implemented).  If we switch to PHP 5.4 traits in the
+future, we can eliminate this interface in favor of the default Laminas version.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        DEFAULT_IDPSERVERPARAM
+                                    </td>
+                <td class="last">
+                    <p><em><p>Header name for entityID of the IdP that authenticated the user.</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tableManager">
+                                        protected                                        <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$tableManager</td>
+                <td class="last"><p>Database table plugin manager</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Db/Table/DbTableAwareTrait.html#property_tableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_translator">
+                                        protected                                        <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$translator</td>
+                <td class="last">Translator</td>
+                <td><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#property_translator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_configValidated">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$configValidated</td>
+                <td class="last"><p>Has the configuration been validated?</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#property_configValidated">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>Configuration settings</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#property_config">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attribsToCheck">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$attribsToCheck</td>
+                <td class="last"><p>This is array of attributes which $this-&gt;authenticate()
+method should check for.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sessionManager">
+                                        protected                                        <abbr title="Laminas\Session\ManagerInterface">ManagerInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$sessionManager</td>
+                <td class="last"><p>Session manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_configurationLoader">
+                                        protected                                        <a href="../../VuFind/Auth/Shibboleth/ConfigurationLoaderInterface.html"><abbr title="VuFind\Auth\Shibboleth\ConfigurationLoaderInterface">ConfigurationLoaderInterface</abbr></a>
+                                                                                
+                                    </td>
+                <td>$configurationLoader</td>
+                <td class="last"><p>Configuration loading implementation</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_request">
+                                        protected                                        <abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr>
+                                                                                
+                                    </td>
+                <td>$request</td>
+                <td class="last"><p>Http Request object</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_useHeaders">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$useHeaders</td>
+                <td class="last"><p>Read attributes from headers instead of environment variables</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shibIdentityProvider">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$shibIdentityProvider</td>
+                <td class="last"><p>Name of attribute with shibboleth identity provider</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shibSessionId">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$shibSessionId</td>
+                <td class="last"><p>Name of attribute with shibboleth session ID</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTableManager">getDbTableManager</a>()
+        
+                                            <p><p>Get the table plugin manager. Throw an exception if it is missing.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setDbTableManager">setDbTableManager</a>(<a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $manager)
+        
+                                            <p><p>Set the table plugin manager.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_setDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDbTable">getDbTable</a>(string $table)
+        
+                                            <p><p>Get a database table object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setTranslator">setTranslator</a>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        
+                                            <p><p>Set a translator</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslator">getTranslator</a>()
+        
+                                            <p><p>Get translator object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTranslatorLocale">getTranslatorLocale</a>(string $default = &#039;en&#039;)
+        
+                                            <p><p>Get the locale from the translator.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translate">translate</a>(string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateWithPrefix">translateWithPrefix</a>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        
+                                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_translateString">translateString</a>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        
+                                            <p><p>Get translation for a string</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractTextDomain">extractTextDomain</a>(string|object|array $target)
+        
+                                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Config\Config">Config</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfig">getConfig</a>()
+        
+                                            <p><p>Get configuration (load automatically if not previously set).  Throw an
+exception if the configuration is invalid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_getConfig">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_preLoginCheck">preLoginCheck</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Inspect the user's request prior to processing a login request; this is
+essentially an event hook which most auth modules can ignore. See
+ChoiceAuth for a use case example.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_preLoginCheck">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_resetState">resetState</a>()
+        
+                                            <p><p>Reset any internal status; this is essentially an event hook which most auth
+modules can ignore. See ChoiceAuth for a use case example.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_resetState">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setConfig">setConfig</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config)
+        
+                                            <p><p>Set configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_needsCsrfCheck">needsCsrfCheck</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Whether this authentication method needs CSRF checking for the request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_needsCsrfCheck">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDelegateAuthMethod">getDelegateAuthMethod</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Returns any authentication method this request should be delegated to.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_getDelegateAuthMethod">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateConfig">validateConfig</a>()
+        
+                                            <p><p>Validate configuration parameters.  This is a support method for getConfig(),
+so the configuration MUST be accessed using $this-&gt;config; do not call
+$this-&gt;getConfig() from within this method!</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_authenticate">authenticate</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Attempt to authenticate the current user.  Throws exception if login fails.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateCredentials">validateCredentials</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Validate the credentials in the provided request, but do not change the state
+of the current logged-in user. Return true for valid credentials, false
+otherwise.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_validateCredentials">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isExpired">isExpired</a>()
+        
+                                            <p><p>Has the user's login expired?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_create">create</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Create a new user account from the request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_create">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_updatePassword">updatePassword</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Update a user's password from the request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_updatePassword">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSessionInitiator">getSessionInitiator</a>(string $target)
+        
+                                            <p><p>Get the URL to establish a session (needed when the internal VuFind login
+form is inadequate).  Returns false when no session initiator is needed.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logout">logout</a>(string $url)
+        
+                                            <p><p>Perform cleanup at logout time.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsCreation">supportsCreation</a>()
+        
+                                            <p><p>Does this authentication method support account creation?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_supportsCreation">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsPasswordChange">supportsPasswordChange</a>()
+        
+                                            <p><p>Does this authentication method support password changing</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_supportsPasswordChange">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsPasswordRecovery">supportsPasswordRecovery</a>()
+        
+                                            <p><p>Does this authentication method support password recovery</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_supportsPasswordRecovery">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsConnectingLibraryCard">supportsConnectingLibraryCard</a>()
+        
+                                            <p><p>Does this authentication method support connecting library card of
+currently authenticated user?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_supportsConnectingLibraryCard">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCannedPolicyHint">getCannedPolicyHint</a>(string $type, string|null $pattern)
+        
+                                            <p><p>Return a canned username or password policy hint when available</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_getCannedPolicyHint">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\Auth\?string">?string</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCannedPasswordPolicyHint">getCannedPasswordPolicyHint</a>(<abbr title="VuFind\Auth\?string">?string</abbr> $pattern)
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p><p>Return a canned password policy hint when available</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_getCannedPasswordPolicyHint">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPolicyConfig">getPolicyConfig</a>(string $type)
+        
+                                            <p><p>Get a policy configuration</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_getPolicyConfig">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUsernamePolicy">getUsernamePolicy</a>()
+        
+                                            <p><p>Get username policy for a new account (e.g. minLength, maxLength)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_getUsernamePolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPasswordPolicy">getPasswordPolicy</a>()
+        
+                                            <p><p>Get password policy for a new password (e.g. minLength, maxLength)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_getPasswordPolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUserTable">getUserTable</a>()
+        
+                                            <p><p>Get access to the user table.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_getUserTable">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateUsernameAgainstPolicy">validateUsernameAgainstPolicy</a>(string $username)
+        
+                                            <p><p>Verify that a username fulfills the username policy. Throws exception if
+the usernmae is invalid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_validateUsernameAgainstPolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validatePasswordAgainstPolicy">validatePasswordAgainstPolicy</a>(string $password)
+        
+                                            <p><p>Verify that a password fulfills the password policy. Throws exception if
+the password is invalid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_validatePasswordAgainstPolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_validateStringAgainstPolicy">validateStringAgainstPolicy</a>(string $type, array $policy, string $string)
+        
+                                            <p><p>Verify that a username or password fulfills the given policy. Throws exception
+if the string is invalid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/Auth/AbstractBase.html#method_validateStringAgainstPolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Session\ManagerInterface">ManagerInterface</abbr> $sessionManager, <a href="../../VuFind/Auth/Shibboleth/ConfigurationLoaderInterface.html"><abbr title="VuFind\Auth\Shibboleth\ConfigurationLoaderInterface">ConfigurationLoaderInterface</abbr></a> $configurationLoader, <abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_connectLibraryCard">connectLibraryCard</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request, <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $connectingUser)
+        
+                                            <p><p>Connect user authenticated by Shibboleth to library card.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Auth/Shibboleth/ConfigurationLoaderInterface.html"><abbr title="VuFind\Auth\Shibboleth\ConfigurationLoaderInterface">ConfigurationLoaderInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfigurationLoader">getConfigurationLoader</a>()
+        
+                                            <p><p>Return configuration loader</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRequiredAttributes">getRequiredAttributes</a>(array $config)
+        
+                                            <p><p>Extract required user attributes from the configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_storeShibbolethSession">storeShibbolethSession</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Add session id mapping to external_session table for single logout support</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCurrentEntityId">getCurrentEntityId</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        
+                                            <p><p>Fetch entityId used for authentication</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAttribute">getAttribute</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request, string $attribute)
+        
+                                            <p><p>Extract attribute from request.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getDbTableManager">
+        <div class="location">in <a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 54</div>
+        <code>                    <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+    <strong>getDbTableManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the table plugin manager. Throw an exception if it is missing.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDbTableManager">
+        <div class="location">in <a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_setDbTableManager">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 69</div>
+        <code>                    void
+    <strong>setDbTableManager</strong>(<a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the table plugin manager.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+                <td>$manager</td>
+                <td><p>Plugin manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbTable">
+        <div class="location">in <a href="../../VuFind/Db/Table/DbTableAwareTrait.html#method_getDbTable">
+<abbr title="VuFind\Db\Table\DbTableAwareTrait">DbTableAwareTrait</abbr></a> at line 81</div>
+        <code>                    <a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+    <strong>getDbTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a database table object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Table to load.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTranslator">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_setTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 60</div>
+        <code>                    <a href="../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a>
+    <strong>setTranslator</strong>(<abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr> $translator)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a translator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td>Translator</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/I18n/Translator/TranslatorAwareInterface.html"><abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslator">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslator">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 71</div>
+        <code>                    <abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translator object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\I18n\Translator\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslatorLocale">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_getTranslatorLocale">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 83</div>
+        <code>                    string
+    <strong>getTranslatorLocale</strong>(string $default = &#039;en&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the locale from the translator.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default to use if translator absent.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translate">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translate">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 103</div>
+        <code>                    string
+    <strong>translate</strong>(string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateWithPrefix">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateWithPrefix">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 152</div>
+        <code>                    string
+    <strong>translateWithPrefix</strong>(string $prefix, string|object|array $target, array $tokens = [], string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate a string (or string-castable object) using a prefix, or without the
+prefix if a prefixed translation is not found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td><p>Translation key prefix</p></td>
+            </tr>
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated
+string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is
+found (null for no default).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translateString">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_translateString">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 178</div>
+        <code>            protected        string
+    <strong>translateString</strong>(string $str, array $tokens = [], string $default = null, string $domain = &#039;default&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get translation for a string</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td><p>String to translate</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td><p>Tokens to inject into the translated string</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if no translation is found
+(null for no default).</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td><p>Text domain (omit for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractTextDomain">
+        <div class="location">in <a href="../../VuFind/I18n/Translator/TranslatorAwareTrait.html#method_extractTextDomain">
+<abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr></a> at line 215</div>
+        <code>            protected        array
+    <strong>extractTextDomain</strong>(string|object|array $target)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Given a translation string with or without a text domain, return an
+array with the raw string and the text domain separated.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object|array</td>
+                <td>$target</td>
+                <td><p>String to translate or an array of text
+domain and string to translate</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_getConfig">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 74</div>
+        <code>                    <abbr title="Laminas\Config\Config">Config</abbr>
+    <strong>getConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get configuration (load automatically if not previously set).  Throw an
+exception if the configuration is invalid.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preLoginCheck">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_preLoginCheck">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 97</div>
+        <code>                    void
+    <strong>preLoginCheck</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Inspect the user's request prior to processing a login request; this is
+essentially an event hook which most auth modules can ignore. See
+ChoiceAuth for a use case example.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetState">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_resetState">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 108</div>
+        <code>                    void
+    <strong>resetState</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reset any internal status; this is essentially an event hook which most auth
+modules can ignore. See ChoiceAuth for a use case example.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">at line 143</div>
+        <code>                    void
+    <strong>setConfig</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set configuration.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Configuration to set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_needsCsrfCheck">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_needsCsrfCheck">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 135</div>
+        <code>                    bool
+    <strong>needsCsrfCheck</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Whether this authentication method needs CSRF checking for the request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDelegateAuthMethod">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_getDelegateAuthMethod">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 150</div>
+        <code>                    string|bool
+    <strong>getDelegateAuthMethod</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns any authentication method this request should be delegated to.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateConfig">
+        <div class="location">at line 160</div>
+        <code>            protected        void
+    <strong>validateConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate configuration parameters.  This is a support method for getConfig(),
+so the configuration MUST be accessed using $this-&gt;config; do not call
+$this-&gt;getConfig() from within this method!</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authenticate">
+        <div class="location">at line 187</div>
+        <code>                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>authenticate</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attempt to authenticate the current user.  Throws exception if login fails.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing account credentials.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td><p>Object representing logged-in user.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateCredentials">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_validateCredentials">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 189</div>
+        <code>                    bool
+    <strong>validateCredentials</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate the credentials in the provided request, but do not change the state
+of the current logged-in user. Return true for valid credentials, false
+otherwise.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing account credentials.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isExpired">
+        <div class="location">at line 298</div>
+        <code>                    bool
+    <strong>isExpired</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Has the user's login expired?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_create">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 220</div>
+        <code>                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>create</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new user account from the request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing new account details.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td><p>New user row.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updatePassword">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_updatePassword">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 237</div>
+        <code>                    <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a>
+    <strong>updatePassword</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Update a user's password from the request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing new account details.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+            <td><p>New user row.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionInitiator">
+        <div class="location">at line 274</div>
+        <code>                    bool|string
+    <strong>getSessionInitiator</strong>(string $target)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the URL to establish a session (needed when the internal VuFind login
+form is inadequate).  Returns false when no session initiator is needed.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td><p>Full URL where external authentication method should
+send user after login (some drivers may override this).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logout">
+        <div class="location">at line 318</div>
+        <code>                    string
+    <strong>logout</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform cleanup at logout time.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL to redirect user to after logging out.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Redirect URL (usually same as $url, but modified in
+some authentication modules).</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsCreation">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_supportsCreation">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 279</div>
+        <code>                    bool
+    <strong>supportsCreation</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does this authentication method support account creation?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsPasswordChange">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_supportsPasswordChange">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 290</div>
+        <code>                    bool
+    <strong>supportsPasswordChange</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does this authentication method support password changing</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsPasswordRecovery">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_supportsPasswordRecovery">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 301</div>
+        <code>                    bool
+    <strong>supportsPasswordRecovery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does this authentication method support password recovery</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsConnectingLibraryCard">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_supportsConnectingLibraryCard">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 313</div>
+        <code>                    bool
+    <strong>supportsConnectingLibraryCard</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does this authentication method support connecting library card of
+currently authenticated user?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCannedPolicyHint">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_getCannedPolicyHint">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 326</div>
+        <code>            protected        string|null
+    <strong>getCannedPolicyHint</strong>(string $type, string|null $pattern)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a canned username or password policy hint when available</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td><p>Policy type (password or username)</p></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$pattern</td>
+                <td><p>Current policy pattern</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCannedPasswordPolicyHint">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_getCannedPasswordPolicyHint">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 348</div>
+        <code>            protected        <abbr title="VuFind\Auth\?string">?string</abbr>
+    <strong>getCannedPasswordPolicyHint</strong>(<abbr title="VuFind\Auth\?string">?string</abbr> $pattern)
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Use</td>
+                    <td>getCannedPolicyHint instead</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a canned password policy hint when available</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Auth\?string">?string</abbr></td>
+                <td>$pattern</td>
+                <td><p>Current policy pattern</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\Auth\?string">?string</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPolicyConfig">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_getPolicyConfig">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 360</div>
+        <code>                    array
+    <strong>getPolicyConfig</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a policy configuration</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td><p>Policy type (password or username)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUsernamePolicy">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_getUsernamePolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 399</div>
+        <code>                    array
+    <strong>getUsernamePolicy</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get username policy for a new account (e.g. minLength, maxLength)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPasswordPolicy">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_getPasswordPolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 409</div>
+        <code>                    array
+    <strong>getPasswordPolicy</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get password policy for a new password (e.g. minLength, maxLength)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserTable">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_getUserTable">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 419</div>
+        <code>                    <a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a>
+    <strong>getUserTable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get access to the user table.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Table/User.html"><abbr title="VuFind\Db\Table\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateUsernameAgainstPolicy">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_validateUsernameAgainstPolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 433</div>
+        <code>            protected        void
+    <strong>validateUsernameAgainstPolicy</strong>(string $username)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Verify that a username fulfills the username policy. Throws exception if
+the usernmae is invalid.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td><p>Password to verify</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validatePasswordAgainstPolicy">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_validatePasswordAgainstPolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 451</div>
+        <code>            protected        void
+    <strong>validatePasswordAgainstPolicy</strong>(string $password)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Verify that a password fulfills the password policy. Throws exception if
+the password is invalid.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td><p>Password to verify</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateStringAgainstPolicy">
+        <div class="location">in <a href="../../VuFind/Auth/AbstractBase.html#method_validateStringAgainstPolicy">
+<abbr title="VuFind\Auth\AbstractBase">AbstractBase</abbr></a> at line 471</div>
+        <code>            protected        void
+    <strong>validateStringAgainstPolicy</strong>(string $type, array $policy, string $string)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Verify that a username or password fulfills the given policy. Throws exception
+if the string is invalid.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td><p>Policy type (password or username)</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$policy</td>
+                <td><p>Policy configuration</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td><p>String to verify</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 126</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Session\ManagerInterface">ManagerInterface</abbr> $sessionManager, <a href="../../VuFind/Auth/Shibboleth/ConfigurationLoaderInterface.html"><abbr title="VuFind\Auth\Shibboleth\ConfigurationLoaderInterface">ConfigurationLoaderInterface</abbr></a> $configurationLoader, <abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Session\ManagerInterface">ManagerInterface</abbr></td>
+                <td>$sessionManager</td>
+                <td><p>Session
+manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Auth/Shibboleth/ConfigurationLoaderInterface.html"><abbr title="VuFind\Auth\Shibboleth\ConfigurationLoaderInterface">ConfigurationLoaderInterface</abbr></a></td>
+                <td>$configurationLoader</td>
+                <td><p>Configuration
+loader</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Http
+request object</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_connectLibraryCard">
+        <div class="location">at line 345</div>
+        <code>                    void
+    <strong>connectLibraryCard</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request, <a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a> $connectingUser)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Connect user authenticated by Shibboleth to library card.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object
+containing account credentials.</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../VuFind/Db/Row/User.html"><abbr title="VuFind\Db\Row\User">User</abbr></a></td>
+                <td>$connectingUser</td>
+                <td><p>Connect newly
+created library card to this user.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfigurationLoader">
+        <div class="location">at line 371</div>
+        <code>            protected        <a href="../../VuFind/Auth/Shibboleth/ConfigurationLoaderInterface.html"><abbr title="VuFind\Auth\Shibboleth\ConfigurationLoaderInterface">ConfigurationLoaderInterface</abbr></a>
+    <strong>getConfigurationLoader</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return configuration loader</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Auth/Shibboleth/ConfigurationLoaderInterface.html"><abbr title="VuFind\Auth\Shibboleth\ConfigurationLoaderInterface">ConfigurationLoaderInterface</abbr></a></td>
+            <td><p>configuration loader</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequiredAttributes">
+        <div class="location">at line 384</div>
+        <code>            protected        array
+    <strong>getRequiredAttributes</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract required user attributes from the configuration.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Shibboleth configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Only username and attribute-related values</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/Auth.html"><abbr title="VuFind\Exception\Auth">Auth</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_storeShibbolethSession">
+        <div class="location">at line 415</div>
+        <code>            protected        void
+    <strong>storeShibbolethSession</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add session id mapping to external_session table for single logout support</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object containing
+account credentials.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentEntityId">
+        <div class="location">at line 440</div>
+        <code>            protected        string
+    <strong>getCurrentEntityId</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fetch entityId used for authentication</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>entityId of IdP</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttribute">
+        <div class="location">at line 453</div>
+        <code>            protected        string|null
+    <strong>getAttribute</strong>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request, string $attribute)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract attribute from request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr></td>
+                <td>$request</td>
+                <td><p>Request object</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attribute</td>
+                <td><p>Attribute name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>attribute value</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

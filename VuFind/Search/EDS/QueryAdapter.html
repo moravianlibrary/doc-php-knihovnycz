@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Search\EDS\QueryAdapter | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Search_EDS_QueryAdapter" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Search.html">Search</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Search/EDS.html">EDS</a></li><li class="backslash">\</li><li>QueryAdapter</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>QueryAdapter    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>QueryAdapter</strong>        extends <a href="../../../VuFind/Search/QueryAdapter.html"><abbr title="VuFind\Search\QueryAdapter">QueryAdapter</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>EDS API Query Adapter: search query parameters to AbstractQuery object</p></p>                    </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a>|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deminify">deminify</a>(array $search)
+        
+                                            <p><p>Return a Query or QueryGroup based on minified search arguments.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/QueryAdapter.html#method_deminify">
+<abbr title="VuFind\Search\QueryAdapter">QueryAdapter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_display">display</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, callable $translate, callable $showName)
+        
+                                            <p><p>Convert a Query or QueryGroup into a human-readable display query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_displayAdvanced">displayAdvanced</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, callable $translate, callable $showName)
+        
+                                            <p><p>Support method for display() -- process advanced queries.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a>|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fromRequest">fromRequest</a>(<abbr title="Laminas\Stdlib\Parameters">Parameters</abbr> $request, string $defaultHandler)
+        
+                                            <p><p>Convert user request parameters into a query (currently for advanced searches
+only).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/QueryAdapter.html#method_fromRequest">
+<abbr title="VuFind\Search\QueryAdapter">QueryAdapter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_minify">minify</a>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, bool $topLevel = true)
+        
+                                            <p><p>Convert a Query or QueryGroup into minified search arguments.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/QueryAdapter.html#method_minify">
+<abbr title="VuFind\Search\QueryAdapter">QueryAdapter</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_deminify">
+        <div class="location">in <a href="../../../VuFind/Search/QueryAdapter.html#method_deminify">
+<abbr title="VuFind\Search\QueryAdapter">QueryAdapter</abbr></a> at line 57</div>
+        <code>        static            <a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a>|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a>
+    <strong>deminify</strong>(array $search)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return a Query or QueryGroup based on minified search arguments.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$search</td>
+                <td><p>Minified search arguments</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a>|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_display">
+        <div class="location">at line 56</div>
+        <code>        static            string
+    <strong>display</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, callable $translate, callable $showName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert a Query or QueryGroup into a human-readable display query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Query to convert</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$translate</td>
+                <td><p>Callback to translate strings</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$showName</td>
+                <td><p>Callback to translate field names</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_displayAdvanced">
+        <div class="location">at line 76</div>
+        <code>        static    protected        string
+    <strong>displayAdvanced</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, callable $translate, callable $showName)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for display() -- process advanced queries.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Query to convert</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$translate</td>
+                <td><p>Callback to translate strings</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$showName</td>
+                <td><p>Callback to translate field names</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromRequest">
+        <div class="location">in <a href="../../../VuFind/Search/QueryAdapter.html#method_fromRequest">
+<abbr title="VuFind\Search\QueryAdapter">QueryAdapter</abbr></a> at line 178</div>
+        <code>        static            <a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a>|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a>
+    <strong>fromRequest</strong>(<abbr title="Laminas\Stdlib\Parameters">Parameters</abbr> $request, string $defaultHandler)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert user request parameters into a query (currently for advanced searches
+only).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Stdlib\Parameters">Parameters</abbr></td>
+                <td>$request</td>
+                <td><p>User-submitted parameters</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$defaultHandler</td>
+                <td><p>Default search handler</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Query/Query.html"><abbr title="VuFindSearch\Query\Query">Query</abbr></a>|<a href="../../../VuFindSearch/Query/QueryGroup.html"><abbr title="VuFindSearch\Query\QueryGroup">QueryGroup</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_minify">
+        <div class="location">in <a href="../../../VuFind/Search/QueryAdapter.html#method_minify">
+<abbr title="VuFind\Search\QueryAdapter">QueryAdapter</abbr></a> at line 228</div>
+        <code>        static            array
+    <strong>minify</strong>(<a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a> $query, bool $topLevel = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert a Query or QueryGroup into minified search arguments.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Query/AbstractQuery.html"><abbr title="VuFindSearch\Query\AbstractQuery">AbstractQuery</abbr></a></td>
+                <td>$query</td>
+                <td><p>Query to minify</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$topLevel</td>
+                <td><p>Is this a top-level query? (Used for recursion)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

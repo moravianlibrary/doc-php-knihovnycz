@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>Connector</strong>        extends <abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr>
+    <strong>Connector</strong>        extends <a href="../../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a>
 </p>
 
                 <p>
@@ -100,11 +100,93 @@
             <div class="description">
             <p><p>SOLR connector.</p></p>                    </div>
             
+                <h2>Traits</h2>
+
         
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../VuFind/Log/LoggerAwareTrait.html"><abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Extension of \Laminas\Log\LoggerAwareTrait with some convenience methods.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html"><abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Caching support trait for connectors.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="Laminas\Log\LoggerAwareTrait">LoggerAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        MAX_GET_URL_LENGTH
+                                    </td>
+                <td class="last">
+                    <p><em><p>Maximum length of a GET url.</p></em></p>
+                    <p><p>Switches to POST if the SOLR target URL exceeds this length.</p></p>
+                </td>
+            </tr>
+            </table>
+
     
             <h2>Properties</h2>
 
             <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_cache">
+                                        protected                                        <abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$cache</td>
+                <td class="last"><p>Request cache</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#property_cache">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_clientFactory">
+                                        protected                                        callable
+                                                                                
+                                    </td>
+                <td>$clientFactory</td>
+                <td class="last"><p>HTTP client factory</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#property_clientFactory">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_url">
+                                        protected                                        string|array
+                                                                                
+                                    </td>
+                <td>$url</td>
+                <td class="last"><p>URL or an array of alternative URLs of the SOLR core.</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#property_url">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_map">
+                                        protected                                        <a href="../../../../VuFindSearch/Backend/Solr/HandlerMap.html"><abbr title="VuFindSearch\Backend\Solr\HandlerMap">HandlerMap</abbr></a>
+                                                                                
+                                    </td>
+                <td>$map</td>
+                <td class="last"><p>Handler map.</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#property_map">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uniqueKey">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$uniqueKey</td>
+                <td class="last"><p>Solr field used to store unique identifier</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#property_uniqueKey">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></td>
+            </tr>
                     <tr>
                 <td class="type" id="property_request">
                                         protected                                        <abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr>
@@ -134,6 +216,291 @@
                     void
                 </div>
                 <div class="col-md-8">
+                    <a href="#method_logError">logError</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log an error message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logWarning">logWarning</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a warning message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_debug">debug</a>(string $msg, array $context = [], bool $prependClass = true)
+        
+                                            <p><p>Log a debug message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_log">log</a>(string $level, string $message, array $context = [], bool $prependClass = false)
+        
+                                            <p><p>Send a message to the logger.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setCache">setCache</a>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache)
+        
+                                            <p><p>Set the cache storage</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_setCache">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCacheKey">getCacheKey</a>(<abbr title="Laminas\Http\Client">Client</abbr> $client)
+        
+                                            <p><p>Create a cache key from client's request state</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_getCacheKey">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCachedData">getCachedData</a>(string $key)
+        
+                                            <p><p>Get a request from cache if available</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_getCachedData">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_putCachedData">putCachedData</a>(string $key, mixed $response)
+        
+                                            <p><p>Cache response data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_putCachedData">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logCacheWarning">logCacheWarning</a>(string $msg)
+        
+                                            <p><p>Log a warning message</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_logCacheWarning">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_logCacheDebug">logCacheDebug</a>(string $msg)
+        
+                                            <p><p>Log a debug message</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_logCacheDebug">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string|array $url, <a href="../../../../VuFindSearch/Backend/Solr/HandlerMap.html"><abbr title="VuFindSearch\Backend\Solr\HandlerMap">HandlerMap</abbr></a> $map, callable|<abbr title="Laminas\Http\Client">Client</abbr> $cf, string $uniqueKey = &#039;id&#039;)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method___construct">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUrl">getUrl</a>()
+        
+                                            <p><p>Get the Solr URL.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_getUrl">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../VuFindSearch/Backend/Solr/HandlerMap.html"><abbr title="VuFindSearch\Backend\Solr\HandlerMap">HandlerMap</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMap">getMap</a>()
+        
+                                            <p><p>Return handler map.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_getMap">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUniqueKey">getUniqueKey</a>()
+        
+                                            <p><p>Get unique key.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_getUniqueKey">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_retrieve">retrieve</a>(string $id, <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Return document specified by id.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_retrieve">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_similar">similar</a>(string $id, <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        
+                                            <p><p>Return records similar to a given record specified by id.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_similar">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_search">search</a>(<a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        
+                                            <p><p>Execute a search.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_terms">terms</a>(<a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        
+                                            <p><p>Extract terms from a SOLR index.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_terms">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_write">write</a>(<a href="../../../../VuFindSearch/Backend/Solr/Document/DocumentInterface.html"><abbr title="VuFindSearch\Backend\Solr\Document\DocumentInterface">DocumentInterface</abbr></a> $document, string $handler = &#039;update&#039;, <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        
+                                            <p><p>Write to the SOLR index.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_write">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_query">query</a>(string $handler, <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params, bool $cacheable = false)
+        
+                                            <p><p>Send query to SOLR and return response body.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_query">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_callWithHttpOptions">callWithHttpOptions</a>(array $options, string $method, array ...$args)
+        
+                                            <p><p>Call a method with provided options for the HTTP client</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_callWithHttpOptions">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isRethrowableSolrException">isRethrowableSolrException</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a> $ex)
+        
+                                            <p><p>Check if an exception from a Solr request should be thrown rather than retried</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_isRethrowableSolrException">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_forceToBackendException">forceToBackendException</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a> $ex)
+        
+                                            <p><p>If an unexpected exception type was received, wrap it in a generic
+BackendException to standardize upstream handling.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_forceToBackendException">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_trySolrUrls">trySolrUrls</a>(string $method, string $urlSuffix, callable $callback = null, bool $cacheable = false)
+        
+                                            <p><p>Try all Solr URLs until we find one that works (or throw an exception).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_trySolrUrls">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCore">getCore</a>()
+        
+                                            <p><p>Extract the Solr core from the connector's URL.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_getCore">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_send">send</a>(<abbr title="Laminas\Http\Client">Client</abbr> $client)
+        
+                                            <p><p>Send request the SOLR and return the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
                     <a href="#method_setRequest">setRequest</a>(<abbr title="Laminas\Http\PhpEnvironment\Request">Request</abbr> $request)
         
                                             <p><p>Set request</p></p>                </div>
@@ -151,30 +518,10 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_search">search</a>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
-        
-                                            <p><p>Execute a search.</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_send">send</a>(<abbr title="Laminas\Http\Client">Client</abbr> $client)
-        
-                                            <p><p>Send request the SOLR and return the response.</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <abbr title="VuFindSearch\ParamBag">ParamBag</abbr>
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_switchToParentQuery">switchToParentQuery</a>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
+                    <a href="#method_switchToParentQuery">switchToParentQuery</a>(<a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
         
                                             <p><p>Switch to parent query</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -185,6 +532,1249 @@
         <h2>Details</h2>
 
             <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_logError">
+        <div class="location">in <a href="../../../../VuFind/Log/LoggerAwareTrait.html#method_logError">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 52</div>
+        <code>            protected        void
+    <strong>logError</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logWarning">
+        <div class="location">in <a href="../../../../VuFind/Log/LoggerAwareTrait.html#method_logWarning">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 66</div>
+        <code>            protected        void
+    <strong>logWarning</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../../../VuFind/Log/LoggerAwareTrait.html#method_debug">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 80</div>
+        <code>            protected        void
+    <strong>debug</strong>(string $msg, array $context = [], bool $prependClass = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">in <a href="../../../../VuFind/Log/LoggerAwareTrait.html#method_log">
+<abbr title="VuFind\Log\LoggerAwareTrait">LoggerAwareTrait</abbr></a> at line 95</div>
+        <code>            protected        void
+    <strong>log</strong>(string $level, string $message, array $context = [], bool $prependClass = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send a message to the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td><p>Log level</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>Log message</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td><p>Log context</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prependClass</td>
+                <td><p>Prepend class name to message?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCache">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_setCache">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 64</div>
+        <code>                    void
+    <strong>setCache</strong>(<abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr> $cache)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the cache storage</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr></td>
+                <td>$cache</td>
+                <td>Cache</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheKey">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_getCacheKey">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 76</div>
+        <code>                    string
+    <strong>getCacheKey</strong>(<abbr title="Laminas\Http\Client">Client</abbr> $client)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a cache key from client's request state</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\Client">Client</abbr></td>
+                <td>$client</td>
+                <td><p>HTTP Client</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedData">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_getCachedData">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 88</div>
+        <code>                    mixed
+    <strong>getCachedData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a request from cache if available</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putCachedData">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_putCachedData">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 109</div>
+        <code>            protected        void
+    <strong>putCachedData</strong>(string $key, mixed $response)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Cache response data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>Cache entry key</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$response</td>
+                <td><p>Response to be cached</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logCacheWarning">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_logCacheWarning">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 142</div>
+        <code>            protected        void
+    <strong>logCacheWarning</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>Message</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logCacheDebug">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Feature/ConnectorCacheTrait.html#method_logCacheDebug">
+<abbr title="VuFindSearch\Backend\Feature\ConnectorCacheTrait">ConnectorCacheTrait</abbr></a> at line 158</div>
+        <code>            protected        void
+    <strong>logCacheDebug</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>Message</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method___construct">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 110</div>
+        <code>                    
+    <strong>__construct</strong>(string|array $url, <a href="../../../../VuFindSearch/Backend/Solr/HandlerMap.html"><abbr title="VuFindSearch\Backend\Solr\HandlerMap">HandlerMap</abbr></a> $map, callable|<abbr title="Laminas\Http\Client">Client</abbr> $cf, string $uniqueKey = &#039;id&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$url</td>
+                <td><p>SOLR core URL or an array of alternative
+URLs</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFindSearch/Backend/Solr/HandlerMap.html"><abbr title="VuFindSearch\Backend\Solr\HandlerMap">HandlerMap</abbr></a></td>
+                <td>$map</td>
+                <td><p>Handler map</p></td>
+            </tr>
+                    <tr>
+                <td>callable|<abbr title="Laminas\Http\Client">Client</abbr></td>
+                <td>$cf</td>
+                <td><p>HTTP client factory or a client to clone</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$uniqueKey</td>
+                <td><p>Solr field used to store unique
+identifier</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrl">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_getUrl">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 135</div>
+        <code>                    string
+    <strong>getUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the Solr URL.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMap">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_getMap">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 145</div>
+        <code>                    <a href="../../../../VuFindSearch/Backend/Solr/HandlerMap.html"><abbr title="VuFindSearch\Backend\Solr\HandlerMap">HandlerMap</abbr></a>
+    <strong>getMap</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return handler map.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../VuFindSearch/Backend/Solr/HandlerMap.html"><abbr title="VuFindSearch\Backend\Solr\HandlerMap">HandlerMap</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUniqueKey">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_getUniqueKey">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 155</div>
+        <code>                    string
+    <strong>getUniqueKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get unique key.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_retrieve">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_retrieve">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 168</div>
+        <code>                    string
+    <strong>retrieve</strong>(string $id, <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return document specified by id.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The document to retrieve from Solr</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_similar">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_similar">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 193</div>
+        <code>                    string
+    <strong>similar</strong>(string $id, <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return records similar to a given record specified by id.</p></p>                <p><p>Uses MoreLikeThis Request Component or MoreLikeThis Handler</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>ID of given record (not currently used, but
+retained for backward compatibility / extensibility).</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_search">
+        <div class="location">at line 94</div>
+        <code>                    string
+    <strong>search</strong>(<a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute a search.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_terms">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_terms">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 221</div>
+        <code>                    string
+    <strong>terms</strong>(<a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract terms from a SOLR index.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_write">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_write">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 238</div>
+        <code>                    string
+    <strong>write</strong>(<a href="../../../../VuFindSearch/Backend/Solr/Document/DocumentInterface.html"><abbr title="VuFindSearch\Backend\Solr\Document\DocumentInterface">DocumentInterface</abbr></a> $document, string $handler = &#039;update&#039;, <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Write to the SOLR index.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFindSearch/Backend/Solr/Document/DocumentInterface.html"><abbr title="VuFindSearch\Backend\Solr\Document\DocumentInterface">DocumentInterface</abbr></a></td>
+                <td>$document</td>
+                <td><p>Document to write</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>Update handler</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Update handler parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Response body</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_query">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 269</div>
+        <code>                    string
+    <strong>query</strong>(string $handler, <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params, bool $cacheable = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send query to SOLR and return response body.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handler</td>
+                <td><p>SOLR request handler to use</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
+                <td>$params</td>
+                <td><p>Request parameters</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$cacheable</td>
+                <td><p>Whether the query is cacheable</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Response body</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callWithHttpOptions">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_callWithHttpOptions">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 299</div>
+        <code>                    mixed
+    <strong>callWithHttpOptions</strong>(array $options, string $method, array ...$args)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call a method with provided options for the HTTP client</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>HTTP client options</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>Method to call</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>...$args</td>
+                <td><p>Method parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRethrowableSolrException">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_isRethrowableSolrException">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 334</div>
+        <code>            protected        bool
+    <strong>isRethrowableSolrException</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a> $ex)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if an exception from a Solr request should be thrown rather than retried</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td>$ex</td>
+                <td>Exception</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forceToBackendException">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_forceToBackendException">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 348</div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a>
+    <strong>forceToBackendException</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a> $ex)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>If an unexpected exception type was received, wrap it in a generic
+BackendException to standardize upstream handling.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td>$ex</td>
+                <td>Exception</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_trySolrUrls">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_trySolrUrls">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 374</div>
+        <code>            protected        string
+    <strong>trySolrUrls</strong>(string $method, string $urlSuffix, callable $callback = null, bool $cacheable = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Try all Solr URLs until we find one that works (or throw an exception).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>HTTP method to use</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$urlSuffix</td>
+                <td><p>Suffix to append to all URLs tried</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td><p>Callback to configure client (null for none)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$cacheable</td>
+                <td><p>Whether the request is cacheable</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Response body</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFindSearch/Backend/Exception/RemoteErrorException.html"><abbr title="VuFindSearch\Backend\Exception\RemoteErrorException">RemoteErrorException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFindSearch/Backend/Exception/RequestErrorException.html"><abbr title="VuFindSearch\Backend\Exception\RequestErrorException">RequestErrorException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCore">
+        <div class="location">in <a href="../../../../VuFindSearch/Backend/Solr/Connector.html#method_getCore">
+<abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> at line 424</div>
+        <code>                    string
+    <strong>getCore</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract the Solr core from the connector's URL.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at line 114</div>
+        <code>            protected        string
+    <strong>send</strong>(<abbr title="Laminas\Http\Client">Client</abbr> $client)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Send request the SOLR and return the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\Client">Client</abbr></td>
+                <td>$client</td>
+                <td><p>Prepared HTTP client</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Response body</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="KnihovnyCz\Search\Solr\Backend\RemoteErrorException">RemoteErrorException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="KnihovnyCz\Search\Solr\Backend\RequestErrorException">RequestErrorException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
                     <div class="method-item">
                     <h3 id="method_setRequest">
         <div class="location">at line 70</div>
@@ -272,109 +1862,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_search">
-        <div class="location">at line 94</div>
-        <code>                    string
-    <strong>search</strong>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
-        </code>
-    </h3>
-    <div class="details">    
-            
-    
-            
-
-        <div class="method-description">
-                            <p><p>Execute a search.</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></td>
-                <td>$params</td>
-                <td>Parameters</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_send">
-        <div class="location">at line 114</div>
-        <code>            protected        string
-    <strong>send</strong>(<abbr title="Laminas\Http\Client">Client</abbr> $client)
-        </code>
-    </h3>
-    <div class="details">    
-            
-    
-            
-
-        <div class="method-description">
-                            <p><p>Send request the SOLR and return the response.</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><abbr title="Laminas\Http\Client">Client</abbr></td>
-                <td>$client</td>
-                <td><p>Prepared HTTP client</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td><p>Response body</p></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><abbr title="KnihovnyCz\Search\Solr\Backend\RemoteErrorException">RemoteErrorException</abbr></td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><abbr title="KnihovnyCz\Search\Solr\Backend\RequestErrorException">RequestErrorException</abbr></td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_switchToParentQuery">
         <div class="location">at line 150</div>
-        <code>            protected        <abbr title="VuFindSearch\ParamBag">ParamBag</abbr>
-    <strong>switchToParentQuery</strong>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
+        <code>            protected        <a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a>
+    <strong>switchToParentQuery</strong>(<a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a> $params)
         </code>
     </h3>
     <div class="details">    
@@ -390,7 +1881,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></td>
+                <td><a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
                 <td>$params</td>
                 <td><p>Search parameters</p></td>
             </tr>
@@ -401,7 +1892,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></td>
+            <td><a href="../../../../VuFindSearch/ParamBag.html"><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></a></td>
             <td></td>
         </tr>
     </table>

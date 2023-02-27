@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Auth\ShibbolethTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Auth_ShibbolethTest" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../VuFindTest/Auth.html">Auth</a></li><li class="backslash">\</li><li>ShibbolethTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ShibbolethTest    
+            </h1>
+    </div>
+
+    
+    <p>final         class
+    <strong>ShibbolethTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Shibboleth authentication test class.</p></p>            <p><p>Class must be final due to use of &quot;new static()&quot; by LiveDatabaseTrait.</p></p>        </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/LiveDatabaseTrait.html"><abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Mix-in for accessing a real database during testing.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/LiveDetectionTrait.html"><abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Mix-in for detecting whether a live test environment is currently running.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/PathResolverTrait.html"><abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for tests involving PathResolver.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_hasLiveDatabaseTrait">
+                                                                                bool
+                                                                                
+                                    </td>
+                <td>$hasLiveDatabaseTrait</td>
+                <td class="last"><p>Flag to allow other traits to test for the presence of this one (to enforce
+dependencies).</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#property_hasLiveDatabaseTrait">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_liveTableManager">
+                                        protected                                        <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$liveTableManager</td>
+                <td class="last"><p>Table manager connected to live database.</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#property_liveTableManager">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasLiveDetectionTrait">
+                                                                                bool
+                                                                                
+                                    </td>
+                <td>$hasLiveDetectionTrait</td>
+                <td class="last"><p>Flag to allow other traits to test for the presence of this one (to enforce
+dependencies).</p></td>
+                <td><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDetectionTrait.html#property_hasLiveDetectionTrait">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_user1">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$user1</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_user2">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$user2</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_user3">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$user3</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_proxyUser">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$proxyUser</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPathResolver">getPathResolver</a>(string|null $baseDirectory = null)
+        
+                                            <p><p>Get a config file path resolver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/PathResolverTrait.html#method_getPathResolver">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addPathResolverToContainer">addPathResolverToContainer</a>(<a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a> $container)
+        
+                                            <p><p>Add PathResolverFactory to a mock container</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/PathResolverTrait.html#method_addPathResolverToContainer">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLiveTableManager">getLiveTableManager</a>()
+        
+                                            <p><p>Get a real, working table manager.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#method_getLiveTableManager">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTable">getTable</a>(string $table)
+        
+                                            <p><p>Get a table object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#method_getTable">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_failIfDataExists">failIfDataExists</a>()
+        
+                                            <p><p>Static setup support function to fail if there is already data in the
+database. We want to ensure a clean state for each test!</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#method_failIfDataExists">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_removeUsers">removeUsers</a>(array|string $users)
+        
+                                            <p><p>Static teardown support function to destroy user accounts. Accounts are
+expected to exist, and the method will fail if they are missing.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#method_removeUsers">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_continuousIntegrationRunning">continuousIntegrationRunning</a>()
+        
+                                            <p><p>Is this test running in a continuous integration context?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/LiveDetectionTrait.html#method_continuousIntegrationRunning">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUpBeforeClass">setUpBeforeClass</a>()
+        
+                                            <p><p>Standard setup method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setUp">setUp</a>()
+        
+                                            <p><p>Standard setup method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Auth/Shibboleth.html"><abbr title="VuFind\Auth\Shibboleth">Shibboleth</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAuthObject">getAuthObject</a>(<abbr title="Laminas\Config\Config">Config</abbr> $config = null, <abbr title="Laminas\Config\Config">Config</abbr> $shibConfig = null, bool $useHeaders = false, bool $requiredAttributes = true)
+        
+                                            <p><p>Get an authentication object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Config\Config">Config</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAuthConfig">getAuthConfig</a>($useHeaders = false, $requiredAttributes = true)
+        
+                                            <p><p>Get a working configuration for the Shibboleth object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Config\Config">Config</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getShibbolethConfig">getShibbolethConfig</a>()
+        
+                                            <p><p>Get a working configuration for the Shibboleth object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCreateIsDisallowed">testCreateIsDisallowed</a>()
+        
+                                            <p><p>Test account creation is disallowed.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\Request">Request</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLoginRequest">getLoginRequest</a>(array $overrides = [], bool $useHeaders = false)
+        
+                                            <p><p>Support method -- get parameters to log into an account (but allow override of
+individual parameters so we can test different scenarios).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginWithBlankUsername">testLoginWithBlankUsername</a>()
+        
+                                            <p><p>Test login with blank username.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLoginWithBlankPassword">testLoginWithBlankPassword</a>()
+        
+                                            <p><p>Test login with blank username.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testWithMissingAttributeValue">testWithMissingAttributeValue</a>()
+        
+                                            <p><p>Test a configuration with a missing attribute value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testWithoutUsername">testWithoutUsername</a>()
+        
+                                            <p><p>Test a configuration with missing username.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testWithoutLoginSetting">testWithoutLoginSetting</a>()
+        
+                                            <p><p>Test a configuration with missing login setting.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSessionInitiator">testSessionInitiator</a>()
+        
+                                            <p><p>Test session initiator</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLogin">testLogin</a>()
+        
+                                            <p><p>Test successful login.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLogin1">testLogin1</a>()
+        
+                                            <p><p>Test successful login.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLogin2">testLogin2</a>()
+        
+                                            <p><p>Test successful login.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testFailedLogin">testFailedLogin</a>()
+        
+                                            <p><p>Test failed login.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testProxyLogin">testProxyLogin</a>()
+        
+                                            <p><p>Test login using attributes passed in headers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_tearDownAfterClass">tearDownAfterClass</a>()
+        
+                                            <p><p>Standard teardown method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getPathResolver">
+        <div class="location">in <a href="../../VuFindTest/Feature/PathResolverTrait.html#method_getPathResolver">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a> at line 51</div>
+        <code>            protected        <a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a>
+    <strong>getPathResolver</strong>(string|null $baseDirectory = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a config file path resolver</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$baseDirectory</td>
+                <td><p>Optional directory to override APPLICATION_PATH</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Config/PathResolver.html"><abbr title="VuFind\Config\PathResolver">PathResolver</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPathResolverToContainer">
+        <div class="location">in <a href="../../VuFindTest/Feature/PathResolverTrait.html#method_addPathResolverToContainer">
+<abbr title="VuFindTest\Feature\PathResolverTrait">PathResolverTrait</abbr></a> at line 77</div>
+        <code>            protected        void
+    <strong>addPathResolverToContainer</strong>(<a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add PathResolverFactory to a mock container</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFindTest/Container/MockContainer.html"><abbr title="VuFindTest\Container\MockContainer">MockContainer</abbr></a></td>
+                <td>$container</td>
+                <td><p>Mock Container</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLiveTableManager">
+        <div class="location">in <a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#method_getLiveTableManager">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a> at line 66</div>
+        <code>                    <a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a>
+    <strong>getLiveTableManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a real, working table manager.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Table/PluginManager.html"><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTable">
+        <div class="location">in <a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#method_getTable">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a> at line 111</div>
+        <code>                    <a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a>
+    <strong>getTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a table object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td><p>Name of table to load</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Db/Table/Gateway.html"><abbr title="VuFind\Db\Table\Gateway">Gateway</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_failIfDataExists">
+        <div class="location">in <a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#method_failIfDataExists">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a> at line 122</div>
+        <code>        static    protected        void
+    <strong>failIfDataExists</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Static setup support function to fail if there is already data in the
+database. We want to ensure a clean state for each test!</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeUsers">
+        <div class="location">in <a href="../../VuFindTest/Feature/LiveDatabaseTrait.html#method_removeUsers">
+<abbr title="VuFindTest\Feature\LiveDatabaseTrait">LiveDatabaseTrait</abbr></a> at line 169</div>
+        <code>        static    protected        void
+    <strong>removeUsers</strong>(array|string $users)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Static teardown support function to destroy user accounts. Accounts are
+expected to exist, and the method will fail if they are missing.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$users</td>
+                <td><p>User(s) to delete</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_continuousIntegrationRunning">
+        <div class="location">in <a href="../../VuFindTest/Feature/LiveDetectionTrait.html#method_continuousIntegrationRunning">
+<abbr title="VuFindTest\Feature\LiveDetectionTrait">LiveDetectionTrait</abbr></a> at line 55</div>
+        <code>                    bool
+    <strong>continuousIntegrationRunning</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is this test running in a continuous integration context?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpBeforeClass">
+        <div class="location">at line 86</div>
+        <code>        static            void
+    <strong>setUpBeforeClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard setup method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUp">
+        <div class="location">at line 96</div>
+        <code>                    void
+    <strong>setUp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard setup method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuthObject">
+        <div class="location">at line 115</div>
+        <code>                    <a href="../../VuFind/Auth/Shibboleth.html"><abbr title="VuFind\Auth\Shibboleth">Shibboleth</abbr></a>
+    <strong>getAuthObject</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $config = null, <abbr title="Laminas\Config\Config">Config</abbr> $shibConfig = null, bool $useHeaders = false, bool $requiredAttributes = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an authentication object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Configuration to use (null for default)</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$shibConfig</td>
+                <td><p>Configuration with IdP</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useHeaders</td>
+                <td><p>use HTTP headers instead of environment variables</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$requiredAttributes</td>
+                <td><p>required attributes</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Auth/Shibboleth.html"><abbr title="VuFind\Auth\Shibboleth">Shibboleth</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuthConfig">
+        <div class="location">at line 141</div>
+        <code>                    <abbr title="Laminas\Config\Config">Config</abbr>
+    <strong>getAuthConfig</strong>($useHeaders = false, $requiredAttributes = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a working configuration for the Shibboleth object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$useHeaders</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$requiredAttributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShibbolethConfig">
+        <div class="location">at line 164</div>
+        <code>                    <abbr title="Laminas\Config\Config">Config</abbr>
+    <strong>getShibbolethConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a working configuration for the Shibboleth object</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCreateIsDisallowed">
+        <div class="location">at line 198</div>
+        <code>                    void
+    <strong>testCreateIsDisallowed</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test account creation is disallowed.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoginRequest">
+        <div class="location">at line 212</div>
+        <code>            protected        <abbr title="Laminas\Http\Request">Request</abbr>
+    <strong>getLoginRequest</strong>(array $overrides = [], bool $useHeaders = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method -- get parameters to log into an account (but allow override of
+individual parameters so we can test different scenarios).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$overrides</td>
+                <td><p>Associative array of parameters to override.</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useHeaders</td>
+                <td><p>Use headers instead of environment variables</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\Request">Request</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginWithBlankUsername">
+        <div class="location">at line 234</div>
+        <code>                    void
+    <strong>testLoginWithBlankUsername</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test login with blank username.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoginWithBlankPassword">
+        <div class="location">at line 247</div>
+        <code>                    void
+    <strong>testLoginWithBlankPassword</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test login with blank username.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWithMissingAttributeValue">
+        <div class="location">at line 260</div>
+        <code>                    void
+    <strong>testWithMissingAttributeValue</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test a configuration with a missing attribute value.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWithoutUsername">
+        <div class="location">at line 274</div>
+        <code>                    void
+    <strong>testWithoutUsername</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test a configuration with missing username.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWithoutLoginSetting">
+        <div class="location">at line 288</div>
+        <code>                    void
+    <strong>testWithoutLoginSetting</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test a configuration with missing login setting.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSessionInitiator">
+        <div class="location">at line 302</div>
+        <code>                    void
+    <strong>testSessionInitiator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test session initiator</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLogin">
+        <div class="location">at line 315</div>
+        <code>                    void
+    <strong>testLogin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test successful login.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLogin1">
+        <div class="location">at line 327</div>
+        <code>                    void
+    <strong>testLogin1</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test successful login.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLogin2">
+        <div class="location">at line 340</div>
+        <code>                    void
+    <strong>testLogin2</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test successful login.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testFailedLogin">
+        <div class="location">at line 353</div>
+        <code>                    void
+    <strong>testFailedLogin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test failed login.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testProxyLogin">
+        <div class="location">at line 365</div>
+        <code>                    void
+    <strong>testProxyLogin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test login using attributes passed in headers.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tearDownAfterClass">
+        <div class="location">at line 378</div>
+        <code>        static            void
+    <strong>tearDownAfterClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Standard teardown method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindSearch\Backend\Summon\Response\RecordCollection | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindSearch_Backend_Summon_Response_RecordCollection" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../VuFindSearch.html">VuFindSearch</a></li><li class="backslash">\</li><li><a href="../../../../VuFindSearch/Backend.html">Backend</a></li><li class="backslash">\</li><li><a href="../../../../VuFindSearch/Backend/Summon.html">Summon</a></li><li class="backslash">\</li><li><a href="../../../../VuFindSearch/Backend/Summon/Response.html">Response</a></li><li class="backslash">\</li><li>RecordCollection</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>RecordCollection    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>RecordCollection</strong>        extends <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html"><abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>WorldCat record collection.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_records">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$records</td>
+                <td class="last"><p>Response records.</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#property_records">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$source</td>
+                <td class="last"><p>Source identifier</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#property_source">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pointer">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$pointer</td>
+                <td class="last"><p>Array pointer</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#property_pointer">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_offset">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$offset</td>
+                <td class="last"><p>Zero-based offset in complete search result.</p></td>
+                <td><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#property_offset">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_response">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$response</td>
+                <td class="last"><p>Raw response.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecords">getRecords</a>()
+        
+                                            <p><p>Return records.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_getRecords">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getErrors">getErrors</a>()
+        
+                                            <p><p>Return any errors.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_getErrors">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_shuffle">shuffle</a>()
+        
+                                            <p><p>Shuffles records.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_shuffle">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_slice">slice</a>(int $offset, int $limit)
+        
+                                            <p><p>Slice the record list.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_slice">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_first">first</a>()
+        
+                                            <p><p>Return first record in response.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_first">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOffset">getOffset</a>()
+        
+                                            <p><p>Return offset in the total search result set.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_getOffset">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSourceIdentifier">setSourceIdentifier</a>(string $identifier)
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p><p>Set the source backend identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_setSourceIdentifier">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSourceIdentifiers">setSourceIdentifiers</a>(string $recordSourceId, string $searchBackendId = &#039;&#039;)
+        
+                                            <p><p>Set the source backend identifiers.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_setSourceIdentifiers">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourceIdentifier">getSourceIdentifier</a>()
+        
+                                            <p><p>Return the source backend identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_getSourceIdentifier">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_add">add</a>(<a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a> $record, bool $checkExisting = true)
+        
+                                            <p><p>Add a record to the collection.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_add">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_has">has</a>(<a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a> $record)
+        
+                                            <p><p>Check if the collection contains the given record</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_has">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_replace">replace</a>(<a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a> $record, <a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a> $replacement)
+        
+                                            <p><p>Replace a record in the collection.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_replace">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_valid">valid</a>()
+        
+                                            <p><p>Return true if current collection index is valid.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_valid">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_current">current</a>()
+        
+                                            <p><p>Return record at current collection index.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_current">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_rewind">rewind</a>()
+        
+                                            <p><p>Rewind collection index.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_rewind">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_next">next</a>()
+        
+                                            <p><p>Move to next collection index.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_next">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_key">key</a>()
+        
+                                            <p><p>Return current collection index.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_key">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_count">count</a>()
+        
+                                            <p><p>Return number of records in collection.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_count">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $response)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTotal">getTotal</a>()
+        
+                                            <p><p>Return total number of records found.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFacets">getFacets</a>()
+        
+                                            <p><p>Return facet information.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSpellcheck">getSpellcheck</a>()
+        
+                                            <p><p>Get spelling suggestions.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBestBets">getBestBets</a>()
+        
+                                            <p><p>Get best bets from Summon, if any.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDatabaseRecommendations">getDatabaseRecommendations</a>()
+        
+                                            <p><p>Get database recommendations from Summon, if any.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTopicRecommendations">getTopicRecommendations</a>()
+        
+                                            <p><p>Get topic recommendations from Summon, if any.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getRecords">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_getRecords">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 75</div>
+        <code>                    array
+    <strong>getRecords</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return records.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getErrors">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_getErrors">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 88</div>
+        <code>                    array
+    <strong>getErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return any errors.</p></p>                <p><p>Each error can be a translatable string or an array that the Flashmessages
+view helper understands.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shuffle">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_shuffle">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 98</div>
+        <code>                    bool
+    <strong>shuffle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Shuffles records.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_slice">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_slice">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 111</div>
+        <code>                    void
+    <strong>slice</strong>(int $offset, int $limit)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Slice the record list.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td>Offset</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>Limit</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_first">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_first">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 125</div>
+        <code>                    <a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a>|null
+    <strong>first</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return first record in response.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOffset">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_getOffset">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 135</div>
+        <code>                    int
+    <strong>getOffset</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return offset in the total search result set.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSourceIdentifier">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_setSourceIdentifier">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 149</div>
+        <code>                    void
+    <strong>setSourceIdentifier</strong>(string $identifier)
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Use</td>
+                    <td>setSourceIdentifiers instead</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the source backend identifier.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td><p>Backend identifier</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSourceIdentifiers">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_setSourceIdentifiers">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 166</div>
+        <code>                    void
+    <strong>setSourceIdentifiers</strong>(string $recordSourceId, string $searchBackendId = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the source backend identifiers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$recordSourceId</td>
+                <td><p>Record source identifier</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$searchBackendId</td>
+                <td><p>Search backend identifier (if different from
+$recordSourceId)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourceIdentifier">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_getSourceIdentifier">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 182</div>
+        <code>                    string
+    <strong>getSourceIdentifier</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the source backend identifier.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_add">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_add">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 196</div>
+        <code>                    void
+    <strong>add</strong>(<a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a> $record, bool $checkExisting = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a record to the collection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record to add</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$checkExisting</td>
+                <td><p>Whether to check for existing record in
+the collection (slower, but makes sure there are no duplicates)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_has">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 211</div>
+        <code>                    bool
+    <strong>has</strong>(<a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a> $record)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check if the collection contains the given record</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replace">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_replace">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 224</div>
+        <code>                    void
+    <strong>replace</strong>(<a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a> $record, <a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a> $replacement)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace a record in the collection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a></td>
+                <td>$record</td>
+                <td><p>Record to be replaced</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a></td>
+                <td>$replacement</td>
+                <td><p>Replacement record</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valid">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_valid">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 239</div>
+        <code>                    bool
+    <strong>valid</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return true if current collection index is valid.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_current">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_current">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 249</div>
+        <code>                    <a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a>
+    <strong>current</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return record at current collection index.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../VuFindSearch/Response/RecordInterface.html"><abbr title="VuFindSearch\Response\RecordInterface">RecordInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewind">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_rewind">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 260</div>
+        <code>                    void
+    <strong>rewind</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rewind collection index.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_next">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_next">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 270</div>
+        <code>                    void
+    <strong>next</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Move to next collection index.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_key">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_key">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 280</div>
+        <code>                    int
+    <strong>key</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return current collection index.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">in <a href="../../../../VuFindSearch/Response/AbstractRecordCollection.html#method_count">
+<abbr title="VuFindSearch\Response\AbstractRecordCollection">AbstractRecordCollection</abbr></a> at line 293</div>
+        <code>                    int
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return number of records in collection.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 58</div>
+        <code>                    void
+    <strong>__construct</strong>(array $response)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor.</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$response</td>
+                <td><p>Summon response</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTotal">
+        <div class="location">at line 76</div>
+        <code>                    int
+    <strong>getTotal</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return total number of records found.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacets">
+        <div class="location">at line 86</div>
+        <code>                    array
+    <strong>getFacets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return facet information.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSpellcheck">
+        <div class="location">at line 96</div>
+        <code>                    array
+    <strong>getSpellcheck</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get spelling suggestions.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBestBets">
+        <div class="location">at line 107</div>
+        <code>                    array|bool
+    <strong>getBestBets</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get best bets from Summon, if any.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td><p>false if no recommendations, detailed array otherwise.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDatabaseRecommendations">
+        <div class="location">at line 117</div>
+        <code>                    array|bool
+    <strong>getDatabaseRecommendations</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get database recommendations from Summon, if any.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td><p>false if no recommendations, detailed array otherwise.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTopicRecommendations">
+        <div class="location">at line 127</div>
+        <code>                    array|bool
+    <strong>getTopicRecommendations</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get topic recommendations from Summon, if any.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td><p>false if no recommendations, detailed array otherwise.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

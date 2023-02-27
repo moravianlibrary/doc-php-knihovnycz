@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>IndexFactory</strong>        extends <abbr title="VuFind\Sitemap\Plugin\IndexFactory">IndexFactory</abbr>
+    <strong>IndexFactory</strong>        extends <a href="../../../VuFind/Sitemap/Plugin/IndexFactory.html"><abbr title="VuFind\Sitemap\Plugin\IndexFactory">IndexFactory</abbr></a>
 </p>
 
                 <p>
@@ -111,10 +111,32 @@
                     object
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___invoke">__invoke</a>(<abbr title="Interop\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
+                    <a href="#method___invoke">__invoke</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
         
                                             <p><p>Create an object</p></p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBackendSettings">getBackendSettings</a>(<abbr title="VuFind\Sitemap\Plugin\Config">Config</abbr> $config)
+        
+                                            <p><p>Process backend configuration into a convenient array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/IndexFactory.html#method_getBackendSettings">
+<abbr title="VuFind\Sitemap\Plugin\IndexFactory">IndexFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Sitemap/Plugin/Index/AbstractIdFetcher.html"><abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIdFetcher">getIdFetcher</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $retrievalMode)
+        
+                                            <p><p>Get the helper object for generating sitemaps through the search service.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Sitemap/Plugin/IndexFactory.html#method_getIdFetcher">
+<abbr title="VuFind\Sitemap\Plugin\IndexFactory">IndexFactory</abbr></a></small></div>
             </div>
             </div>
 
@@ -126,7 +148,7 @@
                     <h3 id="method___invoke">
         <div class="location">at line 62</div>
         <code>                    object
-    <strong>__invoke</strong>(<abbr title="Interop\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
+    <strong>__invoke</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $requestedName, array $options = null)
         </code>
     </h3>
     <div class="details">    
@@ -142,7 +164,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="Interop\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
                 <td>$container</td>
                 <td><p>Service manager</p></td>
             </tr>
@@ -186,6 +208,99 @@
             </tr>
             </table>
 
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBackendSettings">
+        <div class="location">in <a href="../../../VuFind/Sitemap/Plugin/IndexFactory.html#method_getBackendSettings">
+<abbr title="VuFind\Sitemap\Plugin\IndexFactory">IndexFactory</abbr></a> at line 87</div>
+        <code>            protected        array
+    <strong>getBackendSettings</strong>(<abbr title="VuFind\Sitemap\Plugin\Config">Config</abbr> $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process backend configuration into a convenient array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Sitemap\Plugin\Config">Config</abbr></td>
+                <td>$config</td>
+                <td><p>Sitemap config</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdFetcher">
+        <div class="location">in <a href="../../../VuFind/Sitemap/Plugin/IndexFactory.html#method_getIdFetcher">
+<abbr title="VuFind\Sitemap\Plugin\IndexFactory">IndexFactory</abbr></a> at line 111</div>
+        <code>            protected        <a href="../../../VuFind/Sitemap/Plugin/Index/AbstractIdFetcher.html"><abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr></a>
+    <strong>getIdFetcher</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, string $retrievalMode)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the helper object for generating sitemaps through the search service.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$retrievalMode</td>
+                <td><p>Retrieval mode ('terms' or 'search')</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Sitemap/Plugin/Index/AbstractIdFetcher.html"><abbr title="VuFind\Sitemap\Plugin\Index\AbstractIdFetcher">AbstractIdFetcher</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
             
             
                     </div>

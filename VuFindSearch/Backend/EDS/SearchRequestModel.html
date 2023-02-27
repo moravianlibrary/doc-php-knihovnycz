@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindSearch\Backend\EDS\SearchRequestModel | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindSearch_Backend_EDS_SearchRequestModel" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindSearch.html">VuFindSearch</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend.html">Backend</a></li><li class="backslash">\</li><li><a href="../../../VuFindSearch/Backend/EDS.html">EDS</a></li><li class="backslash">\</li><li>SearchRequestModel</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>SearchRequestModel    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>SearchRequestModel</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">EBSCOIndustries</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>EBSCO EDS API Search Model</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_query">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$query</td>
+                <td class="last"><p>What to search for, formatted as [{boolean operator},][{field code}:]{term}</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_includeFacets">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$includeFacets</td>
+                <td class="last"><p>Whether or not to return facets with the search results. valid values are
+'y' or 'n'</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_facetFilters">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$facetFilters</td>
+                <td class="last"><p>Array of filters to apply to the search</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sort">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$sort</td>
+                <td class="last"><p>Sort option to apply</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limiters">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$limiters</td>
+                <td class="last"><p>Options to limit the results by</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchMode">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchMode</td>
+                <td class="last"><p>Mode to be effective in the search</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_expanders">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$expanders</td>
+                <td class="last"><p>Expanders to use. Comma separated.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_view">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$view</td>
+                <td class="last"><p>Requested level of detail to return the results with</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resultsPerPage">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$resultsPerPage</td>
+                <td class="last"><p>Number of records to return</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pageNumber">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$pageNumber</td>
+                <td class="last"><p>Page number of records to return. This is used in conjunction with the
+$resultsPerPage to determine the set of records to return.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_highlight">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$highlight</td>
+                <td class="last"><p>Whether or not to highlight the search term in the results.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_actions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$actions</td>
+                <td class="last"><p>Collection of user actions to apply to current request</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(array $parameters = [])
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatDateLimiter">formatDateLimiter</a>(string $filter)
+        
+                                            <p><p>Format a date limiter</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setParameters">setParameters</a>(array $parameters = [])
+        
+                                            <p><p>Set properties from parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_convertToQueryString">convertToQueryString</a>()
+        
+                                            <p><p>Converts properties to a querystring to send to the EdsAPI</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_convertToQueryStringParameterArray">convertToQueryStringParameterArray</a>()
+        
+                                            <p><p>Converts properties to a querystring to send to the EdsAPI</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_convertToSearchRequestJSON">convertToSearchRequestJSON</a>()
+        
+                                            <p><p>Converts properties to a search request JSON document to send to the EdsAPI</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_endsWith">endsWith</a>(string $valueToCheck, string $valueToCheckFor)
+        
+                                            <p><p>Verify whether or not a string ends with certain characters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isParameterIndexed">isParameterIndexed</a>(string $value)
+        
+                                            <p><p>Determines whether or not a querystring parameter is indexed</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIndexedParameterName">getIndexedParameterName</a>(string $value)
+        
+                                            <p><p>Get the querystring parameter name of an indexed parameter to send to the Eds
+Api</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addAction">addAction</a>(string $action)
+        
+                                            <p><p>Add a new action</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addQuery">addQuery</a>(string $query)
+        
+                                            <p><p>Add a new query expression</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addLimiter">addLimiter</a>(string $limiter)
+        
+                                            <p><p>Add a new limiter</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addExpander">addExpander</a>(string $expander)
+        
+                                            <p><p>Add a new expander</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addfilter">addfilter</a>(string $facetFilter)
+        
+                                            <p><p>Add a new facet filter</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_escapeSpecialCharacters">escapeSpecialCharacters</a>(string $value)
+        
+                                            <p><p>Escape characters that may be present in the parameter syntax</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_escapeSpecialCharactersForActions">escapeSpecialCharactersForActions</a>(string $value)
+        
+                                            <p><p>Escape characters that may be present in the action parameter syntax</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___get">__get</a>(string $property)
+        
+                                            <p><p>Magic getter</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/EDS/SearchRequestModel.html"><abbr title="VuFindSearch\Backend\EDS\SearchRequestModel">SearchRequestModel</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___set">__set</a>(string $property, mixed $value)
+        
+                                            <p><p>Magic setter</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 134</div>
+        <code>                    
+    <strong>__construct</strong>(array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                <p><p>Sets up the EDS API Search Request model</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td><p>parameters to populate request</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatDateLimiter">
+        <div class="location">at line 146</div>
+        <code>            protected        string
+    <strong>formatDateLimiter</strong>(string $filter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format a date limiter</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filter</td>
+                <td><p>Filter value</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParameters">
+        <div class="location">at line 173</div>
+        <code>                    void
+    <strong>setParameters</strong>(array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set properties from parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td><p>Parameters to set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertToQueryString">
+        <div class="location">at line 207</div>
+        <code>                    string
+    <strong>convertToQueryString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Converts properties to a querystring to send to the EdsAPI</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertToQueryStringParameterArray">
+        <div class="location">at line 217</div>
+        <code>                    string
+    <strong>convertToQueryStringParameterArray</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Converts properties to a querystring to send to the EdsAPI</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertToSearchRequestJSON">
+        <div class="location">at line 289</div>
+        <code>                    string
+    <strong>convertToSearchRequestJSON</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Converts properties to a search request JSON document to send to the EdsAPI</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_endsWith">
+        <div class="location">at line 381</div>
+        <code>        static    protected        bool
+    <strong>endsWith</strong>(string $valueToCheck, string $valueToCheckFor)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Verify whether or not a string ends with certain characters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$valueToCheck</td>
+                <td><p>Value to check the ending characters of</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$valueToCheckFor</td>
+                <td><p>Characters to check for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isParameterIndexed">
+        <div class="location">at line 395</div>
+        <code>        static            bool
+    <strong>isParameterIndexed</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determines whether or not a querystring parameter is indexed</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>parameter key to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIndexedParameterName">
+        <div class="location">at line 409</div>
+        <code>        static            string
+    <strong>getIndexedParameterName</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the querystring parameter name of an indexed parameter to send to the Eds
+Api</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Indexed parameter name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAction">
+        <div class="location">at line 422</div>
+        <code>                    void
+    <strong>addAction</strong>(string $action)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new action</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td><p>Action to add to the existing collection of actions</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addQuery">
+        <div class="location">at line 434</div>
+        <code>                    void
+    <strong>addQuery</strong>(string $query)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new query expression</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td><p>Query expression to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLimiter">
+        <div class="location">at line 446</div>
+        <code>                    void
+    <strong>addLimiter</strong>(string $limiter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new limiter</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$limiter</td>
+                <td><p>Limiter to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addExpander">
+        <div class="location">at line 458</div>
+        <code>                    void
+    <strong>addExpander</strong>(string $expander)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new expander</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expander</td>
+                <td><p>Expander to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addfilter">
+        <div class="location">at line 470</div>
+        <code>                    void
+    <strong>addfilter</strong>(string $facetFilter)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new facet filter</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$facetFilter</td>
+                <td><p>Facet Filter to add</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escapeSpecialCharacters">
+        <div class="location">at line 482</div>
+        <code>        static            string
+    <strong>escapeSpecialCharacters</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Escape characters that may be present in the parameter syntax</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>The value to escape</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The value with special characters escaped</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escapeSpecialCharactersForActions">
+        <div class="location">at line 494</div>
+        <code>        static            string
+    <strong>escapeSpecialCharactersForActions</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Escape characters that may be present in the action parameter syntax</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>The value to escape</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>The value with special characters escaped</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at line 506</div>
+        <code>                    mixed
+    <strong>__get</strong>(string $property)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Magic getter</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td><p>Property to retrieve</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">at line 521</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/EDS/SearchRequestModel.html"><abbr title="VuFindSearch\Backend\EDS\SearchRequestModel">SearchRequestModel</abbr></a>
+    <strong>__set</strong>(string $property, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Magic setter</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td><p>Property to set</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><p>Value to set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/EDS/SearchRequestModel.html"><abbr title="VuFindSearch\Backend\EDS\SearchRequestModel">SearchRequestModel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

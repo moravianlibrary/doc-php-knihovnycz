@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\Search\NormalizedSearchTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_Search_NormalizedSearchTest" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../VuFindTest/Search.html">Search</a></li><li class="backslash">\</li><li>NormalizedSearchTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>NormalizedSearchTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>NormalizedSearchTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>NormalizedSearch unit tests.</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html"><abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Mix-in for constructing Solr search objects for tests.</p></div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockConfigManager">getMockConfigManager</a>()
+        
+                                            <p><p>Get mock config manager.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html#method_getMockConfigManager">
+<abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/Solr/Options.html"><abbr title="VuFind\Search\Solr\Options">Options</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSolrOptions">getSolrOptions</a>()
+        
+                                            <p><p>Get Solr options.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html#method_getSolrOptions">
+<abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/Solr/Params.html"><abbr title="VuFind\Search\Solr\Params">Params</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSolrParams">getSolrParams</a>(<a href="../../VuFind/Search/Solr/Options.html"><abbr title="VuFind\Search\Solr\Options">Options</abbr></a> $options = null)
+        
+                                            <p><p>Get Solr params.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html#method_getSolrParams">
+<abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSolrResults">getSolrResults</a>(<a href="../../VuFind/Search/Solr/Params.html"><abbr title="VuFind\Search\Solr\Params">Params</abbr></a> $params = null)
+        
+                                            <p><p>Get Solr results.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html#method_getSolrResults">
+<abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResultsManager">getResultsManager</a>()
+        
+                                            <p><p>Get a results manager to test with.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getResults">getResults</a>()
+        
+                                            <p><p>Get a results object to test with.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/Search/NormalizedSearch.html"><abbr title="VuFind\Search\NormalizedSearch">NormalizedSearch</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNormalizedSearch">getNormalizedSearch</a>(<a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a> $results = null)
+        
+                                            <p><p>Get a normalized search object to test with.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetRawResults">testGetRawResults</a>()
+        
+                                            <p><p>Test getRawResults.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMinified">testGetMinified</a>()
+        
+                                            <p><p>Test getMinified.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetNormalizedResults">testGetNormalizedResults</a>()
+        
+                                            <p><p>Test getNormalizedResults.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetUrl">testGetUrl</a>()
+        
+                                            <p><p>Test getUrl.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetChecksum">testGetChecksum</a>()
+        
+                                            <p><p>Test getChecksum.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testEquivalentSearches">testEquivalentSearches</a>()
+        
+                                            <p><p>Test positive equivalence.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testNonEquivalentSearches">testNonEquivalentSearches</a>()
+        
+                                            <p><p>Test negative equivalence.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getMockConfigManager">
+        <div class="location">in <a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html#method_getMockConfigManager">
+<abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a> at line 51</div>
+        <code>                    <a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+    <strong>getMockConfigManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get mock config manager.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSolrOptions">
+        <div class="location">in <a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html#method_getSolrOptions">
+<abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a> at line 64</div>
+        <code>                    <a href="../../VuFind/Search/Solr/Options.html"><abbr title="VuFind\Search\Solr\Options">Options</abbr></a>
+    <strong>getSolrOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Solr options.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/Solr/Options.html"><abbr title="VuFind\Search\Solr\Options">Options</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSolrParams">
+        <div class="location">in <a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html#method_getSolrParams">
+<abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a> at line 78</div>
+        <code>                    <a href="../../VuFind/Search/Solr/Params.html"><abbr title="VuFind\Search\Solr\Params">Params</abbr></a>
+    <strong>getSolrParams</strong>(<a href="../../VuFind/Search/Solr/Options.html"><abbr title="VuFind\Search\Solr\Options">Options</abbr></a> $options = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Solr params.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Search/Solr/Options.html"><abbr title="VuFind\Search\Solr\Options">Options</abbr></a></td>
+                <td>$options</td>
+                <td><p>Solr options to inject (null for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/Solr/Params.html"><abbr title="VuFind\Search\Solr\Params">Params</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSolrResults">
+        <div class="location">in <a href="../../VuFindTest/Feature/SolrSearchObjectTrait.html#method_getSolrResults">
+<abbr title="VuFindTest\Feature\SolrSearchObjectTrait">SolrSearchObjectTrait</abbr></a> at line 93</div>
+        <code>                    <a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a>
+    <strong>getSolrResults</strong>(<a href="../../VuFind/Search/Solr/Params.html"><abbr title="VuFind\Search\Solr\Params">Params</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Solr results.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Search/Solr/Params.html"><abbr title="VuFind\Search\Solr\Params">Params</abbr></a></td>
+                <td>$params</td>
+                <td><p>Solr parameters to inject (null for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResultsManager">
+        <div class="location">at line 53</div>
+        <code>            protected        <a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a>
+    <strong>getResultsManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a results manager to test with.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/Results/PluginManager.html"><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResults">
+        <div class="location">at line 63</div>
+        <code>            protected        <a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a>
+    <strong>getResults</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a results object to test with.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNormalizedSearch">
+        <div class="location">at line 82</div>
+        <code>            protected        <a href="../../VuFind/Search/NormalizedSearch.html"><abbr title="VuFind\Search\NormalizedSearch">NormalizedSearch</abbr></a>
+    <strong>getNormalizedSearch</strong>(<a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a> $results = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a normalized search object to test with.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Search/Solr/Results.html"><abbr title="VuFind\Search\Solr\Results">Results</abbr></a></td>
+                <td>$results</td>
+                <td><p>Results to normalize (null to use defaults)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/Search/NormalizedSearch.html"><abbr title="VuFind\Search\NormalizedSearch">NormalizedSearch</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetRawResults">
+        <div class="location">at line 97</div>
+        <code>                    void
+    <strong>testGetRawResults</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getRawResults.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMinified">
+        <div class="location">at line 109</div>
+        <code>                    void
+    <strong>testGetMinified</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getMinified.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetNormalizedResults">
+        <div class="location">at line 121</div>
+        <code>                    void
+    <strong>testGetNormalizedResults</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getNormalizedResults.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetUrl">
+        <div class="location">at line 138</div>
+        <code>                    void
+    <strong>testGetUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getUrl.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetChecksum">
+        <div class="location">at line 148</div>
+        <code>                    void
+    <strong>testGetChecksum</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test getChecksum.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testEquivalentSearches">
+        <div class="location">at line 158</div>
+        <code>                    void
+    <strong>testEquivalentSearches</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test positive equivalence.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testNonEquivalentSearches">
+        <div class="location">at line 170</div>
+        <code>                    void
+    <strong>testNonEquivalentSearches</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test negative equivalence.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

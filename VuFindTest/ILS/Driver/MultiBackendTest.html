@@ -1,0 +1,3639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFindTest\ILS\Driver\MultiBackendTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFindTest_ILS_Driver_MultiBackendTest" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFindTest.html">VuFindTest</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/ILS.html">ILS</a></li><li class="backslash">\</li><li><a href="../../../VuFindTest/ILS/Driver.html">Driver</a></li><li class="backslash">\</li><li>MultiBackendTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>MultiBackendTest    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>MultiBackendTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>ILS driver test</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFindTest/Feature/ConfigPluginManagerTrait.html"><abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait for configuration handling in tests.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFindTest/Feature/ReflectionTrait.html"><abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Reflection helper methods for unit tests.</p></div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockConfigPluginManager">getMockConfigPluginManager</a>(array $configs, array $default = [], <abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr> $getExpect = null, <abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr> $hasExpect = null)
+        
+                                            <p><p>Get a mock configuration plugin manager with the given configuration &quot;files&quot;
+available.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/ConfigPluginManagerTrait.html#method_getMockConfigPluginManager">
+<abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockFailingConfigPluginManager">getMockFailingConfigPluginManager</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception)
+        
+                                            <p><p>Get a mock configuration plugin manager that will throw an exception.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/ConfigPluginManagerTrait.html#method_getMockFailingConfigPluginManager">
+<abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_callMethod">callMethod</a>(object|string $object, string $method, array $arguments = [])
+        
+                                            <p><p>Call protected or private method for side-effect and result.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/ReflectionTrait.html#method_callMethod">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getProperty">getProperty</a>(object|string $object, string $property)
+        
+                                            <p><p>Return protected or private property.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/ReflectionTrait.html#method_getProperty">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setProperty">setProperty</a>(object|string $object, string $property, mixed $value)
+        
+                                            <p><p>Set protected or private property.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFindTest/Feature/ReflectionTrait.html#method_setProperty">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMissingConfiguration">testMissingConfiguration</a>()
+        
+                                            <p><p>Test that driver complains about missing configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testMissingILSConfiguration">testMissingILSConfiguration</a>()
+        
+                                            <p><p>Test that driver handles missing ILS driver configuration properly.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testILSConfigurationPathWithoutDriverConfigPath">testILSConfigurationPathWithoutDriverConfigPath</a>()
+        
+                                            <p><p>Test that driver handles ILS driver configuration loading properly when
+drivers_config_path is not defined.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testILSConfigurationPathWithDriverConfigPath">testILSConfigurationPathWithDriverConfigPath</a>()
+        
+                                            <p><p>Test that driver handles ILS driver configuration loading properly when
+drivers_config_path is not defined.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testInitialization">testInitialization</a>()
+        
+                                            <p><p>Test that MultiBackend can be properly initialized.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testLogging">testLogging</a>()
+        
+                                            <p><p>Tests that logging works correctly</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetSourceFromParams">testGetSourceFromParams</a>()
+        
+                                            <p><p>Testing method for getSourceFromParams</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetDriver">testGetDriver</a>()
+        
+                                            <p><p>Test that MultiBackend can properly retrieve a new driver.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetDriverConfig">testGetDriverConfig</a>()
+        
+                                            <p><p>Tests that getDriverConfig works correctly</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testAddIdPrefixes">testAddIdPrefixes</a>()
+        
+                                            <p><p>Testing method for addIdPrefixes</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testStripIdPrefixes">testStripIdPrefixes</a>()
+        
+                                            <p><p>Testing method for stripIdPrefixes</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testDriverSupportsMethod">testDriverSupportsMethod</a>()
+        
+                                            <p><p>Testing method for driverSupportsMethod</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetHolding">testGetHolding</a>()
+        
+                                            <p><p>Testing method for getHolding</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetPurchaseHistory">testGetPurchaseHistory</a>()
+        
+                                            <p><p>Testing method for getPurchaseHistory</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetLoginDrivers">testGetLoginDrivers</a>()
+        
+                                            <p><p>Testing method for getLoginDrivers</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetDefaultLoginDriver">testGetDefaultLoginDriver</a>()
+        
+                                            <p><p>Testing method for getDefaultLoginDriver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetStatus">testGetStatus</a>()
+        
+                                            <p><p>Testing method for getStatus</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetStatuses">testGetStatuses</a>()
+        
+                                            <p><p>Testing method for getStatuses</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetLocalId">testGetLocalId</a>()
+        
+                                            <p><p>This method tests getLocalId.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testDefaultDriver">testDefaultDriver</a>()
+        
+                                            <p><p>Test that MultiBackend can find and use the default ILS driver if parameters
+don't include a detectable source id</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetNewItemsNoDefault">testGetNewItemsNoDefault</a>()
+        
+                                            <p><p>Testing method for getNewItems without a default driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetNewItems">testGetNewItems</a>()
+        
+                                            <p><p>Testing method for getNewItems with a default driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetCoursesNoDefault">testGetCoursesNoDefault</a>()
+        
+                                            <p><p>Testing method for getCourses without a default driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetCourses">testGetCourses</a>()
+        
+                                            <p><p>Testing method for getCourses with a default driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetDepartmentsNoDefault">testGetDepartmentsNoDefault</a>()
+        
+                                            <p><p>Testing method for getDepartments without a default driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetDepartments">testGetDepartments</a>()
+        
+                                            <p><p>Testing method for getDepartments</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetInstructorsNoDefault">testGetInstructorsNoDefault</a>()
+        
+                                            <p><p>Testing method for getInstructors without a default driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetInstructors">testGetInstructors</a>()
+        
+                                            <p><p>Testing method for getInstructors</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testFindReservesNoDefault">testFindReservesNoDefault</a>()
+        
+                                            <p><p>Testing method for findReserves without a default driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testFindReserves">testFindReserves</a>()
+        
+                                            <p><p>Testing method for findReserves</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyProfile">testGetMyProfile</a>()
+        
+                                            <p><p>Testing method for getMyProfile</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testPatronLogin">testPatronLogin</a>()
+        
+                                            <p><p>Test that MultiBackend can properly find a driver and pass
+log in credentials to it</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyTransactions">testGetMyTransactions</a>()
+        
+                                            <p><p>Testing method for getMyTransactions</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetRenewDetails">testGetRenewDetails</a>()
+        
+                                            <p><p>Testing method for getRenewDetails</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testRenewMyItems">testRenewMyItems</a>()
+        
+                                            <p><p>Testing method for renewMyItems</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyFines">testGetMyFines</a>()
+        
+                                            <p><p>Testing method for getMyFines</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetHoldLink">testGetHoldLink</a>()
+        
+                                            <p><p>Testing method for getHoldLink</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyHolds">testGetMyHolds</a>()
+        
+                                            <p><p>Testing method for getMyHolds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetAccountBlocks">testGetAccountBlocks</a>()
+        
+                                            <p><p>Testing method for getAccountBlocks</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetRequestBlocks">testGetRequestBlocks</a>()
+        
+                                            <p><p>Testing method for getRequestBlocks</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyStorageRetrievalRequests">testGetMyStorageRetrievalRequests</a>()
+        
+                                            <p><p>Testing method for getMyStorageRetrievalRequests</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCheckRequestIsValid">testCheckRequestIsValid</a>()
+        
+                                            <p><p>Testing method for checkRequestIsValid</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCheckStorageRetrievalRequestIsValid">testCheckStorageRetrievalRequestIsValid</a>()
+        
+                                            <p><p>Testing method for checkStorageRetrievalRequestIsValid</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetPickUpLocations">testGetPickUpLocations</a>()
+        
+                                            <p><p>Testing method for getPickUpLocations</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetDefaultPickUpLocation">testGetDefaultPickUpLocation</a>()
+        
+                                            <p><p>Testing method for getDefaultPickUpLocation</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetRequestGroups">testGetRequestGroups</a>()
+        
+                                            <p><p>Testing method for getRequestGroups</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetDefaultRequestGroup">testGetDefaultRequestGroup</a>()
+        
+                                            <p><p>Testing method for getDefaultRequestGroup</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testPlaceHold">testPlaceHold</a>()
+        
+                                            <p><p>Testing method for placeHold</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCancelHolds">testCancelHolds</a>()
+        
+                                            <p><p>Testing method for cancelHolds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetCancelHoldDetails">testGetCancelHoldDetails</a>()
+        
+                                            <p><p>Testing method for getCancelHoldDetails</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testPlaceStorageRetrievalRequest">testPlaceStorageRetrievalRequest</a>()
+        
+                                            <p><p>Testing method for placeStorageRetrievalRequest</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCancelStorageRetrievalRequests">testCancelStorageRetrievalRequests</a>()
+        
+                                            <p><p>Testing method for cancelStorageRetrievalRequests</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetCancelStorageRetrievalRequestDetails">testGetCancelStorageRetrievalRequestDetails</a>()
+        
+                                            <p><p>Testing method for getCancelStorageRetrievalRequestDetails</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCheckILLRequestIsValid">testCheckILLRequestIsValid</a>()
+        
+                                            <p><p>Testing method for checkILLRequestIsValid</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetILLPickupLibraries">testGetILLPickupLibraries</a>()
+        
+                                            <p><p>Testing method for getILLPickupLibraries</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetILLPickupLocations">testGetILLPickupLocations</a>()
+        
+                                            <p><p>Testing method for getILLPickupLocations</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testPlaceILLRequest">testPlaceILLRequest</a>()
+        
+                                            <p><p>Testing method for placeILLRequest</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetMyILLRequests">testGetMyILLRequests</a>()
+        
+                                            <p><p>Testing method for getMyILLRequests</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testCancelILLRequests">testCancelILLRequests</a>()
+        
+                                            <p><p>Testing method for cancelILLRequests</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetCancelILLRequestDetails">testGetCancelILLRequestDetails</a>()
+        
+                                            <p><p>Testing method for getCancelILLRequestDetails</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testGetConfig">testGetConfig</a>()
+        
+                                            <p><p>Testing method for getConfig</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testSupportsMethod">testSupportsMethod</a>()
+        
+                                            <p><p>Test that MultiBackend can properly tell whether or not
+a driver is has contains a specified method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initSimpleMethodTest">initSimpleMethodTest</a>(object $times1, object $times2, string $function, array $params, mixed $return1, mixed $return2)
+        
+                                            <p><p>Initialize a MultiBackend driver for a simple method test with three drivers:
+Voyager, Demo and Dummy that doesn't handle anything</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDriver">getDriver</a>(object $sm = null)
+        
+                                            <p><p>Method to get a fresh MultiBackend Driver.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMultibackendForDrivers">getMultibackendForDrivers</a>(array $drivers, mixed $count = null)
+        
+                                            <p><p>Create a MultiBackend driver for the given ILS drivers</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockILSAuthenticator">getMockILSAuthenticator</a>(string $userSource = &#039;&#039;)
+        
+                                            <p><p>Get a mock ILS authenticator</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPatron">getPatron</a>(string $username, string $instance = null)
+        
+                                            <p><p>Method to get a patron with the given username</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockSM">getMockSM</a>(object $times = null, object $driver = &#039;Voyager&#039;, mixed $return = null)
+        
+                                            <p><p>This function returns a mock service manager with the given parameters
+For examples of what is to be passed, see:
+<a href="http://www.phpunit.de/manual/3.0/en/mock-objects.html">http://www.phpunit.de/manual/3.0/en/mock-objects.html</a></p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/ILS/Driver/Demo.html"><abbr title="VuFind\ILS\Driver\Demo">Demo</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockDemoDriver">getMockDemoDriver</a>()
+        
+                                            <p><p>Get a mock Demo driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/ILS/Driver/AbstractBase.html"><abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMockILS">getMockILS</a>(string $type, array $methods = null)
+        
+                                            <p><p>Get a mock driver</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getMockConfigPluginManager">
+        <div class="location">in <a href="../../../VuFindTest/Feature/ConfigPluginManagerTrait.html#method_getMockConfigPluginManager">
+<abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a> at line 63</div>
+        <code>            protected        <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+    <strong>getMockConfigPluginManager</strong>(array $configs, array $default = [], <abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr> $getExpect = null, <abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr> $hasExpect = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock configuration plugin manager with the given configuration &quot;files&quot;
+available.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$configs</td>
+                <td><p>An associative array of configurations
+where key is the file (e.g. 'config') and value an array of configuration
+sections and directives</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$default</td>
+                <td><p>Default configuration to return when no
+entry is found in $configs</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr></td>
+                <td>$getExpect</td>
+                <td><p>The expected invocation order for the get()
+method (null for any)</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="PHPUnit\Framework\MockObject\Rule\InvocationOrder">InvocationOrder</abbr></td>
+                <td>$hasExpect</td>
+                <td><p>The expected invocation order for the has()
+method (null for any)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockFailingConfigPluginManager">
+        <div class="location">in <a href="../../../VuFindTest/Feature/ConfigPluginManagerTrait.html#method_getMockFailingConfigPluginManager">
+<abbr title="VuFindTest\Feature\ConfigPluginManagerTrait">ConfigPluginManagerTrait</abbr></a> at line 102</div>
+        <code>            protected        <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+    <strong>getMockFailingConfigPluginManager</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock configuration plugin manager that will throw an exception.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$exception</td>
+                <td><p>Exception to throw</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callMethod">
+        <div class="location">in <a href="../../../VuFindTest/Feature/ReflectionTrait.html#method_callMethod">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a> at line 55</div>
+        <code>            protected        mixed
+    <strong>callMethod</strong>(object|string $object, string $method, array $arguments = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call protected or private method for side-effect and result.</p></p>                <p><p>Uses PHP's reflection API in order to modify method accessibility.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$object</td>
+                <td><p>Object or class name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>Method name</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td><p>Method arguments</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProperty">
+        <div class="location">in <a href="../../../VuFindTest/Feature/ReflectionTrait.html#method_getProperty">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a> at line 74</div>
+        <code>            protected        mixed
+    <strong>getProperty</strong>(object|string $object, string $property)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return protected or private property.</p></p>                <p><p>Uses PHP's reflection API in order to modify property accessibility.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$object</td>
+                <td><p>Object or class name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td><p>Property name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProperty">
+        <div class="location">in <a href="../../../VuFindTest/Feature/ReflectionTrait.html#method_setProperty">
+<abbr title="VuFindTest\Feature\ReflectionTrait">ReflectionTrait</abbr></a> at line 94</div>
+        <code>            protected        void
+    <strong>setProperty</strong>(object|string $object, string $property, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set protected or private property.</p></p>                <p><p>Uses PHP's reflection API in order to modify property accessibility.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$object</td>
+                <td><p>Object or class name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td><p>Property name</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><p>Property value</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMissingConfiguration">
+        <div class="location">at line 56</div>
+        <code>                    void
+    <strong>testMissingConfiguration</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that driver complains about missing configuration.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMissingILSConfiguration">
+        <div class="location">at line 74</div>
+        <code>                    void
+    <strong>testMissingILSConfiguration</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that driver handles missing ILS driver configuration properly.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testILSConfigurationPathWithoutDriverConfigPath">
+        <div class="location">at line 94</div>
+        <code>                    void
+    <strong>testILSConfigurationPathWithoutDriverConfigPath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that driver handles ILS driver configuration loading properly when
+drivers_config_path is not defined.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testILSConfigurationPathWithDriverConfigPath">
+        <div class="location">at line 119</div>
+        <code>                    void
+    <strong>testILSConfigurationPathWithDriverConfigPath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that driver handles ILS driver configuration loading properly when
+drivers_config_path is not defined.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testInitialization">
+        <div class="location">at line 148</div>
+        <code>                    void
+    <strong>testInitialization</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that MultiBackend can be properly initialized.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLogging">
+        <div class="location">at line 160</div>
+        <code>                    void
+    <strong>testLogging</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Tests that logging works correctly</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetSourceFromParams">
+        <div class="location">at line 193</div>
+        <code>                    void
+    <strong>testGetSourceFromParams</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getSourceFromParams</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDriver">
+        <div class="location">at line 243</div>
+        <code>                    void
+    <strong>testGetDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that MultiBackend can properly retrieve a new driver.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDriverConfig">
+        <div class="location">at line 274</div>
+        <code>                    void
+    <strong>testGetDriverConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Tests that getDriverConfig works correctly</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAddIdPrefixes">
+        <div class="location">at line 297</div>
+        <code>                    void
+    <strong>testAddIdPrefixes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for addIdPrefixes</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testStripIdPrefixes">
+        <div class="location">at line 381</div>
+        <code>                    void
+    <strong>testStripIdPrefixes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for stripIdPrefixes</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDriverSupportsMethod">
+        <div class="location">at line 464</div>
+        <code>                    void
+    <strong>testDriverSupportsMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for driverSupportsMethod</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetHolding">
+        <div class="location">at line 502</div>
+        <code>                    void
+    <strong>testGetHolding</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getHolding</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetPurchaseHistory">
+        <div class="location">at line 566</div>
+        <code>                    void
+    <strong>testGetPurchaseHistory</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getPurchaseHistory</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetLoginDrivers">
+        <div class="location">at line 593</div>
+        <code>                    void
+    <strong>testGetLoginDrivers</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getLoginDrivers</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDefaultLoginDriver">
+        <div class="location">at line 606</div>
+        <code>                    void
+    <strong>testGetDefaultLoginDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getDefaultLoginDriver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetStatus">
+        <div class="location">at line 640</div>
+        <code>                    void
+    <strong>testGetStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getStatus</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetStatuses">
+        <div class="location">at line 687</div>
+        <code>                    void
+    <strong>testGetStatuses</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getStatuses</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetLocalId">
+        <div class="location">at line 847</div>
+        <code>                    mixed
+    <strong>testGetLocalId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>This method tests getLocalId.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>A MultiBackend instance.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDefaultDriver">
+        <div class="location">at line 861</div>
+        <code>                    void
+    <strong>testDefaultDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that MultiBackend can find and use the default ILS driver if parameters
+don't include a detectable source id</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetNewItemsNoDefault">
+        <div class="location">at line 917</div>
+        <code>                    void
+    <strong>testGetNewItemsNoDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getNewItems without a default driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetNewItems">
+        <div class="location">at line 931</div>
+        <code>                    void
+    <strong>testGetNewItems</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getNewItems with a default driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetCoursesNoDefault">
+        <div class="location">at line 963</div>
+        <code>                    void
+    <strong>testGetCoursesNoDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getCourses without a default driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetCourses">
+        <div class="location">at line 977</div>
+        <code>                    void
+    <strong>testGetCourses</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getCourses with a default driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDepartmentsNoDefault">
+        <div class="location">at line 999</div>
+        <code>                    void
+    <strong>testGetDepartmentsNoDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getDepartments without a default driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDepartments">
+        <div class="location">at line 1013</div>
+        <code>                    void
+    <strong>testGetDepartments</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getDepartments</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetInstructorsNoDefault">
+        <div class="location">at line 1035</div>
+        <code>                    void
+    <strong>testGetInstructorsNoDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getInstructors without a default driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetInstructors">
+        <div class="location">at line 1049</div>
+        <code>                    void
+    <strong>testGetInstructors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getInstructors</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testFindReservesNoDefault">
+        <div class="location">at line 1071</div>
+        <code>                    void
+    <strong>testFindReservesNoDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for findReserves without a default driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testFindReserves">
+        <div class="location">at line 1085</div>
+        <code>                    void
+    <strong>testFindReserves</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for findReserves</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyProfile">
+        <div class="location">at line 1126</div>
+        <code>                    void
+    <strong>testGetMyProfile</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getMyProfile</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testPatronLogin">
+        <div class="location">at line 1155</div>
+        <code>                    void
+    <strong>testPatronLogin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that MultiBackend can properly find a driver and pass
+log in credentials to it</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyTransactions">
+        <div class="location">at line 1192</div>
+        <code>                    void
+    <strong>testGetMyTransactions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getMyTransactions</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetRenewDetails">
+        <div class="location">at line 1223</div>
+        <code>                    void
+    <strong>testGetRenewDetails</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getRenewDetails</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testRenewMyItems">
+        <div class="location">at line 1264</div>
+        <code>                    void
+    <strong>testRenewMyItems</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for renewMyItems</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyFines">
+        <div class="location">at line 1305</div>
+        <code>                    void
+    <strong>testGetMyFines</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getMyFines</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetHoldLink">
+        <div class="location">at line 1334</div>
+        <code>                    void
+    <strong>testGetHoldLink</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getHoldLink</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyHolds">
+        <div class="location">at line 1363</div>
+        <code>                    void
+    <strong>testGetMyHolds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getMyHolds</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetAccountBlocks">
+        <div class="location">at line 1392</div>
+        <code>                    void
+    <strong>testGetAccountBlocks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getAccountBlocks</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetRequestBlocks">
+        <div class="location">at line 1422</div>
+        <code>                    void
+    <strong>testGetRequestBlocks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getRequestBlocks</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyStorageRetrievalRequests">
+        <div class="location">at line 1452</div>
+        <code>                    void
+    <strong>testGetMyStorageRetrievalRequests</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getMyStorageRetrievalRequests</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCheckRequestIsValid">
+        <div class="location">at line 1493</div>
+        <code>                    void
+    <strong>testCheckRequestIsValid</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for checkRequestIsValid</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCheckStorageRetrievalRequestIsValid">
+        <div class="location">at line 1585</div>
+        <code>                    void
+    <strong>testCheckStorageRetrievalRequestIsValid</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for checkStorageRetrievalRequestIsValid</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetPickUpLocations">
+        <div class="location">at line 1645</div>
+        <code>                    void
+    <strong>testGetPickUpLocations</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getPickUpLocations</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDefaultPickUpLocation">
+        <div class="location">at line 1693</div>
+        <code>                    void
+    <strong>testGetDefaultPickUpLocation</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getDefaultPickUpLocation</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetRequestGroups">
+        <div class="location">at line 1741</div>
+        <code>                    void
+    <strong>testGetRequestGroups</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getRequestGroups</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDefaultRequestGroup">
+        <div class="location">at line 1789</div>
+        <code>                    void
+    <strong>testGetDefaultRequestGroup</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getDefaultRequestGroup</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testPlaceHold">
+        <div class="location">at line 1837</div>
+        <code>                    void
+    <strong>testPlaceHold</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for placeHold</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCancelHolds">
+        <div class="location">at line 1902</div>
+        <code>                    void
+    <strong>testCancelHolds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for cancelHolds</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetCancelHoldDetails">
+        <div class="location">at line 1960</div>
+        <code>                    void
+    <strong>testGetCancelHoldDetails</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getCancelHoldDetails</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testPlaceStorageRetrievalRequest">
+        <div class="location">at line 2002</div>
+        <code>                    void
+    <strong>testPlaceStorageRetrievalRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for placeStorageRetrievalRequest</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCancelStorageRetrievalRequests">
+        <div class="location">at line 2067</div>
+        <code>                    void
+    <strong>testCancelStorageRetrievalRequests</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for cancelStorageRetrievalRequests</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetCancelStorageRetrievalRequestDetails">
+        <div class="location">at line 2125</div>
+        <code>                    void
+    <strong>testGetCancelStorageRetrievalRequestDetails</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getCancelStorageRetrievalRequestDetails</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCheckILLRequestIsValid">
+        <div class="location">at line 2162</div>
+        <code>                    void
+    <strong>testCheckILLRequestIsValid</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for checkILLRequestIsValid</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetILLPickupLibraries">
+        <div class="location">at line 2219</div>
+        <code>                    void
+    <strong>testGetILLPickupLibraries</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getILLPickupLibraries</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetILLPickupLocations">
+        <div class="location">at line 2263</div>
+        <code>                    void
+    <strong>testGetILLPickupLocations</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getILLPickupLocations</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testPlaceILLRequest">
+        <div class="location">at line 2311</div>
+        <code>                    void
+    <strong>testPlaceILLRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for placeILLRequest</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetMyILLRequests">
+        <div class="location">at line 2372</div>
+        <code>                    void
+    <strong>testGetMyILLRequests</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getMyILLRequests</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCancelILLRequests">
+        <div class="location">at line 2407</div>
+        <code>                    void
+    <strong>testCancelILLRequests</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for cancelILLRequests</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetCancelILLRequestDetails">
+        <div class="location">at line 2465</div>
+        <code>                    void
+    <strong>testGetCancelILLRequestDetails</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getCancelILLRequestDetails</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetConfig">
+        <div class="location">at line 2502</div>
+        <code>                    void
+    <strong>testGetConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Testing method for getConfig</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSupportsMethod">
+        <div class="location">at line 2557</div>
+        <code>                    void
+    <strong>testSupportsMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Test that MultiBackend can properly tell whether or not
+a driver is has contains a specified method.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initSimpleMethodTest">
+        <div class="location">at line 2636</div>
+        <code>            protected        object
+    <strong>initSimpleMethodTest</strong>(object $times1, object $times2, string $function, array $params, mixed $return1, mixed $return2)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize a MultiBackend driver for a simple method test with three drivers:
+Voyager, Demo and Dummy that doesn't handle anything</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$times1</td>
+                <td><p>The number of times first driver is expected to be
+called</p></td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$times2</td>
+                <td><p>The number of times second driver is expected to be
+called</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td><p>Function name</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Function parameters</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$return1</td>
+                <td><p>What the function should return with first driver</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$return2</td>
+                <td><p>What the function should return with second driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>MultiBackend driver</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDriver">
+        <div class="location">at line 2675</div>
+        <code>            protected        mixed
+    <strong>getDriver</strong>(object $sm = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Method to get a fresh MultiBackend Driver.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$sm</td>
+                <td><p>Service manager (null for default mock)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>A MultiBackend instance.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMultibackendForDrivers">
+        <div class="location">at line 2705</div>
+        <code>            protected        <a href="../../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a>
+    <strong>getMultibackendForDrivers</strong>(array $drivers, mixed $count = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a MultiBackend driver for the given ILS drivers</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$drivers</td>
+                <td><p>Array of drivers with prefix as key and driver instance
+as value</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$count</td>
+                <td><p>How many drivers are expected to be used. Default is
+that all defined drivers are to be used.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/ILS/Driver/MultiBackend.html"><abbr title="VuFind\ILS\Driver\MultiBackend">MultiBackend</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockILSAuthenticator">
+        <div class="location">at line 2750</div>
+        <code>            protected        <a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a>
+    <strong>getMockILSAuthenticator</strong>(string $userSource = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock ILS authenticator</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userSource</td>
+                <td><p>Source id, if the authenticator should emulate a
+situation where a user has logged in. Set to null for the attempt to cause an
+exception.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Auth/ILSAuthenticator.html"><abbr title="VuFind\Auth\ILSAuthenticator">ILSAuthenticator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPatron">
+        <div class="location">at line 2790</div>
+        <code>            protected        array
+    <strong>getPatron</strong>(string $username, string $instance = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Method to get a patron with the given username</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td><p>The username to use</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$instance</td>
+                <td><p>The instance to append before the username</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>A patron array.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockSM">
+        <div class="location">at line 2816</div>
+        <code>            protected        object
+    <strong>getMockSM</strong>(object $times = null, object $driver = &#039;Voyager&#039;, mixed $return = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>This function returns a mock service manager with the given parameters
+For examples of what is to be passed, see:
+<a href="http://www.phpunit.de/manual/3.0/en/mock-objects.html">http://www.phpunit.de/manual/3.0/en/mock-objects.html</a></p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$times</td>
+                <td><p>The number of times it is expected to be called.</p></td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$driver</td>
+                <td><p>The driver type this SM will expect to be called with.</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$return</td>
+                <td><p>What that get function should return.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td><p>The Mock Service Manager created.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockDemoDriver">
+        <div class="location">at line 2832</div>
+        <code>            protected        <a href="../../../VuFind/ILS/Driver/Demo.html"><abbr title="VuFind\ILS\Driver\Demo">Demo</abbr></a>
+    <strong>getMockDemoDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock Demo driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/ILS/Driver/Demo.html"><abbr title="VuFind\ILS\Driver\Demo">Demo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockILS">
+        <div class="location">at line 2856</div>
+        <code>            protected        <a href="../../../VuFind/ILS/Driver/AbstractBase.html"><abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a>
+    <strong>getMockILS</strong>(string $type, array $methods = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a mock driver</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td><p>Type of driver to make</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$methods</td>
+                <td><p>Array of methods to stub</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/ILS/Driver/AbstractBase.html"><abbr title="VuFind\ILS\Driver\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

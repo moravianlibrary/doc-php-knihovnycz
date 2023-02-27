@@ -86,7 +86,7 @@
 
     
     <p>        class
-    <strong>LibraryServices</strong>        extends <abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr>
+    <strong>LibraryServices</strong>        extends <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
 </p>
 
                 <p>
@@ -100,22 +100,58 @@
             <div class="description">
             <p><p>Class LibraryServices</p></p>                    </div>
             
+                <h2>Traits</h2>
+
         
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="LmcRbacMvc\Service\AuthorizationServiceAwareTrait">AuthorizationServiceAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
     
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_accessPermission">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$accessPermission</td>
+                <td class="last"><p>Permission that must be granted to access this module (null for no
+restriction)</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#property_accessPermission">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driver">
+                                        protected                                        <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+                                                                                
+                                    </td>
+                <td>$driver</td>
+                <td class="last"><p>Record driver associated with the tab</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#property_driver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_request">
+                                        protected                                        <abbr title="Laminas\Http\Request">Request</abbr>|bool
+                                                                                
+                                    </td>
+                <td>$request</td>
+                <td class="last"><p>User request associated with the tab (false for none)</p></td>
+                <td><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#property_request">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_getDescription">getDescription</a>()
-        
-                                            <p><p>Get the on-screen description for this tab.</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     bool
@@ -126,45 +162,88 @@
                                             <p><p>Is this tab visible?</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isVisible">isVisible</a>()
+        
+                                            <p><p>Is this tab initially visible?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_isVisible">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsAjax">supportsAjax</a>()
+        
+                                            <p><p>Can this tab be loaded via AJAX?</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_supportsAjax">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRecordDriver">setRecordDriver</a>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        
+                                            <p><p>Set the record driver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_setRecordDriver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordDriver">getRecordDriver</a>()
+        
+                                            <p><p>Get the record driver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_getRecordDriver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setRequest">setRequest</a>(<abbr title="Laminas\Http\Request">Request</abbr> $request)
+        
+                                            <p><p>Set the user request</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_setRequest">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\Request">Request</abbr>|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p><p>Get the user request (or false if unavailable)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../VuFind/RecordTab/AbstractBase.html#method_getRequest">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDescription">getDescription</a>()
+        
+                                            <p><p>Get the on-screen description for this tab.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
         <h2>Details</h2>
 
             <div id="method-details">
-                    <div class="method-item">
-                    <h3 id="method_getDescription">
-        <div class="location">at line 47</div>
-        <code>                    string
-    <strong>getDescription</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-            
-    
-            
-
-        <div class="method-description">
-                            <p><p>Get the on-screen description for this tab.</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
                     <div class="method-item">
                     <h3 id="method_isActive">
         <div class="location">at line 57</div>
@@ -187,6 +266,272 @@
                     <table class="table table-condensed">
         <tr>
             <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isVisible">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_isVisible">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 93</div>
+        <code>                    bool
+    <strong>isVisible</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is this tab initially visible?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsAjax">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_supportsAjax">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 104</div>
+        <code>                    bool
+    <strong>supportsAjax</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Can this tab be loaded via AJAX?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRecordDriver">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_setRecordDriver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 117</div>
+        <code>                    <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+    <strong>setRecordDriver</strong>(<a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a> $driver)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the record driver</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+                <td>$driver</td>
+                <td><p>Record driver</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordDriver">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_getRecordDriver">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 129</div>
+        <code>            protected        <a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a>
+    <strong>getRecordDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the record driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/RecordDriver/AbstractBase.html"><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequest">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_setRequest">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 144</div>
+        <code>                    <a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a>
+    <strong>setRequest</strong>(<abbr title="Laminas\Http\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the user request</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Http\Request">Request</abbr></td>
+                <td>$request</td>
+                <td>Request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../VuFind/RecordTab/AbstractBase.html"><abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">in <a href="../../VuFind/RecordTab/AbstractBase.html#method_getRequest">
+<abbr title="VuFind\RecordTab\AbstractBase">AbstractBase</abbr></a> at line 155</div>
+        <code>            protected        <abbr title="Laminas\Http\Request">Request</abbr>|bool
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the user request (or false if unavailable)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\Request">Request</abbr>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDescription">
+        <div class="location">at line 47</div>
+        <code>                    string
+    <strong>getDescription</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the on-screen description for this tab.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
             <td></td>
         </tr>
     </table>

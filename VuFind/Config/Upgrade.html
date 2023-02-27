@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Config\Upgrade | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Config_Upgrade" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../VuFind/Config.html">Config</a></li><li class="backslash">\</li><li>Upgrade</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Upgrade    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Upgrade</strong>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Class to upgrade previous VuFind configurations to the current version</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_from">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$from</td>
+                <td class="last"><p>Version we're upgrading from</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_to">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$to</td>
+                <td class="last"><p>Version we're upgrading to</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_oldDir">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$oldDir</td>
+                <td class="last"><p>Directory containing configurations to upgrade</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rawDir">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$rawDir</td>
+                <td class="last"><p>Directory containing unmodified new configurations</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_newDir">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$newDir</td>
+                <td class="last"><p>Directory where new configurations should be written (null for test mode)</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_oldConfigs">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$oldConfigs</td>
+                <td class="last"><p>Parsed old configurations</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_newConfigs">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$newConfigs</td>
+                <td class="last"><p>Processed new configurations</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_comments">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$comments</td>
+                <td class="last"><p>Comments parsed from configuration files</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_warnings">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$warnings</td>
+                <td class="last"><p>Warnings generated during upgrade process</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_inPlaceUpgrade">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$inPlaceUpgrade</td>
+                <td class="last"><p>Are we upgrading files in place rather than creating them?</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_permissionsModified">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$permissionsModified</td>
+                <td class="last"><p>Have we modified permissions.ini?</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $from, string $to, string $oldDir, string $rawDir, string $newDir = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_run">run</a>()
+        
+                                            <p><p>Run through all of the necessary upgrading.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNewConfigs">getNewConfigs</a>()
+        
+                                            <p><p>Get processed configurations (used by test routines).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getWarnings">getWarnings</a>()
+        
+                                            <p><p>Get warning strings generated during upgrade process.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addWarning">addWarning</a>(string $msg)
+        
+                                            <p><p>Add a warning message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_iniMerge">iniMerge</a>(string $config_ini, string $custom_ini)
+        
+                                            <p><p>Support function -- merge the contents of two arrays parsed from ini files.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadOldBaseConfig">loadOldBaseConfig</a>()
+        
+                                            <p><p>Load the old config.ini settings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOldConfigPath">getOldConfigPath</a>(string $filename)
+        
+                                            <p><p>Find the path to the old configuration file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadConfigs">loadConfigs</a>()
+        
+                                            <p><p>Load all of the user's existing configurations.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_applyOldSettings">applyOldSettings</a>(string $filename, array $fullSections = [])
+        
+                                            <p><p>Apply settings from an old configuration to a new configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_saveModifiedConfig">saveModifiedConfig</a>(string $filename)
+        
+                                            <p><p>Save a modified configuration file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_saveUnmodifiedConfig">saveUnmodifiedConfig</a>(string $filename)
+        
+                                            <p><p>Save an unmodified configuration file -- copy the old version, unless it is
+the same as the new version!</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkTheme">checkTheme</a>(string $setting, string $default = null)
+        
+                                            <p><p>Check for invalid theme setting.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isDefaultBulkExportOptions">isDefaultBulkExportOptions</a>(string $eo)
+        
+                                            <p><p>Is this a default BulkExport options setting?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_checkAmazonConfig">checkAmazonConfig</a>(array $config)
+        
+                                            <p><p>Add warnings if Amazon problems were found.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeConfig">upgradeConfig</a>()
+        
+                                            <p><p>Upgrade config.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeAdminPermissions">upgradeAdminPermissions</a>()
+        
+                                            <p><p>Translate obsolete permission settings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_changeArrayKey">changeArrayKey</a>(array $array, string $old, string $new)
+        
+                                            <p><p>Change an array key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renameFacet">renameFacet</a>(string $old, string $new)
+        
+                                            <p><p>Support method for upgradeFacetsAndCollection() - change the name of
+a facet field.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeFacetsAndCollection">upgradeFacetsAndCollection</a>()
+        
+                                            <p><p>Upgrade facets.ini and Collection.ini (since these are tied together).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeAutocompleteName">upgradeAutocompleteName</a>(string $name)
+        
+                                            <p><p>Update an old VuFind 1.x-style autocomplete handler name to the new style.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeSearches">upgradeSearches</a>()
+        
+                                            <p><p>Upgrade searches.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeSpellingSettings">upgradeSpellingSettings</a>(string $ini, array $skip = [])
+        
+                                            <p><p>Upgrade spelling settings to account for refactoring of spelling as a
+recommendation module starting in release 2.4.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeFulltext">upgradeFulltext</a>()
+        
+                                            <p><p>Upgrade fulltext.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeSitemap">upgradeSitemap</a>()
+        
+                                            <p><p>Upgrade sitemap.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeSms">upgradeSms</a>()
+        
+                                            <p><p>Upgrade sms.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeAuthority">upgradeAuthority</a>()
+        
+                                            <p><p>Upgrade authority.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeReserves">upgradeReserves</a>()
+        
+                                            <p><p>Upgrade reserves.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeSummon">upgradeSummon</a>()
+        
+                                            <p><p>Upgrade Summon.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeSummonPermissions">upgradeSummonPermissions</a>()
+        
+                                            <p><p>Translate obsolete permission settings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradePrimo">upgradePrimo</a>()
+        
+                                            <p><p>Upgrade Primo.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradePrimoPermissions">upgradePrimoPermissions</a>()
+        
+                                            <p><p>Translate obsolete permission settings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradePrimoServerSettings">upgradePrimoServerSettings</a>()
+        
+                                            <p><p>Translate obsolete server settings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeWorldCat">upgradeWorldCat</a>()
+        
+                                            <p><p>Upgrade WorldCat.ini.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fileContainsMeaningfulLines">fileContainsMeaningfulLines</a>(string $src)
+        
+                                            <p><p>Does the specified properties file contain any meaningful
+(non-empty/non-comment) lines?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeSolrMarc">upgradeSolrMarc</a>()
+        
+                                            <p><p>Upgrade SolrMarc configurations.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeSearchSpecs">upgradeSearchSpecs</a>()
+        
+                                            <p><p>Upgrade .yaml configurations.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeILS">upgradeILS</a>()
+        
+                                            <p><p>Upgrade ILS driver configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_upgradeShardSettings">upgradeShardSettings</a>()
+        
+                                            <p><p>Upgrade shard settings (they have moved to a different config file, so
+this is handled as a separate method so that all affected settings are
+addressed in one place.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractComments">extractComments</a>(string $filename)
+        
+                                            <p><p>Read the specified file and return an associative array of this format
+containing all comments extracted from the file:</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 132</div>
+        <code>                    
+    <strong>__construct</strong>(string $from, string $to, string $oldDir, string $rawDir, string $newDir = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td><p>Version we're upgrading from.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td><p>Version we're upgrading to.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$oldDir</td>
+                <td><p>Directory containing old configurations.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rawDir</td>
+                <td><p>Directory containing raw new configurations.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newDir</td>
+                <td><p>Directory to write updated new configurations into
+(leave null to disable writes -- used in test mode).</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_run">
+        <div class="location">at line 147</div>
+        <code>                    void
+    <strong>run</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run through all of the necessary upgrading.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNewConfigs">
+        <div class="location">at line 186</div>
+        <code>                    array
+    <strong>getNewConfigs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get processed configurations (used by test routines).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWarnings">
+        <div class="location">at line 196</div>
+        <code>                    array
+    <strong>getWarnings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get warning strings generated during upgrade process.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addWarning">
+        <div class="location">at line 208</div>
+        <code>            protected        void
+    <strong>addWarning</strong>(string $msg)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a warning message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td><p>Warning message.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_iniMerge">
+        <div class="location">at line 221</div>
+        <code>        static            array
+    <strong>iniMerge</strong>(string $config_ini, string $custom_ini)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support function -- merge the contents of two arrays parsed from ini files.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$config_ini</td>
+                <td><p>The base config array.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$custom_ini</td>
+                <td><p>Overrides to apply on top of the base array.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>The merged results.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadOldBaseConfig">
+        <div class="location">at line 240</div>
+        <code>            protected        void
+    <strong>loadOldBaseConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load the old config.ini settings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOldConfigPath">
+        <div class="location">at line 273</div>
+        <code>            protected        string
+    <strong>getOldConfigPath</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Find the path to the old configuration file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Filename of configuration file.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadConfigs">
+        <div class="location">at line 293</div>
+        <code>            protected        void
+    <strong>loadConfigs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load all of the user's existing configurations.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyOldSettings">
+        <div class="location">at line 331</div>
+        <code>            protected        void
+    <strong>applyOldSettings</strong>(string $filename, array $fullSections = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply settings from an old configuration to a new configuration.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Name of the configuration being updated.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fullSections</td>
+                <td><p>Array of section names that need to be fully
+overridden (as opposed to overridden on a setting-by-setting basis).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveModifiedConfig">
+        <div class="location">at line 356</div>
+        <code>            protected        void
+    <strong>saveModifiedConfig</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Save a modified configuration file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Name of config file to write (contents will be
+pulled from current state of object properties).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveUnmodifiedConfig">
+        <div class="location">at line 402</div>
+        <code>            protected        void
+    <strong>saveUnmodifiedConfig</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Save an unmodified configuration file -- copy the old version, unless it is
+the same as the new version!</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Path to the old config file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkTheme">
+        <div class="location">at line 441</div>
+        <code>            protected        void
+    <strong>checkTheme</strong>(string $setting, string $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check for invalid theme setting.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$setting</td>
+                <td><p>Name of setting in [Site] section to check.</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td><p>Default value to use if invalid option was found.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDefaultBulkExportOptions">
+        <div class="location">at line 480</div>
+        <code>            protected        bool
+    <strong>isDefaultBulkExportOptions</strong>(string $eo)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is this a default BulkExport options setting?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$eo</td>
+                <td><p>Bulk export options</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkAmazonConfig">
+        <div class="location">at line 505</div>
+        <code>            protected        void
+    <strong>checkAmazonConfig</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add warnings if Amazon problems were found.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td><p>Configuration to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeConfig">
+        <div class="location">at line 525</div>
+        <code>            protected        void
+    <strong>upgradeConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade config.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeAdminPermissions">
+        <div class="location">at line 713</div>
+        <code>            protected        void
+    <strong>upgradeAdminPermissions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate obsolete permission settings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changeArrayKey">
+        <div class="location">at line 750</div>
+        <code>            protected        array
+    <strong>changeArrayKey</strong>(array $array, string $old, string $new)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Change an array key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td><p>Array to rewrite</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$old</td>
+                <td><p>Old key name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$new</td>
+                <td><p>New key name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renameFacet">
+        <div class="location">at line 771</div>
+        <code>            protected        void
+    <strong>renameFacet</strong>(string $old, string $new)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for upgradeFacetsAndCollection() - change the name of
+a facet field.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$old</td>
+                <td><p>Old field name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$new</td>
+                <td><p>New field name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeFacetsAndCollection">
+        <div class="location">at line 801</div>
+        <code>            protected        void
+    <strong>upgradeFacetsAndCollection</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade facets.ini and Collection.ini (since these are tied together).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeAutocompleteName">
+        <div class="location">at line 833</div>
+        <code>            protected        string
+    <strong>upgradeAutocompleteName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Update an old VuFind 1.x-style autocomplete handler name to the new style.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Name of module.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeSearches">
+        <div class="location">at line 847</div>
+        <code>            protected        void
+    <strong>upgradeSearches</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade searches.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeSpellingSettings">
+        <div class="location">at line 900</div>
+        <code>            protected        void
+    <strong>upgradeSpellingSettings</strong>(string $ini, array $skip = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade spelling settings to account for refactoring of spelling as a
+recommendation module starting in release 2.4.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ini</td>
+                <td><p>.ini file to modify</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$skip</td>
+                <td><p>Keys to skip within [TopRecommendations]</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeFulltext">
+        <div class="location">at line 946</div>
+        <code>            protected        void
+    <strong>upgradeFulltext</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade fulltext.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeSitemap">
+        <div class="location">at line 957</div>
+        <code>            protected        void
+    <strong>upgradeSitemap</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade sitemap.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeSms">
+        <div class="location">at line 968</div>
+        <code>            protected        void
+    <strong>upgradeSms</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade sms.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeAuthority">
+        <div class="location">at line 980</div>
+        <code>            protected        void
+    <strong>upgradeAuthority</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade authority.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeReserves">
+        <div class="location">at line 999</div>
+        <code>            protected        void
+    <strong>upgradeReserves</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade reserves.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeSummon">
+        <div class="location">at line 1025</div>
+        <code>            protected        void
+    <strong>upgradeSummon</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade Summon.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeSummonPermissions">
+        <div class="location">at line 1066</div>
+        <code>            protected        void
+    <strong>upgradeSummonPermissions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate obsolete permission settings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradePrimo">
+        <div class="location">at line 1101</div>
+        <code>            protected        void
+    <strong>upgradePrimo</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade Primo.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradePrimoPermissions">
+        <div class="location">at line 1125</div>
+        <code>            protected        void
+    <strong>upgradePrimoPermissions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate obsolete permission settings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradePrimoServerSettings">
+        <div class="location">at line 1177</div>
+        <code>            protected        void
+    <strong>upgradePrimoServerSettings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Translate obsolete server settings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeWorldCat">
+        <div class="location">at line 1204</div>
+        <code>            protected        void
+    <strong>upgradeWorldCat</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade WorldCat.ini.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fileContainsMeaningfulLines">
+        <div class="location">at line 1258</div>
+        <code>            protected        bool
+    <strong>fileContainsMeaningfulLines</strong>(string $src)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does the specified properties file contain any meaningful
+(non-empty/non-comment) lines?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$src</td>
+                <td><p>File to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeSolrMarc">
+        <div class="location">at line 1276</div>
+        <code>            protected        void
+    <strong>upgradeSolrMarc</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade SolrMarc configurations.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeSearchSpecs">
+        <div class="location">at line 1306</div>
+        <code>            protected        void
+    <strong>upgradeSearchSpecs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade .yaml configurations.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeILS">
+        <div class="location">at line 1335</div>
+        <code>            protected        void
+    <strong>upgradeILS</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade ILS driver configuration.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../VuFind/Exception/FileAccess.html"><abbr title="VuFind\Exception\FileAccess">FileAccess</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upgradeShardSettings">
+        <div class="location">at line 1376</div>
+        <code>            protected        void
+    <strong>upgradeShardSettings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Upgrade shard settings (they have moved to a different config file, so
+this is handled as a separate method so that all affected settings are
+addressed in one place.</p></p>                <p><p>This gets called from updateConfig(), which gets called before other
+configuration upgrade routines.  This means that we need to modify the
+config.ini settings in the newConfigs property (since it is currently
+being worked on and will be written to disk shortly), but we need to
+modify the searches.ini/facets.ini settings in the oldConfigs property
+(because they have not been processed yet).</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractComments">
+        <div class="location">at line 1436</div>
+        <code>            protected        array
+    <strong>extractComments</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Read the specified file and return an associative array of this format
+containing all comments extracted from the file:</p></p>                <p><p>[
+'sections' =&gt; array
+'section_name_1' =&gt; array
+'before' =&gt; string (&quot;Comments found at the beginning of this section&quot;)
+'inline' =&gt; string (&quot;Comments found at the end of the section's line&quot;)
+'settings' =&gt; array
+'setting_name_1' =&gt; array
+'before' =&gt; string (&quot;Comments found before this setting&quot;)
+'inline' =&gt; string (&quot;Comments found at the end of setting's line&quot;)
+...
+'setting_name_n' =&gt; array (same keys as setting_name_1)
+...
+'section_name_n' =&gt; array (same keys as section_name_1)
+'after' =&gt; string (&quot;Comments found at the very end of the file&quot;)
+]</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td><p>Name of ini file to read.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Associative array as described above.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

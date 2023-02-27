@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>VuFind\Search\Factory\Search2BackendFactory | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:VuFind_Search_Factory_Search2BackendFactory" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../VuFind.html">VuFind</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Search.html">Search</a></li><li class="backslash">\</li><li><a href="../../../VuFind/Search/Factory.html">Factory</a></li><li class="backslash">\</li><li>Search2BackendFactory</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Search2BackendFactory    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Search2BackendFactory</strong>        extends <a href="../../../VuFind/Search/Factory/SolrDefaultBackendFactory.html"><abbr title="VuFind\Search\Factory\SolrDefaultBackendFactory">SolrDefaultBackendFactory</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Factory for a second Solr backend</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../VuFind/Search/Factory/SharedListenersTrait.html"><abbr title="VuFind\Search\Factory\SharedListenersTrait">SharedListenersTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait containing methods for building shared listeners.</p></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_serviceLocator">
+                                        protected                                        <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$serviceLocator</td>
+                <td class="last"><p>Service container.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#property_serviceLocator">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_logger">
+                                        protected                                        <abbr title="Laminas\Log\LoggerInterface">LoggerInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$logger</td>
+                <td class="last">Logger.</td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_logger">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mainConfig">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$mainConfig</td>
+                <td class="last"><p>Primary configuration file identifier.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_mainConfig">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchConfig">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchConfig</td>
+                <td class="last"><p>Search configuration file identifier.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_searchConfig">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_facetConfig">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$facetConfig</td>
+                <td class="last"><p>Facet configuration file identifier.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_facetConfig">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchYaml">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchYaml</td>
+                <td class="last"><p>YAML searchspecs filename.</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_searchYaml">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <a href="../../../VuFind/Config/PluginManager.html"><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></a>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>VuFind configuration reader</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_config">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_solrCore">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$solrCore</td>
+                <td class="last"><p>Solr core name</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_solrCore">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uniqueKey">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$uniqueKey</td>
+                <td class="last"><p>Solr field used to store unique identifiers</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_uniqueKey">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_connectorClass">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$connectorClass</td>
+                <td class="last"><p>Solr connector class</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_connectorClass">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_backendClass">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$backendClass</td>
+                <td class="last"><p>Solr backend class</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_backendClass">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordCollectionClass">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$recordCollectionClass</td>
+                <td class="last"><p>Record collection class for RecordCollectionFactory</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_recordCollectionClass">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordCollectionFactoryClass">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$recordCollectionFactoryClass</td>
+                <td class="last"><p>Record collection factory class</p></td>
+                <td><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#property_recordCollectionFactoryClass">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setup">setup</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $sm)
+        
+                                            <p><p>Initialize the factory</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_setup">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\Http\Client">Client</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createHttpClient">createHttpClient</a>(int|null $timeout = null, array $options = [], string $url = null)
+        
+                                            <p><p>Create HTTP Client</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_createHttpClient">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\Search\Factory\Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createConnectorCache">createConnectorCache</a>(<abbr title="Laminas\Config\Config">Config</abbr> $searchConfig)
+        
+                                            <p><p>Create cache for the connector if enabled in configuration</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_createConnectorCache">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHideFacetValueListener">getHideFacetValueListener</a>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend, <abbr title="Laminas\Config\Config">Config</abbr> $facet)
+        
+                                            <p><p>Get a hide facet value listener for the backend</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/SharedListenersTrait.html#method_getHideFacetValueListener">
+<abbr title="VuFind\Search\Factory\SharedListenersTrait">SharedListenersTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___invoke">__invoke</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $sm, string $name, array $options = null)
+        
+                                            <p><p>Create service</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method___invoke">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createBackend">createBackend</a>(<a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> $connector)
+        
+                                            <p><p>Create the SOLR backend.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createBackend">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createListeners">createListeners</a>(<a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a> $backend)
+        
+                                            <p><p>Create listeners.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createListeners">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSolrCore">getSolrCore</a>()
+        
+                                            <p><p>Get the Solr core.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/SolrDefaultBackendFactory.html#method_getSolrCore">
+<abbr title="VuFind\Search\Factory\SolrDefaultBackendFactory">SolrDefaultBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSolrUrl">getSolrUrl</a>(string $config = null)
+        
+                                            <p><p>Get the Solr URL.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getSolrUrl">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHiddenFilters">getHiddenFilters</a>()
+        
+                                            <p><p>Get all hidden filter settings.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getHiddenFilters">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createConnector">createConnector</a>()
+        
+                                            <p><p>Create the SOLR connector.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createConnector">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHttpOptions">getHttpOptions</a>(string $url)
+        
+                                            <p><p>Get HTTP options for the client</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getHttpOptions">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createQueryBuilder">createQueryBuilder</a>()
+        
+                                            <p><p>Create the query builder.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createQueryBuilder">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createLuceneSyntaxHelper">createLuceneSyntaxHelper</a>()
+        
+                                            <p><p>Create Lucene syntax helper.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createLuceneSyntaxHelper">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createSimilarBuilder">createSimilarBuilder</a>()
+        
+                                            <p><p>Create the similar records query builder.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createSimilarBuilder">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createRecordCollectionFactory">createRecordCollectionFactory</a>()
+        
+                                            <p><p>Create the record collection factory.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createRecordCollectionFactory">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCreateRecordCallback">getCreateRecordCallback</a>()
+        
+                                            <p><p>Get the callback for creating a record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadSpecs">loadSpecs</a>()
+        
+                                            <p><p>Load the search specs.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_loadSpecs">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Solr/DeduplicationListener.html"><abbr title="VuFind\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDeduplicationListener">getDeduplicationListener</a>(<a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a> $backend, bool $enabled)
+        
+                                            <p><p>Get a deduplication listener for the backend</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getDeduplicationListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCustomFilterListener">getCustomFilterListener</a>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend, <abbr title="Laminas\Config\Config">Config</abbr> $facet)
+        
+                                            <p><p>Get a custom filter listener for the backend (or null if not needed).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getCustomFilterListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Solr/HierarchicalFacetListener.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetListener">HierarchicalFacetListener</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHierarchicalFacetListener">getHierarchicalFacetListener</a>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend)
+        
+                                            <p><p>Get a hierarchical facet listener for the backend</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getHierarchicalFacetListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Solr/InjectHighlightingListener.html"><abbr title="VuFind\Search\Solr\InjectHighlightingListener">InjectHighlightingListener</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInjectHighlightingListener">getInjectHighlightingListener</a>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend, <abbr title="Laminas\Config\Config">Config</abbr> $search)
+        
+                                            <p><p>Get a highlighting listener for the backend</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getInjectHighlightingListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Solr/InjectConditionalFilterListener.html"><abbr title="VuFind\Search\Solr\InjectConditionalFilterListener">InjectConditionalFilterListener</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInjectConditionalFilterListener">getInjectConditionalFilterListener</a>(<abbr title="Laminas\Config\Config">Config</abbr> $search)
+        
+                                            <p><p>Get a Conditional Filter Listener</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getInjectConditionalFilterListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../VuFind/Search/Solr/DeduplicationListener.html"><abbr title="VuFind\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDefaultParametersListener">getDefaultParametersListener</a>(<a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a> $backend, array $params)
+        
+                                            <p><p>Get a default parameters listener for the backend</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getDefaultParametersListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 45</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setup">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_setup">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a> at line 67</div>
+        <code>                    void
+    <strong>setup</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $sm)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the factory</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$sm</td>
+                <td><p>Service manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createHttpClient">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_createHttpClient">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a> at line 82</div>
+        <code>            protected        <abbr title="Laminas\Http\Client">Client</abbr>
+    <strong>createHttpClient</strong>(int|null $timeout = null, array $options = [], string $url = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create HTTP Client</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$timeout</td>
+                <td><p>Request timeout</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Other options</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>Request URL (needed for proper local address check when
+the client is being proxified)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\Http\Client">Client</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createConnectorCache">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractBackendFactory.html#method_createConnectorCache">
+<abbr title="VuFind\Search\Factory\AbstractBackendFactory">AbstractBackendFactory</abbr></a> at line 103</div>
+        <code>            protected        <abbr title="VuFind\Search\Factory\Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>|null
+    <strong>createConnectorCache</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $searchConfig)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create cache for the connector if enabled in configuration</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$searchConfig</td>
+                <td><p>Search configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\Search\Factory\Laminas\Cache\Storage\StorageInterface">StorageInterface</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHideFacetValueListener">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/SharedListenersTrait.html#method_getHideFacetValueListener">
+<abbr title="VuFind\Search\Factory\SharedListenersTrait">SharedListenersTrait</abbr></a> at line 53</div>
+        <code>            protected        mixed
+    <strong>getHideFacetValueListener</strong>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend, <abbr title="Laminas\Config\Config">Config</abbr> $facet)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a hide facet value listener for the backend</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a></td>
+                <td>$backend</td>
+                <td><p>Search backend</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$facet</td>
+                <td><p>Configuration of facets</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>null|HideFacetValueListener</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___invoke">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method___invoke">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 171</div>
+        <code>                    <a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a>
+    <strong>__invoke</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $sm, string $name, array $options = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create service</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$sm</td>
+                <td><p>Service manager</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><p>Requested service name</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Extra options (unused)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBackend">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createBackend">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 193</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a>
+    <strong>createBackend</strong>(<a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a> $connector)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the SOLR backend.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></td>
+                <td>$connector</td>
+                <td>Connector</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createListeners">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createListeners">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 220</div>
+        <code>            protected        void
+    <strong>createListeners</strong>(<a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a> $backend)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create listeners.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a></td>
+                <td>$backend</td>
+                <td>Backend</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSolrCore">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/SolrDefaultBackendFactory.html#method_getSolrCore">
+<abbr title="VuFind\Search\Factory\SolrDefaultBackendFactory">SolrDefaultBackendFactory</abbr></a> at line 58</div>
+        <code>            protected        string
+    <strong>getSolrCore</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the Solr core.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSolrUrl">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getSolrUrl">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 330</div>
+        <code>            protected        string|array
+    <strong>getSolrUrl</strong>(string $config = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the Solr URL.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$config</td>
+                <td><p>name of configuration file (null for default)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHiddenFilters">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getHiddenFilters">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 350</div>
+        <code>            protected        array
+    <strong>getHiddenFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all hidden filter settings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createConnector">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createConnector">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 377</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a>
+    <strong>createConnector</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the SOLR connector.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/Connector.html"><abbr title="VuFindSearch\Backend\Solr\Connector">Connector</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpOptions">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getHttpOptions">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 431</div>
+        <code>            protected        array
+    <strong>getHttpOptions</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get HTTP options for the client</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>URL being requested</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createQueryBuilder">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createQueryBuilder">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 441</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a>
+    <strong>createQueryBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the query builder.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/QueryBuilder.html"><abbr title="VuFindSearch\Backend\Solr\QueryBuilder">QueryBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createLuceneSyntaxHelper">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createLuceneSyntaxHelper">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 459</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a>
+    <strong>createLuceneSyntaxHelper</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create Lucene syntax helper.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/LuceneSyntaxHelper.html"><abbr title="VuFindSearch\Backend\Solr\LuceneSyntaxHelper">LuceneSyntaxHelper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createSimilarBuilder">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createSimilarBuilder">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 472</div>
+        <code>            protected        <a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a>
+    <strong>createSimilarBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the similar records query builder.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Backend/Solr/SimilarBuilder.html"><abbr title="VuFindSearch\Backend\Solr\SimilarBuilder">SimilarBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRecordCollectionFactory">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_createRecordCollectionFactory">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 485</div>
+        <code>            protected        <a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a>
+    <strong>createRecordCollectionFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the record collection factory.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFindSearch/Response/RecordCollectionFactoryInterface.html"><abbr title="VuFindSearch\Response\RecordCollectionFactoryInterface">RecordCollectionFactoryInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreateRecordCallback">
+        <div class="location">at line 59</div>
+        <code>            protected        callable|null
+    <strong>getCreateRecordCallback</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the callback for creating a record.</p></p>                <p><p>Returns a callable or null to use RecordCollectionFactory's default method.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadSpecs">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_loadSpecs">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 511</div>
+        <code>            protected        array
+    <strong>loadSpecs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load the search specs.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeduplicationListener">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getDeduplicationListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 525</div>
+        <code>            protected        <a href="../../../VuFind/Search/Solr/DeduplicationListener.html"><abbr title="VuFind\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a>
+    <strong>getDeduplicationListener</strong>(<a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a> $backend, bool $enabled)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a deduplication listener for the backend</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a></td>
+                <td>$backend</td>
+                <td><p>Search backend</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$enabled</td>
+                <td><p>Whether deduplication is enabled</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Solr/DeduplicationListener.html"><abbr title="VuFind\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomFilterListener">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getCustomFilterListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 544</div>
+        <code>            protected        mixed
+    <strong>getCustomFilterListener</strong>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend, <abbr title="Laminas\Config\Config">Config</abbr> $facet)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a custom filter listener for the backend (or null if not needed).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a></td>
+                <td>$backend</td>
+                <td><p>Search backend</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$facet</td>
+                <td><p>Configuration of facets</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>null|CustomFilterListener</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHierarchicalFacetListener">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getHierarchicalFacetListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 569</div>
+        <code>            protected        <a href="../../../VuFind/Search/Solr/HierarchicalFacetListener.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetListener">HierarchicalFacetListener</abbr></a>
+    <strong>getHierarchicalFacetListener</strong>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a hierarchical facet listener for the backend</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a></td>
+                <td>$backend</td>
+                <td><p>Search backend</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Solr/HierarchicalFacetListener.html"><abbr title="VuFind\Search\Solr\HierarchicalFacetListener">HierarchicalFacetListener</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInjectHighlightingListener">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getInjectHighlightingListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 586</div>
+        <code>            protected        <a href="../../../VuFind/Search/Solr/InjectHighlightingListener.html"><abbr title="VuFind\Search\Solr\InjectHighlightingListener">InjectHighlightingListener</abbr></a>
+    <strong>getInjectHighlightingListener</strong>(<a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a> $backend, <abbr title="Laminas\Config\Config">Config</abbr> $search)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a highlighting listener for the backend</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/BackendInterface.html"><abbr title="VuFindSearch\Backend\BackendInterface">BackendInterface</abbr></a></td>
+                <td>$backend</td>
+                <td><p>Search backend</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$search</td>
+                <td><p>Search configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Solr/InjectHighlightingListener.html"><abbr title="VuFind\Search\Solr\InjectHighlightingListener">InjectHighlightingListener</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInjectConditionalFilterListener">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getInjectConditionalFilterListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 601</div>
+        <code>            protected        <a href="../../../VuFind/Search/Solr/InjectConditionalFilterListener.html"><abbr title="VuFind\Search\Solr\InjectConditionalFilterListener">InjectConditionalFilterListener</abbr></a>
+    <strong>getInjectConditionalFilterListener</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $search)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a Conditional Filter Listener</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$search</td>
+                <td><p>Search configuration</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Solr/InjectConditionalFilterListener.html"><abbr title="VuFind\Search\Solr\InjectConditionalFilterListener">InjectConditionalFilterListener</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultParametersListener">
+        <div class="location">in <a href="../../../VuFind/Search/Factory/AbstractSolrBackendFactory.html#method_getDefaultParametersListener">
+<abbr title="VuFind\Search\Factory\AbstractSolrBackendFactory">AbstractSolrBackendFactory</abbr></a> at line 621</div>
+        <code>            protected        <a href="../../../VuFind/Search/Solr/DeduplicationListener.html"><abbr title="VuFind\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a>
+    <strong>getDefaultParametersListener</strong>(<a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a> $backend, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a default parameters listener for the backend</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../VuFindSearch/Backend/Solr/Backend.html"><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></a></td>
+                <td>$backend</td>
+                <td><p>Search backend</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Default parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../VuFind/Search/Solr/DeduplicationListener.html"><abbr title="VuFind\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>
