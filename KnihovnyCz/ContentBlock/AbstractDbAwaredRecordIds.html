@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>KnihovnyCz\ContentBlock\AbstractDbAwaredRecordIds | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:KnihovnyCz_ContentBlock_AbstractDbAwaredRecordIds" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../KnihovnyCz.html">KnihovnyCz</a></li><li class="backslash">\</li><li><a href="../../KnihovnyCz/ContentBlock.html">ContentBlock</a></li><li class="backslash">\</li><li>AbstractDbAwaredRecordIds</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>AbstractDbAwaredRecordIds    
+            </h1>
+    </div>
+
+    
+    <p>    abstract     class
+    <strong>AbstractDbAwaredRecordIds</strong>        implements        <abbr title="VuFind\ContentBlock\ContentBlockInterface">ContentBlockInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">Knihovny.cz</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Class AbstractDbAwaredRecordIds</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_searchClassId">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchClassId</td>
+                <td class="last"><p>Search class ID to use for retrieving facets.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_facetField">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$facetField</td>
+                <td class="last"><p>Facet field</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchType">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchType</td>
+                <td class="last"><p>Search type</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tableManager">
+                                        protected                                        <abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr>
+                                                                                
+                                    </td>
+                <td>$tableManager</td>
+                <td class="last"><p>Table manager</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordLoader">
+                                        protected                                        <abbr title="VuFind\Record\Loader">Loader</abbr>
+                                                                                
+                                    </td>
+                <td>$recordLoader</td>
+                <td class="last"><p>Record loader</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_listRow">
+                                        protected                                        <abbr title="KnihovnyCz\ContentBlock\?\VuFind\Db\Row\RowGateway">RowGateway</abbr>
+                                                                                
+                                    </td>
+                <td>$listRow</td>
+                <td class="last"><p>List row</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_items">
+                                        protected                                        <abbr title="KnihovnyCz\ContentBlock\?array">?array</abbr>
+                                                                                
+                                    </td>
+                <td>$items</td>
+                <td class="last"><p>List items</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_listParams">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$listParams</td>
+                <td class="last"><p>Params for selecting list</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_listTableName">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$listTableName</td>
+                <td class="last"><p>Table for main list</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_itemsTableName">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$itemsTableName</td>
+                <td class="last"><p>Table for list items</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limit">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$limit</td>
+                <td class="last">Limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr> $tables, <abbr title="VuFind\Record\Loader">Loader</abbr> $loader)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadRecords">loadRecords</a>(array $ids)
+        
+                                            <p><p>Load records in batch</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="KnihovnyCz\ContentBlock\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getList">getList</a>()
+        
+                                            <p><p>Get list</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getItems">getItems</a>()
+        
+                                            <p><p>Get inspiration list items</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSlug">getSlug</a>()
+        
+                                            <p><p>Get slug identifier to search for</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getContext">getContext</a>()
+        
+                                            <p><p>Return context variables used for rendering the block's template.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIds">getIds</a>(<abbr title="Laminas\Db\ResultSet\ResultSetInterface">ResultSetInterface</abbr> $items)
+        
+                                            <p><p>Takes and returns record ids from result set</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setSelect">setSelect</a>(<abbr title="Laminas\Db\Sql\Select">Select</abbr> $select)
+        
+                                            <p><p>Modify select for getting list items</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 134</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr> $tables, <abbr title="VuFind\Record\Loader">Loader</abbr> $loader)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Db\Table\PluginManager">PluginManager</abbr></td>
+                <td>$tables</td>
+                <td><p>Table manager</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Record\Loader">Loader</abbr></td>
+                <td>$loader</td>
+                <td><p>Record loader</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadRecords">
+        <div class="location">at line 148</div>
+        <code>            protected        array
+    <strong>loadRecords</strong>(array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load records in batch</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td><p>recod identifiers</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getList">
+        <div class="location">at line 164</div>
+        <code>                    <abbr title="KnihovnyCz\ContentBlock\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null
+    <strong>getList</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get list</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="KnihovnyCz\ContentBlock\VuFind\Db\Row\RowGateway">RowGateway</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItems">
+        <div class="location">at line 178</div>
+        <code>                    array
+    <strong>getItems</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get inspiration list items</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSlug">
+        <div class="location">at line 202</div>
+        <code>    abstract        protected        string
+    <strong>getSlug</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get slug identifier to search for</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContext">
+        <div class="location">at line 209</div>
+        <code>                    array
+    <strong>getContext</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return context variables used for rendering the block's template.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIds">
+        <div class="location">at line 228</div>
+        <code>    abstract        protected        array
+    <strong>getIds</strong>(<abbr title="Laminas\Db\ResultSet\ResultSetInterface">ResultSetInterface</abbr> $items)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Takes and returns record ids from result set</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Db\ResultSet\ResultSetInterface">ResultSetInterface</abbr></td>
+                <td>$items</td>
+                <td><p>List items</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSelect">
+        <div class="location">at line 237</div>
+        <code>    abstract        protected        void
+    <strong>setSelect</strong>(<abbr title="Laminas\Db\Sql\Select">Select</abbr> $select)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Modify select for getting list items</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Db\Sql\Select">Select</abbr></td>
+                <td>$select</td>
+                <td><p>SQL select object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

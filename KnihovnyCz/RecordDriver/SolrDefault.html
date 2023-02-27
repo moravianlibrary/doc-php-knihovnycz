@@ -1,0 +1,3688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>KnihovnyCz\RecordDriver\SolrDefault | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:KnihovnyCz_RecordDriver_SolrDefault" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../KnihovnyCz.html">KnihovnyCz</a></li><li class="backslash">\</li><li><a href="../../KnihovnyCz/RecordDriver.html">RecordDriver</a></li><li class="backslash">\</li><li>SolrDefault</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>SolrDefault    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>SolrDefault</strong>        extends <abbr title="VuFind\RecordDriver\SolrDefault">SolrDefault</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Knihovny.cz solr default record driver</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html"><abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait BuyLinksTrait</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../KnihovnyCz/RecordDriver/Feature/ObalkyKnihTrait.html"><abbr title="KnihovnyCz\RecordDriver\Feature\ObalkyKnihTrait">ObalkyKnihTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait ObalkyKnihTrait</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html"><abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait WikidataTrait</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        EDD_SUBTYPE_ARTICLE
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        EDD_SUBTYPE_SELECTION
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_googlebooksService">
+                                        protected                                        <a href="../../KnihovnyCz/Service/LinkServiceInterface.html"><abbr title="KnihovnyCz\Service\LinkServiceInterface">LinkServiceInterface</abbr></a>
+                                                                                
+                                    </td>
+                <td>$googlebooksService</td>
+                <td class="last"><p>Service for getting link Google Books</p></td>
+                <td><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#property_googlebooksService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_zboziService">
+                                        protected                                        <a href="../../KnihovnyCz/Service/LinkServiceInterface.html"><abbr title="KnihovnyCz\Service\LinkServiceInterface">LinkServiceInterface</abbr></a>
+                                                                                
+                                    </td>
+                <td>$zboziService</td>
+                <td class="last"><p>Service for getting link to Zboží.cz</p></td>
+                <td><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#property_zboziService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_obalkyKnih">
+                                        protected                                        <abbr title="VuFind\Content\ObalkyKnihService">ObalkyKnihService</abbr>
+                                                                                
+                                    </td>
+                <td>$obalkyKnih</td>
+                <td class="last"><p>ObalkyKnih.cz API client</p></td>
+                <td><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/ObalkyKnihTrait.html#property_obalkyKnih">
+<abbr title="KnihovnyCz\RecordDriver\Feature\ObalkyKnihTrait">ObalkyKnihTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sparqlService">
+                                        protected                                        <a href="../../KnihovnyCz/Wikidata/SparqlService.html"><abbr title="KnihovnyCz\Wikidata\SparqlService">SparqlService</abbr></a>
+                                                                                
+                                    </td>
+                <td>$sparqlService</td>
+                <td class="last"><p>Wikidata sparql connector</p></td>
+                <td><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#property_sparqlService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_preferredSnippetFields">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$preferredSnippetFields</td>
+                <td class="last"><p>These Solr fields should be used for snippets if available (listed in order
+of preference).</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordDataFormatterKey">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$recordDataFormatterKey</td>
+                <td class="last"><p>Record data formatter key</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordDataTypeDescription">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$recordDataTypeDescription</td>
+                <td class="last"><p>Record data description</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parentRecord">
+                                        protected                                        <abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr>|null
+                                                                                
+                                    </td>
+                <td>$parentRecord</td>
+                <td class="last"><p>Parent record</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordLoader">
+                                        protected                                        <abbr title="VuFind\Record\Loader">Loader</abbr>|null
+                                                                                
+                                    </td>
+                <td>$recordLoader</td>
+                <td class="last"><p>Record loader</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordFactory">
+                                        protected                                        <abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr>
+                                                                                
+                                    </td>
+                <td>$recordFactory</td>
+                <td class="last"><p>Record factory</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_libraryIdMappings">
+                                        protected                                        <abbr title="Laminas\Config\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$libraryIdMappings</td>
+                <td class="last"><p>Library id mappings (by source)</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_authManager">
+                                        protected                                        <abbr title="VuFind\Auth\Manager">Manager</abbr>
+                                                                                
+                                    </td>
+                <td>$authManager</td>
+                <td class="last"><p>Auth Manager</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBuyLinksConfiguration">getBuyLinksConfiguration</a>()
+        
+                                            <p><p>Get buy links configuration</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getBuyLinksConfiguration">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBuyLinks">getBuyLinks</a>()
+        
+                                            <p><p>Get buy links</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getBuyLinks">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasBuyLinks">hasBuyLinks</a>()
+        
+                                            <p><p>Check whether is there any buy link</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_hasBuyLinks">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAntikvariatyLink">getAntikvariatyLink</a>()
+        
+                                            <p><p>Get link to muj-antikvariat.cz</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getAntikvariatyLink">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getZboziLink">getZboziLink</a>()
+        
+                                            <p><p>Get link to Zboží.cz</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getZboziLink">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGoogleBooksLink">getGoogleBooksLink</a>()
+        
+                                            <p><p>Get link to Google Books</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getGoogleBooksLink">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachGoogleService">attachGoogleService</a>(<a href="../../KnihovnyCz/Service/LinkServiceInterface.html"><abbr title="KnihovnyCz\Service\LinkServiceInterface">LinkServiceInterface</abbr></a> $googleService)
+        
+                                            <p><p>Attach service for Google Books</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_attachGoogleService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachZboziService">attachZboziService</a>(<a href="../../KnihovnyCz/Service/LinkServiceInterface.html"><abbr title="KnihovnyCz\Service\LinkServiceInterface">LinkServiceInterface</abbr></a> $zboziService)
+        
+                                            <p><p>Attach service for Zboží.cz</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_attachZboziService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getObalkyKnihToc">getObalkyKnihToc</a>()
+        
+                                            <p><p>Get TOC URL</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/ObalkyKnihTrait.html#method_getObalkyKnihToc">
+<abbr title="KnihovnyCz\RecordDriver\Feature\ObalkyKnihTrait">ObalkyKnihTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachObalkyKnihService">attachObalkyKnihService</a>(<abbr title="VuFind\Content\ObalkyKnihService">ObalkyKnihService</abbr> $obalkyService)
+        
+                                            <p><p>Attach service for ObalkyKnih.cz</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/ObalkyKnihTrait.html#method_attachObalkyKnihService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\ObalkyKnihTrait">ObalkyKnihTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachSparqlService">attachSparqlService</a>(<a href="../../KnihovnyCz/Wikidata/SparqlService.html"><abbr title="KnihovnyCz\Wikidata\SparqlService">SparqlService</abbr></a> $sparqlService)
+        
+                                            <p><p>Attach Wikidata SPARQL connector</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_attachSparqlService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createExternalIdentifiersSubquery">createExternalIdentifiersSubquery</a>(string $entityVariable, array $identifiersAndProperties)
+        
+                                            <p><p>Create Wikidata query for getting property values and corresponding formatters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_createExternalIdentifiersSubquery">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getWikidataData">getWikidataData</a>()
+        
+                                            <p><p>Get data for this authority record from wikidata</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getWikidataData">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatLinks">formatLinks</a>(array $data, array $linksToFormat)
+        
+                                            <p><p>Format links using wikidata formatters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_formatLinks">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitedDocuments">getCitedDocuments</a>()
+        
+                                            <p><p>Get information about cited documents</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getCitedDocuments">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitesFromWikidata">getCitesFromWikidata</a>()
+        
+                                            <p><p>Get information about cited documents from wikidata</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getCitesFromWikidata">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPublishers">getPublishers</a>()
+        
+                                            <p><p>Get the publishers of the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFormats">getFormats</a>()
+        
+                                            <p><p>Get formats for display</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getParentRecordID">getParentRecordID</a>()
+        
+                                            <p><p>Returns parent record ID from SOLR</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourceId">getSourceId</a>()
+        
+                                            <p><p>Identificator of record source</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIsn">getIsn</a>()
+        
+                                            <p><p>Returns first of ISSNs, ISBNs and ISMNs from SOLR</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBreadcrumb">getBreadcrumb</a>()
+        
+                                            <p><p>Get text that can be displayed to represent this record in
+breadcrumbs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTitle">getTitle</a>()
+        
+                                            <p><p>Get the full title of the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getShortTitle">getShortTitle</a>()
+        
+                                            <p><p>Get title of record. This is for compatibility with original VuFind</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSubtitle">getSubtitle</a>()
+        
+                                            <p><p>Get the subtitle of the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitationRecordType">getCitationRecordType</a>()
+        
+                                            <p><p>Get record type for citation</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHighlightedSnippet">getHighlightedSnippet</a>()
+        
+                                            <p><p>Pick one line from the highlighted text (if any) to use as a snippet.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPrimaryAuthorsIds">getPrimaryAuthorsIds</a>()
+        
+                                            <p><p>Get authority ID of main author.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPrimaryAuthors">getPrimaryAuthors</a>()
+        
+                                            <p><p>Get the main author of the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPrimaryAuthorForSorting">getPrimaryAuthorForSorting</a>()
+        
+                                            <p><p>Get the main author of the record for sorting purposes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSecondaryAuthors">getSecondaryAuthors</a>()
+        
+                                            <p><p>Get an array of all secondary authors (complementing getPrimaryAuthor()).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCorporateAuthors">getCorporateAuthors</a>()
+        
+                                            <p><p>Get the corporate author of the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSecondaryAuthorsIds">getSecondaryAuthorsIds</a>()
+        
+                                            <p><p>Get an array of authority Ids of all secondary authors in the same order
+and amount as getSecondaryAuthors() method from author2 solr field.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPublicationDates">getPublicationDates</a>()
+        
+                                            <p><p>Get the publication dates of the record.  See also getDateSpan().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getISBNs">getISBNs</a>()
+        
+                                            <p><p>Get an array of all ISBNs associated with the record (may be empty).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSummary">getSummary</a>()
+        
+                                            <p><p>Get an array of summary strings for the record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMonographicSeriesFieldData">getMonographicSeriesFieldData</a>()
+        
+                                            <p><p>Get raw data of monographic series</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMonographicSeries">getMonographicSeries</a>()
+        
+                                            <p><p>Get monographic series for display</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getZiskejBoolean">getZiskejBoolean</a>()
+        
+                                            <p><p>Is record available in Ziskej service?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEddBoolean">getEddBoolean</a>()
+        
+                                            <p><p>If record is available in ZiskejEDD service</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEddSubtype">getEddSubtype</a>()
+        
+                                            <p><p>Return Ziskej EDD subtype of record based on record formats</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isTypePeriodical">isTypePeriodical</a>()
+        
+                                            <p><p>Return if Periodical type</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isTypeBook">isTypeBook</a>()
+        
+                                            <p><p>Return if Book type</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLinks">getLinks</a>()
+        
+                                            <p><p>Return an array of associative URL arrays with one or more of the following
+keys:</p>
+<ul>
+<li>desc: URL description text to display (optional)</li>
+<li>url: fully-formed URL (required if 'route' is absent)</li>
+<li>destination: web or digital library</li>
+<li>status: access status</li>
+<li>source: source of data</li>
+</ul></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasLinks">hasLinks</a>()
+        
+                                            <p><p>Does record have some links to show?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_get856Links">get856Links</a>()
+        
+                                            <p><p>Get links from marc field 856</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_has856Links">has856Links</a>()
+        
+                                            <p><p>Does record has links from marc field 856</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getParentRecord">getParentRecord</a>()
+        
+                                            <p><p>Get parent record</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getChildrenIds">getChildrenIds</a>()
+        
+                                            <p><p>Used in ajax to get sfx url</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasDeduplicatedRecords">hasDeduplicatedRecords</a>()
+        
+                                            <p><p>Return true if the record is one of the duplicate records in group</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|false
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDeduplicatedRecords">getDeduplicatedRecords</a>()
+        
+                                            <p><p>Return deduplicated records - array with key as institution source and
+value with record ids or false if not supported</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDeduplicatedRecordIds">getDeduplicatedRecordIds</a>()
+        
+                                            <p><p>Return array of all deduplicated record ids</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachRecordLoader">attachRecordLoader</a>(<abbr title="VuFind\Record\Loader">Loader</abbr> $recordLoader)
+        
+                                            <p><p>Attach a Record Loader</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachRecordFactory">attachRecordFactory</a>(<abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr> $recordFactory)
+        
+                                            <p><p>Attach a Record factory</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachLibraryIdMappings">attachLibraryIdMappings</a>(<abbr title="Laminas\Config\Config">Config</abbr> $mappings)
+        
+                                            <p><p>Attach libary id mappings</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachAuthManager">attachAuthManager</a>(<abbr title="VuFind\Auth\Manager">Manager</abbr> $authManager)
+        
+                                            <p><p>Attach auth manager</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getOwningLibraryId">getOwningLibraryId</a>()
+        
+                                            <p><p>Get owning library id</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSimilarFromSolrField">getSimilarFromSolrField</a>()
+        
+                                            <p><p>Get related record data</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDeduplicatedAuthors">getDeduplicatedAuthors</a>(array $dataFields = [&#039;role&#039;])
+        
+                                            <p><p>Deduplicate author information into associative array with main/corporate/
+secondary keys.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSiglaDisplay">getSiglaDisplay</a>()
+        
+                                            <p><p>Get the sigla for display</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getGeoLocation">getGeoLocation</a>()
+        
+                                            <p><p>Get the geolocation</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIdFrom001">getIdFrom001</a>()
+        
+                                            <p><p>Get id from field 001 of marc record (indexed in solr)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSerialLinks">getSerialLinks</a>()
+        
+                                            <p><p>Get links of serials to library catalogue</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLinksFromSolrField">getLinksFromSolrField</a>(string $field = &#039;url&#039;)
+        
+                                            <p><p>General function for getting links</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordDataFormatterKey">getRecordDataFormatterKey</a>()
+        
+                                            <p><p>Get record data formatter key</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getRecordDataTypeDescription">getRecordDataTypeDescription</a>()
+        
+                                            <p><p>Get record data type description</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCacheKey">getCacheKey</a>(string|null $suffix = null)
+        
+                                            <p><p>Method to ensure uniform cache keys for cached VuFind objects.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourceTitleFacet">getSourceTitleFacet</a>()
+        
+                                            <p><p>Return title of source document</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPlaceOfPublication">getPlaceOfPublication</a>()
+        
+                                            <p><p>Get place of publication place</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPublishDate">getPublishDate</a>()
+        
+                                            <p><p>Get date published</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPlaceOfPublicationAndPublishDate">getPlaceOfPublicationAndPublishDate</a>()
+        
+                                            <p><p>Get place of publication and publish date</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getPrimaryAuthorsString">getPrimaryAuthorsString</a>()
+        
+                                            <p><p>Get primary authors</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getIsbn">getIsbn</a>()
+        
+                                            <p><p>Get ISBN</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getBuyLinksConfiguration">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getBuyLinksConfiguration">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a> at line 63</div>
+        <code>            protected        array
+    <strong>getBuyLinksConfiguration</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get buy links configuration</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of array with keys: key, method, label</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBuyLinks">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getBuyLinks">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a> at line 89</div>
+        <code>                    array
+    <strong>getBuyLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get buy links</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of array with keys: label, href</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasBuyLinks">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_hasBuyLinks">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a> at line 109</div>
+        <code>                    bool
+    <strong>hasBuyLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether is there any buy link</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAntikvariatyLink">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getAntikvariatyLink">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a> at line 128</div>
+        <code>                    string|null
+    <strong>getAntikvariatyLink</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get link to muj-antikvariat.cz</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getZboziLink">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getZboziLink">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a> at line 150</div>
+        <code>                    string|null
+    <strong>getZboziLink</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get link to Zboží.cz</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGoogleBooksLink">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_getGoogleBooksLink">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a> at line 160</div>
+        <code>                    string|null
+    <strong>getGoogleBooksLink</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get link to Google Books</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachGoogleService">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_attachGoogleService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a> at line 172</div>
+        <code>                    void
+    <strong>attachGoogleService</strong>(<a href="../../KnihovnyCz/Service/LinkServiceInterface.html"><abbr title="KnihovnyCz\Service\LinkServiceInterface">LinkServiceInterface</abbr></a> $googleService)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach service for Google Books</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../KnihovnyCz/Service/LinkServiceInterface.html"><abbr title="KnihovnyCz\Service\LinkServiceInterface">LinkServiceInterface</abbr></a></td>
+                <td>$googleService</td>
+                <td><p>Google books API client</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachZboziService">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/BuyLinksTrait.html#method_attachZboziService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\BuyLinksTrait">BuyLinksTrait</abbr></a> at line 184</div>
+        <code>                    void
+    <strong>attachZboziService</strong>(<a href="../../KnihovnyCz/Service/LinkServiceInterface.html"><abbr title="KnihovnyCz\Service\LinkServiceInterface">LinkServiceInterface</abbr></a> $zboziService)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach service for Zboží.cz</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../KnihovnyCz/Service/LinkServiceInterface.html"><abbr title="KnihovnyCz\Service\LinkServiceInterface">LinkServiceInterface</abbr></a></td>
+                <td>$zboziService</td>
+                <td><p>Zbozi.cz API client</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getObalkyKnihToc">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/ObalkyKnihTrait.html#method_getObalkyKnihToc">
+<abbr title="KnihovnyCz\RecordDriver\Feature\ObalkyKnihTrait">ObalkyKnihTrait</abbr></a> at line 58</div>
+        <code>                    array|null
+    <strong>getObalkyKnihToc</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get TOC URL</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachObalkyKnihService">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/ObalkyKnihTrait.html#method_attachObalkyKnihService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\ObalkyKnihTrait">ObalkyKnihTrait</abbr></a> at line 88</div>
+        <code>                    void
+    <strong>attachObalkyKnihService</strong>(<abbr title="VuFind\Content\ObalkyKnihService">ObalkyKnihService</abbr> $obalkyService)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach service for ObalkyKnih.cz</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Content\ObalkyKnihService">ObalkyKnihService</abbr></td>
+                <td>$obalkyService</td>
+                <td><p>ObalkyKnih.cz API client</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachSparqlService">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_attachSparqlService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 57</div>
+        <code>                    void
+    <strong>attachSparqlService</strong>(<a href="../../KnihovnyCz/Wikidata/SparqlService.html"><abbr title="KnihovnyCz\Wikidata\SparqlService">SparqlService</abbr></a> $sparqlService)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach Wikidata SPARQL connector</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../KnihovnyCz/Wikidata/SparqlService.html"><abbr title="KnihovnyCz\Wikidata\SparqlService">SparqlService</abbr></a></td>
+                <td>$sparqlService</td>
+                <td><p>SPARQL connector</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createExternalIdentifiersSubquery">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_createExternalIdentifiersSubquery">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 71</div>
+        <code>            protected        array
+    <strong>createExternalIdentifiersSubquery</strong>(string $entityVariable, array $identifiersAndProperties)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create Wikidata query for getting property values and corresponding formatters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$entityVariable</td>
+                <td><p>Wikidata entity variable</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$identifiersAndProperties</td>
+                <td><p>Array of identifiers =&gt; properties</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWikidataData">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getWikidataData">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 118</div>
+        <code>            protected        array
+    <strong>getWikidataData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get data for this authority record from wikidata</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Http\Client\ClientExceptionInterface">ClientExceptionInterface</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatLinks">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_formatLinks">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 141</div>
+        <code>            protected        array
+    <strong>formatLinks</strong>(array $data, array $linksToFormat)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format links using wikidata formatters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Data from Wikidata</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$linksToFormat</td>
+                <td><p>Links to format</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitedDocuments">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getCitedDocuments">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 172</div>
+        <code>                    array
+    <strong>getCitedDocuments</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get information about cited documents</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitesFromWikidata">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getCitesFromWikidata">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 187</div>
+        <code>            protected        array
+    <strong>getCitesFromWikidata</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get information about cited documents from wikidata</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublishers">
+        <div class="location">at line 115</div>
+        <code>                    array
+    <strong>getPublishers</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the publishers of the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormats">
+        <div class="location">at line 125</div>
+        <code>                    array
+    <strong>getFormats</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get formats for display</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParentRecordID">
+        <div class="location">at line 135</div>
+        <code>                    string
+    <strong>getParentRecordID</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns parent record ID from SOLR</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourceId">
+        <div class="location">at line 146</div>
+        <code>                    string
+    <strong>getSourceId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Identificator of record source</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIsn">
+        <div class="location">at line 157</div>
+        <code>                    string
+    <strong>getIsn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns first of ISSNs, ISBNs and ISMNs from SOLR</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBreadcrumb">
+        <div class="location">at line 171</div>
+        <code>                    string
+    <strong>getBreadcrumb</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get text that can be displayed to represent this record in
+breadcrumbs.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>Breadcrumb text to represent this record.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTitle">
+        <div class="location">at line 181</div>
+        <code>                    string
+    <strong>getTitle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the full title of the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShortTitle">
+        <div class="location">at line 191</div>
+        <code>                    string
+    <strong>getShortTitle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get title of record. This is for compatibility with original VuFind</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubtitle">
+        <div class="location">at line 201</div>
+        <code>                    string
+    <strong>getSubtitle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the subtitle of the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitationRecordType">
+        <div class="location">at line 211</div>
+        <code>                    string
+    <strong>getCitationRecordType</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get record type for citation</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHighlightedSnippet">
+        <div class="location">at line 226</div>
+        <code>                    mixed
+    <strong>getHighlightedSnippet</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pick one line from the highlighted text (if any) to use as a snippet.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>False if no snippet found, otherwise associative array
+with 'snippet' and 'caption' keys.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrimaryAuthorsIds">
+        <div class="location">at line 249</div>
+        <code>                    array
+    <strong>getPrimaryAuthorsIds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get authority ID of main author.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrimaryAuthors">
+        <div class="location">at line 260</div>
+        <code>                    array
+    <strong>getPrimaryAuthors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the main author of the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrimaryAuthorForSorting">
+        <div class="location">at line 273</div>
+        <code>                    string|null
+    <strong>getPrimaryAuthorForSorting</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the main author of the record for sorting purposes.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSecondaryAuthors">
+        <div class="location">at line 283</div>
+        <code>                    array
+    <strong>getSecondaryAuthors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of all secondary authors (complementing getPrimaryAuthor()).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCorporateAuthors">
+        <div class="location">at line 293</div>
+        <code>                    array
+    <strong>getCorporateAuthors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the corporate author of the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSecondaryAuthorsIds">
+        <div class="location">at line 307</div>
+        <code>                    array
+    <strong>getSecondaryAuthorsIds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of authority Ids of all secondary authors in the same order
+and amount as getSecondaryAuthors() method from author2 solr field.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublicationDates">
+        <div class="location">at line 317</div>
+        <code>                    array
+    <strong>getPublicationDates</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the publication dates of the record.  See also getDateSpan().</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getISBNs">
+        <div class="location">at line 327</div>
+        <code>                    array
+    <strong>getISBNs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of all ISBNs associated with the record (may be empty).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSummary">
+        <div class="location">at line 341</div>
+        <code>                    array
+    <strong>getSummary</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of summary strings for the record.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMonographicSeriesFieldData">
+        <div class="location">at line 361</div>
+        <code>            protected        array
+    <strong>getMonographicSeriesFieldData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get raw data of monographic series</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMonographicSeries">
+        <div class="location">at line 371</div>
+        <code>                    array
+    <strong>getMonographicSeries</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get monographic series for display</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getZiskejBoolean">
+        <div class="location">at line 410</div>
+        <code>                    bool
+    <strong>getZiskejBoolean</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is record available in Ziskej service?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEddBoolean">
+        <div class="location">at line 428</div>
+        <code>                    bool
+    <strong>getEddBoolean</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>If record is available in ZiskejEDD service</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEddSubtype">
+        <div class="location">at line 446</div>
+        <code>                    string
+    <strong>getEddSubtype</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return Ziskej EDD subtype of record based on record formats</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTypePeriodical">
+        <div class="location">at line 458</div>
+        <code>                    bool
+    <strong>isTypePeriodical</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return if Periodical type</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTypeBook">
+        <div class="location">at line 468</div>
+        <code>                    bool
+    <strong>isTypeBook</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return if Book type</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLinks">
+        <div class="location">at line 484</div>
+        <code>                    array
+    <strong>getLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return an array of associative URL arrays with one or more of the following
+keys:</p>
+<ul>
+<li>desc: URL description text to display (optional)</li>
+<li>url: fully-formed URL (required if 'route' is absent)</li>
+<li>destination: web or digital library</li>
+<li>status: access status</li>
+<li>source: source of data</li>
+</ul></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasLinks">
+        <div class="location">at line 497</div>
+        <code>                    bool
+    <strong>hasLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does record have some links to show?</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get856Links">
+        <div class="location">at line 511</div>
+        <code>            protected        array
+    <strong>get856Links</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get links from marc field 856</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has856Links">
+        <div class="location">at line 521</div>
+        <code>            protected        bool
+    <strong>has856Links</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Does record has links from marc field 856</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParentRecord">
+        <div class="location">at line 533</div>
+        <code>                    <abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr>|null
+    <strong>getParentRecord</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get parent record</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChildrenIds">
+        <div class="location">at line 557</div>
+        <code>                    array
+    <strong>getChildrenIds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Used in ajax to get sfx url</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasDeduplicatedRecords">
+        <div class="location">at line 567</div>
+        <code>                    bool
+    <strong>hasDeduplicatedRecords</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return true if the record is one of the duplicate records in group</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeduplicatedRecords">
+        <div class="location">at line 580</div>
+        <code>                    array|false
+    <strong>getDeduplicatedRecords</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return deduplicated records - array with key as institution source and
+value with record ids or false if not supported</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeduplicatedRecordIds">
+        <div class="location">at line 623</div>
+        <code>                    array
+    <strong>getDeduplicatedRecordIds</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return array of all deduplicated record ids</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachRecordLoader">
+        <div class="location">at line 636</div>
+        <code>                    void
+    <strong>attachRecordLoader</strong>(<abbr title="VuFind\Record\Loader">Loader</abbr> $recordLoader)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach a Record Loader</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Record\Loader">Loader</abbr></td>
+                <td>$recordLoader</td>
+                <td><p>Record Loader</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachRecordFactory">
+        <div class="location">at line 648</div>
+        <code>                    void
+    <strong>attachRecordFactory</strong>(<abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr> $recordFactory)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach a Record factory</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\RecordDriver\PluginManager">PluginManager</abbr></td>
+                <td>$recordFactory</td>
+                <td><p>Record factory</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachLibraryIdMappings">
+        <div class="location">at line 661</div>
+        <code>                    void
+    <strong>attachLibraryIdMappings</strong>(<abbr title="Laminas\Config\Config">Config</abbr> $mappings)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach libary id mappings</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Config\Config">Config</abbr></td>
+                <td>$mappings</td>
+                <td><p>Mappings from config</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachAuthManager">
+        <div class="location">at line 673</div>
+        <code>                    void
+    <strong>attachAuthManager</strong>(<abbr title="VuFind\Auth\Manager">Manager</abbr> $authManager)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach auth manager</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Auth\Manager">Manager</abbr></td>
+                <td>$authManager</td>
+                <td><p>Auth manager</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOwningLibraryId">
+        <div class="location">at line 683</div>
+        <code>                    string|null
+    <strong>getOwningLibraryId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get owning library id</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSimilarFromSolrField">
+        <div class="location">at line 694</div>
+        <code>                    array
+    <strong>getSimilarFromSolrField</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get related record data</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeduplicatedAuthors">
+        <div class="location">at line 709</div>
+        <code>                    array
+    <strong>getDeduplicatedAuthors</strong>(array $dataFields = [&#039;role&#039;])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deduplicate author information into associative array with main/corporate/
+secondary keys.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$dataFields</td>
+                <td><p>An array of extra data fields to retrieve (see
+getAuthorDataFields)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSiglaDisplay">
+        <div class="location">at line 719</div>
+        <code>                    string|null
+    <strong>getSiglaDisplay</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the sigla for display</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGeoLocation">
+        <div class="location">at line 731</div>
+        <code>                    array|null
+    <strong>getGeoLocation</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the geolocation</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdFrom001">
+        <div class="location">at line 748</div>
+        <code>            protected        string
+    <strong>getIdFrom001</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get id from field 001 of marc record (indexed in solr)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSerialLinks">
+        <div class="location">at line 758</div>
+        <code>                    array
+    <strong>getSerialLinks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get links of serials to library catalogue</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLinksFromSolrField">
+        <div class="location">at line 770</div>
+        <code>            protected        array
+    <strong>getLinksFromSolrField</strong>(string $field = &#039;url&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>General function for getting links</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Solr index field</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordDataFormatterKey">
+        <div class="location">at line 801</div>
+        <code>                    string
+    <strong>getRecordDataFormatterKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get record data formatter key</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecordDataTypeDescription">
+        <div class="location">at line 811</div>
+        <code>                    string
+    <strong>getRecordDataTypeDescription</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get record data type description</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheKey">
+        <div class="location">at line 824</div>
+        <code>            protected        string
+    <strong>getCacheKey</strong>(string|null $suffix = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Method to ensure uniform cache keys for cached VuFind objects.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$suffix</td>
+                <td><p>Optional suffix that will get appended to the
+object class name calling getCacheKey()</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourceTitleFacet">
+        <div class="location">at line 835</div>
+        <code>                    string|null
+    <strong>getSourceTitleFacet</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return title of source document</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlaceOfPublication">
+        <div class="location">at line 850</div>
+        <code>                    string|null
+    <strong>getPlaceOfPublication</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get place of publication place</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublishDate">
+        <div class="location">at line 879</div>
+        <code>                    string|null
+    <strong>getPublishDate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get date published</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlaceOfPublicationAndPublishDate">
+        <div class="location">at line 904</div>
+        <code>                    string|null
+    <strong>getPlaceOfPublicationAndPublishDate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get place of publication and publish date</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrimaryAuthorsString">
+        <div class="location">at line 921</div>
+        <code>                    string|null
+    <strong>getPrimaryAuthorsString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get primary authors</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIsbn">
+        <div class="location">at line 932</div>
+        <code>                    string|null
+    <strong>getIsbn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get ISBN</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

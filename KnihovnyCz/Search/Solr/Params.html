@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>KnihovnyCz\Search\Solr\Params | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:KnihovnyCz_Search_Solr_Params" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../KnihovnyCz.html">KnihovnyCz</a></li><li class="backslash">\</li><li><a href="../../../KnihovnyCz/Search.html">Search</a></li><li class="backslash">\</li><li><a href="../../../KnihovnyCz/Search/Solr.html">Solr</a></li><li class="backslash">\</li><li>Params</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Params    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Params</strong>        extends <abbr title="VuFind\Search\Solr\Params">Params</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">KnihovnyCz</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Solr Search Parameters</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parser">
+                                        protected                                        <a href="../../../KnihovnyCz/Geo/Parser.html"><abbr title="KnihovnyCz\Geo\Parser">Parser</abbr></a>
+                                                                                
+                                    </td>
+                <td>$parser</td>
+                <td class="last"><p>Array of functions for boosting the query</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_boostFunctions">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$boostFunctions</td>
+                <td class="last"><p>Array of functions for boosting the query</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_jsonFacets">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$jsonFacets</td>
+                <td class="last"><p>Array of array parameters</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Search\Base\Options">Options</abbr> $options, <abbr title="VuFind\Config\PluginManager">PluginManager</abbr> $configLoader, <abbr title="VuFind\Search\Solr\HierarchicalFacetHelper">HierarchicalFacetHelper</abbr> $facetHelper = null, <a href="../../../KnihovnyCz/Geo/Parser.html"><abbr title="KnihovnyCz\Geo\Parser">Parser</abbr></a> $parser = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFindSearch\ParamBag">ParamBag</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getBackendParameters">getBackendParameters</a>()
+        
+                                            <p><p>Create search backend parameters for advanced features.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addBoostFunction">addBoostFunction</a>(string $function)
+        
+                                            <p><p>Add boost function to Solr query</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_addJsonFacet">addJsonFacet</a>(string $field, array $parameters)
+        
+                                            <p><p>Add json facet to Solr query</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatFilterListEntry">formatFilterListEntry</a>(string $field, string $value, string $operator, bool $translate)
+        
+                                            <p><p>Format a single filter for use in getFilterList().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 74</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="VuFind\Search\Base\Options">Options</abbr> $options, <abbr title="VuFind\Config\PluginManager">PluginManager</abbr> $configLoader, <abbr title="VuFind\Search\Solr\HierarchicalFacetHelper">HierarchicalFacetHelper</abbr> $facetHelper = null, <a href="../../../KnihovnyCz/Geo/Parser.html"><abbr title="KnihovnyCz\Geo\Parser">Parser</abbr></a> $parser = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Search\Base\Options">Options</abbr></td>
+                <td>$options</td>
+                <td><p>Options to use</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Config\PluginManager">PluginManager</abbr></td>
+                <td>$configLoader</td>
+                <td><p>Config loader</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Search\Solr\HierarchicalFacetHelper">HierarchicalFacetHelper</abbr></td>
+                <td>$facetHelper</td>
+                <td><p>Hierarchical facet helper</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../KnihovnyCz/Geo/Parser.html"><abbr title="KnihovnyCz\Geo\Parser">Parser</abbr></a></td>
+                <td>$parser</td>
+                <td><p>Geo parser</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBackendParameters">
+        <div class="location">at line 89</div>
+        <code>                    <abbr title="VuFindSearch\ParamBag">ParamBag</abbr>
+    <strong>getBackendParameters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create search backend parameters for advanced features.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBoostFunction">
+        <div class="location">at line 112</div>
+        <code>                    void
+    <strong>addBoostFunction</strong>(string $function)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add boost function to Solr query</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td><p>boost function</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addJsonFacet">
+        <div class="location">at line 125</div>
+        <code>                    void
+    <strong>addJsonFacet</strong>(string $field, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add json facet to Solr query</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>field to facet on</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatFilterListEntry">
+        <div class="location">at line 140</div>
+        <code>            protected        array
+    <strong>formatFilterListEntry</strong>(string $field, string $value, string $operator, bool $translate)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format a single filter for use in getFilterList().</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>Field name</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>Field value</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td><p>Operator (AND/OR/NOT)</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$translate</td>
+                <td><p>Should we translate the label?</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

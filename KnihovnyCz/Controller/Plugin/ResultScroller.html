@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>KnihovnyCz\Controller\Plugin\ResultScroller | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:KnihovnyCz_Controller_Plugin_ResultScroller" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../KnihovnyCz.html">KnihovnyCz</a></li><li class="backslash">\</li><li><a href="../../../KnihovnyCz/Controller.html">Controller</a></li><li class="backslash">\</li><li><a href="../../../KnihovnyCz/Controller/Plugin.html">Plugin</a></li><li class="backslash">\</li><li>ResultScroller</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ResultScroller    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ResultScroller</strong>        extends <abbr title="VuFind\Controller\Plugin\ResultScroller">ResultScroller</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Class for managing &quot;next&quot; and &quot;previous&quot; navigation within result sets.</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_renderer">
+                                        protected                                        <abbr title="Laminas\View\Renderer\RendererInterface">RendererInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$renderer</td>
+                <td class="last">Renderer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lastSearch">
+                                        protected                                        <abbr title="VuFind\Search\Base\Results">Results</abbr>|null
+                                                                                
+                                    </td>
+                <td>$lastSearch</td>
+                <td class="last">Results</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Laminas\Session\Container">Container</abbr> $session, <abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $rm, <abbr title="Laminas\View\Renderer\RendererInterface">RendererInterface</abbr> $renderer, bool $enabled = true)
+        
+                                            <p><p>Constructor. Create a new search result scroller.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_init">init</a>(<abbr title="VuFind\Search\Base\Results">Results</abbr> $searchObject)
+        
+                                            <p><p>Initialize this result set scroller. This should only be called
+prior to displaying the results of a new search.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getScrollData">getScrollData</a>(<abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr> $driver)
+        
+                                            <p><p>Get the previous/next record in the last search
+result set relative to the current one, also return
+the position of the current record in the result set.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLinkToResults">getLinkToResults</a>()
+        
+                                            <p><p>Get link to page with results</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="VuFind\Search\Base\Results">Results</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_restoreLastSearch">restoreLastSearch</a>()
+        
+                                            <p><p>Return the last saved search.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_initLastSearch">initLastSearch</a>()
+        
+                                            <p><p>Initialize the last saved search. Optimization to prevent restoring
+last search twice from this and parent class.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fetchPage">fetchPage</a>(object $searchObject, int $page = null)
+        
+                                            <p><p>Fetch the given page of results from the given search object and
+return the IDs of the records in an array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 68</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Laminas\Session\Container">Container</abbr> $session, <abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $rm, <abbr title="Laminas\View\Renderer\RendererInterface">RendererInterface</abbr> $renderer, bool $enabled = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Constructor. Create a new search result scroller.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\Session\Container">Container</abbr></td>
+                <td>$session</td>
+                <td><p>Session container</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></td>
+                <td>$rm</td>
+                <td><p>Results manager</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\View\Renderer\RendererInterface">RendererInterface</abbr></td>
+                <td>$renderer</td>
+                <td>Renderer</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$enabled</td>
+                <td><p>Is the scroller enabled?</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at line 87</div>
+        <code>                    bool
+    <strong>init</strong>(<abbr title="VuFind\Search\Base\Results">Results</abbr> $searchObject)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize this result set scroller. This should only be called
+prior to displaying the results of a new search.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Search\Base\Results">Results</abbr></td>
+                <td>$searchObject</td>
+                <td><p>The search object that was
+used to execute the last search.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScrollData">
+        <div class="location">at line 105</div>
+        <code>                    array
+    <strong>getScrollData</strong>(<abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr> $driver)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the previous/next record in the last search
+result set relative to the current one, also return
+the position of the current record in the result set.</p></p>                <p><p>Return array('previousRecord'=&gt;previd, 'nextRecord'=&gt;nextid,
+'currentPosition'=&gt;number, 'resultTotal'=&gt;number).</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\RecordDriver\AbstractBase">AbstractBase</abbr></td>
+                <td>$driver</td>
+                <td><p>Driver for the record
+currently being displayed</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLinkToResults">
+        <div class="location">at line 125</div>
+        <code>            protected        string|null
+    <strong>getLinkToResults</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get link to page with results</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>link</td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreLastSearch">
+        <div class="location">at line 141</div>
+        <code>            protected        <abbr title="VuFind\Search\Base\Results">Results</abbr>
+    <strong>restoreLastSearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the last saved search.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="VuFind\Search\Base\Results">Results</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initLastSearch">
+        <div class="location">at line 152</div>
+        <code>            protected        void
+    <strong>initLastSearch</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the last saved search. Optimization to prevent restoring
+last search twice from this and parent class.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchPage">
+        <div class="location">at line 168</div>
+        <code>            protected        array
+    <strong>fetchPage</strong>(object $searchObject, int $page = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fetch the given page of results from the given search object and
+return the IDs of the records in an array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$searchObject</td>
+                <td><p>The search object to use to execute the search</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td><p>The page number to fetch (null for current)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>KnihovnyCz\Search\Solr\ChildDocDeduplicationListener | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:KnihovnyCz_Search_Solr_ChildDocDeduplicationListener" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../KnihovnyCz.html">KnihovnyCz</a></li><li class="backslash">\</li><li><a href="../../../KnihovnyCz/Search.html">Search</a></li><li class="backslash">\</li><li><a href="../../../KnihovnyCz/Search/Solr.html">Solr</a></li><li class="backslash">\</li><li>ChildDocDeduplicationListener</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ChildDocDeduplicationListener    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ChildDocDeduplicationListener</strong>        extends <a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html"><abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Solr deduplication listener for views.</p></p>                    </div>
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        OR_FACETS_REGEX
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        FILTER_REGEX
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        UNDEF_PRIORITY
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        MIN_PRIORITY
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                            protected                                                            MAX_CHILD_DOCUMENTS
+                                    </td>
+                <td class="last">
+                    <p><em><p>Maximal number of child documents to fetch</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_facetConfig">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$facetConfig</td>
+                <td class="last"><p>Facet configuration file id</p></td>
+                <td><small>from&nbsp;<a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#property_facetConfig">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_authManager">
+                                        protected                                        <abbr title="VuFind\Auth\Manager">Manager</abbr>
+                                                                                
+                                    </td>
+                <td>$authManager</td>
+                <td class="last"><p>Auth Manager</p></td>
+                <td><small>from&nbsp;<a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#property_authManager">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_institutionField">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$institutionField</td>
+                <td class="last"><p>Solr institution field</p></td>
+                <td><small>from&nbsp;<a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#property_institutionField">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fieldList">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$fieldList</td>
+                <td class="last"><p>Field list to fetch from Solr</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr> $backend, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $serviceLocator, string $searchCfg, string $facetCfg, string $dataSourceCfg = &#039;datasources&#039;, bool $enabled = true)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fetchLocalRecords">fetchLocalRecords</a>(<abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr> $event)
+        
+                                            <p><p>Fetch local records for all the found dedup records</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_determineRecordPriority">determineRecordPriority</a>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
+        
+                                            <p><p>Function that determines the priority for sources</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#method_determineRecordPriority">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourcesFromLibraryCards">getSourcesFromLibraryCards</a>()
+        
+                                            <p><p>Get institutions from user's library cards</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#method_getSourcesFromLibraryCards">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSourcesFromFilters">getSourcesFromFilters</a>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
+        
+                                            <p><p>Get sources from facet filters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#method_getSourcesFromFilters">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getNonPreferredSources">getNonPreferredSources</a>()
+        
+                                            <p><p>Get non preferred sources</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#method_getNonPreferredSources">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_appendDedupRecordFields">appendDedupRecordFields</a>(array $localRecordData, array $dedupRecordData, array $recordSources, array $sourcePriority)
+        
+                                            <p><p>Append fields from dedup record to the selected local record. Note: the last
+two parameters are unused in this default method, but they may be useful for
+custom behavior in subclasses.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_onSearchPre">onSearchPre</a>(<abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr> $event)
+        
+                                            <p><p>Set up filter for excluding merged children.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_configureFilter">configureFilter</a>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
+        
+                                            <p><p>Get filter for limiting results</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLocalRecordIds">getLocalRecordIds</a>(array $fields)
+        
+                                            <p><p>Return local record ids</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getListOfFields">getListOfFields</a>()
+        
+                                            <p><p>Return list of fields to fetch from Solr</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getChildListOfFields">getChildListOfFields</a>(string $parentFieldList)
+        
+                                            <p><p>Return new list of fields to fetch from Solr for child record</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 73</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr> $backend, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $serviceLocator, string $searchCfg, string $facetCfg, string $dataSourceCfg = &#039;datasources&#039;, bool $enabled = true)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor.</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFindSearch\Backend\Solr\Backend">Backend</abbr></td>
+                <td>$backend</td>
+                <td><p>Search backend</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$serviceLocator</td>
+                <td><p>Service locator</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$searchCfg</td>
+                <td><p>Search config file id</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$facetCfg</td>
+                <td><p>Facet config file id</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dataSourceCfg</td>
+                <td><p>Data source file id</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$enabled</td>
+                <td><p>Whether deduplication is
+enabled</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchLocalRecords">
+        <div class="location">at line 178</div>
+        <code>            protected        void
+    <strong>fetchLocalRecords</strong>(<abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr> $event)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fetch local records for all the found dedup records</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr></td>
+                <td>$event</td>
+                <td>Event</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_determineRecordPriority">
+        <div class="location">in <a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#method_determineRecordPriority">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a> at line 230</div>
+        <code>            protected        array
+    <strong>determineRecordPriority</strong>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Function that determines the priority for sources</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array keyed by source with priority as the value</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourcesFromLibraryCards">
+        <div class="location">in <a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#method_getSourcesFromLibraryCards">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a> at line 255</div>
+        <code>                    array
+    <strong>getSourcesFromLibraryCards</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get institutions from user's library cards</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourcesFromFilters">
+        <div class="location">in <a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#method_getSourcesFromFilters">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a> at line 276</div>
+        <code>                    array
+    <strong>getSourcesFromFilters</strong>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get sources from facet filters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></td>
+                <td>$params</td>
+                <td>parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>preferred institutions from user library cards</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNonPreferredSources">
+        <div class="location">in <a href="../../../KnihovnyCz/Search/Solr/DeduplicationListener.html#method_getNonPreferredSources">
+<abbr title="KnihovnyCz\Search\Solr\DeduplicationListener">DeduplicationListener</abbr></a> at line 333</div>
+        <code>                    array
+    <strong>getNonPreferredSources</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get non preferred sources</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendDedupRecordFields">
+        <div class="location">at line 221</div>
+        <code>            protected        array
+    <strong>appendDedupRecordFields</strong>(array $localRecordData, array $dedupRecordData, array $recordSources, array $sourcePriority)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Append fields from dedup record to the selected local record. Note: the last
+two parameters are unused in this default method, but they may be useful for
+custom behavior in subclasses.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$localRecordData</td>
+                <td><p>Local record data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$dedupRecordData</td>
+                <td><p>Dedup record data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$recordSources</td>
+                <td><p>List of active record sources, empty if all</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$sourcePriority</td>
+                <td><p>Array of source priorities keyed by source id</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Local record data</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onSearchPre">
+        <div class="location">at line 99</div>
+        <code>                    <abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr>
+    <strong>onSearchPre</strong>(<abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr> $event)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set up filter for excluding merged children.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr></td>
+                <td>$event</td>
+                <td>Event</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Laminas\EventManager\EventInterface">EventInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configureFilter">
+        <div class="location">at line 122</div>
+        <code>            protected        void
+    <strong>configureFilter</strong>(<abbr title="VuFindSearch\ParamBag">ParamBag</abbr> $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get filter for limiting results</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFindSearch\ParamBag">ParamBag</abbr></td>
+                <td>$params</td>
+                <td><p>Search parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLocalRecordIds">
+        <div class="location">at line 197</div>
+        <code>            protected        array
+    <strong>getLocalRecordIds</strong>(array $fields)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return local record ids</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td>fields</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getListOfFields">
+        <div class="location">at line 236</div>
+        <code>            protected        string|null
+    <strong>getListOfFields</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return list of fields to fetch from Solr</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChildListOfFields">
+        <div class="location">at line 252</div>
+        <code>            protected        string|null
+    <strong>getChildListOfFields</strong>(string $parentFieldList)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return new list of fields to fetch from Solr for child record</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$parentFieldList</td>
+                <td><p>field list used for fetching parent records</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

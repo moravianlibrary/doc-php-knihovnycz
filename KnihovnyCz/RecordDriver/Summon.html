@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>KnihovnyCz\RecordDriver\Summon | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:KnihovnyCz_RecordDriver_Summon" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../KnihovnyCz.html">KnihovnyCz</a></li><li class="backslash">\</li><li><a href="../../KnihovnyCz/RecordDriver.html">RecordDriver</a></li><li class="backslash">\</li><li>Summon</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Summon    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Summon</strong>        extends <abbr title="VuFind\RecordDriver\Summon">Summon</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">Knihovny.cz</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Class Summon</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html"><abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait WikidataTrait</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="VuFind\Cache\CacheTrait">CacheTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_sparqlService">
+                                        protected                                        <a href="../../KnihovnyCz/Wikidata/SparqlService.html"><abbr title="KnihovnyCz\Wikidata\SparqlService">SparqlService</abbr></a>
+                                                                                
+                                    </td>
+                <td>$sparqlService</td>
+                <td class="last"><p>Wikidata sparql connector</p></td>
+                <td><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#property_sparqlService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_attachSparqlService">attachSparqlService</a>(<a href="../../KnihovnyCz/Wikidata/SparqlService.html"><abbr title="KnihovnyCz\Wikidata\SparqlService">SparqlService</abbr></a> $sparqlService)
+        
+                                            <p><p>Attach Wikidata SPARQL connector</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_attachSparqlService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_createExternalIdentifiersSubquery">createExternalIdentifiersSubquery</a>(string $entityVariable, array $identifiersAndProperties)
+        
+                                            <p><p>Create Wikidata query for getting property values and corresponding formatters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_createExternalIdentifiersSubquery">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getWikidataData">getWikidataData</a>()
+        
+                                            <p><p>Get data for this authority record from wikidata</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getWikidataData">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_formatLinks">formatLinks</a>(array $data, array $linksToFormat)
+        
+                                            <p><p>Format links using wikidata formatters</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_formatLinks">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitedDocuments">getCitedDocuments</a>()
+        
+                                            <p><p>Get information about cited documents</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getCitedDocuments">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCitesFromWikidata">getCitesFromWikidata</a>()
+        
+                                            <p><p>Get information about cited documents from wikidata</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getCitesFromWikidata">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getFullTextLinks">getFullTextLinks</a>(<abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr> $linker)
+        
+                                            <p><p>Get fulltext links</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsOpenUrl">supportsOpenUrl</a>()
+        
+                                            <p><p>Checks the current record if it's supported for generating OpenURLs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCacheKey">getCacheKey</a>(string|null $suffix = null)
+        
+                                            <p><p>Method to ensure uniform cache keys for cached VuFind objects.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_fixOpenAccessLink">fixOpenAccessLink</a>(string $url)
+        
+                                            <p><p>Fix Open access link</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_attachSparqlService">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_attachSparqlService">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 57</div>
+        <code>                    void
+    <strong>attachSparqlService</strong>(<a href="../../KnihovnyCz/Wikidata/SparqlService.html"><abbr title="KnihovnyCz\Wikidata\SparqlService">SparqlService</abbr></a> $sparqlService)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach Wikidata SPARQL connector</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../KnihovnyCz/Wikidata/SparqlService.html"><abbr title="KnihovnyCz\Wikidata\SparqlService">SparqlService</abbr></a></td>
+                <td>$sparqlService</td>
+                <td><p>SPARQL connector</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createExternalIdentifiersSubquery">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_createExternalIdentifiersSubquery">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 71</div>
+        <code>            protected        array
+    <strong>createExternalIdentifiersSubquery</strong>(string $entityVariable, array $identifiersAndProperties)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create Wikidata query for getting property values and corresponding formatters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$entityVariable</td>
+                <td><p>Wikidata entity variable</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$identifiersAndProperties</td>
+                <td><p>Array of identifiers =&gt; properties</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWikidataData">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getWikidataData">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 118</div>
+        <code>            protected        array
+    <strong>getWikidataData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get data for this authority record from wikidata</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Http\Client\ClientExceptionInterface">ClientExceptionInterface</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatLinks">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_formatLinks">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 141</div>
+        <code>            protected        array
+    <strong>formatLinks</strong>(array $data, array $linksToFormat)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format links using wikidata formatters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>Data from Wikidata</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$linksToFormat</td>
+                <td><p>Links to format</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitedDocuments">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getCitedDocuments">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 172</div>
+        <code>                    array
+    <strong>getCitedDocuments</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get information about cited documents</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCitesFromWikidata">
+        <div class="location">in <a href="../../KnihovnyCz/RecordDriver/Feature/WikidataTrait.html#method_getCitesFromWikidata">
+<abbr title="KnihovnyCz\RecordDriver\Feature\WikidataTrait">WikidataTrait</abbr></a> at line 187</div>
+        <code>            protected        array
+    <strong>getCitesFromWikidata</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get information about cited documents from wikidata</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFullTextLinks">
+        <div class="location">at line 58</div>
+        <code>                    array
+    <strong>getFullTextLinks</strong>(<abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr> $linker)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get fulltext links</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\View\Helper\Root\RecordLinker">RecordLinker</abbr></td>
+                <td>$linker</td>
+                <td><p>Record linker helper (optional; may be used to
+inject record URLs into XML when appropriate).</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsOpenUrl">
+        <div class="location">at line 74</div>
+        <code>                    bool
+    <strong>supportsOpenUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Checks the current record if it's supported for generating OpenURLs.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheKey">
+        <div class="location">at line 87</div>
+        <code>            protected        string
+    <strong>getCacheKey</strong>(string|null $suffix = null)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Method to ensure uniform cache keys for cached VuFind objects.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$suffix</td>
+                <td><p>Optional suffix that will get appended to the
+object class name calling getCacheKey()</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fixOpenAccessLink">
+        <div class="location">at line 100</div>
+        <code>            protected        mixed
+    <strong>fixOpenAccessLink</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fix Open access link</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>Url to fix</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

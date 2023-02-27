@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>KnihovnyCz\ILS\Driver\Aleph | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:KnihovnyCz_ILS_Driver_Aleph" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../KnihovnyCz.html">KnihovnyCz</a></li><li class="backslash">\</li><li><a href="../../../KnihovnyCz/ILS.html">ILS</a></li><li class="backslash">\</li><li><a href="../../../KnihovnyCz/ILS/Driver.html">Driver</a></li><li class="backslash">\</li><li>Aleph</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Aleph    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Aleph</strong>        extends <abbr title="VuFind\ILS\Driver\Aleph">Aleph</abbr>        implements        <abbr title="VuFind\I18n\Translator\TranslatorAwareInterface">TranslatorAwareInterface</abbr>
+</p>
+
+                <p>
+                                                <span class="label label-default">VuFind</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p><p>Class Aleph</p></p>                    </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <abbr title="VuFind\I18n\Translator\TranslatorAwareTrait">TranslatorAwareTrait</abbr>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        DATE_FORMATS
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                            protected                                                            TIME_FORMAT
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfig">getConfig</a>(string $func, array $params = [])
+        
+                                            <p><p>Public Function which retrieves historic loan, renew, hold and cancel
+settings from the driver ini file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsMethod">supportsMethod</a>(string $method, array $params)
+        
+                                            <p><p>Helper method to determine whether or not a certain method can be
+called on this driver.  Required method for any smart drivers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHolding">getHolding</a>(string $id, array $patron = null, array $options = [])
+        
+                                            <p><p>Get Holding</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyTransactions">getMyTransactions</a>(array $user, array $params = [], bool $history = false)
+        
+                                            <p><p>Get Patron Transactions</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyHolds">getMyHolds</a>(array $user)
+        
+                                            <p><p>Get Patron Holds</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyProfileDLF">getMyProfileDLF</a>(array $user)
+        
+                                            <p><p>Get profile information using DLF service.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldOrderInQueue">getHoldOrderInQueue</a>(array $patron, array $holdInfo)
+        
+                                            <p><p>Get hold order in queue</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getHoldingInfoForItem">getHoldingInfoForItem</a>(string $patronId, string $id, string $group)
+        
+                                            <p><p>Support method for placeHold -- get holding info for an item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_placeShortLoan">placeShortLoan</a>(array $details)
+        
+                                            <p><p>Place short loan request</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyShortLoans">getMyShortLoans</a>(array $patron)
+        
+                                            <p><p>Return short loan requests for patron</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyShortLoanLinks">getMyShortLoanLinks</a>(array $patron)
+        
+                                            <p><p>Return short loan requests for patron</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getCancelShortLoanDetails">getCancelShortLoanDetails</a>(array $details)
+        
+                                            <p><p>Get details for canceling short loan request</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_cancelShortLoans">cancelShortLoans</a>(array $details)
+        
+                                            <p><p>Cancel short loan requests</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyPaymentLink">getMyPaymentLink</a>(array $patron, int $fine)
+        
+                                            <p><p>Return link to pay all fines</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMyProlongRegistrationLink">getMyProlongRegistrationLink</a>(array $patron)
+        
+                                            <p><p>Get link for prolonging of registration</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractHoldingInfoForItem">extractHoldingInfoForItem</a>($xml)
+        
+                                            <p><p>Extract holdings for items from XML response</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_extractShortLoanInfoForItem">extractShortLoanInfoForItem</a>($xml)
+        
+                                            <p><p>Extract short loan info for items from XML response</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseTime">parseTime</a>(string $time)
+        
+                                            <p><p>Parse a time.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_parseDate">parseDate</a>(string $date)
+        
+                                            <p><p>Parse a date.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">at line 72</div>
+        <code>                    array
+    <strong>getConfig</strong>(string $func, array $params = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Public Function which retrieves historic loan, renew, hold and cancel
+settings from the driver ini file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$func</td>
+                <td><p>The name of the feature to be checked</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Optional feature-specific parameters (array)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>An array with key-value pairs.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsMethod">
+        <div class="location">at line 95</div>
+        <code>                    bool
+    <strong>supportsMethod</strong>(string $method, array $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper method to determine whether or not a certain method can be
+called on this driver.  Required method for any smart drivers.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td><p>The name of the called method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td><p>Array of passed parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if the method can be called with the given parameters,
+false otherwise.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHolding">
+        <div class="location">at line 125</div>
+        <code>                    array
+    <strong>getHolding</strong>(string $id, array $patron = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Holding</p></p>                <p><p>This is responsible for retrieving the holding information of a certain
+record.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>The record id to retrieve the holdings for</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron data</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td><p>Extra options (not currently used)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>On success, an associative array with the following
+keys: id, availability (boolean), status, location, reserve, callnumber,
+duedate, number, barcode.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyTransactions">
+        <div class="location">at line 265</div>
+        <code>                    array
+    <strong>getMyTransactions</strong>(array $user, array $params = [], bool $history = false)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Transactions</p></p>                <p><p>This is responsible for retrieving all transactions (i.e. checked out items)
+by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Parameters</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$history</td>
+                <td>History</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's transactions on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\DateException">DateException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Exception\ILS">ILS</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyHolds">
+        <div class="location">at line 364</div>
+        <code>                    array
+    <strong>getMyHolds</strong>(array $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get Patron Holds</p></p>                <p><p>This is responsible for retrieving all holds by a specific patron.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array from patronLogin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's holds on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Date\DateException">DateException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFind\Exception\ILS">ILS</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyProfileDLF">
+        <div class="location">at line 443</div>
+        <code>                    array
+    <strong>getMyProfileDLF</strong>(array $user)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get profile information using DLF service.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td><p>The patron array</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Array of the patron's profile data on success.</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Exception\ILS">ILS</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldOrderInQueue">
+        <div class="location">at line 497</div>
+        <code>                    int
+    <strong>getHoldOrderInQueue</strong>(array $patron, array $holdInfo)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get hold order in queue</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td><p>Patron information returned by the patronLogin method.</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$holdInfo</td>
+                <td><p>Optional array, only passed in when getting a list
+in the context of placing or editing a hold.  When placing a hold, it contains
+most of the same values passed to placeHold, minus the patron data.  When
+editing a hold it contains all the hold information returned by getMyHolds.
+May be used to limit the pickup options or may be ignored.  The driver must
+not add new options to the return array based on this data or other areas of
+VuFind may behave incorrectly.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Exception\ILS">ILS</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHoldingInfoForItem">
+        <div class="location">at line 519</div>
+        <code>                    array
+    <strong>getHoldingInfoForItem</strong>(string $patronId, string $id, string $group)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Support method for placeHold -- get holding info for an item.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$patronId</td>
+                <td><p>Patron ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td><p>Bib ID</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td><p>Item ID</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeShortLoan">
+        <div class="location">at line 549</div>
+        <code>                    array
+    <strong>placeShortLoan</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Place short loan request</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td>details</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyShortLoans">
+        <div class="location">at line 584</div>
+        <code>                    array
+    <strong>getMyShortLoans</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return short loan requests for patron</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td>patron</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyShortLoanLinks">
+        <div class="location">at line 636</div>
+        <code>                    array
+    <strong>getMyShortLoanLinks</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return short loan requests for patron</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td>patron</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCancelShortLoanDetails">
+        <div class="location">at line 656</div>
+        <code>                    array|null
+    <strong>getCancelShortLoanDetails</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get details for canceling short loan request</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td>details</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelShortLoans">
+        <div class="location">at line 672</div>
+        <code>                    array
+    <strong>cancelShortLoans</strong>(array $details)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Cancel short loan requests</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$details</td>
+                <td>details</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyPaymentLink">
+        <div class="location">at line 711</div>
+        <code>                    string
+    <strong>getMyPaymentLink</strong>(array $patron, int $fine)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return link to pay all fines</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td>patron</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$fine</td>
+                <td><p>fine to pay</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMyProlongRegistrationLink">
+        <div class="location">at line 735</div>
+        <code>                    string
+    <strong>getMyProlongRegistrationLink</strong>(array $patron)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get link for prolonging of registration</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$patron</td>
+                <td>patron</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractHoldingInfoForItem">
+        <div class="location">at line 773</div>
+        <code>            protected        array
+    <strong>extractHoldingInfoForItem</strong>($xml)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract holdings for items from XML response</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$xml</td>
+                <td><p>xml to process</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Exception\ILS">ILS</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractShortLoanInfoForItem">
+        <div class="location">at line 811</div>
+        <code>            protected        array
+    <strong>extractShortLoanInfoForItem</strong>($xml)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract short loan info for items from XML response</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$xml</td>
+                <td><p>xml to process</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Exception\ILS">ILS</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseTime">
+        <div class="location">at line 847</div>
+        <code>            protected        string
+    <strong>parseTime</strong>(string $time)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse a time.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$time</td>
+                <td><p>time to parse</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>formatted time</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseDate">
+        <div class="location">at line 863</div>
+        <code>                    string
+    <strong>parseDate</strong>(string $date)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse a date.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td><p>Date to parse</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>KnihovnyCz\Autocomplete\SolrAuthorityEnricher | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:KnihovnyCz_Autocomplete_SolrAuthorityEnricher" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../KnihovnyCz.html">KnihovnyCz</a></li><li class="backslash">\</li><li><a href="../../KnihovnyCz/Autocomplete.html">Autocomplete</a></li><li class="backslash">\</li><li>SolrAuthorityEnricher</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>SolrAuthorityEnricher    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>SolrAuthorityEnricher</strong>        extends <a href="../../KnihovnyCz/Autocomplete/SolrPrefix.html"><abbr title="KnihovnyCz\Autocomplete\SolrPrefix">SolrPrefix</abbr></a>
+</p>
+
+                <p>
+                                                <span class="label label-default">Knihovny.cz</span>
+                                    </p>
+    
+        
+    
+        
+
+            <div class="description">
+            <p>SolrAuthorityEnricher</p>            <p><p>This class provides suggestions by using the local Solr index and enrich
+them with link to authority record.</p></p>        </div>
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                            protected                                                            LIMIT
+                                    </td>
+                <td class="last">
+                    <p><em><p>Max number of results to fetch</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                            protected                                                            UNIQUE_AUTHOR_REGEXP
+                                    </td>
+                <td class="last">
+                    <p><em><p>Regular expression to check if the authority name is considered unique</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_suggestionFilter">
+                                        protected                                        <a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a>
+                                                                                
+                                    </td>
+                <td>$suggestionFilter</td>
+                <td class="last"><p>Filter for suggested terms</p></td>
+                <td><small>from&nbsp;<a href="../../KnihovnyCz/Autocomplete/SolrPrefix.html#property_suggestionFilter">
+<abbr title="KnihovnyCz\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchService">
+                                        protected                                        <abbr title="VuFindSearch\Service">Service</abbr>
+                                                                                
+                                    </td>
+                <td>$searchService</td>
+                <td class="last"><p>Search service</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordLinker">
+                                        protected                                        <a href="../../KnihovnyCz/View/Helper/KnihovnyCz/RecordLinker.html"><abbr title="KnihovnyCz\View\Helper\KnihovnyCz\RecordLinker">RecordLinker</abbr></a>
+                                                                                
+                                    </td>
+                <td>$recordLinker</td>
+                <td class="last"><p>Record link helper</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_renderer">
+                                        protected                                        <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr>
+                                                                                
+                                    </td>
+                <td>$renderer</td>
+                <td class="last">Renderer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_searchField">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$searchField</td>
+                <td class="last"><p>Search field</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recordIdField">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$recordIdField</td>
+                <td class="last"><p>Solr record id</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filter">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$filter</td>
+                <td class="last"><p>Filter to apply when enriching results from autocomplete</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $results, <a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a> $filter, <abbr title="VuFindSearch\Service">Service</abbr> $searchService, <a href="../../KnihovnyCz/View/Helper/KnihovnyCz/RecordLinker.html"><abbr title="KnihovnyCz\View\Helper\KnihovnyCz\RecordLinker">RecordLinker</abbr></a> $recordLinker, <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $renderer)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getSuggestions">getSuggestions</a>(string $query)
+        
+                                            <p><p>Get suggestions</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setConfig">setConfig</a>(string $params)
+        
+                                            <p><p>Set configuration</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../KnihovnyCz/Autocomplete/SolrPrefix.html#method_setConfig">
+<abbr title="KnihovnyCz\Autocomplete\SolrPrefix">SolrPrefix</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_enrich">enrich</a>(array $authors)
+        
+                                            <p><p>Enrich authors with link to authority record</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isUnique">isUnique</a>(string $author)
+        
+                                            <p><p>Is the authority name unique?</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 116</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr> $results, <a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a> $filter, <abbr title="VuFindSearch\Service">Service</abbr> $searchService, <a href="../../KnihovnyCz/View/Helper/KnihovnyCz/RecordLinker.html"><abbr title="KnihovnyCz\View\Helper\KnihovnyCz\RecordLinker">RecordLinker</abbr></a> $recordLinker, <abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr> $renderer)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p>Constructor</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="VuFind\Search\Results\PluginManager">PluginManager</abbr></td>
+                <td>$results</td>
+                <td><p>Results plugin manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../KnihovnyCz/Autocomplete/SuggestionFilter.html"><abbr title="KnihovnyCz\Autocomplete\SuggestionFilter">SuggestionFilter</abbr></a></td>
+                <td>$filter</td>
+                <td><p>Suggestion filter</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="VuFindSearch\Service">Service</abbr></td>
+                <td>$searchService</td>
+                <td><p>Search service plugin manager</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../KnihovnyCz/View/Helper/KnihovnyCz/RecordLinker.html"><abbr title="KnihovnyCz\View\Helper\KnihovnyCz\RecordLinker">RecordLinker</abbr></a></td>
+                <td>$recordLinker</td>
+                <td><p>Record linker</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Laminas\View\Renderer\PhpRenderer">PhpRenderer</abbr></td>
+                <td>$renderer</td>
+                <td>Renderer</td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSuggestions">
+        <div class="location">at line 139</div>
+        <code>                    array
+    <strong>getSuggestions</strong>(string $query)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get suggestions</p></p>                <p><p>This method returns an array of strings matching the user's query for
+display in the autocomplete box.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td><p>The user query</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>The suggestions for the provided query</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">in <a href="../../KnihovnyCz/Autocomplete/SolrPrefix.html#method_setConfig">
+<abbr title="KnihovnyCz\Autocomplete\SolrPrefix">SolrPrefix</abbr></a> at line 95</div>
+        <code>                    void
+    <strong>setConfig</strong>(string $params)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set configuration</p></p>                <p><p>Set parameters that affect the behavior of the autocomplete handler.
+These values normally come from the search configuration file.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$params</td>
+                <td><p>Parameters to set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enrich">
+        <div class="location">at line 151</div>
+        <code>            protected        array
+    <strong>enrich</strong>(array $authors)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enrich authors with link to authority record</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$authors</td>
+                <td>authors</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>enriched authors</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isUnique">
+        <div class="location">at line 219</div>
+        <code>            protected        bool
+    <strong>isUnique</strong>(string $author)
+        </code>
+    </h3>
+    <div class="details">    
+            
+    
+            
+
+        <div class="method-description">
+                            <p><p>Is the authority name unique?</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$author</td>
+                <td><p>author name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>
